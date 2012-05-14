@@ -356,6 +356,21 @@ namespace kge
 			return true;
 		}
 
+		//------------------------------------------------------------------------------------
+		// Create a vertex buffer from custom vertex type and store it on video memory.
+		//------------------------------------------------------------------------------------
+		HardwareBuffer* RendererOGL::CreateVertexBuffer
+			(	void* Vertices, 
+			u32 VCount, 
+			u32 Stride, 
+			bool isDynamic 
+			)
+		{
+
+			return NULL;
+
+		} // CreateVertexBuffer
+
 	} // gfx
 
 } // kge

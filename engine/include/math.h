@@ -21,6 +21,7 @@
 
 namespace kge
 {
+	//! Mathematics stuff
 	namespace math
 	{
 		//=============================

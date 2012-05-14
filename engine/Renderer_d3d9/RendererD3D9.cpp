@@ -377,7 +377,7 @@ namespace gfx
 	} // CheckstencilFMT
 
 	//------------------------------------------------------------------------------------
-	// Check device if it is createable.
+	// Check device if it is create able.
 	//------------------------------------------------------------------------------------
 	bool RendererD3D9::CheckDevice(D3DCAPS9 *pCaps, DWORD dwBehavior)
 	{
@@ -402,6 +402,22 @@ namespace gfx
 		return true;
 
 	} // Check Device
+
+	
+	//------------------------------------------------------------------------------------
+	// Create a vertex buffer from custom vertex type and store it on video memory.
+	//------------------------------------------------------------------------------------
+	HardwareBuffer* RendererD3D9::CreateVertexBuffer
+		(	void* Vertices, 
+			u32 VCount, 
+			u32 Stride, 
+			bool isDynamic 
+		)
+	{
+
+		return NULL;
+
+	} // CreateVertexBuffer
 
 } // gfx
 

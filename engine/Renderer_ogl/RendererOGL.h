@@ -53,6 +53,17 @@ namespace kge
 			 */
 			bool EndRendering();
 
+			/*! Create a vertex buffer from custom vertex type and store it on video memory.
+				\param Vertices A pointer to the Vertices array.
+				\param VCount The Vertices count.
+				\param Stride The vertex struct size in bytes.
+				\return Returns the created vertex buffer.
+				\sa HardwareBuffer
+			*/
+			HardwareBuffer* CreateVertexBuffer(void* Vertices, u32 VCount, 
+											   u32   Stride,
+											   bool  isDynamic);
+
 		private:
 			//--------------------------------
 			// functions

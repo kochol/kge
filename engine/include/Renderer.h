@@ -8,6 +8,8 @@ namespace kge
 	//! Graphics classes
 	namespace gfx
 	{
+		class HardwareBuffer;
+
 		//! The interface for working with renderers in KGE.
 		class KGE_API Renderer
 		{
@@ -51,6 +53,18 @@ namespace kge
 				\return Returns true on success.
 			 */
 			virtual bool EndRendering() = 0;
+
+			/*! Create a vertex buffer from custom vertex type and store it on video memory.
+				\param Vertices A pointer to the Vertices array.
+				\param VCount The Vertices count.
+				\param Stride The vertex struct size in bytes.
+				\return Returns the created vertex buffer.
+				\sa HardwareBuffer
+			*/
+			virtual HardwareBuffer* CreateVertexBuffer(void* Vertices, u32 VCount, 
+													   u32   Stride,
+													   bool  isDynamic = false) = 0;
+
 
 		protected:
 

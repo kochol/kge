@@ -39,9 +39,10 @@ namespace kge
 		//! Returns the Device object pointer.
 		static Device* GetSingletonPtr();
 
-		/** Initialize KGE with given parameters.
-			return: Returns true on success
-			param params: Initialize parameters
+		//! Initialize KGE with given parameters.
+		/*! 
+			\param params: Initialize parameters
+			\return Returns true on success
 		*/
 		bool Init(InitParameters& params);
 

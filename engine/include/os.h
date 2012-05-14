@@ -3,6 +3,7 @@
 
 namespace kge
 {
+	//! The functions that are OS specific are here
 	namespace os
 	{
 		//! Sleep the thread
