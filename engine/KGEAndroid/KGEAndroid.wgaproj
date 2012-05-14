@@ -1,0 +1,10 @@
+<wgaproject version="1" revision="0" type="JavaNative" imported="0" >
+    <guid>{E79DE1BA-16F4-442C-AFED-15EBB08E8AF2}</guid>
+    <manifest>AndroidManifest.xml</manifest>
+    <android_mk>jni\Android.mk</android_mk>
+    <writeable
+        manifest="1"
+        android_mk="1"
+        application_mk="1"
+    />
+</wgaproject>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{22DEE7E4-5829-4B77-BEEC-BE152AB0AE5C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>KGE10</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\bin\Debug\</OutDir>
+    <TargetName>KGE</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\bin\Release\</OutDir>
+    <TargetName>KGE</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;KGE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;KGE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\nedmalloc\malloc.c.h" />
+    <ClInclude Include="..\..\libs\nedmalloc\nedmalloc.h" />
+    <ClInclude Include="..\include\array.h" />
+    <ClInclude Include="..\include\Config.h" />
+    <ClInclude Include="..\include\Device.h" />
+    <ClInclude Include="..\include\enums.h" />
+    <ClInclude Include="..\include\Functor.h" />
+    <ClInclude Include="..\include\gnuc_def.h" />
+    <ClInclude Include="..\include\InputManager.h" />
+    <ClInclude Include="..\include\Keyboard.h" />
+    <ClInclude Include="..\include\kgedef.h" />
+    <ClInclude Include="..\include\KgeMemory.h" />
+    <ClInclude Include="..\include\KgeMutex.h" />
+    <ClInclude Include="..\include\KgeThread.h" />
+    <ClInclude Include="..\include\KgeUnknown.h" />
+    <ClInclude Include="..\include\KgeWindow.h" />
+    <ClInclude Include="..\include\Logger.h" />
+    <ClInclude Include="..\include\math.h" />
+    <ClInclude Include="..\include\mem_fun.h" />
+    <ClInclude Include="..\include\Mouse.h" />
+    <ClInclude Include="..\include\msvc_def.h" />
+    <ClInclude Include="..\include\os.h" />
+    <ClInclude Include="..\include\Plugin.h" />
+    <ClInclude Include="..\include\PluginManager.h" />
+    <ClInclude Include="..\include\ptr_fun.h" />
+    <ClInclude Include="..\include\Renderer.h" />
+    <ClInclude Include="..\include\Resource.h" />
+    <ClInclude Include="..\include\ResourceManager.h" />
+    <ClInclude Include="..\include\String.h" />
+    <ClInclude Include="..\include\structs.h" />
+    <ClInclude Include="..\KGEmain\Android.h" />
+    <ClInclude Include="..\KGEmain\KgeMemoryTrack.h" />
+    <ClInclude Include="..\KGEmain\KgeNedmalloc.h" />
+    <ClInclude Include="..\KGEmain\WinWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libs\nedmalloc\nedmalloc.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\KGEmain\Android.cpp" />
+    <ClCompile Include="..\KGEmain\Device.cpp" />
+    <ClCompile Include="..\KGEmain\InputManager.cpp" />
+    <ClCompile Include="..\KGEmain\KgeMemoryTrack.cpp" />
+    <ClCompile Include="..\KGEmain\KgeMutex.cpp" />
+    <ClCompile Include="..\KGEmain\KgeNedmalloc.cpp" />
+    <ClCompile Include="..\KGEmain\KgeThread.cpp" />
+    <ClCompile Include="..\KGEmain\Logger.cpp" />
+    <ClCompile Include="..\KGEmain\PluginManager.cpp" />
+    <ClCompile Include="..\KGEmain\Resource.cpp" />
+    <ClCompile Include="..\KGEmain\String.cpp" />
+    <ClCompile Include="..\KGEmain\Windows.cpp" />
+    <ClCompile Include="..\KGEmain\WinWindow.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
