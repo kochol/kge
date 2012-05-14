@@ -1,6 +1,8 @@
 #ifndef KGE_KGEDEF_H
 #define KGE_KGEDEF_H
 
+#define MAXID 65535		// MAXID = NULL for u32 IDs
+
 //************************************
 // Version Information
 //************************************
@@ -25,15 +27,15 @@
 
 #define KGE_COMPILER_UNKNOWN 0	// Unknown compiler
 #define KGE_COMPILER_MSVC 1		// Microsoft Visual C++
-#define KGE_COMPILER_GNUC 2		// GNU C/C++ compailers
-#define KGE_COMPILER_BORL 3		// Borland C/C++ compailer
+#define KGE_COMPILER_GNUC 2		// GNU C/C++ compilers
+#define KGE_COMPILER_BORL 3		// Borland C/C++ compiler
 #define KGE_COMPILER_NDK  4		// NDK build system
 
 #define KGE_ARCHITECTURE_UNKNOWN	// Unknown architecture
 #define KGE_ARCHITECTURE_32 1		// 32-bit architecture CPU
 #define KGE_ARCHITECTURE_64 2		// 64-bit architecture CPU
 
-// find compailer type and version
+// find compiler type and version
 #if defined( _MSC_VER )
 	#define KGE_COMPILER KGE_COMPILER_MSVC
 	#define KGE_COMP_VER _MSC_VER
@@ -70,7 +72,7 @@
 	#define KGE_PLATFORM KGE_PLATFORM_UNKNOWN
 #endif
 
-// finds the cpu architecture type
+// finds the CPU architecture type
 #if defined(__x86_x64__) || defined(_M_X64) || defined(__powerpc64__) || defined(__alpha__) || defined(__ia64__) || defined(__s390__) || defined(__s390x__)
 	#define KGE_ARCHITECTURE_TYPE KGE_ARCHITECTURE_64
 #else
@@ -96,7 +98,7 @@
 #endif
 
 //**************************************
-// compiler specific configs
+// compiler specific config
 //**************************************
 #if KGE_COMPILER == KGE_COMPILER_MSVC
 	#include "msvc_def.h"

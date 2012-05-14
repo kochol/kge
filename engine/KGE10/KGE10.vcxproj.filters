@@ -150,6 +150,9 @@
     <ClInclude Include="..\include\os.h">
       <Filter>Header Files\os</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\HardwareBuffer.h">
+      <Filter>Header Files\gfx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\KGEmain\Device.cpp">

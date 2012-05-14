@@ -86,6 +86,7 @@
     <ClInclude Include="..\include\enums.h" />
     <ClInclude Include="..\include\Functor.h" />
     <ClInclude Include="..\include\gnuc_def.h" />
+    <ClInclude Include="..\include\HardwareBuffer.h" />
     <ClInclude Include="..\include\InputManager.h" />
     <ClInclude Include="..\include\Keyboard.h" />
     <ClInclude Include="..\include\kgedef.h" />
