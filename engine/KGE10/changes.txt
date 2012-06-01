@@ -1,0 +1,5 @@
+=== 0.1.0 ===
+
+- (Add) HardwareBuffer interface for working with buffers on GPU
+- (Add) VertexBufferDX9 class added for working with Vertex buffers.
+- (Add) IndexBufferDX9 class added for working with index buffers.

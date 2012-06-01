@@ -1,0 +1,8 @@
+
+*.exe
+*.pdb
+*.obj
+*.tlog
+*.lastbuildstate
+*.log
+*.unsuccessfulbuild

@@ -1,0 +1,9 @@
+
+*.exp
+*.lib
+*.pdb
+*.obj
+*.tlog
+*.log
+*.manifest
+*.res
