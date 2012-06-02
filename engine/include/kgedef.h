@@ -108,5 +108,13 @@
 	#error "kge dosn't supoort this compiler"
 #endif 
 
+//**************************************
+// typedef
+//**************************************
+namespace kge
+{
+	typedef unsigned int	uint;
+
+} // kge
 
 #endif // KGE_KGEDEF_H

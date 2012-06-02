@@ -1,5 +1,6 @@
 #include "RendererD3D9.h"
 #include "../include/Logger.h"
+#include "VertexBuferDX9.h"
 
 #include <dxerr.h>
 #include <d3dx9.h>
@@ -199,8 +200,6 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	bool RendererD3D9::BeginRendering(bool bColor, bool bDepth, bool bStencil)
 	{
-		HRESULT hr;
-
 		Clear(bColor, bDepth, bStencil);
 
 		if (!m_bIsSceneRunning)
@@ -414,10 +413,78 @@ namespace gfx
 			bool isDynamic 
 		)
 	{
+		// Create the vertex buffer.
+		DWORD usage = 0;
+		D3DPOOL pool = D3DPOOL_MANAGED;
 
-		return NULL;
+		if (isDynamic)
+		{
+			usage = D3DUSAGE_DYNAMIC | D3DUSAGE_WRITEONLY;
+			pool = D3DPOOL_DEFAULT;
+		}
+
+		IDirect3DVertexBuffer9* vb;
+		HR(m_pD3DDevice->CreateVertexBuffer( Stride * VCount
+			, usage
+			, 0
+			, pool
+			, &vb
+			, 0 ));
+
+		// Writing to the buffer.
+		void* Buffer;
+
+		if (Vertices)
+		{
+			HR(vb->Lock(0, 0, &Buffer, 0));
+			memcpy(Buffer, Vertices, Stride * VCount);
+			HR(vb->Unlock());
+		}
+
+		VertexBufferDX9* ppVBout;
+		ppVBout			= new VertexBufferDX9(VCount, Stride, 0);
+		ppVBout->m_pVB	= vb;
+		ppVBout->Dynamic(isDynamic);
+
+		if (isDynamic) m_vVBuffers.push_back(ppVBout);
+
+		return ppVBout;
 
 	} // CreateVertexBuffer
+
+	//------------------------------------------------------------------------------------
+	// Removes VertexBufferDX9 from internal list.
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::RemoveVertexBuffer(VertexBufferDX9* vb)
+	{
+		const size_t m_vVBuffersSize = m_vVBuffers.size();
+		for (size_t i = 0; i < m_vVBuffersSize; ++i)
+		{
+			if (m_vVBuffers[i] == vb)
+			{
+				m_vVBuffers[i] = m_vVBuffers[m_vVBuffersSize - 1];
+				m_vVBuffers.pop_back();
+				return;
+			}
+		}
+	}
+
+	//-------------------------------------------------------
+	// Removes IndexBufferDX9 from internal list.
+	//-------------------------------------------------------
+	void RendererD3D9::RemoveIndexBuffer(IndexBufferDX9* ib)
+	{
+		const size_t m_vIBuffersSize = m_vIBuffers.size();
+		for (size_t i = 0; i < m_vIBuffersSize; ++i)
+		{
+			if (m_vIBuffers[i] == ib)
+			{
+				m_vIBuffers[i] = m_vIBuffers[m_vIBuffersSize - 1];
+				m_vIBuffers.pop_back();
+				return;
+			}
+		}
+	}
 
 } // gfx
 

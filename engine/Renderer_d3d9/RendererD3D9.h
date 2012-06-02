@@ -3,11 +3,14 @@
 
 #include "../include/Renderer.h"
 #include <d3d9.h>
+#include <vector>
 
 namespace kge
 {
 	namespace gfx
 	{
+		class VertexBufferDX9;
+		class IndexBufferDX9;
 		class RendererD3D9 : public Renderer
 		{
 		public:
@@ -60,7 +63,13 @@ namespace kge
 			HardwareBuffer* CreateVertexBuffer(void* Vertices, u32 VCount, 
 											   u32   Stride,
 											   bool  isDynamic);
+
+			//! Removes VertexBufferDX9 from internal list.
+			void RemoveVertexBuffer(VertexBufferDX9* vb);
 			
+			//! Removes IndexBufferDX9 from internal list.
+			void RemoveIndexBuffer(IndexBufferDX9* ib);
+
 		protected:
 
 			LPDIRECT3DDEVICE9						m_pD3DDevice;			// D3D9 device
@@ -74,6 +83,9 @@ namespace kge
 													m_pBackBufferZSurface;	// Main depth buffer surface
 			kge::ul32								m_Behavior;				// Device Behavior
 			D3DCOLOR								m_ClearColor;			// Clear Color
+			std::vector<VertexBufferDX9*>	        m_vVBuffers;			// Vertex buffers array.
+			std::vector<IndexBufferDX9*>		        m_vIBuffers;	// Index buffers array.
+
 
 			// Search for the best depth and stencil format.
 			void CheckStencil(const InitParameters &params);
@@ -81,7 +93,7 @@ namespace kge
 			// Check stencil format
 			bool CheckStencilFMT();
 			
-			// Check device if it is createable.
+			// Check device if it is create able.
 			bool CheckDevice(D3DCAPS9 *pCaps, DWORD dwBehavior);
 
 		}; // RendererD3D9

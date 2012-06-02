@@ -10,9 +10,24 @@
 namespace kge
 {
 	//------------------------------------------------------------------------------------
+	//! Empty Constructor
+	//------------------------------------------------------------------------------------
+	Resource::Resource(): 
+		m_iHandle(-1),
+		m_pFileName(NULL),
+		m_pName(NULL),
+		m_pExtraParam(NULL),
+		m_bIsLoaded(false),
+		m_bLoadOnBackground(false)
+	{
+	} // Constructor
+
+	//------------------------------------------------------------------------------------
 	// Constructor
 	//------------------------------------------------------------------------------------
-	Resource::Resource( const u32 Handle, const char* FileName, const char* Name, void* ExtraParam )
+	Resource::Resource( const u32 Handle, const char* FileName, const char* Name, void* ExtraParam ):
+		m_bIsLoaded(false),
+		m_bLoadOnBackground(false)
 	{
 		m_iHandle	  = Handle;
 		m_pFileName   = core::String::StringCopy(FileName);

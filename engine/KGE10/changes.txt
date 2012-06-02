@@ -1,5 +1,7 @@
 === 0.1.0 ===
 
+* Renderer
 - (Add) HardwareBuffer interface for working with buffers on GPU
-- (Add) VertexBufferDX9 class added for working with Vertex buffers.
-- (Add) IndexBufferDX9 class added for working with index buffers.
+	* Renderer_d3d9
+	- (Add) VertexBufferDX9 class added for working with Vertex buffers.
+	- (Add) IndexBufferDX9 class added for working with index buffers.

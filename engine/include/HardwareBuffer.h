@@ -10,8 +10,9 @@ namespace kge
 		//! Hardware buffers types
 		enum HardwareBufferType
 		{
-			EHBT_VertexBuffer = 0,
-			EHBT_IndexBuffer,
+			EHBT_UnknownBuffer = 0,
+			EHBT_VertexBuffer,
+			EHBT_IndexBuffer
 
 		}; // HardwareBufferType
 
@@ -24,7 +25,7 @@ namespace kge
 		}; // IndexBufferType
 
 		//! The interface is for working with hardware buffers on GPU
-		class HardwareBuffer: public Resource
+		class KGE_API HardwareBuffer: public Resource
 		{
 		public:
 
@@ -41,11 +42,12 @@ namespace kge
 			\param Data The data pointer
 			\param Offset The offset in data count for example if Offset is 2 and it is a vertex buffer the offset means two vertex size not two byte
 			\param iSize The size in data count not in bytes
+			\param flags This param is for advanced users that we talk about later
 			*/
 			virtual bool SetData(void* Data, u32 Offset, u32 iSize, ul32 flags = 0) = 0;
 
 			//! Returns the hardware buffer type
-			virtual HardwareBufferType GetType() const = 0;
+			virtual HardwareBufferType GetType() const { return m_eType; }
 
 			//!
 			bool Dynamic() const { return m_bDynamic; }
@@ -74,6 +76,8 @@ namespace kge
 			u32		m_iDataCount,
 					m_iStride,
 					m_iID;
+			HardwareBufferType	m_eType;
+			bool				m_bIsOnHardware;
 
 		}; // HardwareBuffer
 

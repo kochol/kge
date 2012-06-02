@@ -15,8 +15,7 @@ namespace kge
 	public:
 
 		//! Constructor
-		Resource() {}
-
+		Resource();
 		//! Constructor
 		Resource(const u32 Handle, const char* FileName, const char* Name, void* ExtraParam);
 
@@ -32,12 +31,17 @@ namespace kge
 		//! Return resource handle
 		virtual u32 GetHandle() { return m_iHandle; }
 
+		//! Is resource loaded or not?
+		bool IsLoaded() { return m_bIsLoaded; }
+
 	protected:
 
-		char* m_pFileName;  /**< Resource File Name */
-		char* m_pName;		/**< Resource Name */
-		void* m_pExtraParam;/**< Extra parameter */
-		u32   m_iHandle;	/**< Resource Handle */
+		char*	m_pFileName;			/**< Resource File Name */
+		char*	m_pName;				/**< Resource Name */
+		void*	m_pExtraParam;			/**< Extra parameter */
+		u32		m_iHandle;				/**< Resource Handle */
+		bool	m_bIsLoaded;			//!< Is resource loaded and ready to use?
+		bool	m_bLoadOnBackground;	//!< Load resource on a background thread or not?
 
 	}; // Resource
 

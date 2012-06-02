@@ -35,6 +35,7 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	PluginManager::~PluginManager()
 	{
+		Release();
 
 	} // Destructor
 
@@ -47,6 +48,7 @@ namespace kge
 		{
 			KGE_DELETE(m_vRendererPlugins[i], RendererPlugin);
 		}
+		m_vRendererPlugins.clear();
 
 	} // Release
 
@@ -128,9 +130,7 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	PluginManager*	PluginManager::GetSingletonPtr()
 	{
-		static PluginManager pm;// = NULL;
-//		if (!pm)
-	//		pm = KGE_NEW(PluginManager)();
+		static PluginManager pm;
 
 		return &pm;
 
