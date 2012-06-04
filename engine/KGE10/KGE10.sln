@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KGE10", "KGE10.vcxproj", "{22DEE7E4-5829-4B77-BEEC-BE152AB0AE5C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Renderer_d3d9", "..\Renderer_d3d9\Renderer_d3d9.vcxproj", "{83C2698B-660E-42F9-8200-1FC409BB957A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{22DEE7E4-5829-4B77-BEEC-BE152AB0AE5C} = {22DEE7E4-5829-4B77-BEEC-BE152AB0AE5C}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KGEWebPlayer", "..\KGEWebPlayer\KGEWebPlayer.vcxproj", "{8CBBC984-ABFA-471B-B0B1-44C207D78D56}"
 EndProject

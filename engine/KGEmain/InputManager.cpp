@@ -246,7 +246,7 @@ namespace kge
 
 		} // MouseReleased
 
-		InputManager* InputManager::getSingletonPtr( void ) 
+		InputManager* InputManager::getSingletonPtr( ) 
 		{
 			if( !mInputManager ) 
 			{

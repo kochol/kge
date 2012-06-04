@@ -68,7 +68,7 @@ namespace kge
 			Keyboard* GetKeyboard() { return m_pKeyboard; }
  
 			//! Returns the InputManager pointer
-			static InputManager* getSingletonPtr( void );
+			static InputManager* getSingletonPtr( );
 
 		protected:
 			InputManager( void );

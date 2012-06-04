@@ -84,6 +84,8 @@
     <ClInclude Include="..\include\Config.h" />
     <ClInclude Include="..\include\Device.h" />
     <ClInclude Include="..\include\enums.h" />
+    <ClInclude Include="..\include\FileSystem.h" />
+    <ClInclude Include="..\include\FileSystemManager.h" />
     <ClInclude Include="..\include\Functor.h" />
     <ClInclude Include="..\include\gnuc_def.h" />
     <ClInclude Include="..\include\HardwareBuffer.h" />
@@ -110,6 +112,7 @@
     <ClInclude Include="..\include\String.h" />
     <ClInclude Include="..\include\structs.h" />
     <ClInclude Include="..\KGEmain\Android.h" />
+    <ClInclude Include="..\KGEmain\FileSystemManager.cpp" />
     <ClInclude Include="..\KGEmain\KgeMemoryTrack.h" />
     <ClInclude Include="..\KGEmain\KgeNedmalloc.h" />
     <ClInclude Include="..\KGEmain\WinWindow.h" />
