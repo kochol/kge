@@ -84,6 +84,7 @@
     <ClInclude Include="..\include\Config.h" />
     <ClInclude Include="..\include\Device.h" />
     <ClInclude Include="..\include\enums.h" />
+    <ClInclude Include="..\include\File.h" />
     <ClInclude Include="..\include\FileSystem.h" />
     <ClInclude Include="..\include\FileSystemManager.h" />
     <ClInclude Include="..\include\Functor.h" />
@@ -112,7 +113,10 @@
     <ClInclude Include="..\include\String.h" />
     <ClInclude Include="..\include\structs.h" />
     <ClInclude Include="..\KGEmain\Android.h" />
-    <ClInclude Include="..\KGEmain\FileSystemManager.cpp" />
+    <ClCompile Include="..\KGEmain\File.cpp" />
+    <ClCompile Include="..\KGEmain\FileSystemManager.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
     <ClInclude Include="..\KGEmain\KgeMemoryTrack.h" />
     <ClInclude Include="..\KGEmain\KgeNedmalloc.h" />
     <ClInclude Include="..\KGEmain\WinWindow.h" />
@@ -123,6 +127,7 @@
     </ClCompile>
     <ClCompile Include="..\KGEmain\Android.cpp" />
     <ClCompile Include="..\KGEmain\Device.cpp" />
+    <ClCompile Include="..\KGEmain\FileSystem.cpp" />
     <ClCompile Include="..\KGEmain\InputManager.cpp" />
     <ClCompile Include="..\KGEmain\KgeMemoryTrack.cpp" />
     <ClCompile Include="..\KGEmain\KgeMutex.cpp" />

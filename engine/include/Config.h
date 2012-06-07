@@ -34,11 +34,9 @@
 //************************************************************************
 
 // arrays
-#define KGE_DEFAULT_FIXED_ARRAY kge::core::FixedArray
-#define KGE_DEFAULT_DYNAMIC_ARRAY kge::core::DynamicArray
 #define KGE_DEFAULT_ARRAY_BLOCK_SIZE 100
 
 // map
-#define KGE_DEFAULT_MAP std::map
+#define KGE_MAP std::map
 
 #endif // KGE_CONFIG_H

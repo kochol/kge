@@ -23,6 +23,32 @@ namespace kge
 
 		} // StringCopy
 
+		//------------------------------------------------------------------------------------
+		// Converts A stringw type to stringc type
+		//------------------------------------------------------------------------------------
+		stringc String::Convert( const stringw& Src )
+		{
+			stringc str(Src.size(), '#');
+
+			wcstombs(&str[0], Src.c_str(), Src.size());
+
+			return str;
+
+		}
+
+		//------------------------------------------------------------------------------------
+		// Converts A stringc type to stringw type
+		//------------------------------------------------------------------------------------
+		stringw String::Convert( const stringc& Src )
+		{
+			stringw str(Src.size(), L'#');
+
+			mbstowcs(&str[0], Src.c_str(), Src.size());
+
+			return str;
+
+		}
+
 	} // core
 
 } // kge

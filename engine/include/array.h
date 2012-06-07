@@ -12,7 +12,7 @@
 #include "kgedef.h"
 #include "KgeMemory.h"
 
-#if KGE_COMPILER_CPP11 ==1
+#if KGE_CPP11_COMPILER ==1
 #include <initializer_list>
 #endif // KGE_COMPILER_CPP11
 

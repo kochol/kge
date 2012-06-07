@@ -45,6 +45,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\README.md = ..\..\README.md
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09FileSystemTest", "..\..\tests\09FileSystemTest\09FileSystemTest.vcxproj", "{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}"
+	ProjectSection(ProjectDependencies) = postProject
+		{22DEE7E4-5829-4B77-BEEC-BE152AB0AE5C} = {22DEE7E4-5829-4B77-BEEC-BE152AB0AE5C}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Application|Android = Application|Android
@@ -301,6 +306,26 @@ Global
 		{CF1EFDDB-C9DD-471D-8BE6-8559F4740592}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{CF1EFDDB-C9DD-471D-8BE6-8559F4740592}.Release|Win32.ActiveCfg = Release|Win32
 		{CF1EFDDB-C9DD-471D-8BE6-8559F4740592}.Release|Win32.Build.0 = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Application|Android.ActiveCfg = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Application|Mixed Platforms.ActiveCfg = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Application|Mixed Platforms.Build.0 = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Application|Win32.ActiveCfg = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Application|Win32.Build.0 = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.ApplicationDebug|Android.ActiveCfg = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.ApplicationDebug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.ApplicationDebug|Mixed Platforms.Build.0 = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.ApplicationDebug|Win32.ActiveCfg = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.ApplicationDebug|Win32.Build.0 = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Debug|Android.ActiveCfg = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Debug|Win32.Build.0 = Debug|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Release|Android.ActiveCfg = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Release|Win32.ActiveCfg = Release|Win32
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -315,6 +340,7 @@ Global
 		{161E529F-2CA4-4B39-BC06-8ECF6D9F70BB} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
 		{CC11359F-7767-48E7-8C37-029E8E614667} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
 		{49ED7C13-3BC3-460D-B332-B97E82B1FEFE} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
+		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
 		{CF1EFDDB-C9DD-471D-8BE6-8559F4740592} = {9A8F9DA9-9446-4147-90DE-F5925EB8FB1E}
 	EndGlobalSection
 EndGlobal

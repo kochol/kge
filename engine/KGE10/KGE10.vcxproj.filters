@@ -159,8 +159,8 @@
     <ClInclude Include="..\include\FileSystemManager.h">
       <Filter>Header Files\io</Filter>
     </ClInclude>
-    <ClInclude Include="..\KGEmain\FileSystemManager.cpp">
-      <Filter>Source Files\io</Filter>
+    <ClInclude Include="..\include\File.h">
+      <Filter>Header Files\io</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +205,15 @@
     </ClCompile>
     <ClCompile Include="..\KGEmain\Windows.cpp">
       <Filter>Source Files\os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KGEmain\FileSystem.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KGEmain\FileSystemManager.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KGEmain\File.cpp">
+      <Filter>Source Files\io</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

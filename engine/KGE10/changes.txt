@@ -6,5 +6,6 @@
 	- (Add) VertexBufferDX9 class added for working with Vertex buffers.
 	- (Add) IndexBufferDX9 class added for working with index buffers.
 * FileSystem
-	- (Add) FileSystemManager
-	- (Add) FileSystem
+- (Add) FileSystemManager
+- (Add) FileSystem
+- (Add) File

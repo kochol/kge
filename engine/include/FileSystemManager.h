@@ -1,6 +1,9 @@
 #ifndef KGE_FILESYSTEMMANAGER_H
 #define KGE_FILESYSTEMMANAGER_H
 
+#include "String.h"
+#include "array.h"
+
 namespace kge
 {
 	namespace io
@@ -10,9 +13,9 @@ namespace kge
 		//! FileSystemManager is the main manager for FileSystem 
 		class KGE_API FileSystemManager
 		{
-		protected:
+			private:
 
-			//! protected Constructor
+			//! private Constructor
 			FileSystemManager();
 
 		public:
@@ -23,8 +26,22 @@ namespace kge
 			//! Returns the FileSystemManager pointer
 			static FileSystemManager* getSingletonPtr( );
 
+			//! Add a search path to the FileSystemManager to search these paths on resource loading.
+			/*!
+				\param Path The path that will be added to search paths.
+			 */
+			void AddSearchPath(const core::stringw& Path);
+
+			//! Returns a list of search paths.
+			const core::DynamicArray<core::stringw>& GetSearchPath();
+
+			//! Register a FileSystem with FileSystemManager
+			void RegisterFileSystem(FileSystem* pFS);
+
 		protected:
-		private:
+
+			core::DynamicArray<core::stringw>		m_aSearchPath;		//!< The search paths array
+			core::DynamicArray<FileSystem*>			m_aFileSystems;		//!< The registered FileSystem plugins array
 
 		}; // FileSystemManager
 
