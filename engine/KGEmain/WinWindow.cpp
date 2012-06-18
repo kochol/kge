@@ -132,7 +132,7 @@ namespace kge
 			nTop  = 0;
 		}
 
-		m_pHwnd = CreateWindowEx(NULL,"KGE003", "KGE 0.0.6", style,
+		m_pHwnd = CreateWindowEx(NULL,"KGE003", "KGE 0.1.0", style,
 					nLeft, nTop, rWin.right  - rWin.left,
 					rWin.bottom - rWin.top, NULL, NULL, m_phInst, NULL);	
 		// hwnd created

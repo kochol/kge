@@ -1,6 +1,7 @@
 #include "RendererD3D9.h"
 #include "../include/Logger.h"
 #include "VertexBuferDX9.h"
+#include "IndexBufferDX9.h"
 
 #include <dxerr.h>
 #include <d3dx9.h>
@@ -442,7 +443,7 @@ namespace gfx
 		}
 
 		VertexBufferDX9* ppVBout;
-		ppVBout			= new VertexBufferDX9(VCount, Stride, 0);
+		ppVBout			= KGE_NEW(VertexBufferDX9)(VCount, Stride, 0);
 		ppVBout->m_pVB	= vb;
 		ppVBout->Dynamic(isDynamic);
 
@@ -485,6 +486,62 @@ namespace gfx
 			}
 		}
 	}
+
+	//------------------------------------------------------------------------------------
+	// Creates an Index buffer on video memory
+	//------------------------------------------------------------------------------------
+	HardwareBuffer* RendererD3D9::CreateIndexBuffer( void* Indices, u32 ICount, IndexBufferType eIndexBufferType, bool isDynamic )
+	{
+		// Create the index buffer.
+		DWORD usage = 0;
+		D3DPOOL pool = D3DPOOL_MANAGED;
+
+		// If the buffer is dynamic set the flags
+		if (isDynamic)
+		{
+			usage = D3DUSAGE_DYNAMIC | D3DUSAGE_WRITEONLY;
+			pool = D3DPOOL_DEFAULT;
+		}
+
+		// index buffer 16 or 32 bit format
+		D3DFORMAT fmt = D3DFMT_INDEX16;
+		u32 size = sizeof( u16 );
+		if (eIndexBufferType == EIBT_32Bit)
+		{
+			fmt = D3DFMT_INDEX32;
+			size = sizeof( u32 );
+		}
+
+		// Create the index buffer
+		IDirect3DIndexBuffer9* ib;
+		void* Buffer;
+		HR(m_pD3DDevice->CreateIndexBuffer( ICount * size,
+			usage,
+			fmt,
+			pool,
+			&ib,
+			0));
+
+		// Writing to the buffer.
+		if (Indices)
+		{
+			HR(ib->Lock(0, 0, &Buffer, 0));
+			memcpy(Buffer, Indices, ICount * size);
+			HR(ib->Unlock());
+		}
+
+		// Create IndexBufferDX9
+		IndexBufferDX9* ibOut = KGE_NEW(IndexBufferDX9)(ICount, size, fmt);
+		ibOut->m_pIB		 = ib;
+		ibOut->Dynamic(isDynamic);
+
+		// Add to list for restoring on device lost
+		if (isDynamic) 
+			m_vIBuffers.push_back(ibOut);
+
+		return ibOut;
+
+	} // CreateIndexBuffer
 
 } // gfx
 

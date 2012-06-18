@@ -58,13 +58,28 @@ namespace kge
 				\param Vertices A pointer to the Vertices array.
 				\param VCount The Vertices count.
 				\param Stride The vertex struct size in bytes.
+				\param isDynamic Pass true if you want update this buffer data
 				\return Returns the created vertex buffer.
 				\sa HardwareBuffer
+				\todo Add this to ogl renderer plugin
 			*/
 			virtual HardwareBuffer* CreateVertexBuffer(void* Vertices, u32 VCount, 
 													   u32   Stride,
 													   bool  isDynamic = false) = 0;
 
+			//! Creates an Index buffer on video memory
+			/*!
+				\param Indices The pointer to indices data
+				\param ICount The index count
+				\param eIndexBufferType The index buffer format is 16 bit or 32 bit(for larger meshes)
+				\param isDynamic Pass true if you want update this buffer data
+				\return Returns the created index buffer
+				\sa HardwareBuffer
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual HardwareBuffer* CreateIndexBuffer(	void* Indices, u32 ICount,
+				IndexBufferType eIndexBufferType = EIBT_16Bit,
+				bool isDynamic = false) = 0;
 
 		protected:
 

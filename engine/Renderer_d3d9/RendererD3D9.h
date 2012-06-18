@@ -64,6 +64,19 @@ namespace kge
 											   u32   Stride,
 											   bool  isDynamic);
 
+			//! Creates an Index buffer on video memory
+			/*!
+				\param Indices The pointer to indices data
+				\param ICount The index count
+				\param eIndexBufferType The index buffer format is 16 bit or 32 bit(for larger meshes)
+				\param isDynamic Pass true if you want update this buffer data
+				\return Returns the created index buffer
+				\sa HardwareBuffer
+			 */
+			virtual HardwareBuffer* CreateIndexBuffer(	void* Indices, u32 ICount,
+				IndexBufferType eIndexBufferType,
+				bool isDynamic);
+
 			//! Removes VertexBufferDX9 from internal list.
 			void RemoveVertexBuffer(VertexBufferDX9* vb);
 			

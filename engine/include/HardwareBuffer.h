@@ -16,14 +16,6 @@ namespace kge
 
 		}; // HardwareBufferType
 
-		//! Index Buffer type 16 bit or 32 bit
-		enum IndexBufferType
-		{
-			EIBT_16Bit = 0,
-			EIBT_32Bit			// For Large models
-
-		}; // IndexBufferType
-
 		//! The interface is for working with hardware buffers on GPU
 		class KGE_API HardwareBuffer: public Resource
 		{

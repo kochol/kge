@@ -2,6 +2,7 @@
 #define KGE_KGEUNKNOWN_H
 
 #include "kgedef.h"
+#include "KgeMemory.h"
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 #define NOMINMAX
@@ -49,7 +50,7 @@ namespace kge
 #endif
             if (m_uRefCount == 0)
             {
-                delete this;
+                KGE_DELETETHIS(this, KgeUnknown);
                 return 0;
             }
             return m_uRefCount;

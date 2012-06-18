@@ -371,6 +371,15 @@ namespace kge
 
 		} // CreateVertexBuffer
 
+		//------------------------------------------------------------------------------------
+		// Creates an Index buffer on video memory
+		//------------------------------------------------------------------------------------
+		HardwareBuffer* RendererOGL::CreateIndexBuffer( void* Indices, u32 ICount, IndexBufferType eIndexBufferType, bool isDynamic )
+		{
+			return NULL;
+
+		} // CreateIndexBuffer
+
 	} // gfx
 
 } // kge

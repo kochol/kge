@@ -12,6 +12,14 @@ namespace kge
 
 		}; // AntiAliasingMode
 
+		//! Index Buffer type 16 bit or 32 bit
+		enum IndexBufferType
+		{
+			EIBT_16Bit = 0,
+			EIBT_32Bit			// For Large models
+
+		}; // IndexBufferType
+
 	} // gfx
 
 	namespace io

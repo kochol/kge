@@ -17,8 +17,13 @@ namespace kge
 
 } // kge
 
+//! Use KGE_NEW instead of new to track memory leaks and use internal KGE allocator that is faster
+///
+///	example \code kge::Device* pDev = KGE_NEW(kge::Device)(/*Constructor values*/); \endcode
+///
 #define KGE_NEW(T) new (kge::core::KgeMemory::AllocateBytes(sizeof(T), __FILE__, __LINE__, __FUNCTION__)) T
 #define KGE_DELETE(ptr, T) if (ptr) {(ptr)->~T(); kge::core::KgeMemory::DeallocateBytes(ptr); ptr = NULL; }
+#define KGE_DELETETHIS(ptr, T) if (ptr) {(ptr)->~T(); kge::core::KgeMemory::DeallocateBytes(ptr); }
 
 #define KGE_NEW_ARRAY(T, count) (T*)kge::core::KgeMemory::AllocateBytes(sizeof(T) * count, __FILE__, __LINE__, __FUNCTION__)
 #define KGE_DELETE_ARRAY(ptr) if (ptr) { kge::core::KgeMemory::DeallocateBytes(ptr); ptr = NULL; }
