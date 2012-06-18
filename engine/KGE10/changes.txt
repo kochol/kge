@@ -9,3 +9,9 @@
 - (Add) FileSystemManager
 - (Add) FileSystem
 - (Add) File
+- (Add) Stream
+* Loaders
+- (Add) Loader class is an interface for resource loaders in engine
+- (Add) MeshLoader class is an interface for mesh loaders in engine
+    * Loader_OGRE
+	- (Add) OgreMeshLoader class for loading OGRE mesh files

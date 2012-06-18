@@ -36,7 +36,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Add a search path to the FileSystemManager to search these paths on resource loading.
 		//------------------------------------------------------------------------------------
-		void FileSystemManager::AddSearchPath( const core::stringw& Path )
+		void FileSystemManager::AddSearchPath( const core::stringc& Path )
 		{
 			m_aSearchPath.push_back(Path);
 
@@ -45,7 +45,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Returns a list of search paths.
 		//------------------------------------------------------------------------------------
-		const core::DynamicArray<core::stringw>& FileSystemManager::GetSearchPath()
+		const core::DynamicArray<core::stringc>& FileSystemManager::GetSearchPath()
 		{
 			return m_aSearchPath;
 

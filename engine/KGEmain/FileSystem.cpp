@@ -27,30 +27,30 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Check if this FileSystem can load this file.
 		//------------------------------------------------------------------------------------
-		bool FileSystem::CanLoad( core::stringw FileName )
+		bool FileSystem::CanLoad( core::stringc FileName )
 		{
 			// Get search paths
-			const core::DynamicArray<core::stringw>& aSearchPaths = 
+			const core::DynamicArray<core::stringc>& aSearchPaths = 
 				FileSystemManager::getSingletonPtr()->GetSearchPath();
 
 			// Looking for files
-			core::stringw str;
+			core::stringc str;
 			for (u32 i = 0; i < aSearchPaths.size(); i++)
 			{
 				str = aSearchPaths[i];
 				size_t strsize = str.size();
 
 				// Add / to the end of the path if it hasn't any
-				if (str[strsize - 1] != L'/' && str[strsize - 1] != L'\\')
+				if (str[strsize - 1] != '/' && str[strsize - 1] != '\\')
 					str += '/';
 
 				str += FileName;
-				io::Logger::Debug("%s", core::String::Convert(str).c_str());
+				io::Logger::Debug("%s", str.c_str());
 
 				// Check if the file exist
-				if (io::File::Exist(core::String::Convert(str)))
+				if (io::File::Exist(str))
 				{
-					io::Logger::Debug("Can load %s file.", core::String::Convert(str).c_str());
+					io::Logger::Debug("Can load %s file.", str.c_str());
 					return true;
 				}
 			}

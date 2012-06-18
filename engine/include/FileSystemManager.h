@@ -30,17 +30,17 @@ namespace kge
 			/*!
 				\param Path The path that will be added to search paths.
 			 */
-			void AddSearchPath(const core::stringw& Path);
+			void AddSearchPath(const core::stringc& Path);
 
 			//! Returns a list of search paths.
-			const core::DynamicArray<core::stringw>& GetSearchPath();
+			const core::DynamicArray<core::stringc>& GetSearchPath();
 
 			//! Register a FileSystem with FileSystemManager
 			void RegisterFileSystem(FileSystem* pFS);
 
 		protected:
 
-			core::DynamicArray<core::stringw>		m_aSearchPath;		//!< The search paths array
+			core::DynamicArray<core::stringc>		m_aSearchPath;		//!< The search paths array
 			core::DynamicArray<FileSystem*>			m_aFileSystems;		//!< The registered FileSystem plugins array
 
 		}; // FileSystemManager

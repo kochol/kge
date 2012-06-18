@@ -16,9 +16,9 @@ int main()
 	kge::io::FileSystem fs;
 	kge::io::FileSystemManager* pFSM = kge::io::FileSystemManager::getSingletonPtr();
 	pFSM->RegisterFileSystem(&fs);
-	pFSM->AddSearchPath(L"e:\\");
+	pFSM->AddSearchPath("e:\\");
 
-	fs.CanLoad(L"ter1ps.txt");
+	fs.CanLoad("ter1ps.txt");
 
 	getchar();
 

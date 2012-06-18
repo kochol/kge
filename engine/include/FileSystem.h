@@ -22,7 +22,7 @@ namespace kge
 				\param FileName The name of the file to check.
 				\return Returns true if possible.
 			 */
-			virtual bool CanLoad(core::stringw FileName);
+			virtual bool CanLoad(core::stringc FileName);
 
 		}; // FileSysem
 

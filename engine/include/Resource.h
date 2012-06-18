@@ -16,6 +16,7 @@ namespace kge
 
 		//! Constructor
 		Resource();
+
 		//! Constructor
 		Resource(const u32 Handle, const char* FileName, const char* Name, void* ExtraParam);
 

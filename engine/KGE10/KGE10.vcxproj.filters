@@ -162,6 +162,15 @@
     <ClInclude Include="..\include\File.h">
       <Filter>Header Files\io</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Stream.h">
+      <Filter>Header Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MeshLoader.h">
+      <Filter>Header Files\gfx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\KGEmain\Device.cpp">
@@ -213,6 +222,12 @@
       <Filter>Source Files\io</Filter>
     </ClCompile>
     <ClCompile Include="..\KGEmain\File.cpp">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\kgemain\Loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\kgemain\Stream.cpp">
       <Filter>Source Files\io</Filter>
     </ClCompile>
   </ItemGroup>
