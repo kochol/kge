@@ -46,6 +46,9 @@
     <Filter Include="Header Files\os">
       <UniqueIdentifier>{48c5bcfc-37d5-41f0-a6c5-cdf2b4c98f94}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gfx">
+      <UniqueIdentifier>{1b7f9878-24c0-4b1c-ac7a-f6d0d55acbf9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\KgeUnknown.h">
@@ -229,6 +232,9 @@
     </ClCompile>
     <ClCompile Include="..\kgemain\Stream.cpp">
       <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KGEmain\Renderer.cpp">
+      <Filter>Source Files\gfx</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

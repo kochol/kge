@@ -77,12 +77,29 @@ namespace kge
 				IndexBufferType eIndexBufferType,
 				bool isDynamic);
 
+			//! Sets the vertex buffer for multi streaming and rendering
+			/*! Sets a vertex buffer to its stage to start rendering
+				\param pBuffer The pointer to vertex buffer
+				\param stage The stage number for using in multi streaming
+				\sa CreateVertexBuffer, HardwareBuffer
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetVertexBuffer(HardwareBuffer* pBuffer, int stage);
+
+			//! Sets the index buffer for rendering
+			/*!
+				\param pBuffer The pointer to index buffer
+				\sa CreateIndexBuffer, HardwareBuffer
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetIndexBuffer(HardwareBuffer* pBuffer);
+
 		private:
 			//--------------------------------
 			// functions
 			//--------------------------------
 
-			// Check device if it is createable.
+			// Check device if it is create able.
 			bool CheckDevice( void );
 
 			//--------------------------------

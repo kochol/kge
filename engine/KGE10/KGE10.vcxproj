@@ -139,6 +139,7 @@
     <ClCompile Include="..\kgemain\Loader.cpp" />
     <ClCompile Include="..\KGEmain\Logger.cpp" />
     <ClCompile Include="..\KGEmain\PluginManager.cpp" />
+    <ClCompile Include="..\KGEmain\Renderer.cpp" />
     <ClCompile Include="..\KGEmain\Resource.cpp" />
     <ClCompile Include="..\kgemain\Stream.cpp" />
     <ClCompile Include="..\KGEmain\String.cpp" />

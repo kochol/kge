@@ -16,8 +16,7 @@ namespace kge
 		public:
 
 			//! Constructor
-			Renderer(): m_bUseStencil(false), m_bUseShaders(false), 
-				m_bIsSceneRunning(false), m_iFPS(0), m_iFPSTemp(0) {}
+			Renderer();
 
 			//! Destructor
 			virtual ~Renderer() {}
@@ -81,15 +80,36 @@ namespace kge
 				IndexBufferType eIndexBufferType = EIBT_16Bit,
 				bool isDynamic = false) = 0;
 
+			//! Sets the vertex buffer for multi streaming and rendering
+			/*! Sets a vertex buffer to its stage to start rendering
+				\param pBuffer The pointer to vertex buffer
+				\param stage The stage number for using in multi streaming
+				\sa CreateVertexBuffer, HardwareBuffer
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetVertexBuffer(HardwareBuffer* pBuffer, int stage = 0) = 0;
+			
+			//! Sets the index buffer for rendering
+			/*!
+				\param pBuffer The pointer to index buffer
+				\sa CreateIndexBuffer, HardwareBuffer
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetIndexBuffer(HardwareBuffer* pBuffer) = 0;
+
 		protected:
 
-			bool		m_bUseStencil,		//!< Create and use stencil buffer
-						m_bUseShaders,		//!< Dose renderer support shaders?
-						m_bIsSceneRunning;	//!< Is scene running
-			int			m_iFPS,				//!< Frame per second
-						m_iFPSTemp,			//!< Temp Frame per second for calculating FPS
-						m_iTriCount,		//!< Rendered triangle count
-						m_iDrawCount;		//!< Draw call count
+			bool		m_bUseStencil,			//!< Create and use stencil buffer
+						m_bUseShaders,			//!< Dose renderer support shaders?
+						m_bIsSceneRunning;		//!< Is scene running
+			int			m_iFPS,					//!< Frame per second
+						m_iFPSTemp,				//!< Temp Frame per second for calculating FPS
+						m_iTriCount,			//!< Rendered triangle count
+						m_iDrawCount;			//!< Draw call count
+			u32			m_nTextID[8],			//!< Activated texture ID.
+						m_nVertexBufferID[16],	//!< The current vertex buffer set.
+						m_nIndexBufferID,		//!< The current index buffer set.
+						m_nVertexDecID;			//!< The current vertex declaration set.
 
 		}; // Renderer
 

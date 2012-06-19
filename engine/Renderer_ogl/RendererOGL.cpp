@@ -380,6 +380,22 @@ namespace kge
 
 		} // CreateIndexBuffer
 
+		//------------------------------------------------------------------------------------
+		// Sets the vertex buffer for multi streaming and rendering
+		//------------------------------------------------------------------------------------
+		void RendererOGL::SetVertexBuffer( HardwareBuffer* pBuffer, int stage )
+		{
+
+		} // SetVertexBuffer
+
+		//------------------------------------------------------------------------------------
+		// Sets the index buffer for rendering
+		//------------------------------------------------------------------------------------
+		void RendererOGL::SetIndexBuffer( HardwareBuffer* pBuffer )
+		{
+
+		} // SetIndexBuffer
+
 	} // gfx
 
 } // kge

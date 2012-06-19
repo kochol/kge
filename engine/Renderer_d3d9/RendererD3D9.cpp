@@ -384,7 +384,7 @@ namespace gfx
 		if ( (dwBehavior & D3DCREATE_HARDWARE_VERTEXPROCESSING) ||
 			(dwBehavior & D3DCREATE_MIXED_VERTEXPROCESSING   )  ) 
 		{
-			// alphablending from texture pixels supported
+			// alpha blending from texture pixels supported
 			if ( !(pCaps->TextureCaps & D3DPTEXTURECAPS_ALPHA) ) 
 			{
 				return false;
@@ -542,6 +542,46 @@ namespace gfx
 		return ibOut;
 
 	} // CreateIndexBuffer
+
+	//------------------------------------------------------------------------------------
+	// Sets the vertex buffer for multi streaming and rendering
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::SetVertexBuffer( HardwareBuffer* pBuffer, int stage )
+	{
+		if (!pBuffer)
+		{
+			return;
+		}
+
+		if (m_nVertexBufferID[stage] == pBuffer->GetID())
+			return;
+
+		m_nVertexBufferID[stage] = pBuffer->GetID();
+
+		// Set the vertex buffer
+		m_pD3DDevice->SetStreamSource(stage, ((VertexBufferDX9*)pBuffer)->m_pVB, 
+			0, pBuffer->GetStride());
+
+	} // SetVertexBuffer
+
+	//------------------------------------------------------------------------------------
+	// Sets the index buffer for rendering
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::SetIndexBuffer( HardwareBuffer* pBuffer )
+	{
+		if (!pBuffer)
+		{
+			return;
+		}
+
+		if (m_nIndexBufferID == pBuffer->GetID())
+			return;
+
+		m_nIndexBufferID = pBuffer->GetID();
+
+		m_pD3DDevice->SetIndices(((IndexBufferDX9*)pBuffer)->m_pIB);
+
+	} // SetIndexBuffer
 
 } // gfx
 
