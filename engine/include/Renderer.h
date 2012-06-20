@@ -2,13 +2,18 @@
 #define KGE_RENDERER_H
 
 #include "structs.h"
+#include "array.h"
+#include "String.h"
 
 namespace kge
 {
 	//! Graphics classes
 	namespace gfx
 	{
+		//   F O R W A R D   D E C L A R A T I O N		
 		class HardwareBuffer;
+		class VertexDec;
+		struct CustomVertexElement;
 
 		//! The interface for working with renderers in KGE.
 		class KGE_API Renderer
@@ -96,6 +101,25 @@ namespace kge
 				\todo Add this to ogl renderer plugin
 			 */
 			virtual void SetIndexBuffer(HardwareBuffer* pBuffer) = 0;
+
+			//! Create a custom vertex declaration and returns its pointer
+			/*!
+				\param VertexInfoArray An array of CustomVertexElement to declare the vertex type
+				\param sName The VertexDec name the name must be unique you need this name to get
+				this VertexDec later and use it.
+				\return Returns the created VertexDec pointer
+				\sa VertexDec, CustomVertexElement, SetVertexDeclaration
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual VertexDec* CreateVertexDeclaration (core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName) = 0;
+
+			//! Sets the vertex declaration
+			/*! Sets the vertex declaration to prepare renderer to render something
+				\param pVD The VertexDec pointer to set
+				\sa VertexDec, CustomVertexElement, CreateVertexDeclaration
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetVertexDeclaration(VertexDec* pVD) = 0;
 
 		protected:
 

@@ -115,6 +115,8 @@
     <ClInclude Include="..\include\Stream.h" />
     <ClInclude Include="..\include\String.h" />
     <ClInclude Include="..\include\structs.h" />
+    <ClInclude Include="..\include\VertexDeclaration.h" />
+    <ClInclude Include="..\include\VertexElement.h" />
     <ClInclude Include="..\KGEmain\Android.h" />
     <ClCompile Include="..\KGEmain\File.cpp" />
     <ClCompile Include="..\KGEmain\FileSystemManager.cpp">
@@ -143,6 +145,7 @@
     <ClCompile Include="..\KGEmain\Resource.cpp" />
     <ClCompile Include="..\kgemain\Stream.cpp" />
     <ClCompile Include="..\KGEmain\String.cpp" />
+    <ClCompile Include="..\kgemain\VertexDeclaration.cpp" />
     <ClCompile Include="..\KGEmain\Windows.cpp" />
     <ClCompile Include="..\KGEmain\WinWindow.cpp" />
   </ItemGroup>

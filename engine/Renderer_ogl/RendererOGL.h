@@ -94,6 +94,24 @@ namespace kge
 			 */
 			virtual void SetIndexBuffer(HardwareBuffer* pBuffer);
 
+			//! Create a custom vertex declaration and returns its pointer
+			/*!
+				\param VertexInfoArray An array of CustomVertexElement to declare the vertex type
+				\return Returns the created VertexDec pointer
+				\sa VertexDec, CustomVertexElement
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual VertexDec* CreateVertexDeclaration
+				(core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName);
+
+			//! Sets the vertex declaration
+			/*! Sets the vertex declaration to prepare renderer to render something
+				\pVD The VertexDec pointer to set
+				\sa VertexDec, CustomVertexElement, CreateVertexDeclaration
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetVertexDeclaration(VertexDec* pVD);
+
 		private:
 			//--------------------------------
 			// functions

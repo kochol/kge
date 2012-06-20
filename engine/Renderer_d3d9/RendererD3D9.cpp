@@ -2,6 +2,8 @@
 #include "../include/Logger.h"
 #include "VertexBuferDX9.h"
 #include "IndexBufferDX9.h"
+#include "../include/VertexDeclaration.h"
+#include "../include/VertexElement.h"
 
 #include <dxerr.h>
 #include <d3dx9.h>
@@ -582,6 +584,34 @@ namespace gfx
 		m_pD3DDevice->SetIndices(((IndexBufferDX9*)pBuffer)->m_pIB);
 
 	} // SetIndexBuffer
+
+	//------------------------------------------------------------------------------------
+	// Create a custom vertex declaration and returns its pointer
+	//------------------------------------------------------------------------------------
+	VertexDec* RendererD3D9::CreateVertexDeclaration
+		( core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName )
+	{
+		IDirect3DVertexDeclaration9* vd;
+		m_pD3DDevice->CreateVertexDeclaration((D3DVERTEXELEMENT9*)&VertexInfoArray[0], &vd);
+		VertexDec* pOut	  = KGE_NEW(VertexDec)(sName);
+		pOut->m_VertexDec = vd;
+
+		return pOut;
+
+	} // CreateVertexDeclaration
+
+	//------------------------------------------------------------------------------------
+	// Sets the vertex declaration
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::SetVertexDeclaration( VertexDec* pVD )
+	{
+		if (m_nVertexDecID != pVD->GetID())
+		{
+			m_nVertexDecID = pVD->GetID();
+			m_pD3DDevice->SetVertexDeclaration( (IDirect3DVertexDeclaration9*)pVD->m_VertexDec ); 	
+		}
+
+	} // SetVertexDeclaration
 
 } // gfx
 

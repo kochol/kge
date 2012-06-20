@@ -495,3 +495,7 @@
 /tests/09FileSystemTest/Debug/09FileSystemTest_manifest.rc
 /tests/09FileSystemTest/Debug/vc100.idb
 /tests/09FileSystemTest/Debug/vc100.pdb
+/engine/KGE10/ipch/03 d3d9 plugin test-8bdcacc0/03 d3d9 plugin test-62e77392.ipch
+/engine/KGE10/ipch/renderer_d3d9-aabeeacb/renderer_d3d9-51b15776.ipch
+/engine/KGE10/ipch/renderer_ogl-17f586e7/renderer_ogl-d2d45d44.ipch
+/engine/Renderer_d3d9/Debug/Renderer_d3d9.unsuccessfulbuild
