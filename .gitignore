@@ -495,3 +495,6 @@
 /tests/09FileSystemTest/Debug/09FileSystemTest_manifest.rc
 /tests/09FileSystemTest/Debug/vc100.idb
 /tests/09FileSystemTest/Debug/vc100.pdb
+/engine/KGE10/ipch/kge10-e008c1d5/kge-2148c843.ipch
+/engine/KGE10/ipch/renderer_d3d9-a02062b9/renderer_d3d9-51b15776.ipch
+/engine/KGE10/ipch/renderer_ogl-291c2b55/renderer_ogl-d2d45d44.ipch

@@ -14,14 +14,9 @@ namespace kge
 		{
 			// Set texture and vertex IDs to MAXID(NULL)
 			for (int i = 0; i < 8; i++)
-			{
 				m_nTextID[i]		 = MAXID;
+			for (int i = 0; i < 16; i++)
 				m_nVertexBufferID[i] = MAXID;
-			}
-			for (int i = 8; i < 16; i++)
-			{
-				m_nVertexBufferID[i] = MAXID;
-			}
 
 		} // Constructor
 
