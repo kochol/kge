@@ -101,6 +101,7 @@
     <ClInclude Include="..\include\Loader.h" />
     <ClInclude Include="..\include\Logger.h" />
     <ClInclude Include="..\include\math.h" />
+    <ClInclude Include="..\include\Matrix.h" />
     <ClInclude Include="..\include\mem_fun.h" />
     <ClInclude Include="..\include\MeshLoader.h" />
     <ClInclude Include="..\include\Mouse.h" />
@@ -140,6 +141,7 @@
     <ClCompile Include="..\KGEmain\KgeThread.cpp" />
     <ClCompile Include="..\kgemain\Loader.cpp" />
     <ClCompile Include="..\KGEmain\Logger.cpp" />
+    <ClCompile Include="..\kgemain\Matrix.cpp" />
     <ClCompile Include="..\KGEmain\PluginManager.cpp" />
     <ClCompile Include="..\KGEmain\Renderer.cpp" />
     <ClCompile Include="..\KGEmain\Resource.cpp" />

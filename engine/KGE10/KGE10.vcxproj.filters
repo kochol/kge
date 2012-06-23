@@ -49,6 +49,9 @@
     <Filter Include="Source Files\gfx">
       <UniqueIdentifier>{1b7f9878-24c0-4b1c-ac7a-f6d0d55acbf9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{d164568c-0e84-46b5-95dc-be36971d04c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\KgeUnknown.h">
@@ -180,6 +183,9 @@
     <ClInclude Include="..\include\VertexDeclaration.h">
       <Filter>Header Files\gfx</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Matrix.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\KGEmain\Device.cpp">
@@ -244,6 +250,9 @@
     </ClCompile>
     <ClCompile Include="..\kgemain\VertexDeclaration.cpp">
       <Filter>Source Files\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\kgemain\Matrix.cpp">
+      <Filter>Source Files\math</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
