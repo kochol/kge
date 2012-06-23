@@ -416,6 +416,16 @@ namespace kge
 		{
 
 		} // SetVertexDeclaration
+
+		//------------------------------------------------------------------------------------
+		// Draw a list of triangles
+		//------------------------------------------------------------------------------------
+		void RendererOGL::DrawTriangleList( u32 VCount, u32 ICount, 
+			u32 VertexStart /*= 0*/, u32 StartIndex /*= 0*/ )
+		{
+
+		} // DrawTriangleList
+
 	} // gfx
 
 } // kge

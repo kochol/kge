@@ -111,7 +111,8 @@ namespace kge
 				\sa VertexDec, CustomVertexElement, SetVertexDeclaration
 				\todo Add this to ogl renderer plugin
 			 */
-			virtual VertexDec* CreateVertexDeclaration (core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName) = 0;
+			virtual VertexDec* CreateVertexDeclaration 
+				(core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName) = 0;
 
 			//! Sets the vertex declaration
 			/*! Sets the vertex declaration to prepare renderer to render something
@@ -121,6 +122,18 @@ namespace kge
 			 */
 			virtual void SetVertexDeclaration(VertexDec* pVD) = 0;
 
+			//! Draw a list of triangles
+			/*! Draw a vertex buffer you must set the buffers manually before calling this function
+				\param VCount The Vertices count.
+				\param ICount The Indices count.
+				\param VertexStart The vertex offset in VertexBuffwe
+				\param StartIndex The index offset in IndexBuffer
+				\sa SetVertexDeclaration, SetIndexBuffer, SetVertexBuffer
+				\todo Add this to ogl renderer plugin
+			*/
+			virtual void DrawTriangleList(u32 VCount, u32 ICount,
+										  u32 VertexStart = 0, u32 StartIndex = 0) = 0;
+
 		protected:
 
 			bool		m_bUseStencil,			//!< Create and use stencil buffer
@@ -129,7 +142,8 @@ namespace kge
 			int			m_iFPS,					//!< Frame per second
 						m_iFPSTemp,				//!< Temp Frame per second for calculating FPS
 						m_iTriCount,			//!< Rendered triangle count
-						m_iDrawCount;			//!< Draw call count
+						m_iDrawCount,			//!< Draw call count
+						m_iBatchCount;			//!< For internal use for counting correct triangles count when using instancing
 			u32			m_nTextID[8],			//!< Activated texture ID.
 						m_nVertexBufferID[16],	//!< The current vertex buffer set.
 						m_nIndexBufferID,		//!< The current index buffer set.

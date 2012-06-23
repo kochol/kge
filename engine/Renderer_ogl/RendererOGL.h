@@ -112,6 +112,18 @@ namespace kge
 			 */
 			virtual void SetVertexDeclaration(VertexDec* pVD);
 
+			//! Draw a list of triangles
+			/*! Draw a vertex buffer you must set the buffers manually before calling this function
+				\param VCount The Vertices count.
+				\param ICount The Indices count.
+				\param VertexStart The vertex offset in VertexBuffwe
+				\param StartIndex The index offset in IndexBuffer
+				\sa SetVertexDeclaration, SetIndexBuffer, SetVertexBuffer
+				\todo Add this to ogl renderer plugin
+			*/
+			void DrawTriangleList(u32 VCount, u32 ICount,
+								  u32 VertexStart = 0, u32 StartIndex = 0);
+
 		private:
 			//--------------------------------
 			// functions

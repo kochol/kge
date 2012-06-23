@@ -613,6 +613,26 @@ namespace gfx
 
 	} // SetVertexDeclaration
 
+	//------------------------------------------------------------------------------------
+	// Draw a list of triangles
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::DrawTriangleList( u32 VCount, u32 ICount, 
+		u32 VertexStart /*= 0*/, u32 StartIndex /*= 0*/ )
+	{
+		if ( ICount > 0 )
+		{
+			m_pD3DDevice->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, VertexStart, 0, VCount, StartIndex, ICount / 3);
+			m_iTriCount += ICount / 3 * m_iBatchCount;
+		}
+		else
+		{
+			m_pD3DDevice->DrawPrimitive(D3DPT_TRIANGLELIST, VertexStart, VCount / 3);
+			m_iTriCount += VCount / 3 * m_iBatchCount;
+		}
+		m_iDrawCount++;
+
+	} // DrawTriangleList
+
 } // gfx
 
 } // kge
