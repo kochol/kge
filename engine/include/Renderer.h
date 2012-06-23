@@ -2,13 +2,18 @@
 #define KGE_RENDERER_H
 
 #include "structs.h"
+#include "array.h"
+#include "String.h"
 
 namespace kge
 {
 	//! Graphics classes
 	namespace gfx
 	{
+		//   F O R W A R D   D E C L A R A T I O N		
 		class HardwareBuffer;
+		class VertexDec;
+		struct CustomVertexElement;
 
 		//! The interface for working with renderers in KGE.
 		class KGE_API Renderer
@@ -97,6 +102,38 @@ namespace kge
 			 */
 			virtual void SetIndexBuffer(HardwareBuffer* pBuffer) = 0;
 
+			//! Create a custom vertex declaration and returns its pointer
+			/*!
+				\param VertexInfoArray An array of CustomVertexElement to declare the vertex type
+				\param sName The VertexDec name the name must be unique you need this name to get
+				this VertexDec later and use it.
+				\return Returns the created VertexDec pointer
+				\sa VertexDec, CustomVertexElement, SetVertexDeclaration
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual VertexDec* CreateVertexDeclaration 
+				(core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName) = 0;
+
+			//! Sets the vertex declaration
+			/*! Sets the vertex declaration to prepare renderer to render something
+				\param pVD The VertexDec pointer to set
+				\sa VertexDec, CustomVertexElement, CreateVertexDeclaration
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetVertexDeclaration(VertexDec* pVD) = 0;
+
+			//! Draw a list of triangles
+			/*! Draw a vertex buffer you must set the buffers manually before calling this function
+				\param VCount The Vertices count.
+				\param ICount The Indices count.
+				\param VertexStart The vertex offset in VertexBuffwe
+				\param StartIndex The index offset in IndexBuffer
+				\sa SetVertexDeclaration, SetIndexBuffer, SetVertexBuffer
+				\todo Add this to ogl renderer plugin
+			*/
+			virtual void DrawTriangleList(u32 VCount, u32 ICount,
+										  u32 VertexStart = 0, u32 StartIndex = 0) = 0;
+
 		protected:
 
 			bool		m_bUseStencil,			//!< Create and use stencil buffer
@@ -105,7 +142,8 @@ namespace kge
 			int			m_iFPS,					//!< Frame per second
 						m_iFPSTemp,				//!< Temp Frame per second for calculating FPS
 						m_iTriCount,			//!< Rendered triangle count
-						m_iDrawCount;			//!< Draw call count
+						m_iDrawCount,			//!< Draw call count
+						m_iBatchCount;			//!< For internal use for counting correct triangles count when using instancing
 			u32			m_nTextID[8],			//!< Activated texture ID.
 						m_nVertexBufferID[16],	//!< The current vertex buffer set.
 						m_nIndexBufferID,		//!< The current index buffer set.

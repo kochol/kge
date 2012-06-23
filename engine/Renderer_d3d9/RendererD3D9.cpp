@@ -2,6 +2,8 @@
 #include "../include/Logger.h"
 #include "VertexBuferDX9.h"
 #include "IndexBufferDX9.h"
+#include "../include/VertexDeclaration.h"
+#include "../include/VertexElement.h"
 
 #include <dxerr.h>
 #include <d3dx9.h>
@@ -582,6 +584,54 @@ namespace gfx
 		m_pD3DDevice->SetIndices(((IndexBufferDX9*)pBuffer)->m_pIB);
 
 	} // SetIndexBuffer
+
+	//------------------------------------------------------------------------------------
+	// Create a custom vertex declaration and returns its pointer
+	//------------------------------------------------------------------------------------
+	VertexDec* RendererD3D9::CreateVertexDeclaration
+		( core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName )
+	{
+		IDirect3DVertexDeclaration9* vd;
+		m_pD3DDevice->CreateVertexDeclaration((D3DVERTEXELEMENT9*)&VertexInfoArray[0], &vd);
+		VertexDec* pOut	  = KGE_NEW(VertexDec)(sName);
+		pOut->m_VertexDec = vd;
+
+		return pOut;
+
+	} // CreateVertexDeclaration
+
+	//------------------------------------------------------------------------------------
+	// Sets the vertex declaration
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::SetVertexDeclaration( VertexDec* pVD )
+	{
+		if (m_nVertexDecID != pVD->GetID())
+		{
+			m_nVertexDecID = pVD->GetID();
+			m_pD3DDevice->SetVertexDeclaration( (IDirect3DVertexDeclaration9*)pVD->m_VertexDec ); 	
+		}
+
+	} // SetVertexDeclaration
+
+	//------------------------------------------------------------------------------------
+	// Draw a list of triangles
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::DrawTriangleList( u32 VCount, u32 ICount, 
+		u32 VertexStart /*= 0*/, u32 StartIndex /*= 0*/ )
+	{
+		if ( ICount > 0 )
+		{
+			m_pD3DDevice->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, VertexStart, 0, VCount, StartIndex, ICount / 3);
+			m_iTriCount += ICount / 3 * m_iBatchCount;
+		}
+		else
+		{
+			m_pD3DDevice->DrawPrimitive(D3DPT_TRIANGLELIST, VertexStart, VCount / 3);
+			m_iTriCount += VCount / 3 * m_iBatchCount;
+		}
+		m_iDrawCount++;
+
+	} // DrawTriangleList
 
 } // gfx
 

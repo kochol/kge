@@ -101,6 +101,7 @@
     <ClInclude Include="..\include\Loader.h" />
     <ClInclude Include="..\include\Logger.h" />
     <ClInclude Include="..\include\math.h" />
+    <ClInclude Include="..\include\Matrix.h" />
     <ClInclude Include="..\include\mem_fun.h" />
     <ClInclude Include="..\include\MeshLoader.h" />
     <ClInclude Include="..\include\Mouse.h" />
@@ -115,6 +116,8 @@
     <ClInclude Include="..\include\Stream.h" />
     <ClInclude Include="..\include\String.h" />
     <ClInclude Include="..\include\structs.h" />
+    <ClInclude Include="..\include\VertexDeclaration.h" />
+    <ClInclude Include="..\include\VertexElement.h" />
     <ClInclude Include="..\KGEmain\Android.h" />
     <ClCompile Include="..\KGEmain\File.cpp" />
     <ClCompile Include="..\KGEmain\FileSystemManager.cpp">
@@ -138,11 +141,13 @@
     <ClCompile Include="..\KGEmain\KgeThread.cpp" />
     <ClCompile Include="..\kgemain\Loader.cpp" />
     <ClCompile Include="..\KGEmain\Logger.cpp" />
+    <ClCompile Include="..\kgemain\Matrix.cpp" />
     <ClCompile Include="..\KGEmain\PluginManager.cpp" />
     <ClCompile Include="..\KGEmain\Renderer.cpp" />
     <ClCompile Include="..\KGEmain\Resource.cpp" />
     <ClCompile Include="..\kgemain\Stream.cpp" />
     <ClCompile Include="..\KGEmain\String.cpp" />
+    <ClCompile Include="..\kgemain\VertexDeclaration.cpp" />
     <ClCompile Include="..\KGEmain\Windows.cpp" />
     <ClCompile Include="..\KGEmain\WinWindow.cpp" />
   </ItemGroup>

@@ -16,7 +16,7 @@
 //   S I M D    C O N F I G
 //************************************************************************
 
-#define KGE_USE_SSE2 0	// SSE 2
+#define KGE_USE_SSE2 1	// SSE 2
 #define KGE_USE_SSE3 0	// SSE 3
 #define KGE_USE_SSE4 0	// SSE 4
 #define KGE_USE_3DNOW 0	// 3DNow!

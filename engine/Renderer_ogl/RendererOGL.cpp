@@ -8,6 +8,8 @@
 #include "../include/Logger.h"
 #include <stdio.h>
 #include <stdio.h>
+#include "../include/VertexDeclaration.h"
+#include "../include/VertexElement.h"
 
 #if KGE_COMPILER == KGE_COMPILER_MSVC
 	#pragma comment(lib,"opengl32.lib")
@@ -333,6 +335,7 @@ namespace kge
 		bool RendererOGL::BeginRendering(bool bColor, bool bDepth, bool bStencil)
 		{
 			return Clear(bColor, bDepth, bStencil);
+
 		} // BeginRendering
 
 		//------------------------------------------------------------------------------------
@@ -395,6 +398,33 @@ namespace kge
 		{
 
 		} // SetIndexBuffer
+
+		//------------------------------------------------------------------------------------
+		// Create a custom vertex declaration and returns its pointer
+		//------------------------------------------------------------------------------------
+		VertexDec* RendererOGL::CreateVertexDeclaration
+			( core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName )
+		{
+			return NULL;
+
+		} // CreateVertexDeclaration
+
+		//------------------------------------------------------------------------------------
+		// Sets the vertex declaration
+		//------------------------------------------------------------------------------------
+		void RendererOGL::SetVertexDeclaration( VertexDec* pVD )
+		{
+
+		} // SetVertexDeclaration
+
+		//------------------------------------------------------------------------------------
+		// Draw a list of triangles
+		//------------------------------------------------------------------------------------
+		void RendererOGL::DrawTriangleList( u32 VCount, u32 ICount, 
+			u32 VertexStart /*= 0*/, u32 StartIndex /*= 0*/ )
+		{
+
+		} // DrawTriangleList
 
 	} // gfx
 

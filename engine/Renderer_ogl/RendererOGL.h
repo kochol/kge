@@ -94,6 +94,36 @@ namespace kge
 			 */
 			virtual void SetIndexBuffer(HardwareBuffer* pBuffer);
 
+			//! Create a custom vertex declaration and returns its pointer
+			/*!
+				\param VertexInfoArray An array of CustomVertexElement to declare the vertex type
+				\return Returns the created VertexDec pointer
+				\sa VertexDec, CustomVertexElement
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual VertexDec* CreateVertexDeclaration
+				(core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName);
+
+			//! Sets the vertex declaration
+			/*! Sets the vertex declaration to prepare renderer to render something
+				\pVD The VertexDec pointer to set
+				\sa VertexDec, CustomVertexElement, CreateVertexDeclaration
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetVertexDeclaration(VertexDec* pVD);
+
+			//! Draw a list of triangles
+			/*! Draw a vertex buffer you must set the buffers manually before calling this function
+				\param VCount The Vertices count.
+				\param ICount The Indices count.
+				\param VertexStart The vertex offset in VertexBuffwe
+				\param StartIndex The index offset in IndexBuffer
+				\sa SetVertexDeclaration, SetIndexBuffer, SetVertexBuffer
+				\todo Add this to ogl renderer plugin
+			*/
+			void DrawTriangleList(u32 VCount, u32 ICount,
+								  u32 VertexStart = 0, u32 StartIndex = 0);
+
 		private:
 			//--------------------------------
 			// functions
