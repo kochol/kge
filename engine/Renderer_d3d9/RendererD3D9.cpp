@@ -633,6 +633,71 @@ namespace gfx
 
 	} // DrawTriangleList
 
+	//------------------------------------------------------------------------------------
+	// Sets the transformation of World, View or Projection matrices
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::SetTransForm( math::Matrix *mat, TransformMode TM /*= ETM_World*/ )
+	{
+		D3DMATRIX mWorld;
+		if (!mat) 
+		{
+			math::Matrix m;
+			memcpy(&mWorld, &m, sizeof(D3DMATRIX)); 
+		}
+		else
+			memcpy(&mWorld, mat, sizeof(D3DMATRIX)); 
+
+		switch (TM)
+		{
+		case ETM_World:
+			m_pD3DDevice->SetTransform(D3DTS_WORLD, &mWorld);
+			m_mWorld = mWorld;
+			break;
+		case ETM_View:
+			m_pD3DDevice->SetTransform(D3DTS_VIEW, &mWorld);
+			m_mView = mWorld;
+			if (mat)
+				m_mViewProj = GetTransForm(ETM_Projection) * (*mat);
+			else
+				m_mViewProj = GetTransForm(ETM_Projection);
+			break;
+		case ETM_Projection:
+			m_pD3DDevice->SetTransform(D3DTS_PROJECTION, &mWorld);
+			m_mProj = mWorld;
+			if (mat)
+				m_mViewProj = *mat * GetTransForm(ETM_View);
+			else
+				m_mViewProj = GetTransForm(ETM_View);
+			break;
+		}
+
+	} // SetTransForm
+
+	//------------------------------------------------------------------------------------
+	// Returns the transformation of World, View, Projection or ViewProjection matrices
+	//------------------------------------------------------------------------------------
+	math::Matrix RendererD3D9::GetTransForm( TransformMode TM /*= ETM_World*/ )
+	{
+		math::Matrix mat;
+		switch (TM)
+		{
+		case ETM_World:
+			memcpy(&mat, &m_mWorld, sizeof(D3DMATRIX)); 
+			break;
+		case ETM_View:
+			memcpy(&mat, &m_mView, sizeof(D3DMATRIX)); 
+			break;
+		case ETM_Projection:
+				memcpy(&mat, &m_mProj, sizeof(D3DMATRIX)); 
+			break;
+		case ETM_ViewProjection:
+			return m_mViewProj;
+			break;
+		}
+		return mat;
+
+	} // GetTransForm
+
 } // gfx
 
 } // kge

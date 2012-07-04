@@ -4,6 +4,7 @@
 #include "structs.h"
 #include "array.h"
 #include "String.h"
+#include "Matrix.h"
 
 namespace kge
 {
@@ -14,6 +15,16 @@ namespace kge
 		class HardwareBuffer;
 		class VertexDec;
 		struct CustomVertexElement;
+
+		//! The transform mode enum
+		enum TransformMode
+		{
+			ETM_World,				//!< World matrix
+			ETM_View,				//!< View matrix
+			ETM_Projection,			//!< Projection matrix
+			ETM_ViewProjection		//!< Projection * View matrix only usable by GetTransform
+
+		}; // TransformMode
 
 		//! The interface for working with renderers in KGE.
 		class KGE_API Renderer
@@ -134,20 +145,40 @@ namespace kge
 			virtual void DrawTriangleList(u32 VCount, u32 ICount,
 										  u32 VertexStart = 0, u32 StartIndex = 0) = 0;
 
+			//! Sets the transformation of World, View or Projection matrices
+			/*!
+				\param mat The Matrix to set
+				\param TM The enum that define the TransformMode. Note you can not use ETM_ViewProjection here
+				\sa GetTransform
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetTransForm(math::Matrix *mat, TransformMode TM = ETM_World)=0;
+
+			//! Returns the transformation of World, View, Projection or ViewProjection matrices
+			/*!
+			  \param TM The enum that define the TransformMode
+			  \returns Returns the requested matrix
+			  \sa SetTransform
+			  \todo Add this to ogl renderer plugin
+			 */
+			virtual math::Matrix GetTransForm(TransformMode TM = ETM_World)=0;
+
 		protected:
 
-			bool		m_bUseStencil,			//!< Create and use stencil buffer
-						m_bUseShaders,			//!< Dose renderer support shaders?
-						m_bIsSceneRunning;		//!< Is scene running
-			int			m_iFPS,					//!< Frame per second
-						m_iFPSTemp,				//!< Temp Frame per second for calculating FPS
-						m_iTriCount,			//!< Rendered triangle count
-						m_iDrawCount,			//!< Draw call count
-						m_iBatchCount;			//!< For internal use for counting correct triangles count when using instancing
-			u32			m_nTextID[8],			//!< Activated texture ID.
-						m_nVertexBufferID[16],	//!< The current vertex buffer set.
-						m_nIndexBufferID,		//!< The current index buffer set.
-						m_nVertexDecID;			//!< The current vertex declaration set.
+			bool			m_bUseStencil,			//!< Create and use stencil buffer
+							m_bUseShaders,			//!< Dose renderer support shaders?
+							m_bIsSceneRunning;		//!< Is scene running
+			int				m_iFPS,					//!< Frame per second
+							m_iFPSTemp,				//!< Temp Frame per second for calculating FPS
+							m_iTriCount,			//!< Rendered triangle count
+							m_iDrawCount,			//!< Draw call count
+							m_iBatchCount;			//!< For internal use for counting correct triangles count when using instancing
+			u32				m_nTextID[8],			//!< Activated texture ID.
+							m_nVertexBufferID[16],	//!< The current vertex buffer set.
+							m_nIndexBufferID,		//!< The current index buffer set.
+							m_nVertexDecID;			//!< The current vertex declaration set.
+			math::Matrix	m_mViewProj;			//!< Projection * View matrix.
+
 
 		}; // Renderer
 

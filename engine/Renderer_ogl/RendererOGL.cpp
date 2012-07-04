@@ -426,6 +426,23 @@ namespace kge
 
 		} // DrawTriangleList
 
+		//------------------------------------------------------------------------------------
+		// Sets the transformation of World, View or Projection matrices
+		//------------------------------------------------------------------------------------
+		void RendererOGL::SetTransForm( math::Matrix *mat, TransformMode TM /*= ETM_World*/ )
+		{
+
+		} // SetTransForm
+
+		//------------------------------------------------------------------------------------
+		// Returns the transformation of World, View, Projection or ViewProjection matrices
+		//------------------------------------------------------------------------------------
+		math::Matrix RendererOGL::GetTransForm( TransformMode TM /*= ETM_World*/ )
+		{
+			return math::Matrix();
+
+		} // GetTransForm
+
 	} // gfx
 
 } // kge

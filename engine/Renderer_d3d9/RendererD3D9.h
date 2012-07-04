@@ -124,6 +124,24 @@ namespace kge
 			void DrawTriangleList(u32 VCount, u32 ICount,
 								  u32 VertexStart = 0, u32 StartIndex = 0);
 
+			//! Sets the transformation of World, View or Projection matrices
+			/*!
+				\param mat The Matrix to set
+				\param TM The enum that define the TransformMode. Note you can not use ETM_ViewProjection here
+				\sa GetTransform
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetTransForm(math::Matrix *mat, TransformMode TM = ETM_World);
+
+			//! Returns the transformation of World, View, Projection or ViewProjection matrices
+			/*!
+			  \param TM The enum that define the TransformMode
+			  \returns Returns the requested matrix
+			  \sa SetTransform
+			  \todo Add this to ogl renderer plugin
+			 */
+			virtual math::Matrix GetTransForm(TransformMode TM = ETM_World);
+
 			//! Removes VertexBufferDX9 from internal list.
 			void RemoveVertexBuffer(VertexBufferDX9* vb);
 			
@@ -144,9 +162,13 @@ namespace kge
 			kge::ul32								m_Behavior;				// Device Behavior
 			D3DCOLOR								m_ClearColor;			// Clear Color
 			std::vector<VertexBufferDX9*>	        m_vVBuffers;			// Vertex buffers array.
-			std::vector<IndexBufferDX9*>		        m_vIBuffers;	// Index buffers array.
+			std::vector<IndexBufferDX9*>		    m_vIBuffers;			// Index buffers array.
 
-
+			// C a m e r a   M a t r i x e s
+			D3DMATRIX								m_mProj,				// Projection Matrix.
+													m_mView,				// View Matrix.
+													m_mWorld;				// World matrix.
+			
 			// Search for the best depth and stencil format.
 			void CheckStencil(const InitParameters &params);
 			

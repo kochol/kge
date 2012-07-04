@@ -124,6 +124,24 @@ namespace kge
 			void DrawTriangleList(u32 VCount, u32 ICount,
 								  u32 VertexStart = 0, u32 StartIndex = 0);
 
+			//! Sets the transformation of World, View or Projection matrices
+			/*!
+				\param mat The Matrix to set
+				\param TM The enum that define the TransformMode. Note you can not use ETM_ViewProjection here
+				\sa GetTransform
+				\todo Add this to ogl renderer plugin
+			 */
+			virtual void SetTransForm(math::Matrix *mat, TransformMode TM = ETM_World);
+
+			//! Returns the transformation of World, View, Projection or ViewProjection matrices
+			/*!
+			  \param TM The enum that define the TransformMode
+			  \returns Returns the requested matrix
+			  \sa SetTransform
+			  \todo Add this to ogl renderer plugin
+			 */
+			virtual math::Matrix GetTransForm(TransformMode TM = ETM_World);
+
 		private:
 			//--------------------------------
 			// functions
