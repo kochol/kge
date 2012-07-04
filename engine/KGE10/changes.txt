@@ -17,3 +17,6 @@
 - (Add) MeshLoader class is an interface for mesh loaders in engine
     * Loader_OGRE
 	- (Add) OgreMeshLoader class for loading OGRE mesh files
+* Math
+- Matrix class with SSE2 support added.
+- Vector class

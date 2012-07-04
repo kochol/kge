@@ -28,17 +28,11 @@ namespace kge
 		// constants
 		//=============================
 		
-		// PI
-		#ifdef PI
-			#undef PI
-		#endif
-		#define PI ( 3.1415926535897932 )
+		// fPI
+		const float fPI			= 3.1415926535897932f;
 
 		// Epsilon
-		#ifdef EPSILON
-			#undef EPSILON
-		#endif
-		#define EPSILON ( 0.00001f )
+		const float fEpsilon	= 0.000001f;
 		
 		//=============================
 		// integers
@@ -104,7 +98,7 @@ namespace kge
 		inline bool equalf( float _val1, float _val2 )
 		{
 			float tmp = _val1 - _val2;
-			if ( math::absf(tmp) > EPSILON )
+			if ( math::absf(tmp) > fEpsilon )
 				return false;
 			return true;
 		}
@@ -142,13 +136,13 @@ namespace kge
 		//! convert radian to degree
 		inline int toDeg(float _rad)
 		{
-			return (int)180.0f * (_rad / PI);
+			return (int)180.0f * (_rad / fPI);
 		}
 
 		//! convert degree to radian
 		inline float toRad(int _deg)
 		{
-			return _deg * PI / 180.0f;
+			return _deg * fPI / 180.0f;
 		}
 
 		//! generate an random value between _min and _max

@@ -10,6 +10,7 @@
 
 #include "kgedef.h"
 #include "math.h"
+#include "Vector.h"
 
 namespace kge
 {
@@ -69,30 +70,30 @@ namespace kge
 			//! destructor
 			~Matrix();
 
-			//!	calculates the determinant of matrix
-			float determinant(void);
+			//!	calculates the Determinant of matrix
+			float Determinant(void);
 
 			//! load identity matrix
-			void loadIdentity(void);
+			void LoadIdentity(void);
 
 			//! load zero matrix
-			void loadZero(void);
+			void LoadZero(void);
 
-			//! inverse the matrix
-			void inverse(void);
+			//! Inverse the matrix
+			void Inverse(void);
 
-			//! transpose matrix
-			void transpose(void);
+			//! Transpose matrix
+			void Transpose(void);
 
-			//! set matrix values in row-major order
-			void set(	float _11, float _12, float _13, float _14,
+			//! Set matrix values in row-major order
+			void Set(	float _11, float _12, float _13, float _14,
 				float _21, float _22, float _23, float _24,
 				float _31, float _32, float _33, float _34,
 				float _41, float _42, float _43, float _44 );
-			void set( const float*);
+			void Set( const float*);
 
 			#if KGE_USE_SSE2
-				void set(const __m128& ,const __m128&, const __m128&,const __m128& );
+				void Set(const __m128& ,const __m128&, const __m128&,const __m128& );
 			#endif
 
 			// operator ()
@@ -115,6 +116,19 @@ namespace kge
 			//!	returns the floating point array of the matrix for external purposes
 			operator const float*() const { return elements; }
 			operator float*() { return elements; }
+
+			//!  makes this a left handed Orthogonal projection matrix
+			void SetOrthoLH(float width, float height, float znear, float zfar);
+
+			//!  makes this a left handed Orthogonal projection matrix
+			void SetOrthoOffscreenLH(float minx, float maxx, float miny, float maxy, float znear, float zfar);
+
+			//! Sets the left hand perspective projection matrix
+			void SetPerspectiveLH(float width, float height, float Fov, float Near, float Far);
+
+			//! Create a view look at matrix
+			void SetViewLookatLH(math::Vector &vPos, math::Vector &vPoint, 
+				math::Vector &vUp);
 
 		} ; // Matrix
 

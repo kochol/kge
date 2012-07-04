@@ -186,6 +186,9 @@
     <ClInclude Include="..\include\Matrix.h">
       <Filter>Header Files\math</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Vector.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\KGEmain\Device.cpp">

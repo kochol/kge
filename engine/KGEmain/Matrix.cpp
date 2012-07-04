@@ -17,7 +17,9 @@ namespace kge
 		KGE_FORCE_INLINE void MatrixMul(Matrix &,const Matrix&,const Matrix&);
 
 
+		//------------------------------------------------------------------------------------
 		// constructor
+		//------------------------------------------------------------------------------------
 		Matrix::Matrix()
 		{
 			// load zero matrix
@@ -28,7 +30,9 @@ namespace kge
 #endif
 		}
 
+		//------------------------------------------------------------------------------------
 		// constructor - float*
+		//------------------------------------------------------------------------------------
 		Matrix::Matrix(const float* mat)
 		{
 			memcpy(elements,mat,sizeof (float) * 16 );
@@ -64,8 +68,8 @@ namespace kge
 		{
 		}
 
-		// determinant
-		float Matrix::determinant(void)
+		// Determinant
+		float Matrix::Determinant(void)
 		{
 			return
 				(m11 * m22 - m12 * m21) * (m33 * m44 - m34 * m43)
@@ -76,15 +80,15 @@ namespace kge
 				+(m13 * m24 - m14 * m23) * (m31 * m42 - m32 * m41);
 		}
 
-		// loadIdentity
-		void Matrix::loadIdentity(void)
+		// LoadIdentity
+		void Matrix::LoadIdentity(void)
 		{
 			memset(elements,0,sizeof(float) * 16);
 			m11 = m22 = m33 = m44 = 1.0f;
 		}
 
-		// loadZero
-		void Matrix::loadZero(void)
+		// LoadZero
+		void Matrix::LoadZero(void)
 		{
 #if KGE_USE_SSE2
 			m1 = m2 = m3 = m4 = _mm_setzero_ps();
@@ -93,8 +97,8 @@ namespace kge
 #endif
 		}
 
-		// inverse
-		void Matrix::inverse(void)
+		// Inverse
+		void Matrix::Inverse(void)
 		{
 #if KGE_USE_SSE2
 			// Code taken from Intel pdf "Streaming SIMD Extension - Inverse of 4x4 Matrix"
@@ -210,10 +214,10 @@ namespace kge
 			_mm_storeh_pi((__m64*)(src+14), minor3);
 
 #else
-			float s = determinant();
+			float s = Determinant();
 			if (s == 0.0) return;
 			s = 1/s;
-			this->set(
+			this->Set(
 				s*(m22*(m33*m44 - m34*m43) + m23*(m34*m42 - m32*m44) + m24*(m32*m43 - m33*m42)),
 				s*(m32*(m13*m44 - m14*m43) + m33*(m14*m42 - m12*m44) + m34*(m12*m43 - m13*m42)),
 				s*(m42*(m13*m24 - m14*m23) + m43*(m14*m22 - m12*m24) + m44*(m12*m23 - m13*m22)),
@@ -234,8 +238,8 @@ namespace kge
 
 		}
 
-		// transpose
-		void Matrix::transpose( void )
+		// Transpose
+		void Matrix::Transpose( void )
 		{
 #if KGE_USE_SSE2
 			_MM_TRANSPOSE4_PS(m1,m2,m3,m4);
@@ -251,8 +255,8 @@ namespace kge
 #endif
 		}
 
-		// set
-		void Matrix::set(
+		// Set
+		void Matrix::Set(
 			float _11, float _12, float _13, float _14,
 			float _21, float _22, float _23, float _24,
 			float _31, float _32, float _33, float _34,
@@ -264,14 +268,14 @@ namespace kge
 			m41 = _41; m42 = _42; m43 = _43; m44 = _44;
 		}
 
-		// set - float*
-		void Matrix::set(const float* m)
+		// Set - float*
+		void Matrix::Set(const float* m)
 		{
 			memcpy(elements,m,sizeof(float) * 16);
 		}
 
 #if KGE_USE_SSE2
-		void Matrix::set( const __m128& _m1 ,const __m128& _m2, const __m128& _m3,const __m128& _m4)
+		void Matrix::Set( const __m128& _m1 ,const __m128& _m2, const __m128& _m3,const __m128& _m4)
 		{
 			m1 = _m1; m2 = _m2; m3 = _m3; m4 = _m4;
 		}
@@ -290,7 +294,9 @@ namespace kge
 			return temp;
 		}
 
+		//------------------------------------------------------------------------------------
 		// operator *= , Matrix
+		//------------------------------------------------------------------------------------
 		Matrix& Matrix::operator*=(const Matrix& right)
 		{
 			MatrixMul(*this,*this,right);
@@ -298,20 +304,132 @@ namespace kge
 		}
 
 
+		//------------------------------------------------------------------------------------
 		// operator +
+		//------------------------------------------------------------------------------------
 		Matrix Matrix::operator+(const Matrix& m) const
 		{
 			Matrix temp;
-			//temp.set (m.m11 + m11,m_
+			//temp.Set (m.m11 + m11,m_
 			return temp;
 		}
 
+		//----------------------------------------------------------------------------------
+		//  makes this a left handed Orthogonal projection matrix
+		//----------------------------------------------------------------------------------
+		void Matrix::SetOrthoLH( float width, float height, float znear, float zfar )
+		{
+			LoadIdentity();
+			elements[0] = 2.0f / width;
+			elements[5] = 2.0f / height;
+			elements[10] = 1.0f / (zfar - znear);
+			elements[14] = znear / (znear - zfar);
+
+		} // SetOrthoLH
+
+		//----------------------------------------------------------------------------------
+		// Sets the left hand perspective projection matrix
+		//----------------------------------------------------------------------------------
+		void Matrix::SetPerspectiveLH( float width, float height, float Fov, float Near, float Far )
+		{
+			float ys = 1.0f / tanf(Fov * 0.5f);
+			float xs = ys / (width / height);
+			m12=m13=m14=m21=m23=m24=m31=m32=m41=m42=m44=0.0f;
+			m11 = xs;
+			m22 = ys;
+			m33 = Far/(Far-Near);
+			m34 = 1.0f;
+			m43 = (-Near)*Far/(Far-Near);
+
+		} // SetPerspectiveLH
+
+		//----------------------------------------------------------------------------------
+		//  makes this a left handed Orthogonal projection matrix
+		//----------------------------------------------------------------------------------
+		void Matrix::SetOrthoOffscreenLH( float minx, float maxx, float miny, float maxy, float znear, float zfar )
+		{
+			LoadIdentity();
+			elements[ 0] = 2.0f / (maxx - minx);
+			elements[ 5] = 2.0f / (maxy - miny);
+			elements[10] = 1.0f / (zfar - znear);
+			elements[12] = (minx + maxx) / (minx - maxx);
+			elements[13] = (miny + maxy) / (miny - maxy);
+			elements[14] = znear / (znear - zfar);
+
+		} // SetOrthoOffscreenLH
+
+		//------------------------------------------------------------------------------------
+		// Create a view look at matrix
+		//------------------------------------------------------------------------------------
+		void Matrix::SetViewLookatLH( math::Vector &vPos, math::Vector &vPoint, math::Vector &vUp )
+		{
+			math::Vector Z = vPoint - vPos; // Z
+			Z.Normalize();
+			math::Vector X;					// X
+			X.Cross(vUp, Z);
+			X.Normalize();
+			// calculate up vector
+			math::Vector vcTemp, vcUp;
+			float fDot = vUp * Z;
+			vcTemp = Z * fDot;
+			vcUp = vUp - vcTemp;
+			float fL = vcUp.GetLength();
+
+			// if too short take y axis 
+			if (fL < 1e-6f) 
+			{
+				math::Vector vcY;
+				vcY.Set(0.0f, 1.0f, 0.0f);
+
+				vcTemp = Z * Z.y;
+				vcUp = vcY - vcTemp;
+
+				fL = vcUp.GetLength();
+
+				// take z axis if still too short
+				if (fL < 1e-6f)
+				{
+					vcY.Set(0.0f, 0.0f, 1.0f);
+
+					vcTemp = Z * Z.z;
+					vcUp = vcY - vcTemp;
+
+					fL = vcUp.GetLength();
+
+					// we tried our best
+					if (fL < 1e-6f)
+					{
+						return;
+					}
+				}
+			}
+			vcUp /= fL;
+
+			m11 = X.x;
+			m12 = vcUp.x;
+			m13 = Z.x;
+			m21 = X.y;
+			m22 = vcUp.y;
+			m23 = Z.y;
+			m31 = X.z;
+			m32 = vcUp.z;
+			m33 = Z.z;
+			m41 = -(X * vPos);
+			m42 = -(vcUp * vPos);
+			m43 = -(Z * vPos);
+			m44 = 1.0f;
+			m14 = m24 = m34 = 0.0f;
+
+		} // SetViewLookatLH
+
+		//------------------------------------------------------------------------------------
 		// mul , Matrix * Matrix
+		//------------------------------------------------------------------------------------
 		KGE_FORCE_INLINE void MatrixMul(Matrix &result,const Matrix& ma,const Matrix& mb)
 		{
 #if KGE_USE_SSE2
 
-			result.set(
+			result.Set(
 				_mm_add_ps(_mm_add_ps(_mm_add_ps(_mm_mul_ps(_mm_shuffle_ps(ma.m1, ma.m1, _MM_SHUFFLE(0,0,0,0)), mb.m1), _mm_mul_ps(_mm_shuffle_ps(ma.m1, ma.m1, _MM_SHUFFLE(1,1,1,1)), mb.m2)), _mm_mul_ps(_mm_shuffle_ps(ma.m1, ma.m1, _MM_SHUFFLE(2,2,2,2)), mb.m3)), _mm_mul_ps(_mm_shuffle_ps(ma.m1, ma.m1, _MM_SHUFFLE(3,3,3,3)), mb.m4)),
 				_mm_add_ps(_mm_add_ps(_mm_add_ps(_mm_mul_ps(_mm_shuffle_ps(ma.m2, ma.m2, _MM_SHUFFLE(0,0,0,0)), mb.m1), _mm_mul_ps(_mm_shuffle_ps(ma.m2, ma.m2, _MM_SHUFFLE(1,1,1,1)), mb.m2)), _mm_mul_ps(_mm_shuffle_ps(ma.m2, ma.m2, _MM_SHUFFLE(2,2,2,2)), mb.m3)), _mm_mul_ps(_mm_shuffle_ps(ma.m2, ma.m2, _MM_SHUFFLE(3,3,3,3)), mb.m4)),
 				_mm_add_ps(_mm_add_ps(_mm_add_ps(_mm_mul_ps(_mm_shuffle_ps(ma.m3, ma.m3, _MM_SHUFFLE(0,0,0,0)), mb.m1), _mm_mul_ps(_mm_shuffle_ps(ma.m3, ma.m3, _MM_SHUFFLE(1,1,1,1)), mb.m2)), _mm_mul_ps(_mm_shuffle_ps(ma.m3, ma.m3, _MM_SHUFFLE(2,2,2,2)), mb.m3)), _mm_mul_ps(_mm_shuffle_ps(ma.m3, ma.m3, _MM_SHUFFLE(3,3,3,3)), mb.m4)),
@@ -319,7 +437,7 @@ namespace kge
 				);
 
 #else
-			result.set(ma.m11*mb.m11 + ma.m12*mb.m21 + ma.m13*mb.m31 + ma.m14*mb.m41,
+			result.Set(ma.m11*mb.m11 + ma.m12*mb.m21 + ma.m13*mb.m31 + ma.m14*mb.m41,
 				ma.m11*mb.m12 + ma.m12*mb.m22 + ma.m13*mb.m32 + ma.m14*mb.m42,
 				ma.m11*mb.m13 + ma.m12*mb.m23 + ma.m13*mb.m33 + ma.m14*mb.m43,
 				ma.m11*mb.m14 + ma.m12*mb.m24 + ma.m13*mb.m34 + ma.m14*mb.m44,
