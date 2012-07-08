@@ -69,7 +69,7 @@ int main()
 	mView.SetViewLookatLH(kge::math::Vector(5,5,5), kge::math::Vector(), kge::math::Vector(0,1,0));
 	pRen->SetTransForm(&mView, kge::gfx::ETM_View);
 
-	pRen->SetClearColor(kge::gfx::Color(255,255,255));
+	pRen->SetClearColor(kge::gfx::Color(0,0,100));
 
 	while (dev.Run())
 	{

@@ -36,7 +36,7 @@ namespace kge
 			Renderer();
 
 			//! Destructor
-			virtual ~Renderer() {}
+			virtual ~Renderer();
 
 			//! Initialize the renderer
 			/*! test detail
@@ -183,7 +183,16 @@ namespace kge
 							m_nVertexDecID;			//!< The current vertex declaration set.
 			math::Matrix	m_mViewProj;			//!< Projection * View matrix.
 			Color			m_cClearColor;			//!< The clear color
+			core::DynamicArray<HardwareBuffer*>
+							m_vBuffers;				//!< The created buffer pointers
+			core::DynamicArray<VertexDec*>
+							m_vVertexDecs;			//!< The created VertexDec pointers
 
+			//! Adds hardware buffer pointers
+			virtual void AddHardwareBuffer(HardwareBuffer* pHB);
+
+			//! Adds VertexDec pointers
+			virtual void AddVertexDec(VertexDec* pVD);
 
 		}; // Renderer
 

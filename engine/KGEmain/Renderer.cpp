@@ -1,4 +1,6 @@
 #include "../include/Renderer.h"
+#include "../include/HardwareBuffer.h"
+#include "../include/VertexDeclaration.h"
 
 namespace kge
 {
@@ -21,6 +23,25 @@ namespace kge
 		} // Constructor
 
 		//------------------------------------------------------------------------------------
+		// Destructor
+		//------------------------------------------------------------------------------------
+		Renderer::~Renderer()
+		{
+			// Delete buffers
+			for (size_t i = 0; i < m_vBuffers.size(); i++)
+			{
+				KGE_DELETE(m_vBuffers[i], HardwareBuffer);
+			}
+
+			// Delete vertex decs
+			for (size_t i = 0; i < m_vVertexDecs.size(); i++)
+			{
+				KGE_DELETE(m_vVertexDecs[i], VertexDec);
+			}
+
+		} // Destructor
+
+		//------------------------------------------------------------------------------------
 		// Sets the clear color
 		//------------------------------------------------------------------------------------
 		void Renderer::SetClearColor( const Color& ClearColor )
@@ -28,6 +49,24 @@ namespace kge
 			m_cClearColor = ClearColor;
 
 		} // SetClearColor
+
+		//------------------------------------------------------------------------------------
+		// Adds hardware buffer pointers
+		//------------------------------------------------------------------------------------
+		void Renderer::AddHardwareBuffer( HardwareBuffer* pHB )
+		{
+			m_vBuffers.push_back(pHB);
+
+		} // AddHardwareBuffer
+
+		//------------------------------------------------------------------------------------
+		// Adds VertexDec pointers
+		//------------------------------------------------------------------------------------
+		void Renderer::AddVertexDec( VertexDec* pVD )
+		{
+			m_vVertexDecs.push_back(pVD);
+
+		} // AddVertexDec
 
 	} // gfx
 

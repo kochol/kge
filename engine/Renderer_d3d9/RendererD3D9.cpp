@@ -446,7 +446,10 @@ namespace gfx
 		ppVBout->m_pVB	= vb;
 		ppVBout->Dynamic(isDynamic);
 
-		if (isDynamic) m_vVBuffers.push_back(ppVBout);
+		if (isDynamic) 
+			m_vVBuffers.push_back(ppVBout);
+
+		AddHardwareBuffer(ppVBout);
 
 		return ppVBout;
 
@@ -538,6 +541,8 @@ namespace gfx
 		if (isDynamic) 
 			m_vIBuffers.push_back(ibOut);
 
+		AddHardwareBuffer(ibOut);
+
 		return ibOut;
 
 	} // CreateIndexBuffer
@@ -592,6 +597,8 @@ namespace gfx
 		m_pD3DDevice->CreateVertexDeclaration((D3DVERTEXELEMENT9*)&VertexInfoArray[0], &vd);
 		VertexDec* pOut	  = KGE_NEW(VertexDec)(sName);
 		pOut->m_VertexDec = vd;
+
+		AddVertexDec(pOut);
 
 		return pOut;
 
