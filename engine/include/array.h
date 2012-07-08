@@ -193,8 +193,9 @@ namespace kge
 			//! copy constructor
 			DynamicArray(const DynamicArray<T>& ar)
 			{
-				m_Size = ar.size();
-				memcpy(elements,ar.elements,sizeof(T) * ar.size());
+				m_Size	 = ar.size();
+				elements = KGE_NEW_ARRAY(T, m_Size);
+				memcpy(elements, ar.elements, sizeof(T) * ar.size());
 			}
 
 

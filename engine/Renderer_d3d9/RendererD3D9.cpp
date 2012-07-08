@@ -150,7 +150,7 @@ namespace gfx
 		}
 
 		// Make Clear Color to Black.
-		m_ClearColor = D3DCOLOR_COLORVALUE(0.0f, 0.0f, 0.0f, 1.0f);
+		m_ClearColor = D3DCOLOR_COLORVALUE(1.0f, 1.0f, 1.0f, 1.0f);
 
 		// Get the swap chain
 		if (FAILED(m_pD3DDevice->GetSwapChain(0, &m_pSwapChain)))
@@ -589,7 +589,7 @@ namespace gfx
 	// Create a custom vertex declaration and returns its pointer
 	//------------------------------------------------------------------------------------
 	VertexDec* RendererD3D9::CreateVertexDeclaration
-		( core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName )
+		( core::DynamicArray<CustomVertexElement> VertexInfoArray, core::stringc& sName )
 	{
 		IDirect3DVertexDeclaration9* vd;
 		m_pD3DDevice->CreateVertexDeclaration((D3DVERTEXELEMENT9*)&VertexInfoArray[0], &vd);

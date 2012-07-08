@@ -403,7 +403,7 @@ namespace kge
 		// Create a custom vertex declaration and returns its pointer
 		//------------------------------------------------------------------------------------
 		VertexDec* RendererOGL::CreateVertexDeclaration
-			( core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName )
+			( core::DynamicArray<CustomVertexElement> VertexInfoArray, core::stringc& sName )
 		{
 			return NULL;
 

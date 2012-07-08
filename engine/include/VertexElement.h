@@ -80,7 +80,7 @@ namespace kge
 
 		}; // VertexElementUsage
 
-		#define CusVertexEND() {0xFF,0,EVET_Unused,0,0,0}
+		#define CusVertexEND() {0xFF,0,kge::gfx::EVET_Unused,0,0,0}
 
 	} // gfx
 

@@ -32,13 +32,13 @@ int main()
 {
 	kge::Device dev;
 	kge::InitParameters params;
-//	params.InputMgrName = "OIS";
+	params.InputMgrName = "OIS";
 	params.RendererName = "ogl";
 	dev.Init(params);
 	kge::gfx::Renderer*	pRen = dev.GetRenderer();
-//	kge::io::InputManager* pInputMgr = kge::io::InputManager::getSingletonPtr();
-//	TestKeyListener keylis;
-//	pInputMgr->AddKeyListener(&keylis, "test");
+	kge::io::InputManager* pInputMgr = kge::io::InputManager::getSingletonPtr();
+	TestKeyListener keylis;
+	pInputMgr->AddKeyListener(&keylis, "test");
 
 	while (dev.Run())
 	{

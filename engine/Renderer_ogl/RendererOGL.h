@@ -102,7 +102,7 @@ namespace kge
 				\todo Add this to ogl renderer plugin
 			 */
 			virtual VertexDec* CreateVertexDeclaration
-				(core::DynamicArray<CustomVertexElement*> VertexInfoArray, core::stringc& sName);
+				(core::DynamicArray<CustomVertexElement> VertexInfoArray, core::stringc& sName);
 
 			//! Sets the vertex declaration
 			/*! Sets the vertex declaration to prepare renderer to render something
