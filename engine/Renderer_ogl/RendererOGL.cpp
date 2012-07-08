@@ -443,6 +443,16 @@ namespace kge
 
 		} // GetTransForm
 
+		//------------------------------------------------------------------------------------
+		// Sets the clear color
+		//------------------------------------------------------------------------------------
+		void RendererOGL::SetClearColor( const Color& ClearColor )
+		{
+			Renderer::SetClearColor(ClearColor);
+			glClearColor(ClearColor.getRed(), ClearColor.getGreen(), ClearColor.getBlue(), ClearColor.getAlpha());
+
+		}
+
 	} // gfx
 
 } // kge

@@ -81,6 +81,7 @@
     <ClInclude Include="..\..\libs\nedmalloc\malloc.c.h" />
     <ClInclude Include="..\..\libs\nedmalloc\nedmalloc.h" />
     <ClInclude Include="..\include\array.h" />
+    <ClInclude Include="..\include\Color.h" />
     <ClInclude Include="..\include\Config.h" />
     <ClInclude Include="..\include\Device.h" />
     <ClInclude Include="..\include\enums.h" />

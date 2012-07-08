@@ -5,6 +5,7 @@
 #include "array.h"
 #include "String.h"
 #include "Matrix.h"
+#include "Color.h"
 
 namespace kge
 {
@@ -163,6 +164,9 @@ namespace kge
 			 */
 			virtual math::Matrix GetTransForm(TransformMode TM = ETM_World)=0;
 
+			//! Sets the clear color
+			virtual void SetClearColor(const Color& ClearColor);
+
 		protected:
 
 			bool			m_bUseStencil,			//!< Create and use stencil buffer
@@ -178,6 +182,7 @@ namespace kge
 							m_nIndexBufferID,		//!< The current index buffer set.
 							m_nVertexDecID;			//!< The current vertex declaration set.
 			math::Matrix	m_mViewProj;			//!< Projection * View matrix.
+			Color			m_cClearColor;			//!< The clear color
 
 
 		}; // Renderer

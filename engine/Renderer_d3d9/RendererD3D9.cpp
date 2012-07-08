@@ -149,9 +149,6 @@ namespace gfx
 			return false;
 		}
 
-		// Make Clear Color to Black.
-		m_ClearColor = D3DCOLOR_COLORVALUE(1.0f, 1.0f, 1.0f, 1.0f);
-
 		// Get the swap chain
 		if (FAILED(m_pD3DDevice->GetSwapChain(0, &m_pSwapChain)))
 		{
@@ -188,7 +185,7 @@ namespace gfx
 		else if (bStencil && m_bUseStencil)
 			Flags = D3DCLEAR_STENCIL;
 
-		if (FAILED(m_pD3DDevice->Clear(0, NULL, Flags, m_ClearColor, 1.0f, 0)))
+		if (FAILED(m_pD3DDevice->Clear(0, NULL, Flags, m_cClearColor.c, 1.0f, 0)))
 		{
 			io::Logger::Error("Can't clear the Pixel, ZBuffer or StencilBuffer.");
 			return false;

@@ -160,7 +160,6 @@ namespace kge
 			LPDIRECT3DSURFACE9						m_pBackBufferSurface,	// Main Back buffer surface
 													m_pBackBufferZSurface;	// Main depth buffer surface
 			kge::ul32								m_Behavior;				// Device Behavior
-			D3DCOLOR								m_ClearColor;			// Clear Color
 			std::vector<VertexBufferDX9*>	        m_vVBuffers;			// Vertex buffers array.
 			std::vector<IndexBufferDX9*>		    m_vIBuffers;			// Index buffers array.
 

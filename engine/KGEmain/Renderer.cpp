@@ -20,6 +20,15 @@ namespace kge
 
 		} // Constructor
 
+		//------------------------------------------------------------------------------------
+		// Sets the clear color
+		//------------------------------------------------------------------------------------
+		void Renderer::SetClearColor( const Color& ClearColor )
+		{
+			m_cClearColor = ClearColor;
+
+		} // SetClearColor
+
 	} // gfx
 
 } // kge

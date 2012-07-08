@@ -142,6 +142,9 @@ namespace kge
 			 */
 			virtual math::Matrix GetTransForm(TransformMode TM = ETM_World);
 
+			//! Sets the clear color
+			virtual void SetClearColor(const Color& ClearColor);
+
 		private:
 			//--------------------------------
 			// functions
