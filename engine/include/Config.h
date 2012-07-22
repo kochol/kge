@@ -34,7 +34,7 @@
 //************************************************************************
 
 // arrays
-#define KGE_DEFAULT_ARRAY_BLOCK_SIZE 100
+#define KGE_DEFAULT_ARRAY_BLOCK_SIZE 16
 
 // map
 #define KGE_MAP std::map

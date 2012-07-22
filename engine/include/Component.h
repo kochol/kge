@@ -2,7 +2,6 @@
 #define KGE_COMPONENT_H
 
 #include <string>
-#include "../CyrusScript/Tools.h"
 
 namespace kge
 {
