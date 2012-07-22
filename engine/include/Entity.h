@@ -17,7 +17,7 @@ namespace kge
 		public:
 
 			//! Constructor
-			Entity();
+			Entity(int ID);
 
 			//! Destructor
 			~Entity();
@@ -28,10 +28,17 @@ namespace kge
 			//! Returns a component by its ID
 			Component* GetComponent(int iCmpID);
 
+			//! Returns a list of components by its ID
+			/*!
+				Use this function when your entity has multi instance of one component
+			 */
+			std::vector<Component*> GetComponents(int iCmpID);
+
 		protected:
 
 			std::map<int, std::vector<Component*>>				m_vComponents;			//!< The list of components
-			std::map<int, std::vector<Component*>>::iterator		m_itComponents;			//!< The helper iterator
+			std::map<int, std::vector<Component*>>::iterator	m_itComponents;			//!< The helper iterator
+			int													m_iID;					//!< Entity ID
 
 		private:
 

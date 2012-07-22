@@ -1,7 +1,7 @@
 #ifndef KGE_COMPONENT_H
 #define KGE_COMPONENT_H
 
-#include <string>
+#include "String.h"
 
 namespace kge
 {
@@ -11,8 +11,11 @@ namespace kge
 		{
 		public:
 
-			//! Every component must declare this function for returning their ID
+			//! Every component must declare this function for returning their class ID
 			virtual int GetClassID() = 0;
+			
+			//! Every component must declare this function for returning their class name
+			virtual core::stringc GetClassName() = 0;
 
 		protected:
 

@@ -11,7 +11,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Constructor
 		//------------------------------------------------------------------------------------
-		Entity::Entity()
+		Entity::Entity(int ID): m_iID(ID)
 		{
 
 		} // Constructor
@@ -56,6 +56,21 @@ namespace kge
 			return NULL;
 
 		} // GetComponent
+
+		//------------------------------------------------------------------------------------
+		// Returns a list of components by its ID
+		//------------------------------------------------------------------------------------
+		std::vector<Component*> Entity::GetComponents( int iCmpID )
+		{
+			m_itComponents = m_vComponents.find(iCmpID);
+			if (m_itComponents == m_vComponents.end())
+			{
+				return std::vector<Component*>();
+			}
+
+			return m_itComponents->second;
+
+		} // GetComponents
 
 	} // en
 
