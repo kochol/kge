@@ -8,6 +8,7 @@
 #define KGE_MATH_H
 
 #include <cmath>
+#include <stdlib.h>
 
 // Streaming SIMD Extension headers
 #if KGE_USE_SSE2
@@ -18,6 +19,9 @@
 	#include <smmintrin.h>
 #endif
 
+#ifndef RAND_MAX
+#	define RAND_MAX 32767
+#endif
 
 namespace kge
 {

@@ -1,5 +1,10 @@
 #include "../include/File.h"
-#include <io.h>
+
+#if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
+#	include <io.h>
+#else
+#	include <unistd.h>
+#endif
 
 namespace kge
 {

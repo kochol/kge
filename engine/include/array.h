@@ -9,6 +9,7 @@
 
 #include <cassert>
 #include <iostream>
+#include <string.h>
 #include "kgedef.h"
 #include "KgeMemory.h"
 
@@ -63,7 +64,7 @@ namespace kge
 			//! copy constructor
 			FixedArray(const FixedArray<T>& ar)
 			{
-				m_Size = ar.size()
+				m_Size = ar.size();
 				memcpy(elements,ar.elements,sizeof(T) * ar.size());
 			};
 
@@ -294,12 +295,12 @@ namespace kge
 			// at() with range check
 			reference at(u32 _index)
 			{
-				assert(index <m_Size);
+				assert(_index <m_Size);
 				return elements[_index]; 
 			}
 			const_reference at(u32  _index) const		
 			{ 
-				assert(index <m_Size);
+				assert(_index <m_Size);
 				return elements[_index];
 			}
 

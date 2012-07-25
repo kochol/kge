@@ -32,7 +32,7 @@ namespace kge
 			m_itComponents = m_vComponents.find(pCmp->GetClassID());
 			if (m_itComponents == m_vComponents.end())
 			{
-				m_vComponents.insert(std::pair<int, std::vector<Component*>>(pCmp->GetClassID(), std::vector<Component*>()));
+				m_vComponents.insert(std::pair<int, std::vector<Component*> >(pCmp->GetClassID(), std::vector<Component*>()));
 			}
 
 			m_vComponents[pCmp->GetClassID()].push_back(pCmp);
@@ -67,7 +67,6 @@ namespace kge
 			{
 				return std::vector<Component*>();
 			}
-
 			return m_itComponents->second;
 
 		} // GetComponents
