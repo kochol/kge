@@ -1,0 +1,12 @@
+*** packages that I installed on ubuntu ***
+==================================================================
+1- libncurses5-dev
+2- mesa-common-dev
+3- libxxf86vm-dev
+
+*** The library that I linked to ***
+==================================================================
+1- dl : for dlopen , ... - added to kge
+2- pthread : for pthread - added to kge
+3- X11 : for XOpen - added to renderer_ogl
+4- GL : for opengl functions - added to renderer_ogl
