@@ -5,7 +5,6 @@
 		<Project filename="engine/Renderer_ogl/Renderer_ogl.cbp">
 			<Depends filename="engine/KGEmain/KGE.cbp" />
 		</Project>
-		<Project filename="engine/InputMgr_OIS/InputMgr_OIS.cbp" />
 		<Project filename="tests/01 Logger test/01 Logger test.cbp">
 			<Depends filename="engine/KGEmain/KGE.cbp" />
 		</Project>
@@ -16,11 +15,9 @@
 			<Depends filename="engine/KGEmain/KGE.cbp" />
 			<Depends filename="engine/Renderer_ogl/Renderer_ogl.cbp" />
 		</Project>
-		<Project filename="tests/04 Device init test/04 Device init test.cbp" />
-		<Project filename="tests/06 test Input Manager plugin/06 test Input Manager plugin.cbp" active="1">
+		<Project filename="tests/08RendererTest/08RendererTest.cbp" active="1">
 			<Depends filename="engine/KGEmain/KGE.cbp" />
 			<Depends filename="engine/Renderer_ogl/Renderer_ogl.cbp" />
-			<Depends filename="engine/InputMgr_OIS/InputMgr_OIS.cbp" />
 		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>

@@ -1,8 +1,8 @@
 #include "VertexBuferDX9.h"
 #include "RendererD3D9.h"
 
-KGE_API kge::u32			HardwareBufferID;
-KGE_API kge::gfx::Renderer*	g_pRenderer;
+extern kge::u32			HardwareBufferID;
+extern kge::gfx::Renderer*	g_pRenderer;
 
 namespace kge
 {

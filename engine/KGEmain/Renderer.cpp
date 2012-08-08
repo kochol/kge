@@ -2,6 +2,8 @@
 #include "../include/HardwareBuffer.h"
 #include "../include/VertexDeclaration.h"
 
+KGE_API kge::u32			HardwareBufferID = 0;
+
 namespace kge
 {
 	namespace gfx
@@ -10,7 +12,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Constructor
 		//------------------------------------------------------------------------------------
-		Renderer::Renderer() : m_bUseStencil(false), m_bUseShaders(false), 
+		Renderer::Renderer() : m_bUseStencil(false), m_bUseShaders(false),
 			m_bIsSceneRunning(false), m_iFPS(0), m_iFPSTemp(0), m_nIndexBufferID(MAXID),
 			m_nVertexDecID(MAXID)
 		{

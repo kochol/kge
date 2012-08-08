@@ -56,6 +56,8 @@ namespace kge
 			u32 GetDataCount() const { return m_iDataCount; }
 
 			//! Locks buffer
+			/*! It is better to Lock as many buffers you want and then unlock them as soon as possible
+			 */
 			virtual bool Lock(u32 offset, u32 size, void** ppData, ul32 flags) { return true;}
 
 			//! Unlocks buffer

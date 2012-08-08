@@ -7,7 +7,7 @@ extern "C" {
 
 /*
 ** Copyright (c) 2007-2010 The Khronos Group Inc.
-** 
+**
 ** Permission is hereby granted, free of charge, to any person obtaining a
 ** copy of this software and/or associated documentation files (the
 ** "Materials"), to deal in the Materials without restriction, including
@@ -15,10 +15,10 @@ extern "C" {
 ** distribute, sublicense, and/or sell copies of the Materials, and to
 ** permit persons to whom the Materials are furnished to do so, subject to
 ** the following conditions:
-** 
+**
 ** The above copyright notice and this permission notice shall be included
 ** in all copies or substantial portions of the Materials.
-** 
+**
 ** THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 ** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 ** MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -162,12 +162,12 @@ typedef void GLvoid;
 #define GL_CCW                            0x0901
 /* GetPName */
 #define GL_POINT_SIZE                     0x0B11
-#define GL_POINT_SIZE_RANGE               0x0B12
-#define GL_POINT_SIZE_GRANULARITY         0x0B13
+//#define GL_POINT_SIZE_RANGE               0x0B12
+//#define GL_POINT_SIZE_GRANULARITY         0x0B13
 #define GL_LINE_SMOOTH                    0x0B20
 #define GL_LINE_WIDTH                     0x0B21
-#define GL_LINE_WIDTH_RANGE               0x0B22
-#define GL_LINE_WIDTH_GRANULARITY         0x0B23
+//#define GL_LINE_WIDTH_RANGE               0x0B22
+//#define GL_LINE_WIDTH_GRANULARITY         0x0B23
 #define GL_POLYGON_SMOOTH                 0x0B41
 #define GL_CULL_FACE                      0x0B44
 #define GL_CULL_FACE_MODE                 0x0B45

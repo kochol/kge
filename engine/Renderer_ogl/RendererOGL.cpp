@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "../include/VertexDeclaration.h"
 #include "../include/VertexElement.h"
+#include "VertexBufferOGLvbo.h"
 
 #if KGE_COMPILER == KGE_COMPILER_MSVC
 	#pragma comment(lib,"opengl32.lib")
@@ -363,14 +364,29 @@ namespace kge
 		// Create a vertex buffer from custom vertex type and store it on video memory.
 		//------------------------------------------------------------------------------------
 		HardwareBuffer* RendererOGL::CreateVertexBuffer
-			(	void* Vertices, 
-			u32 VCount, 
-			u32 Stride, 
-			bool isDynamic 
+			(	void* Vertices,
+			u32 VCount,
+			u32 Stride,
+			bool isDynamic
 			)
 		{
+		    // Create a new buffer
+		    GLuint  bufID;
+		    glGenBuffers(1, &bufID);
 
-			return NULL;
+		    // Is dynamic?
+		    GLenum dyn = GL_STATIC_DRAW;
+		    if (isDynamic)
+                dyn = GL_DYNAMIC_DRAW;
+
+		    // bind buffer and pass data to it.
+		    glBindBuffer(GL_ARRAY_BUFFER, bufID);
+            glBufferData(GL_ARRAY_BUFFER, VCount * Stride, Vertices, dyn);
+
+            // Create VertexBufferGLvbo
+            VertexBufferOGLvbo* pVB = KGE_NEW(VertexBufferOGLvbo)(VCount, Stride, bufID);
+
+			return pVB;
 
 		} // CreateVertexBuffer
 
@@ -420,7 +436,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Draw a list of triangles
 		//------------------------------------------------------------------------------------
-		void RendererOGL::DrawTriangleList( u32 VCount, u32 ICount, 
+		void RendererOGL::DrawTriangleList( u32 VCount, u32 ICount,
 			u32 VertexStart /*= 0*/, u32 StartIndex /*= 0*/ )
 		{
 
