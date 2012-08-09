@@ -28,6 +28,7 @@ namespace kge
 			core::DynamicArray<World*>		m_vWorlds;
 
 		}; // WorldManager
+
 	} // en
 
 } // kge

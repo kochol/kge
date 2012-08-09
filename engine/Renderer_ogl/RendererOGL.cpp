@@ -11,6 +11,7 @@
 #include "../include/VertexDeclaration.h"
 #include "../include/VertexElement.h"
 #include "VertexBufferOGLvbo.h"
+#include "IndexBufferOGLvbo.h"
 
 #if KGE_COMPILER == KGE_COMPILER_MSVC
 	#pragma comment(lib,"opengl32.lib")
@@ -36,6 +37,8 @@ extern "C"
 }
 #endif
 
+#define BUFFER_OFFSET(i) ((char*)NULL + (i))
+
 namespace kge
 {
 	namespace gfx
@@ -43,8 +46,11 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Constructor
 		//------------------------------------------------------------------------------------
-		RendererOGL::RendererOGL()
+		RendererOGL::RendererOGL(): m_pCurrentVD(NULL)
 		{
+			m_mWorld.LoadIdentity();
+			m_mView.LoadIdentity();
+			m_mProj.LoadIdentity();
 
 		} // Constructor
 
@@ -53,6 +59,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		RendererOGL::~RendererOGL()
 		{
+
 		} // Destructor
 
 		//------------------------------------------------------------------------------------
@@ -386,6 +393,8 @@ namespace kge
             // Create VertexBufferGLvbo
             VertexBufferOGLvbo* pVB = KGE_NEW(VertexBufferOGLvbo)(VCount, Stride, bufID);
 
+			AddHardwareBuffer(pVB);
+
 			return pVB;
 
 		} // CreateVertexBuffer
@@ -395,7 +404,30 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		HardwareBuffer* RendererOGL::CreateIndexBuffer( void* Indices, u32 ICount, IndexBufferType eIndexBufferType, bool isDynamic )
 		{
-			return NULL;
+			// Create a new buffer
+			GLuint  bufID;
+			glGenBuffers(1, &bufID);
+
+			// Is dynamic?
+			GLenum dyn = GL_STATIC_DRAW;
+			if (isDynamic)
+				dyn = GL_DYNAMIC_DRAW;
+
+			// find index stride
+			int Stride = 2;
+			if (eIndexBufferType == EIBT_32Bit)
+				Stride = 4;
+
+			// bind buffer and pass data to it.
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bufID);
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, ICount * Stride, Indices, dyn);
+
+			// Create VertexBufferGLvbo
+			IndexBufferOGLvbo* pIB = KGE_NEW(IndexBufferOGLvbo)(ICount, Stride, bufID);
+
+			AddHardwareBuffer(pIB);
+
+			return pIB;
 
 		} // CreateIndexBuffer
 
@@ -404,6 +436,60 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		void RendererOGL::SetVertexBuffer( HardwareBuffer* pBuffer, int stage )
 		{
+			if (!pBuffer)
+			{
+				return;
+			}
+
+			if (m_nVertexBufferID[stage] == pBuffer->GetID())
+				return;
+
+			m_nVertexBufferID[stage] = pBuffer->GetID();
+
+			// bind the buffer
+			glBindBuffer(GL_ARRAY_BUFFER, ((VertexBufferOGLvbo*)pBuffer)->m_iBufID);
+
+			// Set the vertex buffer
+			core::DynamicArray<CustomVertexElement>* p = ((core::DynamicArray<CustomVertexElement>*)m_pCurrentVD->m_VertexDec);
+
+			for (uint i = 0; i < p->size(); i++)
+			{
+				if (p->at(i).Stream != stage)
+					continue;
+
+				// find the data type
+				GLenum	datatype = GL_FLOAT;
+				int		datasize = 0;
+
+				switch (p->at(i).Type)
+				{
+				case EVET_Float1:
+					datasize = 1;
+					break;
+
+				case EVET_Float2:
+					datasize = 2;
+					break;
+
+				case EVET_Float3:
+					datasize = 3;
+					break;
+
+				case EVET_Float4:
+					datasize = 4;
+					break;
+
+				}
+
+				// find the usage and set the data
+				switch (p->at(i).Usage)
+				{
+				case EVEU_Position:
+					glVertexPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
+					glEnableClientState(GL_VERTEX_ARRAY);
+					break;
+				}
+			}
 
 		} // SetVertexBuffer
 
@@ -412,6 +498,18 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		void RendererOGL::SetIndexBuffer( HardwareBuffer* pBuffer )
 		{
+			if (!pBuffer)
+			{
+				return;
+			}
+
+			if (m_nIndexBufferID == pBuffer->GetID())
+				return;
+
+			m_nIndexBufferID = pBuffer->GetID();
+
+			// bind the buffer
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ((IndexBufferOGLvbo*)pBuffer)->m_iBufID);
 
 		} // SetIndexBuffer
 
@@ -421,7 +519,14 @@ namespace kge
 		VertexDec* RendererOGL::CreateVertexDeclaration
 			( core::DynamicArray<CustomVertexElement> VertexInfoArray, core::stringc& sName )
 		{
-			return NULL;
+			m_vVertexInfoArray.push_back(VertexInfoArray);
+
+			VertexDec* pOut	  = KGE_NEW(VertexDec)(sName);
+			pOut->m_VertexDec = &(m_vVertexInfoArray.at(m_vVertexInfoArray.size() - 1));
+
+			AddVertexDec(pOut);
+
+			return pOut;
 
 		} // CreateVertexDeclaration
 
@@ -430,6 +535,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		void RendererOGL::SetVertexDeclaration( VertexDec* pVD )
 		{
+			m_pCurrentVD = pVD;
 
 		} // SetVertexDeclaration
 
@@ -439,6 +545,14 @@ namespace kge
 		void RendererOGL::DrawTriangleList( u32 VCount, u32 ICount,
 			u32 VertexStart /*= 0*/, u32 StartIndex /*= 0*/ )
 		{
+			if (ICount > 0)
+			{
+				glDrawElements(GL_TRIANGLES, ICount, GL_UNSIGNED_SHORT, 0);
+			}
+			else
+			{
+				glDrawArrays(GL_TRIANGLES, 0, VCount);
+			}
 
 		} // DrawTriangleList
 
@@ -447,6 +561,39 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		void RendererOGL::SetTransForm( math::Matrix *mat, TransformMode TM /*= ETM_World*/ )
 		{
+			math::Matrix mWorld;
+			switch (TM)
+			{
+			case ETM_World:
+
+				if (!mat)
+				{
+					m_mWorld.LoadIdentity();
+					mWorld = m_mView;
+				}
+				else
+				{
+					m_mWorld = (*mat);
+					mWorld   = m_mView * (*mat);
+				}
+
+				glMatrixMode(GL_MODELVIEW);
+				glLoadMatrixf((GLfloat*)&mWorld);
+				break; // ETM_World
+
+			case ETM_View:
+				mWorld = (*mat) * m_mWorld;
+				glMatrixMode(GL_MODELVIEW);
+				glLoadMatrixf((GLfloat*)&mWorld);
+				m_mView = (*mat);
+				break; // ETM_View
+
+			case ETM_Projection:
+				glMatrixMode(GL_PROJECTION);
+				glLoadMatrixf((GLfloat*)mat);
+				m_mProj = (*mat);
+				break; // ETM_Projection
+			} // switch
 
 		} // SetTransForm
 
@@ -465,7 +612,7 @@ namespace kge
 		void RendererOGL::SetClearColor( const Color& ClearColor )
 		{
 			Renderer::SetClearColor(ClearColor);
-			glClearColor(ClearColor.getRed(), ClearColor.getGreen(), ClearColor.getBlue(), ClearColor.getAlpha());
+			glClearColor(ClearColor.getRed() / 255.0f, ClearColor.getGreen() / 255.0f, ClearColor.getBlue() / 255.0f, ClearColor.getAlpha() / 255.0f);
 
 		}
 

@@ -43,7 +43,7 @@ public:
 	//! Returns the red component of the color. 
 	//! \return Returns a value between 0 and 255, specifying how red the color is.
 	//! 0 means dark, 255 means full red.
-	inline s32 getRed() const	{	return c & 0xff;	}
+	inline s32 getRed() const	{	return (c>>8) & 0xff;	}
 
 	//! Returns the green component of the color. 
 	//! \return Returns a value between 0 and 255, specifying how green the color is.
@@ -53,7 +53,7 @@ public:
 	//! Returns the blue component of the color. 
 	//! \return Returns a value between 0 and 255, specifying how blue the color is.
 	//! 0 means dark, 255 means full blue.
-	inline s32 getBlue() const	{	return (c>>8) & 0xff;	}
+	inline s32 getBlue() const	{	return c & 0xff;	}
 
 	//! A8R8G8B8 color format
 	s32 c;

@@ -77,13 +77,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="gl3.h" />
+    <ClInclude Include="IndexBufferOGLvbo.h" />
     <ClInclude Include="initGL.h" />
     <ClInclude Include="RendererOGL.h" />
+    <ClInclude Include="VertexBufferOGLvbo.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="IndexBufferOGLvbo.cpp" />
     <ClCompile Include="initGL.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RendererOGL.cpp" />
+    <ClCompile Include="VertexBufferOGLvbo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

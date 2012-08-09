@@ -24,6 +24,12 @@
     <ClInclude Include="gl3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VertexBufferOGLvbo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBufferOGLvbo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RendererOGL.cpp">
@@ -33,6 +39,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="initGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBufferOGLvbo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBufferOGLvbo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

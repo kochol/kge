@@ -1,7 +1,7 @@
 #include "VertexBufferOGLvbo.h"
 #include "initGL.h"
 
-extern kge::u32				HardwareBufferID;
+KGE_IMPORT extern kge::u32				HardwareBufferID;
 
 namespace kge
 {

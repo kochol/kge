@@ -1,21 +1,21 @@
-#ifndef KGE_VERTEXBUFFEROGLVBO_H
-#define KGE_VERTEXBUFFEROGLVBO_H
+#ifndef KGE_INDEXBUFFEROGLVBO_H
+#define KGE_INDEXBUFFEROGLVBO_H
 
 #include "../include/HardwareBuffer.h"
 
 namespace kge
 {
-    namespace gfx
-    {
-        class VertexBufferOGLvbo : public HardwareBuffer
-        {
-        public:
+	namespace gfx
+	{
+		class IndexBufferOGLvbo : public HardwareBuffer
+		{
+		public:
 
 			//! Constructor
-			VertexBufferOGLvbo(u32 vcount, u32 stride, uint bufID);
+			IndexBufferOGLvbo(u32 vcount, u32 stride, uint bufID);
 
 			//! Destructor
-			~VertexBufferOGLvbo();
+			~IndexBufferOGLvbo();
 
 			//! sets the buffer data if buffer is dynamic.
 			bool SetData(void* Data, u32 Offset, u32 iSize, ul32 flags);
@@ -29,14 +29,12 @@ namespace kge
 			//! Unlocks vertex buffer
 			bool Unlock();
 
-        //protected:
+		//protected:
 
-            uint        m_iBufID;
+			uint        m_iBufID;
 
-        }; // VertexBufferOGLvbo
+		}; // IndexBufferOGLvbo
+	}
+}
 
-    } // gfx
-
-} // kge
-
-#endif // KGE_VERTEXBUFFEROGLVBO_H
+#endif // KGE_INDEXBUFFEROGLVBO_H

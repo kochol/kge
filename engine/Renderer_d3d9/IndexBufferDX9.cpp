@@ -1,8 +1,8 @@
 #include "IndexBufferDX9.h"
 #include "RendererD3D9.h"
 
-extern kge::u32				HardwareBufferID;
-extern kge::gfx::Renderer*	g_pRenderer;
+KGE_IMPORT extern kge::u32				HardwareBufferID;
+KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;
 
 namespace kge
 {
