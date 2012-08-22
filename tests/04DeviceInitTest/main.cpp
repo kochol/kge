@@ -12,7 +12,8 @@ int main()
 	kge::Device dev;
 	kge::InitParameters params;
 	params.RendererName = "ogl";
-	dev.Init(params);
+	if (!dev.Init(params))
+		return -1;
 	kge::gfx::Renderer*	pRen = dev.GetRenderer();
 
 	while (dev.Run())

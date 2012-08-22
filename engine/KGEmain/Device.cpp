@@ -8,7 +8,7 @@
 #include "KgeMemoryTrack.h"
 #include "../include/InputManager.h"
 
-kge::gfx::Renderer*	g_pRenderer = NULL;
+KGE_API kge::gfx::Renderer*	g_pRenderer = NULL;
 
 namespace kge
 {

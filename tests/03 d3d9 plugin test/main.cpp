@@ -10,10 +10,15 @@
 int main()
 {
 	kge::Device dev;
+
 	kge::InitParameters params;
-	params.RendererName = "d3d9";
+	params.RendererName = "ogl";
+
 	dev.Init(params);
+
 	kge::gfx::Renderer*	pRen = dev.GetRenderer();
+	if (!pRen)
+        return -1;
 
 	while (dev.Run())
 	{

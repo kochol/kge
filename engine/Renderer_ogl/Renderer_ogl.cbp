@@ -38,6 +38,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-fPIC" />
 			<Add option="-DKGE_EXPORT" />
 			<Add option="-D__UNIX__" />
 		</Compiler>
@@ -45,10 +46,11 @@
 			<Add library="Xxf86vm" />
 			<Add library="X11" />
 			<Add library="GL" />
-			<Add library="GLU" />
 		</Linker>
 		<Unit filename="RendererOGL.cpp" />
 		<Unit filename="RendererOGL.h" />
+		<Unit filename="VertexBufferOGLvbo.cpp" />
+		<Unit filename="VertexBufferOGLvbo.h" />
 		<Unit filename="gl3.h" />
 		<Unit filename="initGL.cpp" />
 		<Unit filename="initGL.h" />

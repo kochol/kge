@@ -64,7 +64,7 @@
 	#define KGE_PLATFORM KGE_PLATFORM_WINDOWS
 #elif defined( __APPLE_CC__)
 	#define KGE_PLATFORM KGE_PLATFORM_APPLE
-#elif defined(__UNIX__)
+#elif defined(__unix__)
 	#define KGE_PLATFORM KGE_PLATFORM_LINUX
 #elif defined(ANDROID)
 	#define KGE_PLATFORM KGE_PLATFORM_ANDROID

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <string.h>
 #include "../include/String.h"
 #include "../include/KgeMemory.h"

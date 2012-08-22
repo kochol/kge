@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{790A8356-123A-4A4A-9BA7-9B7FD1734461}</ProjectGuid>
+    <ProjectGuid>{39F70151-1DDB-4DB0-AA34-A83D8429A88E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Renderer_ogl</RootNamespace>
+    <RootNamespace>EntitySystem</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -39,7 +39,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\..\bin\debug</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -50,12 +49,11 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>KGE_EXPORT;WIN32;_DEBUG;_WINDOWS;_USRDLL;RENDERER_OGL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>KGE_EXPORT;WIN32;_DEBUG;_WINDOWS;_USRDLL;ENTITYSYSTEM_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>..\..\bin\debug\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -66,7 +64,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;RENDERER_OGL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ENTITYSYSTEM_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -76,18 +74,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="gl3.h" />
-    <ClInclude Include="IndexBufferOGLvbo.h" />
-    <ClInclude Include="initGL.h" />
-    <ClInclude Include="RendererOGL.h" />
-    <ClInclude Include="VertexBufferOGLvbo.h" />
+    <ClCompile Include="ComponentType.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IndexBufferOGLvbo.cpp" />
-    <ClCompile Include="initGL.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="RendererOGL.cpp" />
-    <ClCompile Include="VertexBufferOGLvbo.cpp" />
+    <ClInclude Include="..\include\Component.h" />
+    <ClInclude Include="..\include\ComponentType.h" />
+    <ClInclude Include="..\include\Entity.h" />
+    <ClInclude Include="..\include\EntityManager.h" />
+    <ClInclude Include="..\include\World.h" />
+    <ClInclude Include="..\include\WorldManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

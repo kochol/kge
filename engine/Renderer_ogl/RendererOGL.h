@@ -2,6 +2,7 @@
 #define KGE_RENDEREROGL_H
 
 #include "../include/Renderer.h"
+#include <vector>
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 	#include <Windows.h>
@@ -146,6 +147,16 @@ namespace kge
 			virtual void SetClearColor(const Color& ClearColor);
 
 		private:
+
+			//! Vertex declaration
+			std::vector<core::DynamicArray<CustomVertexElement> >	m_vVertexInfoArray;
+			VertexDec													*	m_pCurrentVD;
+
+			//! Matrices
+			math::Matrix													m_mWorld,
+																			m_mView,
+																			m_mProj;
+
 			//--------------------------------
 			// functions
 			//--------------------------------

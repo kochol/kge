@@ -43,27 +43,40 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-fPIC" />
 			<Add option="-DKGE_EXPORT" />
 			<Add option="-D__UNIX__" />
 		</Compiler>
 		<Linker>
 			<Add library="pthread" />
 			<Add library="curses" />
+			<Add library="dl" />
 		</Linker>
 		<Unit filename="Device.cpp" />
+		<Unit filename="File.cpp" />
+		<Unit filename="FileSystem.cpp" />
+		<Unit filename="FileSystemManager.cpp" />
+		<Unit filename="InputManager.cpp" />
 		<Unit filename="KgeMemoryTrack.cpp" />
 		<Unit filename="KgeMemoryTrack.h" />
 		<Unit filename="KgeMutex.cpp" />
 		<Unit filename="KgeNedmalloc.cpp" />
 		<Unit filename="KgeNedmalloc.h" />
 		<Unit filename="KgeThread.cpp" />
+		<Unit filename="Linux.cpp" />
+		<Unit filename="Loader.cpp" />
 		<Unit filename="Logger.cpp" />
+		<Unit filename="Matrix.cpp" />
 		<Unit filename="PluginManager.cpp" />
+		<Unit filename="Renderer.cpp" />
 		<Unit filename="Resource.cpp" />
+		<Unit filename="Stream.cpp" />
 		<Unit filename="String.cpp" />
+		<Unit filename="VertexDeclaration.cpp" />
 		<Unit filename="../include/Config.h" />
 		<Unit filename="../include/Device.h" />
 		<Unit filename="../include/Functor.h" />
+		<Unit filename="../include/HardwareBuffer.h" />
 		<Unit filename="../include/InputManager.h" />
 		<Unit filename="../include/Keyboard.h" />
 		<Unit filename="../include/KgeMemory.h" />

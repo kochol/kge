@@ -1,15 +1,14 @@
-#include <string.h>
-#include "../include/Stream.h"
+#include "../include/EntityManager.h"
+#include "../include/Entity.h"
 
 namespace kge
 {
-	namespace io
+	namespace en
 	{
 		//------------------------------------------------------------------------------------
 		// Constructor
 		//------------------------------------------------------------------------------------
-		Stream::Stream( void* pData, uint DataSize ): m_pStart(pData), 
-			m_pCurrent(static_cast<u8*>(pData)),	m_iSize(DataSize), m_iCursur(0)
+		EntityManager::EntityManager(): m_iNextEntityID(0)
 		{
 
 		} // Constructor
@@ -17,32 +16,33 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Destructor
 		//------------------------------------------------------------------------------------
-		Stream::~Stream()
+		EntityManager::~EntityManager()
 		{
 
 		} // Destructor
 
 		//------------------------------------------------------------------------------------
-		// Reads an amount of bytes from the Stream buffer.
+		// Creates an entity
 		//------------------------------------------------------------------------------------
-		kge::uint Stream::Read( void* buffer, s32 sizeToRead )
+		Entity* EntityManager::CreateEntity()
 		{
-			// Check for out bounds
-			if (m_iCursur + sizeToRead > m_iSize)
-				sizeToRead -= m_iCursur + sizeToRead - m_iSize;
+			int enID = 0;
+			if (m_vEntityFreeIDs.size() > 0)
+			{
+				enID = m_vEntityFreeIDs.front();
+				m_vEntityFreeIDs.pop();
+			}
+			else
+				enID = m_iNextEntityID++;
 
-			if (sizeToRead <= 0)
-				return 0;
+			Entity* pEn = KGE_NEW(Entity)(enID);
 
-			// copy the data
-			memcpy(buffer, m_pCurrent + m_iCursur, sizeToRead);
+			m_vEntities[enID] = pEn;
 
-			m_iCursur += sizeToRead;
+			return pEn;
 
-			return sizeToRead;
+		} // CreateEntity
 
-		} // Read
-
-	} // io
+	} // en
 
 } // kge

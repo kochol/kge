@@ -1,15 +1,15 @@
-#include <string.h>
-#include "../include/Stream.h"
+#include "../include/WorldManager.h"
+#include "../include/World.h"
 
 namespace kge
 {
-	namespace io
+	namespace en
 	{
+
 		//------------------------------------------------------------------------------------
 		// Constructor
 		//------------------------------------------------------------------------------------
-		Stream::Stream( void* pData, uint DataSize ): m_pStart(pData), 
-			m_pCurrent(static_cast<u8*>(pData)),	m_iSize(DataSize), m_iCursur(0)
+		WorldManager::WorldManager()
 		{
 
 		} // Constructor
@@ -17,32 +17,24 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Destructor
 		//------------------------------------------------------------------------------------
-		Stream::~Stream()
+		WorldManager::~WorldManager()
 		{
 
 		} // Destructor
 
 		//------------------------------------------------------------------------------------
-		// Reads an amount of bytes from the Stream buffer.
+		// Creates a world
 		//------------------------------------------------------------------------------------
-		kge::uint Stream::Read( void* buffer, s32 sizeToRead )
+		World* WorldManager::CreateWorld()
 		{
-			// Check for out bounds
-			if (m_iCursur + sizeToRead > m_iSize)
-				sizeToRead -= m_iCursur + sizeToRead - m_iSize;
+			World* pW = KGE_NEW(World)();
 
-			if (sizeToRead <= 0)
-				return 0;
+			m_vWorlds.push_back(pW);
 
-			// copy the data
-			memcpy(buffer, m_pCurrent + m_iCursur, sizeToRead);
+			return pW;
 
-			m_iCursur += sizeToRead;
+		} // CreateWorld
 
-			return sizeToRead;
-
-		} // Read
-
-	} // io
+	} // en
 
 } // kge
