@@ -534,7 +534,7 @@ namespace gfx
 
 		// Create IndexBufferDX9
 		IndexBufferDX9* ibOut = KGE_NEW(IndexBufferDX9)(ICount, size, fmt);
-		ibOut->m_pIB		 = ib;
+		ibOut->m_pIB		  = ib;
 		ibOut->Dynamic(isDynamic);
 
 		// Add to list for restoring on device lost
@@ -594,7 +594,10 @@ namespace gfx
 		( core::DynamicArray<CustomVertexElement> VertexInfoArray, core::stringc& sName )
 	{
 		IDirect3DVertexDeclaration9* vd;
-		m_pD3DDevice->CreateVertexDeclaration((D3DVERTEXELEMENT9*)&VertexInfoArray[0], &vd);
+		if (FAILED(m_pD3DDevice->CreateVertexDeclaration((D3DVERTEXELEMENT9*)&VertexInfoArray[0], &vd)))
+		{
+			io::Logger::Error("Can't create %s vertex declaration", sName.c_str());
+		}
 		VertexDec* pOut	  = KGE_NEW(VertexDec)(sName);
 		pOut->m_VertexDec = vd;
 

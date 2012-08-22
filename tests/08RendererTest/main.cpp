@@ -63,10 +63,11 @@ int main()
 
 	// Create matrices
 	kge::math::Matrix mProj;
+	mProj.LoadZero();
 	mProj.SetPerspectiveLH(params.Width, params.Height, 0.8f, 0.1, 100.0);
 	pRen->SetTransForm(&mProj, kge::gfx::ETM_Projection);
 	kge::math::Matrix mView;
-	mView.SetViewLookatLH(kge::math::Vector(5,5,5), kge::math::Vector(), kge::math::Vector(0,1,0));
+	mView.SetViewLookatLH(kge::math::Vector(0,0,5), kge::math::Vector(), kge::math::Vector(0,1,0));
 	pRen->SetTransForm(&mView, kge::gfx::ETM_View);
 
 	pRen->SetClearColor(kge::gfx::Color(0,0,100));

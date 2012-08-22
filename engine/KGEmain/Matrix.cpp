@@ -24,9 +24,9 @@ namespace kge
 		{
 			// load zero matrix
 #if KGE_USE_SSE2
-			m1 = m2 = m3 = m4 = _mm_setzero_ps();
+//			m1 = m2 = m3 = m4 = _mm_setzero_ps();
 #else
-			memset(elements,0,sizeof(float) * 16);
+//			memset(elements,0,sizeof(float) * 16);
 #endif
 		}
 
