@@ -36,8 +36,8 @@ namespace kge
 
 		protected:
 
-			typename std::map<int, std::vector<Component*> >				m_vComponents;			//!< The list of components
-			typename std::map<int, std::vector<Component*> >::iterator	m_itComponents;			//!< The helper iterator
+			std::map<int, std::vector<Component*> >				m_vComponents;			//!< The list of components
+			std::map<int, std::vector<Component*> >::iterator	m_itComponents;			//!< The helper iterator
 			int													m_iID;					//!< Entity ID
 
 		private:

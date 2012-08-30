@@ -7,6 +7,9 @@
 	* Renderer_d3d9
 	- (Add) VertexBufferDX9 class added for working with Vertex buffers.
 	- (Add) IndexBufferDX9 class added for working with index buffers.
+	* Renderer_ogl
+	- (Add) VertexBufferOGLvbo class added for working with VBO in opengl.
+	- (Add) indexBufferOGLvbo class added for working with VBO in opengl.
 * FileSystem
 - (Add) FileSystemManager
 - (Add) FileSystem
@@ -18,5 +21,12 @@
     * Loader_OGRE
 	- (Add) OgreMeshLoader class for loading OGRE mesh files
 * Math
-- Matrix class with SSE2 support added.
-- Vector class
+- (Add) Matrix class with SSE2 support added.
+- (Add) Vector class
+* EntitySystem
+- (Add) Component
+- (Add) ComponentType
+- (Add) Entity
+- (Add) EntityManager
+- (Add) World
+- (Add) WorldManager
