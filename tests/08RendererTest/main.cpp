@@ -3,9 +3,6 @@
 #include "../../engine/include/math.h"
 #include "../../engine/include/VertexElement.h"
 
-#include <gl/GL.h>
-#pragma comment(lib, "opengl32.lib")
-
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 	#ifdef _DEBUG
 		#pragma comment(lib, "../../bin/debug/kge.lib")
@@ -83,17 +80,10 @@ int main()
 	while (dev.Run())
 	{
 		pRen->BeginRendering(true, true, true);
-// 		glBegin(GL_QUADS);
-// 		//glColor3f(1.0f, 0.5f, 0.0f);
-// 		glVertex2f(0.0f, 0.0f);
-// 		glVertex2f(1.0f, 0.0f);
-// 		glVertex2f(1.0f, 1.0f);
-// 		glVertex2f(0.0f, 1.0f);
-// 		glEnd();
 		pRen->SetVertexDeclaration(VD);
 		pRen->SetVertexBuffer(VB);
 		pRen->SetIndexBuffer(IB);
-		pRen->DrawTriangleList(3, 0);
+		pRen->DrawTriangleList(3, 3);
 		pRen->EndRendering();
 	}
 
