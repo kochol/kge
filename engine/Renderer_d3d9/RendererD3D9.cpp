@@ -14,6 +14,10 @@
 // *** Global variables ***
 LPDIRECT3D9				g_pD3D = NULL;
 
+template<> std::vector<kge::Resource*> kge::ResourceManager<kge::Resource>::m_vResources;
+template<> std::stack<kge::u32> kge::ResourceManager<kge::Resource>::m_sHandles;
+
+
 // some good multisample modes, list best ones last
 const UINT g_nMS = 8;
 const D3DMULTISAMPLE_TYPE g_msType[] = { 
@@ -534,7 +538,7 @@ namespace gfx
 
 		// Create IndexBufferDX9
 		IndexBufferDX9* ibOut = KGE_NEW(IndexBufferDX9)(ICount, size, fmt);
-		ibOut->m_pIB		 = ib;
+		ibOut->m_pIB		  = ib;
 		ibOut->Dynamic(isDynamic);
 
 		// Add to list for restoring on device lost
@@ -594,7 +598,10 @@ namespace gfx
 		( core::DynamicArray<CustomVertexElement> VertexInfoArray, core::stringc& sName )
 	{
 		IDirect3DVertexDeclaration9* vd;
-		m_pD3DDevice->CreateVertexDeclaration((D3DVERTEXELEMENT9*)&VertexInfoArray[0], &vd);
+		if (FAILED(m_pD3DDevice->CreateVertexDeclaration((D3DVERTEXELEMENT9*)&VertexInfoArray[0], &vd)))
+		{
+			io::Logger::Error("Can't create %s vertex declaration", sName.c_str());
+		}
 		VertexDec* pOut	  = KGE_NEW(VertexDec)(sName);
 		pOut->m_VertexDec = vd;
 
@@ -646,6 +653,7 @@ namespace gfx
 		if (!mat) 
 		{
 			math::Matrix m;
+			m.LoadIdentity();
 			memcpy(&mWorld, &m, sizeof(D3DMATRIX)); 
 		}
 		else

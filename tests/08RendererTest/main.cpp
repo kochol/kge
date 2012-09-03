@@ -25,7 +25,7 @@ int main()
 	kge::Device dev;
 
 	kge::InitParameters params;
-	params.RendererName = "ogl";
+	params.RendererName = "d3d9";
 	dev.Init(params);
 
 	kge::gfx::Renderer*	pRen = dev.GetRenderer();
@@ -39,10 +39,10 @@ int main()
 	Vertex3 v[] =
 	{
 		{-1,-1,0},
-		{0,1,0},
-		{1,-1,0}
+		{1,-1,0},
+		{0,1,0}
 	};
-	kge::u16 i[] = {0,2,1};
+	kge::u16 i[] = {0,1,2};
 	VB = pRen->CreateVertexBuffer(v,3,sizeof(Vertex3));
 	IB = pRen->CreateIndexBuffer(i, 3);
 
