@@ -60,6 +60,15 @@ namespace kge
 
 		} // RegisterFileSystem
 
+		//------------------------------------------------------------------------------------
+		// Loads a stream from file systems plugins
+		//------------------------------------------------------------------------------------
+		Stream* FileSystemManager::Load( const core::stringc& FileName )
+		{
+			return NULL;
+
+		} // Load
+
 	} // io
 
 } // kge

@@ -20,6 +20,9 @@
 //--------------------------------
 // global variables
 //--------------------------------
+template<> std::vector<kge::Resource*> kge::ResourceManager<kge::Resource>::m_vResources;
+template<> std::stack<kge::u32> kge::ResourceManager<kge::Resource>::m_sHandles;
+
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 
 #elif KGE_PLATFORM == KGE_PLATFORM_LINUX

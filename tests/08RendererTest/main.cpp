@@ -28,7 +28,7 @@ int main()
 	kge::Device dev;
 
 	kge::InitParameters params;
-	params.RendererName = "ogl";
+	params.RendererName = "d3d9";
 	dev.Init(params);
 
 	kge::gfx::Renderer*	pRen = dev.GetRenderer();

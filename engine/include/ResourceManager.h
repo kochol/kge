@@ -6,6 +6,9 @@
 #include "Resource.h"
 #include "Functor.h"
 #include "KgeMemory.h"
+#include "FileSystemManager.h"
+#include "Stream.h"
+#include "Loader.h"
 
 namespace kge
 {
@@ -16,10 +19,8 @@ namespace kge
 	public:
 
 		//! Constructor
-		ResourceManager(core::Functor5<bool , Resource** , const u32 , const char*  , const char* , 
-			void* >*	CreateResourceFunction)
+		ResourceManager()
 		{
-			m_pCreateResourceFn = CreateResourceFunction;
 
 		} // Constructor
 
@@ -39,78 +40,8 @@ namespace kge
 
 			m_vResources.clear();
 
-			if (m_pCreateResourceFn)
-			{
-				delete m_pCreateResourceFn;
-				m_pCreateResourceFn = NULL;
-			}
 
 		} // Destructor
-
-		//! Loads or find a resource and return its handle.
-		virtual u32 Add(const char* FileName, void* ExtraParams, const char* Name)
-		{
-			// Searching for resource.
-			for(std::vector<T*>::iterator it = m_vResources.begin(); 
-				it != m_vResources.end(); it++)
-			{
-				if ((*it))
-				{
-					if ((*it)->GetFileName() && (*it)->GetName() && FileName && Name)
-					{
-						if ( !strcmp((*it)->GetFileName(), FileName) && !strcmp((*it)->GetName(), Name) )
-						{
-							(*it)->AddRef();
-							return (*it)->GetHandle();
-						}
-					}
-					else if ((*it)->GetFileName() && FileName)
-					{
-						if ( !strcmp((*it)->GetFileName(), FileName) )
-						{
-							(*it)->AddRef();
-							return (*it)->GetHandle();
-						}
-					}
-				}
-			}
-
-			// Resource not loaded yet.
-			T* pResource = NULL;
-			u32 handle;
-			bool Add;
-			if (m_sHandles.size() > 0)
-			{
-				handle = m_sHandles.top();
-				m_sHandles.pop();
-				Add	   = false;
-			}
-			else
-			{
-				handle = (u32)m_vResources.size();
-				Add    = true;
-			}
-
-			if (m_pCreateResourceFn)
-			{
-				m_pCreateResourceFn->Call((Resource**)&pResource, handle, FileName, Name, ExtraParams);
-			}
-			else
-			{
-				pResource = KGE_NEW(T)(handle, FileName, Name, NULL);
-			}
-
-			pResource->AddRef();
-
-			// Add it to array
-			if (Add)
-				m_vResources.push_back(pResource);
-			else
-				m_vResources[handle] = pResource;
-
-			return handle;
-
-		} // Add
 
 		//! Adds a manual resource and returns its handle.
 		virtual u32 Add(T* pResource)
@@ -138,7 +69,7 @@ namespace kge
 
 		} // AddManualResource
 
-		void RemoveResource(T* pResource)
+		static void RemoveResource(T* pResource)
 		{
 			m_sHandles.push(pResource->GetHandle());
 			m_vResources[pResource->GetHandle()] = NULL;
@@ -146,7 +77,7 @@ namespace kge
 		} // RemoveResource
 
 		//! Returns a resource.
-		virtual T* GetResource(u32 handle)
+		static T* GetResource(u32 handle)
 		{
 			return m_vResources[handle];
 
@@ -154,7 +85,7 @@ namespace kge
 
 		// returns resource handle before creating resource then use Add(Resource*, u32 Handel) function
 		// to set the loaded resource.
-		u32 GetNewHandle()
+		static u32 GetNewHandle()
 		{
 			u32 handle;
 			if (m_sHandles.size() > 0)
@@ -169,12 +100,91 @@ namespace kge
 
 		} // GetNewHandle
 
+		//! Register resource loaders for this loaders.
+		static void RegisterLoader(Loader* pLoader)
+		{
+			m_vLoaders.push_back(pLoader);
+		}
+
+		//! Loads the resource and return its pointer
+		static T* Load(const char* FileName, void* ExtraParams, const char* Name)
+		{
+			// Searching for resource.
+			for(std::vector<T*>::iterator it = m_vResources.begin(); 
+				it != m_vResources.end(); it++)
+			{
+				if ((*it))
+				{
+					if ((*it)->GetFileName() && (*it)->GetName() && FileName && Name)
+					{
+						if ( !strcmp((*it)->GetFileName(), FileName) && !strcmp((*it)->GetName(), Name) )
+						{
+							(*it)->AddRef();
+							return (*it);
+						}
+					}
+					else if ((*it)->GetFileName() && FileName)
+					{
+						if ( !strcmp((*it)->GetFileName(), FileName) )
+						{
+							(*it)->AddRef();
+							return (*it);
+						}
+					}
+				}
+			}
+
+			// Resource not loaded yet.
+			T* pResource = NULL;
+			u32 handle;
+			bool Add;
+			if (m_sHandles.size() > 0)
+			{
+				handle = m_sHandles.top();
+				Add	   = false;
+			}
+			else
+			{
+				handle = (u32)m_vResources.size();
+				Add    = true;
+			}
+
+			// Ask file system to load this stream
+			io::Stream* pStream = io::FileSystemManager::Load(FileName);
+			if (!pStream)
+				return NULL;
+
+			// Ask loaders if any one can load this resource
+			for (size_t i = 0; i < m_vLoaders.size(); i++)
+			{
+				if (!m_vLoaders[i]->IsALoadableFileExtension(FileName))
+					continue;
+
+				pResource = m_vLoaders[i]->LoadResource(pStream);
+				if (pResource)
+					break;
+			}
+
+			pResource->AddRef();
+
+			// Add it to array
+			if (Add)
+				m_vResources.push_back(pResource);
+			else
+			{
+				m_vResources[handle] = pResource;
+				m_sHandles.pop();
+			}
+
+			return pResource;
+
+		} // Load
+
 	protected:
 
-		std::vector<T*>			m_vResources;		/**< Stores the resources */
-		std::stack<u32>			m_sHandles;			/**< Stores the unused handles number*/
-		core::Functor5<bool , Resource** , const u32 , const char* , const char* , 
-			void* >*			m_pCreateResourceFn;/**< Pointer to the function which creats the resource. */
+		static std::vector<T*>			m_vResources;		/**< Stores the resources */
+		static std::stack<u32>			m_sHandles;			/**< Stores the unused handles number*/
+		static std::vector<Loader*>		m_vLoaders;			//!< Stores the resource loaders
 
 	}; // ResourceManager
 
