@@ -5,10 +5,6 @@
 
 KGE_API kge::u32			HardwareBufferID = 0;
 
-//template<> gfx::Renderer* Singleton<gfx::Renderer>::m_pSingleton = 0;
-template<> KGE_API std::vector<kge::Resource*> kge::ResourceManager<kge::Resource>::m_vResources;
-template<> KGE_API std::stack<kge::u32> kge::ResourceManager<kge::Resource>::m_sHandles;
-
 namespace kge
 {
 	namespace gfx

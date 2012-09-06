@@ -117,6 +117,7 @@
     <ClInclude Include="..\include\Stream.h" />
     <ClInclude Include="..\include\String.h" />
     <ClInclude Include="..\include\structs.h" />
+    <ClInclude Include="..\include\Texture.h" />
     <ClInclude Include="..\include\Vector.h" />
     <ClInclude Include="..\include\VertexDeclaration.h" />
     <ClInclude Include="..\include\VertexElement.h" />

@@ -190,7 +190,6 @@ namespace kge
 							m_vVertexDecs;			//!< The created VertexDec pointers
 
 			// Resource managers
-			ResourceManager<Resource> m_TEst;
 
 			//! Adds hardware buffer pointers
 			virtual void AddHardwareBuffer(HardwareBuffer* pHB);
