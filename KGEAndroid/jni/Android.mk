@@ -22,14 +22,15 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE    := kge
 LOCAL_CFLAGS    := -DANDROID -DNDK -DSTRUCT_MALLINFO_DECLARED
-LOCAL_SRC_FILES := 	KGEmain/Android.cpp \
+LOCAL_SRC_FILES :=  \
+					KGEmain/Android.cpp \
 					KGEmain/Logger.cpp \
 					KGEmain/KgeThread.cpp \
 					KGEmain/KgeMutex.cpp \
 					KGEmain/KgeNedmalloc.cpp \
 					KGEmain/KgeMemoryTrack.cpp \
 					KGEmain/String.cpp
-LOCAL_LDLIBS    := -llog
+LOCAL_LDLIBS    := -llog -ldl
 
 include $(BUILD_SHARED_LIBRARY)
 
