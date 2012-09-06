@@ -28,7 +28,7 @@ namespace kge
 		virtual ~ResourceManager()
 		{
 			// Searching for resource.
-			for(std::vector<T*>::iterator it = m_vResources.begin(); 
+			for(typename std::vector<T*>::iterator it = m_vResources.begin();
 				it != m_vResources.end(); it++)
 			{
 				if ((*it))
@@ -110,7 +110,7 @@ namespace kge
 		static T* Load(const char* FileName, void* ExtraParams, const char* Name)
 		{
 			// Searching for resource.
-			for(std::vector<T*>::iterator it = m_vResources.begin(); 
+			for(typename std::vector<T*>::iterator it = m_vResources.begin();
 				it != m_vResources.end(); it++)
 			{
 				if ((*it))

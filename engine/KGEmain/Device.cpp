@@ -9,7 +9,7 @@
 #include "../include/InputManager.h"
 
 #if KGE_PLATFORM == KGE_PLATFORM_LINUX
-#   include "LinuxWindow.h"
+//#   include "LinuxWindow.h"
 #endif
 
 KGE_API kge::gfx::Renderer*	g_pRenderer = NULL;
@@ -67,8 +67,8 @@ namespace kge
 
 #elif KGE_PLATFORM == KGE_PLATFORM_LINUX
 
-		if (!params.hwnd)
-            m_pWindow = KGE_NEW(io::LinuxWindow)();
+	//	if (!params.hwnd)
+//            m_pWindow = KGE_NEW(io::LinuxWindow)();
 #endif
 
 		if (m_pWindow)
