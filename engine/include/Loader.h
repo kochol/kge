@@ -38,7 +38,7 @@ namespace kge
 			\return Returns the created resource pointer. Note resource may not loaded yet.
 			\sa kge::io::FileSystemManager, Resource::IsLoaded
 		 */
-		virtual Resource* LoadResource(io::Stream* pStream) {return NULL;}
+		virtual Resource* LoadResource(io::Stream* pStream) = 0;
 
 	protected:
 

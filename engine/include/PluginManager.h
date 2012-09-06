@@ -9,6 +9,7 @@
 namespace kge
 {
 	class Device;
+	class Loader;
 
 	namespace gfx
 	{
@@ -24,6 +25,7 @@ namespace kge
 
 	typedef Plugin<gfx::Renderer>		RendererPlugin;
 	typedef Plugin<io::InputManager>	InputMgrPlugin;
+	typedef Plugin<Loader>				LoaderPlugin;
 
 	//! Loads plugins and manage them
 	class KGE_API PluginManager
@@ -89,6 +91,14 @@ namespace kge
 		 */
 		int RegisterInputManager(InputMgrPlugin* pInputMgrPlug);
 
+		//------------------------------------------------------------------------------------
+		//   L O A D E R S   P L U G I N S
+		//------------------------------------------------------------------------------------
+
+		/*! With this interface a Resource Loader Plugin will register himself with PluginManager.
+		 */
+		int RegisterLoader(LoaderPlugin* pLoaderPlug);
+
 	protected:
 
 		//! Protected Constructor
@@ -96,6 +106,7 @@ namespace kge
 
 		std::vector<RendererPlugin*>	m_vRendererPlugins;	//!< Renderer plugins list
 		std::vector<InputMgrPlugin*>	m_vInputMgrPlugins;	//!< Input manager plugins list
+		std::vector<LoaderPlugin*>		m_vLoaderPlugins;	//!< Resource loaders plugins list
 
 	}; // PluginManager
 

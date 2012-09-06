@@ -6,6 +6,7 @@
 #include "String.h"
 #include "Matrix.h"
 #include "Color.h"
+#include "ResourceManager.h"
 
 namespace kge
 {
@@ -187,6 +188,8 @@ namespace kge
 							m_vBuffers;				//!< The created buffer pointers
 			core::DynamicArray<VertexDec*>
 							m_vVertexDecs;			//!< The created VertexDec pointers
+
+			// Resource managers
 
 			//! Adds hardware buffer pointers
 			virtual void AddHardwareBuffer(HardwareBuffer* pHB);

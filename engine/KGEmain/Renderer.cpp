@@ -1,6 +1,7 @@
 #include "../include/Renderer.h"
 #include "../include/HardwareBuffer.h"
 #include "../include/VertexDeclaration.h"
+#include "../include/Resource.h"
 
 KGE_API kge::u32			HardwareBufferID = 0;
 

@@ -56,6 +56,7 @@
 //
 //#define KGE_IMPORT __attribute__ ((visibility("hidden")))
 #define KGE_API
+#define KGE_IMPORT
 //=====================================
 // type definations
 //=====================================

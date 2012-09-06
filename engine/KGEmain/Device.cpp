@@ -8,6 +8,10 @@
 #include "KgeMemoryTrack.h"
 #include "../include/InputManager.h"
 
+#if KGE_PLATFORM == KGE_PLATFORM_LINUX
+#   include "LinuxWindow.h"
+#endif
+
 KGE_API kge::gfx::Renderer*	g_pRenderer = NULL;
 
 namespace kge
@@ -60,6 +64,11 @@ namespace kge
 
 		if (!params.hwnd)
 			m_pWindow = KGE_NEW(io::WinWindow)();
+
+#elif KGE_PLATFORM == KGE_PLATFORM_LINUX
+
+		if (!params.hwnd)
+            m_pWindow = KGE_NEW(io::LinuxWindow)();
 #endif
 
 		if (m_pWindow)

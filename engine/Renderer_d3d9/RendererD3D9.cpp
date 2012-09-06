@@ -649,6 +649,7 @@ namespace gfx
 		if (!mat) 
 		{
 			math::Matrix m;
+			m.LoadIdentity();
 			memcpy(&mWorld, &m, sizeof(D3DMATRIX)); 
 		}
 		else

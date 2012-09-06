@@ -158,4 +158,15 @@ namespace kge
 
 	} // RegisterInputManager
 
+	//------------------------------------------------------------------------------------
+	// With this interface a Resource Loader Plugin will register himself with PluginManager.
+	//------------------------------------------------------------------------------------
+	int PluginManager::RegisterLoader( LoaderPlugin* pLoaderPlug )
+	{
+		m_vLoaderPlugins.push_back(pLoaderPlug);
+
+		return m_vLoaderPlugins.size() - 1;
+
+	} // RegisterLoader
+
 } // kge
