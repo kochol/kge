@@ -30,7 +30,7 @@ namespace kge
 			return KGE_NEW(LoaderDDS)();
 		}
 
-	}; // RendererD3D9Plugin
+	}; // LoaderDDSPlugin
 
 } // kge
 

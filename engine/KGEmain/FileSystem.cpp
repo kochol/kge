@@ -59,6 +59,16 @@ namespace kge
 
 		} // CanLoad
 
+		//------------------------------------------------------------------------------------
+		// Loads a file and return its Stream
+		//------------------------------------------------------------------------------------
+		Stream* FileSystem::Load( core::stringc FileName )
+		{
+
+			return NULL;
+
+		} // Load
+
 	} // io
 
 } // kge

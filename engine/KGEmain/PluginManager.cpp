@@ -169,4 +169,15 @@ namespace kge
 
 	} // RegisterLoader
 
+	//------------------------------------------------------------------------------------
+	// With this interface a FileSystem Plugin will register himself with PluginManager.
+	//------------------------------------------------------------------------------------
+	int PluginManager::RegisterFileSystem( FileSystemPlugin* pFileSysPlug )
+	{
+		m_vFileSystemPlugins.push_back(pFileSysPlug);
+
+		return m_vFileSystemPlugins.size() - 1;
+
+	} // RegisterFileSystem
+
 } // kge

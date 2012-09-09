@@ -195,6 +195,9 @@
     <ClInclude Include="..\include\Texture.h">
       <Filter>Header Files\gfx</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Timer.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\KGEmain\Device.cpp">
@@ -262,6 +265,9 @@
     </ClCompile>
     <ClCompile Include="..\kgemain\Matrix.cpp">
       <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\kgemain\Timer.cpp">
+      <Filter>Source Files\core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

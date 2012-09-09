@@ -118,6 +118,7 @@
     <ClInclude Include="..\include\String.h" />
     <ClInclude Include="..\include\structs.h" />
     <ClInclude Include="..\include\Texture.h" />
+    <ClInclude Include="..\include\Timer.h" />
     <ClInclude Include="..\include\Vector.h" />
     <ClInclude Include="..\include\VertexDeclaration.h" />
     <ClInclude Include="..\include\VertexElement.h" />
@@ -150,6 +151,7 @@
     <ClCompile Include="..\KGEmain\Resource.cpp" />
     <ClCompile Include="..\kgemain\Stream.cpp" />
     <ClCompile Include="..\KGEmain\String.cpp" />
+    <ClCompile Include="..\kgemain\Timer.cpp" />
     <ClCompile Include="..\kgemain\VertexDeclaration.cpp" />
     <ClCompile Include="..\KGEmain\Windows.cpp" />
     <ClCompile Include="..\KGEmain\WinWindow.cpp" />
