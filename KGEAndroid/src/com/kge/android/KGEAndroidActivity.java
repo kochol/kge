@@ -57,10 +57,10 @@ public class KGEAndroidActivity extends Activity
         btn.setText(id.toString());
         btn.setOnClickListener(new OnClickListener() {
 			
-			@Override
+			//@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				String str = getString(R.string.kgeapp);  
+				String str = "memorytest";//getString(R.string.kgeapp);  
 				AndroidMain(str);
 				
 			}
