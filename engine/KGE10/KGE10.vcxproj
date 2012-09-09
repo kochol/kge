@@ -78,9 +78,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Profiler\Profiler.cpp" />
+    <ClCompile Include="..\Profiler\ProfilerBlock.cpp" />
     <ClInclude Include="..\..\libs\nedmalloc\malloc.c.h" />
     <ClInclude Include="..\..\libs\nedmalloc\nedmalloc.h" />
     <ClInclude Include="..\include\array.h" />
+    <ClInclude Include="..\include\BlockData.h" />
     <ClInclude Include="..\include\Color.h" />
     <ClInclude Include="..\include\Config.h" />
     <ClInclude Include="..\include\Device.h" />
@@ -110,6 +113,8 @@
     <ClInclude Include="..\include\os.h" />
     <ClInclude Include="..\include\Plugin.h" />
     <ClInclude Include="..\include\PluginManager.h" />
+    <ClInclude Include="..\include\Profiler.h" />
+    <ClInclude Include="..\include\ProfilerBlock.h" />
     <ClInclude Include="..\include\ptr_fun.h" />
     <ClInclude Include="..\include\Renderer.h" />
     <ClInclude Include="..\include\Resource.h" />

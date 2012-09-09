@@ -24,9 +24,6 @@
     <ClInclude Include="..\include\ProfilerBlock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BlockData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Profiler.cpp">

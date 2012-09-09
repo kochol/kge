@@ -2,12 +2,6 @@
 #include "../include/ProfilerBlock.h"
 #include "../include/KgeMemory.h"
 
-#ifdef _DEBUG
-#pragma comment(lib, "../../bin/debug/kge.lib")
-#else
-#pragma comment(lib, "../../bin/release/kge.lib")
-#endif
-
 namespace kge
 {
 	//------------------------------------------------------------------------------------

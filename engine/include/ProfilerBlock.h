@@ -1,13 +1,13 @@
 #ifndef KGE_PROFILERBLOCK_H
 #define KGE_PROFILERBLOCK_H
 
-#include "pdef.h"
+#include "kgedef.h"
 #include "String.h"
 
 namespace kge
 {
 	//! The block that store block data for each function
-	class PKGE_API ProfilerBlock
+	class KGE_API ProfilerBlock
 	{
 	public:
 
@@ -23,10 +23,14 @@ namespace kge
 		//! Adds a profiler block data
 		void AddBlockData(const int& iTime);
 
+		//! Appends the data to the string
+		void GetData(core::stringc &str);
+
 	protected:
 
 		core::stringc		m_sName;			//!< The Block name
 		int					m_iTotalCall,		//!< Total Call from begining
+							m_iTotalFrame,		//!< Total frame
 							m_iFrameCall,		//!< Total call in last frame
 							m_iAveFrameCall,	//!< Average call count in frames
 							m_iMaxFrameCall,	//!< The maximum the function called in a single frame

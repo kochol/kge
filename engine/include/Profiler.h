@@ -1,7 +1,7 @@
 #ifndef KGE_PROFILER
 #define KGE_PROFILER
 
-#include "pdef.h"
+#include "kgedef.h"
 #include <map>
 #include "String.h"
 
@@ -10,7 +10,7 @@ namespace kge
 	class ProfilerBlock;
 
 	//! The profiler interface for profiling the functions.
-	class PKGE_API Profiler
+	class KGE_API Profiler
 	{
 	protected:
 

@@ -2,6 +2,7 @@
 #define KGE_STRING_H
 
 #include <string>
+#include "kgedef.h"
 
 namespace kge
 {

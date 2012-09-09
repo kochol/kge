@@ -76,7 +76,6 @@
   <ItemGroup>
     <ClInclude Include="..\include\Profiler.h" />
     <ClInclude Include="..\include\ProfilerBlock.h" />
-    <ClInclude Include="BlockData.h" />
     <ClInclude Include="pdef.h" />
   </ItemGroup>
   <ItemGroup>
