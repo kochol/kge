@@ -2,6 +2,7 @@
 #include "../../engine/include/Renderer.h"
 #include "../../engine/include/math.h"
 #include "../../engine/include/VertexElement.h"
+#include "../../engine/include/Profiler.h"
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 	#ifdef _DEBUG
@@ -85,6 +86,8 @@ int main()
 		pRen->SetIndexBuffer(IB);
 		pRen->DrawTriangleList(3, 3);
 		pRen->EndRendering();
+		kge::core::stringc str = kge::Profiler::GetPointer()->GetData();
+		printf(str.c_str());
 	}
 
 	return 0;

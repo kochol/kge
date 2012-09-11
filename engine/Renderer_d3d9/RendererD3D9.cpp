@@ -4,6 +4,7 @@
 #include "IndexBufferDX9.h"
 #include "../include/VertexDeclaration.h"
 #include "../include/VertexElement.h"
+#include "../include/BlockData.h"
 
 #include <dxerr.h>
 #include <d3dx9.h>
@@ -200,6 +201,8 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	bool RendererD3D9::BeginRendering(bool bColor, bool bDepth, bool bStencil)
 	{
+		KGEPROFILE;
+
 		Clear(bColor, bDepth, bStencil);
 
 		if (!m_bIsSceneRunning)
@@ -226,6 +229,8 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	bool RendererD3D9::EndRendering()
 	{
+		KGEPROFILE;
+
 		if (m_bIsSceneRunning)
 		{
 			HRESULT hr = S_OK;
@@ -626,6 +631,8 @@ namespace gfx
 	void RendererD3D9::DrawTriangleList( u32 VCount, u32 ICount, 
 		u32 VertexStart /*= 0*/, u32 StartIndex /*= 0*/ )
 	{
+		KGEPROFILE;
+
 		if ( ICount > 0 )
 		{
 			m_pD3DDevice->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, VertexStart, 0, VCount, StartIndex, ICount / 3);

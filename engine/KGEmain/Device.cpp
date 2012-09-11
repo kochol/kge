@@ -7,6 +7,7 @@
 #include "../include/Logger.h"
 #include "KgeMemoryTrack.h"
 #include "../include/InputManager.h"
+#include "../include/BlockData.h"
 
 #if KGE_PLATFORM == KGE_PLATFORM_LINUX
 #   include "LinuxWindow.h"
@@ -108,6 +109,8 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	bool Device::Run()
 	{
+		KGEPROFILE;
+
 		bool b = true;
 		if (m_pWindow)
 			b = m_pWindow->Run();

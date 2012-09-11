@@ -14,7 +14,7 @@ namespace kge
 
 			QueryPerformanceFrequency(&freq);
 
-			ims = freq.QuadPart / 1000;
+			ims = freq.QuadPart;// / 1000;
 
 			QueryPerformanceCounter(&lastTick);
 			base = lastTick;
@@ -55,7 +55,7 @@ namespace kge
 			}
 			if ((iTime / ims) > 0 && Reset)
 				lastTick = curTick;
-			return iTime / ims;
+			return iTime * 1000000LL / ims;
 
 #else
 #ifdef KGE_USE_SDL

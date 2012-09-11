@@ -45,8 +45,28 @@ namespace kge
 		// Create a new block
 		ProfilerBlock*	pPB = KGE_NEW(ProfilerBlock)(sName);
 
+		m_mBlocks.insert(std::pair<core::stringc, ProfilerBlock*>(sName, pPB));
+
 		return pPB;
 
 	} // GetBlock
+
+	//------------------------------------------------------------------------------------
+	// Returns the string with profiling data.
+	//------------------------------------------------------------------------------------
+	core::stringc Profiler::GetData()
+	{
+		core::stringc str;
+		std::map<core::stringc, ProfilerBlock*>::iterator it;
+
+		for (it = m_mBlocks.begin(); it != m_mBlocks.end(); it++)
+		{
+			it->second->EndFrame();
+			it->second->GetData(str);
+		}
+
+		return str;
+
+	} // GetData
 
 } // kge

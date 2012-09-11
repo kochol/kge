@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Config.h"
 #include "ProfilerBlock.h"
 #include "String.h"
 #include "Timer.h"
@@ -20,7 +21,7 @@ namespace kge
 		//! Destructor
 		~BlockData()
 		{
-			m_pBlock->AddBlockData(m_Timer->GetTime(false));
+			m_pBlock->AddBlockData(m_Timer.GetTime(false));
 		}
 
 	protected:
@@ -32,3 +33,9 @@ namespace kge
 	}; // BlockData
 
 } // kge
+
+#ifdef KGE_ENABLE_PROFILING
+#	define KGEPROFILE kge::BlockData profileblockdata(__FUNCTION__)
+#else
+#	define KGEPROFILE
+#endif

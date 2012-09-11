@@ -1,5 +1,5 @@
-#ifndef KGE_PROFILER
-#define KGE_PROFILER
+#ifndef KGE_PROFILER_H
+#define KGE_PROFILER_H
 
 #include "kgedef.h"
 #include <map>
@@ -28,6 +28,9 @@ namespace kge
 		//! Returns the block with its name
 		ProfilerBlock*		GetBlock(const core::stringc& sName);
 
+		//! Returns the string with profiling data.
+		core::stringc GetData();
+
 	protected:
 
 		std::map<core::stringc, ProfilerBlock*>		m_mBlocks;
@@ -36,4 +39,4 @@ namespace kge
 
 } // kge
 
-#endif // KGE_PROFILER
+#endif // KGE_PROFILER_H
