@@ -31,6 +31,9 @@ namespace kge
 		//! Returns the string with profiling data.
 		core::stringc GetData();
 
+		//! Release the memory taken
+		void Release();
+
 	protected:
 
 		std::map<core::stringc, ProfilerBlock*>		m_mBlocks;

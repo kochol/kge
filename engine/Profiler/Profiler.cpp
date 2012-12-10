@@ -69,4 +69,20 @@ namespace kge
 
 	} // GetData
 
+	//------------------------------------------------------------------------------------
+	// Release the memory taken
+	//------------------------------------------------------------------------------------
+	void Profiler::Release()
+	{
+		std::map<core::stringc, ProfilerBlock*>::iterator it;
+
+		for (it = m_mBlocks.begin(); it != m_mBlocks.end(); it++)
+		{
+			KGE_DELETE(it->second, ProfilerBlock)
+		}
+
+		m_mBlocks.clear();
+
+	} // Release
+
 } // kge

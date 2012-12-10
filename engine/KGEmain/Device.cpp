@@ -35,6 +35,7 @@ namespace kge
 		KGE_DELETE(m_pWindow, KgeWindow);
 		KGE_DELETE(g_pRenderer, Renderer);
 		m_pPluginMgr->Release();
+		Profiler::GetPointer()->Release();
 
 		// Delete the logger in last
 		KGE_DELETE(m_pLogger, Logger);
