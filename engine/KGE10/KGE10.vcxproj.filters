@@ -198,14 +198,14 @@
     <ClInclude Include="..\include\Timer.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\BlockData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\Profiler.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\core</Filter>
     </ClInclude>
     <ClInclude Include="..\include\ProfilerBlock.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\BlockData.h">
+      <Filter>Header Files\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -279,10 +279,10 @@
       <Filter>Source Files\core</Filter>
     </ClCompile>
     <ClCompile Include="..\Profiler\Profiler.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\core</Filter>
     </ClCompile>
     <ClCompile Include="..\Profiler\ProfilerBlock.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -2,12 +2,14 @@
 
 namespace kge
 {
+	namespace core
+	{
 
-	//------------------------------------------------------------------------------------
-	// Constructor
-	//------------------------------------------------------------------------------------
-	ProfilerBlock::ProfilerBlock( const core::stringc& name ): 
-		m_sName(name),
+		//------------------------------------------------------------------------------------
+		// Constructor
+		//------------------------------------------------------------------------------------
+		ProfilerBlock::ProfilerBlock( const core::stringc& name ): 
+	m_sName(name),
 		m_iTotalCall(0),
 		m_iTotalFrame(0),
 		m_iFrameCall(0),
@@ -54,12 +56,12 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void ProfilerBlock::AddBlockData( const int& iTime )
 	{
-			m_iTotalCall++;
-			m_iFrameCall++;
-			m_iTotalTime += iTime;
-			m_iFrameTime += iTime;
-			if (iTime > m_iMaxTime)
-				m_iMaxTime = iTime;
+		m_iTotalCall++;
+		m_iFrameCall++;
+		m_iTotalTime += iTime;
+		m_iFrameTime += iTime;
+		if (iTime > m_iMaxTime)
+			m_iMaxTime = iTime;
 
 	} // AddBlockData
 
@@ -79,5 +81,7 @@ namespace kge
 		str += ch;
 
 	} // GetData
+
+	} // core
 
 } // kge

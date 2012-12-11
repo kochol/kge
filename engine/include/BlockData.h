@@ -8,34 +8,38 @@
 
 namespace kge
 {
-	class BlockData
+	namespace core
 	{
-	public:
-
-		//! Constructor
-		BlockData(core::stringc name): m_Name(name)
+		class BlockData
 		{
-			m_pBlock = Profiler::GetPointer()->GetBlock(name);
-		}
+		public:
 
-		//! Destructor
-		~BlockData()
-		{
-			m_pBlock->AddBlockData(m_Timer.GetTime(false));
-		}
+			//! Constructor
+			BlockData(core::stringc name): m_Name(name)
+			{
+				m_pBlock = Profiler::GetPointer()->GetBlock(name);
+			}
 
-	protected:
+			//! Destructor
+			~BlockData()
+			{
+				m_pBlock->AddBlockData(m_Timer.GetTime(false));
+			}
 
-		core::Timer				m_Timer;
-		core::stringc			m_Name;
-		ProfilerBlock		*	m_pBlock;
+		protected:
 
-	}; // BlockData
+			core::Timer				m_Timer;
+			core::stringc			m_Name;
+			ProfilerBlock		*	m_pBlock;
+
+		}; // BlockData
+
+	} // core
 
 } // kge
 
 #ifdef KGE_ENABLE_PROFILING
-#	define KGEPROFILE kge::BlockData profileblockdata(__FUNCTION__)
+#	define KGEPROFILE kge::core::BlockData profileblockdata(__FUNCTION__)
 #else
 #	define KGEPROFILE
 #endif

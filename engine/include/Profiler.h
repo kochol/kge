@@ -7,38 +7,42 @@
 
 namespace kge
 {
-	class ProfilerBlock;
-
-	//! The profiler interface for profiling the functions.
-	class KGE_API Profiler
+	namespace core
 	{
-	protected:
+		class ProfilerBlock;
 
-		//! Constructor
-		Profiler();
+		//! The profiler interface for profiling the functions.
+		class KGE_API Profiler
+		{
+		protected:
 
-	public:
+			//! Constructor
+			Profiler();
 
-		//! Destructor
-		~Profiler();
+		public:
 
-		//! Return the profiler pointer
-		static Profiler*	GetPointer();
+			//! Destructor
+			~Profiler();
 
-		//! Returns the block with its name
-		ProfilerBlock*		GetBlock(const core::stringc& sName);
+			//! Return the profiler pointer
+			static Profiler*	GetPointer();
 
-		//! Returns the string with profiling data.
-		core::stringc GetData();
+			//! Returns the block with its name
+			ProfilerBlock*		GetBlock(const core::stringc& sName);
 
-		//! Release the memory taken
-		void Release();
+			//! Returns the string with profiling data.
+			core::stringc GetData();
 
-	protected:
+			//! Release the memory taken
+			void Release();
 
-		std::map<core::stringc, ProfilerBlock*>		m_mBlocks;
+		protected:
 
-	}; // Profiler
+			std::map<core::stringc, ProfilerBlock*>		m_mBlocks;
+
+		}; // Profiler
+
+	} // core
 
 } // kge
 

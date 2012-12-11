@@ -86,7 +86,7 @@ int main()
 		pRen->SetIndexBuffer(IB);
 		pRen->DrawTriangleList(3, 3);
 		pRen->EndRendering();
-		kge::core::stringc str = kge::Profiler::GetPointer()->GetData();
+		kge::core::stringc str = kge::core::Profiler::GetPointer()->GetData();
 		printf(str.c_str());
 	}
 
