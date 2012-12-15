@@ -1,5 +1,13 @@
 #include "LoaderDDS.h"
 #include "../include/Stream.h"
+#include "../include/Logger.h"
+#include "../include/Texture.h"
+#include "../include/Renderer.h"
+#include "../include/enums.h"
+#include "../include/Image.h"
+
+//! Renderer public pointer
+KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;
 
 // byte-align structures
 #ifdef _MSC_VER
@@ -81,21 +89,27 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	Resource* LoaderDDS::LoadResource( io::Stream* pStream )
 	{
-		std::ifstream ifile(m_pFileName, std::ios::binary);
-		std::vector<unsigned char> buffer;
+		if (pStream->GetSize() < sizeof(DWORD) + sizeof(DDS_HEADER)) 
+		{ 
+			io::Logger::Error("Can't load %s DDS texture. The file size is very low and it can not be a valid DDS texture.", 
+				core::String::Convert(pStream->GetName()).c_str());
+			return NULL; 
+		}
 
-		std::copy(std::istreambuf_iterator<char>(ifile), std::istreambuf_iterator<char>(),
-			std::back_insert_iterator<std::vector<unsigned char> >(buffer));
+		// Create the buffer
+		std::vector<unsigned char> buffer(pStream->GetSize());
+		pStream->Read((void*)&buffer[0], pStream->GetSize());
 
-		if (buffer.size() < sizeof(DWORD) + sizeof(DDS_HEADER)) { return false; }
-
-		//////
-
-		const unsigned char* pSrc = &buffer[0];
-		const unsigned char* pEnd = &buffer[0] + buffer.size();
+		const u8* pSrc = &buffer[0];
+		const u8* pEnd = &buffer[0] + buffer.size();
 		const DWORD magicNumber = *(reinterpret_cast<const DWORD*>(pSrc));
 
-		if (magicNumber != DDS_MAGIC) { return false; }
+		if (magicNumber != DDS_MAGIC) 
+		{
+			io::Logger::Error("Can't load %s DDS texture. The file header is incorrect and it can not be a valid DDS texture.", 
+				core::String::Convert(pStream->GetName()).c_str());
+			return NULL; 
+		}
 
 		pSrc += sizeof(DWORD);
 
@@ -108,10 +122,13 @@ namespace kge
 			!header.dwWidth ||
 			!header.dwHeight)
 		{
-			return false;
+			io::Logger::Error("Can't load %s DDS texture. The file header is incorrect and it can not be a valid DDS texture.", 
+				core::String::Convert(pStream->GetName()).c_str());
+			return NULL; 
 		}
 
-		D3DFORMAT format = D3DFMT_UNKNOWN;
+		// Finding the texture format
+		gfx::TextureFormat format = gfx::ETF_NONE;
 		unsigned int bitsPerPixel = 0;
 		unsigned int bcBytesPerBlock = 0;
 
@@ -125,13 +142,13 @@ namespace kge
 						header.ddspf.dwGBitMask == 0x0000ff00 &&
 						header.ddspf.dwBBitMask == 0x000000ff)
 					{
-						format = D3DFMT_A8R8G8B8;	
+						format = gfx::ETF_A8R8G8B8;	
 					}
 					else if (header.ddspf.dwRBitMask == 0x000000ff &&
 						header.ddspf.dwGBitMask == 0x0000ff00 &&
 						header.ddspf.dwBBitMask == 0x00ff0000)
 					{
-						format = D3DFMT_A8B8G8R8;
+						format = gfx::ETF_A8B8G8R8;
 					}
 				}
 				else if (header.ddspf.dwABitMask == 0x00000000)
@@ -140,13 +157,13 @@ namespace kge
 						header.ddspf.dwGBitMask == 0x0000ff00 &&
 						header.ddspf.dwBBitMask == 0x000000ff)
 					{
-						format = D3DFMT_X8R8G8B8;	
+						format = gfx::ETF_X8R8G8B8;	
 					}
 					else if (header.ddspf.dwRBitMask == 0x000000ff &&
 						header.ddspf.dwGBitMask == 0x0000ff00 &&
 						header.ddspf.dwBBitMask == 0x00ff0000)
 					{
-						format = D3DFMT_X8B8G8R8;
+						format = gfx::ETF_X8B8G8R8;
 					}
 				}
 				bitsPerPixel = header.ddspf.dwRGBBitCount;
@@ -167,89 +184,51 @@ namespace kge
 		{
 			if (MAKEFOURCC('D', 'X', 'T', '1') == header.ddspf.dwFourCC)
 			{
-				format = D3DFMT_DXT1;
+				format = gfx::ETF_DXT1;
 				bitsPerPixel = 4;
 				bcBytesPerBlock = 8;
 			}
 			else if (MAKEFOURCC('D', 'X', 'T', '2') == header.ddspf.dwFourCC)
 			{
-				format = D3DFMT_DXT2;
+				format = gfx::ETF_DXT2;
 				bitsPerPixel = 8;
 				bcBytesPerBlock = 16;
 			}
 			else if (MAKEFOURCC('D', 'X', 'T', '3') == header.ddspf.dwFourCC)
 			{
-				format = D3DFMT_DXT3;
+				format = gfx::ETF_DXT3;
 				bitsPerPixel = 8;
 				bcBytesPerBlock = 16;
 			}
 			else if (MAKEFOURCC('D', 'X', 'T', '4') == header.ddspf.dwFourCC)
 			{
-				format = D3DFMT_DXT4;
+				format = gfx::ETF_DXT4;
 				bitsPerPixel = 8;
 				bcBytesPerBlock = 16;
 			}
 			else if (MAKEFOURCC('D', 'X', 'T', '5') == header.ddspf.dwFourCC)
 			{
-				format = D3DFMT_DXT5;
+				format = gfx::ETF_DXT5;
 				bitsPerPixel = 8;
 				bcBytesPerBlock = 16;
 			}
 		}
 
-		if (D3DFMT_UNKNOWN == format)
+		if (format == gfx::ETF_NONE)
 		{
-			io::Logger::Log("Can't create texture from ", m_pFileName, io::ELM_Error);
-			return false;
+			io::Logger::Error("Can't load %s DDS texture. The texture format is not supported.", 
+				core::String::Convert(pStream->GetName()).c_str());
+			return NULL; 
 		}
 
 		unsigned int numMipmaps = header.dwMipMapCount ? header.dwMipMapCount : 1;
-		m_width = header.dwWidth;
-		m_height = header.dwHeight;
-		m_tFormat = format;
 
-		////////////////////////////
-		while ((m_width > m_pRenderer->GetMaxTextureSize() || m_height > m_pRenderer->GetMaxTextureSize()) && (numMipmaps > 1))
-		{
-			unsigned int rowSize = 0;
-			unsigned int numRows = 0;
-
-			if (bcBytesPerBlock)
-			{
-				rowSize = std::max<unsigned int>(1, m_width / 4) * bcBytesPerBlock;
-				numRows = std::max<unsigned int>(1, m_height / 4);
-			}
-			else
-			{
-				rowSize = (m_width * bitsPerPixel + 7) / 8;
-				numRows = m_height;
-			}
-
-			pSrc += rowSize * numRows;
-
-			--numMipmaps;
-
-			m_width = m_width >> 1;
-			m_height = m_height >> 1;
-			if (m_width == 0) { m_width = 1; }
-			if (m_height == 0) { m_height = 1; }
-		}
-		////////////////////////////
-
-		if (FAILED(m_pd3dDevice->CreateTexture(m_width, m_height, numMipmaps,
-			0, format, D3DPOOL_MANAGED, &m_pTexture, NULL)))
-		{
-			io::Logger::Log("Can't create texture from ", m_pFileName, io::ELM_Error);
-			return false;
-		}
-
-		D3DLOCKED_RECT lockedRect = {0};
-		unsigned int rowSize = 0;
-		unsigned int numRows = 0;
-		unsigned int size = 0;
-		unsigned int width = m_width;
-		unsigned int height = m_height;
-
+		// calculate image size
+		uint rowSize = 0;
+		uint numRows = 0;
+		uint size = 0;
+		uint width = header.dwWidth;
+		uint height = header.dwHeight;
 		for (unsigned int i = 0; i < numMipmaps; ++i)
 		{
 			if (bcBytesPerBlock)
@@ -263,28 +242,7 @@ namespace kge
 				numRows = height;
 			}
 
-			size = rowSize * numRows;
-
-			if (pSrc + size > pEnd)
-			{
-				this->Release();
-				io::Logger::Log("Can't create texture from ", m_pFileName, io::ELM_Error);
-				return false;
-			}
-
-			if (SUCCEEDED(m_pTexture->LockRect(i, &lockedRect, 0, 0)))
-			{
-				unsigned char* pDest = reinterpret_cast<unsigned char*>(lockedRect.pBits);
-
-				for (unsigned int j = 0; j < numRows; ++j)
-				{
-					memcpy_s(pDest, lockedRect.Pitch, pSrc, rowSize);
-					pDest += lockedRect.Pitch;
-					pSrc += rowSize;
-				}
-
-				m_pTexture->UnlockRect(i);
-			}
+			size += rowSize * numRows;
 
 			width = width >> 1;
 			height = height >> 1;
@@ -292,11 +250,13 @@ namespace kge
 			if (height == 0) { height = 1; }
 		}
 
-	} 
+		// Create image resource
+		gfx::Image* pimg = KGE_NEW(gfx::Image)(0, core::String::Convert(pStream->GetName()).c_str(), (u8*)pSrc, size, header.dwWidth, header.dwHeight, bcBytesPerBlock, bitsPerPixel, format, numMipmaps);
 
-		io::Logger::Log("Texture loaded: ", m_pFileName);
+		// TODO: Create texture from an Image
 
-		return true;
+
+		io::Logger::Info("Texture loaded: %s", core::String::Convert(pStream->GetName()).c_str());
 
 		return NULL;
 
