@@ -2,6 +2,7 @@
 #define KGE_STREAM_H
 
 #include "KgeUnknown.h"
+#include "String.h"
 
 namespace kge
 {
@@ -13,7 +14,7 @@ namespace kge
 		public:
 
 			//! Constructor
-			Stream(void* pData, uint DataSize);
+			Stream(void* pData, uint DataSize, core::stringw name);
 
 			//! Destructor
 			virtual ~Stream();
@@ -26,12 +27,19 @@ namespace kge
 			*/
 			virtual uint Read(void* buffer, s32 sizeToRead);
 
+			//! Returns the stream size
+			virtual uint GetSize() {return m_iSize;}
+
+			//! Returns the stream name
+			virtual core::stringw GetName() {return m_sName;}
+
 		protected:
 
 			void						*	m_pStart;			//!< The start point of data
 			u8							*	m_pCurrent;			//!< The current positoin of data
 			uint							m_iSize,			//!< The data size
 											m_iCursur;			//!< The cursur position
+			core::stringw					m_sName;			//!< The stream name
 
 		}; // Stream
 
