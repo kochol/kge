@@ -207,6 +207,9 @@
     <ClInclude Include="..\include\BlockData.h">
       <Filter>Header Files\core</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Image.h">
+      <Filter>Header Files\gfx</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\KGEmain\Device.cpp">
@@ -283,6 +286,9 @@
     </ClCompile>
     <ClCompile Include="..\Profiler\ProfilerBlock.cpp">
       <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KGEmain\Image.cpp">
+      <Filter>Source Files\gfx</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

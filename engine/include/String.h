@@ -12,7 +12,7 @@ namespace kge
 		typedef std::wstring stringw;
 
 		//! KGE string class
-		class String
+		class KGE_API String
 		{
 		public:
 

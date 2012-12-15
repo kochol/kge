@@ -78,6 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\KGEmain\Image.cpp" />
     <ClCompile Include="..\Profiler\Profiler.cpp" />
     <ClCompile Include="..\Profiler\ProfilerBlock.cpp" />
     <ClInclude Include="..\..\libs\nedmalloc\malloc.c.h" />
@@ -94,6 +95,7 @@
     <ClInclude Include="..\include\Functor.h" />
     <ClInclude Include="..\include\gnuc_def.h" />
     <ClInclude Include="..\include\HardwareBuffer.h" />
+    <ClInclude Include="..\include\Image.h" />
     <ClInclude Include="..\include\InputManager.h" />
     <ClInclude Include="..\include\Keyboard.h" />
     <ClInclude Include="..\include\kgedef.h" />
