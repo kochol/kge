@@ -11,10 +11,12 @@ int main()
 {
 	kge::Device dev;
 	kge::InitParameters params;
-	params.RendererName = "ogl";
+	params.RendererName = "d3d11";
 	if (!dev.Init(params))
 		return -1;
 	kge::gfx::Renderer*	pRen = dev.GetRenderer();
+
+	pRen->SetClearColor(kge::gfx::Color(200, 100, 200));
 
 	while (dev.Run())
 	{
