@@ -623,6 +623,16 @@ namespace kge
 
 		}
 
+		//------------------------------------------------------------------------------------
+		// Creates a texture from an image.
+		//------------------------------------------------------------------------------------
+		Texture* RendererOGL::CreateTexture( Image* pImg )
+		{
+
+			return NULL;
+
+		} // CreateTexture
+
 	} // gfx
 
 } // kge

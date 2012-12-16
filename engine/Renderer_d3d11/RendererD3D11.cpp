@@ -576,6 +576,16 @@ return NULL;
 
 	} // SetClearColor
 
+	//------------------------------------------------------------------------------------
+	// Creates a texture from an image.
+	//------------------------------------------------------------------------------------
+	Texture* RendererD3D11::CreateTexture( Image* pImg )
+	{
+
+		return NULL;
+
+	} // CreateTexture
+
 } // gfx
 
 } // kge

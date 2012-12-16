@@ -713,6 +713,16 @@ namespace gfx
 
 	} // GetTransForm
 
+	//------------------------------------------------------------------------------------
+	// Creates a texture from an image.
+	//------------------------------------------------------------------------------------
+	Texture* RendererD3D9::CreateTexture( Image* pImg )
+	{
+
+		return NULL;
+
+	} // CreateTexture
+
 } // gfx
 
 } // kge

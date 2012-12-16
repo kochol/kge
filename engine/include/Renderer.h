@@ -16,6 +16,8 @@ namespace kge
 		//   F O R W A R D   D E C L A R A T I O N		
 		class HardwareBuffer;
 		class VertexDec;
+		class Texture;
+		class Image;
 		struct CustomVertexElement;
 
 		//! The transform mode enum
@@ -78,7 +80,6 @@ namespace kge
 				\param isDynamic Pass true if you want update this buffer data
 				\return Returns the created vertex buffer.
 				\sa HardwareBuffer
-				\todo Add this to ogl renderer plugin
 			*/
 			virtual HardwareBuffer* CreateVertexBuffer(void* Vertices, u32 VCount, 
 													   u32   Stride,
@@ -92,7 +93,6 @@ namespace kge
 				\param isDynamic Pass true if you want update this buffer data
 				\return Returns the created index buffer
 				\sa HardwareBuffer
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual HardwareBuffer* CreateIndexBuffer(	void* Indices, u32 ICount,
 				IndexBufferType eIndexBufferType = EIBT_16Bit,
@@ -103,7 +103,6 @@ namespace kge
 				\param pBuffer The pointer to vertex buffer
 				\param stage The stage number for using in multi streaming
 				\sa CreateVertexBuffer, HardwareBuffer
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual void SetVertexBuffer(HardwareBuffer* pBuffer, int stage = 0) = 0;
 			
@@ -111,7 +110,6 @@ namespace kge
 			/*!
 				\param pBuffer The pointer to index buffer
 				\sa CreateIndexBuffer, HardwareBuffer
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual void SetIndexBuffer(HardwareBuffer* pBuffer) = 0;
 
@@ -122,7 +120,6 @@ namespace kge
 				this VertexDec later and use it.
 				\return Returns the created VertexDec pointer
 				\sa VertexDec, CustomVertexElement, SetVertexDeclaration
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual VertexDec* CreateVertexDeclaration 
 				(core::DynamicArray<CustomVertexElement> VertexInfoArray, core::stringc& sName) = 0;
@@ -131,7 +128,6 @@ namespace kge
 			/*! Sets the vertex declaration to prepare renderer to render something
 				\param pVD The VertexDec pointer to set
 				\sa VertexDec, CustomVertexElement, CreateVertexDeclaration
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual void SetVertexDeclaration(VertexDec* pVD) = 0;
 
@@ -142,7 +138,6 @@ namespace kge
 				\param VertexStart The vertex offset in VertexBuffwe
 				\param StartIndex The index offset in IndexBuffer
 				\sa SetVertexDeclaration, SetIndexBuffer, SetVertexBuffer
-				\todo Add this to ogl renderer plugin
 			*/
 			virtual void DrawTriangleList(u32 VCount, u32 ICount,
 										  u32 VertexStart = 0, u32 StartIndex = 0) = 0;
@@ -152,7 +147,6 @@ namespace kge
 				\param mat The Matrix to set
 				\param TM The enum that define the TransformMode. Note you can not use ETM_ViewProjection here
 				\sa GetTransform
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual void SetTransForm(math::Matrix *mat, TransformMode TM = ETM_World)=0;
 
@@ -161,12 +155,18 @@ namespace kge
 			  \param TM The enum that define the TransformMode
 			  \returns Returns the requested matrix
 			  \sa SetTransform
-			  \todo Add this to ogl renderer plugin
 			 */
 			virtual math::Matrix GetTransForm(TransformMode TM = ETM_World)=0;
 
 			//! Sets the clear color
 			virtual void SetClearColor(const Color& ClearColor);
+
+			//! Creates a texture from an image.
+			/*!
+			  \param pImg The Image resource pointer that you want to create texture from.
+			  \returns Returns the created Texture pointer
+			 */
+			virtual Texture* CreateTexture(Image* pImg)=0;
 
 		protected:
 
