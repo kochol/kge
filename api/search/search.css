@@ -4,13 +4,6 @@
     float: left;
 }
 
-#searchli {
-    float: right;
-    display: block;
-    width: 170px;
-    height: 36px;
-}
-
 #MSearchBox {
     white-space : nowrap;
     position: absolute;
@@ -20,6 +13,7 @@
     right: 0px;
     width: 170px;
     z-index: 102;
+    background-color: white;
 }
 
 #MSearchBox .left
@@ -106,8 +100,8 @@
     display: none;
     position: absolute;
     left: 0; top: 0;
-    border: 1px solid #43C115;
-    background-color: #F2FDEE;
+    border: 1px solid #A0AAD3;
+    background-color: #FAFAFC;
     z-index: 1;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -151,7 +145,7 @@ a.SelectItem:active {
 
 a.SelectItem:hover {
     color: #FFFFFF;
-    background-color: #123505;
+    background-color: #495A9E;
     outline-style: none;
     text-decoration: none;
     cursor: pointer;
@@ -170,7 +164,7 @@ iframe#MSearchResults {
     position: absolute;
     left: 0; top: 0;
     border: 1px solid #000;
-    background-color: #D9F9CE;
+    background-color: #F0F2F8;
 }
 
 /* ----------------------------------- */
@@ -205,7 +199,7 @@ body.SRPage {
 
 .SRSymbol {
     font-weight: bold; 
-    color: #164007;
+    color: #4E60A9;
     font-family: Arial, Verdana, sans-serif;
     text-decoration: none;
     outline: none;
@@ -213,7 +207,7 @@ body.SRPage {
 
 a.SRScope {
     display: block;
-    color: #164007; 
+    color: #4E60A9; 
     font-family: Arial, Verdana, sans-serif;
     text-decoration: none;
     outline: none;
@@ -222,6 +216,10 @@ a.SRScope {
 a.SRSymbol:focus, a.SRSymbol:active,
 a.SRScope:focus, a.SRScope:active {
     text-decoration: underline;
+}
+
+span.SRScope {
+    padding-left: 4px;
 }
 
 .SRPage .SRStatus {
