@@ -254,11 +254,11 @@ namespace kge
 		gfx::Image* pimg = KGE_NEW(gfx::Image)(0, core::String::Convert(pStream->GetName()).c_str(), (u8*)pSrc, size, header.dwWidth, header.dwHeight, bcBytesPerBlock, bitsPerPixel, format, numMipmaps);
 
 		// TODO: Create texture from an Image
-
+		gfx::Texture* pTex = g_pRenderer->CreateTexture(pimg);
 
 		io::Logger::Info("Texture loaded: %s", core::String::Convert(pStream->GetName()).c_str());
 
-		return NULL;
+		return pTex;
 
 	} // LoadResource
 
