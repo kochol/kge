@@ -8,10 +8,11 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	bool Loader::IsALoadableFileExtension( const core::stringc& strFilename )
 	{
-		core::stringc::size_type st = strFilename.find_last_of('.');
+		core::stringc::size_type se, st = strFilename.size();
 		for (u32 i = 0; i < m_aFileExtension.size(); i++)
 		{
-			if (strFilename.compare(m_aFileExtension[i]) == 0)
+			se = m_aFileExtension[i].size();
+			if (strFilename.compare(st - se, se, m_aFileExtension[i]) == 0)
 				return true;
 		}
 

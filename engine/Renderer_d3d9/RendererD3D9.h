@@ -148,6 +148,9 @@ namespace kge
 			 */
 			virtual Texture* CreateTexture(Image* pImg);
 
+			//! Returns the D3D device if the renderer is D3D
+			virtual void* GetDirect3dDevice();
+
 		protected:
 
 			LPDIRECT3DDEVICE9						m_pD3DDevice;			// D3D9 device

@@ -65,6 +65,14 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		Stream* FileSystemManager::Load( const core::stringc& FileName )
 		{
+			Stream* p = NULL;
+			for (int i = 0; i < m_aFileSystems.size(); i++)
+			{
+				p = m_aFileSystems[i]->Load(FileName);
+				if (p)
+					return p;
+			}
+			
 			return NULL;
 
 		} // Load

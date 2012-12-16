@@ -16,10 +16,15 @@
 #include "../include/PluginManager.h"
 #include "../include/Logger.h"
 #include "../include/KgeMemory.h"
+#include "../include/ResourceManager.h"
+#include "../include/Texture.h"
+#include "../include/Image.h"
 
 #ifndef NULL
 #define NULL 0
 #endif
+
+extern kge::ResourceManager<kge::gfx::Texture>	*	g_pTextureManager;
 
 namespace kge
 {
@@ -164,6 +169,14 @@ namespace kge
 	int PluginManager::RegisterLoader( LoaderPlugin* pLoaderPlug )
 	{
 		m_vLoaderPlugins.push_back(pLoaderPlug);
+
+		// Register loaders to their resource managers
+		switch (pLoaderPlug->GetPluginType())
+		{
+		case EPT_TextureLoader:
+			g_pTextureManager->RegisterLoader(pLoaderPlug->Create());
+			break;
+		}
 
 		return m_vLoaderPlugins.size() - 1;
 

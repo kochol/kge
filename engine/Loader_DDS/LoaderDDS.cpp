@@ -73,6 +73,12 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	LoaderDDS::LoaderDDS()
 	{
+		m_aFileExtension.push_back("dds");
+		m_aFileExtension.push_back("Dds");
+		m_aFileExtension.push_back("DDs");
+		m_aFileExtension.push_back("DDS");
+		m_aFileExtension.push_back("DdS");
+		m_aFileExtension.push_back("dDS");
 
 	} // Constructor
 

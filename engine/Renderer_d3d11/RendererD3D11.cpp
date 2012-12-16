@@ -586,6 +586,15 @@ return NULL;
 
 	} // CreateTexture
 
+	//------------------------------------------------------------------------------------
+	// Returns the D3D device if the renderer is D3D
+	//------------------------------------------------------------------------------------
+	void* RendererD3D11::GetDirect3dDevice()
+	{
+		return (void*)m_pImmediateContext;
+
+	} // GetDirect3dDevice
+
 } // gfx
 
 } // kge

@@ -5,6 +5,8 @@
 #include "../include/VertexDeclaration.h"
 #include "../include/VertexElement.h"
 #include "../include/BlockData.h"
+#include "../include/Image.h"
+#include "TextureDX9.h"
 
 #include <dxerr.h>
 #include <d3dx9.h>
@@ -718,10 +720,20 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	Texture* RendererD3D9::CreateTexture( Image* pImg )
 	{
+		Texture* pTex = KGE_NEW(TextureDX9)(pImg);
 
-		return NULL;
+		return pTex;
 
 	} // CreateTexture
+
+	//------------------------------------------------------------------------------------
+	// Returns the D3D device if the renderer is D3D
+	//------------------------------------------------------------------------------------
+	void* RendererD3D9::GetDirect3dDevice()
+	{
+		return (void*)m_pD3DDevice;
+
+	} // GetDirect3dDevice
 
 } // gfx
 

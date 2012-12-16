@@ -1,6 +1,9 @@
 === 0.1.0 ===
 
+* Core
+- (Add) Settings class for managing all settings
 * Renderer
+- (Add) CreateTexture interface added
 - (Add) HardwareBuffer interface for working with buffers on GPU
 - (Add) CustomVertexElement
 - (Add) VertexDec
@@ -10,6 +13,7 @@
 	* Renderer_ogl
 	- (Add) VertexBufferOGLvbo class added for working with VBO in opengl.
 	- (Add) indexBufferOGLvbo class added for working with VBO in opengl.
+	* Renderer_d3d11
 * FileSystem
 - (Add) FileSystemManager
 - (Add) FileSystem
@@ -20,6 +24,8 @@
 - (Add) MeshLoader class is an interface for mesh loaders in engine
     * Loader_OGRE
 	- (Add) OgreMeshLoader class for loading OGRE mesh files
+	* Loder_DDS
+	- (Add) DDS texture loader plugin
 * Math
 - (Add) Matrix class with SSE2 support added.
 - (Add) Vector class

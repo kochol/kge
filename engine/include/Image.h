@@ -11,6 +11,7 @@ namespace kge
 		//! The image resource class
 		class KGE_API Image: public Resource
 		{
+			friend class Texture;
 		public:
 		
 			//! Constructor
@@ -19,6 +20,12 @@ namespace kge
 		
 			//! Destructor
 			virtual ~Image();
+
+			//! Returns the image data size
+			virtual int GetImageDataSize() { return m_iDataSize; }
+
+			//! Returns the image data pointer
+			virtual u8* GetImageData() { return m_pImageData; }
 		
 		protected:
 

@@ -79,6 +79,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\KGEmain\Image.cpp" />
+    <ClCompile Include="..\KGEmain\Settings.cpp" />
+    <ClCompile Include="..\KGEmain\Texture.cpp" />
     <ClCompile Include="..\Profiler\Profiler.cpp" />
     <ClCompile Include="..\Profiler\ProfilerBlock.cpp" />
     <ClInclude Include="..\..\libs\nedmalloc\malloc.c.h" />
@@ -121,6 +123,7 @@
     <ClInclude Include="..\include\Renderer.h" />
     <ClInclude Include="..\include\Resource.h" />
     <ClInclude Include="..\include\ResourceManager.h" />
+    <ClInclude Include="..\include\Settings.h" />
     <ClInclude Include="..\include\Stream.h" />
     <ClInclude Include="..\include\String.h" />
     <ClInclude Include="..\include\structs.h" />

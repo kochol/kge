@@ -14,7 +14,7 @@ namespace kge
 {
 	//! Resource manager take care of loading and unloading resources.
 	template <class T>
-	class KGE_API ResourceManager
+	class ResourceManager
 	{
 	public:
 
@@ -150,7 +150,7 @@ namespace kge
 			}
 
 			// Ask file system to load this stream
-			io::Stream* pStream = io::FileSystemManager::Load(FileName);
+			io::Stream* pStream = io::FileSystemManager::getSingletonPtr()->Load(FileName);
 			if (!pStream)
 				return NULL;
 
@@ -160,10 +160,13 @@ namespace kge
 				if (!m_vLoaders[i]->IsALoadableFileExtension(FileName))
 					continue;
 
-				pResource = m_vLoaders[i]->LoadResource(pStream);
+				pResource = (T*)m_vLoaders[i]->LoadResource(pStream);
 				if (pResource)
 					break;
 			}
+
+			if (!pResource)
+				return NULL;
 
 			pResource->AddRef();
 

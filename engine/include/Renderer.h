@@ -168,6 +168,14 @@ namespace kge
 			 */
 			virtual Texture* CreateTexture(Image* pImg)=0;
 
+			//! Returns the D3D device if the renderer is D3D
+			/*!
+				\returns Returns LPDIRECT3DDEVICE9 if renderer plugin is d3d9 and 
+				returns ID3D11DeviceContext pointer if renderer plugin is d3d11
+				otherwise returns NULL.
+			 */
+			virtual void* GetDirect3dDevice() {return NULL;}
+
 		protected:
 
 			bool			m_bUseStencil,			//!< Create and use stencil buffer
