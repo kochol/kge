@@ -20,6 +20,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		Stream::~Stream()
 		{
+			KGE_DELETE_ARRAY(m_pStart);
 
 		} // Destructor
 

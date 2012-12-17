@@ -47,9 +47,9 @@ int main()
 	kge::gfx::VertexDec			*	VD;
 	Vertex3 v[] =
 	{
-		{-1,-1,0,0,0},
-		{1,-1,0,1,0},
-		{0,1,0,0.5f,1}
+		{-1,-1,0,0,1},
+		{1,-1,0,1,1},
+		{0,1,0,0.5f,0}
 	};
 	kge::u16 i[] = {0,1,2};
 	VB = pRen->CreateVertexBuffer(v,3,sizeof(Vertex3));
@@ -108,7 +108,7 @@ int main()
 		pRen->DrawTriangleList(3, 3);
 		pRen->EndRendering();
 		kge::core::stringc str = kge::core::Profiler::GetPointer()->GetData();
-		//printf(str.c_str());
+		printf(str.c_str());
 	}
 
 	return 0;

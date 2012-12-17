@@ -19,6 +19,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		FileSystemManager::~FileSystemManager()
 		{
+			Release();
 
 		} // Destructor
 
@@ -76,6 +77,16 @@ namespace kge
 			return NULL;
 
 		} // Load
+
+		//------------------------------------------------------------------------------------
+		// Release the memory.
+		//------------------------------------------------------------------------------------
+		void FileSystemManager::Release()
+		{
+			m_aFileSystems.clear();
+			m_aSearchPath.clear();
+
+		} // Release
 
 	} // io
 

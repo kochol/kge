@@ -42,6 +42,9 @@ namespace kge
 			//! Loads a stream from file systems plugins
 			Stream* Load(const core::stringc& FileName);
 
+			//! Release the memory.
+			void Release();
+
 		protected:
 
 			core::DynamicArray<core::stringc>		m_aSearchPath;		//!< The search paths array

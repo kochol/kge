@@ -49,11 +49,19 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void PluginManager::Release()
 	{
+		// Delete renderer plugins
 		for (size_t i = 0; i < m_vRendererPlugins.size(); i++)
 		{
 			KGE_DELETE(m_vRendererPlugins[i], RendererPlugin);
 		}
 		m_vRendererPlugins.clear();
+
+		// Delete loader plugins
+		for (size_t i = 0; i < m_vLoaderPlugins.size(); i++)
+		{
+			KGE_DELETE(m_vLoaderPlugins[i], LoaderPlugin);
+		}
+		m_vLoaderPlugins.clear();	
 
 	} // Release
 

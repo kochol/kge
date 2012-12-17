@@ -161,6 +161,8 @@ namespace gfx
 
 		io::Logger::Info("Using Direct3D9 for rendering.");
 
+		m_pD3DDevice->SetRenderState(D3DRS_LIGHTING, FALSE);
+
 		return true;
 
 	} // Init

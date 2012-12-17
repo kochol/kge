@@ -262,6 +262,9 @@ namespace kge
 		// TODO: Create texture from an Image
 		gfx::Texture* pTex = g_pRenderer->CreateTexture(pimg);
 
+		// Maybe we want to send it to image resource manager later but for now we simply delete it.
+		KGE_DELETE(pimg, Image);
+
 		io::Logger::Info("Texture loaded: %s", core::String::Convert(pStream->GetName()).c_str());
 
 		return pTex;

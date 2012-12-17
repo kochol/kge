@@ -27,7 +27,7 @@ namespace kge
 		//! Destructor
 		virtual ~ResourceManager()
 		{
-			// Searching for resource.
+			// Searching for resources and delete them.
 			for(std::vector<T*>::iterator it = m_vResources.begin(); 
 				it != m_vResources.end(); it++)
 			{
@@ -40,6 +40,12 @@ namespace kge
 
 			m_vResources.clear();
 
+			// Delete resource loaders
+			for (int i = 0; i < m_vLoaders.size(); i++)
+			{
+				KGE_DELETE(m_vLoaders[i], Loader);
+			}
+			m_vLoaders.clear();
 
 		} // Destructor
 
@@ -164,6 +170,8 @@ namespace kge
 				if (pResource)
 					break;
 			}
+
+			KGE_DELETE(pStream, Stream);
 
 			if (!pResource)
 				return NULL;
