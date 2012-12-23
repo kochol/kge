@@ -51,12 +51,15 @@
 		<Unit filename="IndexBufferOGLvbo.h" />
 		<Unit filename="RendererOGL.cpp" />
 		<Unit filename="RendererOGL.h" />
+		<Unit filename="TextureOGL.cpp" />
+		<Unit filename="TextureOGL.h" />
 		<Unit filename="VertexBufferOGLvbo.cpp" />
 		<Unit filename="VertexBufferOGLvbo.h" />
 		<Unit filename="gl3.h" />
 		<Unit filename="initGL.cpp" />
 		<Unit filename="initGL.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/TextureOGL.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
