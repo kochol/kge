@@ -22,6 +22,14 @@ KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;
 
 #define DDS_MAGIC 0x20534444 // "DDS "
 
+#if KGE_PLATFORM != KGE_PLATFORM_WINDOWS
+#   define DWORD int
+#   define BYTE char
+#   define MAKEFOURCC(ch0, ch1, ch2, ch3)                           \
+                ((DWORD)(BYTE)(ch0) | ((DWORD)(BYTE)(ch1) << 8) |   \
+                ((DWORD)(BYTE)(ch2) << 16) | ((DWORD)(BYTE)(ch3) << 24 ))
+#endif
+
 struct DDS_PIXELFORMAT
 {
 	DWORD dwSize;
@@ -95,11 +103,11 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	Resource* LoaderDDS::LoadResource( io::Stream* pStream )
 	{
-		if (pStream->GetSize() < sizeof(DWORD) + sizeof(DDS_HEADER)) 
-		{ 
-			io::Logger::Error("Can't load %s DDS texture. The file size is very low and it can not be a valid DDS texture.", 
+		if (pStream->GetSize() < sizeof(DWORD) + sizeof(DDS_HEADER))
+		{
+			io::Logger::Error("Can't load %s DDS texture. The file size is very low and it can not be a valid DDS texture.",
 				core::String::Convert(pStream->GetName()).c_str());
-			return NULL; 
+			return NULL;
 		}
 
 		// Create the buffer
@@ -110,11 +118,11 @@ namespace kge
 		const u8* pEnd = &buffer[0] + buffer.size();
 		const DWORD magicNumber = *(reinterpret_cast<const DWORD*>(pSrc));
 
-		if (magicNumber != DDS_MAGIC) 
+		if (magicNumber != DDS_MAGIC)
 		{
-			io::Logger::Error("Can't load %s DDS texture. The file header is incorrect and it can not be a valid DDS texture.", 
+			io::Logger::Error("Can't load %s DDS texture. The file header is incorrect and it can not be a valid DDS texture.",
 				core::String::Convert(pStream->GetName()).c_str());
-			return NULL; 
+			return NULL;
 		}
 
 		pSrc += sizeof(DWORD);
@@ -128,9 +136,9 @@ namespace kge
 			!header.dwWidth ||
 			!header.dwHeight)
 		{
-			io::Logger::Error("Can't load %s DDS texture. The file header is incorrect and it can not be a valid DDS texture.", 
+			io::Logger::Error("Can't load %s DDS texture. The file header is incorrect and it can not be a valid DDS texture.",
 				core::String::Convert(pStream->GetName()).c_str());
-			return NULL; 
+			return NULL;
 		}
 
 		// Finding the texture format
@@ -148,7 +156,7 @@ namespace kge
 						header.ddspf.dwGBitMask == 0x0000ff00 &&
 						header.ddspf.dwBBitMask == 0x000000ff)
 					{
-						format = gfx::ETF_A8R8G8B8;	
+						format = gfx::ETF_A8R8G8B8;
 					}
 					else if (header.ddspf.dwRBitMask == 0x000000ff &&
 						header.ddspf.dwGBitMask == 0x0000ff00 &&
@@ -163,7 +171,7 @@ namespace kge
 						header.ddspf.dwGBitMask == 0x0000ff00 &&
 						header.ddspf.dwBBitMask == 0x000000ff)
 					{
-						format = gfx::ETF_X8R8G8B8;	
+						format = gfx::ETF_X8R8G8B8;
 					}
 					else if (header.ddspf.dwRBitMask == 0x000000ff &&
 						header.ddspf.dwGBitMask == 0x0000ff00 &&
@@ -222,9 +230,9 @@ namespace kge
 
 		if (format == gfx::ETF_NONE)
 		{
-			io::Logger::Error("Can't load %s DDS texture. The texture format is not supported.", 
+			io::Logger::Error("Can't load %s DDS texture. The texture format is not supported.",
 				core::String::Convert(pStream->GetName()).c_str());
-			return NULL; 
+			return NULL;
 		}
 
 		unsigned int numMipmaps = header.dwMipMapCount ? header.dwMipMapCount : 1;
