@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <unistd.h>
 #include "../include/os.h"
+#include <string>
 
 #ifndef NULL
 #define NULL 0

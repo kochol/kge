@@ -14,10 +14,6 @@
 // *** Global variables ***
 LPDIRECT3D9				g_pD3D = NULL;
 
-template<> std::vector<kge::Resource*> kge::ResourceManager<kge::Resource>::m_vResources;
-template<> std::stack<kge::u32> kge::ResourceManager<kge::Resource>::m_sHandles;
-
-
 // some good multisample modes, list best ones last
 const UINT g_nMS = 8;
 const D3DMULTISAMPLE_TYPE g_msType[] = { 

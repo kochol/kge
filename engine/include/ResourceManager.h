@@ -69,7 +69,7 @@ namespace kge
 
 		} // AddManualResource
 
-		static void RemoveResource(T* pResource)
+		void RemoveResource(T* pResource)
 		{
 			m_sHandles.push(pResource->GetHandle());
 			m_vResources[pResource->GetHandle()] = NULL;
@@ -77,7 +77,7 @@ namespace kge
 		} // RemoveResource
 
 		//! Returns a resource.
-		static T* GetResource(u32 handle)
+		T* GetResource(u32 handle)
 		{
 			return m_vResources[handle];
 
@@ -85,7 +85,7 @@ namespace kge
 
 		// returns resource handle before creating resource then use Add(Resource*, u32 Handel) function
 		// to set the loaded resource.
-		static u32 GetNewHandle()
+		u32 GetNewHandle()
 		{
 			u32 handle;
 			if (m_sHandles.size() > 0)
@@ -101,13 +101,13 @@ namespace kge
 		} // GetNewHandle
 
 		//! Register resource loaders for this loaders.
-		static void RegisterLoader(Loader* pLoader)
+		void RegisterLoader(Loader* pLoader)
 		{
 			m_vLoaders.push_back(pLoader);
 		}
 
 		//! Loads the resource and return its pointer
-		static T* Load(const char* FileName, void* ExtraParams, const char* Name)
+		T* Load(const char* FileName, void* ExtraParams, const char* Name)
 		{
 			// Searching for resource.
 			for(typename std::vector<T*>::iterator it = m_vResources.begin();
@@ -182,9 +182,9 @@ namespace kge
 
 	protected:
 
-		static std::vector<T*>			m_vResources;		/**< Stores the resources */
-		static std::stack<u32>			m_sHandles;			/**< Stores the unused handles number*/
-		static std::vector<Loader*>		m_vLoaders;			//!< Stores the resource loaders
+		std::vector<T*>			m_vResources;		/**< Stores the resources */
+		std::stack<u32>			m_sHandles;			/**< Stores the unused handles number*/
+		std::vector<Loader*>		m_vLoaders;			//!< Stores the resource loaders
 
 	}; // ResourceManager
 
