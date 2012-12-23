@@ -14,7 +14,7 @@ namespace kge
 {
 	//! Resource manager take care of loading and unloading resources.
 	template <class T>
-	class KGE_API ResourceManager
+	class ResourceManager
 	{
 	public:
 
@@ -27,7 +27,7 @@ namespace kge
 		//! Destructor
 		virtual ~ResourceManager()
 		{
-			// Searching for resource.
+			// Searching for resources and delete them.
 			for(typename std::vector<T*>::iterator it = m_vResources.begin();
 				it != m_vResources.end(); it++)
 			{
@@ -40,6 +40,12 @@ namespace kge
 
 			m_vResources.clear();
 
+			// Delete resource loaders
+			for (int i = 0; i < m_vLoaders.size(); i++)
+			{
+				KGE_DELETE(m_vLoaders[i], Loader);
+			}
+			m_vLoaders.clear();
 
 		} // Destructor
 
@@ -150,7 +156,7 @@ namespace kge
 			}
 
 			// Ask file system to load this stream
-			io::Stream* pStream = io::FileSystemManager::Load(FileName);
+			io::Stream* pStream = io::FileSystemManager::getSingletonPtr()->Load(FileName);
 			if (!pStream)
 				return NULL;
 
@@ -160,10 +166,15 @@ namespace kge
 				if (!m_vLoaders[i]->IsALoadableFileExtension(FileName))
 					continue;
 
-				pResource = m_vLoaders[i]->LoadResource(pStream);
+				pResource = (T*)m_vLoaders[i]->LoadResource(pStream);
 				if (pResource)
 					break;
 			}
+
+			KGE_DELETE(pStream, Stream);
+
+			if (!pResource)
+				return NULL;
 
 			pResource->AddRef();
 

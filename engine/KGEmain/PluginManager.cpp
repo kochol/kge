@@ -16,10 +16,15 @@
 #include "../include/PluginManager.h"
 #include "../include/Logger.h"
 #include "../include/KgeMemory.h"
+#include "../include/ResourceManager.h"
+#include "../include/Texture.h"
+#include "../include/Image.h"
 
 #ifndef NULL
 #define NULL 0
 #endif
+
+extern kge::ResourceManager<kge::gfx::Texture>	*	g_pTextureManager;
 
 namespace kge
 {
@@ -44,11 +49,19 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void PluginManager::Release()
 	{
+		// Delete renderer plugins
 		for (size_t i = 0; i < m_vRendererPlugins.size(); i++)
 		{
 			KGE_DELETE(m_vRendererPlugins[i], RendererPlugin);
 		}
 		m_vRendererPlugins.clear();
+
+		// Delete loader plugins
+		for (size_t i = 0; i < m_vLoaderPlugins.size(); i++)
+		{
+			KGE_DELETE(m_vLoaderPlugins[i], LoaderPlugin);
+		}
+		m_vLoaderPlugins.clear();	
 
 	} // Release
 
@@ -165,8 +178,27 @@ namespace kge
 	{
 		m_vLoaderPlugins.push_back(pLoaderPlug);
 
+		// Register loaders to their resource managers
+		switch (pLoaderPlug->GetPluginType())
+		{
+		case EPT_TextureLoader:
+			g_pTextureManager->RegisterLoader(pLoaderPlug->Create());
+			break;
+		}
+
 		return m_vLoaderPlugins.size() - 1;
 
 	} // RegisterLoader
+
+	//------------------------------------------------------------------------------------
+	// With this interface a FileSystem Plugin will register himself with PluginManager.
+	//------------------------------------------------------------------------------------
+	int PluginManager::RegisterFileSystem( FileSystemPlugin* pFileSysPlug )
+	{
+		m_vFileSystemPlugins.push_back(pFileSysPlug);
+
+		return m_vFileSystemPlugins.size() - 1;
+
+	} // RegisterFileSystem
 
 } // kge

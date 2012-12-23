@@ -47,6 +47,8 @@
 			<Add library="X11" />
 			<Add library="GL" />
 		</Linker>
+		<Unit filename="IndexBufferOGLvbo.cpp" />
+		<Unit filename="IndexBufferOGLvbo.h" />
 		<Unit filename="RendererOGL.cpp" />
 		<Unit filename="RendererOGL.h" />
 		<Unit filename="VertexBufferOGLvbo.cpp" />

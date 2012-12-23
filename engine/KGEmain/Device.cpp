@@ -7,12 +7,22 @@
 #include "../include/Logger.h"
 #include "KgeMemoryTrack.h"
 #include "../include/InputManager.h"
+#include "../include/BlockData.h"
+#include "../include/ResourceManager.h"
+#include "../include/Texture.h"
+#include "../include/Image.h"
+#include "../include/FileSystemManager.h"
+#include "../include/FileSystem.h"
 
 #if KGE_PLATFORM == KGE_PLATFORM_LINUX
 //#   include "LinuxWindow.h"
 #endif
 
-KGE_API kge::gfx::Renderer*	g_pRenderer = NULL;
+// Public objects
+KGE_API kge::gfx::Renderer						*	g_pRenderer				= NULL;
+KGE_API kge::ResourceManager<kge::gfx::Texture>	*	g_pTextureManager		= NULL;
+KGE_API kge::ResourceManager<kge::gfx::Image>	*	g_pImageManager			= NULL;
+kge::io::FileSystem								*	g_pDefaultFileSystem	= NULL;
 
 namespace kge
 {
@@ -24,6 +34,14 @@ namespace kge
 		m_pPluginMgr = PluginManager::GetSingletonPtr();
 		m_pLogger	 = KGE_NEW(io::Logger)();
 
+		// Create resource managers
+		g_pTextureManager	= KGE_NEW(ResourceManager<gfx::Texture>)();
+		g_pImageManager		= KGE_NEW(ResourceManager<gfx::Image>)();
+
+		// Add default file system
+		g_pDefaultFileSystem = KGE_NEW(io::FileSystem)();
+		io::FileSystemManager::getSingletonPtr()->RegisterFileSystem(g_pDefaultFileSystem);
+
 	} // Constructor
 
 	//------------------------------------------------------------------------------------
@@ -33,7 +51,12 @@ namespace kge
 	{
 		KGE_DELETE(m_pWindow, KgeWindow);
 		KGE_DELETE(g_pRenderer, Renderer);
+		KGE_DELETE(g_pImageManager, ResourceManager);
+		KGE_DELETE(g_pTextureManager, ResourceManager);
+		KGE_DELETE(g_pDefaultFileSystem, FileSystem);
 		m_pPluginMgr->Release();
+		core::Profiler::GetPointer()->Release();
+		io::FileSystemManager::getSingletonPtr()->Release();
 
 		// Delete the logger in last
 		KGE_DELETE(m_pLogger, Logger);
@@ -108,6 +131,8 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	bool Device::Run()
 	{
+		KGEPROFILE;
+
 		bool b = true;
 		if (m_pWindow)
 			b = m_pWindow->Run();

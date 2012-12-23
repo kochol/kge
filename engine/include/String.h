@@ -2,6 +2,7 @@
 #define KGE_STRING_H
 
 #include <string>
+#include "kgedef.h"
 
 namespace kge
 {
@@ -11,7 +12,7 @@ namespace kge
 		typedef std::wstring stringw;
 
 		//! KGE string class
-		class String
+		class KGE_API String
 		{
 		public:
 

@@ -7,6 +7,7 @@
 #pragma comment(lib, "../../bin/Debug/kge.lib")
 #endif
 
+
 namespace kge
 {
 	class LoaderDDSPlugin : public Plugin<Loader>
@@ -16,7 +17,7 @@ namespace kge
 		//! Constructor
 		LoaderDDSPlugin()
 		{
-			m_ePluginType = EPT_Loader;
+			m_ePluginType = EPT_TextureLoader;
 		}
 
 		//! Destructor
@@ -30,7 +31,7 @@ namespace kge
 			return KGE_NEW(LoaderDDS)();
 		}
 
-	}; // RendererD3D9Plugin
+	}; // LoaderDDSPlugin
 
 } // kge
 
