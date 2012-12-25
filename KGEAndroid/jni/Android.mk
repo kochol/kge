@@ -29,3 +29,18 @@ LOCAL_LDLIBS    := -llog -ldl
 
 include $(BUILD_SHARED_LIBRARY)
 
+#================================================================
+#	Renderer_ogl	plugin
+#================================================================
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE    := Renderer_ogl
+LOCAL_CFLAGS    := -DANDROID -DNDK -DSTRUCT_MALLINFO_DECLARED
+SRC_FILES := $(wildcard $(LOCAL_PATH)/Renderer_ogl/*.cpp)
+SRC_FILES := $(SRC_FILES:$(LOCAL_PATH)/%=%)
+LOCAL_SRC_FILES := $(SRC_FILES)
+LOCAL_LDLIBS    := -llog -ldl
+
+include $(BUILD_SHARED_LIBRARY)
+
