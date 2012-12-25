@@ -7,7 +7,7 @@
 
 // #endif KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 
-#elif KGE_PLATFORM == KGE_PLATFORM_LINUX
+#elif KGE_PLATFORM == KGE_PLATFORM_LINUX || KGE_PLATFORM == KGE_PLATFORM_ANDROID
 
 #include <dlfcn.h>
 
@@ -61,7 +61,7 @@ namespace kge
 		{
 			KGE_DELETE(m_vLoaderPlugins[i], LoaderPlugin);
 		}
-		m_vLoaderPlugins.clear();	
+		m_vLoaderPlugins.clear();
 
 	} // Release
 
@@ -102,7 +102,7 @@ namespace kge
 
 // endif KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 
-#elif KGE_PLATFORM == KGE_PLATFORM_LINUX
+#elif KGE_PLATFORM == KGE_PLATFORM_LINUX || KGE_PLATFORM == KGE_PLATFORM_ANDROID
 
 		std::string strPluginName = "./lib";
 		strPluginName += name;
@@ -122,7 +122,7 @@ namespace kge
 
         // Load the RegisterPlugin function
         pFn = (RegisterPlugin)dlsym(handle, "RegisterPlugin");
-        if ((error = dlerror()) != NULL || !pFn)
+        if ((error = (char*)dlerror()) != NULL || !pFn)
         {
             io::Logger::Error("RegisterPlugin function dose not find in %s plugin.\n%s", strPluginName.c_str(), error);
             return 0;
