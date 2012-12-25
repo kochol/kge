@@ -80,6 +80,7 @@
     <ClInclude Include="IndexBufferOGLvbo.h" />
     <ClInclude Include="initGL.h" />
     <ClInclude Include="RendererOGL.h" />
+    <ClInclude Include="TextureOGL.h" />
     <ClInclude Include="VertexBufferOGLvbo.h" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +88,7 @@
     <ClCompile Include="initGL.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RendererOGL.cpp" />
+    <ClCompile Include="TextureOGL.cpp" />
     <ClCompile Include="VertexBufferOGLvbo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -10,9 +10,11 @@
 	* Renderer_d3d9
 	- (Add) VertexBufferDX9 class added for working with Vertex buffers.
 	- (Add) IndexBufferDX9 class added for working with index buffers.
+	- (Add) TextureDX9 class for working with textures in D3D9.
 	* Renderer_ogl
-	- (Add) VertexBufferOGLvbo class added for working with VBO in opengl.
-	- (Add) indexBufferOGLvbo class added for working with VBO in opengl.
+	- (Add) VertexBufferOGLvbo class added for working with VBO in OpenGL.
+	- (Add) indexBufferOGLvbo class added for working with VBO in OpenGL.
+	- (Add) TextureOGL class for working with textures in OpenGL.
 	* Renderer_d3d11
 * FileSystem
 - (Add) FileSystemManager

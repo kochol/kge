@@ -12,7 +12,7 @@ namespace kge
             public:
 
                 //! Constructor
-                TextureOGL();
+                TextureOGL(Image* pImg);
 
                 //! Destructor
                 ~TextureOGL();
