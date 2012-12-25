@@ -3,11 +3,16 @@
 #define _KGE_INIT_GL_H
 
 // header files
-#include "gl3.h"
 #include "../include/kgedef.h"
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
+#   include "gl3.h"
 #	include <gl\GL.h>
+#elif KGE_PLATFORM == KGE_PLATFORM_ANDROID
+#   include <EGL/egl.h>
+#   include "GLES2/gl2.h"
+#   include "GLES2/gl2ext.h"
 #else
+#   include "gl3.h"
 #	include "../../libs/gl.h"
 #endif
 
@@ -20,6 +25,7 @@
 	#include <GL/glxext.h>
 #endif
 
+#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
 //--------------------------------
 //	constants
 //--------------------------------
@@ -535,6 +541,8 @@ extern "C"
 //--------------------------------
 //	functions
 //--------------------------------
+
+#endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
 
 //! initialize OpenGL extensions and core specifications
 bool initGL(int version);

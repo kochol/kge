@@ -8,7 +8,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Constructor
 		//------------------------------------------------------------------------------------
-		Stream::Stream( void* pData, uint DataSize, core::stringw name ): m_pStart(pData), 
+		Stream::Stream( void* pData, uint DataSize, core::stringc name ): m_pStart(pData),
 			m_pCurrent(static_cast<u8*>(pData)),	m_iSize(DataSize), m_iCursur(0),
 			m_sName(name)
 		{

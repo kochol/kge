@@ -33,7 +33,7 @@ namespace kge
 		bool FileSystem::CanLoad( core::stringc FileName )
 		{
 			// Get search paths
-			const core::DynamicArray<core::stringc>& aSearchPaths = 
+			const core::DynamicArray<core::stringc>& aSearchPaths =
 				FileSystemManager::getSingletonPtr()->GetSearchPath();
 
 			// Looking for files
@@ -94,7 +94,7 @@ namespace kge
 				io::Logger::Error("Could not read file: ", FileName.c_str());
 
 			// Create the stream
-			Stream* pS = KGE_NEW(Stream)((void*)Buffer, size, core::String::Convert(FileName));
+			Stream* pS = KGE_NEW(Stream)((void*)Buffer, size, FileName);
 
 			return pS;
 

@@ -22,22 +22,25 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE    := kge
 LOCAL_CFLAGS    := -DANDROID -DNDK -DSTRUCT_MALLINFO_DECLARED
-LOCAL_SRC_FILES :=  \
-					KGEmain/Android.cpp \
-					KGEmain/Logger.cpp \
-					KGEmain/KgeThread.cpp \
-					KGEmain/KgeMutex.cpp \
-					KGEmain/KgeNedmalloc.cpp \
-					KGEmain/KgeMemoryTrack.cpp \
-					KGEmain/String.cpp
+SRC_FILES := $(wildcard $(LOCAL_PATH)/KGEmain/*.cpp)
+SRC_FILES := $(SRC_FILES:$(LOCAL_PATH)/%=%)
+LOCAL_SRC_FILES := $(SRC_FILES)
 LOCAL_LDLIBS    := -llog -ldl
 
 include $(BUILD_SHARED_LIBRARY)
 
 #================================================================
-#	T	E	S	T	S
+#	Renderer_ogl	plugin
 #================================================================
+
 include $(CLEAR_VARS)
-LOCAL_MODULE := memorytest
-LOCAL_SRC_FILES := ../tests/02Memorytest/libs/armeabi/libmemorytest.so
-include $(PREBUILT_SHARED_LIBRARY)
+
+LOCAL_MODULE    := Renderer_ogl
+LOCAL_CFLAGS    := -DANDROID -DNDK -DSTRUCT_MALLINFO_DECLARED
+SRC_FILES := $(wildcard $(LOCAL_PATH)/Renderer_ogl/*.cpp)
+SRC_FILES := $(SRC_FILES:$(LOCAL_PATH)/%=%)
+LOCAL_SRC_FILES := $(SRC_FILES)
+LOCAL_LDLIBS    := -llog -ldl
+
+include $(BUILD_SHARED_LIBRARY)
+

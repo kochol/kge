@@ -584,20 +584,26 @@ namespace kge
 					mWorld   = m_mView * (*mat);
 				}
 
+#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				glMatrixMode(GL_MODELVIEW);
 				glLoadMatrixf((GLfloat*)&mWorld);
+#endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				break; // ETM_World
 
 			case ETM_View:
 				mWorld = (*mat) * m_mWorld;
+#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				glMatrixMode(GL_MODELVIEW);
 				glLoadMatrixf((GLfloat*)&mWorld);
+#endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				m_mView = (*mat);
 				break; // ETM_View
 
 			case ETM_Projection:
+#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				glMatrixMode(GL_PROJECTION);
 				glLoadMatrixf((GLfloat*)mat);
+#endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				m_mProj = (*mat);
 				break; // ETM_Projection
 			} // switch
