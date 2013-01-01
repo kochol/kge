@@ -5,7 +5,9 @@
 #include "../../engine/include/Profiler.h"
 #include "../../engine/include/ResourceManager.h"
 #include "../../engine/include/Texture.h"
+#include "../../engine/include/Timer.h"
 #include "../../engine/include/PluginManager.h"
+#include "../../engine/include/Logger.h"
 #include <stdio.h>
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
@@ -35,7 +37,8 @@ int main()
 	kge::Device dev;
 
 	kge::InitParameters params;
-	params.RendererName = "d3d9";
+	params.RendererName = "ogl";
+	params.AAMode = kge::gfx::EAAM_Off;
 	dev.Init(params);
 
 	kge::gfx::Renderer*	pRen = dev.GetRenderer();
@@ -100,8 +103,17 @@ int main()
 
 	pRen->SetClearColor(kge::gfx::Color(100,0,100));
 
+	kge::core::Timer time, fpstime;
+	fpstime.Interval = 1000000;
+	int fps = 0, fpsc = 0;
 	while (dev.Run())
 	{
+		if (fpstime.NextFrame())
+		{
+			fps  = fpsc;
+			fpsc = 0;
+		}
+		fpsc++;
 		pRen->BeginRendering(true, true, true);
 		pRen->SetVertexDeclaration(VD);
 		pRen->SetVertexBuffer(VB);
@@ -109,7 +121,8 @@ int main()
 		pRen->DrawTriangleList(3, 3);
 		pRen->EndRendering();
 		kge::core::stringc str = kge::core::Profiler::GetPointer()->GetData();
-//		printf(str.c_str());
+		//printf(str.c_str());		
+		kge::io::Logger::Debug("fps %d FrameTime %dus", fps, time.GetTime(true));
 	}
 
 	return 0;
