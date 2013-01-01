@@ -648,6 +648,14 @@ namespace kge
 
 		} // CreateTexture
 
+		//------------------------------------------------------------------------------------
+		// Sets the texture
+		//------------------------------------------------------------------------------------
+		void RendererOGL::SetTexture( Texture* pTex, int Stage /*= 0*/ )
+		{
+
+		} // SetTexture
+
 	} // gfx
 
 } // kge

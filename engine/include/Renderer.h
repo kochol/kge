@@ -176,6 +176,9 @@ namespace kge
 			 */
 			virtual void* GetDirect3dDevice() {return NULL;}
 
+			//! Sets the texture
+			virtual void SetTexture(Texture* pTex, int Stage = 0) = 0;
+
 		protected:
 
 			bool			m_bUseStencil,			//!< Create and use stencil buffer

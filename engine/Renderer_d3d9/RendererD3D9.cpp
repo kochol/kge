@@ -737,6 +737,30 @@ namespace gfx
 
 	} // GetDirect3dDevice
 
+	//------------------------------------------------------------------------------------
+	// Sets the texture
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::SetTexture( Texture* pTex, int Stage /*= 0*/ )
+	{
+		if (pTex)
+		{
+			if (m_nTextID[Stage] == pTex->GetHandle())
+				return;
+
+			m_nTextID[Stage] = pTex->GetHandle();
+			m_pD3DDevice->SetTexture(Stage, ((TextureDX9*)pTex)->m_pTexture);
+		}
+		else
+		{
+			if (m_nTextID[Stage] == MAXID)
+				return;
+
+			m_nTextID[Stage] = MAXID;
+			m_pD3DDevice->SetTexture(Stage, NULL);
+		}
+
+	} // SetTexture
+
 } // gfx
 
 } // kge
