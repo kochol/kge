@@ -548,11 +548,14 @@ namespace kge
 			if (ICount > 0)
 			{
 				glDrawElements(GL_TRIANGLES, ICount, GL_UNSIGNED_SHORT, 0);
+				m_iTriCount += ICount / 3 * m_iBatchCount;
 			}
 			else
 			{
 				glDrawArrays(GL_TRIANGLES, 0, VCount);
+				m_iTriCount += VCount / 3 * m_iBatchCount;
 			}
+			m_iDrawCount++;
 
 		} // DrawTriangleList
 
