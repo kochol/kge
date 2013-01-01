@@ -55,8 +55,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09FileSystemTest", "..\..\t
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Loaders", "Loaders", "{10268A30-B0DC-47DF-950D-5421E069A053}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Loader_OGRE", "..\Loader_OGRE\Loader_OGRE.vcxproj", "{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08RendererTest", "..\..\tests\08RendererTest\08RendererTest.vcxproj", "{F0A24F23-6C26-44C9-83E5-042E6169DA7C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{790A8356-123A-4A4A-9BA7-9B7FD1734461} = {790A8356-123A-4A4A-9BA7-9B7FD1734461}
@@ -77,8 +75,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02 Memory test", "..\..\tests\02Memorytest\02 Memory test.vcxproj", "{900A45BF-7C1F-4472-8401-8FEC06BEE2E5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04 Device init test", "..\..\tests\04DeviceInitTest\04 Device init test.vcxproj", "{4ABE820D-33E6-4D8E-815C-322612F33AE9}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11ProfilerTest", "..\..\tests\11ProfilerTest\11ProfilerTest.vcxproj", "{DE3098C1-0D79-46C8-8458-2EC4368455EB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Renderer_d3d11", "..\Renderer_d3d11\Renderer_d3d11.vcxproj", "{30D09BFF-0B79-4984-BDAB-9D6C00E05BC3}"
 EndProject
@@ -318,26 +314,6 @@ Global
 		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Release|Win32.ActiveCfg = Release|Win32
 		{ECD043A8-44EA-4BB0-AA37-F62D09BC9A31}.Release|Win32.Build.0 = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Application|Android.ActiveCfg = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Application|Mixed Platforms.ActiveCfg = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Application|Mixed Platforms.Build.0 = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Application|Win32.ActiveCfg = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Application|Win32.Build.0 = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.ApplicationDebug|Android.ActiveCfg = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.ApplicationDebug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.ApplicationDebug|Mixed Platforms.Build.0 = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.ApplicationDebug|Win32.ActiveCfg = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.ApplicationDebug|Win32.Build.0 = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Debug|Android.ActiveCfg = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Debug|Win32.ActiveCfg = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Debug|Win32.Build.0 = Debug|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Release|Android.ActiveCfg = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Release|Mixed Platforms.ActiveCfg = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Release|Mixed Platforms.Build.0 = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Release|Win32.ActiveCfg = Release|Win32
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE}.Release|Win32.Build.0 = Release|Win32
 		{F0A24F23-6C26-44C9-83E5-042E6169DA7C}.Application|Android.ActiveCfg = Release|Win32
 		{F0A24F23-6C26-44C9-83E5-042E6169DA7C}.Application|Mixed Platforms.ActiveCfg = Release|Win32
 		{F0A24F23-6C26-44C9-83E5-042E6169DA7C}.Application|Mixed Platforms.Build.0 = Release|Win32
@@ -458,26 +434,6 @@ Global
 		{4ABE820D-33E6-4D8E-815C-322612F33AE9}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{4ABE820D-33E6-4D8E-815C-322612F33AE9}.Release|Win32.ActiveCfg = Release|Win32
 		{4ABE820D-33E6-4D8E-815C-322612F33AE9}.Release|Win32.Build.0 = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Application|Android.ActiveCfg = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Application|Mixed Platforms.ActiveCfg = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Application|Mixed Platforms.Build.0 = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Application|Win32.ActiveCfg = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Application|Win32.Build.0 = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.ApplicationDebug|Android.ActiveCfg = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.ApplicationDebug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.ApplicationDebug|Mixed Platforms.Build.0 = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.ApplicationDebug|Win32.ActiveCfg = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.ApplicationDebug|Win32.Build.0 = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Debug|Android.ActiveCfg = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Debug|Win32.ActiveCfg = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Debug|Win32.Build.0 = Debug|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Release|Android.ActiveCfg = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Release|Mixed Platforms.ActiveCfg = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Release|Mixed Platforms.Build.0 = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Release|Win32.ActiveCfg = Release|Win32
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB}.Release|Win32.Build.0 = Release|Win32
 		{30D09BFF-0B79-4984-BDAB-9D6C00E05BC3}.Application|Android.ActiveCfg = Release|Win32
 		{30D09BFF-0B79-4984-BDAB-9D6C00E05BC3}.Application|Mixed Platforms.ActiveCfg = Release|Win32
 		{30D09BFF-0B79-4984-BDAB-9D6C00E05BC3}.Application|Mixed Platforms.Build.0 = Release|Win32
@@ -518,9 +474,7 @@ Global
 		{E8430F03-C107-4E89-91F3-AFDD107990C7} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
 		{900A45BF-7C1F-4472-8401-8FEC06BEE2E5} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
 		{4ABE820D-33E6-4D8E-815C-322612F33AE9} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
-		{DE3098C1-0D79-46C8-8458-2EC4368455EB} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
 		{CF1EFDDB-C9DD-471D-8BE6-8559F4740592} = {9A8F9DA9-9446-4147-90DE-F5925EB8FB1E}
-		{B0D7E3CD-DF08-4461-8A6F-CE49476BFAFE} = {10268A30-B0DC-47DF-950D-5421E069A053}
 		{263FB41E-66AF-47FE-A7FF-9109B2B77A31} = {10268A30-B0DC-47DF-950D-5421E069A053}
 	EndGlobalSection
 EndGlobal

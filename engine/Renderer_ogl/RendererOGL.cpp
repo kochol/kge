@@ -5,6 +5,7 @@
 
 #include "RendererOGL.h"
 #include "initGL.h"
+#include "TextureOGL.h"
 #include "../include/Logger.h"
 #include <stdio.h>
 #include <stdio.h>
@@ -493,6 +494,10 @@ namespace kge
 					glVertexPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
 					glEnableClientState(GL_VERTEX_ARRAY);
 					break;
+
+				case EVEU_TexCoord:
+					glTexCoordPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
+					glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 				}
 			}
 
@@ -637,8 +642,9 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		Texture* RendererOGL::CreateTexture( Image* pImg )
 		{
+			Texture* pTex = KGE_NEW(TextureOGL)(pImg);
 
-			return NULL;
+			return pTex;
 
 		} // CreateTexture
 

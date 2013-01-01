@@ -19,6 +19,8 @@ namespace kge
 
             protected:
 
+				uint		m_iTexID;		//!< The texture ID in opengl
+
         }; // TextureOGL
 
     } // gfx

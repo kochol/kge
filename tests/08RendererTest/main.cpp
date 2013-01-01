@@ -86,7 +86,7 @@ int main()
 
 	// Load a texture
 	kge::PluginManager::GetSingletonPtr()->LoadPlugin("Loader_DDS");
-	g_pTextureManager->Load("d:\\box.dds", NULL, NULL);
+	g_pTextureManager->Load("", NULL, NULL);
 
 	// Create matrices
 	kge::math::Matrix mProj;
@@ -109,7 +109,7 @@ int main()
 		pRen->DrawTriangleList(3, 3);
 		pRen->EndRendering();
 		kge::core::stringc str = kge::core::Profiler::GetPointer()->GetData();
-		printf(str.c_str());
+//		printf(str.c_str());
 	}
 
 	return 0;
