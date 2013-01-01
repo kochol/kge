@@ -1,7 +1,31 @@
 #include "../include/libRocketKGERenderer.h"
+#include "../include/Renderer.h"
+#include "../include/HardwareBuffer.h"
+#include "../include/Texture.h"
+
+//! Renderer public pointer
+KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;
+KGE_IMPORT extern kge::ResourceManager<kge::gfx::Texture>	*	g_pTextureManager;
+
+#if KGE_COMPILER == KGE_COMPILER_MSVC
+#	pragma comment(lib, "../../bin/Debug/kge.lib")
+#	pragma comment(lib, "RocketCore.lib")
+#endif // KGE_COMPILER == KGE_COMPILER_MSVC
 
 namespace kge
 {
+	// This structure is created for each set of geometry that Rocket compiles. It stores the vertex and index buffers and
+	// the texture associated with the geometry, if one was specified.
+	struct RocketKGECompiledGeometry
+	{
+		gfx::HardwareBuffer	*	vertices;
+		int num_vertices;
+
+		gfx::HardwareBuffer	*	indices;
+		int num_indices;
+
+		gfx::Texture		*	texture;
+	};
 
 	//------------------------------------------------------------------------------------
 	// Constructor
@@ -32,7 +56,17 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	Rocket::Core::CompiledGeometryHandle libRocketKGERenderer::CompileGeometry( Rocket::Core::Vertex* vertices, int num_vertices, int* indices, int num_indices, Rocket::Core::TextureHandle texture )
 	{
-		return NULL;
+		RocketKGECompiledGeometry* p = KGE_NEW(RocketKGECompiledGeometry);
+
+		// Create vertex and index buffer
+		p->vertices = g_pRenderer->CreateVertexBuffer(vertices, num_vertices, 20);
+		p->num_vertices = num_vertices;
+		p->indices = g_pRenderer->CreateIndexBuffer(indices, num_indices);
+		p->num_indices = num_indices;
+
+		p->texture = texture == NULL ? NULL : (gfx::Texture*) texture;;
+
+		return (Rocket::Core::CompiledGeometryHandle)p;
 
 	} // CompileGeometry
 
@@ -49,6 +83,12 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void libRocketKGERenderer::ReleaseCompiledGeometry( Rocket::Core::CompiledGeometryHandle geometry )
 	{
+		RocketKGECompiledGeometry* p = (RocketKGECompiledGeometry*)geometry;
+		p->vertices->DecRef();
+		p->indices->DecRef();
+		p->texture->DecRef();
+
+		KGE_DELETE(p, RocketKGECompiledGeometry);
 
 	} // ReleaseCompiledGeometry
 
@@ -73,7 +113,15 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	bool libRocketKGERenderer::LoadTexture( Rocket::Core::TextureHandle& texture_handle, Rocket::Core::Vector2i& texture_dimensions, const Rocket::Core::String& source )
 	{
-		return false;
+		gfx::Texture* p = g_pTextureManager->Load(source.CString(), NULL, NULL);
+		if (!p)
+			return false;
+
+		texture_handle = (Rocket::Core::TextureHandle)p;
+		texture_dimensions.x = p->GetWidth();
+		texture_dimensions.y = p->GetHeight();
+
+		return true;
 
 	} // LoadTexture
 
@@ -91,6 +139,9 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void libRocketKGERenderer::ReleaseTexture( Rocket::Core::TextureHandle texture_handle )
 	{
+		gfx::Texture* p = (gfx::Texture*)texture_handle;
+
+		p->DecRef();
 
 	} // ReleaseTexture
 

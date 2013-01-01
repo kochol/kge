@@ -1,6 +1,17 @@
 *.tlog
 *.log
 *.obj
+*.rc
+*.idb
+*.pdb
+*.user
+*.lastbuildstate
+*.unsuccessfulbuild
+*.rc
+*.sdf
+*.suo
+*.manifest
+*.res
 /bin/Debug/KGE.lib
 /bin/Debug/KGEWebPlayer.lib
 /bin/Debug/Renderer_ogl.lib
