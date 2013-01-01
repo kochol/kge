@@ -9,6 +9,7 @@
 namespace kge
 {
 	class Device;
+	class Loader;
 
 	namespace gfx
 	{
@@ -19,11 +20,14 @@ namespace kge
 	namespace io
 	{
 		class InputManager;
+		class FileSystem;
 
 	} // io
 
 	typedef Plugin<gfx::Renderer>		RendererPlugin;
 	typedef Plugin<io::InputManager>	InputMgrPlugin;
+	typedef Plugin<io::FileSystem>		FileSystemPlugin;
+	typedef Plugin<Loader>				LoaderPlugin;
 
 	//! Loads plugins and manage them
 	class KGE_API PluginManager
@@ -89,13 +93,30 @@ namespace kge
 		 */
 		int RegisterInputManager(InputMgrPlugin* pInputMgrPlug);
 
+		//------------------------------------------------------------------------------------
+		//   L O A D E R S   P L U G I N S
+		//------------------------------------------------------------------------------------
+
+		/*! With this interface a Resource Loader Plugin will register himself with PluginManager.
+		 */
+		int RegisterLoader(LoaderPlugin* pLoaderPlug);
+
+		//------------------------------------------------------------------------------------
+		//   F I L E   S Y S T E M   P L U G I N S
+		//------------------------------------------------------------------------------------
+		/*! With this interface a FileSystem Plugin will register himself with PluginManager.
+		 */
+		int RegisterFileSystem(FileSystemPlugin* pFileSysPlug);
+
 	protected:
 
 		//! Protected Constructor
 		PluginManager();
 
-		std::vector<RendererPlugin*>	m_vRendererPlugins;	//!< Renderer plugins list
-		std::vector<InputMgrPlugin*>	m_vInputMgrPlugins;	//!< Input manager plugins list
+		std::vector<RendererPlugin*>	m_vRendererPlugins;		//!< Renderer plugins list
+		std::vector<InputMgrPlugin*>	m_vInputMgrPlugins;		//!< Input manager plugins list
+		std::vector<FileSystemPlugin*>	m_vFileSystemPlugins;	//!< File system plugins list
+		std::vector<LoaderPlugin*>		m_vLoaderPlugins;		//!< Resource loaders plugins list
 
 	}; // PluginManager
 

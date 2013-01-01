@@ -81,11 +81,13 @@
     <ClCompile Include="IndexBufferDX9.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RendererD3D9.cpp" />
+    <ClCompile Include="TextureDX9.cpp" />
     <ClCompile Include="VertexBufferDX9.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IndexBufferDX9.h" />
     <ClInclude Include="RendererD3D9.h" />
+    <ClInclude Include="TextureDX9.h" />
     <ClInclude Include="VertexBuferDX9.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

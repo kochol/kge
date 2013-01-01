@@ -1,5 +1,6 @@
 package com.kge.android;
 
+import android.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -57,10 +58,9 @@ public class KGEAndroidActivity extends Activity
         btn.setText(id.toString());
         btn.setOnClickListener(new OnClickListener() {
 			
-			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				String str = getString(R.string.kgeapp);  
+				String str = "memorytest";//getString();//R.string.kgeapp);  
 				AndroidMain(str);
 				
 			}

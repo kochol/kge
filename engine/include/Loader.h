@@ -3,7 +3,7 @@
 
 #include "kgedef.h"
 #include "String.h"
-#include "array.h"
+#include <vector>
 
 namespace kge
 {
@@ -33,16 +33,16 @@ namespace kge
 		virtual bool IsALoadableFileExtension(const core::stringc& strFilename);
 
 		//! Loads a resource from a FileSystem and return its pointer.
-		/*! 
+		/*!
 			\param strFilename The resource file name to load.
 			\return Returns the created resource pointer. Note resource may not loaded yet.
 			\sa kge::io::FileSystemManager, Resource::IsLoaded
 		 */
-		virtual Resource* LoadResource(io::Stream* pStream) {return NULL;}
+		virtual Resource* LoadResource(io::Stream* pStream) = 0;
 
 	protected:
 
-		core::DynamicArray<core::stringc>	m_aFileExtension;		//!< The file extension list that this loader is capable to load
+		std::vector<core::stringc>	        m_aFileExtension;		//!< The file extension list that this loader is capable to load
 		bool								m_bSwapEndian;			//!< Swap the loaded data or not
 
 	}; // Loader

@@ -83,7 +83,6 @@ namespace kge
 				\param pBuffer The pointer to vertex buffer
 				\param stage The stage number for using in multi streaming
 				\sa CreateVertexBuffer, HardwareBuffer
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual void SetVertexBuffer(HardwareBuffer* pBuffer, int stage);
 
@@ -91,7 +90,6 @@ namespace kge
 			/*!
 				\param pBuffer The pointer to index buffer
 				\sa CreateIndexBuffer, HardwareBuffer
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual void SetIndexBuffer(HardwareBuffer* pBuffer);
 
@@ -100,7 +98,6 @@ namespace kge
 				\param VertexInfoArray An array of CustomVertexElement to declare the vertex type
 				\return Returns the created VertexDec pointer
 				\sa VertexDec, CustomVertexElement
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual VertexDec* CreateVertexDeclaration
 				(core::DynamicArray<CustomVertexElement> VertexInfoArray, core::stringc& sName);
@@ -109,7 +106,6 @@ namespace kge
 			/*! Sets the vertex declaration to prepare renderer to render something
 				\pVD The VertexDec pointer to set
 				\sa VertexDec, CustomVertexElement, CreateVertexDeclaration
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual void SetVertexDeclaration(VertexDec* pVD);
 
@@ -120,7 +116,6 @@ namespace kge
 				\param VertexStart The vertex offset in VertexBuffwe
 				\param StartIndex The index offset in IndexBuffer
 				\sa SetVertexDeclaration, SetIndexBuffer, SetVertexBuffer
-				\todo Add this to ogl renderer plugin
 			*/
 			void DrawTriangleList(u32 VCount, u32 ICount,
 								  u32 VertexStart = 0, u32 StartIndex = 0);
@@ -130,7 +125,6 @@ namespace kge
 				\param mat The Matrix to set
 				\param TM The enum that define the TransformMode. Note you can not use ETM_ViewProjection here
 				\sa GetTransform
-				\todo Add this to ogl renderer plugin
 			 */
 			virtual void SetTransForm(math::Matrix *mat, TransformMode TM = ETM_World);
 
@@ -139,12 +133,18 @@ namespace kge
 			  \param TM The enum that define the TransformMode
 			  \returns Returns the requested matrix
 			  \sa SetTransform
-			  \todo Add this to ogl renderer plugin
 			 */
 			virtual math::Matrix GetTransForm(TransformMode TM = ETM_World);
 
 			//! Sets the clear color
 			virtual void SetClearColor(const Color& ClearColor);
+
+			//! Creates a texture from an image.
+			/*!
+			  \param pImg The Image resource pointer that you want to create texture from.
+			  \returns Returns the created Texture pointer
+			 */
+			virtual Texture* CreateTexture(Image* pImg);
 
 		private:
 

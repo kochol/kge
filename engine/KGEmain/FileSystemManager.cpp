@@ -19,6 +19,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		FileSystemManager::~FileSystemManager()
 		{
+			Release();
 
 		} // Destructor
 
@@ -59,6 +60,33 @@ namespace kge
 			m_aFileSystems.push_back(pFS);
 
 		} // RegisterFileSystem
+
+		//------------------------------------------------------------------------------------
+		// Loads a stream from file systems plugins
+		//------------------------------------------------------------------------------------
+		Stream* FileSystemManager::Load( const core::stringc& FileName )
+		{
+			Stream* p = NULL;
+			for (int i = 0; i < m_aFileSystems.size(); i++)
+			{
+				p = m_aFileSystems[i]->Load(FileName);
+				if (p)
+					return p;
+			}
+			
+			return NULL;
+
+		} // Load
+
+		//------------------------------------------------------------------------------------
+		// Release the memory.
+		//------------------------------------------------------------------------------------
+		void FileSystemManager::Release()
+		{
+			m_aFileSystems.clear();
+			m_aSearchPath.clear();
+
+		} // Release
 
 	} // io
 

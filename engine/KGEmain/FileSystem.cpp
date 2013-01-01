@@ -2,6 +2,9 @@
 #include "../include/FileSystem.h"
 #include "../include/Logger.h"
 #include "../include/File.h"
+#include "../include/Stream.h"
+#include <stdio.h>
+#include <string.h>
 
 namespace kge
 {
@@ -30,7 +33,7 @@ namespace kge
 		bool FileSystem::CanLoad( core::stringc FileName )
 		{
 			// Get search paths
-			const core::DynamicArray<core::stringc>& aSearchPaths = 
+			const core::DynamicArray<core::stringc>& aSearchPaths =
 				FileSystemManager::getSingletonPtr()->GetSearchPath();
 
 			// Looking for files
@@ -58,6 +61,44 @@ namespace kge
 			return false;
 
 		} // CanLoad
+
+		//------------------------------------------------------------------------------------
+		// Loads a file and return its Stream
+		//------------------------------------------------------------------------------------
+		Stream* FileSystem::Load( core::stringc FileName )
+		{
+			// Open the file
+			FILE*	pF;
+#if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
+			fopen_s(&pF, FileName.c_str(), "rb");
+#else
+			pF = fopen(FileName.c_str(), "rb");
+#endif
+			if (!pF)
+			{
+				io::Logger::Error("Can't load %s file. File not found", FileName.c_str());
+				return NULL;
+			}
+
+			// Get the file size
+			fseek(pF, 0, SEEK_END);
+			int iEnd = ftell(pF);
+			fseek(pF, 0, SEEK_SET);
+			int iStart = ftell(pF);
+			int size = iEnd - iStart;
+
+			// Read the file
+			u8* Buffer = KGE_NEW_ARRAY(u8, size);
+			int i = (int)fread(Buffer, 1, size, pF);
+			if (i==-1)
+				io::Logger::Error("Could not read file: ", FileName.c_str());
+
+			// Create the stream
+			Stream* pS = KGE_NEW(Stream)((void*)Buffer, size, FileName);
+
+			return pS;
+
+		} // Load
 
 	} // io
 

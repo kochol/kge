@@ -24,6 +24,8 @@ namespace kge
 
 		} // StringCopy
 
+#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
+
 		//------------------------------------------------------------------------------------
 		// Converts A stringw type to stringc type
 		//------------------------------------------------------------------------------------
@@ -49,6 +51,8 @@ namespace kge
 			return str;
 
 		}
+
+#endif
 
 	} // core
 

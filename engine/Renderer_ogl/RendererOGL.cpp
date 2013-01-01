@@ -12,6 +12,7 @@
 #include "../include/VertexElement.h"
 #include "VertexBufferOGLvbo.h"
 #include "IndexBufferOGLvbo.h"
+#include "../include/BlockData.h"
 
 #if KGE_COMPILER == KGE_COMPILER_MSVC
 	#pragma comment(lib,"opengl32.lib")
@@ -342,6 +343,8 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		bool RendererOGL::BeginRendering(bool bColor, bool bDepth, bool bStencil)
 		{
+			KGEPROFILE;
+
 			return Clear(bColor, bDepth, bStencil);
 
 		} // BeginRendering
@@ -351,6 +354,8 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		bool RendererOGL::EndRendering()
 		{
+			KGEPROFILE;
+
 			#if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 				SwapBuffers(m_pHDC);
 			#elif KGE_PLATFORM == KGE_PLATFORM_LINUX
@@ -545,6 +550,8 @@ namespace kge
 		void RendererOGL::DrawTriangleList( u32 VCount, u32 ICount,
 			u32 VertexStart /*= 0*/, u32 StartIndex /*= 0*/ )
 		{
+			KGEPROFILE;
+
 			if (ICount > 0)
 			{
 				glDrawElements(GL_TRIANGLES, ICount, GL_UNSIGNED_SHORT, 0);
@@ -580,20 +587,26 @@ namespace kge
 					mWorld   = m_mView * (*mat);
 				}
 
+#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				glMatrixMode(GL_MODELVIEW);
 				glLoadMatrixf((GLfloat*)&mWorld);
+#endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				break; // ETM_World
 
 			case ETM_View:
 				mWorld = (*mat) * m_mWorld;
+#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				glMatrixMode(GL_MODELVIEW);
 				glLoadMatrixf((GLfloat*)&mWorld);
+#endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				m_mView = (*mat);
 				break; // ETM_View
 
 			case ETM_Projection:
+#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				glMatrixMode(GL_PROJECTION);
 				glLoadMatrixf((GLfloat*)mat);
+#endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				m_mProj = (*mat);
 				break; // ETM_Projection
 			} // switch
@@ -618,6 +631,16 @@ namespace kge
 			glClearColor(ClearColor.getRed() / 255.0f, ClearColor.getGreen() / 255.0f, ClearColor.getBlue() / 255.0f, ClearColor.getAlpha() / 255.0f);
 
 		}
+
+		//------------------------------------------------------------------------------------
+		// Creates a texture from an image.
+		//------------------------------------------------------------------------------------
+		Texture* RendererOGL::CreateTexture( Image* pImg )
+		{
+
+			return NULL;
+
+		} // CreateTexture
 
 	} // gfx
 

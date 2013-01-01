@@ -24,6 +24,13 @@ namespace kge
 			 */
 			virtual bool CanLoad(core::stringc FileName);
 
+			//! Loads a file and return its Stream
+			/*!
+				\param FileName The name of the file to load.
+				\return Returns the loaded stream.
+			 */
+			virtual Stream* Load(core::stringc FileName);
+
 		}; // FileSysem
 
 	} // io

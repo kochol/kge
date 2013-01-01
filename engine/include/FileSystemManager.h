@@ -9,6 +9,7 @@ namespace kge
 	namespace io
 	{
 		class FileSystem;
+		class Stream;
 
 		//! FileSystemManager is the main manager for FileSystem 
 		class KGE_API FileSystemManager
@@ -37,6 +38,12 @@ namespace kge
 
 			//! Register a FileSystem with FileSystemManager
 			void RegisterFileSystem(FileSystem* pFS);
+
+			//! Loads a stream from file systems plugins
+			Stream* Load(const core::stringc& FileName);
+
+			//! Release the memory.
+			void Release();
 
 		protected:
 

@@ -2,6 +2,7 @@
 #define KGE_STRING_H
 
 #include <string>
+#include "kgedef.h"
 
 namespace kge
 {
@@ -11,19 +12,23 @@ namespace kge
 		typedef std::wstring stringw;
 
 		//! KGE string class
-		class String
+		class KGE_API String
 		{
 		public:
 
 			//! Copy the char* to char*
 			static char* StringCopy(const char* Src);
 	
+	#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
+
 			//! Converts A stringw type to stringc type
 			static stringc Convert(const stringw& Src);
 			
 			//! Converts A stringc type to stringw type
 			static stringw Convert(const stringc& Src);
 
+	#endif 
+	
 		}; // String
 
 	} // core

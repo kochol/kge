@@ -13,6 +13,8 @@
 	#define APIENTRY __stdcall
 #endif
 
+#if KGE_PLATFORM != KGE_PLATFORM_ANDROID
+
 //--------------------------------
 //	prototypes
 //--------------------------------
@@ -510,22 +512,22 @@ extern "C"
 	PFNGLGETNUNIFORMDVARBPROC glGetnUniformdvARB;
 }
 
+#endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
 
 int g_MajorVer = 0;
 int g_MinorVer = 0;
 
 //--------------------------------
-//	function implementations 
+//	function implementations
 //--------------------------------
 
-void* loadEntryPoint(const char* name) 
+void* loadEntryPoint(const char* name)
 {
+    void* proc = NULL;
 	#if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
-		void* proc = wglGetProcAddress( name );
+		proc = wglGetProcAddress( name );
 	#elif KGE_PLATFORM == KGE_PLATFORM_LINUX
-		void* proc = (void*)glXGetProcAddress( (const GLubyte*)name );
-	#else
-		#error "Initializer OpenGL for KGE OpenGL Renderer dosn't support current platform"
+		proc = (void*)glXGetProcAddress( (const GLubyte*)name );
 	#endif
 
 	if ( proc != NULL )
@@ -544,13 +546,15 @@ void* loadEntryPoint(const char* name)
 // initGL
 bool initGL(int version)
 {
+    #if KGE_PLATFORM != KGE_PLATFORM_ANDROID
+
 	g_MajorVer = version / 10;
 	g_MinorVer = version % 10;
 
 	kge::io::Logger::Info("initializing OpenGL %d.%d :",g_MajorVer,g_MinorVer);
 
 	// OpenGL 1.2
-	if (version >= 12) 
+	if (version >= 12)
 	{
 		kge::io::Logger::Info("\tOpenGL 1.2 commands:");
 		glTexSubImage3D = (PFNGLTEXSUBIMAGE3DPROC) loadEntryPoint("glTexSubImage3D");
@@ -588,7 +592,7 @@ bool initGL(int version)
 	}
 
 	// OpenGL 1.5
-	if (version >= 15) 
+	if (version >= 15)
 	{
 		kge::io::Logger::Info("\tOpenGL 1.5 commands:");
 
@@ -614,7 +618,7 @@ bool initGL(int version)
 	}
 
 	// OpenGL 2.0
-	if (version >= 20) 
+	if (version >= 20)
 	{
 		kge::io::Logger::Info("\tOpenGL 2.0 commands:");
 
@@ -714,7 +718,7 @@ bool initGL(int version)
 	}
 
 	// OpenGL 2.1
-	if (version >= 21) 
+	if (version >= 21)
 	{
 		kge::io::Logger::Info("\tOpenGL 2.1 commands:");
 		glUniformMatrix2x3fv = (PFNGLUNIFORMMATRIX2X3FVPROC) loadEntryPoint("glUniformMatrix2x3fv");
@@ -726,7 +730,7 @@ bool initGL(int version)
 	}
 
 	// OpenGL 3.0
-	if (version >= 30) 
+	if (version >= 30)
 	{
 		kge::io::Logger::Info("\tOpenGL 3.0 commands:");
 
@@ -817,7 +821,7 @@ bool initGL(int version)
 	}
 
 	// OpenGL 3.1
-	if (version >= 31) 
+	if (version >= 31)
 	{
 		kge::io::Logger::Info("\tOpenGL 3.1 commands:");
 
@@ -836,7 +840,7 @@ bool initGL(int version)
 	}
 
 	// OpenGL 3.2
-	if (version >= 32) 
+	if (version >= 32)
 	{
 		kge::io::Logger::Info("\tOpenGL 3.2 commands:");
 
@@ -980,7 +984,7 @@ bool initGL(int version)
 	}
 
 	// OpenGL 4.1
-	if (version >= 41) 
+	if (version >= 41)
 	{
 		kge::io::Logger::Info("\tOpenGL 4.1 commands:");
 
@@ -1073,6 +1077,8 @@ bool initGL(int version)
 		glGetFloati_v = (PFNGLGETFLOATI_VPROC) loadEntryPoint("glGetFloati_v");
 		glGetDoublei_v = (PFNGLGETDOUBLEI_VPROC) loadEntryPoint("glGetDoublei_v");
 	}
+
+#endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
 
 	return true;
 }

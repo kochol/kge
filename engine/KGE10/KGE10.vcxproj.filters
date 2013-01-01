@@ -192,6 +192,27 @@
     <ClInclude Include="..\include\Color.h">
       <Filter>Header Files\gfx</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\Texture.h">
+      <Filter>Header Files\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Timer.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Profiler.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ProfilerBlock.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\BlockData.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Image.h">
+      <Filter>Header Files\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\KGEmain\Device.cpp">
@@ -259,6 +280,24 @@
     </ClCompile>
     <ClCompile Include="..\kgemain\Matrix.cpp">
       <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\kgemain\Timer.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Profiler\Profiler.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Profiler\ProfilerBlock.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KGEmain\Image.cpp">
+      <Filter>Source Files\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KGEmain\Texture.cpp">
+      <Filter>Source Files\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\KGEmain\Settings.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -7,7 +7,7 @@
 
 // #endif KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 
-#elif KGE_PLATFORM == KGE_PLATFORM_LINUX
+#elif KGE_PLATFORM == KGE_PLATFORM_LINUX || KGE_PLATFORM == KGE_PLATFORM_ANDROID
 
 #include <dlfcn.h>
 
@@ -16,10 +16,15 @@
 #include "../include/PluginManager.h"
 #include "../include/Logger.h"
 #include "../include/KgeMemory.h"
+#include "../include/ResourceManager.h"
+#include "../include/Texture.h"
+#include "../include/Image.h"
 
 #ifndef NULL
 #define NULL 0
 #endif
+
+extern kge::ResourceManager<kge::gfx::Texture>	*	g_pTextureManager;
 
 namespace kge
 {
@@ -44,11 +49,19 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void PluginManager::Release()
 	{
+		// Delete renderer plugins
 		for (size_t i = 0; i < m_vRendererPlugins.size(); i++)
 		{
 			KGE_DELETE(m_vRendererPlugins[i], RendererPlugin);
 		}
 		m_vRendererPlugins.clear();
+
+		// Delete loader plugins
+		for (size_t i = 0; i < m_vLoaderPlugins.size(); i++)
+		{
+			KGE_DELETE(m_vLoaderPlugins[i], LoaderPlugin);
+		}
+		m_vLoaderPlugins.clear();
 
 	} // Release
 
@@ -89,7 +102,7 @@ namespace kge
 
 // endif KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 
-#elif KGE_PLATFORM == KGE_PLATFORM_LINUX
+#elif KGE_PLATFORM == KGE_PLATFORM_LINUX || KGE_PLATFORM == KGE_PLATFORM_ANDROID
 
 		std::string strPluginName = "./lib";
 		strPluginName += name;
@@ -109,7 +122,7 @@ namespace kge
 
         // Load the RegisterPlugin function
         pFn = (RegisterPlugin)dlsym(handle, "RegisterPlugin");
-        if ((error = dlerror()) != NULL || !pFn)
+        if ((error = (char*)dlerror()) != NULL || !pFn)
         {
             io::Logger::Error("RegisterPlugin function dose not find in %s plugin.\n%s", strPluginName.c_str(), error);
             return 0;
@@ -157,5 +170,35 @@ namespace kge
 		return m_vInputMgrPlugins.size() - 1;
 
 	} // RegisterInputManager
+
+	//------------------------------------------------------------------------------------
+	// With this interface a Resource Loader Plugin will register himself with PluginManager.
+	//------------------------------------------------------------------------------------
+	int PluginManager::RegisterLoader( LoaderPlugin* pLoaderPlug )
+	{
+		m_vLoaderPlugins.push_back(pLoaderPlug);
+
+		// Register loaders to their resource managers
+		switch (pLoaderPlug->GetPluginType())
+		{
+		case EPT_TextureLoader:
+			g_pTextureManager->RegisterLoader(pLoaderPlug->Create());
+			break;
+		}
+
+		return m_vLoaderPlugins.size() - 1;
+
+	} // RegisterLoader
+
+	//------------------------------------------------------------------------------------
+	// With this interface a FileSystem Plugin will register himself with PluginManager.
+	//------------------------------------------------------------------------------------
+	int PluginManager::RegisterFileSystem( FileSystemPlugin* pFileSysPlug )
+	{
+		m_vFileSystemPlugins.push_back(pFileSysPlug);
+
+		return m_vFileSystemPlugins.size() - 1;
+
+	} // RegisterFileSystem
 
 } // kge

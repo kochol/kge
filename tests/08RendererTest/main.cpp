@@ -2,6 +2,11 @@
 #include "../../engine/include/Renderer.h"
 #include "../../engine/include/math.h"
 #include "../../engine/include/VertexElement.h"
+#include "../../engine/include/Profiler.h"
+#include "../../engine/include/ResourceManager.h"
+#include "../../engine/include/Texture.h"
+#include "../../engine/include/PluginManager.h"
+#include <stdio.h>
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 	#ifdef _DEBUG
@@ -11,11 +16,16 @@
 	#endif
 #endif
 
+KGE_IMPORT extern kge::ResourceManager<kge::gfx::Texture>	*	g_pTextureManager;
+
+
 struct Vertex3
 {
 	float	x,
 			y,
-			z;
+			z,
+			tx,
+			ty;
 
 }; // Vertex3
 
@@ -38,9 +48,9 @@ int main()
 	kge::gfx::VertexDec			*	VD;
 	Vertex3 v[] =
 	{
-		{-1,-1,0},
-		{1,-1,0},
-		{0,1,0}
+		{-1,-1,0,0,1},
+		{1,-1,0,1,1},
+		{0,1,0,0.5f,0}
 	};
 	kge::u16 i[] = {0,1,2};
 	VB = pRen->CreateVertexBuffer(v,3,sizeof(Vertex3));
@@ -57,13 +67,26 @@ int main()
 			kge::gfx::EVEU_Position,
 			0
 		},
+		{
+			0,
+			12,
+			kge::gfx::EVET_Float2,
+			kge::gfx::EVEM_Default,
+			kge::gfx::EVEU_TexCoord,
+			0
+		},
 		CusVertexEND()
 	};
 	kge::core::DynamicArray<kge::gfx::CustomVertexElement> cve;
 	cve.push_back(cve2[0]);
 	cve.push_back(cve2[1]);
+	cve.push_back(cve2[2]);
 	kge::core::stringc vdName("V3");
 	VD = pRen->CreateVertexDeclaration(cve, vdName);
+
+	// Load a texture
+	kge::PluginManager::GetSingletonPtr()->LoadPlugin("Loader_DDS");
+	g_pTextureManager->Load("d:\\box.dds", NULL, NULL);
 
 	// Create matrices
 	kge::math::Matrix mProj;
@@ -85,6 +108,8 @@ int main()
 		pRen->SetIndexBuffer(IB);
 		pRen->DrawTriangleList(3, 3);
 		pRen->EndRendering();
+		kge::core::stringc str = kge::core::Profiler::GetPointer()->GetData();
+		printf(str.c_str());
 	}
 
 	return 0;
