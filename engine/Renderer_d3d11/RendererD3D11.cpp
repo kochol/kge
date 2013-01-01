@@ -595,6 +595,14 @@ return NULL;
 
 	} // GetDirect3dDevice
 
+	//------------------------------------------------------------------------------------
+	// Sets the texture
+	//------------------------------------------------------------------------------------
+	void RendererD3D11::SetTexture( Texture* pTex, int Stage /*= 0*/ )
+	{
+
+	} // SetTexture
+
 } // gfx
 
 } // kge
