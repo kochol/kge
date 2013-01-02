@@ -2,6 +2,8 @@
 #include "../include/Renderer.h"
 #include "../include/HardwareBuffer.h"
 #include "../include/Texture.h"
+#include "../include/VertexElement.h"
+#include "../include/Matrix.h"
 
 //! Renderer public pointer
 KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;
@@ -32,6 +34,42 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	libRocketKGERenderer::libRocketKGERenderer()
 	{
+		// Create vertex declaration
+		kge::gfx::CustomVertexElement cve2[] =
+		{
+			{
+				0,
+				0,
+				kge::gfx::EVET_Float2,
+				kge::gfx::EVEM_Default,
+				kge::gfx::EVEU_Position,
+				0
+			},
+			{
+				0,
+				8,
+				kge::gfx::EVET_Color,
+				kge::gfx::EVEM_Default,
+				kge::gfx::EVEU_Color,
+				0
+			},
+			{
+				0,
+				12,
+				kge::gfx::EVET_Float2,
+				kge::gfx::EVEM_Default,
+				kge::gfx::EVEU_TexCoord,
+				0
+			},
+			CusVertexEND()
+		};
+		kge::core::DynamicArray<kge::gfx::CustomVertexElement> cve;
+		cve.push_back(cve2[0]);
+		cve.push_back(cve2[1]);
+		cve.push_back(cve2[2]);
+		cve.push_back(cve2[3]);
+		kge::core::stringc vdName("V2CT");
+		m_pVD = g_pRenderer->CreateVertexDeclaration(cve, vdName);
 
 	} // Constructor
 
@@ -75,6 +113,19 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void libRocketKGERenderer::RenderCompiledGeometry( Rocket::Core::CompiledGeometryHandle geometry, const Rocket::Core::Vector2f& translation )
 	{
+		RocketKGECompiledGeometry* p = (RocketKGECompiledGeometry*)geometry;
+		g_pRenderer->SetVertexDeclaration(m_pVD);
+		g_pRenderer->SetVertexBuffer(p->vertices);
+		g_pRenderer->SetIndexBuffer(p->indices);
+		g_pRenderer->SetTexture(p->texture);
+
+		kge::math::Matrix m;
+		m.LoadIdentity();
+		m.m41 = translation.x;
+		m.m42 = translation.y;
+		g_pRenderer->SetTransForm(&m);
+
+		g_pRenderer->DrawTriangleList(p->num_vertices, p->num_indices);
 
 	} // RenderCompiledGeometry
 
@@ -86,7 +137,8 @@ namespace kge
 		RocketKGECompiledGeometry* p = (RocketKGECompiledGeometry*)geometry;
 		p->vertices->DecRef();
 		p->indices->DecRef();
-		p->texture->DecRef();
+		if (p->texture)
+			p->texture->DecRef();
 
 		KGE_DELETE(p, RocketKGECompiledGeometry);
 

@@ -2,6 +2,7 @@
 
 #include <Rocket/Core/RenderInterface.h>
 #include "kgedef.h"
+#include "VertexDeclaration.h"
 
 //=====================================
 // DLL export / import
@@ -18,6 +19,8 @@ namespace kge
 {
 	class KGEROCKET_API libRocketKGERenderer: public Rocket::Core::RenderInterface
 	{
+	public:
+
 		//! Constructor
 		libRocketKGERenderer();
 
@@ -56,6 +59,10 @@ namespace kge
 
 		/// Returns the native vertical texel offset for the renderer.
 		float GetVerticalTexelOffset();
+
+	protected:
+
+		gfx::VertexDec		*	m_pVD;
 
 	}; // libRocketKGERenderer
 
