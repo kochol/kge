@@ -205,7 +205,9 @@ namespace kge
 		// Create image resource
 		int datasize = source_dimensions.x * source_dimensions.y * 4;
 		gfx::Image* pimg = KGE_NEW(gfx::Image)(0, "libRocketTexture", (u8*)source, datasize, 
-			source_dimensions.x, source_dimensions.y, 0, 32, gfx::ETF_A8R8G8B8, 1);
+			source_dimensions.x, source_dimensions.y, 0, 32, gfx::ETF_A8B8G8R8, 1);
+
+		pimg->Convert(gfx::ETF_A8R8G8B8);
 
 		// Create texture from an Image
 		gfx::Texture* pTex = g_pRenderer->CreateTexture(pimg);

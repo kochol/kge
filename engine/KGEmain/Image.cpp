@@ -29,6 +29,33 @@ namespace kge
 
 		} // Destructor
 
+		//------------------------------------------------------------------------------------
+		// Converts the image format
+		//------------------------------------------------------------------------------------
+		bool Image::Convert( TextureFormat ToThisFormat )
+		{
+			// Convert from ABGR8 to ARGB8
+			if (m_Format == ETF_A8B8G8R8 && ToThisFormat == ETF_A8R8G8B8)
+			{
+				u8* pTemp = KGE_NEW_ARRAY(u8, m_iDataSize);
+				for (int i = 0; i < m_iDataSize; i += 4)
+				{
+					pTemp[i + 0] = m_pImageData[i + 2]; // Red
+					pTemp[i + 1] = m_pImageData[i + 1]; // Green
+					pTemp[i + 2] = m_pImageData[i + 0]; // Blue
+					pTemp[i + 3] = m_pImageData[i + 3]; // Alpha
+				}
+
+				KGE_DELETE_ARRAY(m_pImageData);
+				m_pImageData = pTemp;
+				m_Format = ETF_A8R8G8B8;
+				return true;
+			}
+
+			return false;
+
+		} // Convert
+
 	} // gfx
 
 } // kge

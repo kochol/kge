@@ -3,6 +3,7 @@
 #include "../../engine/include/math.h"
 #include "../../engine/include/Logger.h"
 #include "../../engine/include/libRocketKGERenderer.h"
+#include "../../engine/include/PluginManager.h"
 #include <stdio.h>
 #include <Rocket/Core.h>
 
@@ -35,6 +36,9 @@ int main()
 	kge::gfx::Renderer*	pRen = dev.GetRenderer();
 	if (!pRen)
 		return -1;
+
+	// Load DDS loader plugin
+	kge::PluginManager::GetSingletonPtr()->LoadPlugin("Loader_DDS");
 
 	// Init libRocket
 	kge::libRocketKGERenderer kge_renderer;

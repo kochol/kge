@@ -71,6 +71,8 @@ namespace kge
 			else
 				m_vResources[pResource->GetHandle()] = pResource;
 
+			pResource->m_pMyMgr = (void*)this;
+
 			return pResource->GetHandle();
 
 		} // AddManualResource
@@ -186,6 +188,9 @@ namespace kge
 				m_vResources[handle] = pResource;
 				m_sHandles.pop();
 			}
+
+			pResource->m_pMyMgr = (void*)this;
+			((Resource*)pResource)->m_iHandle = handle;
 
 			return pResource;
 

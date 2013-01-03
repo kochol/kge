@@ -43,6 +43,7 @@ namespace kge
 		u32		m_iHandle;				/**< Resource Handle */
 		bool	m_bIsLoaded;			//!< Is resource loaded and ready to use?
 		bool	m_bLoadOnBackground;	//!< Load resource on a background thread or not?
+		void*	m_pMyMgr;				//!< The resource manager pointer.
 
 	}; // Resource
 
