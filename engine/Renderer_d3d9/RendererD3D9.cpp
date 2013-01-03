@@ -761,6 +761,34 @@ namespace gfx
 
 	} // SetTexture
 
+	//------------------------------------------------------------------------------------
+	// Enable/Disable Scissor region
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::EnableScissorRegion( bool enable )
+	{
+		if (m_bEnScissor == enable)
+			return;
+
+		m_bEnScissor = enable;
+		m_pD3DDevice->SetRenderState(D3DRS_SCISSORTESTENABLE, enable);
+
+	} // EnableScissorRegion
+
+	//------------------------------------------------------------------------------------
+	// Sets the scissor region
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::SetScissorRegion( int x, int y, int width, int height )
+	{
+		RECT scissor_rect;
+		scissor_rect.left = x;
+		scissor_rect.right = x + width;
+		scissor_rect.top = y;
+		scissor_rect.bottom = y + height;
+
+		m_pD3DDevice->SetScissorRect(&scissor_rect);
+
+	} // SetScissorRegion
+
 } // gfx
 
 } // kge

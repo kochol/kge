@@ -154,6 +154,12 @@ namespace kge
 			//! Sets the texture
 			void SetTexture(Texture* pTex, int Stage = 0);
 
+			//! Enable/Disable Scissor region
+			void EnableScissorRegion(bool enable);
+
+			//! Sets the scissor region
+			void SetScissorRegion(int x, int y, int width, int height);
+
 		protected:
 
 			LPDIRECT3DDEVICE9						m_pD3DDevice;			// D3D9 device

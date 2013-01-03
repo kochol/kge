@@ -603,6 +603,22 @@ return NULL;
 
 	} // SetTexture
 
+	//------------------------------------------------------------------------------------
+	// Enable/Disable Scissor region
+	//------------------------------------------------------------------------------------
+	void RendererD3D11::EnableScissorRegion( bool enable )
+	{
+
+	} // EnableScissorRegion
+
+	//------------------------------------------------------------------------------------
+	// Sets the scissor region
+	//------------------------------------------------------------------------------------
+	void RendererD3D11::SetScissorRegion( int x, int y, int width, int height )
+	{
+
+	} // SetScissorRegion
+
 } // gfx
 
 } // kge
