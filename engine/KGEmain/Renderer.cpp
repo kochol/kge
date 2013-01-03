@@ -5,6 +5,9 @@
 
 KGE_API kge::u32			HardwareBufferID = 0;
 
+//! Renderer public pointer
+extern kge::gfx::Renderer*	g_pRenderer;
+
 namespace kge
 {
 	namespace gfx
@@ -70,6 +73,32 @@ namespace kge
 			m_vVertexDecs.push_back(pVD);
 
 		} // AddVertexDec
+
+		//------------------------------------------------------------------------------------
+		// Removes hardware buffer pointer
+		//------------------------------------------------------------------------------------
+		void Renderer::RemoveHardwareBuffer( HardwareBuffer* pHB )
+		{
+			int id = pHB->GetID();
+			for (int i = 0; i < m_vBuffers.size(); i++)
+			{
+				if (m_vBuffers[i]->GetID() == id)
+				{
+					m_vBuffers.erase(i);
+					return;
+				}
+			}
+
+		} // RemoveHardwareBuffer
+
+		//------------------------------------------------------------------------------------
+		// Returns the Renderer pointer
+		//------------------------------------------------------------------------------------
+		Renderer* Renderer::GetPointer()
+		{
+			return g_pRenderer;
+
+		} // GetPointer
 
 	} // gfx
 

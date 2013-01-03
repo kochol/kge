@@ -33,6 +33,7 @@ namespace kge
 		//! The interface for working with renderers in KGE.
 		class KGE_API Renderer
 		{
+			friend class HardwareBuffer;
 		public:
 
 			//! Constructor
@@ -176,6 +177,9 @@ namespace kge
 			 */
 			virtual void* GetDirect3dDevice() {return NULL;}
 
+			//! Returns the Renderer pointer
+			static Renderer* GetPointer();
+
 			//! Sets the texture
 			virtual void SetTexture(Texture* pTex, int Stage = 0) = 0;
 
@@ -202,8 +206,11 @@ namespace kge
 
 			// Resource managers
 
-			//! Adds hardware buffer pointers
+			//! Adds hardware buffer pointer
 			virtual void AddHardwareBuffer(HardwareBuffer* pHB);
+
+			//! Removes hardware buffer pointer
+			virtual void RemoveHardwareBuffer(HardwareBuffer* pHB);
 
 			//! Adds VertexDec pointers
 			virtual void AddVertexDec(VertexDec* pVD);
