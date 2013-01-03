@@ -183,11 +183,24 @@ namespace kge
 			//! Sets the texture
 			virtual void SetTexture(Texture* pTex, int Stage = 0) = 0;
 
+			//! Enable/Disable Scissor region
+			/*!
+				\sa SetScissorRegion
+			 */
+			virtual void EnableScissorRegion(bool enable) = 0;
+
+			//! Sets the scissor region
+			/*!
+				\sa EnableScissorRegion
+			 */
+			virtual void SetScissorRegion(int x, int y, int width, int height) = 0;
+
 		protected:
 
 			bool			m_bUseStencil,			//!< Create and use stencil buffer
 							m_bUseShaders,			//!< Dose renderer support shaders?
 							m_bIsSceneRunning;		//!< Is scene running
+			bool			m_bEnScissor;			//!< Scissor region is enabled or not \sa EnableScissorRegion
 			int				m_iFPS,					//!< Frame per second
 							m_iFPSTemp,				//!< Temp Frame per second for calculating FPS
 							m_iTriCount,			//!< Rendered triangle count

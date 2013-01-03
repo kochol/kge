@@ -656,6 +656,22 @@ namespace kge
 
 		} // SetTexture
 
+		//------------------------------------------------------------------------------------
+		// Enable/Disable Scissor region
+		//------------------------------------------------------------------------------------
+		void RendererOGL::EnableScissorRegion( bool enable )
+		{
+
+		} // EnableScissorRegion
+
+		//------------------------------------------------------------------------------------
+		// Sets the scissor region
+		//------------------------------------------------------------------------------------
+		void RendererOGL::SetScissorRegion( int x, int y, int width, int height )
+		{
+
+		} // SetScissorRegion
+
 	} // gfx
 
 } // kge

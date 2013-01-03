@@ -18,7 +18,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		Renderer::Renderer() : m_bUseStencil(false), m_bUseShaders(false),
 			m_bIsSceneRunning(false), m_iFPS(0), m_iFPSTemp(0), m_nIndexBufferID(MAXID),
-			m_nVertexDecID(MAXID), m_iBatchCount(1)
+			m_nVertexDecID(MAXID), m_iBatchCount(1), m_bEnScissor(false)
 		{
 			// Set texture and vertex IDs to MAXID(NULL)
 			for (int i = 0; i < 8; i++)
