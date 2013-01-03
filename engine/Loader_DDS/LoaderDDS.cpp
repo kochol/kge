@@ -267,7 +267,7 @@ namespace kge
 		// Create image resource
 		gfx::Image* pimg = KGE_NEW(gfx::Image)(0, pStream->GetName().c_str(), (u8*)pSrc, size, header.dwWidth, header.dwHeight, bcBytesPerBlock, bitsPerPixel, format, numMipmaps);
 
-		// TODO: Create texture from an Image
+		// Create texture from an Image
 		gfx::Texture* pTex = g_pRenderer->CreateTexture(pimg);
 
 		// Maybe we want to send it to image resource manager later but for now we simply delete it.

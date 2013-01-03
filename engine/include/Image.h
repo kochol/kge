@@ -26,6 +26,9 @@ namespace kge
 
 			//! Returns the image data pointer
 			virtual u8* GetImageData() { return m_pImageData; }
+
+			//! Converts the image format
+			virtual bool Convert(TextureFormat ToThisFormat);
 		
 		protected:
 

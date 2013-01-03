@@ -22,6 +22,12 @@ namespace kge
 			//! Destructor
 			virtual ~Texture() {}
 
+			//! Gets the texture width
+			int GetWidth() {return m_iWidth;}
+
+			//! Gets the texture height
+			int GetHeight() {return m_iHeight;}
+
 		protected:
 
 			int					m_iWidth,

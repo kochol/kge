@@ -4,6 +4,7 @@
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
 #include "../include/Resource.h"
+#include "../include/ResourceManager.h"
 #include "../include/String.h"
 #include "../include/KgeMemory.h"
 
@@ -18,7 +19,8 @@ namespace kge
 		m_pName(NULL),
 		m_pExtraParam(NULL),
 		m_bIsLoaded(false),
-		m_bLoadOnBackground(false)
+		m_bLoadOnBackground(false),
+		m_pMyMgr(NULL)
 	{
 	} // Constructor
 
@@ -26,8 +28,9 @@ namespace kge
 	// Constructor
 	//------------------------------------------------------------------------------------
 	Resource::Resource( const u32 Handle, const char* FileName, const char* Name, void* ExtraParam ):
-		m_bIsLoaded(false),
-		m_bLoadOnBackground(false)
+		m_bIsLoaded(false), 
+		m_bLoadOnBackground(false),
+		m_pMyMgr(NULL)
 	{
 		m_iHandle	  = Handle;
 		m_pFileName   = core::String::StringCopy(FileName);
@@ -41,6 +44,12 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	Resource::~Resource()
 	{
+		if (m_pMyMgr)
+		{
+			ResourceManager<Resource>* p = (ResourceManager<Resource>*)m_pMyMgr;
+			p->RemoveResource(this);
+		}
+
 		KGE_DELETE_ARRAY(m_pFileName);
 		KGE_DELETE_ARRAY(m_pName);
 

@@ -78,6 +78,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04 Device init test", "..\.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Renderer_d3d11", "..\Renderer_d3d11\Renderer_d3d11.vcxproj", "{30D09BFF-0B79-4984-BDAB-9D6C00E05BC3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{D85922DC-408B-412C-848A-330B0F2AC139}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libRocketKGERenderer", "..\libRocketKGERenderer\libRocketKGERenderer.vcxproj", "{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11libRocketTest", "..\..\tests\11libRocketTest\11libRocketTest.vcxproj", "{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Application|Android = Application|Android
@@ -454,6 +460,46 @@ Global
 		{30D09BFF-0B79-4984-BDAB-9D6C00E05BC3}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{30D09BFF-0B79-4984-BDAB-9D6C00E05BC3}.Release|Win32.ActiveCfg = Release|Win32
 		{30D09BFF-0B79-4984-BDAB-9D6C00E05BC3}.Release|Win32.Build.0 = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Application|Android.ActiveCfg = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Application|Mixed Platforms.ActiveCfg = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Application|Mixed Platforms.Build.0 = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Application|Win32.ActiveCfg = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Application|Win32.Build.0 = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.ApplicationDebug|Android.ActiveCfg = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.ApplicationDebug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.ApplicationDebug|Mixed Platforms.Build.0 = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.ApplicationDebug|Win32.ActiveCfg = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.ApplicationDebug|Win32.Build.0 = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Debug|Android.ActiveCfg = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Debug|Win32.Build.0 = Debug|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Release|Android.ActiveCfg = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Release|Win32.ActiveCfg = Release|Win32
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8}.Release|Win32.Build.0 = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Application|Android.ActiveCfg = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Application|Mixed Platforms.ActiveCfg = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Application|Mixed Platforms.Build.0 = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Application|Win32.ActiveCfg = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Application|Win32.Build.0 = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.ApplicationDebug|Android.ActiveCfg = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.ApplicationDebug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.ApplicationDebug|Mixed Platforms.Build.0 = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.ApplicationDebug|Win32.ActiveCfg = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.ApplicationDebug|Win32.Build.0 = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Debug|Android.ActiveCfg = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Debug|Win32.Build.0 = Debug|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Release|Android.ActiveCfg = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Release|Win32.ActiveCfg = Release|Win32
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -474,7 +520,9 @@ Global
 		{E8430F03-C107-4E89-91F3-AFDD107990C7} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
 		{900A45BF-7C1F-4472-8401-8FEC06BEE2E5} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
 		{4ABE820D-33E6-4D8E-815C-322612F33AE9} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
+		{31B265B6-4C38-4BAE-ABA7-F075F8F9796E} = {3895B1CA-E0D0-4BE6-9756-C98EE33ACA4A}
 		{CF1EFDDB-C9DD-471D-8BE6-8559F4740592} = {9A8F9DA9-9446-4147-90DE-F5925EB8FB1E}
 		{263FB41E-66AF-47FE-A7FF-9109B2B77A31} = {10268A30-B0DC-47DF-950D-5421E069A053}
+		{CF8DDDEB-C02B-4ADE-AA3A-5BF96FA7AED8} = {D85922DC-408B-412C-848A-330B0F2AC139}
 	EndGlobalSection
 EndGlobal
