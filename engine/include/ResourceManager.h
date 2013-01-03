@@ -200,7 +200,7 @@ namespace kge
 
 		std::vector<T*>			m_vResources;		/**< Stores the resources */
 		std::stack<u32>			m_sHandles;			/**< Stores the unused handles number*/
-		std::vector<Loader*>		m_vLoaders;			//!< Stores the resource loaders
+		std::vector<Loader*>	m_vLoaders;			//!< Stores the resource loaders
 
 	}; // ResourceManager
 
