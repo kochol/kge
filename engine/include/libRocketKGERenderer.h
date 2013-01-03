@@ -71,11 +71,11 @@ namespace kge
 		/// Called by Rocket when a loaded texture is no longer required.
 		virtual void ReleaseTexture(Rocket::Core::TextureHandle texture_handle);
 
-		/// Returns the native horizontal texel offset for the renderer.
-		float GetHorizontalTexelOffset();
-
-		/// Returns the native vertical texel offset for the renderer.
-		float GetVerticalTexelOffset();
+ 		/// Returns the native horizontal texel offset for the renderer.
+ 		float GetHorizontalTexelOffset();
+ 
+ 		/// Returns the native vertical texel offset for the renderer.
+ 		float GetVerticalTexelOffset();
 
 	protected:
 

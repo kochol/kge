@@ -6,12 +6,14 @@
 #include "../../engine/include/PluginManager.h"
 #include <stdio.h>
 #include <Rocket/Core.h>
+#include <Rocket/Debugger.h>
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 #ifdef _DEBUG
 #pragma comment(lib, "../../bin/debug/kge.lib")
 #pragma comment(lib, "../../bin/debug/libRocketKGERenderer.lib")
 #pragma comment(lib, "RocketCore.lib")
+#pragma comment(lib, "RocketDebugger.lib")
 #else
 #pragma comment(lib, "../../bin/release/kge.lib")
 #pragma comment(lib, "../../bin/release/libRocketKGERenderer.lib")
@@ -27,7 +29,7 @@ int main()
 	kge::Device dev;
 
 	kge::InitParameters params;
-	params.RendererName = "d3d9";
+	params.RendererName = "ogl";
 	params.AAMode = kge::gfx::EAAM_Off;
 	params.Width = 1024;
 	params.Height = 768;
@@ -57,18 +59,20 @@ int main()
 		return -1;
 	}
 
-	/// Loads the default fonts from the given path.
-		Rocket::Core::String font_names[4];
-		font_names[0] = "Delicious-Roman.otf";
-		font_names[1] = "Delicious-Italic.otf";
-		font_names[2] = "Delicious-Bold.otf";
-		font_names[3] = "Delicious-BoldItalic.otf";
-		Rocket::Core::String strDir = "C:/Akbar/sdks/libRocket/Samples/assets/";
+	// Loads the default fonts from the given path.
+	Rocket::Core::String font_names[4];
+	font_names[0] = "Delicious-Roman.otf";
+	font_names[1] = "Delicious-Italic.otf";
+	font_names[2] = "Delicious-Bold.otf";
+	font_names[3] = "Delicious-BoldItalic.otf";
+	Rocket::Core::String strDir = "C:/Akbar/sdks/libRocket/Samples/assets/";
 
-		for (int i = 0; i < sizeof(font_names) / sizeof(Rocket::Core::String); i++)
-		{
-			Rocket::Core::FontDatabase::LoadFontFace(strDir + font_names[i]);
-		}
+	for (int i = 0; i < sizeof(font_names) / sizeof(Rocket::Core::String); i++)
+	{
+		Rocket::Core::FontDatabase::LoadFontFace(strDir + font_names[i]);
+	}
+
+	Rocket::Debugger::Initialise(context);
 
 	// Load and show the demo document.
 	Rocket::Core::ElementDocument* document = context->LoadDocument("C:/Akbar/sdks/libRocket/Samples/assets/demo.rml");

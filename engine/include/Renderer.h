@@ -199,7 +199,8 @@ namespace kge
 
 			bool			m_bUseStencil,			//!< Create and use stencil buffer
 							m_bUseShaders,			//!< Dose renderer support shaders?
-							m_bIsSceneRunning;		//!< Is scene running
+							m_bIsSceneRunning,		//!< Is scene running
+							m_bOnRelease;			//!< Is renderer on release state
 			bool			m_bEnScissor;			//!< Scissor region is enabled or not \sa EnableScissorRegion
 			int				m_iFPS,					//!< Frame per second
 							m_iFPSTemp,				//!< Temp Frame per second for calculating FPS

@@ -18,7 +18,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		Renderer::Renderer() : m_bUseStencil(false), m_bUseShaders(false),
 			m_bIsSceneRunning(false), m_iFPS(0), m_iFPSTemp(0), m_nIndexBufferID(MAXID),
-			m_nVertexDecID(MAXID), m_iBatchCount(1), m_bEnScissor(false)
+			m_nVertexDecID(MAXID), m_iBatchCount(1), m_bEnScissor(false), m_bOnRelease(false)
 		{
 			// Set texture and vertex IDs to MAXID(NULL)
 			for (int i = 0; i < 8; i++)
@@ -33,6 +33,8 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		Renderer::~Renderer()
 		{
+			m_bOnRelease = true;
+
 			// Delete buffers
 			for (size_t i = 0; i < m_vBuffers.size(); i++)
 			{
@@ -79,6 +81,9 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		void Renderer::RemoveHardwareBuffer( HardwareBuffer* pHB )
 		{
+			if (m_bOnRelease)
+				return;
+
 			int id = pHB->GetID();
 			for (int i = 0; i < m_vBuffers.size(); i++)
 			{

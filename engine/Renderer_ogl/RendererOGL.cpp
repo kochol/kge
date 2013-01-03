@@ -599,12 +599,20 @@ namespace kge
 				break; // ETM_World
 
 			case ETM_View:
-				mWorld = (*mat) * m_mWorld;
+				if (!mat)
+				{
+					m_mView.LoadIdentity();
+				}
+				else
+				{
+					m_mView = (*mat);
+					mWorld   = m_mView * (*mat);
+				}
+				mWorld = m_mView * m_mWorld;
 #if KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				glMatrixMode(GL_MODELVIEW);
 				glLoadMatrixf((GLfloat*)&mWorld);
 #endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
-				m_mView = (*mat);
 				break; // ETM_View
 
 			case ETM_Projection:
@@ -653,6 +661,25 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		void RendererOGL::SetTexture( Texture* pTex, int Stage /*= 0*/ )
 		{
+			if (pTex)
+			{
+				if (m_nTextID[Stage] == pTex->GetHandle())
+					return;
+
+				if (m_nTextID[Stage] == MAXID)
+					glEnable(GL_TEXTURE_2D);
+
+				m_nTextID[Stage] = pTex->GetHandle();
+				glBindTexture(GL_TEXTURE_2D, ((TextureOGL*)pTex)->m_iTexID);
+			}
+			else
+			{
+				if (m_nTextID[Stage] == MAXID)
+					return;
+
+				m_nTextID[Stage] = MAXID;
+				glDisable(GL_TEXTURE_2D);
+			}
 
 		} // SetTexture
 

@@ -29,6 +29,9 @@ namespace kge
 
 			//! Converts the image format
 			virtual bool Convert(TextureFormat ToThisFormat);
+
+			//! Flip the image Y
+			virtual void FlipY();
 		
 		protected:
 

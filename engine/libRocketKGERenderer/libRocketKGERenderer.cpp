@@ -167,6 +167,7 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void libRocketKGERenderer::EnableScissorRegion( bool enable )
 	{
+		g_pRenderer->EnableScissorRegion(enable);
 
 	} // EnableScissorRegion
 
@@ -175,6 +176,7 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void libRocketKGERenderer::SetScissorRegion( int x, int y, int width, int height )
 	{
+		g_pRenderer->SetScissorRegion(x, y, width, height);
 
 	} // SetScissorRegion
 
@@ -202,12 +204,14 @@ namespace kge
 	bool libRocketKGERenderer::GenerateTexture( Rocket::Core::TextureHandle& texture_handle, 
 		const u8* source, const Rocket::Core::Vector2i& source_dimensions )
 	{
+		//return false;
 		// Create image resource
 		int datasize = source_dimensions.x * source_dimensions.y * 4;
 		gfx::Image* pimg = KGE_NEW(gfx::Image)(0, "libRocketTexture", (u8*)source, datasize, 
 			source_dimensions.x, source_dimensions.y, 0, 32, gfx::ETF_A8B8G8R8, 1);
 
 		pimg->Convert(gfx::ETF_A8R8G8B8);
+		//pimg->FlipY();
 
 		// Create texture from an Image
 		gfx::Texture* pTex = g_pRenderer->CreateTexture(pimg);
@@ -230,24 +234,24 @@ namespace kge
 		p->DecRef();
 
 	} // ReleaseTexture
-
-	//------------------------------------------------------------------------------------
-	// Returns the native horizontal texel offset for the renderer.
-	//------------------------------------------------------------------------------------
-	float libRocketKGERenderer::GetHorizontalTexelOffset()
-	{
-		return -0.5f;
-
-	} // GetHorizontalTexelOffset
-
-	//------------------------------------------------------------------------------------
-	// Returns the native vertical texel offset for the renderer.
-	//------------------------------------------------------------------------------------
-	float libRocketKGERenderer::GetVerticalTexelOffset()
-	{
-		return -0.5f;
-
-	} // GetVerticalTexelOffset
+ 
+ 	//------------------------------------------------------------------------------------
+ 	// Returns the native horizontal texel offset for the renderer.
+ 	//------------------------------------------------------------------------------------
+ 	float libRocketKGERenderer::GetHorizontalTexelOffset()
+ 	{
+ 		return -0.5f;
+ 
+ 	} // GetHorizontalTexelOffset
+ 
+ 	//------------------------------------------------------------------------------------
+ 	// Returns the native vertical texel offset for the renderer.
+ 	//------------------------------------------------------------------------------------
+ 	float libRocketKGERenderer::GetVerticalTexelOffset()
+ 	{
+ 		return -0.5f;
+ 
+ 	} // GetVerticalTexelOffset
 
 	//------------------------------------------------------------------------------------
 	// Get the number of seconds elapsed since the start of the application.
