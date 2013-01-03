@@ -91,7 +91,8 @@ namespace kge
 		int* indices, int num_indices, Rocket::Core::TextureHandle texture, 
 		const Rocket::Core::Vector2f& translation )
 	{
-
+		int i = 0;
+		i++;
 	} // RenderGeometry
 
 	//------------------------------------------------------------------------------------
@@ -103,11 +104,19 @@ namespace kge
 	{
 		RocketKGECompiledGeometry* p = KGE_NEW(RocketKGECompiledGeometry);
 
-		// Create vertex and index buffer
+		// Create vertex buffer
 		p->vertices = g_pRenderer->CreateVertexBuffer(vertices, num_vertices, 20);
 		p->num_vertices = num_vertices;
-		p->indices = g_pRenderer->CreateIndexBuffer(indices, num_indices);
+
+		// Create index buffer
+		u16* pIndices = KGE_NEW_ARRAY(u16, num_indices);
+		for (int i = 0; i < num_indices; i++)
+		{
+			pIndices[i] = indices[i];
+		}
+		p->indices = g_pRenderer->CreateIndexBuffer(pIndices, num_indices);
 		p->num_indices = num_indices;
+		KGE_DELETE_ARRAY(pIndices);
 
 		p->texture = texture == NULL ? NULL : (gfx::Texture*) texture;;
 
