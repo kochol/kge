@@ -104,7 +104,12 @@ namespace kge
 
 #elif KGE_PLATFORM == KGE_PLATFORM_LINUX || KGE_PLATFORM == KGE_PLATFORM_ANDROID
 
-		std::string strPluginName = "./lib";
+		std::string strPluginName;
+#	if KGE_PLATFORM == KGE_PLATFORM_LINUX
+		strPluginName  = "./lib";
+#	elif KGE_PLATFORM == KGE_PLATFORM_ANDROID
+		strPluginName  = "/data/data/com.kge.android/lib/lib";
+#endif
 		strPluginName += name;
 		strPluginName += ".so";
 

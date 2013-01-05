@@ -34,7 +34,7 @@ namespace kge
 
 extern "C"
 {
-void Java_com_kge_android_KGEAndroidActivity_AndroidMain
+void Java_com_kge_android_GL2View_AndroidMain
   (JNIEnv *env, jobject obj, jstring jStr)
 {
 	// Get the app name

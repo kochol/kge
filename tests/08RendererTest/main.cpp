@@ -115,3 +115,11 @@ int main()
 	return 0;
 
 } // main
+
+extern "C"
+{
+	void KGEmain()
+	{
+		main();
+	}
+}

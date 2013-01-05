@@ -10,6 +10,7 @@
 #elif KGE_PLATFORM == KGE_PLATFORM_ANDROID
 #   include <EGL/egl.h>
 #   include "GLES2/gl2.h"
+#   include "GLES/gl.h"
 #   include "GLES2/gl2ext.h"
 #else
 #   include "gl3.h"
