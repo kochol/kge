@@ -162,6 +162,7 @@ namespace gfx
 		io::Logger::Info("Using Direct3D9 for rendering.");
 
 		m_pD3DDevice->SetRenderState(D3DRS_LIGHTING, FALSE);
+		m_pD3DDevice->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
 
 		return true;
 
@@ -736,6 +737,58 @@ namespace gfx
 		return (void*)m_pD3DDevice;
 
 	} // GetDirect3dDevice
+
+	//------------------------------------------------------------------------------------
+	// Sets the texture
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::SetTexture( Texture* pTex, int Stage /*= 0*/ )
+	{
+		if (pTex)
+		{
+			if (m_nTextID[Stage] == pTex->GetHandle())
+				return;
+
+			m_nTextID[Stage] = pTex->GetHandle();
+			m_pD3DDevice->SetTexture(Stage, ((TextureDX9*)pTex)->m_pTexture);
+		}
+		else
+		{
+			if (m_nTextID[Stage] == MAXID)
+				return;
+
+			m_nTextID[Stage] = MAXID;
+			m_pD3DDevice->SetTexture(Stage, NULL);
+		}
+
+	} // SetTexture
+
+	//------------------------------------------------------------------------------------
+	// Enable/Disable Scissor region
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::EnableScissorRegion( bool enable )
+	{
+		if (m_bEnScissor == enable)
+			return;
+
+		m_bEnScissor = enable;
+		m_pD3DDevice->SetRenderState(D3DRS_SCISSORTESTENABLE, enable);
+
+	} // EnableScissorRegion
+
+	//------------------------------------------------------------------------------------
+	// Sets the scissor region
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::SetScissorRegion( int x, int y, int width, int height )
+	{
+		RECT scissor_rect;
+		scissor_rect.left = x;
+		scissor_rect.right = x + width;
+		scissor_rect.top = y;
+		scissor_rect.bottom = y + height;
+
+		m_pD3DDevice->SetScissorRect(&scissor_rect);
+
+	} // SetScissorRegion
 
 } // gfx
 

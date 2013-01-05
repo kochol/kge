@@ -71,6 +71,8 @@ namespace kge
 			else
 				m_vResources[pResource->GetHandle()] = pResource;
 
+			pResource->m_pMyMgr = (void*)this;
+
 			return pResource->GetHandle();
 
 		} // AddManualResource
@@ -187,6 +189,9 @@ namespace kge
 				m_sHandles.pop();
 			}
 
+			pResource->m_pMyMgr = (void*)this;
+			((Resource*)pResource)->m_iHandle = handle;
+
 			return pResource;
 
 		} // Load
@@ -195,7 +200,7 @@ namespace kge
 
 		std::vector<T*>			m_vResources;		/**< Stores the resources */
 		std::stack<u32>			m_sHandles;			/**< Stores the unused handles number*/
-		std::vector<Loader*>		m_vLoaders;			//!< Stores the resource loaders
+		std::vector<Loader*>	m_vLoaders;			//!< Stores the resource loaders
 
 	}; // ResourceManager
 

@@ -17,7 +17,7 @@ namespace kge
                 //! Destructor
                 ~TextureOGL();
 
-            protected:
+				uint		m_iTexID;		//!< The texture ID in opengl
 
         }; // TextureOGL
 

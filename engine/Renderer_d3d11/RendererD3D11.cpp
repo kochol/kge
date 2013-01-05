@@ -595,6 +595,30 @@ return NULL;
 
 	} // GetDirect3dDevice
 
+	//------------------------------------------------------------------------------------
+	// Sets the texture
+	//------------------------------------------------------------------------------------
+	void RendererD3D11::SetTexture( Texture* pTex, int Stage /*= 0*/ )
+	{
+
+	} // SetTexture
+
+	//------------------------------------------------------------------------------------
+	// Enable/Disable Scissor region
+	//------------------------------------------------------------------------------------
+	void RendererD3D11::EnableScissorRegion( bool enable )
+	{
+
+	} // EnableScissorRegion
+
+	//------------------------------------------------------------------------------------
+	// Sets the scissor region
+	//------------------------------------------------------------------------------------
+	void RendererD3D11::SetScissorRegion( int x, int y, int width, int height )
+	{
+
+	} // SetScissorRegion
+
 } // gfx
 
 } // kge

@@ -38,3 +38,5 @@
 - (Add) EntityManager
 - (Add) World
 - (Add) WorldManager
+* Tools
+- (Add) libRocketKGERenderer

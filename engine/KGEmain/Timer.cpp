@@ -16,8 +16,9 @@ namespace kge
 
 			ims = freq.QuadPart;// / 1000;
 
-			QueryPerformanceCounter(&lastTick);
-			base = lastTick;
+		QueryPerformanceCounter(&lastTick);
+		base = lastTick;
+		Interval = 0;
 
 #else
 #ifdef KGE_USE_SDL
@@ -53,23 +54,28 @@ namespace kge
 			{
 				iTime = (int)((__int64)curTick.QuadPart - (__int64)lastTick.QuadPart);
 			}
-			if ((iTime / ims) > 0 && Reset)
+			if (Reset)
 				lastTick = curTick;
 			return iTime * 1000000LL / ims;
 
-#else
-#ifdef KGE_USE_SDL
-
-			u32 tempT;
-			tempT = SDL_GetTicks();
-			currentTime = tempT - oldTime;
-			oldTime = tempT;
-			return currentTime;
-
-#endif // KGE_USE_SDL
 #endif // WIN32
 
 		} // GetTime
+
+		//------------------------------------------------------------------------------------
+		// Check if the interval passes or not?
+		//------------------------------------------------------------------------------------
+		bool Timer::NextFrame()
+		{
+			if (GetTime(false) > Interval)
+			{
+				GetTime(true);
+				return true;
+			}
+
+			return false;
+
+		} // NextFrame
 
 	} // core
 

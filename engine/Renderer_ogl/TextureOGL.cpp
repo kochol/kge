@@ -45,44 +45,40 @@ namespace kge
 			}
 
 			// Finding texture format
-			glCompressedTexImage2D()
-			GLenum format = D3DFMT_UNKNOWN;
+			GLenum format = 0;
+			bool Compressed = false;
 			switch (m_Format)
 			{
 			case ETF_A8R8G8B8:
-				format = D3DFMT_A8R8G8B8;
+				format = GL_RGBA;
 				break;
 
 			case ETF_A8B8G8R8:
-				format = D3DFMT_A8B8G8R8;
+				format = GL_BGRA;
 				break;
 
 			case ETF_X8R8G8B8:
-				format = D3DFMT_X8R8G8B8;
+				format = GL_RGBA;	// TODO: I'm not sure about this
 				break;
 
 			case ETF_X8B8G8R8:
-				format = D3DFMT_X8B8G8R8;
+				format = GL_BGRA;	// TODO: I'm not sure about this
 				break;
 
 			case ETF_DXT1:
-				format = D3DFMT_DXT1;
+				format = GL_COMPRESSED_RGB_S3TC_DXT1_EXT;
+				Compressed = true;
 				break;
 
-			case ETF_DXT2:
-				format = D3DFMT_DXT2;
-				break;
 
 			case ETF_DXT3:
-				format = D3DFMT_DXT3;
-				break;
-
-			case ETF_DXT4:
-				format = D3DFMT_DXT4;
+				format = GL_COMPRESSED_RGBA_S3TC_DXT3_EXT;
+				Compressed = true;
 				break;
 
 			case ETF_DXT5:
-				format = D3DFMT_DXT5;
+				format = GL_COMPRESSED_RGBA_S3TC_DXT5_EXT;
+				Compressed = true;
 				break;
 
 			default:
@@ -91,15 +87,11 @@ namespace kge
 
 			}
 
-			// Create D3D9 texture
-			if (FAILED(pD3DDevice->CreateTexture(m_iWidth, m_iHeight, m_iMipmapsCount,
-				0, format, D3DPOOL_MANAGED, &m_pTexture, NULL)))
-			{
-				io::Logger::Error("Can't create texture from %s", pImg->GetFileName());
-				return;
-			}
+			// Create OpenGL texture
+			glEnable(GL_TEXTURE_2D);
+			glGenTextures(1, &m_iTexID);
+			glBindTexture(GL_TEXTURE_2D, m_iTexID);
 
-			D3DLOCKED_RECT lockedRect = {0};
 			unsigned int rowSize = 0;
 			unsigned int numRows = 0;
 			unsigned int size = 0;
@@ -121,19 +113,15 @@ namespace kge
 
 				size = rowSize * numRows;
 
-				if (SUCCEEDED(m_pTexture->LockRect(i, &lockedRect, 0, 0)))
-				{
-					unsigned char* pDest = reinterpret_cast<unsigned char*>(lockedRect.pBits);
+				// Send the texture data
+				if (Compressed)
+					glCompressedTexImage2D(GL_TEXTURE_2D, i, format, width, height, 0, size, 
+						(GLvoid*)pSrc);
+				else
+					glTexImage2D(GL_TEXTURE_2D, i, format, width, height, 0, GL_BGR_EXT, 
+						GL_UNSIGNED_BYTE, (GLvoid*)pSrc);
 
-					for (unsigned int j = 0; j < numRows; ++j)
-					{
-						memcpy_s(pDest, lockedRect.Pitch, pSrc, rowSize);
-						pDest += lockedRect.Pitch;
-						pSrc += rowSize;
-					}
-
-					m_pTexture->UnlockRect(i);
-				}
+				pSrc += size;
 
 				width = width >> 1;
 				height = height >> 1;

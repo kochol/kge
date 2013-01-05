@@ -19,6 +19,11 @@ namespace kge
 			//! Get the time passed
 			uint GetTime(bool Reset);
 
+			//! Check if the interval passes or not?
+			bool NextFrame();
+
+			uint Interval;
+
 		protected:
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS

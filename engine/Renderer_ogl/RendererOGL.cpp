@@ -5,6 +5,7 @@
 
 #include "RendererOGL.h"
 #include "initGL.h"
+#include "TextureOGL.h"
 #include "../include/Logger.h"
 #include <stdio.h>
 #include <stdio.h>
@@ -493,6 +494,10 @@ namespace kge
 					glVertexPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
 					glEnableClientState(GL_VERTEX_ARRAY);
 					break;
+
+				case EVEU_TexCoord:
+					glTexCoordPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
+					glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 				}
 			}
 
@@ -555,11 +560,14 @@ namespace kge
 			if (ICount > 0)
 			{
 				glDrawElements(GL_TRIANGLES, ICount, GL_UNSIGNED_SHORT, 0);
+				m_iTriCount += ICount / 3 * m_iBatchCount;
 			}
 			else
 			{
 				glDrawArrays(GL_TRIANGLES, 0, VCount);
+				m_iTriCount += VCount / 3 * m_iBatchCount;
 			}
+			m_iDrawCount++;
 
 		} // DrawTriangleList
 
@@ -591,12 +599,20 @@ namespace kge
 				break; // ETM_World
 
 			case ETM_View:
-				mWorld = (*mat) * m_mWorld;
+				if (!mat)
+				{
+					m_mView.LoadIdentity();
+				}
+				else
+				{
+					m_mView = (*mat);
+					mWorld   = m_mView * (*mat);
+				}
+				mWorld = m_mView * m_mWorld;
 #if KGE_PLATFORM != KGE_PLATFORM_ANDROID
 				glMatrixMode(GL_MODELVIEW);
 				glLoadMatrixf((GLfloat*)&mWorld);
 #endif // KGE_PLATFORM != KGE_PLATFORM_ANDROID
-				m_mView = (*mat);
 				break; // ETM_View
 
 			case ETM_Projection:
@@ -634,10 +650,54 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		Texture* RendererOGL::CreateTexture( Image* pImg )
 		{
+			Texture* pTex = KGE_NEW(TextureOGL)(pImg);
 
-			return NULL;
+			return pTex;
 
 		} // CreateTexture
+
+		//------------------------------------------------------------------------------------
+		// Sets the texture
+		//------------------------------------------------------------------------------------
+		void RendererOGL::SetTexture( Texture* pTex, int Stage /*= 0*/ )
+		{
+			if (pTex)
+			{
+				if (m_nTextID[Stage] == pTex->GetHandle())
+					return;
+
+				if (m_nTextID[Stage] == MAXID)
+					glEnable(GL_TEXTURE_2D);
+
+				m_nTextID[Stage] = pTex->GetHandle();
+				glBindTexture(GL_TEXTURE_2D, ((TextureOGL*)pTex)->m_iTexID);
+			}
+			else
+			{
+				if (m_nTextID[Stage] == MAXID)
+					return;
+
+				m_nTextID[Stage] = MAXID;
+				glDisable(GL_TEXTURE_2D);
+			}
+
+		} // SetTexture
+
+		//------------------------------------------------------------------------------------
+		// Enable/Disable Scissor region
+		//------------------------------------------------------------------------------------
+		void RendererOGL::EnableScissorRegion( bool enable )
+		{
+
+		} // EnableScissorRegion
+
+		//------------------------------------------------------------------------------------
+		// Sets the scissor region
+		//------------------------------------------------------------------------------------
+		void RendererOGL::SetScissorRegion( int x, int y, int width, int height )
+		{
+
+		} // SetScissorRegion
 
 	} // gfx
 

@@ -145,7 +145,7 @@ namespace kge
 				height = height >> 1;
 				if (width == 0) { width = 1; }
 				if (height == 0) { height = 1; }
-			}
+			}			
 
 		} // Constructor
 

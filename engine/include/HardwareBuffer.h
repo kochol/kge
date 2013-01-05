@@ -2,6 +2,7 @@
 #define KGE_HARDWAREBUFFER_H
 
 #include "Resource.h"
+#include "Renderer.h"
 
 namespace kge
 {
@@ -28,7 +29,10 @@ namespace kge
 			HardwareBuffer(u32 count, u32 stride, u32 id) : m_bDynamic(false), m_iDataCount(count), m_iStride(stride), m_iID(id) {}
 
 			//! Destructor
-			virtual ~HardwareBuffer() {}
+			virtual ~HardwareBuffer() 
+			{
+				Renderer::GetPointer()->RemoveHardwareBuffer(this);
+			}
 
 			/*! sets the buffer data if buffer is dynamic.
 			\param Data The data pointer

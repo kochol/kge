@@ -73,7 +73,7 @@ namespace kge
 				\return Returns the created index buffer
 				\sa HardwareBuffer
 			 */
-			virtual HardwareBuffer* CreateIndexBuffer(	void* Indices, u32 ICount,
+			HardwareBuffer* CreateIndexBuffer(	void* Indices, u32 ICount,
 				IndexBufferType eIndexBufferType,
 				bool isDynamic);
 
@@ -83,14 +83,14 @@ namespace kge
 				\param stage The stage number for using in multi streaming
 				\sa CreateVertexBuffer, HardwareBuffer
 			 */
-			virtual void SetVertexBuffer(HardwareBuffer* pBuffer, int stage);
+			void SetVertexBuffer(HardwareBuffer* pBuffer, int stage);
 
 			//! Sets the index buffer for rendering
 			/*!
 				\param pBuffer The pointer to index buffer
 				\sa CreateIndexBuffer, HardwareBuffer
 			 */
-			virtual void SetIndexBuffer(HardwareBuffer* pBuffer);
+			void SetIndexBuffer(HardwareBuffer* pBuffer);
 
 			//! Create a custom vertex declaration and returns its pointer
 			/*!
@@ -98,7 +98,7 @@ namespace kge
 				\return Returns the created VertexDec pointer
 				\sa VertexDec, CustomVertexElement
 			 */
-			virtual VertexDec* CreateVertexDeclaration
+			VertexDec* CreateVertexDeclaration
 				(core::DynamicArray<CustomVertexElement> VertexInfoArray, core::stringc& sName);
 
 			//! Sets the vertex declaration
@@ -106,7 +106,7 @@ namespace kge
 				\pVD The VertexDec pointer to set
 				\sa VertexDec, CustomVertexElement, CreateVertexDeclaration
 			 */
-			virtual void SetVertexDeclaration(VertexDec* pVD);
+			void SetVertexDeclaration(VertexDec* pVD);
 
 			//! Draw a list of triangles
 			/*! Draw a vertex buffer you must set the buffers manually before calling this function
@@ -125,7 +125,7 @@ namespace kge
 				\param TM The enum that define the TransformMode. Note you can not use ETM_ViewProjection here
 				\sa GetTransform
 			 */
-			virtual void SetTransForm(math::Matrix *mat, TransformMode TM = ETM_World);
+			void SetTransForm(math::Matrix *mat, TransformMode TM = ETM_World);
 
 			//! Returns the transformation of World, View, Projection or ViewProjection matrices
 			/*!
@@ -133,7 +133,7 @@ namespace kge
 			  \returns Returns the requested matrix
 			  \sa SetTransform
 			 */
-			virtual math::Matrix GetTransForm(TransformMode TM = ETM_World);
+			math::Matrix GetTransForm(TransformMode TM = ETM_World);
 
 			//! Removes VertexBufferDX9 from internal list.
 			void RemoveVertexBuffer(VertexBufferDX11* vb);
@@ -142,17 +142,26 @@ namespace kge
 			void RemoveIndexBuffer(IndexBufferDX11* ib);
 
 			//! Sets the clear color
-			virtual void SetClearColor(const Color& ClearColor);
+			void SetClearColor(const Color& ClearColor);
 
 			//! Creates a texture from an image.
 			/*!
 			  \param pImg The Image resource pointer that you want to create texture from.
 			  \returns Returns the created Texture pointer
 			 */
-			virtual Texture* CreateTexture(Image* pImg);
+			Texture* CreateTexture(Image* pImg);
 
 			//! Returns the D3D device if the renderer is D3D
-			virtual void* GetDirect3dDevice();
+			void* GetDirect3dDevice();
+
+			//! Sets the texture
+			void SetTexture(Texture* pTex, int Stage = 0);			
+
+			//! Enable/Disable Scissor region
+			void EnableScissorRegion(bool enable);
+
+			//! Sets the scissor region
+			void SetScissorRegion(int x, int y, int width, int height);
 
 		protected:
 
