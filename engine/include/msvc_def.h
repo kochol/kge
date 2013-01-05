@@ -73,6 +73,12 @@
 	#define KGE_API __declspec( dllimport )
 #endif
 
+#ifdef KGELIB_EXPORTS
+#define KGELIB_API __declspec( dllexport )
+#else
+#define KGELIB_API __declspec( dllimport )
+#endif
+
 #define KGE_IMPORT __declspec( dllimport )
 
 //=====================================

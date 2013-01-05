@@ -1,40 +1,12 @@
 #pragma once
 
 #include <Rocket/Core/RenderInterface.h>
-#include <Rocket/Core/SystemInterface.h>
 #include "kgedef.h"
 #include "VertexDeclaration.h"
 
-//=====================================
-// DLL export / import
-//=====================================
-#if defined( _MSC_VER )
-#	ifdef LIBROCKETKGERENDERER_EXPORTS
-#		define KGEROCKET_API __declspec( dllexport )
-#	else
-#		define KGEROCKET_API __declspec( dllimport )
-#	endif
-#endif
-
 namespace kge
 {
-	class KGEROCKET_API libRocketKGESystem: public Rocket::Core::SystemInterface
-	{
-	public:
-
-		/// Get the number of seconds elapsed since the start of the application.
-		/// @return Elapsed time, in seconds.
-		float GetElapsedTime();
-
-		/// Log the specified message.
-		/// @param[in] type Type of log message, ERROR, WARNING, etc.
-		/// @param[in] message Message to log.
-		/// @return True to continue execution, false to break into the debugger.
-		bool LogMessage(Rocket::Core::Log::Type type, const Rocket::Core::String& message);
-
-	}; // libRocketKGESystem
-
-	class KGEROCKET_API libRocketKGERenderer: public Rocket::Core::RenderInterface
+	class KGELIB_API libRocketKGERenderer: public Rocket::Core::RenderInterface
 	{
 	public:
 

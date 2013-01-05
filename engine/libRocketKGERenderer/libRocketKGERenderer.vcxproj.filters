@@ -18,9 +18,15 @@
     <ClInclude Include="..\include\libRocketKGERenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\libRocketKGESystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="libRocketKGERenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libRocketKGESystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

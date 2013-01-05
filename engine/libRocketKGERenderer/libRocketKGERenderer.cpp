@@ -211,7 +211,6 @@ namespace kge
 			source_dimensions.x, source_dimensions.y, 0, 32, gfx::ETF_A8B8G8R8, 1);
 
 		pimg->Convert(gfx::ETF_A8R8G8B8);
-		//pimg->FlipY();
 
 		// Create texture from an Image
 		gfx::Texture* pTex = g_pRenderer->CreateTexture(pimg);
@@ -252,45 +251,5 @@ namespace kge
  		return -0.5f;
  
  	} // GetVerticalTexelOffset
-
-	//------------------------------------------------------------------------------------
-	// Get the number of seconds elapsed since the start of the application.
-	//------------------------------------------------------------------------------------
-	float libRocketKGESystem::GetElapsedTime()
-	{
-		static core::Timer t;
-
-		return (float)t.GetTime(false) / 1000000.0f;
-
-	} // GetElapsedTime
-
-	//------------------------------------------------------------------------------------
-	// Log the specified message.
-	//------------------------------------------------------------------------------------
-	bool libRocketKGESystem::LogMessage( Rocket::Core::Log::Type type, const Rocket::Core::String& message )
-	{
-		switch (type)
-		{
-		case Rocket::Core::Log::Type::LT_ASSERT:
-		case Rocket::Core::Log::Type::LT_ERROR:
-			io::Logger::Error("LibRocket: %s", message.CString());
-			break;
-
-		case Rocket::Core::Log::Type::LT_DEBUG:
-			io::Logger::Debug("LibRocket: %s", message.CString());
-			break;
-
-		case Rocket::Core::Log::Type::LT_WARNING:
-			io::Logger::Warning("LibRocket: %s", message.CString());
-			break;
-
-		case Rocket::Core::Log::Type::LT_INFO:
-			io::Logger::Info("LibRocket: %s", message.CString());
-			break;
-		}
-		
-		return true;
-
-	} // LogMessage
 
 } // kge

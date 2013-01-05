@@ -69,7 +69,8 @@ namespace kge
 				// If possible create a buffered keyboard
 				// (note: if below line doesn't compile, try:  if (mInputSystem->getNumberOfDevices(OIS::OISKeyboard) > 0) {
 				//if( mInputSystem->numKeyboards() > 0 ) {
-				if (mInputSystem->getNumberOfDevices(OIS::OISKeyboard) > 0) {
+				if (mInputSystem->getNumberOfDevices(OIS::OISKeyboard) > 0) 
+				{
 					mKeyboard = static_cast<OIS::Keyboard*>( mInputSystem->createInputObject( OIS::OISKeyboard, true ) );
 					mKeyboard->setEventCallback( this );
 					m_pKeyboard = KGE_NEW(KeyboardOIS)();
@@ -79,14 +80,16 @@ namespace kge
 				// If possible create a buffered mouse
 				// (note: if below line doesn't compile, try:  if (mInputSystem->getNumberOfDevices(OIS::OISMouse) > 0) {
 				//if( mInputSystem->numMice() > 0 ) {
-				if (mInputSystem->getNumberOfDevices(OIS::OISMouse) > 0) {
+				if (mInputSystem->getNumberOfDevices(OIS::OISMouse) > 0) 
+				{
 					mMouse = static_cast<OIS::Mouse*>( mInputSystem->createInputObject( OIS::OISMouse, true ) );
 					mMouse->setEventCallback( this );
 					m_pMouse = KGE_NEW(MouseOIS)();
-					((MouseOIS*)m_pMouse)->mMouse = mMouse;
+					((MouseOIS*)m_pMouse)->mMouse = mMouse;					
  				}
- 
+
 			}
+
 		} // Initialise
 
 		//------------------------------------------------------------------------------------
@@ -128,6 +131,16 @@ namespace kge
 		{
 			return this->MouseReleased(m_pMouse->getMouseState(), (MouseButtonID)id);
 		}
+
+		//------------------------------------------------------------------------------------
+		// Sets the window size
+		//------------------------------------------------------------------------------------
+		void InputMgrOIS::setWindowExtents( int width, int height )
+		{
+			mMouse->getMouseState().width = width;
+			mMouse->getMouseState().height = height;
+
+		} // setWindowExtents
 
 
 	} // io

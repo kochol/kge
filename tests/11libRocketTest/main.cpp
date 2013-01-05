@@ -3,6 +3,7 @@
 #include "../../engine/include/math.h"
 #include "../../engine/include/Logger.h"
 #include "../../engine/include/libRocketKGERenderer.h"
+#include "../../engine/include/libRocketKGESystem.h"
 #include "../../engine/include/PluginManager.h"
 #include <stdio.h>
 #include <Rocket/Core.h>
@@ -29,7 +30,8 @@ int main()
 	kge::Device dev;
 
 	kge::InitParameters params;
-	params.RendererName = "ogl";
+	params.RendererName = "d3d9";
+	params.InputMgrName = "OIS";
 	params.AAMode = kge::gfx::EAAM_Off;
 	params.Width = 1024;
 	params.Height = 768;
@@ -58,6 +60,7 @@ int main()
 		Rocket::Core::Shutdown();
 		return -1;
 	}
+	system_interface.SetContext(context);
 
 	// Loads the default fonts from the given path.
 	Rocket::Core::String font_names[4];
@@ -65,7 +68,7 @@ int main()
 	font_names[1] = "Delicious-Italic.otf";
 	font_names[2] = "Delicious-Bold.otf";
 	font_names[3] = "Delicious-BoldItalic.otf";
-	Rocket::Core::String strDir = "C:/Akbar/sdks/libRocket/Samples/assets/";
+	Rocket::Core::String strDir = "D:/sdks/libRocket/Samples/assets/";
 
 	for (int i = 0; i < sizeof(font_names) / sizeof(Rocket::Core::String); i++)
 	{
@@ -73,9 +76,10 @@ int main()
 	}
 
 	Rocket::Debugger::Initialise(context);
+	Rocket::Debugger::SetVisible(true);
 
 	// Load and show the demo document.
-	Rocket::Core::ElementDocument* document = context->LoadDocument("C:/Akbar/sdks/libRocket/Samples/assets/demo.rml");
+	Rocket::Core::ElementDocument* document = context->LoadDocument("D:/sdks/libRocket/Samples/assets/demo.rml");
 	if (document != NULL)
 	{
 		document->Show();

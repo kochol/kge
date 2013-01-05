@@ -28,6 +28,9 @@ namespace kge
 			//! Capture the inputs
 			void Capture();
 
+			//! Sets the window size
+			void setWindowExtents( int width, int height );
+
 		protected:
 
 			bool keyPressed( const OIS::KeyEvent &e );

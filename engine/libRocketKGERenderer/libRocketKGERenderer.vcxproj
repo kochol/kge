@@ -50,7 +50,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBROCKETKGERENDERER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>KGELIB_EXPORTS;WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBROCKETKGERENDERER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -76,9 +76,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\include\libRocketKGERenderer.h" />
+    <ClInclude Include="..\include\libRocketKGESystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="libRocketKGERenderer.cpp" />
+    <ClCompile Include="libRocketKGESystem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

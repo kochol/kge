@@ -59,7 +59,7 @@ namespace kge
 			void RemoveAllMouseListeners( void );
 
 			//! Sets the window size
-			void setWindowExtents( int width, int height );
+			virtual void setWindowExtents( int width, int height );
  
 			//! Returns the mouse device pointer
 			Mouse*    GetMouse() { return m_pMouse; }

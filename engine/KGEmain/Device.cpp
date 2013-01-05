@@ -119,6 +119,7 @@ namespace kge
 			{
 				m_pInputMgr = m_pPluginMgr->GetInputManagerPlugin(0)->Create();
 				m_pInputMgr->Initialise(params.hwnd);
+				m_pInputMgr->setWindowExtents(params.Width, params.Height);
 			}
 		}
 
