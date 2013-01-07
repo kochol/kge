@@ -1,4 +1,5 @@
 #include "../include/InputManager.h"
+#include "../include/KgeMemory.h"
 
 namespace kge
 {
@@ -14,6 +15,16 @@ namespace kge
 			mInputManager = this;
 
 		} // Constructor
+
+		//------------------------------------------------------------------------------------
+		// Destructor
+		//------------------------------------------------------------------------------------
+		InputManager::~InputManager()
+		{
+			KGE_DELETE(m_pKeyboard, Keyboard);
+			KGE_DELETE(m_pMouse, Mouse);
+
+		} // Destructor
 
 		//------------------------------------------------------------------------------------
 		// Add a KeyListener for handling the keyboard events

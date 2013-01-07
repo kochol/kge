@@ -63,6 +63,13 @@ namespace kge
 		}
 		m_vLoaderPlugins.clear();
 
+		// Delete input manager plugins
+		for (size_t i = 0; i < m_vInputMgrPlugins.size(); i++)
+		{
+			KGE_DELETE(m_vInputMgrPlugins[i], InputMgrPlugin);
+		}
+		m_vInputMgrPlugins.clear();
+
 	} // Release
 
 	//------------------------------------------------------------------------------------

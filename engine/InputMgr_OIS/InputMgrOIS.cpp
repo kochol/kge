@@ -45,6 +45,7 @@ namespace kge
 				mKeyListeners.clear();
 				mMouseListeners.clear();
 			}
+
 		} // Destructor
 
 		//------------------------------------------------------------------------------------

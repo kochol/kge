@@ -18,7 +18,7 @@ namespace kge
 		public:
 
 			//! Destructor
-			virtual ~InputManager() {}
+			virtual ~InputManager();
 
 			//! Initialise the InputManager
 			/**

@@ -54,6 +54,7 @@ namespace kge
 		KGE_DELETE(g_pImageManager, ResourceManager);
 		KGE_DELETE(g_pTextureManager, ResourceManager);
 		KGE_DELETE(g_pDefaultFileSystem, FileSystem);
+		KGE_DELETE(m_pInputMgr, InputManager);
 		m_pPluginMgr->Release();
 		core::Profiler::GetPointer()->Release();
 		io::FileSystemManager::getSingletonPtr()->Release();
