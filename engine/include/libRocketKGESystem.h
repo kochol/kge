@@ -28,6 +28,9 @@ namespace kge
 		//! Sets the rocket context for sending inputs to it.
 		void SetContext(Rocket::Core::Context*	pContext);
 
+		//! Updates and render the context
+		void Render();
+
 	protected:
 
 		Rocket::Core::Context	*	m_pContext;

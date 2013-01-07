@@ -1,7 +1,10 @@
 #include "../include/libRocketKGESystem.h"
 #include "../include/Logger.h"
 #include "../include/Timer.h"
+#include "../include/Renderer.h"
 #include "../include/InputManager.h"
+
+KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;
 
 namespace kge
 {
@@ -73,7 +76,6 @@ namespace kge
 		if (m_pContext)
 		{			
 			m_pContext->ProcessMouseMove(arg.X.abs, arg.Y.abs, GetKeyModifierState());
-			io::Logger::Debug("%d %d", arg.X.abs, arg.Y.abs);
 		}
 
 		return true;
@@ -135,5 +137,17 @@ namespace kge
 		return keystate;
 
 	} // GetKeyModifierState
+
+	//------------------------------------------------------------------------------------
+	// Updates and render the context
+	//------------------------------------------------------------------------------------
+	void libRocketKGESystem::Render()
+	{
+		g_pRenderer->Enable(gfx::ERF_AlphaBlending);
+		m_pContext->Update();
+		m_pContext->Render();
+		g_pRenderer->Disable(gfx::ERF_AlphaBlending);
+
+	} // Render
 
 } // kge

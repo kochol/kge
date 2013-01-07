@@ -98,8 +98,7 @@ int main()
 	while (dev.Run())
 	{
 		pRen->BeginRendering(true, true, true);
-		context->Update();
-		context->Render();
+		system_interface.Render();
 		pRen->EndRendering();
 	}
 
