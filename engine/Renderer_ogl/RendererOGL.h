@@ -149,8 +149,15 @@ namespace kge
 			//! Sets the texture
 			void SetTexture(Texture* pTex, int Stage = 0);
 
-			//! Enable/Disable Scissor region
-			void EnableScissorRegion(bool enable);
+			/*! Enable render flags.
+				\param RF The RenderFlags that you want to be enabled.
+			*/
+			void Enable(RenderFlags RF);
+
+			/*! Disable render flags.
+				\param RF The RenderFlags that you want to be disabled.
+			*/
+			void Disable ( RenderFlags RF );
 
 			//! Sets the scissor region
 			void SetScissorRegion(int x, int y, int width, int height);

@@ -763,19 +763,6 @@ namespace gfx
 	} // SetTexture
 
 	//------------------------------------------------------------------------------------
-	// Enable/Disable Scissor region
-	//------------------------------------------------------------------------------------
-	void RendererD3D9::EnableScissorRegion( bool enable )
-	{
-		if (m_bEnScissor == enable)
-			return;
-
-		m_bEnScissor = enable;
-		m_pD3DDevice->SetRenderState(D3DRS_SCISSORTESTENABLE, enable);
-
-	} // EnableScissorRegion
-
-	//------------------------------------------------------------------------------------
 	// Sets the scissor region
 	//------------------------------------------------------------------------------------
 	void RendererD3D9::SetScissorRegion( int x, int y, int width, int height )
@@ -789,6 +776,171 @@ namespace gfx
 		m_pD3DDevice->SetScissorRect(&scissor_rect);
 
 	} // SetScissorRegion
+
+	//------------------------------------------------------------------------------------
+	// Enable render flags
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::Enable( RenderFlags RF )
+	{
+		if (m_bRF[RF])
+			return;
+
+		switch (RF)
+		{
+			//////////////////////
+			// Alpha Blending. //
+			////////////////////
+		case ERF_AlphaBlending:
+			m_pD3DDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
+			m_pD3DDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);
+			m_pD3DDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);
+			break;
+
+			//////////////////////////
+			// Additive blending   //
+			////////////////////////
+		case ERF_AdditiveBlending:
+			m_pD3DDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, TRUE);
+			m_pD3DDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);
+			m_pD3DDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_ONE);
+			break;
+
+			/////////////////
+			// Alpha test //
+			///////////////
+		case ERF_AlphaTest:
+			m_pD3DDevice->SetRenderState(D3DRS_ALPHATESTENABLE, true);
+			m_pD3DDevice->SetRenderState(D3DRS_ALPHAFUNC, D3DCMP_GREATER);
+			m_pD3DDevice->SetRenderState(D3DRS_ALPHAREF, 100);
+			break;
+
+			//////////////////////
+			// Stencil Buffer. //
+			////////////////////
+		case ERF_StencilBuffer:
+			if ( m_bUseStencil == false )
+				return;
+			m_pD3DDevice->SetRenderState(D3DRS_STENCILENABLE, TRUE);
+			break;
+
+			///////////////////////////////
+			// Depth Buffer (Z Buffer). //
+			/////////////////////////////
+		case ERF_DepthBuffer:
+			m_pD3DDevice->SetRenderState(D3DRS_ZENABLE, TRUE);
+			break;
+
+			/////////////////////////////////
+			// Write to the depth buffer. //
+			///////////////////////////////
+		case ERF_ZWrite:
+			m_pD3DDevice->SetRenderState(D3DRS_ZWRITEENABLE, TRUE);
+			break;
+
+			////////////////////////////
+			// Wire frame rendering. //
+			//////////////////////////
+		case ERF_WireFrame:
+			m_pD3DDevice->SetRenderState(D3DRS_FILLMODE, D3DFILL_WIREFRAME);
+			break;
+
+			/////////////////////////////////
+			// Color rendering to buffers //
+			///////////////////////////////
+		case ERF_ColorRendering:
+			m_pD3DDevice->SetRenderState(D3DRS_COLORWRITEENABLE, 0x0000000f);
+			break;
+
+			/////////////////
+			// Scissoring //
+			///////////////
+		case ERF_Scissor:
+			m_pD3DDevice->SetRenderState(D3DRS_SCISSORTESTENABLE, TRUE);
+			break;
+
+		} // switch (RF)
+
+		m_bRF[RF] = true;
+
+	} // Enable
+
+	//------------------------------------------------------------------------------------
+	// Disable render flags
+	//------------------------------------------------------------------------------------
+	void RendererD3D9::Disable( RenderFlags RF )
+	{
+		if (m_bRF[RF] == false)
+			return;
+
+		switch (RF)
+		{
+			//////////////////////
+			// Alpha Blending. //
+			////////////////////
+			//////////////////////////
+			// Additive blending   //
+			////////////////////////
+		case ERF_AlphaBlending:
+		case ERF_AdditiveBlending:
+			m_pD3DDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, FALSE);
+			break;
+
+			/////////////////
+			// Alpha test //
+			///////////////
+		case ERF_AlphaTest:
+			m_pD3DDevice->SetRenderState(D3DRS_ALPHATESTENABLE, FALSE);
+			break;
+
+			//////////////////////
+			// Stencil Buffer. //
+			////////////////////
+		case ERF_StencilBuffer:
+			if ( m_bUseStencil == false )
+				return;
+			m_pD3DDevice->SetRenderState(D3DRS_STENCILENABLE, FALSE);
+			break;
+
+			///////////////////////////////
+			// Depth Buffer (Z Buffer). //
+			/////////////////////////////
+		case ERF_DepthBuffer:
+			m_pD3DDevice->SetRenderState(D3DRS_ZENABLE, FALSE);
+			break;
+
+			/////////////////////////////////
+			// Write to the depth buffer. //
+			///////////////////////////////
+		case ERF_ZWrite:
+			m_pD3DDevice->SetRenderState(D3DRS_ZWRITEENABLE, FALSE);
+			break;
+
+			////////////////////////////
+			// Wire frame rendering. //
+			//////////////////////////
+		case ERF_WireFrame:
+			m_pD3DDevice->SetRenderState(D3DRS_FILLMODE, D3DFILL_SOLID);
+			break;
+
+			/////////////////////////////////
+			// Color rendering to buffers //
+			///////////////////////////////
+		case ERF_ColorRendering:
+			m_pD3DDevice->SetRenderState(D3DRS_COLORWRITEENABLE, 0);
+			break;
+
+			/////////////////
+			// Scissoring //
+			///////////////
+		case ERF_Scissor:
+			m_pD3DDevice->SetRenderState(D3DRS_SCISSORTESTENABLE, FALSE);
+			break;
+
+		} // switch (RF)
+
+		m_bRF[RF] = false;
+
+	} // Disable
 
 } // gfx
 
