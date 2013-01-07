@@ -18,13 +18,17 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		Renderer::Renderer() : m_bUseStencil(false), m_bUseShaders(false),
 			m_bIsSceneRunning(false), m_iFPS(0), m_iFPSTemp(0), m_nIndexBufferID(MAXID),
-			m_nVertexDecID(MAXID), m_iBatchCount(1), m_bEnScissor(false), m_bOnRelease(false)
+			m_nVertexDecID(MAXID), m_iBatchCount(1), m_bOnRelease(false)
 		{
 			// Set texture and vertex IDs to MAXID(NULL)
 			for (int i = 0; i < 8; i++)
 				m_nTextID[i]		 = MAXID;
 			for (int i = 0; i < 16; i++)
 				m_nVertexBufferID[i] = MAXID;
+
+			// Set render flags to false
+			for (int i = 0; i < ERF_Count; i++)
+				m_bRF[i] = false;
 
 		} // Constructor
 

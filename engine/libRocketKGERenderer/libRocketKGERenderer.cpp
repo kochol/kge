@@ -167,7 +167,10 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void libRocketKGERenderer::EnableScissorRegion( bool enable )
 	{
-		g_pRenderer->EnableScissorRegion(enable);
+		if (enable)
+			g_pRenderer->Enable(gfx::ERF_Scissor);
+		else
+			g_pRenderer->Disable(gfx::ERF_Scissor);
 
 	} // EnableScissorRegion
 

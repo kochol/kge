@@ -30,6 +30,22 @@ namespace kge
 
 		}; // TransformMode
 
+		//! The renderer flags that can control the renderer.
+		enum RenderFlags
+		{
+			ERF_AlphaBlending,          //! Alpha blending.
+			ERF_AdditiveBlending,       //! Additive blending.
+			ERF_AlphaTest,				//! Alpha test.
+			ERF_StencilBuffer,			//! Stencil buffer for shadows, mirrors, deferred shading, ...
+			ERF_DepthBuffer,			//! Depth buffer
+			ERF_ZWrite,                 //! Writing to the depth buffer.
+			ERF_WireFrame,				//! Wire frame view
+			ERF_ColorRendering,			//!< Rendering to color buffer
+			ERF_Scissor,				//!< Use scissor \sa SetScissorRegion
+
+			ERF_Count					//! This is only for counting.
+		};
+
 		//! The interface for working with renderers in KGE.
 		class KGE_API Renderer
 		{
@@ -183,15 +199,19 @@ namespace kge
 			//! Sets the texture
 			virtual void SetTexture(Texture* pTex, int Stage = 0) = 0;
 
-			//! Enable/Disable Scissor region
-			/*!
-				\sa SetScissorRegion
-			 */
-			virtual void EnableScissorRegion(bool enable) = 0;
+			/*! Enable render flags.
+				\param RF The RenderFlags that you want to be enabled.
+			*/
+			virtual void Enable(RenderFlags RF)=0;
+
+			/*! Disable render flags.
+				\param RF The RenderFlags that you want to be disabled.
+			*/
+			virtual void Disable ( RenderFlags RF ) = 0;
 
 			//! Sets the scissor region
 			/*!
-				\sa EnableScissorRegion
+				\sa Enable (ERF_Scissor)
 			 */
 			virtual void SetScissorRegion(int x, int y, int width, int height) = 0;
 
@@ -201,7 +221,7 @@ namespace kge
 							m_bUseShaders,			//!< Dose renderer support shaders?
 							m_bIsSceneRunning,		//!< Is scene running
 							m_bOnRelease;			//!< Is renderer on release state
-			bool			m_bEnScissor;			//!< Scissor region is enabled or not \sa EnableScissorRegion
+			bool			m_bRF[ERF_Count];			//!< Scissor region is enabled or not \sa EnableScissorRegion
 			int				m_iFPS,					//!< Frame per second
 							m_iFPSTemp,				//!< Temp Frame per second for calculating FPS
 							m_iTriCount,			//!< Rendered triangle count
