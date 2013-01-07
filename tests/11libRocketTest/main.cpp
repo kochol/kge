@@ -68,7 +68,7 @@ int main()
 	font_names[1] = "Delicious-Italic.otf";
 	font_names[2] = "Delicious-Bold.otf";
 	font_names[3] = "Delicious-BoldItalic.otf";
-	Rocket::Core::String strDir = "D:/sdks/libRocket/Samples/assets/";
+	Rocket::Core::String strDir = "../../media/gui/";
 
 	for (int i = 0; i < sizeof(font_names) / sizeof(Rocket::Core::String); i++)
 	{
@@ -79,7 +79,7 @@ int main()
 	Rocket::Debugger::SetVisible(true);
 
 	// Load and show the demo document.
-	Rocket::Core::ElementDocument* document = context->LoadDocument("D:/sdks/libRocket/Samples/assets/demo.rml");
+	Rocket::Core::ElementDocument* document = context->LoadDocument("../../media/gui/demo.rml");
 	if (document != NULL)
 	{
 		document->Show();

@@ -142,7 +142,6 @@ namespace kge
 
 		} // setWindowExtents
 
-
 	} // io
 
 } // kge
