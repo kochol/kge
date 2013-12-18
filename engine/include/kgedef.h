@@ -31,7 +31,7 @@
 #define KGE_COMPILER_BORL 3		// Borland C/C++ compiler
 #define KGE_COMPILER_NDK  4		// NDK build system
 
-#define KGE_ARCHITECTURE_UNKNOWN	// Unknown architecture
+#define KGE_ARCHITECTURE_UNKNOWN 0	// Unknown architecture
 #define KGE_ARCHITECTURE_32 1		// 32-bit architecture CPU
 #define KGE_ARCHITECTURE_64 2		// 64-bit architecture CPU
 

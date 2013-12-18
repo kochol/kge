@@ -37,7 +37,7 @@ int main()
 	kge::Device dev;
 
 	kge::InitParameters params;
-	params.RendererName = "d3d9";
+	params.RendererName = "ogl";
 	params.AAMode = kge::gfx::EAAM_Off;
 	dev.Init(params);
 
@@ -122,7 +122,7 @@ int main()
 		pRen->EndRendering();
 		kge::core::stringc str = kge::core::Profiler::GetPointer()->GetData();
 		//printf(str.c_str());		
-		kge::io::Logger::Debug("fps %d FrameTime %dus", fps, time.GetTime(true));
+		/*kge::io::Logger::Debug*/printf("fps %d FrameTime %dus\n", fps, time.GetTime(true));
 	}
 
 	return 0;
