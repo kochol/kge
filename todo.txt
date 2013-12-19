@@ -1,0 +1,3 @@
+- Renderer
+	- Remove StartVertex and VertexDec* CV parameters from DrawTriangleList
+	- Remove DrawTriangleList( HardwareBuffer* VB, HardwareBuffer* IB, u32 VCount, u32 ICount, VertexType eVType ) function

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Material name="phong" description="phong lighting model material">
+	<Technique name="phong" description="perpixel phong lighting" usage="Normal">
+		<Pass name="pass0" vertexshader="PerPixelLighting.kvs" pixelshader="PhongTexture.kps">
+		</Pass>
+	</Technique>
+</Material>

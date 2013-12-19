@@ -1,0 +1,67 @@
+float4 fvSpecular = float4(0.0,0.0,0.0,1.0);
+float fSpecularPower = 1.0f;
+float bumpiness;// = 0.021f;
+
+const float2 offsets[12] = 
+{
+   -0.326212, -0.405805,
+   -0.840144, -0.073580,
+   -0.695914,  0.457137,
+   -0.203345,  0.620716,
+    0.962340, -0.194983,
+    0.473434, -0.480026,
+    0.519456,  0.767022,
+    0.185461, -0.893124,
+    0.507431,  0.064425,
+    0.896420,  0.412458,
+   -0.321940, -0.932615,
+   -0.791559, -0.597705,
+};
+
+sampler2D bumpMap;
+sampler2D reflection;
+
+struct PS_INPUT 
+{
+   float2 Texcoord :        TEXCOORD0;
+   float3 ViewDirection :   TEXCOORD1;
+   float3 LightDirection :  TEXCOORD2;
+   float3 eyeLinear :	 	TEXCOORD3;
+   
+};
+
+float4 main( PS_INPUT Input ) : COLOR0
+{      
+   float3 fvLightDirection = normalize( Input.LightDirection );
+   float3 fvNormal         = normalize( ( tex2D( bumpMap, Input.Texcoord ).xyz * 2.0f ) - 1.0f );
+   float  fNDotL           = dot( fvNormal, fvLightDirection ); 
+   
+   float3 fvReflection     = normalize( ( ( 2.0f * fvNormal ) * ( fNDotL ) ) - fvLightDirection ); 
+   float3 fvViewDirection  = normalize( Input.ViewDirection );
+   float  fRDotV           = max( 0.0f, dot( fvReflection, fvViewDirection ) );
+   
+   float4 fvTotalSpecular  = fvSpecular * pow( fRDotV, fSpecularPower );
+   
+   // Sample position, offset for some bumpiness
+   float2 mid;
+   mid.x = 0.5 * Input.eyeLinear.x / Input.eyeLinear.z+0.5;
+   mid.y = -0.5 * Input.eyeLinear.y / Input.eyeLinear.z+0.5;
+   mid += fvNormal.xy * bumpiness;
+
+   float4 refl = tex2D(reflection, mid);
+
+   // Blur the reflection according to depth
+   float4 blurred = refl;
+   for (int i = 0; i < 12; i++){
+      blurred += tex2D(reflection, mid + 0.02 * refl.a * refl.a  * offsets[i]);
+   }
+   
+      // Fade with depth
+   float depthFade = saturate(1 - 0.5 * refl.a);
+
+   return  fvTotalSpecular + depthFade * (blurred / 13);
+      
+}
+
+
+

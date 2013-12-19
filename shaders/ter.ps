@@ -1,0 +1,75 @@
+sampler2D baseMap;
+sampler2D BlendMap;
+sampler2D TextureID;
+sampler2D TextureBlend;
+sampler2D TextureUnder;
+
+struct PS_INPUT 
+{
+   float2 Texcoord : TEXCOORD0;
+   float    Lit: TEXCOORD1;
+   float	Height: TEXCOORD2;
+   
+};
+
+
+float4 main( PS_INPUT Input ) : COLOR0
+{
+float4 c1 = float4(1, 1, 1, 1);
+float4 c2 = float4(0, 0.9, 1, 1);
+
+float2 m[16] = 
+{
+	float2(0.0, 0.0),
+	float2(0.25, 0.0),
+	float2(0.5, 0.0),
+	float2(0.75, 0.0),
+	float2(0.0, 0.25),
+	float2(0.25, 0.25),
+	float2(0.5, 0.25),
+	float2(0.75, 0.25),
+	float2(0.0, 0.5),
+	float2(0.25, 0.5),
+	float2(0.5, 0.5),
+	float2(0.75, 0.5),
+	float2(0.0, 0.75),
+	float2(0.25, 0.75),
+	float2(0.5, 0.75),
+	float2(0.75, 0.75)
+};
+
+	float4 d = tex2D( TextureID, Input.Texcoord * 0.00390625);
+	float4 b = tex2D( TextureBlend, Input.Texcoord * 0.00390625);
+	float2 z = Input.Texcoord * 0.03125;
+	float2 tex;
+	tex.x = z.x - d.r;
+	tex.y = z.y - d.g;
+    float4 c;
+	if (b.a < 0.9)
+	{
+		float2 t = m[b.a * 20];
+		float2 s = (int2)(Input.Texcoord) * 0.25;
+		float4 a = tex2D( BlendMap, Input.Texcoord * 0.25 - s + t );
+		t.x = z.x - d.b;
+		t.y = z.y - d.a;
+		c = (1 - a.r) * tex2D( baseMap, tex) + a.r * tex2D( baseMap, t);
+	}
+	else
+		c = tex2D( baseMap, tex);
+
+	float4 col = float4(1, 1, 1, 1);
+		
+	if (Input.Height < 0.0)
+	{
+		Input.Height *= -1.0;
+		col = lerp(c1, c2, Input.Height);
+		float4 under = tex2D(TextureUnder, Input.Texcoord * 0.5);
+		col += under / ((Input.Height * 0.2 + 1.5) * 0.5);
+	}
+
+	float4 dd = col * c * Input.Lit;	
+	dd.a = Input.Height * 0.05;
+
+    return dd;
+   
+}

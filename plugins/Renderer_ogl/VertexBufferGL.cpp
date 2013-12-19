@@ -1,0 +1,57 @@
+#include "../../Libs/Glew/glew.h"
+#include "VertexBufferGL.h"
+#include "../../Include/gfx/Renderer.h"
+
+KGE_IMPORT extern kge::gfx::Renderer	*	g_pRenderer;
+KGE_IMPORT extern kge::u32 HardwareBufferID;
+
+namespace kge
+{
+namespace gfx
+{
+	//------------------------------------------------------------------------------------
+	// Constructor
+	//------------------------------------------------------------------------------------
+	VertexBufferGL::VertexBufferGL( u32 vCount,u32 stride ): 
+		HardwareBuffer(vCount, stride, HardwareBufferID++)
+	{
+
+	} // Constructor
+
+	//------------------------------------------------------------------------------------
+	// Destructor
+	//------------------------------------------------------------------------------------
+	VertexBufferGL::~VertexBufferGL()
+	{
+		glDeleteBuffers(1, &m_uID);
+
+	} // Destructor
+
+	//------------------------------------------------------------------------------------
+	// sets the buffer data
+	//------------------------------------------------------------------------------------
+	bool VertexBufferGL::SetData( void* Data, u32 Offset, u32 iSize, ul32 flags )
+	{
+		Bind(0);
+		GLenum staticflag = GL_STATIC_DRAW;
+		if (m_bDynamic)
+			staticflag = GL_DYNAMIC_DRAW;
+		glBufferData(GL_ARRAY_BUFFER, iSize * m_iStride, Data, staticflag);
+
+		return true;
+
+	} // SetData
+
+	//------------------------------------------------------------------------------------
+	// Binds the vertex buffer
+	//------------------------------------------------------------------------------------
+	void VertexBufferGL::Bind(int stage)
+	{
+		g_pRenderer->SetVertexBufferID(m_iID, stage);
+		glBindBuffer(GL_ARRAY_BUFFER, m_uID);
+
+	} // Bind
+
+} // gfx
+
+} // kge

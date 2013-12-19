@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shader name="SimpleVertex" description="This is a simple vertex shader" type="vertex">
+	<Input>
+		<Param name="matWorldViewProjection" type="matrix" autovalue="WorldViewProjection" />
+		<Param name="inPosition" type="float4" usage="POSITION0"/>
+		<Param name="inTexcoord" type="float2" usage="TEXCOORD0"/>
+	</Input>
+	<Output>
+		<Out name="outPosition" type="float4" usage="POSITION0"/>
+		<Out name="outTexcoord" type="float2" usage="TEXCOORD0"/>
+	</Output>
+	<Code name="main">
+		<![CDATA[
+void main()
+{
+   outPosition = mul( inPosition, matViewProjection );
+   outTexcoord = inTexcoord;
+	
+} // main
+		]]>
+	</Code>
+</Shader>

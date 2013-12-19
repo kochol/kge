@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shader name="PerPixelLighting" description="This vertex shader is for per pixel lighting shaders" type="vertex">
+	<Define name="PointLightCount"/>
+	<Define name="PointLight"/>
+	<Input>
+		<In name="matWorldViewProjection" type="matrix" autovalue="WorldViewProjection" />
+		<In name="matWorldView" type="matrix" autovalue="WorldView" />
+		
+		<In name="fvLightPosition" type="float3" autovalue="PointLightPosition" array="PointLightCount" define="PointLight"/>
+		<In name="fvEyePosition" type="float3" autovalue="EyePosition"/>
+		
+		<In name="inPosition" type="float4" usage="POSITION"/>
+		<In name="inNormal" type="float3" usage="NORMAL"/>		
+		<In name="inTexcoord" type="float2" usage="TEXCOORD"/>
+	</Input>
+	<Output>
+		<Out name="outPosition" type="float4" usage="POSITION"/>
+		<Out name="outTexcoord" type="float2" usage="TEXCOORD"/>
+		<Out name="outViewDirection" type="float3" usage="TEXCOORD"/>
+		<Out name="outLightDirection" type="float3" usage="TEXCOORD" array="PointLightCount" define="PointLight"/>
+		<Out name="outNormal" type="float3" usage="TEXCOORD"/>
+	</Output>
+	<Code name="main">
+		<![CDATA[
+void main()
+{
+	outPosition = mul( inPosition, matViewProjection );
+	outTexcoord = inTexcoord;
+
+	float3 fvObjectPosition = mul( inPosition, matWorldView ).xyz;
+
+	outViewDirection = fvEyePosition - fvObjectPosition;
+	outNormal = mul( inNormal, matWorldView );
+#ifdef PointLight	
+	for (int i = 0; i < PointLightCount; i++)
+		outLightDirection[i] = fvLightPosition[i] - fvObjectPosition;
+#endif // PointLight
+
+} // main
+		]]>
+	</Code>
+</Shader>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shader name="PhongTexture" description="Phong lighting with texturing" type="pixel">
+	<Define name="PointLightCount"/>
+	<Define name="DirectionalLight"/>
+	<Define name="PointLight"/>
+	<Input>
+		<In name="baseMap" type="texture2D"/>
+		<In name="DirLight" type="float3" autovalue="DirectionalLightDirection" define="DirectionalLight" array="DirectionalLightCount"/>
+		
+		<In name="SpecularPower" type="int" value="20"/>
+		
+		<In name="inTexcoord" type="float2" usage="TEXCOORD"/>		
+		<In name="inViewDirection" type="float3" usage="TEXCOORD"/>
+		<In name="inLightDirection" type="float3" usage="TEXCOORD" array="PointLightCount" define="PointLight"/>
+		<In name="inNormal" type="float3" usage="TEXCOORD"/>
+	</Input>
+	<Output>
+		<Out name="color1" type="float4" usage="COLOR" />
+	</Output>
+	<Code name="main">
+		<![CDATA[
+void main()
+{
+	float3 Normal = normalize(inNormal);
+	float3 ViewDir = normalize(inViewDirection);
+	
+	float fDiff = 0.0;
+	float fSpec = 0.0;
+#ifdef PointLight	
+	for (int i = 0; i < PointLightCount; i++)
+	{
+		float3 fLitDir = normalize(inLightDirection[i]);
+		fDiff += saturate(dot(Normal, fLitDir));
+		float3 fRef = reflect(-fLitDir, Normal);
+		float fRdotV = saturate(dot(fRef, ViewDir));
+		fSpec += pow(fRdotV, SpecularPower);
+	}
+#endif // PointLight
+
+#ifdef DirectionalLight
+	for (int i = 0; i < DirectionalLightCount; i++)
+	{	
+		fDiff += saturate(dot(Normal, DirLight[i]));
+		float3 fRef = reflect(-DirLight[i], Normal);
+		float fRdotV = saturate(dot(fRef, ViewDir));
+		fSpec += pow(fRdotV, SpecularPower);	
+	}
+#endif // DirectionalLight
+	
+	float4 BaseColor = tex2D(baseMap, inTexcoord);
+	
+	color1 = fDiff * BaseColor + float4(fSpec, fSpec, fSpec, 1.0);
+	
+} // main
+		]]>
+	</Code>
+</Shader>

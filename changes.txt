@@ -1,0 +1,58 @@
+--------------------------
+Changes in opengl branch
+
+- Add Renderer_ogl plugin
+- Refactor the Renderer class
+- Remove some gui classes
+- Add CG shaders to opengl renderer plugin
+
+--------------------------
+Changes in 0.0.11
+
+- Add EntitySystem tool
+- Add 08EntitySystem tutorial
+- Upgraded from SDL 1.2 to SDL 2.0
+- Add mouse wheel event listener
+- Add LoaderDDS for loading DDS textures with this loader
+- Add Stream class for streaming data from varius locations
+- Add FileSystem and FileSystemManager for serching a file in different locations.
+
+--------------------------
+Changes in 0.0.10
+
+- Add Plugin interface
+- Add Plugin Manager class
+- Update logger class
+- Add Loader interface
+- Add Renderer_d3d9 plugin
+- Fix a bug in SceneManager::RemoveSceneNode
+- Add Renderer::SetScissorRegion
+- Add Texture::GetWidth and Texture::GetHeight
+- Add libRocket renderer
+- Add Netwok class that uses RakNet for networking.
+- Add NetworkEvents for listening to network events.
+- Add 06libRocketGUI tutorial
+- Add 07Network tutorial
+
+--------------------------
+Changes in 0.0.9
+
+- A bug in Calculating animation on CPU Fixed.
+- Add some information to memory leak log
+- Fix 3 bugs in tile terrain
+- Add 05terrain tutorial showing how to use tile terrain.
+- Add KgeArray
+- Fix bugs in KgeMemory
+- Add KgeMemory::ReallocateBytes
+- Use KgeMemory for memory managment
+- Add 02Input tutorial for show how to use keyboard and camera
+
+--------------------------
+Changes in 0.0.8
+
+- Add InitParameters structure
+- Fix comments in kge namespace headers
+- Add Tutorial 01
+- Rename kge::core::Timer->GetSeconds() to GetTimeElapsed
+- Fix a bug in adding lights after adding the meshes
+- Fix a bug in shadow map with ATI cards

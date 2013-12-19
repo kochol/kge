@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Material name="Test" description="This is a test material">
+	<Technique name="Simple Texturing">
+		<Pass>
+			<VertexShader name="SimpleVertex" />
+			<PixelShader name="SimpleTexture" />
+		</Pass>
+	</Technique>
+</Material>

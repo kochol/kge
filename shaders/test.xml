@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shader name="SimpleTexture" description="Only do texturing" type="pixel">
+	<Input>
+		<Param name="baseMap" type="texture2D"/>
+		<Param name="inTexcoord" type="float2" usage="TEXCOORD0"/>		
+	</Input>
+	<Output>
+		<Out name="color1" type="float4" usage="COLOR0" />
+	</Output>
+	<Code name="main">
+		<![CDATA[
+void main()
+{
+	color1 = tex2D(baseMap, inTexcoord);
+	
+} // main
+		]]>
+	</Code>
+</Shader>

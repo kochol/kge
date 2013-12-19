@@ -1,0 +1,26 @@
+sampler2D baseMap;
+
+struct PS_INPUT 
+{
+   float3 PosInWorld:     TEXCOORD0; 
+   float3 NormalInWorld:  TEXCOORD1;
+   float2 Tex:			  TEXCOORD2;
+};
+
+struct PS_OUTPUT 
+{
+   float4 ColorMap		: COLOR0;
+   float4 PosInWorld    : COLOR1;
+   float4 NormalInWorld : COLOR2;
+};
+
+PS_OUTPUT main( PS_INPUT In )
+{
+   PS_OUTPUT Out;
+   
+   Out.ColorMap		 = float4(tex2D (baseMap, In.Tex).xyz, 0.5);
+   Out.PosInWorld    = float4(In.PosInWorld,1.0);
+   Out.NormalInWorld = float4(In.NormalInWorld,1.0);
+   
+   return Out;
+}

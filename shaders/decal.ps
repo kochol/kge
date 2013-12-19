@@ -1,0 +1,13 @@
+sampler2D baseMap;
+
+struct PS_INPUT 
+{
+   float2 Texcoord : TEXCOORD0;
+   
+};
+
+float4 main( PS_INPUT Input ) : COLOR0
+{
+   return tex2D( baseMap, Input.Texcoord );
+   
+}

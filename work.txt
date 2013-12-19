@@ -1,0 +1,118 @@
+11/01/1392 KGE 0.0.9 released
+12/12/1391 KGE 0.0.8 released
+05/12/1391 Tut01 added.
+03/12/1391 InitParameters
+29/11/1391 KGE 0.0.7 released
+26/02/1390 1359KB Billboard, Ribon trail, GeometryBatch, Static mesh instancing, working on XPSM. 48252 lines of code
+03/12/1389 1180KB Today is my birthday and I released KGE 0.0.6 it has 44170 lines of code
+12/11/1389 1111KB Particle System
+21/07/1389 1006KB New material system, Shadow map projection, physics
+13/10/1388 768KB Multi streaming, VertexDec, HardwareBuffer, VertexBufferDX, IndexBufferDX
+04/09/1388 734KB AABB, Tile, TileTexture, Image, TileTerrain, Ray, Triangle, Decal
+25/07/1388 672KB Tile, TileTexture, Image, TileTerrain, Ray, Triangle
+15/04/1388 625KB Singleton
+13/04/1388 623KB KgeUnknown
+03/12/1387 622KB RendererDX->CreateCustomVertexType
+02/12/1387 616KB CustomVertexElement, VertexElementType, VertexElementMethod, VertexElementUsage
+23/11/1387 606KB TileType, TileTextureData, TileTexture
+22/11/1387 606KB TileTerrain, Vertex3TTN, Renderer->DrawTriangleList(Vertex3TTN), TileTexture
+12/08/1387 587KB Render to texture and MRT(Multi Rendering Targets) added to dx9 renderer.
+04/08/1387 578KB Plugin, PluginManager
+03/08/1387 574KB Font and Text class updated for using farsi language
+22/06/1387 566KB TextureDX9
+15/06/1387 558KB TextureDX9, CompressType, Renderer->AddTexture, SceneManager->AddTexture
+14/06/1387 552KB Resource, ResourceManager, Texture
+21/04/1387 532KB Listener
+25/01/1387 522KB TextBox
+20/01/1387 515KB Splitter
+17/01/1387 508KB Text, Button
+11/01/1387 492KB GuiManager, Control, Image
+08/01/1387 485KB Working on GUI system.
+02/01/1387 477KB Now KGE can back from direct3D device lost.
+27/12/1386 472KB SceneNode system completed.
+09/12/1386 466KB Frustum culling added but has some bugs yet.
+26/11/1386 458KB Joystick class added
+25/11/1386 453KB Sphere
+18/11/1386 450KB OpenGL renderer improves.
+16/11/1386 446KB Frustum, Plane.Normalize
+02/11/1386 442KB Fog added.
+29/10/1386 438KB MipMap added, OpenGL lighting problem solved.
+25/10/1386 435KB Buffering the meshes added, GLSL shader added.
+03/10/1386 417KB MeshBuffer
+24/09/1386 416KB MS3D loader optimized.
+20/09/1386 416KB Some names changed, Renderer->InitGCC, Renderer->CreateAssemblyShaderFromFile, Shader->SetVertexShaderConstant
+17/09/1386 408KB kge::gfx::sn moved to kge::sn
+11/09/1386 409KB Planar shadow bug fixed.
+09/09/1386 409KB SDL added. Planar shadow for opengl renderer added.
+03/09/1386 404KB Cartoon
+29/08/1386 403KB Converted from static lib to dll.
+04/07/1386 391KB Memory managment added, 3D sound added, Hardware skinning added, Planar shadow bug fixed.
+10/06/1386 341KB AnimatedMesh->SetAnimationFrame, Now you can playback animations.
+20/05/1386 339KB Pixel Shader support in HLSL added.
+19/05/1386 337KB Pixel shader
+14/05/1386 333KB Vertex shader support in HLSL complete.
+13/05/1386 332KB Shader
+12/05/1386 330KB PFunctors
+10/05/1386 314KB Functors, MFunctors
+04/05/1386 289KB Renderer->CreateShaderFromFile, Shader
+30/04/1386 284KB Light Scene node, smgr->GetNearestLight, KGE 0.0.5 released with 11175 lines of code and 79 files
+26/04/1386 274KB Vertex buffer, Static Mesh
+22/03/1386 257KB Atuomatic the effects
+21/03/1386 257KB ArrayPri, Move d3dfont files to the lib directory, Array
+19/03/1386 254KB Array
+30/02/1386 276KB Atuomatic the effects, change light design, SceneNode->Draw improve, Scene nodes now has position and rotation.
+19/02/1386 252KB AnimatedMesh->SetAnimationSpeed, VertexBuffer
+18/02/1386 252KB AnimatedMesh, Working on new mesh design.
+20/12/1385 225KB KGE 0.0.4 released with more than 8900 lines of code and 69 files.
+18/10/1385 216KB Plane, MirrorPlane, Property
+11/09/1385 192KB Logger->Log(...), MeshMS3D->AnimateFrame
+03/09/1385 189KB Spot Light And some small things added.
+27/08/1385 184KB Light->AddPointLight
+22/08/1385 182KB Light->AddDirectionalLight, Light->SetLight(LightPoint)
+20/08/1385 178KB LightGL->SetLight(LightDir), RendererGL->SetMaterial
+19/08/1385 177KB LightDX->SetLight(LightDir), RendererDX->SetMaterial
+11/08/1385 176KB Some bugs in opengl renderer fixed, Renderer->SetMaterial, Vertex3->Transform3
+10/08/1385 173KB Light, LightDX, LightGL
+09/08/1385 170KB Renderer->Enable, Renderer->Enable2DMode removed
+01/08/1385 167KB KGE 0.0.3 Released. OGL->SetTransForm bug fixed
+30/07/1385 166KB SnMan->AddTexture
+29/07/1385 165KB D3D->AddTexture
+25/07/1385 161KB MeshMS3D->RenderT
+24/07/1385 159KB MeshMS3D->Animate, Timer->GetSeconds, Quat, 6469 lines of code.
+22/07/1385 145KB MeshMS3D->Load, MeshMS3D->Setup, Matrix->SetRotation, Matrix->SetTranslation, Matrix->InverseTranslateVec, Matrix->InverseRotateVec
+18/07/1385 141KB MeshMS3D->Load
+16/07/1385 139KB MeshMS3D->Load
+13/07/1385 137KB Mesh, MeshMS3D->Load, Material, MeshMS3D->Render
+11/07/1385 133KB D3D->AddTexture
+07/07/1385 131KB MeshMS3D->Load, File->GetSize
+06/07/1385 120KB Remove(ImageLoader, BMPLoader, Image), OGL->AddTexture, OGL->DrawTriList(Vertex3T), OGL->SetTexture, MeshMS3D
+03/07/1385 118KB String->Find
+02/07/1385 117KB File->Seek
+31/06/1385 115KB Image, ImageLoader, BMPLoader
+28/06/1385 107KB File
+27/06/1385 106KB File
+23/06/1385 102KB Mouse, Camera->MoveRL
+16/06/1385 99.3KB Camera->RotViewByMouse, Renderer->DrawLineList, Camera->RotateAroundPoint, Vector+Vector
+15/06/1385 92.8KB Camera->AutoRotateByMouse
+14/06/1385 92.3KB Mohasebeye Vector->Cross ba SSE eshtebah bod ke pakesh kardam.
+11/06/1385 92.8KB Cam->Rotate
+10/06/1385 90.6KB 3D view bug fixed.
+08/06/1385 87.4KB Keyboard
+07/06/1385 85.2KB Renderer->SetTransForm, Renderer->Enable2DMode, Cam->MoveBF
+04/06/1385 80.5KB Camera, sman->RegNode, sman->AddCameraNode, sman->RenderAll
+03/06/1385 75.8KB Timer, Renderer->GetFPS, Device->SetWindowCaption, SceneManager, Device->GetSceneManager, SceneNode
+02/06/1385 67.3KB Color, Colorf, Matrix->Roty
+31/05/1385 63.7KB Vector-Vector, Vector*float, Vector/=float, Vector->Cross, D3D->SetViewLookat, OGL->SetViewLookatLH
+30/05/1385 67.7KB u16, Vertex3, VertexType, D3D->DrawTriangleList, D3D->AfterInit
+28/05/1385 65.4KB D3D->CalcPrespProjMatrix, OGL->CalcPrespProjMatrix, D3D->SetCameraMode, OGL->SetCameraMode, OGL->AfterInit, D3D->AfterInit
+27/05/1385 58.9KB Matrix*Matrix, OGL->CalcViewProjMatrix, D3D->CalcWorldViewProjMatrix, OGL->CalcWorldViewProjMatrix, D3D->AfterInit, OGL->AfterInit, D3D->SetClippingPlanes, OGL->SetClippingPlanes, Rect, D3D->InitStage, OGL->InitStage
+26/05/1385 46.6KB Vector*Vector, Device->Init, Matrix, OGL->SetView3D(p,d,u,r), D3D->CalcViewProjMatrix
+25/05/1385 42.9KB CPU, Vector, D3D->SetView3D(p,d,u,r)
+24/05/1385 34.2KB OGL Destructor, D3D Destructor, Linux, Vector
+23/05/1385 32.6KB Linux, OGL->EndRendering
+22/05/1385 31.6KB D3D->Clear, OGL->Clear, D3D->BeginRendering, OGL->BeginRendering, D3D->EndRendering, OGL->EndRendering, Color class, D3D->SetClearColor, OGL->SetClearColor
+21/05/1385 27.1KB OpenGL->Init
+19/05/1385 26.1KB D3D->Init bug fixed, OpenGL->Init
+15/05/1385 21.9KB D3D->Init
+13/05/1385 12.3KB
+05/05/1385 Man shoroe be neveshtan kge 0.0.3 az aval kardam va ba khodam gharar gozashtam ke motevaset rozi 2KB code benevisam ke albate kare sakhti ham hast.

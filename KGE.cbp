@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Kochol Game Engine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="libKGE" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DLINUX" />
+					<Add directory="/usr/include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="libKGE" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DLINUX" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Headers/core/CPU.h" />
+		<Unit filename="Headers/gfx/LightDX.h" />
+		<Unit filename="Headers/gfx/LightGL.h" />
+		<Unit filename="Headers/gfx/MS3DLoader.h" />
+		<Unit filename="Headers/gfx/MeshBuffer.h" />
+		<Unit filename="Headers/gfx/RendererDX.h" />
+		<Unit filename="Headers/gfx/RendererGL.h" />
+		<Unit filename="Headers/gfx/ShaderDX.h" />
+		<Unit filename="Headers/gfx/ShaderGL.h" />
+		<Unit filename="Headers/io/Linux.h" />
+		<Unit filename="Headers/io/SdlWindow.h" />
+		<Unit filename="Headers/io/Win32.h" />
+		<Unit filename="Include/Device.h" />
+		<Unit filename="Include/core/Array.h" />
+		<Unit filename="Include/core/ArrayPriority.h" />
+		<Unit filename="Include/core/Functor.h" />
+		<Unit filename="Include/core/String.h" />
+		<Unit filename="Include/core/Structs.h" />
+		<Unit filename="Include/core/Timer.h" />
+		<Unit filename="Include/core/mem_fun.h" />
+		<Unit filename="Include/core/ptr_fun.h" />
+		<Unit filename="Include/efx/BumpMap.h" />
+		<Unit filename="Include/efx/Cartoon.h" />
+		<Unit filename="Include/efx/Effect.h" />
+		<Unit filename="Include/efx/MirrorPlane.h" />
+		<Unit filename="Include/efx/ShadowPlane.h" />
+		<Unit filename="Include/gfx/Animation.h" />
+		<Unit filename="Include/gfx/Color.h" />
+		<Unit filename="Include/gfx/Lighting.h" />
+		<Unit filename="Include/gfx/Material.h" />
+		<Unit filename="Include/gfx/Renderer.h" />
+		<Unit filename="Include/gfx/Shader.h" />
+		<Unit filename="Include/gfx/Structs.h" />
+		<Unit filename="Include/gfx/VertexBuffer.h" />
+		<Unit filename="Include/gui/Font.h" />
+		<Unit filename="Include/io/File.h" />
+		<Unit filename="Include/io/Iwindow.h" />
+		<Unit filename="Include/io/Keyboard.h" />
+		<Unit filename="Include/io/Logger.h" />
+		<Unit filename="Include/io/Mouse.h" />
+		<Unit filename="Include/kge.h" />
+		<Unit filename="Include/kgedef.h" />
+		<Unit filename="Include/math/Matrix.h" />
+		<Unit filename="Include/math/Plane.h" />
+		<Unit filename="Include/math/Quat.h" />
+		<Unit filename="Include/math/Vector.h" />
+		<Unit filename="Include/math/math.h" />
+		<Unit filename="Include/sn/AnimatedMesh.h" />
+		<Unit filename="Include/sn/Bone.h" />
+		<Unit filename="Include/sn/Camera.h" />
+		<Unit filename="Include/sn/Light.h" />
+		<Unit filename="Include/sn/Mesh.h" />
+		<Unit filename="Include/sn/SceneManager.h" />
+		<Unit filename="Include/sn/SceneNode.h" />
+		<Unit filename="Include/sn/StaticMesh.h" />
+		<Unit filename="Source/Device.cpp" />
+		<Unit filename="Source/core/CPU.cpp" />
+		<Unit filename="Source/core/String.cpp" />
+		<Unit filename="Source/core/Timer.cpp" />
+		<Unit filename="Source/efx/BumpMap.cpp" />
+		<Unit filename="Source/efx/Cartoon.cpp" />
+		<Unit filename="Source/efx/MirrorPlane.cpp" />
+		<Unit filename="Source/efx/ShadowPlane.cpp" />
+		<Unit filename="Source/gfx/Animation.cpp" />
+		<Unit filename="Source/gfx/Light.cpp" />
+		<Unit filename="Source/gfx/LightDX.cpp" />
+		<Unit filename="Source/gfx/LightGL.cpp" />
+		<Unit filename="Source/gfx/MS3DLoader.cpp" />
+		<Unit filename="Source/gfx/MeshBuffer.cpp" />
+		<Unit filename="Source/gfx/RendererDX.cpp" />
+		<Unit filename="Source/gfx/RendererGL.cpp" />
+		<Unit filename="Source/gfx/ShaderDX.cpp" />
+		<Unit filename="Source/gfx/ShaderGL.cpp" />
+		<Unit filename="Source/io/File.cpp" />
+		<Unit filename="Source/io/Keyboard.cpp" />
+		<Unit filename="Source/io/Linux.cpp" />
+		<Unit filename="Source/io/Logger.cpp" />
+		<Unit filename="Source/io/Mouse.cpp" />
+		<Unit filename="Source/io/SdlWindow.cpp" />
+		<Unit filename="Source/io/Win32.cpp" />
+		<Unit filename="Source/math/Matrix.cpp" />
+		<Unit filename="Source/math/Plane.cpp" />
+		<Unit filename="Source/math/Quat.cpp" />
+		<Unit filename="Source/math/Vector.cpp" />
+		<Unit filename="Source/sn/AnimatedMesh.cpp" />
+		<Unit filename="Source/sn/Camera.cpp" />
+		<Unit filename="Source/sn/Light.cpp" />
+		<Unit filename="Source/sn/Mesh.cpp" />
+		<Unit filename="Source/sn/SceneManager.cpp" />
+		<Unit filename="Source/sn/SceneNode.cpp" />
+		<Unit filename="Source/sn/StaticMesh.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
