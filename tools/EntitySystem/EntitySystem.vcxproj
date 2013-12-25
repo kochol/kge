@@ -101,7 +101,6 @@
     <ClInclude Include="..\..\Include\en\SystemMesh.h" />
     <ClInclude Include="..\..\Include\en\System.h" />
     <ClInclude Include="..\..\Include\en\World.h" />
-    <ClInclude Include="..\..\Include\en\WorldComponent.h" />
     <ClInclude Include="..\..\Include\en\WorldManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

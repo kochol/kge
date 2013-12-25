@@ -1,7 +1,7 @@
 #ifndef KGE_ENTITYMANAGER_H
 #define KGE_ENTITYMANAGER_H
 
-#include "../kgedef.h"
+#include "kgedef.h"
 #include <map>
 #include <queue>
 

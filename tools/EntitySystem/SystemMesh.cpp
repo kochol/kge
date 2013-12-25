@@ -73,6 +73,15 @@ namespace en
 
 	} // AsyncUpdate
 
+	//------------------------------------------------------------------------------------
+	// Receive a message to process
+	//------------------------------------------------------------------------------------
+	bool SystemMesh::OnMessage( Message* msg )
+	{
+		return false;
+
+	} // OnMessage
+
 } // en
 
 } // kge

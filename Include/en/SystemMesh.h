@@ -27,6 +27,9 @@ namespace kge
 			//! you must call it on systems to check the entity.
 			void NotifySystem(Entity* pEn);
 
+			//! Receive a message to process
+			bool OnMessage(Message* msg);
+
 		protected:
 
 			int								m_iComMeshID,

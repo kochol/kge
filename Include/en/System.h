@@ -2,6 +2,7 @@
 
 #include <vector>
 #include "../kgedef.h"
+#include "Message.h"
 
 namespace kge
 {
@@ -28,6 +29,9 @@ namespace kge
 			//! When a new entity created or new component attached to entity 
 			//! you must call it on systems to check the entity.
 			virtual void NotifySystem(Entity* pEn) = 0;
+
+			//! Receive a message to process
+			virtual bool OnMessage(Message* msg) = 0;
 
 		protected:
 		

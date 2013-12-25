@@ -34,6 +34,9 @@ namespace kge
 			//! Returns the entity manager
 			EntityManager* GetEntityManager() {return m_pEntityMgr;}
 
+			//! Returns the world by its index
+			World* GetWorld(int index){return m_vWorlds[index];}
+
 		protected:
 
 			EntityManager		*	m_pEntityMgr;

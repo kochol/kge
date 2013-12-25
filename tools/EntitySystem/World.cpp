@@ -1,5 +1,4 @@
 #include "../../Include/en/World.h"
-#include "../../Include/en/WorldComponent.h"
 #include "../../Include/en/System.h"
 #include "../../Include/en/Entity.h"
 
@@ -29,46 +28,28 @@ namespace en
 	//------------------------------------------------------------------------------------
 	void World::AddEntity( Entity* pEn )
 	{
-		m_vEntities[pEn->GetID()] = pEn;
-		for (int i = 0; i < m_vSystems.size(); i++)
+		if (m_vEntities.find(pEn->GetID()) == m_vEntities.end())
 		{
-			m_vSystems[i]->NotifySystem(pEn);
+			m_vEntities[pEn->GetID()] = pEn;
+			for (int i = 0; i < m_vSystems.size(); i++)
+			{
+				m_vSystems[i]->NotifySystem(pEn);
+			}
 		}
 
 	} // AddEntity
 
 	//------------------------------------------------------------------------------------
-	// Adds a component to the world
+	// Remove an entity from World
 	//------------------------------------------------------------------------------------
-	void World::AddComponent( WorldComponent* pCmp )
+	void World::RemoveEntity( Entity* pEn )
 	{
-		m_itComponents = m_vComponents.find(pCmp->GetClassID());
-		if (m_itComponents == m_vComponents.end())
+		if (m_vEntities.find(pEn->GetID()) != m_vEntities.end())
 		{
-			m_vComponents.insert(std::pair<int, std::vector<WorldComponent*> >(pCmp->GetClassID(), std::vector<WorldComponent*>()));
+			m_vEntities.erase(pEn->GetID());
 		}
 
-		m_vComponents[pCmp->GetClassID()].push_back(pCmp);
-
-	} // AddComponent
-
-	//------------------------------------------------------------------------------------
-	// Returns a component by its ID
-	//------------------------------------------------------------------------------------
-	WorldComponent* World::GetComponent( int iCmpID )
-	{
-		m_itComponents = m_vComponents.find(iCmpID);
-		if (m_itComponents == m_vComponents.end())
-		{
-			return NULL;
-		}
-
-		if (m_itComponents->second.size() > 0)
-			return m_itComponents->second[0];
-
-		return NULL;
-
-	} // GetComponent
+	} // RemoveEntity
 
 	//------------------------------------------------------------------------------------
 	// Adds a system to world
@@ -94,7 +75,19 @@ namespace en
 			m_vSystems[i]->Update(fElasped);
 		}
 
-	}
+	} // Update
+
+	//------------------------------------------------------------------------------------
+	// Sends a message to World systems
+	//------------------------------------------------------------------------------------
+	void World::OnMessage( Message* msg )
+	{
+		for (int i = 0; i < m_vSystems.size(); i++)
+		{
+			m_vSystems[i]->OnMessage(msg);
+		}
+
+	} // SendMessage
 
 } // en
 

@@ -98,8 +98,5 @@
     <ClInclude Include="..\..\Include\en\Server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Include\en\WorldComponent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
