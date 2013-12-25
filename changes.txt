@@ -1,12 +1,4 @@
 --------------------------
-Changes in opengl branch
-
-- Add Renderer_ogl plugin
-- Refactor the Renderer class
-- Remove some gui classes
-- Add CG shaders to opengl renderer plugin
-
---------------------------
 Changes in 0.0.11
 
 - Add EntitySystem tool
@@ -16,6 +8,10 @@ Changes in 0.0.11
 - Add LoaderDDS for loading DDS textures with this loader
 - Add Stream class for streaming data from varius locations
 - Add FileSystem and FileSystemManager for serching a file in different locations.
+- Add Renderer_ogl plugin
+- Refactor the Renderer class
+- Remove some gui classes
+- Add CG shaders to opengl renderer plugin
 
 --------------------------
 Changes in 0.0.10

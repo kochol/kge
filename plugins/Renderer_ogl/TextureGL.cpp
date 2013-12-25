@@ -178,6 +178,10 @@ namespace gfx
 	bool TextureGL::CreateTexture( int Width, int Height, TextureFormat fmt /*= ETF_A8R8G8B8*/
 									, int numMipMaps /*= 0*/, bool StoreCopy /*= false*/ )
 	{
+		m_iWidth = Width;
+		m_iHeight = Height;
+		m_Tfmt = fmt;
+
 		// enable 2D texturing
 		glEnable(GL_TEXTURE_2D);
 
@@ -193,16 +197,12 @@ namespace gfx
 		// cleaning errors
 		glGetError();
 
-		GLint texInternalFormat;
-		GLenum texDataFormat;
-		GLenum texDestFormat;
-
 		switch (fmt)
 		{
 		case ETF_A8:
 			texInternalFormat = GL_R8;
 			texDataFormat = GL_UNSIGNED_BYTE;
-			texDestFormat = GL_R;
+			texDestFormat = GL_RED;
 			break;
 		case ETF_A8L8:
 			texInternalFormat = GL_RG8;
@@ -235,13 +235,14 @@ namespace gfx
 
 		// create texture
 		glTexImage2D(GL_TEXTURE_2D,0,texInternalFormat,Width,Height
-			,0,texDestFormat,texDestFormat,NULL);
+			,0,texDestFormat,texDataFormat,NULL);
 
 		if (glGetError() != GL_NO_ERROR)
 		{
 			// TODO: log
+			io::Logger::Error("Can't create texture");
 		}
-		return false;
+		return true;
 	}
 
 	//------------------------------------------------------------------------------------
@@ -249,7 +250,13 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	bool TextureGL::SetData( u8* Data, int DataSize, int mipmapLevel /*= 0*/ )
 	{
-		return false;
+		// bind texture object
+		Renderer::GetSingletonPtr()->SetTexture(this);
+
+		glTexSubImage2D(GL_TEXTURE_2D, mipmapLevel, 0, 0, m_iWidth, m_iHeight
+			, texDestFormat, texDataFormat, (GLvoid*)Data);
+		
+		return true;
 	}
 
 	//------------------------------------------------------------------------------------
@@ -257,7 +264,13 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	bool TextureGL::SetData( int X, int Y, int Width, int Height, u8* Data, u32 DataSize, int mipmaplevel /*= 0*/ )
 	{
-		return false;
+		// bind texture object
+		Renderer::GetSingletonPtr()->SetTexture(this);
+
+		glTexSubImage2D(GL_TEXTURE_2D, mipmaplevel, X, Y, Width, Height
+			, texDestFormat, texDataFormat, (GLvoid*)Data);
+
+		return true;
 	}
 
 } // gfx

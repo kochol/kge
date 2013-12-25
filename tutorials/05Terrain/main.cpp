@@ -41,7 +41,7 @@ void keys(float elaspedtime)
 int main()
 {
 	kge::InitParameters	params;
-	//params.RendererType = kge::gfx::ERA_OpenGL;
+	params.RendererType = kge::gfx::ERA_OpenGL;
 	dev.Init(params);
 
 	pRen	= dev.GetRenderer();

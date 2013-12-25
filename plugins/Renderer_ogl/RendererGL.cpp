@@ -729,9 +729,12 @@ namespace gfx
 	// *** ******* ******* ***** ** *******
 	void RendererGL::SetTexture(Texture* pTex, int index)
 	{
-		// TODO: Change this function
 		if (!pTex)
+		{
+			glActiveTexture(GL_TEXTURE0 + index);
+			glDisable(GL_TEXTURE_2D);
 			return;
+		}
 
  		if (m_nTextID[index] != pTex->GetHandle())
  		{
@@ -976,7 +979,7 @@ namespace gfx
 	//----------------------------------------------------
 	void RendererGL::SetTextureParams(TextureParams Params, int TextureStage)
 	{
-		// TODO: Change this function
+		glActiveTexture(GL_TEXTURE0 + TextureStage);
 
 		switch (Params)
 		{
@@ -992,7 +995,7 @@ namespace gfx
 			break;
 
 		case gfx::ETP_Anisotropic:
-			//check for harsware support
+			//check for hardware support
 			if (!strstr((char*)glGetString(GL_EXTENSIONS),"GL_EXT_texture_filter_anisotropic"))
 			{
 				//get max ANISOTROPY and set it
@@ -1025,9 +1028,6 @@ namespace gfx
 			break;
 		}
 
-
-
-	  // TODO: in tabe baraye OpenGL ham bayad kamel shavad ( ETP_Point va ETP_Linear).
 	} // SetTextureFilters
 
 	//-------------------------------------------------------------------------------------
@@ -1271,15 +1271,24 @@ namespace gfx
 			break;
 		}
 
+		// Is dynamic?
+		GLenum dyn = GL_STATIC_DRAW;
+		if (isDynamic)
+			dyn = GL_DYNAMIC_DRAW;
+
 		// binding vertex buffer
 		glBindBuffer(GL_ARRAY_BUFFER,id);
 
-		glBufferData(GL_ARRAY_BUFFER,size,Vertices,GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER,size,Vertices, dyn);
 
-	//	HardwareBuffer *buf = new HardwareBuffer();
-	//	buf->
-		
-		return NULL;
+		// Create VertexBufferGLvbo
+		VertexBufferGL* pVB = KGE_NEW(VertexBufferGL)(VCount, stride);
+		pVB->m_uID = id;
+
+		AddHardwareBuffer(pVB);
+
+		return pVB;
+	
 	} 
 
 	//------------------------------------------------------------------------------------
@@ -1321,90 +1330,26 @@ namespace gfx
 	Shader* RendererGL::CreateVertexShaderFromFile(const char* VertexFileName, const char* VertexMain, 
 		ShaderVersion eVVersion)
 	{
-		// TODO: Implemet this function
+		CGprogram CgVertexProgram =
+			cgCreateProgramFromFile
+			(
+			m_CgContext,              /* Cg runtime context */
+			CG_SOURCE,                /* Program in human-readable form */
+			VertexFileName,  /* Name of file containing program */
+			m_CgVertexProfile,        /* Profile: OpenGL ARB vertex program */
+			VertexMain,      /* Entry function name */
+			NULL
+			);                    /* No extra compiler options */
+		checkForCgError("creating vertex program from string");
+		if (!CgVertexProgram)
+			return NULL;
 
-// 		// check for supporting OpenGL 2 or later
-// 		//(GLSL is only avilabe under OpenGL 2 or later )
-// 		char* temp = (char*)glGetString(GL_VERSION);
-// 		if ( temp[0] == '1' )
-// 			return NULL;
-// 
-// 		GLubyte *fShaderSource,*vShaderSource ;
-// 		// load vertex shader from file
-// 		kge::io::File f;
-// 		if (!f.Open(FileName))
-// 			return false;
-// 		vShaderSource = (GLubyte*) new char[f.GetSize() + 1];
-// 
-// 		if (!vShaderSource)
-// 		{
-// 			io::Logger::Log("Out Of Memory.", io::ELM_Error);
-// 			return NULL;
-// 		}
-// 		// Read file to the vertex shader Buffer (vShaderSource).
-// 		if (f.Read(vShaderSource, f.GetSize()) == -1)
-// 		{
-// 			delete[] vShaderSource;
-// 			return NULL;
-// 		}
-// 		vShaderSource[f.GetSize()] = '\0'; // set the end of shader identifier
-// 		f.Close ();
-// 		// create shader object
-// 		GLuint vShader ;
-// 		vShader = glCreateShaderObjectARB(GL_VERTEX_SHADER);
-// 		// attach shader data to th shader object
-// 		GLint	vlen = (GLint) strlen((const char*)vShaderSource);
-// 		glShaderSourceARB(vShader, 1, (const GLcharARB **)&vShaderSource, &vlen);
-// 		// compile shader
-// 		glCompileShader(vShader);
-// 
-// 		// LOAD FRAGMENT SHADER FROM FILE
-// 		if (!f.Open(PixelFileName))
-// 			return false;
-// 		fShaderSource = (GLubyte*) new char[f.GetSize() + 1];
-// 
-// 		if (!fShaderSource)
-// 		{
-// 			io::Logger::Log("Out Of Memory.", io::ELM_Error);
-// 			return NULL;
-// 		}
-// 
-// 		// Read file to the fragment shader Buffer (fShaderSource).
-// 		if (f.Read(fShaderSource, f.GetSize()) == -1)
-// 		{
-// 			delete[] fShaderSource;
-// 			return NULL;
-// 		}
-// 		// set the end of shader identifier
-// 		fShaderSource[f.GetSize()] = '\0';
-// 		f.Close ();
-// 		// create shader object
-// 		GLuint fShader =glCreateShaderObjectARB(GL_FRAGMENT_SHADER_ARB);
-// 		// attach shader data to th shader object
-// 		GLint	flen = (GLint) strlen((const char*)fShaderSource);
-// 		glShaderSourceARB(fShader, 1, (const GLcharARB **)&fShaderSource, &flen);
-// 		// compile shader
-// 		glCompileShader(fShader);
-// 
-// 		// check for the compiling errors
-// 		GLint compiled;
-// 		glGetObjectParameterivARB(vShader, GL_COMPILE_STATUS, &compiled);
-// 		if (!compiled)
-// 		{
-// 			io::Logger::Log("Can not compile vertex shader", io::ELM_Error);
-// 			return NULL;
-// 		}
-// 		glGetObjectParameterivARB(fShader, GL_COMPILE_STATUS, &compiled);
-// 		if (!compiled)
-// 		{
-// 			io::Logger::Log("Can not compile fragment shader", io::ELM_Error);
-// 			return NULL;
-// 		}
-// 
-// 		Shader *shader = new ShaderGL(vShader,fShader);
-// 		return shader;
+		cgGLLoadProgram(CgVertexProgram);
+		checkForCgError("loading vertex program");
 
-		return NULL;
+		Shader *shader = KGE_NEW(ShaderGL)(CgVertexProgram, 0, NULL, NULL);
+		return shader;
+
 
 	}
 
@@ -1417,7 +1362,7 @@ namespace gfx
 			(
 				m_CgContext,              /* Cg runtime context */
 				CG_SOURCE,                /* Program in human-readable form */
-				VertexCode,  /* Name of file containing program */
+				VertexCode,				  /* Vertex shader source code */
 				m_CgVertexProfile,        /* Profile: OpenGL ARB vertex program */
 				VertexMain,      /* Entry function name */
 				NULL
@@ -1730,7 +1675,25 @@ namespace gfx
 
 	Shader* RendererGL::CreatePixelShaderFromFile( const char* PixelFileName, const char* PixelMain /*= "PSMain"*/, ShaderVersion ePVersion /*= ESV_PS1_1*/ )
 	{
-		return NULL;
+		CGprogram CgPixelProgram =
+			cgCreateProgramFromFile
+			(
+			m_CgContext,
+			CG_SOURCE,  
+			PixelFileName,  
+			m_CgFragmentProfile,
+			PixelMain, 
+			NULL
+			);                    /* No extra compiler options */
+		checkForCgError("creating pixel program from string");
+		if (!CgPixelProgram)
+			return NULL;
+
+		cgGLLoadProgram(CgPixelProgram);
+		checkForCgError("loading pixel program");
+
+		Shader *shader = KGE_NEW(ShaderGL)(CgPixelProgram, 0, NULL, NULL);
+		return shader;
 
 	}
 

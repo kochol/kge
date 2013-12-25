@@ -106,17 +106,21 @@ namespace kge
 			m_ppTextureIDMaps	= KGE_NEW_ARRAY(kge::gfx::Texture*, m_iMapsCount);
 			kge::core::String str;
 			str = "TexID";
+			u8* alphadata = KGE_NEW_ARRAY(u8, texsize * texsize);
+			memset(alphadata, 0, texsize * texsize);
 			for (int i = 0; i < m_iMapsCount; i++)
 			{
 				str += i;
 				int handle				= Device::GetSingletonPtr()->GetTextureManager()->Add(NULL, NULL, str.ToCharPointer());
 				m_ppBlendMaps[i]		= Device::GetSingletonPtr()->GetTextureManager()->GetResource(handle);
 				m_ppBlendMaps[i]->CreateTexture(texsize, texsize, gfx::ETF_A8, 0);
+				m_ppBlendMaps[i]->SetData(alphadata, texsize * texsize);
 				str += i;
 				handle					= Device::GetSingletonPtr()->GetTextureManager()->Add(NULL, NULL, str.ToCharPointer());
 				m_ppTextureIDMaps[i]	= Device::GetSingletonPtr()->GetTextureManager()->GetResource(handle);
 				m_ppTextureIDMaps[i]->CreateTexture(texsize, texsize, gfx::ETF_A8L8, 1);
 			}
+			KGE_DELETE_ARRAY(alphadata);
 			
 			TileTerrain::ReCreate(numCols, numRows, MinHeight, MaxHeight);
 			m_pMaterial->shader->m_pVertexShader = m_pVshader;
@@ -318,7 +322,7 @@ namespace kge
 			// Testing start
 			//------------------------------------------------------------------------------------
 			// finding the tileid
-			PixelCode += "	float4 id = tex2D(TextureID, ((int2)Input.Texcoord % 64) / 64.0);//return tex2D(baseMap, Input.Texcoord);\n"\
+			PixelCode += "	float4 id = tex2D(TextureID, ((int2)Input.Texcoord % 64) / 64.0);//return tex2D(baseMap, Input.Texcoord).rbaa;\n"\
 						 "	int2 tileid; tileid = id.ra * 64.0;\n"\
 						 "	float4 f4TileID; f4TileID.xz = tileid % ";
 			PixelCode += m_iTileH / m_iTileSizeInPixel;

@@ -47,6 +47,9 @@ public:
 
 protected:
 	u32 m_uTexID;
+	int texInternalFormat;
+	int texDataFormat;
+	int texDestFormat;
 
 	// Check for devil errors.
 	void CheckDevilErrors( const char* TextureName );
