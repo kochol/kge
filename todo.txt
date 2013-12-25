@@ -1,3 +1,6 @@
 - Renderer
 	- Remove StartVertex and VertexDec* CV parameters from DrawTriangleList
 	- Remove DrawTriangleList( HardwareBuffer* VB, HardwareBuffer* IB, u32 VCount, u32 ICount, VertexType eVType ) function
+- Loaders
+	- Put devil texture loader to a loader plugin
+	- Add ASIMP mesh loader plugin to load many mesh formats

@@ -207,7 +207,7 @@ namespace kge
 		g_pRenderer->SetTransForm(&m);
 		mvp *= m;
 		if (m_pMat->shader->m_pVertexShader)
-			m_pMat->shader->m_pVertexShader->SetConstant(m_VshWVP, m.m_fMat, 16);
+			m_pMat->shader->m_pVertexShader->SetConstant(m_VshWVP, mvp.m_fMat, 16);
 		g_pRenderer->DrawTriangleList(p->num_vertices, p->num_indices, m_pVD, 0, 0);
 
 	} // RenderCompiledGeometry

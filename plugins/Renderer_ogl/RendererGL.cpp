@@ -190,10 +190,10 @@ namespace gfx
 			{
 				math::Matrix mMat;
 				mMat = m_mView * m_mWorld;
-				glMatrixMode(GL_MODELVIEW);
-				glLoadMatrixf((GLfloat*)&mMat);
-				glMatrixMode(GL_PROJECTION);
-				glLoadMatrixf((GLfloat*)&m_mProj);
+// 				glMatrixMode(GL_MODELVIEW);
+// 				glLoadMatrixf((GLfloat*)&mMat);
+// 				glMatrixMode(GL_PROJECTION);
+// 				glLoadMatrixf((GLfloat*)&m_mProj);
 				m_bRF[ERF_2D] = false;
 			}
 			m_iTriCount  = 0;
@@ -482,8 +482,8 @@ namespace gfx
 		m_mView._44 = 1.0f;
 		m_mView._14 = m_mView._24 = m_mView._34 = 0.0f;
 
-		glMatrixMode(GL_MODELVIEW);
-		glLoadMatrixf((GLfloat*)&m_mView);
+// 		glMatrixMode(GL_MODELVIEW);
+// 		glLoadMatrixf((GLfloat*)&m_mView);
 	} // SetViewLookAtLH
 
 	// *** ******* *******
@@ -550,8 +550,8 @@ namespace gfx
 		m_mView._44 = 1.0f;
 		m_mView._14 = m_mView._24 = m_mView._34 = 0.0f;
 
-		glMatrixMode(GL_MODELVIEW);
-		glLoadMatrixf((GLfloat*)&m_mView);
+// 		glMatrixMode(GL_MODELVIEW);
+// 		glLoadMatrixf((GLfloat*)&m_mView);
 	} // SetViewLookAtRH
 
 	// ******* ********** ** *** ****** ** ****** **** *****
@@ -569,8 +569,8 @@ namespace gfx
 		m_mProj._34 = 1.0f;
 		m_mProj._43 = -Near*Far/(Far-Near);
 
-		glMatrixMode(GL_PROJECTION);
-		glLoadMatrixf((GLfloat*)&m_mProj);
+// 		glMatrixMode(GL_PROJECTION);
+// 		glLoadMatrixf((GLfloat*)&m_mProj);
 	} // SetPerspectiveLH
 
 	// ******* ********** ** *** ****** ** ****** **** *****
@@ -587,8 +587,8 @@ namespace gfx
 		m_mProj._33 = Far/(Far-Near);
 		m_mProj._34 = -1.0f;
 		m_mProj._43 = Near*Far/(Far-Near);
-		glMatrixMode(GL_PROJECTION);
-		glLoadMatrixf((GLfloat*)&m_mProj);
+// 		glMatrixMode(GL_PROJECTION);
+// 		glLoadMatrixf((GLfloat*)&m_mProj);
 	} // SetPerspectiveRH
 
 	// ****** ***** ** ****** ********
@@ -776,10 +776,10 @@ namespace gfx
 			// Dorbine 2D
 			//-----------
 		case ERF_2D:
-			glMatrixMode(GL_PROJECTION);
-			glLoadMatrixf((GLfloat*)&m_m2D);
-			glMatrixMode(GL_MODELVIEW);
-			glLoadIdentity();
+// 			glMatrixMode(GL_PROJECTION);
+// 			glLoadMatrixf((GLfloat*)&m_m2D);
+// 			glMatrixMode(GL_MODELVIEW);
+// 			glLoadIdentity();
 			Disable(ERF_Lighting);
 			m_bRF[ERF_2D] = true;
 			break;
@@ -854,10 +854,10 @@ namespace gfx
 			///////////////
 		case ERF_2D:
 			mMat = m_mView * m_mWorld;
-			glMatrixMode(GL_MODELVIEW);
-			glLoadMatrixf((GLfloat*)&mMat);
-			glMatrixMode(GL_PROJECTION);
-			glLoadMatrixf((GLfloat*)&m_mProj);
+// 			glMatrixMode(GL_MODELVIEW);
+// 			glLoadMatrixf((GLfloat*)&mMat);
+// 			glMatrixMode(GL_PROJECTION);
+// 			glLoadMatrixf((GLfloat*)&m_mProj);
 
 			m_bRF[ERF_2D] = false;
 			break;
