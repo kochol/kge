@@ -1,5 +1,5 @@
 --------------------------
-Changes in 0.0.11
+Changes in 0.1.0
 
 - Add EntitySystem tool
 - Add 08EntitySystem tutorial
@@ -12,6 +12,8 @@ Changes in 0.0.11
 - Refactor the Renderer class
 - Remove some gui classes
 - Add CG shaders to opengl renderer plugin
+- Add KgeThread
+- Add KgeMutex
 
 --------------------------
 Changes in 0.0.10

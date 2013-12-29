@@ -471,6 +471,12 @@
     <ClCompile Include="Source\gui\Control.cpp">
       <Filter>Source Files\gui</Filter>
     </ClCompile>
+    <ClCompile Include="Source\core\KgeThread.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\core\KgeMutex.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\core\CPU.h">
@@ -976,6 +982,12 @@
     </ClInclude>
     <ClInclude Include="Include\gfx\VertexElement.h">
       <Filter>Include Files\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\KgeThread.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\KgeMutex.h">
+      <Filter>Include Files\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

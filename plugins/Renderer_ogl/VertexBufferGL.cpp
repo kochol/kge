@@ -12,9 +12,10 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	// Constructor
 	//------------------------------------------------------------------------------------
-	VertexBufferGL::VertexBufferGL( u32 vCount,u32 stride ): 
+	VertexBufferGL::VertexBufferGL( u32 vCount,u32 stride, bool isDynamic ): 
 		HardwareBuffer(vCount, stride, HardwareBufferID++)
 	{
+		m_bDynamic = isDynamic;
 
 	} // Constructor
 
@@ -32,6 +33,9 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	bool VertexBufferGL::SetData( void* Data, u32 Offset, u32 iSize, ul32 flags )
 	{
+		if (!m_bDynamic)
+			return false;
+
 		Bind(0);
 		GLenum staticflag = GL_STATIC_DRAW;
 		if (m_bDynamic)

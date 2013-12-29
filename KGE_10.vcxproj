@@ -111,7 +111,9 @@
     <ClCompile Include="Source\av\OpenAL\SoundBuffer.cpp" />
     <ClCompile Include="Source\core\KgeArray.cpp" />
     <ClCompile Include="Source\core\KgeMemoryTrack.cpp" />
+    <ClCompile Include="Source\core\KgeMutex.cpp" />
     <ClCompile Include="Source\core\KgeNedmalloc.cpp" />
+    <ClCompile Include="Source\core\KgeThread.cpp" />
     <ClCompile Include="Source\Device.cpp" />
     <ClCompile Include="Source\efx\Bloom.cpp" />
     <ClCompile Include="Source\efx\xpsm.cpp" />
@@ -279,6 +281,8 @@
     <ClInclude Include="Include\av\Video.h" />
     <ClInclude Include="Include\config.h" />
     <ClInclude Include="Include\core\KgeArray.h" />
+    <ClInclude Include="Include\core\KgeMutex.h" />
+    <ClInclude Include="Include\core\KgeThread.h" />
     <ClInclude Include="Include\core\PriorityArray.h" />
     <ClInclude Include="Include\Device.h" />
     <ClInclude Include="Include\efx\Bloom.h" />

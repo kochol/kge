@@ -1282,7 +1282,7 @@ namespace gfx
 		glBufferData(GL_ARRAY_BUFFER,size,Vertices, dyn);
 
 		// Create VertexBufferGLvbo
-		VertexBufferGL* pVB = KGE_NEW(VertexBufferGL)(VCount, stride);
+		VertexBufferGL* pVB = KGE_NEW(VertexBufferGL)(VCount, stride, isDynamic);
 		pVB->m_uID = id;
 
 		AddHardwareBuffer(pVB);
@@ -1316,7 +1316,7 @@ namespace gfx
 		glBufferData(GL_ARRAY_BUFFER, VCount * Stride, Vertices, dyn);
 
 		// Create VertexBufferGLvbo
-		VertexBufferGL* pVB = KGE_NEW(VertexBufferGL)(VCount, Stride);
+		VertexBufferGL* pVB = KGE_NEW(VertexBufferGL)(VCount, Stride, isDynamic);
 		pVB->m_uID = bufID;
 
 		AddHardwareBuffer(pVB);
