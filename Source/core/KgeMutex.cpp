@@ -1,5 +1,6 @@
 #include "../../Include/core/KgeMutex.h"
 #include "../../Include/io/Logger.h"
+#include <SDL_mutex.h>
 
 namespace kge
 {

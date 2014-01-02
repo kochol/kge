@@ -4,8 +4,8 @@
 
 int thread_function( void *pThis )
 {
-	((kge::core::KgeThread*)pThis)->ThreadProc();
-	return 0;
+	return ((kge::core::KgeThread*)pThis)->ThreadProc();
+	
 }
 
 namespace kge

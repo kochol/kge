@@ -29,7 +29,6 @@
 #include "../Headers/io/Linux.h"
 #include "../Headers/io/SdlWindow.h"
 #include "../Include/io/Logger.h"
-#include "../Headers/core/CPU.h"
 
 #include "../Headers/ph/PhysXManager.h"
 
@@ -188,10 +187,6 @@ namespace kge
 			params.hwnd		= m_pWindow->GetHandler();
 			m_Params.hwnd	= m_pWindow->GetHandler();
 		}
-
-		// Find CPU capacities.
-		core::CPU cpu;
-		cpu.Init();
 
 		// Init the Renderer
 		if(!m_pRenderer->Init(this, params))

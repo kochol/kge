@@ -3,7 +3,7 @@
 
 #include "../KgeUnknown.h"
 
-#include <SDL_mutex.h>
+struct SDL_mutex;
 
 namespace kge
 {

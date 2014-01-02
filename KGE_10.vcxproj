@@ -110,10 +110,13 @@
     <ClCompile Include="Source\av\OggVorbis.cpp" />
     <ClCompile Include="Source\av\OpenAL\SoundBuffer.cpp" />
     <ClCompile Include="Source\core\KgeArray.cpp" />
+    <ClCompile Include="Source\core\KgeCond.cpp" />
     <ClCompile Include="Source\core\KgeMemoryTrack.cpp" />
     <ClCompile Include="Source\core\KgeMutex.cpp" />
     <ClCompile Include="Source\core\KgeNedmalloc.cpp" />
     <ClCompile Include="Source\core\KgeThread.cpp" />
+    <ClCompile Include="Source\core\TaskManager.cpp" />
+    <ClCompile Include="Source\core\TaskManagerThread.cpp" />
     <ClCompile Include="Source\Device.cpp" />
     <ClCompile Include="Source\efx\Bloom.cpp" />
     <ClCompile Include="Source\efx\xpsm.cpp" />
@@ -239,7 +242,6 @@
     <ClInclude Include="Headers\av\fmod\FmodSoundBuffer.h" />
     <ClInclude Include="Headers\av\fmod\FmodSoundSystem.h" />
     <ClInclude Include="Headers\av\OggVorbis.h" />
-    <ClInclude Include="Headers\core\CPU.h" />
     <ClInclude Include="Headers\core\KgeMemoryTrack.h" />
     <ClInclude Include="Headers\core\KgeNedmalloc.h" />
     <ClInclude Include="Headers\gfx\LightGL.h" />
@@ -280,10 +282,15 @@
     <ClInclude Include="Include\av\soundsystem.h" />
     <ClInclude Include="Include\av\Video.h" />
     <ClInclude Include="Include\config.h" />
+    <ClInclude Include="Include\core\CPU.h" />
     <ClInclude Include="Include\core\KgeArray.h" />
     <ClInclude Include="Include\core\KgeMutex.h" />
     <ClInclude Include="Include\core\KgeThread.h" />
     <ClInclude Include="Include\core\PriorityArray.h" />
+    <ClInclude Include="Include\core\Task.h" />
+    <ClInclude Include="Include\core\TaskGroup.h" />
+    <ClInclude Include="Include\core\TaskManager.h" />
+    <ClInclude Include="Include\core\TaskManagerThread.h" />
     <ClInclude Include="Include\Device.h" />
     <ClInclude Include="Include\efx\Bloom.h" />
     <ClInclude Include="Include\efx\xpsm.h" />

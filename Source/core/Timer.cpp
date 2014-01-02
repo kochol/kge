@@ -6,11 +6,7 @@
 
 #include "../../Include/core/Timer.h"
 
-#ifndef WIN32
-#ifdef KGE_USE_SDL
 #include <SDL.h>
-#endif // KGE_USE_SDL
-#endif // WIN32
 
 namespace kge
 {
@@ -21,28 +17,15 @@ namespace core
 	//------------------------------------------------------------------------------------
 	Timer::Timer()
 	{
-#ifdef WIN32
-
-		SetThreadAffinityMask(GetCurrentThread(), 1);
-		QueryPerformanceFrequency(&freq);
+		freq = SDL_GetPerformanceFrequency();
 		
-		ims = freq.QuadPart / 1000;
+		ims = freq / 1000;
 		//if (ims < 0 ) ims = -ims;
 
-		QueryPerformanceCounter(&lastTick);
+		lastTick = SDL_GetPerformanceCounter();
 		base = lastTick;
 		fps = 0;
 		Interval = 0;
-
-#else
-#ifdef KGE_USE_SDL
-
-		SDL_GetTicks();
-		oldTime = SDL_GetTicks();
-		currentTime = oldTime;
-
-#endif // KGE_USE_SDL
-#endif // WIN32
 
 	} // Timer()
 
@@ -51,25 +34,13 @@ namespace core
 	//------------------------------------------------------------------------------------
 	Timer::Timer(int ifps)
 	{
-#ifdef WIN32
-
-		SetThreadAffinityMask(GetCurrentThread(), 1);
-		QueryPerformanceCounter(&lastTick);
-		QueryPerformanceFrequency(&freq);
-		ims = freq.QuadPart / ifps;
+		lastTick = SDL_GetPerformanceCounter();
+		freq = SDL_GetPerformanceFrequency();
+		ims = freq / ifps;
 		fps = ifps;
 		isFirstGetTimeCall = true;
 		base = lastTick;
 		Interval = 0;
-
-#else
-#ifdef KGE_USE_SDL
-
-		oldTime = SDL_GetTicks();
-		currentTime = oldTime;
-
-#endif // KGE_USE_SDL
-#endif // WIN32
 
 	} // Timer(int fpsLimit).
 
@@ -78,30 +49,17 @@ namespace core
 	// ******* ****** ** ** ** **** **** ******** ** *** **** **** ***** *****
 	int Timer::GetTime()
 	{
-#ifdef WIN32
+		Uint64 curTick;
+		curTick = SDL_GetPerformanceCounter();
 
-		LARGE_INTEGER curTick;
-		QueryPerformanceCounter(&curTick);
 		int iTime = 0;
-		if(lastTick.QuadPart != 0)
+		if(lastTick != 0)
 		{
-			iTime = (int)((__int64)curTick.QuadPart - (__int64)lastTick.QuadPart);
+			iTime = (int)(curTick - lastTick);
 		}
 		if ((iTime / ims) > 0)
 			lastTick = curTick;
 		return iTime / ims;
-
-#else
-#ifdef KGE_USE_SDL
-
-		u32 tempT;
-		tempT = SDL_GetTicks();
-		currentTime = tempT - oldTime;
-		oldTime = tempT;
-		return currentTime;
-
-#endif // KGE_USE_SDL
-#endif // WIN32
 
 	} // GetTime
 
@@ -110,11 +68,9 @@ namespace core
 	// *********
 	bool Timer::NextFrame()
 	{
-#ifdef WIN32
-
-		LARGE_INTEGER t;
-		QueryPerformanceCounter(&t);
-		if(lastTick.QuadPart != 0)
+		Uint64 t;
+		t = SDL_GetPerformanceCounter();
+		if(lastTick != 0)
 		{
 			if(fps==0)
 			{
@@ -131,17 +87,17 @@ namespace core
 				int done = 0;
 				do
 				{
-					int ticks_passed = (int)((__int64)t.QuadPart - (__int64)lastTick.QuadPart);
+					int ticks_passed = (int)(t - lastTick);
 					int ticks_left = ims - ticks_passed;
-					if (t.QuadPart < lastTick.QuadPart)    // time wrap
+					if (t < lastTick)    // time wrap
 						done = 1;
 					if (ticks_passed >= ims)
 						done = 1;
 
 					if (!done)
 					{
-						if (ticks_left > (int)freq.QuadPart/500)
-							Sleep(1);
+						if (ticks_left > (int)freq/500)
+							SDL_Delay(1);
 						else
 							for (int i=0; i<10; i++)
 								Sleep(0);  // causes thread to give up its time slice
@@ -154,20 +110,6 @@ namespace core
 		lastTick = t;
 		return false;
 
-#else
-#ifdef KGE_USE_SDL
-
-		if( GetTime2() >= Interval )
-		{
-			oldTime = SDL_GetTicks();
-			return true;
-		}
-		else
-			return false;
-
-#endif // KGE_USE_SDL
-#endif // WIN32
-
 	} // NextFrame
 
 	// ********
@@ -175,24 +117,13 @@ namespace core
 	// ********
 	int Timer::GetTime2()
 	{
-#ifdef WIN32
-
-	LARGE_INTEGER curTick;
-	QueryPerformanceCounter(&curTick);
-	int iTime = 0;
-	if(lastTick.QuadPart != 0)
-	{
-		iTime = (int)((__int64)curTick.QuadPart - (__int64)lastTick.QuadPart);
-	}
-	return iTime;
-
-#else
-#ifdef KGE_USE_SDL
-
-		return SDL_GetTicks() - oldTime;
-
-#endif // KGE_USE_SDL
-#endif // WIN32
+		Uint64 curTick = SDL_GetPerformanceCounter();
+		int iTime = 0;
+		if(lastTick != 0)
+		{
+			iTime = (int)(curTick - lastTick);
+		}
+		return iTime;
 
 	} // GetTime2
 
@@ -201,12 +132,10 @@ namespace core
 	//--------------------------------------------------------
 	float Timer::GetTimeElapsed()
 	{
-		//return GetTime() * 0.001f;
+		Uint64 curTick;
+		curTick = SDL_GetPerformanceCounter();
 
-		LARGE_INTEGER curTick;
-		QueryPerformanceCounter(&curTick);
-
-		float elapsedTime = static_cast<float>(curTick.QuadPart - lastTick.QuadPart) / static_cast<float>(freq.QuadPart);
+		float elapsedTime = static_cast<float>(curTick - lastTick) / static_cast<float>(freq);
 
 		lastTick = curTick;
 

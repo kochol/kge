@@ -14,6 +14,12 @@ Changes in 0.1.0
 - Add CG shaders to opengl renderer plugin
 - Add KgeThread
 - Add KgeMutex
+- Add TaskManager
+- Add TaskManagerThread
+- Add Task interface
+- Add TaskGroup
+- Update CPU class
+- Update Timer class to work with SDL
 
 --------------------------
 Changes in 0.0.10

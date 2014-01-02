@@ -3,7 +3,6 @@
 // Date: January 11, 2011
 // Programmer: Nader Golbaz
 
-#include <d3d9.h> // D3DLOCK_DISCARD
 #include "../../Headers/ps/Particle.h"
 #include "../../Headers/ps/ParticleRenderer.h"
 #include "../../Include/sn/StaticMesh.h"
@@ -161,13 +160,13 @@ namespace kge
 			rightVec.Normalize();
 			upVec.Normalize();
 
-			kge::ul32 flag = D3DLOCK_NOOVERWRITE;
+			kge::ul32 flag = 0x00001000L;
 			const kge::u32 sizeOfData = activeCount * 4 * sizeof(gfx::Vertex3CT);
 
 			if (m_bufferOffset + sizeOfData > m_vbuffer->GetDataCount() * sizeof(gfx::Vertex3CT))
 			{
 				m_bufferOffset = 0;
-				flag = D3DLOCK_DISCARD;
+				flag = 0x00002000L;
 			}
 
 			if (!(m_vbuffer->Lock(m_bufferOffset, sizeOfData, reinterpret_cast<void**>(&v), flag)))
@@ -271,13 +270,13 @@ namespace kge
 
 			gfx::Vertex3CT* v = 0;
 
-			kge::ul32 flag = D3DLOCK_NOOVERWRITE;
+			kge::ul32 flag = 0x00001000L;
 			const kge::u32 sizeOfData = activeCount * 4 * sizeof(gfx::Vertex3CT);
 
 			if (m_bufferOffset + sizeOfData > m_vbuffer->GetDataCount() * sizeof(gfx::Vertex3CT))
 			{
 				m_bufferOffset = 0;
-				flag = D3DLOCK_DISCARD;
+				flag = 0x00002000L;
 			}
 
 			if (!(m_vbuffer->Lock(m_bufferOffset, sizeOfData, reinterpret_cast<void**>(&v), flag)))
@@ -401,13 +400,13 @@ namespace kge
 			math::Vector rightVec(1.0f, 0.0f, 0.0f); // TODO
 			math::Vector upVec(0.0f, 0.0f, 1.0f); // TODO
 
-			kge::ul32 flag = D3DLOCK_NOOVERWRITE;
+			kge::ul32 flag = 0x00001000L;
 			const kge::u32 sizeOfData = activeCount * 4 * sizeof(gfx::Vertex3CT);
 
 			if (m_bufferOffset + sizeOfData > m_vbuffer->GetDataCount() * sizeof(gfx::Vertex3CT))
 			{
 				m_bufferOffset = 0;
-				flag = D3DLOCK_DISCARD;
+				flag = 0x00002000L;
 			}
 
 			if (!(m_vbuffer->Lock(m_bufferOffset, sizeOfData, reinterpret_cast<void**>(&v), flag)))

@@ -31,7 +31,7 @@ namespace kge
 			bool IsRunning() {return m_bIsRunning;}
 
 			//! Thread function for internal use
-			virtual ul32 ThreadProc() = 0;
+			virtual int ThreadProc() = 0;
 
 		protected:
 
