@@ -1010,6 +1010,9 @@
     <ClInclude Include="Include\core\CPU.h">
       <Filter>Include Files\core</Filter>
     </ClInclude>
+    <ClInclude Include="Include\core\KgeCond.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />

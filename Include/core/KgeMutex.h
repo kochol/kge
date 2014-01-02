@@ -12,6 +12,8 @@ namespace kge
 		//! Mutex are used to help threads share their objects.
 		class KGE_API KgeMutex: public KgeUnknown
 		{
+			friend class KgeCond;
+
 		public:
 
 			//! Constructor
