@@ -292,6 +292,7 @@
     <ClInclude Include="Include\core\TaskGroup.h" />
     <ClInclude Include="Include\core\TaskManager.h" />
     <ClInclude Include="Include\core\TaskManagerThread.h" />
+    <ClInclude Include="Include\core\TSQueue.h" />
     <ClInclude Include="Include\Device.h" />
     <ClInclude Include="Include\efx\Bloom.h" />
     <ClInclude Include="Include\efx\xpsm.h" />

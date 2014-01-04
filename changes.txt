@@ -20,6 +20,7 @@ Changes in 0.1.0
 - Add TaskGroup
 - Update CPU class
 - Update Timer class to work with SDL
+- Add TSQueue a Tread Safe Queue
 
 --------------------------
 Changes in 0.0.10
