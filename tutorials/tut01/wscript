@@ -1,0 +1,9 @@
+def build(bld):
+	# Bulid
+	bld.program(
+		source = 'main.cpp',
+		target = "01helloworld",
+		includes     = ['../../Libs/sdl'],
+		cxxflags     = ['-fpermissive'],
+		use = 'kge'
+	)
