@@ -3,6 +3,7 @@
 // Date: 22/11/1387
 // Programmers: Ali Akbar Mohammadi (Kochol)
 
+#include <stdio.h>
 #include "../../Include/sn/TileTerrain.h"
 #include "../../Include/gfx/Renderer.h"
 #include "../../Include/gfx/MeshManager.h"
@@ -25,7 +26,7 @@ namespace kge
 		TileTerrain::TileTerrain() :
 	m_pIndices(NULL), m_fWidth(1.0f), m_fHeight(1.0f),
 		m_iNumVerts(0), m_iNumIndices(0), m_iNumCols(0), m_iNumRows(0),
-		m_fXOffset(-0.5f), m_fYOffset(-0.5f), m_pTileTexture(NULL), 
+		m_fXOffset(-0.5f), m_fYOffset(-0.5f), m_pTileTexture(NULL),
 		m_pTextureID(NULL), m_pDTM(NULL), m_pTiles(NULL), m_pBlendTiles(NULL),
 		m_iNumColspp(0), m_iNumRowspp(0), m_pTilesTemp(NULL), m_pTextureBlend(NULL),
 		m_pTiles2(NULL), m_bWater(false), m_bCaustics(false), m_ppCausticsTextures(NULL),
@@ -276,7 +277,7 @@ namespace kge
 			m_iTextureIDSizeY = ty;
 			float* f = KGE_NEW_ARRAY(float, tx * ty * 4);
 			int cfcf = tx * 4;
-			float cc = 0.0f, ccy = 0.0f;   
+			float cc = 0.0f, ccy = 0.0f;
 			for (int r = 0; r < numRows; r++)
 			{
 				cc = 0.0f;
@@ -486,7 +487,7 @@ namespace kge
 				//												,m_pVertices[(i * numColspp + j)].Nor.Z);
 				//m_vTerrainData[i * numCols + j].RightNormal->set(m_pVertices[((i + 1) * numCols + j) + 1].Nor.X
 				//												,m_pVertices[((i + 1) * numCols + j) + 1].Nor.Y
-				//												,m_pVertices[((i + 1) * numCols + j) + 1].Nor.Z);						
+				//												,m_pVertices[((i + 1) * numCols + j) + 1].Nor.Z);
 #ifdef DEBUG
 				m_pNormalVerts[(i * numColspp + j) * 2 ].c   = m_cNormal[0];
 				m_pNormalVerts[(i * numColspp + j) * 2 ].pos = m_pPos[(i * numColspp + j)];
@@ -516,7 +517,7 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void TileTerrain::SetTile(int Col, int Row, u32 TileID)
 	{
-		if (Col < 0 || Col >= m_iNumCols || 
+		if (Col < 0 || Col >= m_iNumCols ||
 			Row < 0 || Row >= m_iNumRows)
 			return;
 
@@ -541,7 +542,7 @@ namespace kge
 
 	void TileTerrain::SetTile( int Col, int Row, int TileID, int TileID2 )
 	{
-		if (Col < 0 || Col >= m_iNumCols || 
+		if (Col < 0 || Col >= m_iNumCols ||
 			Row < 0 || Row >= m_iNumRows)
 			return;
 
@@ -612,7 +613,7 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void TileTerrain::Blend( int Col, int Row )
 	{
-		if (Col < 0 || Col >= m_iNumCols || 
+		if (Col < 0 || Col >= m_iNumCols ||
 			Row < 0 || Row >= m_iNumRows)
 			return;
 
@@ -754,7 +755,7 @@ namespace kge
 			qr.pop();
 			if (c > 0)
 			{
-				if (m_pTiles[r * m_iNumCols + c - 1] == TileID && 
+				if (m_pTiles[r * m_iNumCols + c - 1] == TileID &&
 					m_pBlendTiles[r * m_iNumCols + c - 1] == 255 &&
 					m_pTilesTemp[r * m_iNumCols + c - 1] == 0)
 				{
@@ -762,7 +763,7 @@ namespace kge
 					qc.push(c - 1);
 					qr.push(r);
 				}
-				else if (m_pTiles[r * m_iNumCols + c - 1] != TileID && 
+				else if (m_pTiles[r * m_iNumCols + c - 1] != TileID &&
 					m_pTilesTemp[r * m_iNumCols + c - 1] == 0)
 				{
 					m_pTilesTemp[r * m_iNumCols + c - 1] = 2;
@@ -771,7 +772,7 @@ namespace kge
 			}
 			if (c < m_iNumCols - 1)
 			{
-				if (m_pTiles[r * m_iNumCols + c + 1] == TileID && 
+				if (m_pTiles[r * m_iNumCols + c + 1] == TileID &&
 					m_pBlendTiles[r * m_iNumCols + c + 1] == 255 &&
 					m_pTilesTemp[r * m_iNumCols + c + 1] == 0)
 				{
@@ -779,7 +780,7 @@ namespace kge
 					qc.push(c + 1);
 					qr.push(r);
 				}
-				else if (m_pTiles[r * m_iNumCols + c + 1] != TileID && 
+				else if (m_pTiles[r * m_iNumCols + c + 1] != TileID &&
 					m_pTilesTemp[r * m_iNumCols + c + 1] == 0)
 				{
 					m_pTilesTemp[r * m_iNumCols + c + 1] = 2;
@@ -787,7 +788,7 @@ namespace kge
 			}
 			if (r > 0)
 			{
-				if (m_pTiles[(r - 1) * m_iNumCols + c] == TileID && 
+				if (m_pTiles[(r - 1) * m_iNumCols + c] == TileID &&
 					m_pBlendTiles[(r - 1) * m_iNumCols + c] == 255 &&
 					m_pTilesTemp[(r - 1) * m_iNumCols + c] == 0)
 				{
@@ -795,7 +796,7 @@ namespace kge
 					qc.push(c);
 					qr.push(r - 1);
 				}
-				else if (m_pTiles[(r - 1) * m_iNumCols + c] != TileID && 
+				else if (m_pTiles[(r - 1) * m_iNumCols + c] != TileID &&
 					m_pTilesTemp[(r - 1) * m_iNumCols + c] == 0)
 				{
 					m_pTilesTemp[(r - 1) * m_iNumCols + c] = 2;
@@ -803,7 +804,7 @@ namespace kge
 			}
 			if (r < m_iNumRows - 1)
 			{
-				if (m_pTiles[(r + 1) * m_iNumCols + c] == TileID && 
+				if (m_pTiles[(r + 1) * m_iNumCols + c] == TileID &&
 					m_pBlendTiles[(r + 1) * m_iNumCols + c] == 255 &&
 					m_pTilesTemp[(r + 1) * m_iNumCols + c] == 0)
 				{
@@ -811,7 +812,7 @@ namespace kge
 					qc.push(c);
 					qr.push(r + 1);
 				}
-				else if (m_pTiles[(r + 1) * m_iNumCols + c] != TileID && 
+				else if (m_pTiles[(r + 1) * m_iNumCols + c] != TileID &&
 					m_pTilesTemp[(r + 1) * m_iNumCols + c] == 0)
 				{
 					m_pTilesTemp[(r + 1) * m_iNumCols + c] = 2;
@@ -920,7 +921,7 @@ namespace kge
 	} // GetHeight
 
 	//------------------------------------------------------------------------------------
-	// Sets the terrain height by the index id. 
+	// Sets the terrain height by the index id.
 	//------------------------------------------------------------------------------------
 	void TileTerrain::SetHeight( int IndexID, float h )
 	{
@@ -942,7 +943,7 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void TileTerrain::SetHeight( int Col, int Row, float h )
 	{
-		if (Col < 0 || Col >= m_iNumCols || 
+		if (Col < 0 || Col >= m_iNumCols ||
 			Row < 0 || Row >= m_iNumRows)
 			return;
 
@@ -998,7 +999,7 @@ namespace kge
 	} // SetHeight ( Col, Row )
 
 	//------------------------------------------------------------------------------------
-	// Sets the terrain color by the index id. 
+	// Sets the terrain color by the index id.
 	//------------------------------------------------------------------------------------
 	void TileTerrain::SetVertexColor( int IndexID, gfx::Color c )
 	{
@@ -1012,7 +1013,7 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void TileTerrain::SetVertexColor( int Col, int Row, gfx::Color c )
 	{
-		if (Col < 0 || Col >= m_iNumCols || 
+		if (Col < 0 || Col >= m_iNumCols ||
 			Row < 0 || Row >= m_iNumRows)
 			return;
 
@@ -1026,7 +1027,7 @@ namespace kge
 	} // SetVertexColor
 
 	//------------------------------------------------------------------------------------
-	// Adds the terrain height by the index id. 
+	// Adds the terrain height by the index id.
 	//------------------------------------------------------------------------------------
 	void TileTerrain::SetHeightAdd( int IndexID, float h )
 	{
@@ -1048,7 +1049,7 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void TileTerrain::SetHeightAdd( int Col, int Row, float h )
 	{
-		if (Col < 0 || Col >= m_iNumCols || 
+		if (Col < 0 || Col >= m_iNumCols ||
 			Row < 0 || Row >= m_iNumRows)
 			return;
 
@@ -1381,7 +1382,7 @@ namespace kge
 		{
 			for (int x = 0; x < pDecal->m_iSizeX + 2; x++)
 			{
-				pDecal->m_pVertices[y * (pDecal->m_iSizeX + 2) + x].pos.Y 
+				pDecal->m_pVertices[y * (pDecal->m_iSizeX + 2) + x].pos.Y
 					= m_pPos[(iy + y) * m_iNumColspp + ix + x].Y + 0.05f;
 
 				pDecal->m_pVertices[y * (pDecal->m_iSizeX + 2) + x].tex.X = x * pDecal->m_fU - fu;
@@ -1525,7 +1526,7 @@ namespace kge
 			PixelCode += m_cEnd.c[1];
 			PixelCode += ", ";
 			PixelCode += m_cEnd.c[2];
-			PixelCode += ", 1);\n";			
+			PixelCode += ", 1);\n";
 		}
 		PixelCode += "	float2 m[16] = \n"\
 			"	{\n"\
@@ -1618,7 +1619,7 @@ namespace kge
 					PixelCode += "	col += under / ((Input.Height * 0.2 + 1.5) );\n";
 				else
 					PixelCode += "	col = under / ((Input.Height * 0.2 + 1.5) * 0.5);\n";
-			}				
+			}
 			PixelCode += "	}\n";
 		}
 		if (m_bReceiveShadow)
@@ -1673,8 +1674,8 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	// Enables the under water vertex coloring effect.
 	//------------------------------------------------------------------------------------
-	void TileTerrain::EnableWater( bool Enable, 
-		const gfx::Colorf& cStart /*= gfx::Colorf(255, 255, 255)*/, 
+	void TileTerrain::EnableWater( bool Enable,
+		const gfx::Colorf& cStart /*= gfx::Colorf(255, 255, 255)*/,
 		const gfx::Colorf& cEnd /*= gfx::Colorf(0, 229, 255)*/ )
 	{
 		m_bWater	= Enable;
@@ -1718,7 +1719,7 @@ namespace kge
 		m_pVshader->SetConstant(m_shLit, &dir.x, 3);
 
 		// GET WVP
-		math::Matrix mat = m_pRenderer->GetTransForm(kge::gfx::ETM_Projection) * 
+		math::Matrix mat = m_pRenderer->GetTransForm(kge::gfx::ETM_Projection) *
 			m_pRenderer->GetTransForm(kge::gfx::ETM_View)  * (*m_pFinalMat);
 
 		m_pVshader->SetConstant(m_shWVP, mat.m_fMat, 16);
@@ -1752,7 +1753,7 @@ namespace kge
 	} // SetShaderParams
 
 	//------------------------------------------------------------------------------------
-	// Create an array of Y position vertices and return 
+	// Create an array of Y position vertices and return
 	//------------------------------------------------------------------------------------
 	void TileTerrain::GetYs(float* h)
 	{
@@ -1763,7 +1764,7 @@ namespace kge
 	} // GetYs
 
 	//------------------------------------------------------------------------------------
-	// Sets the heights 
+	// Sets the heights
 	//------------------------------------------------------------------------------------
 	void TileTerrain::SetYs( float* pHeights )
 	{
@@ -1891,7 +1892,7 @@ namespace kge
 	void TileTerrain::SetDecalShaderParams( gfx::ShaderInstance* pSI )
 	{
 		math::Matrix mat = m_pRenderer->GetTransForm(gfx::ETM_Projection)
-			* m_pRenderer->GetTransForm(gfx::ETM_View) 
+			* m_pRenderer->GetTransForm(gfx::ETM_View)
 			* *((Decal*)(pSI->m_pUserData))->GetAbsoluteMatrix();
 
 		pSI->m_pVertexShader->SetConstant(m_shDecalWVP, mat.m_fMat, 16);
@@ -1923,13 +1924,13 @@ namespace kge
 	//------------------------------------------------------------------------------------
 	void TileTerrain::SmoothOneNode( int Col, int Row )
 	{
-		if (Col < 1 || Col > m_iNumCols - 1 || 
+		if (Col < 1 || Col > m_iNumCols - 1 ||
 			Row < 1 || Row > m_iNumRows - 1)
 			return;
 
 		m_bPosChanged = true;
 
-		float h = 
+		float h =
 			m_pPos[Row * m_iNumColspp + Col].Y +
 			m_pPos[Row * m_iNumColspp + Col + 1].Y +
 			m_pPos[(Row + 1) * m_iNumColspp + Col].Y +
@@ -1973,7 +1974,7 @@ namespace kge
 	} // RemoveDecal
 
 	//------------------------------------------------------------------------------------
-	// 
+	//
 	//------------------------------------------------------------------------------------
 	void TileTerrain::OnLost()
 	{
@@ -2028,7 +2029,7 @@ namespace kge
 	} // OnReset
 
 	//------------------------------------------------------------------------------------
-	// 
+	//
 	//------------------------------------------------------------------------------------
 	void TileTerrain::RecreateShaders()
 	{

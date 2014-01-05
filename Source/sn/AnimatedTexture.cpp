@@ -1,9 +1,8 @@
 // File name: AnimatedTexture.cpp
-// Des: 
+// Des:
 // Date: February 08, 2011 (19/11/1389)
 // Programmer: Nader Golbaz
 
-#include <d3d9.h>
 #include "../../Include/sn/AnimatedTexture.h"
 #include "../../Include/gfx/Texture.h"
 #include "../../Include/gfx/HardwareBuffer.h"
@@ -165,7 +164,7 @@ namespace sn
 		gfx::Vertex3CT* v = 0;
 
 		math::Matrix billboard;
-		
+
 		if (!m_fixedAxis)
 		{
 			billboard = m_pRenderer->GetTransForm(gfx::ETM_View);
@@ -189,12 +188,12 @@ namespace sn
 		const unsigned int m = frame % m_horizontalImages;
 		const unsigned int n = frame / m_horizontalImages;
 
-		kge::ul32 flag = D3DLOCK_NOOVERWRITE;
+		kge::ul32 flag = 0x00001000L;
 
 		if (m_bufferOffset + m_sizeOfData > m_pRB->size * sizeof(gfx::Vertex3CT))
 		{
 			m_bufferOffset = 0;
-			flag = D3DLOCK_DISCARD;
+			flag = 0x00002000L;
 		}
 
 		if (!(m_pRB->hb->Lock(m_bufferOffset, m_sizeOfData, reinterpret_cast<void**>(&v), flag)))
@@ -282,7 +281,7 @@ namespace sn
 	}
 
 	//----------------------------------------
-	// 
+	//
 	//----------------------------------------
 	void AnimatedTexture::Render()
 	{
@@ -386,7 +385,7 @@ namespace sn
 
 		m_bufferOffset = m_pRB->size * sizeof(gfx::Vertex3CT);
 	}
-	
+
 	//----------------------------------------
 	//
 	//----------------------------------------

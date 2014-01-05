@@ -3,7 +3,7 @@
 // Date: 20/10/1388
 // Programmer: Hadi Robati (hadirobati)
 
-#include "../../Headers/ph/ActorDynamicX.h"
+#include "../../Headers/ph/actorDynamicX.h"
 #include "stdio.h"
 
 #ifdef KGE_USE_PHYSX
@@ -34,14 +34,14 @@ namespace kge
 			point /= 2.0f;
 
 			memcpy( &pVec.x , &point.x , 12 );
-			
+
 			if( shape == math::KGE_SHAPE_AABB )
 			{
 				NxBoxShapeDesc	nxBoxShapeDesc;
-			
+
 				//Set Physx Size
 				nxBoxShapeDesc.dimensions = pVec;
-				
+
 				//Set Material
 				if( material != NULL )
 				{
@@ -59,7 +59,7 @@ namespace kge
 			{
 				NxSphereShapeDesc nxSphereShapeDesc;
 
-				nxSphereShapeDesc.radius = point.x; 
+				nxSphereShapeDesc.radius = point.x;
 
 				//Set Material
 				if( material != NULL )
@@ -70,7 +70,7 @@ namespace kge
 
 				if( !nxSphereShapeDesc.isValid() )
 					kge::io::Logger::Log( "Invalid Sphere Shape Desc!!!\n" );
-				
+
 				//Set Shape Of Actor
 				nxActorDesc.shapes.push_back( &nxSphereShapeDesc );
 			}
@@ -104,11 +104,11 @@ namespace kge
 
 			//Set Actor Mass
 			nxBodyDesc.mass = mass;
-	
+
 			//Set Body Flags
 			if( bf != EBFP_NORMAL )
 				nxBodyDesc.flags |= bf;
-			
+
 			//Set Body
 			nxActorDesc.body=&nxBodyDesc;
 
@@ -149,7 +149,7 @@ namespace kge
 
 			//Set To Default
 			nxActorDesc.setToDefault();
-			
+
 			if( shape->getType() == math::KGE_SHAPE_AABB )
 			{
 				NxBoxShapeDesc	nxBoxShapeDesc;
@@ -160,7 +160,7 @@ namespace kge
 				point.x = fabs( point.x );
 				point.y = fabs( point.y );
 				point.z = fabs( point.z );
-			
+
 				//Set Physx Box Size
 				nxBoxShapeDesc.dimensions.set( point.x , point.y , point.z );
 
@@ -183,7 +183,7 @@ namespace kge
 
 				math::Sphere *aa = (math::Sphere*)(shape);
 
-				nxSphereShapeDesc.radius = aa->GetRadius(); 				
+				nxSphereShapeDesc.radius = aa->GetRadius();
 
 				//Set Material
 				if( material != NULL )
@@ -194,7 +194,7 @@ namespace kge
 
 				if( !nxSphereShapeDesc.isValid() )
 					kge::io::Logger::Log( "Invalid Sphere Shape Desc!!!\n" );
-				
+
 				//Set Shape Of Actor
 				nxActorDesc.shapes.push_back( &nxSphereShapeDesc );
 			}
@@ -232,7 +232,7 @@ namespace kge
 			//Set Body Flags
 			if( bf != EBFP_NORMAL )
 				nxBodyDesc.flags |= bf;
-			
+
 			//Set Body
 			nxActorDesc.body=&nxBodyDesc;
 
@@ -275,7 +275,7 @@ namespace kge
 			NxVec3	pVec( pos->x , pos->y , pos->z );
 			localActor->setGlobalPosition( pVec );
 		}
-		
+
 		//----------------------------------------------------------
 		//! Set Mass
 		//----------------------------------------------------------
@@ -283,7 +283,7 @@ namespace kge
 		{
 			localActor->setMass( mass );
 		}
-	
+
 		//----------------------------------------------------------
 		//! Get Mass
 		//----------------------------------------------------------
@@ -291,7 +291,7 @@ namespace kge
 		{
 			return localActor->getMass();
 		}
-		
+
 		//----------------------------------------------------------
 		//! Recomputes a dynamic actor's mass properties from its shapes
 		//----------------------------------------------------------
@@ -307,7 +307,7 @@ namespace kge
 		{
 			localActor->setAngularDamping( angularDamping );
 		}
-		
+
 		//----------------------------------------------------------
 		//! Retrieves the angular damping coefficient.
 		//----------------------------------------------------------
@@ -317,13 +317,13 @@ namespace kge
 		}
 
 		//----------------------------------------------------------
-		//! Set linear Damping		
+		//! Set linear Damping
 		//----------------------------------------------------------
 		void ActorDynamicX::setLinearDamping( float linearDamping )
 		{
 			localActor->setLinearDamping( linearDamping );
 		}
-		
+
 		//----------------------------------------------------------
 		//! Retrieves the linear damping coefficient.
 		//----------------------------------------------------------
@@ -333,59 +333,59 @@ namespace kge
 		}
 
 		//----------------------------------------------------------
-		//! Sets the linear velocity of the actor. 
+		//! Sets the linear velocity of the actor.
 		//----------------------------------------------------------
 		void ActorDynamicX::setLinearVelocity( const kge::math::Vector *linVel )
 		{
 			NxVec3 pVec( linVel->x , linVel->y , linVel->z );
 			localActor->setLinearVelocity( pVec );
 		}
-		
+
 		//----------------------------------------------------------
-		//! Sets the angular velocity of the actor. 
+		//! Sets the angular velocity of the actor.
 		//----------------------------------------------------------
 		void ActorDynamicX::setAngularVelocity	( const kge::math::Vector *angVel )
 		{
 			NxVec3 pVec( angVel->x , angVel->y , angVel->z );
 			localActor->setAngularVelocity( pVec );
 		}
-		
+
 		//----------------------------------------------------------
-		//! Retrieves the linear velocity of an actor. 
+		//! Retrieves the linear velocity of an actor.
 		//----------------------------------------------------------
 		kge::math::Vector ActorDynamicX::getLinearVelocity	()
 		{
 			NxVec3 pVec = localActor->getLinearVelocity();
 			return kge::math::Vector( pVec.x , pVec.y , pVec.z );
 		}
-		
+
 		//----------------------------------------------------------
-		//! Retrieves the angular velocity of the actor.  
+		//! Retrieves the angular velocity of the actor.
 		//----------------------------------------------------------
 		kge::math::Vector ActorDynamicX::getAngularVelocity()
 		{
 			NxVec3 pVec = localActor->getAngularVelocity();
 			return kge::math::Vector( pVec.x , pVec.y , pVec.z );
 		}
-		
+
 		//----------------------------------------------------------
-		//! Lets you set the maximum angular velocity permitted for this actor.  
+		//! Lets you set the maximum angular velocity permitted for this actor.
 		//----------------------------------------------------------
 		void ActorDynamicX::setMaxAngularVelocity(float maxAngVel)
 		{
 			localActor->setMaxAngularVelocity( maxAngVel );
 		}
-		
+
 		//----------------------------------------------------------
-		//! Retrieves the maximum angular velocity permitted for this actor.   
+		//! Retrieves the maximum angular velocity permitted for this actor.
 		//----------------------------------------------------------
 		float ActorDynamicX::getMaxAngularVelocity()
 		{
 			return localActor->getMaxAngularVelocity();
 		}
-		
+
 		//----------------------------------------------------------
-		//! Sets the linear momentum of the actor. 
+		//! Sets the linear momentum of the actor.
 		//----------------------------------------------------------
 		void ActorDynamicX::setLinearMomentum( const kge::math::Vector* linMoment )
 		{
@@ -396,34 +396,34 @@ namespace kge
 
 			localActor->setLinearMomentum( pVec );
 		}
-		
+
 		//----------------------------------------------------------
-		//! Sets the angular momentum of the actor. 
+		//! Sets the angular momentum of the actor.
 		//----------------------------------------------------------
 		void ActorDynamicX::setAngularMomentum( const kge::math::Vector* angMoment )
 		{
 			NxVec3 pVec( angMoment->x , angMoment->y , angMoment->z );
 			localActor->setAngularMomentum( pVec );
 		}
-		  
+
 		//----------------------------------------------------------
-		//! Retrieves the linear momentum of an actor.  
+		//! Retrieves the linear momentum of an actor.
 		//----------------------------------------------------------
 		kge::math::Vector ActorDynamicX::getLinearMomentum()
 		{
 			NxVec3 pVec = localActor->getLinearMomentum();
 			return kge::math::Vector( pVec.x , pVec.y , pVec.z );
 		}
-		  
+
 		//----------------------------------------------------------
-		//! Retrieves the angular momentum of an actor. 
+		//! Retrieves the angular momentum of an actor.
 		//----------------------------------------------------------
 		kge::math::Vector ActorDynamicX::getAngularMomentum()
 		{
 			NxVec3 pVec = localActor->getAngularMomentum();
 			return kge::math::Vector( pVec.x , pVec.y , pVec.z );
 		}
-		
+
 		//----------------------------------------------------------
 		// Get Matrix
 		//----------------------------------------------------------
@@ -446,13 +446,13 @@ namespace kge
 			NxVec3 pVec = localActor->getGlobalPosition();
 			return kge::math::Vector( pVec.x , pVec.y , pVec.z );
 		}
-		
+
 		//----------------------------------------------------------
 		// Set Actor Number
 		//----------------------------------------------------------
 		void ActorDynamicX::setActorNumber( unsigned int i )
 		{
-			actorNumber = i;		
+			actorNumber = i;
 		}
 
 		//----------------------------------------------------------
@@ -470,7 +470,7 @@ namespace kge
 		{
 			localActor->addForceAtLocalPos( NxVec3( pos->x , pos->y , pos->z ) , NxVec3( 0.0f , 0.0f , 0.0f ) , NX_IMPULSE );
 		}
-		
+
 		//----------------------------------------------------------
 		// Set Actor Name
 		//----------------------------------------------------------
@@ -486,7 +486,7 @@ namespace kge
 		{
 			return localActor->getName();
 		}
-		
+
 		//----------------------------------------------------------
 		//! Is Dynamic Actor
 		//----------------------------------------------------------
@@ -494,18 +494,18 @@ namespace kge
 		{
 			return localActor->isDynamic();
 		}
-		
+
 		//----------------------------------------------------------
-		//! Caculate Kinematic ( rotational and translational ) Energy of Actor 
+		//! Caculate Kinematic ( rotational and translational ) Energy of Actor
 		//----------------------------------------------------------
 		float ActorDynamicX::computeKineticEnergy()
 		{
 			if( localActor->isDynamic() )
 				return localActor->computeKineticEnergy();
-			else 
+			else
 				return -1;
 		}
-		
+
 		//----------------------------------------------------------
 		//! Sets a dynamic actor's orientation in the world
 		//----------------------------------------------------------
@@ -519,16 +519,16 @@ namespace kge
 
 			localActor->setGlobalOrientation( pMat );
 		}
-	
+
 		//----------------------------------------------------------
-		//! The moveGlobal* calls serve to move kinematically controlled dynamic actors through the game world. 
+		//! The moveGlobal* calls serve to move kinematically controlled dynamic actors through the game world.
 		//----------------------------------------------------------
 		void ActorDynamicX::moveGlobalPose( const kge::math::Matrix* mat )
 		{
 		}
 
 		//----------------------------------------------------------
-		//! the moveglobal* calls serve to move kinematically controlled dynamic actors through the game world. 
+		//! the moveglobal* calls serve to move kinematically controlled dynamic actors through the game world.
 		//----------------------------------------------------------
 		void ActorDynamicX::moveGlobalPosition( const kge::math::Vector* vec )
 		{
@@ -564,7 +564,7 @@ namespace kge
 			localActor->getShapes()[0]->setMaterial( mat->getMaterialIndex() );
 			m_pMaterial = mat;
 		}
-		
+
 		//----------------------------------------------------------
 		//! Get Material
 		//----------------------------------------------------------
@@ -590,7 +590,7 @@ namespace kge
 				point.x = fabs( point.x );
 				point.y = fabs( point.y );
 				point.z = fabs( point.z );
-			
+
 				//Set Physx Box Size
 				nxBoxShapeDesc.dimensions.set( point.x , point.y , point.z );
 
@@ -642,13 +642,13 @@ namespace kge
 				NxBoxShapeDesc nxBoxShapeDesc;
 
 				math::Vector point;
-				point = (localKgeObj->GetAxisAlignedBoundingBox()->m_vMax - localKgeObj->GetAxisAlignedBoundingBox()->m_vMin); 
+				point = (localKgeObj->GetAxisAlignedBoundingBox()->m_vMax - localKgeObj->GetAxisAlignedBoundingBox()->m_vMin);
 				point.x = fabs( point.x );
 				point.y = fabs( point.y );
 				point.z = fabs( point.z );
 				point /= 2.0f;
 
-				nxBoxShapeDesc.dimensions.set( point.x , point.y , point.z ); 
+				nxBoxShapeDesc.dimensions.set( point.x , point.y , point.z );
 				nxBoxShapeDesc.localPose.t.set( vec->x , vec->y , vec->z );
 
 				if( ct != ECTP_TRIGGER_DISABLE )
@@ -667,8 +667,8 @@ namespace kge
 				NxSphereShapeDesc nxSphereShapeDesc;
 
 				math::Vector point;
-				
-				point = (localKgeObj->GetAxisAlignedBoundingBox()->m_vMax - localKgeObj->GetAxisAlignedBoundingBox()->m_vMin); 
+
+				point = (localKgeObj->GetAxisAlignedBoundingBox()->m_vMax - localKgeObj->GetAxisAlignedBoundingBox()->m_vMin);
 				nxSphereShapeDesc.radius = point.x;
 
 				nxSphereShapeDesc.localPose.t.set( vec->x , vec->y , vec->z );

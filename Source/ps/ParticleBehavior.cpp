@@ -1,11 +1,12 @@
 // File name: ParticleBehavior.cpp
-// Des: 
+// Des:
 // Date: January 11, 2011 (21/10/1389)
 // Programmer: Nader Golbaz
 
 #include "../../Headers/ps/Particle.h"
 #include "../../Headers/ps/ParticleBehavior.h"
 #include "../../Include/math/Utility.h"
+#include <stdio.h>
 
 namespace kge
 {
@@ -24,7 +25,7 @@ namespace ps
             for (size_t j = 0; j < numForces; ++j)
             {
                 particles.accelerations[i] += forces[j] / particles.weights[i];
-            }   
+            }
         }
     }
 

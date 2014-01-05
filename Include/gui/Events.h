@@ -9,11 +9,6 @@
 
 namespace kge
 {
-namespace io
-{
-	enum MouseButton;
-	enum KEYS;
-}
 namespace gui
 {
 
@@ -47,7 +42,7 @@ public:
 
 };// EventArgs
 
-//! Mouse event 
+//! Mouse event
 class MouseEventArgs : public EventArgs
 {
 public:
@@ -55,7 +50,7 @@ public:
 	//! Mouse X position
 	int X;
 
-	//! Mouse Y position 
+	//! Mouse Y position
 	int Y;
 
 	//! Mouse X relative position.
@@ -65,7 +60,7 @@ public:
 	int Yrel;
 
 	//! Pressed button
-	io::MouseButton Mousebutton;
+	int Mousebutton;
 
 };// MouseEventArgs
 
@@ -75,7 +70,7 @@ class KeyEventArgs : public EventArgs
 public:
 
 	//! Current Key Pressed
-	io::KEYS currentKeyDown;
+	int currentKeyDown;
 
 	unsigned char keyState;
 }; // Keyboard Event

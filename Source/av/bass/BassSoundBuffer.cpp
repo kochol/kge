@@ -4,7 +4,7 @@
 #if KGE_USE_BASS == 1
 
 #include "../../../Libs/physfs/physfs.h"
-#include "../../../include/io/Logger.h"
+#include "../../../Include/io/Logger.h"
 #include "../../../Libs/bass/bass.h"
 #include <vector>
 #include <algorithm>
@@ -81,7 +81,7 @@ namespace kge
 
 			std::string name(filename);
 			std::transform(name.begin(), name.end(), name.begin(), ::tolower);
-			std::string path("../../"); // 
+			std::string path("../../"); //
 			std::string::size_type pos = name.find(path);
 			if (pos != std::string::npos)
 			{
@@ -123,7 +123,7 @@ namespace kge
 
 			if (m_handle)
 			{
-				io::Logger::Log(io::ELM_Information,"Sound Buffer '%s' loaded successfully.", filename);			
+				io::Logger::Log(io::ELM_Information,"Sound Buffer '%s' loaded successfully.", filename);
 			}
 			else
 			{

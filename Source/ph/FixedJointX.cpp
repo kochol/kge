@@ -3,9 +3,9 @@
 // Date: 04/03/1389
 // Programmer: Hadi Robati (hadirobati)
 
-#include "../../Headers/ph/FixedJointX.h"
-#include "../../Headers/ph/ActorDynamicX.h"
-#include "../../Headers/ph/ActorStaticX.h"
+#include "../../Headers/ph/fixedJointX.h"
+#include "../../Headers/ph/actorDynamicX.h"
+#include "../../Headers/ph/actorStaticX.h"
 
 #ifdef KGE_USE_PHYSX
 

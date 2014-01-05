@@ -8,8 +8,8 @@
 #include <OpenAL/alc.h>
 #include <OpenAL/al.h>
 #else
-#include <AL/al.h>
-#include <AL/alc.h>
+#include "al.h"
+#include "alc.h"
 #endif
 
 #if defined(__cplusplus)

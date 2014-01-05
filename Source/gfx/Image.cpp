@@ -8,10 +8,10 @@
 #include "../../Include/Device.h"
 #include "../../Include/io/Logger.h"
 // Include DevIL.
-#include "../../libs/devil/il.h"
-#include "../../libs/devil/ilu.h"
-#include "../../libs/devil/ilut.h"
-#include "../../libs/devil/devil_internal_exports.h"
+#include "../../Libs/DevIL/il.h"
+#include "../../Libs/DevIL/ilu.h"
+#include "../../Libs/DevIL/ilut.h"
+#include "../../Libs/DevIL/devil_internal_exports.h"
 
 #pragma comment(lib, "Libs/DevIL.lib")
 #pragma comment(lib, "Libs/ilu.lib")
@@ -56,7 +56,7 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	// Creates an Image and store it.
 	//------------------------------------------------------------------------------------
-	bool Image::CreateImage( int Width, int Height, int Depth /*= 1*/, int BytesPerPixel /*= 4*/, 
+	bool Image::CreateImage( int Width, int Height, int Depth /*= 1*/, int BytesPerPixel /*= 4*/,
 							ImageFormat imgFormat /*= EIF_BGRA*/, void* Data /*= NULL*/ )
 	{
 		m_eFmt = imgFormat;
@@ -143,7 +143,7 @@ namespace gfx
 			fmt = IL_BGRA;
 			break;
 		}
-		
+
 		ilBindImage(m_iImgID);
 		if (!ilActiveMipmap(MipMapLevel))
 		{
@@ -227,7 +227,7 @@ namespace gfx
 		if (!ret)
 			return false;
 
-		if (!ilTexImage(Temp->Width, Temp->Height, Temp->Depth, Temp->Bpp, Temp->Format, Temp->Type, Temp->Data)) 
+		if (!ilTexImage(Temp->Width, Temp->Height, Temp->Depth, Temp->Bpp, Temp->Format, Temp->Type, Temp->Data))
 		{
 			return false;
 		}
@@ -237,9 +237,9 @@ namespace gfx
 			m_iWidth = Width;
 			m_iHeight = Height;
 		}
-		
+
 		return true;
-		
+
 	} // Scale
 
 	//------------------------------------------------------------------------------------
@@ -266,7 +266,7 @@ namespace gfx
 		int maxmipmaplevel = 0;
 		u8* pTempData	= KGE_NEW_ARRAY(u8, tW * tH * 4);
 		int t = 1, tth, ttw;
-		
+
 		Image* imgTemp = KGE_NEW(Image)("Temp");
 		imgTemp->CreateImage(tW, tH, 1, 4, EIF_RGBA, 0);
 
@@ -291,7 +291,7 @@ namespace gfx
 					ttw = tW / t;
 					tth = tH / t;
 					imgTemp->Scale(ttw, tth, 1);
-					SetPixels(x * ttw, y * tth, 1, ttw, tth, 1, EIF_BGRA, 
+					SetPixels(x * ttw, y * tth, 1, ttw, tth, 1, EIF_BGRA,
 						imgTemp->GetData(), mipmapLevel);
 
 				} // for x
@@ -391,7 +391,7 @@ namespace gfx
 	void Image::CheckDevilErrors( const char* TextureName )
 	{
 		ILenum Error;
-		while ((Error = ilGetError())) 
+		while ((Error = ilGetError()))
 		{
 			if ( Error == IL_COULD_NOT_OPEN_FILE )
 				kge::io::Logger::Log(io::ELM_Error , "Could not load image: %s" , TextureName );

@@ -1,8 +1,9 @@
 // File name: DynamicTriangleMesh.h
-// Des: 
+// Des:
 // Date: 2/8/1388
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
+#include <stdio.h>
 #include "../../Include/ph/DynamicTriangleMesh.h"
 #include "../../Include/sn/TileTerrain.h"
 
@@ -41,7 +42,7 @@ namespace ph
 		m_iTriCount				 = pTerrain->GetIndexesCount() / 3;
 		u32* indices			 = pTerrain->GetIndices();
 		gfx::Vertex3* vertices   = pTerrain->GetPositions();
-		
+
 		if (m_pTris)
 			delete[] m_pTris;
 		m_pTris = new math::Triangle[m_iTriCount];
@@ -62,7 +63,7 @@ namespace ph
 	// Checks the ray intersection with triangle mesh and returns the face ID.
 	//------------------------------------------------------------------------------------
 	int DynamicTriangleMesh::IntersectRay( math::Ray* pRay )
-	{		
+	{
 		for (int k = 0; k < m_iAabbCount; k++)
 		{
 			if (m_pAABB[k].IntersectRay(pRay))

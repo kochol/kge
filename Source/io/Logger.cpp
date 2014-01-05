@@ -20,6 +20,13 @@
 #if KGE_PLATFORM == KGE_PLATFORM_LINUX
 #	include <stdarg.h>
 #	include <curses.h>
+
+# define RESET_COLOR "\e[m"
+# define WARNING_COLOR "\e[33m"
+# define ERROR_COLOR "\e[31m"
+# define DEBUG_COLOR "\e[47;30m"
+# define SUCCESS_COLOR "\e[32m"
+
 #endif
 
 #endif // KGE_CONSOLE
@@ -43,7 +50,7 @@ namespace io
 #ifdef KGE_CONSOLE
 
 	//-------------------------------------------------------------------------------
-	// Log(char* Message) 
+	// Log(char* Message)
 	//-------------------------------------------------------------------------------
 	void Logger::Log(const char* message, LogMode lm)
 	{
@@ -175,7 +182,6 @@ namespace io
 	//------------------------------------------------------------------------------------
 	void Logger::Info( const char* Text, ... )
 	{
-		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
 		char Message[1024];
 
 		va_list va;
@@ -184,6 +190,7 @@ namespace io
 		va_end(va);
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
+		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(OutputH, FOREGROUND_RED | FOREGROUND_GREEN |
 			FOREGROUND_BLUE);
 
@@ -210,7 +217,6 @@ namespace io
 	//------------------------------------------------------------------------------------
 	void Logger::Warning( const char* Text, ... )
 	{
-		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
 		char Message[1024];
 
 		va_list va;
@@ -219,6 +225,7 @@ namespace io
 		va_end(va);
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
+		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(OutputH, FOREGROUND_RED | FOREGROUND_GREEN);
 
 #elif KGE_PLATFORM == KGE_PLATFORM_LINUX
@@ -244,7 +251,6 @@ namespace io
 	//------------------------------------------------------------------------------------
 	void Logger::Error( const char* Text, ... )
 	{
-		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
 		char Message[1024];
 
 		va_list va;
@@ -253,6 +259,7 @@ namespace io
 		va_end(va);
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
+		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(OutputH, FOREGROUND_RED);
 
 #elif KGE_PLATFORM == KGE_PLATFORM_LINUX
@@ -278,7 +285,6 @@ namespace io
 	//------------------------------------------------------------------------------------
 	void Logger::Debug( const char* Text, ... )
 	{
-		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
 		char Message[1024];
 
 		va_list va;
@@ -288,6 +294,7 @@ namespace io
 
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
+		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(OutputH, BACKGROUND_RED | BACKGROUND_GREEN |
 								BACKGROUND_BLUE);
 
@@ -314,7 +321,6 @@ namespace io
 	//------------------------------------------------------------------------------------
 	void Logger::SuccessKGE( const char* Text, ... )
 	{
-		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
 		char Message[1024];
 
 		va_list va;
@@ -324,7 +330,8 @@ namespace io
 
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
-				SetConsoleTextAttribute(OutputH, FOREGROUND_GREEN);
+		static HANDLE OutputH = GetStdHandle(STD_OUTPUT_HANDLE);
+		SetConsoleTextAttribute(OutputH, FOREGROUND_GREEN);
 
 #elif KGE_PLATFORM == KGE_PLATFORM_LINUX
                 printf(SUCCESS_COLOR);

@@ -9,9 +9,9 @@
 
 #include "TileTerrainShape.h"
 #include "Actor.h"
-#include "ActorDynamic.h"
-#include "ActorStatic.h"
-#include "Plane.h"
+#include "actorDynamic.h"
+#include "actorStatic.h"
+#include "plane.h"
 #include "Material.h"
 #include "UserNotify.h"
 #include "TriggerReport.h"

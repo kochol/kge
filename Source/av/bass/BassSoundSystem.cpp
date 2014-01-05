@@ -3,7 +3,7 @@
 #include "../../../Headers/av/bass/BassSoundBuffer.h"
 #include "../../../Headers/sn/bass/BassSound3D.h"
 #include "../../../Headers/sn/bass/BassSound2D.h"
-#include "../../../include/io/Logger.h"
+#include "../../../Include/io/Logger.h"
 
 #if KGE_USE_BASS == 1
 
@@ -69,7 +69,7 @@ namespace kge
 			m_listener.top.y = 1.0f;
 			m_listener.top.z = 0.0f;
 
-			if (!BASS_Set3DPosition(&m_listener.position, &m_listener.velocity, 
+			if (!BASS_Set3DPosition(&m_listener.position, &m_listener.velocity,
 				&m_listener.front, &m_listener.top))
 			{
 				return false;

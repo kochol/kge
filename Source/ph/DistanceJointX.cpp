@@ -4,8 +4,8 @@
 // Programmer: Hadi Robati (hadirobati)
 
 #include "../../Headers/ph/DistanceJointX.h"
-#include "../../Headers/ph/ActorDynamicX.h"
-#include "../../Headers/ph/ActorStaticX.h"
+#include "../../Headers/ph/actorDynamicX.h"
+#include "../../Headers/ph/actorStaticX.h"
 
 #ifdef KGE_USE_PHYSX
 

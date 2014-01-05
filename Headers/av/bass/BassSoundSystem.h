@@ -2,8 +2,8 @@
 #ifndef BASS_SOUND_SYSTEM_H
 #define BASS_SOUND_SYSTEM_H
 
-#include "../../../include/kgedef.h"
-#include "../../../include/av/soundsystem.h"
+#include "../../../Include/kgedef.h"
+#include "../../../Include/av/soundsystem.h"
 #include <vector>
 #include <map>
 #include <string>

@@ -3,7 +3,7 @@
 // Date: 20/10/1388
 // Programmer: Hadi Robati (hadirobati)
 
-#include "../../Headers/ph/PlaneX.h"
+#include "../../Headers/ph/planeX.h"
 #include "stdio.h"
 
 #ifdef KGE_USE_PHYSX
@@ -22,10 +22,10 @@ namespace kge
 			NxActor*		 tempActor;
 			NxVec3			 pVec;
 			kge::math::Vector kVec;
-			
+
 
 			nxPlaneShapeDesc.normal=NxVec3( normal->x , normal->y , normal->z );
-			
+
 			if( kgePlane )
 				kVec=kgePlane->GetPosition();
 
@@ -44,7 +44,7 @@ namespace kge
 			NxPlaneShapeDesc nxPlaneShapeDesc;
 			NxActorDesc		 nxActorDesc;
 			NxActor*		 tempActor;
-			
+
 			nxPlaneShapeDesc.normal=NxVec3( normal->x , normal->y , normal->z );
 			nxPlaneShapeDesc.d = d;
 

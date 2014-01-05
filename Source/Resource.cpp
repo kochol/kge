@@ -5,7 +5,7 @@
 
 #include "../Include/Resource.h"
 #include "../Include/core/String.h"  
-#include "../Include/core/KgeMemory.h         "
+#include "../Include/core/KgeMemory.h"
 #include "../Include/io/Logger.h"
 
 namespace kge

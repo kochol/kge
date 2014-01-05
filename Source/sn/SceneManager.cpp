@@ -3,7 +3,7 @@
 // Date: 3/6/1385
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-
+#include <stdio.h>
 #include "../../Include/sn/SceneManager.h"
 #include "../../Include/sn/Light.h"
 #include "../../Include/sn/Camera.h"
@@ -49,8 +49,8 @@ namespace sn
 
 		// prepare particles shared buffer
 		const size_t sharedBufferSize = 1000 * 6;
-		WORD indices[sharedBufferSize];
-		WORD c = 0;
+		u16 indices[sharedBufferSize];
+		u16 c = 0;
 
 		for (unsigned int j = 0; j < 1000; ++j)
 		{
@@ -71,7 +71,7 @@ namespace sn
 		////////////////////
 
 		// Create deferred shading shaders
-		const char strVsDeferred[] = 
+		const char strVsDeferred[] =
 			"float4x4 matViewProjection;\n"\
 			"float4x4 matViewProjectionInv;\n"\
 			"float3 EyePos;\n"\
@@ -350,7 +350,7 @@ namespace sn
 		KGE_DELETE(m_pSceneAABB, AABB);
 
 		// delete mesh buffers
-		for(std::vector<gfx::MeshBuffer*>::iterator it = m_vMeshBuffer.begin(); 
+		for(std::vector<gfx::MeshBuffer*>::iterator it = m_vMeshBuffer.begin();
 			it != m_vMeshBuffer.end(); ++it)
 		{
 			KGE_DELETE(*it, MeshBuffer);
@@ -407,7 +407,7 @@ namespace sn
 		case ENT_RibbonTrail:
 			m_vPSysNodes.push_back(pSnNode);
 			break;
-		
+
 		case ENT_AnimatedTexture:
 			m_vAnimTexNodes.push_back(pSnNode);
 			break;
@@ -425,7 +425,7 @@ namespace sn
 		{
 			pSnNode->SetParent(NULL);
 		}
-		
+
 		NodeType type = pSnNode->GetType();
 		std::vector<SceneNode*>::iterator it;
 
@@ -606,7 +606,7 @@ namespace sn
 		m_bHit = false;
 
 		// Unknown nodes.
-		for(std::vector<SceneNode*>::iterator it = m_vNodes.begin(); 
+		for(std::vector<SceneNode*>::iterator it = m_vNodes.begin();
 			it != m_vNodes.end(); ++it)
 		{
 			(*it)->m_bVisFrame = false;
@@ -614,7 +614,7 @@ namespace sn
 		}
 
 		// Camera nodes
-		for(std::vector<SceneNode*>::iterator it = m_vCamNodes.begin(); 
+		for(std::vector<SceneNode*>::iterator it = m_vCamNodes.begin();
 			it != m_vCamNodes.end(); ++it)
 		{
 			(*it)->m_bVisFrame = false;
@@ -622,7 +622,7 @@ namespace sn
 		}
 
 		// Light nodes
-		for(std::vector<SceneNode*>::iterator it = m_vLightNodes.begin(); 
+		for(std::vector<SceneNode*>::iterator it = m_vLightNodes.begin();
 			it != m_vLightNodes.end(); ++it)
 		{
 			(*it)->m_bVisFrame = false;
@@ -630,13 +630,13 @@ namespace sn
 		}
 
 		// Mesh nodes
-		for(std::vector<SceneNode*>::iterator it = m_vMeshNodes.begin(); 
+		for(std::vector<SceneNode*>::iterator it = m_vMeshNodes.begin();
 			it != m_vMeshNodes.end(); ++it)
 		{
 			(*it)->m_bVisFrame = false;
 			(*it)->PreRender(elapsedTime);
 		}
-		for(std::vector<SceneNode*>::iterator it = m_vCamNodes.begin(); 
+		for(std::vector<SceneNode*>::iterator it = m_vCamNodes.begin();
 			it != m_vCamNodes.end(); ++it)
 		{
 			(*it)->UpdateFinalMat();
@@ -736,7 +736,7 @@ namespace sn
 			mat = m_pActiveCam->GetProjectionMatrix() * m_pActiveCam->GetViewMatrix();
 			mat.Inverse();
 			m_pVsDeferred->SetConstant(m_VsmatViewProjInv, mat.m_fMat, 16);
-			
+
 			// Get light data
 			int dircount,pointcount,spotcount;
 			int dirindex,pointindex,pointcolorindex,spotindex;
@@ -834,7 +834,7 @@ namespace sn
  					m_pRenderer->SetDepthMode(gfx::EDTM_Greater);
  					// Set stencil buffer to 1 when zpass
  					m_pRenderer->SetStencilBuffer(efx::EET_PointLightInside, 1);
- 
+
  					// Render volume back faces
  					m_pVsSphere->SetConstant(m_VshSphereMatWVP, matWVP.m_fMat, 16);
  					m_pVsSphere->Render();
@@ -849,17 +849,17 @@ namespace sn
  					m_pRenderer->SetDepthMode();
  					// Increase stencil buffer for front faces
  					m_pRenderer->SetStencilBuffer(efx::EET_PointLightOutside, 1);
- 
+
  					// Render volume front faces
  					m_pVsSphere->SetConstant(m_VshSphereMatWVP, matWVP.m_fMat, 16);
  					m_pVsSphere->Render();
  					m_pPsSphere->Render();
  					m_pRenderer->SetCullingMode(gfx::ECM_CCW);
  					m_pSphere->Draw(false, true, true, false, false);
- 
+
  					// Decrease the stencil for back faces
  					m_pRenderer->SetStencilBuffer(efx::EET_PointLightOutside, 2);
- 
+
  					// Render volume back faces
  					m_pRenderer->SetCullingMode(gfx::ECM_CW);
  					m_pSphere->Draw(false, true, true, false, false);
@@ -998,9 +998,9 @@ namespace sn
  //       Camera* cam = new Camera(this, position, target, upDirection);
 
 	//	m_pActiveCam = cam;
-	//	
+	//
 	//	AddSceneNode(cam , ENT_Camera);
-	//	
+	//
 	//	return cam;
 
 	//} // AddCameraNode
@@ -1300,23 +1300,23 @@ namespace sn
 	//------------------------------------------------------------------------------------
 	//
 	//------------------------------------------------------------------------------------
-	gfx::Shader* SceneManager::AddVertexShader(const char* fileName, const char* vertexMain, gfx::ShaderVersion version)
+	gfx::Shader* SceneManager::AddVertexShader(const char* fileName, const char* vertexMain, int version)
 	{
 		u32 handle = Device::GetSingletonPtr()->GetVertexShaderManager()->Add2(fileName, vertexMain, (void*)&version, 0);
 		return Device::GetSingletonPtr()->GetVertexShaderManager()->GetResource(handle);
 	}
 
 	//------------------------------------------------------------------------------------
-	// 
+	//
 	//------------------------------------------------------------------------------------
-	gfx::Shader* SceneManager::AddPixelShader(const char* fileName, const char* pixelMain, gfx::ShaderVersion version)
+	gfx::Shader* SceneManager::AddPixelShader(const char* fileName, const char* pixelMain, int version)
 	{
 		u32 handle = Device::GetSingletonPtr()->GetPixelShaderManager()->Add2(fileName, pixelMain, (void*)&version, 0);
 		return Device::GetSingletonPtr()->GetPixelShaderManager()->GetResource(handle);
 	}
 
 	// ***** ******* ** ********
-	// 
+	//
 	// ***** ******* ** ********
 	void SceneManager::AddEffect( efx::Effect* pEffect, efx::EffectType Type )
 	{
@@ -1501,7 +1501,7 @@ namespace sn
 		int PointLightCount = 0;
 		int SpotLightCount  = 0;
 
-		for(std::vector<SceneNode*>::iterator it = m_vLightNodes.begin(); 
+		for(std::vector<SceneNode*>::iterator it = m_vLightNodes.begin();
 			it != m_vLightNodes.end(); ++it)
 		{
 			if (((sn::Light*)(*it))->GetLightData()->Type == gfx::ELT_Directional)
@@ -1621,7 +1621,7 @@ namespace sn
 		std::vector<SceneNode*> vis;
 		const kge::math::Frustum* f = pCam->GetFrustum();
 		math::AABB s;
-		math::CollisionType ct; 
+		math::CollisionType ct;
 		Light* lit = GetNearestLight(kge::math::Vector());
 		// If there is a directional light in the scene
 		math::Vector sweepDir;
@@ -1633,11 +1633,11 @@ namespace sn
 		}
 		for (size_t i = 0; i < m_vMeshNodes.size(); i++)
 		{
-			if (m_vMeshNodes[i]->GetVisible() && m_vMeshNodes[i]->HasShadow() && 
+			if (m_vMeshNodes[i]->GetVisible() && m_vMeshNodes[i]->HasShadow() &&
 				(m_vMeshNodes[i]->GetType() == ENT_StaticMesh || m_vMeshNodes[i]->GetType() == ENT_AnimatedMesh))
 			{
 				// if mesh is visible and instanced then continue
-				if (m_vMeshNodes[i]->IsVisibleInFrame() && 
+				if (m_vMeshNodes[i]->IsVisibleInFrame() &&
 					m_vMeshNodes[i]->GetMaterial(0)->shader->m_MaterialParams.Instanced)
 					continue;
 
@@ -1646,7 +1646,7 @@ namespace sn
 				{
 					vis.push_back(m_vMeshNodes[i]);
 					continue;
-				}			
+				}
 				m_vMeshNodes[i]->GetFinalMatrix()->TransformBox(*m_vMeshNodes[i]->GetAxisAlignedBoundingBox(), s);
 // 				math::Sphere instanceSphere;
 // 				instanceSphere.AddBox(s);
@@ -1670,7 +1670,7 @@ namespace sn
 			if (ENT_ParticleSystem == m_vPSysNodes[i]->GetType())
 			{
 				reinterpret_cast<ParticleSystem*>(m_vPSysNodes[i])->SetSharedBuffer(m_particlesSharedBuffer);
-			} 
+			}
 		}
 
 	} // SetParticlesIndexBuffer
@@ -1741,7 +1741,7 @@ namespace sn
 
 	bool SceneManager::IsLightVisible( Light* pLit )
 	{
-		if (!m_pActiveCam) 
+		if (!m_pActiveCam)
 			return true;
 
 		const kge::math::Frustum* f = m_pActiveCam->GetFrustum();

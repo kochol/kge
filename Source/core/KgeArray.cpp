@@ -1,5 +1,10 @@
 #include "../../Include/core/KgeArray.h"
 #include "../../Include/core/KgeMemory.h"
+#include <string.h>
+
+#ifndef NULL
+#define NULL 0
+#endif
 
 namespace kge
 {
@@ -53,7 +58,7 @@ namespace core
 	void KgeArray::Expand()
 	{
 		m_iArraySize += m_iExpandCount;
-		m_pData = (u8*)KgeMemory::ReallocateBytes(m_pData, m_iSizeofItem * m_iArraySize, 
+		m_pData = (u8*)KgeMemory::ReallocateBytes(m_pData, m_iSizeofItem * m_iArraySize,
 			__FILE__, __LINE__, __FUNCTION__);
 
 	} // Expand

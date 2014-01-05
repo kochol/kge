@@ -1,9 +1,8 @@
 // File name: RibbonTrail.cpp
-// Des: 
+// Des:
 // Date: March 26, 2011
 // Programmer: Nader Golbaz
 
-#include <d3d9.h> // D3DLOCK_DISCARD
 #include "../../Include/sn/RibbonTrail.h"
 #include "../../Include/sn/SceneManager.h"
 #include "../../Include/gfx/Renderer.h"
@@ -16,7 +15,7 @@ namespace kge
 	namespace sn
 	{
 		//--------------------------
-		// 
+		//
 		//--------------------------
 		RibbonTrail::RibbonTrail(
 			SceneManager* sceneMan,
@@ -40,7 +39,7 @@ namespace kge
 			m_finalColor(finalColor),
 			m_width(width),
 			m_speed(speed),
-			m_totalAge(age), 
+			m_totalAge(age),
 			m_currentAge(0.0f),
 			m_chaosRatio(chaosRatio),
 			m_elapsed(0.0f),
@@ -80,7 +79,7 @@ namespace kge
 		}
 
 		//--------------------------
-		// 
+		//
 		//--------------------------
 		RibbonTrail::~RibbonTrail()
 		{
@@ -109,7 +108,7 @@ namespace kge
 		}
 
 		//--------------------------
-		// 
+		//
 		//--------------------------
 		void RibbonTrail::PreRender(float elapsedTime)
 		{
@@ -167,7 +166,7 @@ namespace kge
 							m_colors[i - 1] = m_colors[i];
 						}
 					}
-					
+
 					m_prevPos = curPos;
 				}
 				else if (m_activeCount)
@@ -245,14 +244,14 @@ namespace kge
 			upVec = upVec * m_width * 0.5f;
 			math::Vector up(upVec);
 
-			gfx::Vertex3CT* v = 0;			
-			kge::ul32 flag = D3DLOCK_NOOVERWRITE;
+			gfx::Vertex3CT* v = 0;
+			kge::ul32 flag = 0x00001000L;
 			m_sizeOfData = m_activeCount * 6 * sizeof(gfx::Vertex3CT);
 
 			if (m_bufferOffset + m_sizeOfData > m_pRB->size * sizeof(gfx::Vertex3CT))
 			{
 				m_bufferOffset = 0;
-				flag = D3DLOCK_DISCARD;
+				flag = 0x00002000L;
 			}
 
 			if (!(m_pRB->hb->Lock(m_bufferOffset, m_sizeOfData, reinterpret_cast<void**>(&v), flag)))
@@ -339,7 +338,7 @@ namespace kge
 		}
 
 		//--------------------------
-		// 
+		//
 		//--------------------------
 		void RibbonTrail::Render()
 		{
@@ -355,7 +354,7 @@ namespace kge
 		}
 
 		//--------------------------
-		// 
+		//
 		//--------------------------
 		void RibbonTrail::PostRender()
 		{
@@ -363,7 +362,7 @@ namespace kge
 		}
 
 		//--------------------------
-		// 
+		//
 		//--------------------------
 		void RibbonTrail::Draw(bool WithMaterial , bool WithTransform , bool bPosition , bool bNormalTexcoord , bool bTangentBinormal)
 		{
@@ -371,7 +370,7 @@ namespace kge
 		}
 
 		//--------------------------
-		// 
+		//
 		//--------------------------
 		void RibbonTrail::Start(const math::Vector& target)
 		{
@@ -430,7 +429,7 @@ namespace kge
 		}
 
 		//--------------------------
-		// 
+		//
 		//--------------------------
 		void RibbonTrail::Start()
 		{
@@ -438,7 +437,7 @@ namespace kge
 			m_elapsed = 0.0f;
 			m_currentAge = 0.0f;
 			m_activeCount = 0;
-			
+
 			if (m_pParent)
 			{
 				*m_pFinalMat = (*m_pParent->GetFinalMatrix()) * (*m_pAbsMat);
@@ -447,7 +446,7 @@ namespace kge
 			{
 				*m_pFinalMat = *m_pAbsMat;
 			}
-			
+
 			m_prevPos.x = m_pFinalMat->_41;
 			m_prevPos.y = m_pFinalMat->_42;
 			m_prevPos.z = m_pFinalMat->_43;
@@ -457,7 +456,7 @@ namespace kge
 			m_pAABB->AddInternalPoint(math::Vector(-5.0f, -5.0f, -5.0f));
 
 			m_positions[0] = m_prevPos;
-			
+
 			m_running = true;
 		}
 

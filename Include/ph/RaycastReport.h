@@ -1,7 +1,7 @@
 #ifndef KGE_RAYCAST_REPORT_H
 #define KGE_RAYCAST_REPORT_H
 
-#include "ActorDynamic.h"
+#include "actorDynamic.h"
 #include "Material.h"
 
 namespace kge

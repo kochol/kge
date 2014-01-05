@@ -3,6 +3,8 @@
 // Date: 28/4/1389
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
+#include <stdio.h>
+
 #include "../../Include/gfx/MaterialParams.h"
 #include "../../Include/gfx/Renderer.h"
 #include "../../Include/core/mem_fun.h"
@@ -27,9 +29,9 @@ namespace gfx
 		eFogType(EFT_NONE), TextureMap(true), eLightingMode(ELM_Unknown),
 		pVertexShader(NULL), pPixelShader(NULL), BoneCount(0), m_bPSinputAdded(false),
 		m_bVSinputAdded(false), m_pVshMatNorm(NULL), m_pVshLightDir(NULL),
-		m_pVshLightPos(NULL), m_pVshMatWV(NULL), NeedWorldViewMatrix(false), 
+		m_pVshLightPos(NULL), m_pVshMatWV(NULL), NeedWorldViewMatrix(false),
 		Instanced(false), m_pVshMatBone(NULL), m_pVshMatWVP(NULL), m_pVshEyePos(NULL),
-		m_pPshLightDir(NULL), SpecularMap(false), m_pLightCus(NULL), 
+		m_pPshLightDir(NULL), SpecularMap(false), m_pLightCus(NULL),
 		NeedWorldMatrix(false), m_pVshMatWorld(NULL), m_pVshMatLight(NULL),
 		m_pVshLightDirColor(NULL), m_pVshLightPosColor(NULL), m_pPshLightDirColor(NULL),
 		m_pPshLightPosColor(NULL), m_pPshLightPos(NULL), Deferred(false), AlphaMap(false),
@@ -95,7 +97,7 @@ namespace gfx
 	} // operator=
 
 	//------------------------------------------------------------------------------------
-	// Checks the same vertex shader with other MaterialParams 
+	// Checks the same vertex shader with other MaterialParams
 	//------------------------------------------------------------------------------------
 	bool MaterialParams::operator==(const MaterialParams& mp )
 	{
@@ -105,7 +107,7 @@ namespace gfx
 	} // operator==
 
 	//------------------------------------------------------------------------------------
-	// Checks the same vertex shader with other MaterialParams 
+	// Checks the same vertex shader with other MaterialParams
 	//------------------------------------------------------------------------------------
 	bool MaterialParams::HasSameVertexShader( MaterialParams* mp )
 	{
@@ -122,7 +124,7 @@ namespace gfx
 		}
 		else
 		{
-			if (DirLightCount != mp->DirLightCount 
+			if (DirLightCount != mp->DirLightCount
 				|| PointLightCount != mp->PointLightCount
 				|| SpotLightCount  != mp->SpotLightCount
 				|| NormalMap != mp->NormalMap
@@ -154,7 +156,7 @@ namespace gfx
 	} // HasSameVertexShader
 
 	//------------------------------------------------------------------------------------
-	// Checks the same pixel shader with other MaterialParams 
+	// Checks the same pixel shader with other MaterialParams
 	//------------------------------------------------------------------------------------
 	bool MaterialParams::HasSamePixelShader( MaterialParams* mp )
 	{
@@ -171,7 +173,7 @@ namespace gfx
 		}
 		else
 		{
-			if (DirLightCount != mp->DirLightCount 
+			if (DirLightCount != mp->DirLightCount
 				|| PointLightCount != mp->PointLightCount
 				|| SpotLightCount  != mp->SpotLightCount
 				|| NormalMap != mp->NormalMap
@@ -220,7 +222,7 @@ namespace gfx
 		// Default code
 		//*************************************
 		AddVertexShaderInput("float4 inPosition", EPU_Position);
-		AddVertexShaderOutput("float4 outPosition", EPU_Position); 
+		AddVertexShaderOutput("float4 outPosition", EPU_Position);
 		// if need texture coordinates
 		if (TextureMap)
 		{
@@ -336,7 +338,7 @@ namespace gfx
 		{
 			m_sVsMain	+= "outTexcoord = inTexcoord;\n";
 		}
-	
+
 		//*************************************
 		// Lighting code
 		//*************************************
@@ -519,7 +521,7 @@ namespace gfx
 			if (NeedWorldMatrix)
 				m_pVshMatWorld = pVertexShader->GetConstatnt("matWorld");
 		}
-		
+
 		// Call custom materials for getting their handles
 		m_itCMat				= m_mCustomMaterials.begin();
 		m_itCmatEnd				= m_mCustomMaterials.end();
@@ -545,12 +547,12 @@ namespace gfx
 		//*************************************
 		m_sPsHeader = "";
 		m_sPsInput  = "";
-		m_sPsOutput = "float4 outColor;\n "; 
+		m_sPsOutput = "float4 outColor;\n ";
 		m_sPsMain	= "";
 
 		if (Deferred)
 		{
-			m_sPsHeader += 
+			m_sPsHeader +=
 				"struct PSOUT\n"\
 				"{\n"\
 				"	float4 Pos: COLOR0;\n"\
@@ -588,7 +590,7 @@ namespace gfx
 		// Deferred shading
 		if (Deferred)
 		{
-			m_sPsHeader += 
+			m_sPsHeader +=
 				"float4 encode (float3 n)\n"\
 				"{\n"\
 				"	float p = sqrt(n.z*8+8);\n"\
@@ -604,7 +606,7 @@ namespace gfx
 			}
 			AddPixelShaderInput("float4 inPosW", EPU_Texcoord);
 			AddPixelShaderInput("float3 inNormal", EPU_Texcoord);
-			m_sPsMain += 
+			m_sPsMain +=
 				"psout.Pos = length(inPosW);\n"\
 				"float3 nN = normalize(inNormal);\n"\
 				"psout.Nor = encode(nN);\n";
@@ -612,10 +614,10 @@ namespace gfx
 			if (Frensel)
 			{
 				AddPixelShaderInput("float3 inViewDir", EPU_Texcoord);
-				m_sPsHeader += 
+				m_sPsHeader +=
 					"float fFrensel;\n"\
 					"float4 FrenselColor;\n";
-				m_sPsMain += 
+				m_sPsMain +=
 					"float fVdotN = max(0.0, dot(inViewDir, nN));\n"\
 					"psout.Dif += saturate(fFrensel - fVdotN) * FrenselColor;\n";
 			}
@@ -778,7 +780,7 @@ namespace gfx
 		const core::PriorityArray<sn::Light*, float>& lights = Device::GetSingletonPtr()->GetSceneManager()->GetNearestLight
 			(pSI->m_pOwner->GetPosition(), DirLightCount + PointLightCount);
 		int LightCount = DirLightCount + PointLightCount;
-		
+
 		// Directional lighting
 		float* fDir = NULL;
 		float* fDirColor = NULL;
@@ -793,12 +795,12 @@ namespace gfx
 			if (pSI->m_pOwner->GetParent())
 			{
 				matI = *pSI->m_pOwner->GetFinalMatrix();
-			} 
+			}
 			else
 			{
 				math::Vector v = pSI->m_pOwner->GetRotation();
 				matI.SetRotation(&v.x);
-			}			
+			}
 			float f[9];
 			f[0] = matI.m_fMat[0];
 			f[1] = matI.m_fMat[1];
@@ -812,12 +814,12 @@ namespace gfx
 			pVertexShader->SetConstant(m_pVshMatNorm, f, 9);
 		}
 		if (m_pVshLightDir || m_pPshLightDir)
-		{	
+		{
 			size_t sf = sizeof(float);
 			for (int i = 0; i < DirLightCount; i++)
 			{
-				memcpy(&fDir[i * 3], &(lights[i]->GetLightData()->Direction.x), 3 * sf);				
-				memcpy(&fDirColor[i * 3], lights[i]->GetLightData()->Diffuse.c, 3 * sf);				
+				memcpy(&fDir[i * 3], &(lights[i]->GetLightData()->Direction.x), 3 * sf);
+				memcpy(&fDirColor[i * 3], lights[i]->GetLightData()->Diffuse.c, 3 * sf);
 			}
 			if (m_pVshLightDir)
 				pVertexShader->SetConstant(m_pVshLightDir, fDir, 3 * DirLightCount);
@@ -833,8 +835,8 @@ namespace gfx
 			size_t sf = sizeof(float);
 			for (int i = DirLightCount; i < LightCount; i++)
 			{
-				memcpy(&fDir[i * 3], &(lights[i]->GetLightData()->Position.x), 3 * sf);				
-				memcpy(&fDirColor[i * 3], lights[i]->GetLightData()->Diffuse.c, 3 * sf);				
+				memcpy(&fDir[i * 3], &(lights[i]->GetLightData()->Position.x), 3 * sf);
+				memcpy(&fDirColor[i * 3], lights[i]->GetLightData()->Diffuse.c, 3 * sf);
 			}
 			if (m_pVshLightPos)
 				pVertexShader->SetConstant(m_pVshLightPos, &fDir[DirLightCount * 3], 3 * PointLightCount);

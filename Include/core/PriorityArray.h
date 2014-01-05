@@ -61,7 +61,7 @@ namespace kge
 
 			void Remove(const ValueType& val, const PriorityType& pri)
 			{
-				std::vector<Item>::iterator it = std::find(m_items.begin(), m_items.end(), Item(val, pri));
+				typename std::vector<Item>::iterator it = std::find(m_items.begin(), m_items.end(), Item(val, pri));
 
 				if (it != m_items.end())
 				{

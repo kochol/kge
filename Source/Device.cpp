@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <time.h>
-#include "../include/kgedef.h"
+#include "../Include/kgedef.h"
 
 #include "../Include/Device.h"
 #include "../Include/PluginManager.h"
@@ -317,8 +317,13 @@ namespace kge
 
 	io::IWindow* Device::CreateNewWindow()
 	{
+		// TODO check that can we use SDL to create this function
+#ifdef WIN32
 		io::IWindow* w = KGE_NEW(io::Win32)();
 		return w;
+#endif // WIN32
+
+		return NULL;
 	}
 
 } // kge

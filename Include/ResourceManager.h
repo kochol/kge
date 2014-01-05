@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <stack>
+#include <string.h>
 #include "Resource.h"
 #include "core/Functor.h"
 #include "Loader.h"
@@ -30,7 +31,7 @@ class ResourceManager: public KgeUnknown
 public:
 
 	//! Constructor
-	ResourceManager(core::Functor5<bool , Resource** , const u32 , const char*  , const char* , 
+	ResourceManager(core::Functor5<bool , Resource** , const u32 , const char*  , const char* ,
 		void* >*	CreateResourceFunction)
 	{
 		m_pCreateResourceFn = CreateResourceFunction;
@@ -41,7 +42,7 @@ public:
 	virtual ~ResourceManager()
 	{
 		// Searching for resource.
-		for(std::vector<T*>::iterator it = m_vResources.begin(); 
+		for(typename std::vector<T*>::iterator it = m_vResources.begin();
 			it != m_vResources.end(); it++)
 		{
 			T* t = (*it);
@@ -60,7 +61,7 @@ public:
 	virtual u32 Add(const char* FileName, void* ExtraParams, const char* Name)
 	{
 		// Searching for resource.
-		for(std::vector<T*>::iterator it = m_vResources.begin(); 
+		for(typename std::vector<T*>::iterator it = m_vResources.begin();
 			it != m_vResources.end(); it++)
 		{
 			if ((*it))
@@ -125,7 +126,7 @@ public:
 	virtual u32 Add2(const char* FileName, const char* pCh, void* ExtraParams, const char* Name)
 	{
 		// Searching for resource.
-		for(std::vector<T*>::iterator it = m_vResources.begin(); 
+		for(typename std::vector<T*>::iterator it = m_vResources.begin();
 			it != m_vResources.end(); it++)
 		{
 			if ((*it))
@@ -214,7 +215,7 @@ public:
 
 	} // AddManualResource
 
-	//! Removes a resource from list. 
+	//! Removes a resource from list.
 	//! Dose not delete the Resource only remove it from list
 	void RemoveResource(T* pResource)
 	{
@@ -300,14 +301,17 @@ public:
 		}
 
 		// Ask file system to load this stream
-		io::Stream* pStream = io::FileSystemManager::getSingletonPtr()->Load(std::string(FileName));
+		std::string strfilename(FileName);
+		io::Stream* pStream = io::FileSystemManager::getSingletonPtr()->Load(strfilename);
 		if (!pStream)
 			return NULL;
 
+        core::String strFilename;
+        strFilename = FileName;
 		// Ask loaders if any one can load this resource
 		for (size_t i = 0; i < m_vLoaders.size(); i++)
 		{
-			if (!m_vLoaders[i]->IsALoadableFileExtension(core::String(FileName)))
+			if (!m_vLoaders[i]->IsALoadableFileExtension(strFilename))
 				continue;
 
 			pResource = (T*)m_vLoaders[i]->LoadResource(pStream);
@@ -342,7 +346,7 @@ protected:
 
 	std::vector<T*>			m_vResources;		/**< Stores the resources */
 	std::stack<u32>			m_sHandles;			/**< Stores the unused handles number*/
-	core::Functor5<bool , Resource** , const u32 , const char* , const char* , 
+	core::Functor5<bool , Resource** , const u32 , const char* , const char* ,
 		void* >*			m_pCreateResourceFn;/**< Pointer to the function which creats the resource. */
 	std::vector<Loader*>	m_vLoaders;			//!< Stores the resource loaders
 

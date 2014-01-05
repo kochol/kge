@@ -159,7 +159,7 @@
 	#endif
 
 
-#elif KGE_COMPILER == KGE_COMPILER_UNKNOWN
+#else
 	#define KGE_API
 	#define KGE_IMPORT
 	#define NAKED_FUNC void

@@ -1,5 +1,5 @@
 // File name: ParticleSystem.cpp
-// Des: Particle system class, for producing effects like fire, smoke and sparks 
+// Des: Particle system class, for producing effects like fire, smoke and sparks
 // Date: January 11, 2011 (21/10/1389)
 // Programmer: Nader Golbaz
 
@@ -163,7 +163,7 @@ namespace sn
 		}
 
 		m_pAABB = KGE_NEW(math::AABB);
-		
+
 		m_pAABB->AddInternalPoint(m_ranges);
 		math::Vector r = m_ranges;
 		r.Negate();
@@ -195,7 +195,7 @@ namespace sn
 	}
 
 	//----------------------------------------
-	// 
+	//
 	//----------------------------------------
 	void ParticleSystem::PreRender(float elapsedTime)
 	{
@@ -204,7 +204,7 @@ namespace sn
 			if (m_remove) { m_pSnMan->RemoveSceneNode(this); }
 			return;
 		}
-		
+
 		if (m_pParent)
 		{
 			*m_pFinalMat = *m_pParent->GetFinalMatrix() * (*m_pAbsMat);
@@ -381,7 +381,7 @@ namespace sn
 		//    mesh->SetParent(this);
 		//    m_particleRenderer->SetMesh(mesh);
 		//}
-		
+
 		return *this;
 	}
 
@@ -502,8 +502,8 @@ namespace sn
 			{
 				delete ib;
 
-				WORD* indices = new WORD[num * 6];
-				WORD c = 0;
+				u16* indices = new u16[num * 6];
+				u16 c = 0;
 
 				for (unsigned int j = 0; j < num; ++j)
 				{
@@ -526,7 +526,7 @@ namespace sn
 			else
 			{
 				m_particleRenderer->SetSharedBuffer(ib);
-			}          
+			}
 		}
 
 		return *this;

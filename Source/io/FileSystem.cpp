@@ -72,7 +72,7 @@ namespace kge
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 			fopen_s(&pF, FileName.c_str(), "rb");
 #else
-			pF = fopen(FileName.ToCharPointer(), "rb");
+			pF = fopen(FileName.c_str(), "rb");
 #endif
 			if (!pF)
 			{

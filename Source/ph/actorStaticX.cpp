@@ -3,7 +3,7 @@
 // Date: 07/11/1388
 // Programmer: Hadi Robati (hadirobati)
 
-#include "../../Headers/ph/ActorStaticX.h"
+#include "../../Headers/ph/actorStaticX.h"
 #include "stdio.h"
 
 #ifdef KGE_USE_PHYSX
@@ -33,14 +33,14 @@ namespace kge
 			point /= 2.0f;
 
 			memcpy( &pVec.x , &point.x , 12 );
-			
+
 			if( shape == math::KGE_SHAPE_AABB )
 			{
 				NxBoxShapeDesc	nxBoxShapeDesc;
-			
+
 				//Set Physx Size
 				nxBoxShapeDesc.dimensions = pVec;
-				
+
 				if( ct != ECTP_TRIGGER_DISABLE )
 					nxBoxShapeDesc.shapeFlags |= ct;
 
@@ -54,14 +54,14 @@ namespace kge
 			{
 				NxSphereShapeDesc nxSphereShapeDesc;
 
-				nxSphereShapeDesc.radius = point.x; 
+				nxSphereShapeDesc.radius = point.x;
 
 				if( ct != ECTP_TRIGGER_DISABLE )
 					nxSphereShapeDesc.shapeFlags |= ct;
 
 				if( !nxSphereShapeDesc.isValid() )
 					kge::io::Logger::Log( "Invalid Sphere Shape Desc!!!\n" );
-				
+
 				//Set Shape Of Actor
 				nxActorDesc.shapes.push_back( &nxSphereShapeDesc );
 			}
@@ -104,7 +104,7 @@ namespace kge
 			//tempActor->raiseBodyFlag( NX_BF_KINEMATIC );
 
 			tempActor->userData = ((ActorDynamic*)(this));
-			
+
 
 			(*actorCounter)++;
 			actorNumber = (*actorCounter);
@@ -128,7 +128,7 @@ namespace kge
 
 			//Set To Default
 			nxActorDesc.setToDefault();
-			
+
 			if( shape->getType() == math::KGE_SHAPE_AABB )
 			{
 				NxBoxShapeDesc	nxBoxShapeDesc;
@@ -139,7 +139,7 @@ namespace kge
 				point.x = fabs( point.x );
 				point.y = fabs( point.y );
 				point.z = fabs( point.z );
-			
+
 				//Set Physx Box Size
 				nxBoxShapeDesc.dimensions.set( point.x , point.y , point.z );
 
@@ -158,14 +158,14 @@ namespace kge
 
 				math::Sphere *aa = (math::Sphere*)(shape);
 
-				nxSphereShapeDesc.radius = aa->GetRadius(); 
+				nxSphereShapeDesc.radius = aa->GetRadius();
 
 				if( ct != ECTP_TRIGGER_DISABLE )
 					nxSphereShapeDesc.shapeFlags |= ct;
 
 				if( !nxSphereShapeDesc.isValid() )
 					kge::io::Logger::Log( "Invalid Sphere Shape Desc!!!\n" );
-				
+
 				//Set Shape Of Actor
 				nxActorDesc.shapes.push_back( &nxSphereShapeDesc );
 			}

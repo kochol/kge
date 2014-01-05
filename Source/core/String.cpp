@@ -5,7 +5,8 @@
 #include "../../Include/core/String.h"
 #include "../../Include/core/KgeMemory.h"
 #include "../../Include/core/KgeArray.h"
-#include <string>
+#include <string.h>
+#include <stdio.h>
 #include <algorithm>
 #include <vector>
 
@@ -306,9 +307,9 @@ namespace core
 	{
 		// return if Indices not set
 		u32 len = GetLenght();
-		if (EndIndex < StartIndex 
-			|| StartIndex < 0 
-			|| EndIndex < 0 
+		if (EndIndex < StartIndex
+			|| StartIndex < 0
+			|| EndIndex < 0
 			|| StartIndex > (int)len - 1
 			|| EndIndex > (int)len -1)
 			return false;
@@ -393,7 +394,7 @@ namespace core
 	} // StringCopy
 
 	//------------------------------------------------------------------------------------
-	// 
+	//
 	//------------------------------------------------------------------------------------
 	void String::ToLower()
 	{
@@ -415,7 +416,7 @@ namespace core
 		m_pChar = KGE_NEW_ARRAY(char, m_vArray->Size() + 1);
 		memcpy(m_pChar, m_vArray->GetData(), m_vArray->Size());
 		m_pChar[m_vArray->Size()] = 0;
-		
+
 		return m_pChar;
 
 	} // ToCharPointer

@@ -2,7 +2,7 @@
 #define KGE_USER_TRIGGER_H
 
 #include "../core/Functor.h"
-#include "ActorDynamic.h"
+#include "actorDynamic.h"
 
 namespace kge
 {

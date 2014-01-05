@@ -4,8 +4,8 @@
 // Programmer: Hadi Robati (hadirobati)
 
 #include "../../Headers/ph/RevoluteJointX.h"
-#include "../../Headers/ph/ActorDynamicX.h"
-#include "../../Headers/ph/ActorStaticX.h"
+#include "../../Headers/ph/actorDynamicX.h"
+#include "../../Headers/ph/actorStaticX.h"
 
 #ifdef KGE_USE_PHYSX
 
@@ -24,7 +24,7 @@ namespace kge
 				return;
 
 			nxRevJointDesc.setToDefault();
-			
+
 			if( a1->getType() == EATP_DYNAMIC || a1->getType() == EATP_KINEMATIC )
 				nxA1 = ((ActorDynamicX*)(a1))->getPhActor();
 

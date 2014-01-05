@@ -4,7 +4,7 @@
 #if KGE_USE_BASS == 1
 
 #include "../../../Libs/bass/bass.h"
-#include "../../../include/io/Logger.h"
+#include "../../../Include/io/Logger.h"
 
 namespace kge
 {
@@ -55,7 +55,7 @@ namespace kge
 
 			if (m_looping)
 			{
-				BASS_ChannelFlags(m_channel, BASS_SAMPLE_LOOP, BASS_SAMPLE_LOOP);	
+				BASS_ChannelFlags(m_channel, BASS_SAMPLE_LOOP, BASS_SAMPLE_LOOP);
 			}
 			else
 			{
@@ -93,7 +93,7 @@ namespace kge
 
 			if (m_looping)
 			{
-				BASS_ChannelFlags(m_channel, BASS_SAMPLE_LOOP, BASS_SAMPLE_LOOP);	
+				BASS_ChannelFlags(m_channel, BASS_SAMPLE_LOOP, BASS_SAMPLE_LOOP);
 			}
 			else
 			{

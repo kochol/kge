@@ -31,10 +31,10 @@ enum ImageType
 {
 	E_IT_UnKnown,	//! Agar ke mikhahid khode engine format tasvir ra peyda konad in meghdar ra benevisid(engine az roye pasvand format tasvir ra moshakhas mikonad.
 	E_IT_BMP,		//! BMP Image
-	E_IT_JPEG		//! JPEG Image 
+	E_IT_JPEG		//! JPEG Image
 }; // ImageType
 
-enum ShaderVersion;
+//enum ShaderVersion;
 
 class MeshBuffer;
 class RendererDX;
@@ -80,7 +80,7 @@ class KGE_API SceneManager
 public:
 
 	//! Sazande class SceneManager
-	SceneManager(gfx::Renderer* pRenderer); 
+	SceneManager(gfx::Renderer* pRenderer);
 
 	//! Destrctor.
 	~SceneManager();
@@ -112,7 +112,7 @@ public:
 	  \param UpDirection Jahat bala dar faza.
 	  \return Ye pointer baraye Camera barmigardone.
 	 */
-	Camera* AddCameraNode(const math::Vector &Position, const math::Vector &LookAt, 
+	Camera* AddCameraNode(const math::Vector &Position, const math::Vector &LookAt,
 		const math::Vector &UpDirection = math::Vector(0.0f, 1.0f, 0.0f));
 
 	//!
@@ -120,7 +120,7 @@ public:
 	//    const math::Vector& target, const math::Vector &upDirection = math::Vector(0.0f, 1.0f, 0.0f));
 
 	//!
-	//Camera* AddCameraNode(const math::Vector &position, const math::Vector &target, 
+	//Camera* AddCameraNode(const math::Vector &position, const math::Vector &target,
 	//    const math::Vector &upDirection = math::Vector(0.0f, 1.0f, 0.0f));
 
 	/*! Loads an animated mesh from file the supported formats are:
@@ -154,14 +154,14 @@ public:
 		float speed,
 		float age,
 		float chaosRatio);
-	
+
 	//! Ye nore jahat daro dar sahne ezafe mikone. Mesle nore Khorshid.
 	/*!
 		\param vDir Jahate nor.
 		\param color Range nor.
 		\return Yek LightDir barmigardone ba moshakhasate sakhte shode ke ba taghiresh mishe dobare ba SetLight ono ezafe kard.
 	*/
-	virtual Light* AddDirectionalLight(math::Vector vDir, 
+	virtual Light* AddDirectionalLight(math::Vector vDir,
 									   const gfx::Colorf& color);
 
 	//! Ye nore noghte i ro be sahne ezafe mikone ke noresh dar tamame jahat pakhsh mishe.
@@ -184,7 +184,7 @@ public:
 
 	/*! Ezafe kardane ye texture.
 		\param Filename Esme tasvir ke bayad load shavad.
-		\return ID texture ra barmigardanad. 
+		\return ID texture ra barmigardanad.
 	*/
 	gfx::Texture* AddTexture(const char* FileName);
 
@@ -192,17 +192,17 @@ public:
 		\param Filename Texture file name to load
 		\param Name The texture name this parameter is optional but if you want to texture manager load a texture more than one time take it different names.
 		\param ct This is for creating compressed textures if you don't want use compressed textures pass kge::gfx::ECT_None
-		\return return the created texture. 
+		\return return the created texture.
 	*/
 	gfx::Texture* AddTexture(const char* FileName, const char* Name , gfx::CompressType ct = gfx::ECT_DXT5);
 
 	/*! Add a vertex shader
 	*/
-	gfx::Shader* AddVertexShader(const char* fileName, const char* vertexMain, gfx::ShaderVersion version);
+	gfx::Shader* AddVertexShader(const char* fileName, const char* vertexMain, int version);
 
 	/*! Add a pixel shader
 	*/
-	gfx::Shader* AddPixelShader(const char* fileName, const char* pixelMain, gfx::ShaderVersion version);
+	gfx::Shader* AddPixelShader(const char* fileName, const char* pixelMain, int version);
 
 	/*!
 	*/
@@ -220,14 +220,14 @@ public:
 
 	/*! Get the nearest light scene node from the given position.
 		\param Where The position to find the nearest light.
-		\return Returns the nearest light scene node. 
+		\return Returns the nearest light scene node.
 		Note: If there is any directional Light it will be returned any time.
 	*/
 	sn::Light* GetNearestLight(const math::Vector& Where);
 
 	/*! Get the nearest lights scene node from the given position.
 	\param Where The position to find the nearest light.
-	\return Returns the nearest light scene node. 
+	\return Returns the nearest light scene node.
 	Note: If there is any directional Light it will be returned any time.
 	*/
 	const core::PriorityArray<sn::Light*, float>& GetNearestLight(const math::Vector& Where, int count);
@@ -258,11 +258,11 @@ public:
 	/// \internal Add a geometry batch for rendering
 	void AddGeometryBatch(gfx::GeometryBatch* pGeoBatch);
 
-	std::vector<SceneNode*>* GetShadowCasterNodes()	
+	std::vector<SceneNode*>* GetShadowCasterNodes()
 	{
 		return &m_vShadowCasterNodes;
 	}
-	std::vector<SceneNode*>* GetShadowReciverNodes()	
+	std::vector<SceneNode*>* GetShadowReciverNodes()
 	{
 		return &m_vShadowReciverNodes;
 	}
@@ -275,7 +275,7 @@ public:
 		return &m_vShadowReciverPoints;
 	}
 
-	//! 
+	//!
 	void EnableShadow(bool enableShadow) { m_bEnableShadow = enableShadow; }
 
 	//! Checks the scene node for material necessary changes
@@ -345,7 +345,7 @@ public:
 
 	std::vector<gfx::GeometryBatch*>		m_vGeometryBatches;
 
-	//! 
+	//!
 	bool                    m_bEnableShadow;
 
 	//! Deferred shading shaders

@@ -1,7 +1,7 @@
 #include <map>
 #include "../../Headers/core/KgeMemoryTrack.h"
 #include "../../Include/core/KgeMemory.h"
-#include "../../Include/Config.h"
+#include "../../Include/config.h"
 #include "../../Include/io/Logger.h"
 
 namespace kge
@@ -9,7 +9,7 @@ namespace kge
 	namespace core
 	{
 
-		static std::map<unsigned int, MemoryInfo*>		g_sMemory;	
+		static std::map<unsigned int, MemoryInfo*>		g_sMemory;
 
 		//------------------------------------------------------------------------------------
 		// Add memory
@@ -31,7 +31,7 @@ namespace kge
 #		endif // KGE_TRACK_MEMORY
 
 		} // AddMemory
-		
+
 		//------------------------------------------------------------------------------------
 		// Removes memory
 		//------------------------------------------------------------------------------------

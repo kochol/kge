@@ -1,7 +1,7 @@
 #ifndef KGE_KGEMEMORY_H
 #define KGE_KGEMEMORY_H
 
-#include "../Config.h"
+#include "../config.h"
 #include "../kgedef.h"
 #include "../../Headers/core/KgeNedmalloc.h"
 #include "../../Headers/core/KgeMemoryTrack.h"

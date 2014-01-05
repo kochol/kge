@@ -4,8 +4,8 @@
 // Programmer: Hadi Robati (hadirobati)
 
 #include "../../Headers/ph/SphericalJointX.h"
-#include "../../Headers/ph/ActorDynamicX.h"
-#include "../../Headers/ph/ActorStaticX.h"
+#include "../../Headers/ph/actorDynamicX.h"
+#include "../../Headers/ph/actorStaticX.h"
 
 #ifdef KGE_USE_PHYSX
 
@@ -16,9 +16,9 @@ namespace kge
 		SphericalJointX::SphericalJointX(kge::ph::PhysXManager *pMan, kge::ph::Actor *a1, kge::ph::Actor *a2, kge::math::Vector *Anchor)
 		{
 			NxActor					*aX1 , *aX2;
-			NxSphericalJointDesc	nxSJD; 
+			NxSphericalJointDesc	nxSJD;
 			//ActorStaticX	*aS1 , *aS2;
-			
+
 			if( a1->getType() == EATP_DYNAMIC || a1->getType() == EATP_KINEMATIC )
 				aX1 = ((ActorDynamicX*)(a1))->getPhActor();
 
@@ -33,7 +33,7 @@ namespace kge
 
 			nxSJD.setGlobalAnchor( NxVec3( Anchor->x , Anchor->y , Anchor->z ) );
 
-			m_pSphericalJoint = (NxSphericalJoint*)(pMan->getPhysxScene()->createJoint( nxSJD ));			
+			m_pSphericalJoint = (NxSphericalJoint*)(pMan->getPhysxScene()->createJoint( nxSJD ));
 		}
 		//----------------------------------------------------------
 		//
@@ -84,7 +84,7 @@ namespace kge
 			lim.high.restitution = highRestitution;
 			lim.low.value = lowValue;
 			lim.low.restitution = lowRestitution;
-		
+
 			nxSJD.twistLimit = lim;
 			nxSJD.flags |= NX_SJF_TWIST_LIMIT_ENABLED;
 			m_pSphericalJoint->loadFromDesc( nxSJD );

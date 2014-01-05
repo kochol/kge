@@ -6,7 +6,7 @@
 #ifndef KGE_CHAR_H
 #define KGE_CHAR_H
 
-#include "../kgedef.h"
+#include "../../Include/kgedef.h"
 
 namespace kge
 {
