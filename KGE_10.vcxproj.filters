@@ -471,11 +471,23 @@
     <ClCompile Include="Source\gui\Control.cpp">
       <Filter>Source Files\gui</Filter>
     </ClCompile>
+    <ClCompile Include="Source\core\KgeThread.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\core\KgeMutex.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\core\TaskManager.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\core\TaskManagerThread.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\core\KgeCond.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\core\CPU.h">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\gfx\LightGL.h">
       <Filter>Header Files\gfx</Filter>
     </ClInclude>
@@ -976,6 +988,33 @@
     </ClInclude>
     <ClInclude Include="Include\gfx\VertexElement.h">
       <Filter>Include Files\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\KgeThread.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\KgeMutex.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\TaskManager.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\TaskManagerThread.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\Task.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\TaskGroup.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\CPU.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\KgeCond.h">
+      <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\core\TSQueue.h">
+      <Filter>Include Files\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

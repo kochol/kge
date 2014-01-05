@@ -1,5 +1,5 @@
 --------------------------
-Changes in 0.0.11
+Changes in 0.1.0
 
 - Add EntitySystem tool
 - Add 08EntitySystem tutorial
@@ -12,6 +12,15 @@ Changes in 0.0.11
 - Refactor the Renderer class
 - Remove some gui classes
 - Add CG shaders to opengl renderer plugin
+- Add KgeThread
+- Add KgeMutex
+- Add TaskManager
+- Add TaskManagerThread
+- Add Task interface
+- Add TaskGroup
+- Update CPU class
+- Update Timer class to work with SDL
+- Add TSQueue a Tread Safe Queue
 
 --------------------------
 Changes in 0.0.10

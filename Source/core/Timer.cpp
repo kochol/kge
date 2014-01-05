@@ -18,7 +18,6 @@ namespace core
 	Timer::Timer()
 	{
 		freq = SDL_GetPerformanceFrequency();
-
 		ims = freq / 1000;
 		//if (ims < 0 ) ims = -ims;
 

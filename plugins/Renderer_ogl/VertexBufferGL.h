@@ -18,7 +18,7 @@ namespace kge
 		{
 		public:
 			//! Constructor
-			VertexBufferGL(u32 vCount,u32 stride);
+			VertexBufferGL(u32 vCount,u32 stride, bool isDynamic);
 
 			//! Destructor
 			~VertexBufferGL();

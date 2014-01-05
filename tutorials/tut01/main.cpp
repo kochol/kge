@@ -6,6 +6,8 @@
 // will be increased in this way.
 #include "../../Include/kge.h"
 
+#include "../../Include/core/TaskManager.h"
+
 // Tell the compiler to link with kge.lib
 #pragma comment(lib, "../../bin/debug/kge.lib")
 
@@ -40,6 +42,8 @@ int main()
 	kge::InitParameters	params;
 	params.RendererType = kge::gfx::ERA_OpenGL;
 	dev.Init(params);
+
+	kge::core::TaskManager::GetSingletonPointer();
 
 	// After initializing of engine we can get the pointer of Renderer and the SceneManager
 	pRen	= dev.GetRenderer();
