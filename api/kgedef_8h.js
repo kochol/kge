@@ -1,9 +1,11 @@
 var kgedef_8h =
 [
+    [ "KGE_API", "kgedef_8h.html#a526832ab2dc74d38864716df052c4843", null ],
     [ "KGE_ARCHITECTURE_32", "kgedef_8h.html#a6afe6912516526e22d6c843bb7f38ddc", null ],
     [ "KGE_ARCHITECTURE_64", "kgedef_8h.html#aad03c79b41cf75b5052dfe84197f27b9", null ],
     [ "KGE_ARCHITECTURE_TYPE", "kgedef_8h.html#ae258e6320b0488cf8e650787e31a056b", null ],
     [ "KGE_ARCHITECTURE_UNKNOWN", "kgedef_8h.html#ad595b80ec1c483bf10b0acea0329c7c0", null ],
+    [ "KGE_BB_SPHERE", "kgedef_8h.html#ae342cf15027808bf55015bda030b08c7", null ],
     [ "KGE_COMPILER", "kgedef_8h.html#a6fdef61c0b60e55f57dea07e23df35b9", null ],
     [ "KGE_COMPILER_BORL", "kgedef_8h.html#a103a414c938bbdd04a17b299e93ab288", null ],
     [ "KGE_COMPILER_GNUC", "kgedef_8h.html#a6960ceef5185c7b4317c99dcab4a48c1", null ],
@@ -11,6 +13,9 @@ var kgedef_8h =
     [ "KGE_COMPILER_NDK", "kgedef_8h.html#a815c3ed6e1461869745e79bd12e66678", null ],
     [ "KGE_COMPILER_UNKNOWN", "kgedef_8h.html#abbf07b350cc73ec10308180ab40062dd", null ],
     [ "KGE_DEBUG_MODE", "kgedef_8h.html#ace8d2a21e9c9620d3f3be38c55273de2", null ],
+    [ "KGE_DEVICE_LOST", "kgedef_8h.html#a88a83766097df99262698b3819ba96db", null ],
+    [ "KGE_DEVICE_RESET", "kgedef_8h.html#ae2a583c883480f28dad7ed14cc0e9358", null ],
+    [ "KGE_IMPORT", "kgedef_8h.html#a82bde6564d253326409d15a8d6c4d160", null ],
     [ "KGE_PLATFORM", "kgedef_8h.html#a82ad71a27da2e2851d194311ed32a6c9", null ],
     [ "KGE_PLATFORM_ANDROID", "kgedef_8h.html#aa45f3e5790a4f870e168a21952f169c1", null ],
     [ "KGE_PLATFORM_APPLE", "kgedef_8h.html#af914c2c76bf6fe6cce30d89179aa6cc3", null ],
@@ -25,6 +30,19 @@ var kgedef_8h =
     [ "KGE_VERSION_NUM", "kgedef_8h.html#a7e6c1131e0ad5fc8859d45f4ec24696f", null ],
     [ "KGE_VERSION_RELEASE", "kgedef_8h.html#a812bea94ecb625d55aaa36c133fb07c7", null ],
     [ "KGE_VERSION_SUFFIX", "kgedef_8h.html#a6a67e4623f607c4ca080717d0e350f7e", null ],
+    [ "kgedecref", "kgedef_8h.html#aada5af8f60f15a4ef165d9651f271f93", null ],
     [ "MAXID", "kgedef_8h.html#a0865c22126c7d00b3318235e244ecb4a", null ],
-    [ "uint", "kgedef_8h.html#abb1a26634ee37eb613877e4c637776d2", null ]
+    [ "NAKED_FUNC", "kgedef_8h.html#af09335657c11696e2d85d1052d9c88e7", null ],
+    [ "f32", "kgedef_8h.html#a356fe180b22c1504a5cb5bd6555d1eaa", null ],
+    [ "f64", "kgedef_8h.html#a6d4e1dcf70a09d7186a4fb819cb9c095", null ],
+    [ "s16", "kgedef_8h.html#ab91bede2c6a5baae0b6ab1a13e8b422f", null ],
+    [ "s32", "kgedef_8h.html#a834e543b3bd62481902ed49db96c5f85", null ],
+    [ "s64", "kgedef_8h.html#aecd044e6bc4b99d026b08d2a43b34c06", null ],
+    [ "u16", "kgedef_8h.html#a099ceb657ba79b56d114952bba31f79b", null ],
+    [ "u32", "kgedef_8h.html#af55fabf47240ccdd40402f1484b6ce41", null ],
+    [ "u64", "kgedef_8h.html#a55a92e1cc3e89c3321f2338f2f0fc25f", null ],
+    [ "u8", "kgedef_8h.html#a102cf37011449a6800cf3e576a6cf6ec", null ],
+    [ "uint", "kgedef_8h.html#abb1a26634ee37eb613877e4c637776d2", null ],
+    [ "ul32", "kgedef_8h.html#a2a63da4ecb2f1e3bf268d7c3a764a69b", null ],
+    [ "Rounding_Error_Double", "kgedef_8h.html#a7725ad03a6cde2ffbc6dc436117265ea", null ]
 ];

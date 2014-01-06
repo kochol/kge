@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Kochol Game Engine: C:/Users/Novin Pendar/Documents/kge/engine/include/Renderer.h File Reference</title>
+<title>Kochol Game Engine: E:/mycodes/git/kge/Include/gfx/Renderer.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -90,7 +92,7 @@ $(document).ready(function(){initNavTree('_renderer_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -103,31 +105,49 @@ $(document).ready(function(){initNavTree('_renderer_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">Renderer.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="structs_8h_source.html">structs.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="array_8h_source.html">array.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="_string_8h_source.html">String.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="_matrix_8h_source.html">Matrix.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="_color_8h_source.html">Color.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="gfx_2_material_8h_source.html">Material.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_device_8h_source.html">../Device.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_lighting_8h_source.html">Lighting.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_shader_8h_source.html">Shader.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_hardware_buffer_8h_source.html">HardwareBuffer.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_iwindow_8h_source.html">../io/Iwindow.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_vector_8h_source.html">../math/Vector.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_matrix_8h_source.html">../math/Matrix.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="kgedef_8h_source.html">../kgedef.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="core_2_structs_8h_source.html">../core/Structs.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="gfx_2_structs_8h_source.html">Structs.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_timer_8h_source.html">../core/Timer.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_font_8h_source.html">../gui/Font.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_vertex_dec_8h_source.html">VertexDec.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_vertex_element_8h_source.html">VertexElement.h</a>&quot;</code><br/>
 </div>
 <p><a href="_renderer_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1gfx_1_1_renderer.html">kge::gfx::Renderer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interface for working with renderers in KGE.  <a href="classkge_1_1gfx_1_1_renderer.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classkge_1_1gfx_1_1_renderer.html" title="The Renderer interface has functions to work with graphics card.">Renderer</a> interface has functions to work with graphics card.  <a href="classkge_1_1gfx_1_1_renderer.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacekge"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge.html">kge</a></td></tr>
-<tr class="memdesc:namespacekge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Everything about KGE is here. <br/></td></tr>
+<tr class="memitem:namespacekge_1_1gui"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gui.html">kge::gui</a></td></tr>
+<tr class="memdesc:namespacekge_1_1gui"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphical User Interface. <br/></td></tr>
+<tr class="memitem:namespacekge_1_1sn"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1sn.html">kge::sn</a></td></tr>
+<tr class="memdesc:namespacekge_1_1sn"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scene Classes. <br/></td></tr>
 <tr class="memitem:namespacekge_1_1gfx"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gfx.html">kge::gfx</a></td></tr>
 <tr class="memdesc:namespacekge_1_1gfx"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphics classes. <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac178dcb0c328d3cac7f882a6bb38efd4"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gfx.html#ac178dcb0c328d3cac7f882a6bb38efd4">kge::gfx::kgeRenderCallback</a> )(KgeUnknown *Sender)</td></tr>
+<tr class="memdesc:ac178dcb0c328d3cac7f882a6bb38efd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">standard callback function  <a href="#ac178dcb0c328d3cac7f882a6bb38efd4"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -136,15 +156,98 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacekge_1_1gfx.html#a0e21f87af8574f32e3d00f696466d6f9a350bef28626952aae1562cb1ff46b661">kge::gfx::ETM_Projection</a>, 
 <a class="el" href="namespacekge_1_1gfx.html#a0e21f87af8574f32e3d00f696466d6f9a836f43cfc80d5195d47dcdc46d0a73e1">kge::gfx::ETM_ViewProjection</a>
  }</td></tr>
-<tr class="memdesc:a0e21f87af8574f32e3d00f696466d6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transform mode enum.  <a href="namespacekge_1_1gfx.html#a0e21f87af8574f32e3d00f696466d6f9">More...</a><br/></td></tr>
+<tr class="memdesc:a0e21f87af8574f32e3d00f696466d6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Noe matrixi ke mikhahid taghir bedid.  <a href="namespacekge_1_1gfx.html#a0e21f87af8574f32e3d00f696466d6f9">More...</a><br/></td></tr>
+<tr class="memitem:a62c600250951cd28c162bbf84e68720c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720c">kge::gfx::RenderFlags</a> { <br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720cab93e11d89b2b10f59382ae49f778e8c7">kge::gfx::ERF_2D</a> =  0, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720ca5ead9ce2fe24c1904667a8074853bc16">kge::gfx::ERF_Lighting</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720ca78bf04a3df445197e94bbe61eb52d821">kge::gfx::ERF_AlphaBlending</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720ca78fda3b1d0a3686348b0caab26bfe736">kge::gfx::ERF_AdditiveBlending</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720ca552c672d497740440574e5f401de9b0f">kge::gfx::ERF_AlphaTest</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720cae76d5a58e57c6a4fd81c493b2c8f1452">kge::gfx::ERF_StencilBuffer</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720ca281cad22644b87d48fda297ea477ccbb">kge::gfx::ERF_DepthBuffer</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720caea02c6412833a1727f8e1d91b127d6a7">kge::gfx::ERF_ZWrite</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720cab974bbf2d21f7265b4c88abc25e92242">kge::gfx::ERF_VSync</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720cab82386df83e79431eeb1601fbd83807b">kge::gfx::ERF_WireFrame</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720ca42b54e465f1dbbf11bf6cc7ed9e2cde5">kge::gfx::ERF_Culling</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720ca4215680acc301449f9bc705ecadef264">kge::gfx::ERF_ColorRendering</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720ca22e3ad3ec3dc8ec5518e1c402867b20f">kge::gfx::ERF_Scissor</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720ca55b6501b80051c8e392c57d92587ca84">kge::gfx::ERF_Count</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:a62c600250951cd28c162bbf84e68720c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Khasiat haye engine ke baraye render estefade mishe.  <a href="namespacekge_1_1gfx.html#a62c600250951cd28c162bbf84e68720c">More...</a><br/></td></tr>
+<tr class="memitem:ada320062138f288d7d8ad8906dc385ac"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gfx.html#ada320062138f288d7d8ad8906dc385ac">kge::gfx::TextureParams</a> { <br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#ada320062138f288d7d8ad8906dc385aca4ec59d27d2b297468eb4c0c92dddb3b8">kge::gfx::ETP_Point</a> =  0, 
+<a class="el" href="namespacekge_1_1gfx.html#ada320062138f288d7d8ad8906dc385acaf5b6214030d5f1fda2cf99b6867a45ca">kge::gfx::ETP_Linear</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#ada320062138f288d7d8ad8906dc385acaaf0eaaf629a4be98bd30f36ed5ef98c6">kge::gfx::ETP_Anisotropic</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#ada320062138f288d7d8ad8906dc385acab1c3fbd214c39fc24d228187a70e0478">kge::gfx::ETP_Wrap</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#ada320062138f288d7d8ad8906dc385aca1e57de04a3429890572bae36f66f072f">kge::gfx::ETP_BorderColor</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#ada320062138f288d7d8ad8906dc385acad074b9afff9e90673bec05e1f44997b2">kge::gfx::ETP_Clamp</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#ada320062138f288d7d8ad8906dc385aca3428e0ce35c504d5af54cbebabfd1d90">kge::gfx::ETP_Mirror</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:ada320062138f288d7d8ad8906dc385ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anvae tanzim ha baraye Texture ha.  <a href="namespacekge_1_1gfx.html#ada320062138f288d7d8ad8906dc385ac">More...</a><br/></td></tr>
+<tr class="memitem:a9af05b970b4b8e0f77743d08738a3b57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57">kge::gfx::GraphicCardCaps</a> { <br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a8209c031401b54c47af058bab7370857">kge::gfx::EGCC_VertexShader1_1</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57afbfbe20aa524202ba8a5c47dc15bc9c3">kge::gfx::EGCC_FragmentShader1_1</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57aff206532f67a74915459eff60ccce40d">kge::gfx::EGCC_FragmentShader1_4</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57aa63572383f99f1a8a8d9edc9c0287856">kge::gfx::EGCC_VertexShader2</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a304325fa8d8c598beb04b3c9c95f34ac">kge::gfx::EGCC_FragmentShader2</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57ad4392dff76c459396ac56b592389052e">kge::gfx::EGCC_VertexShader3</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a28b423c2b9f3c7d9d0124d02755b0668">kge::gfx::EGCC_FragmentShader3</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a98b450706f9d1d6a679b222adac070a7">kge::gfx::EGCC_ShaderObject</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a5ef41cca27969e637179523f2b18ee75">kge::gfx::EGCC_GeometryShader4</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a5fa29097f5f613b4d4fcf6e9971a5fcf">kge::gfx::EGCC_ShaderModel4</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57ab33d3671582e74ea690df7763e0c9405">kge::gfx::EGCC_ShaderModel3</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a473dec64f83ebb7f6b7e09efee004c4f">kge::gfx::EGCC_ShaderModel2</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a9178f4ff99d4ea8c801bd129ea056c77">kge::gfx::EGCC_OpenGL2</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a2a18d527123cb21201f410e00b5ccdc1">kge::gfx::EGCC_OpenGL3</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57ae8b34ac55d424e6114513e8a3f1f7fb9">kge::gfx::EGCC_OpenGL4</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57af362bf2a0965370c4f87bbc903706435">kge::gfx::EGCC_DXT1</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57ac21302fa7c98dcc337bfe8f1c5c11085">kge::gfx::EGCC_DXT3</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57ad49ffb2c5c48d7c98b6e33f2c26aaffe">kge::gfx::EGCC_DXT5</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57a8474ab252eb842baaac355cf25e422de">kge::gfx::EGCC_INTZ</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57affe20af2150fc5047ecd760eb9afa36e">kge::gfx::EGCC_Count</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:a9af05b970b4b8e0f77743d08738a3b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ghabeliat haye cart graphic.  <a href="namespacekge_1_1gfx.html#a9af05b970b4b8e0f77743d08738a3b57">More...</a><br/></td></tr>
+<tr class="memitem:af40fdcb080081ed3a157853dfe79a983"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gfx.html#af40fdcb080081ed3a157853dfe79a983">kge::gfx::ShaderVersion</a> { <br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#af40fdcb080081ed3a157853dfe79a983a0e6808c5f992451de0d48dda34e03b3e">kge::gfx::ESV_VS1_1</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#af40fdcb080081ed3a157853dfe79a983a50a6f58b3a78023a2cf6e040fec13732">kge::gfx::ESV_VS2</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#af40fdcb080081ed3a157853dfe79a983a9c8a149c99747bb3722141d961696f61">kge::gfx::ESV_VS3</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#af40fdcb080081ed3a157853dfe79a983ac9902688f58ea3faf960fb0128839d30">kge::gfx::ESV_PS1_1</a>, 
+<br/>
+&#160;&#160;<a class="el" href="namespacekge_1_1gfx.html#af40fdcb080081ed3a157853dfe79a983abd52fd0f1ed9cdbd4f0592167b321b5c">kge::gfx::ESV_PS1_4</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#af40fdcb080081ed3a157853dfe79a983a8c83d9b9b5bf18c718294167bc72cdfb">kge::gfx::ESV_PS2</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#af40fdcb080081ed3a157853dfe79a983a148189d03134432cf84882f17aa7d8cb">kge::gfx::ESV_PS3</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:af40fdcb080081ed3a157853dfe79a983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shader versions.  <a href="namespacekge_1_1gfx.html#af40fdcb080081ed3a157853dfe79a983">More...</a><br/></td></tr>
+<tr class="memitem:ad472f24c7742d2df66117a0c554ebf0a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gfx.html#ad472f24c7742d2df66117a0c554ebf0a">kge::gfx::CullMode</a> { <a class="el" href="namespacekge_1_1gfx.html#ad472f24c7742d2df66117a0c554ebf0aaa7cc644075f9d849622d9d865b234ab6">kge::gfx::ECM_None</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#ad472f24c7742d2df66117a0c554ebf0aa9400d6fbda5f1e94704eae19ed125e6d">kge::gfx::ECM_CCW</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#ad472f24c7742d2df66117a0c554ebf0aa9d228d11cf24348cc919b71aac6a6b54">kge::gfx::ECM_CW</a>
+ }</td></tr>
+<tr class="memitem:a208b105118e0b69aa1fb39ff2418cdef"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gfx.html#a208b105118e0b69aa1fb39ff2418cdef">kge::gfx::RendererPipeline</a> { <a class="el" href="namespacekge_1_1gfx.html#a208b105118e0b69aa1fb39ff2418cdefa2bf54d2c0ecc7dabf0fb2dcf68cfa683">kge::gfx::ERP_Forward</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a208b105118e0b69aa1fb39ff2418cdefa99f890b11d8547db6fff1aa7196f2f07">kge::gfx::ERP_Deferred</a>
+ }</td></tr>
+<tr class="memitem:a5cb91b2989639e08b4de338f41f98773"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1gfx.html#a5cb91b2989639e08b4de338f41f98773">kge::gfx::DepthTestMode</a> { <a class="el" href="namespacekge_1_1gfx.html#a5cb91b2989639e08b4de338f41f98773a50f8b2745907266b404e6daad3754d74">kge::gfx::EDTM_LessEqual</a>, 
+<a class="el" href="namespacekge_1_1gfx.html#a5cb91b2989639e08b4de338f41f98773a9cf24130881bd6718cec34c4bab51e46">kge::gfx::EDTM_Greater</a>
+ }</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><a class="el" href="dir_bafa501d493553e442f19f5f8dd7b29c.html">include</a></li><li class="navelem"><a class="el" href="_renderer_8h.html">Renderer.h</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="navelem"><a class="el" href="dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="dir_deea50d16e0677fbfacb413bf983068c.html">mycodes</a></li><li class="navelem"><a class="el" href="dir_8af5a13fc9984a0fa39713d3d8d79f6f.html">git</a></li><li class="navelem"><a class="el" href="dir_f117ff2519cf9fdb3c53910fd4f46e74.html">kge</a></li><li class="navelem"><a class="el" href="dir_be4880de99480d6ac3e802891aa8202a.html">Include</a></li><li class="navelem"><a class="el" href="dir_f1b9179dd2ec2af7a8bd38a7d38474d9.html">gfx</a></li><li class="navelem"><a class="el" href="_renderer_8h.html">Renderer.h</a></li>
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:55 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

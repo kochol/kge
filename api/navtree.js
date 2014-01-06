@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "Kochol Game Engine", "index.html", [
+    [ "Tutorials", "tutorials.html", "tutorials" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -14,15 +15,11 @@ var NAVTREE =
     ] ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
-      [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ],
-        [ "Enumerations", "functions_enum.html", null ],
-        [ "Enumerator", "functions_eval.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -30,6 +27,7 @@ var NAVTREE =
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -38,11 +36,25 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_block_data_8h.html",
-"_profiler_8h_source.html",
-"classkge_1_1core_1_1_kge_thread.html#a4566a4cc4703e21cf2abf253bef99dab",
-"classkge_1_1io_1_1_kge_window.html#ae3167e7f13543e115bb7a1b6e0b22df7",
-"kgedef_8h.html#a030aaf8975ff79c247118b6a3c5434b2"
+"3_d_sound_8h.html",
+"_keyboard_8h.html#a291074b7fcf8d0008479d7f1399b8712a44fce2964c59b4df836e524fd4736f46",
+"_mesh_8h_source.html",
+"_system_8h.html",
+"classkge_1_1_resource.html#a06690439c60839c3a8bc5c5960127027",
+"classkge_1_1core_1_1_priority_array.html#af4f87bbcafa9ab7d0de6f366c7aeb25f",
+"classkge_1_1efx_1_1_shadow_map_projection.html#a76b60d8c329bee9cec16ad946665565f",
+"classkge_1_1gfx_1_1_hardware_buffer.html#ad1a2d0dccc2e360c9db9b2a1ae284fbf",
+"classkge_1_1gfx_1_1_renderer.html#acb64c476fc8543108b4b25df23a6d74c",
+"classkge_1_1io_1_1_file.html#a25134f14fa67e7cec59bd5472d434b01",
+"classkge_1_1math_1_1_quat.html#a12e0edb01ba504ab97c6938c46635e9c",
+"classkge_1_1ph_1_1_raycast_report.html#a24cff59c559781bcbdc92728a39d8735",
+"classkge_1_1sn_1_1_camera.html#a088c53fe4feb2d2ef545bb94fc089a3b",
+"classkge_1_1sn_1_1_particle_system.html#ad682219861b94223a26c16066fffb2f3",
+"classkge_1_1sn_1_1_sound2_d.html#a4717fb9c8a96fc0bf5597fe2578b9a50",
+"classkge_1_1sn_1_1_tile_terrain.html#ad9ad67b2a049363db24562676506e826",
+"gfx_2_structs_8h.html#ad8a65c0c9a67bd9ad48f3cc123a912ec",
+"structkge_1_1core_1_1_array_1_1_array_item.html",
+"tut01.html#step3"
 ];
 
 var navTreeSubIndices = new Array();

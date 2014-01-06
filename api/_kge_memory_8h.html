@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Kochol Game Engine: C:/Users/Novin Pendar/Documents/kge/engine/include/KgeMemory.h File Reference</title>
+<title>Kochol Game Engine: E:/mycodes/git/kge/Include/core/KgeMemory.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -90,7 +92,7 @@ $(document).ready(function(){initNavTree('_kge_memory_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,9 +110,11 @@ $(document).ready(function(){initNavTree('_kge_memory_8h.html','');});
 <div class="title">KgeMemory.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_config_8h_source.html">Config.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kgedef_8h_source.html">kgedef.h</a>&quot;</code><br/>
-<code>#include &quot;../KGEmain/KgeNedmalloc.h&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="config_8h_source.html">../config.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="kgedef_8h_source.html">../kgedef.h</a>&quot;</code><br/>
+<code>#include &quot;../../Headers/core/KgeNedmalloc.h&quot;</code><br/>
+<code>#include &quot;../../Headers/core/KgeMemoryTrack.h&quot;</code><br/>
+<code>#include &lt;new&gt;</code><br/>
 </div>
 <p><a href="_kge_memory_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -121,17 +125,19 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacekge"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge.html">kge</a></td></tr>
-<tr class="memdesc:namespacekge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Everything about KGE is here. <br/></td></tr>
 <tr class="memitem:namespacekge_1_1core"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html">kge::core</a></td></tr>
 <tr class="memdesc:namespacekge_1_1core"><td class="mdescLeft">&#160;</td><td class="mdescRight">KGE core classes. <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:afc6d8b76e78df98701ebcb87228dbb25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#afc6d8b76e78df98701ebcb87228dbb25">KGE_NEW</a>(T)&#160;&#160;&#160;new (kge::core::KgeMemory::AllocateBytes(sizeof(T), __FILE__, __LINE__, __FUNCTION__)) T</td></tr>
-<tr class="memitem:a95316804d3e72c1bb626a3fcec9a28fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#a95316804d3e72c1bb626a3fcec9a28fc">KGE_DELETE</a>(ptr, T)&#160;&#160;&#160;if (ptr) {(ptr)-&gt;~T(); kge::core::KgeMemory::DeallocateBytes(ptr); ptr = <a class="el" href="structs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td></tr>
+<tr class="memitem:a95316804d3e72c1bb626a3fcec9a28fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#a95316804d3e72c1bb626a3fcec9a28fc">KGE_DELETE</a>(ptr, T)&#160;&#160;&#160;if (ptr) {(ptr)-&gt;~T(); kge::core::KgeMemory::DeallocateBytes(ptr); ptr = <a class="el" href="_vector_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td></tr>
 <tr class="memitem:a3911d2c7a16bcd0322543f50cf9082cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#a3911d2c7a16bcd0322543f50cf9082cf">KGE_DELETETHIS</a>(ptr, T)&#160;&#160;&#160;if (ptr) {(ptr)-&gt;~T(); kge::core::KgeMemory::DeallocateBytes(ptr); }</td></tr>
-<tr class="memitem:a720eb5c358e28506c7da7f0821065b0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#a720eb5c358e28506c7da7f0821065b0b">KGE_NEW_ARRAY</a>(T, count)&#160;&#160;&#160;(T*)kge::core::KgeMemory::AllocateBytes(sizeof(T) * count, __FILE__, __LINE__, __FUNCTION__)</td></tr>
-<tr class="memitem:aaf32f39bbfdd78329bddd6c6778cff06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#aaf32f39bbfdd78329bddd6c6778cff06">KGE_DELETE_ARRAY</a>(ptr)&#160;&#160;&#160;if (ptr) { kge::core::KgeMemory::DeallocateBytes(ptr); ptr = <a class="el" href="structs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td></tr>
+<tr class="memitem:a720eb5c358e28506c7da7f0821065b0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#a720eb5c358e28506c7da7f0821065b0b">KGE_NEW_ARRAY</a>(T, count)&#160;&#160;&#160;(T*) kge::core::KgeMemory::AllocateBytes(sizeof(T) * count, __FILE__, __LINE__, __FUNCTION__)</td></tr>
+<tr class="memitem:ae251adc2df0f0b7a9b6cd5609b515217"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#ae251adc2df0f0b7a9b6cd5609b515217">KGE_NEW_CLASS_ARRAY</a>(T, count)&#160;&#160;&#160;(new (kge::core::KgeMemory::AllocateBytes(sizeof(T) * count + 4, __FILE__, __LINE__, __FUNCTION__)) T[count])</td></tr>
+<tr class="memitem:aaf32f39bbfdd78329bddd6c6778cff06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#aaf32f39bbfdd78329bddd6c6778cff06">KGE_DELETE_ARRAY</a>(ptr)&#160;&#160;&#160;if (ptr) { kge::core::KgeMemory::DeallocateBytes(ptr); ptr = <a class="el" href="_vector_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td></tr>
+<tr class="memitem:a30868952a3922f2fd1e79241366891a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#a30868952a3922f2fd1e79241366891a5">KGE_DELETE_CLASS_ARRAY</a>(ptr, T, count)&#160;&#160;&#160;if (ptr) { 	for (int i = 0; i &lt; count; i++) ptr[i].~T(); kge::core::KgeMemory::DeallocateBytes((void*)((unsigned int)ptr - 4)); ptr = <a class="el" href="_vector_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td></tr>
+<tr class="memitem:a53536c4b78c17e9e85bb417a959d2317"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_kge_memory_8h.html#a53536c4b78c17e9e85bb417a959d2317">KGE_REALLOC_ARRAY</a>(ptr, T, count)&#160;&#160;&#160;(T*)kge::core::KgeMemory::ReallocateBytes(ptr, sizeof(T) * count, __FILE__, __LINE__, __FUNCTION__)</td></tr>
 </table>
 <h2>Macro Definition Documentation</h2>
 <a class="anchor" id="a95316804d3e72c1bb626a3fcec9a28fc"></a>
@@ -153,10 +159,16 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;if (ptr) {(ptr)-&gt;~T(); kge::core::KgeMemory::DeallocateBytes(ptr); ptr = <a class="el" href="structs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td>
+          <td></td><td>&#160;&#160;&#160;if (ptr) {(ptr)-&gt;~T(); kge::core::KgeMemory::DeallocateBytes(ptr); ptr = <a class="el" href="_vector_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>If you use KGE_NEW to allocate memory then you have to use KGE_DELETE to deallocate it and free memory. First parameter is pointer the second one is class name without anything else like namespace only class name or its parent name example </p>
+<div class="fragment"><div class="line"><a class="code" href="_kge_memory_8h.html#a95316804d3e72c1bb626a3fcec9a28fc">KGE_DELETE</a>(pDev, Device); </div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="_kge_memory_8h_source.html#l00029">29</a> of file <a class="el" href="_kge_memory_8h_source.html">KgeMemory.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_array_8h_source.html#l00109">kge::core::Array&lt; T &gt;::Clear()</a>, <a class="el" href="_array_priority_8h_source.html#l00266">kge::core::ArrayPri&lt; T, type &gt;::Clear()</a>, <a class="el" href="_resource_manager_8h_source.html#l00261">kge::ResourceManager&lt; gfx::Shader &gt;::Load()</a>, <a class="el" href="_array_priority_8h_source.html#l00150">kge::core::ArrayPri&lt; T, type &gt;::PushBackOne()</a>, <a class="el" href="_array_8h_source.html#l00090">kge::core::Array&lt; T &gt;::remove()</a>, <a class="el" href="_array_8h_source.html#l00053">kge::core::Array&lt; T &gt;::~Array()</a>, <a class="el" href="_array_priority_8h_source.html#l00107">kge::core::ArrayPri&lt; T, type &gt;::~ArrayPri()</a>, and <a class="el" href="gfx_2_material_8h_source.html#l00034">kge::gfx::Material::~Material()</a>.</p>
 
 </div>
 </div>
@@ -169,10 +181,48 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">ptr</td><td>)</td>
-          <td>&#160;&#160;&#160;if (ptr) { kge::core::KgeMemory::DeallocateBytes(ptr); ptr = <a class="el" href="structs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td>
+          <td>&#160;&#160;&#160;if (ptr) { kge::core::KgeMemory::DeallocateBytes(ptr); ptr = <a class="el" href="_vector_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_kge_memory_8h_source.html#l00034">34</a> of file <a class="el" href="_kge_memory_8h_source.html">KgeMemory.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_array2_d_8h_source.html#l00082">kge::core::Array2D&lt; T &gt;::Recreate()</a>, <a class="el" href="_array2_d_8h_source.html#l00062">kge::core::Array2D&lt; T &gt;::SetArray()</a>, <a class="el" href="_animation_8h_source.html#l00032">kge::gfx::AnimationData::~AnimationData()</a>, and <a class="el" href="_array2_d_8h_source.html#l00038">kge::core::Array2D&lt; T &gt;::~Array2D()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a30868952a3922f2fd1e79241366891a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KGE_DELETE_CLASS_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ptr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">count&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;if (ptr) { 	for (int i = 0; i &lt; count; i++) ptr[i].~T(); kge::core::KgeMemory::DeallocateBytes((void*)((unsigned int)ptr - 4)); ptr = <a class="el" href="_vector_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_kge_memory_8h_source.html#l00035">35</a> of file <a class="el" href="_kge_memory_8h_source.html">KgeMemory.h</a>.</p>
 
 </div>
 </div>
@@ -200,6 +250,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_kge_memory_8h_source.html#l00030">30</a> of file <a class="el" href="_kge_memory_8h_source.html">KgeMemory.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_kge_unknown_8h_source.html#l00054">kge::KgeUnknown::DecRef()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="afc6d8b76e78df98701ebcb87228dbb25"></a>
@@ -215,10 +269,13 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Use KGE_NEW instead of new to track memory leaks and use internal KGE allocator that is faster</p>
-<p>example </p>
+<p>Use KGE_NEW instead of new to track memory leaks and use internal KGE allocator that is faster example </p>
 <div class="fragment"><div class="line"><a class="code" href="classkge_1_1_device.html" title="This is the main class that user must create and Device will create other parts of engine...">kge::Device</a>* pDev = <a class="code" href="_kge_memory_8h.html#afc6d8b76e78df98701ebcb87228dbb25">KGE_NEW</a>(<a class="code" href="classkge_1_1_device.html" title="This is the main class that user must create and Device will create other parts of engine...">kge::Device</a>)(<span class="comment">/*Constructor values*/</span>); </div>
 </div><!-- fragment --> 
+<p>Definition at line <a class="el" href="_kge_memory_8h_source.html#l00024">24</a> of file <a class="el" href="_kge_memory_8h_source.html">KgeMemory.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_array_8h_source.html#l00039">kge::core::Array&lt; T &gt;::Array()</a>, <a class="el" href="_array_priority_8h_source.html#l00093">kge::core::ArrayPri&lt; T, type &gt;::ArrayPri()</a>, <a class="el" href="gfx_2_material_8h_source.html#l00026">kge::gfx::Material::Material()</a>, <a class="el" href="_array_8h_source.html#l00063">kge::core::Array&lt; T &gt;::PushBack()</a>, <a class="el" href="_array_priority_8h_source.html#l00117">kge::core::ArrayPri&lt; T, type &gt;::PushBack()</a>, and <a class="el" href="_array_priority_8h_source.html#l00150">kge::core::ArrayPri&lt; T, type &gt;::PushBackOne()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a720eb5c358e28506c7da7f0821065b0b"></a>
@@ -240,10 +297,76 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(T*)kge::core::KgeMemory::AllocateBytes(sizeof(T) * count, __FILE__, __LINE__, __FUNCTION__)</td>
+          <td></td><td>&#160;&#160;&#160;(T*) kge::core::KgeMemory::AllocateBytes(sizeof(T) * count, __FILE__, __LINE__, __FUNCTION__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_kge_memory_8h_source.html#l00032">32</a> of file <a class="el" href="_kge_memory_8h_source.html">KgeMemory.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_array2_d_8h_source.html#l00022">kge::core::Array2D&lt; T &gt;::Array2D()</a>, and <a class="el" href="_array2_d_8h_source.html#l00082">kge::core::Array2D&lt; T &gt;::Recreate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae251adc2df0f0b7a9b6cd5609b515217"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KGE_NEW_CLASS_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">count&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(new (kge::core::KgeMemory::AllocateBytes(sizeof(T) * count + 4, __FILE__, __LINE__, __FUNCTION__)) T[count])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_kge_memory_8h_source.html#l00033">33</a> of file <a class="el" href="_kge_memory_8h_source.html">KgeMemory.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53536c4b78c17e9e85bb417a959d2317"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KGE_REALLOC_ARRAY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ptr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">count&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(T*)kge::core::KgeMemory::ReallocateBytes(ptr, sizeof(T) * count, __FILE__, __LINE__, __FUNCTION__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_kge_memory_8h_source.html#l00037">37</a> of file <a class="el" href="_kge_memory_8h_source.html">KgeMemory.h</a>.</p>
 
 </div>
 </div>
@@ -252,8 +375,8 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><a class="el" href="dir_bafa501d493553e442f19f5f8dd7b29c.html">include</a></li><li class="navelem"><a class="el" href="_kge_memory_8h.html">KgeMemory.h</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="navelem"><a class="el" href="dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="dir_deea50d16e0677fbfacb413bf983068c.html">mycodes</a></li><li class="navelem"><a class="el" href="dir_8af5a13fc9984a0fa39713d3d8d79f6f.html">git</a></li><li class="navelem"><a class="el" href="dir_f117ff2519cf9fdb3c53910fd4f46e74.html">kge</a></li><li class="navelem"><a class="el" href="dir_be4880de99480d6ac3e802891aa8202a.html">Include</a></li><li class="navelem"><a class="el" href="dir_c04a4334a17b35c62a2c9f5953779d65.html">core</a></li><li class="navelem"><a class="el" href="_kge_memory_8h.html">KgeMemory.h</a></li>
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:54 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

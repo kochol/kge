@@ -1,12 +1,10 @@
 var _logger_8h =
 [
-    [ "LogStruct", "structkge_1_1io_1_1_log_struct.html", "structkge_1_1io_1_1_log_struct" ],
     [ "Logger", "classkge_1_1io_1_1_logger.html", "classkge_1_1io_1_1_logger" ],
-    [ "LogType", "_logger_8h.html#a053e8d40b91fbe5d53ea128b3eae55ce", [
-      [ "ELT_Info", "_logger_8h.html#a053e8d40b91fbe5d53ea128b3eae55cea0e4d4a40fefaf38ac3560d92b5ab24d8", null ],
-      [ "ELT_Warning", "_logger_8h.html#a053e8d40b91fbe5d53ea128b3eae55cea9c1feca487ef6fd9e8529b4a619d20af", null ],
-      [ "ELT_Error", "_logger_8h.html#a053e8d40b91fbe5d53ea128b3eae55ceafeeddff7fcd9d2e5f965abdb95bd7d55", null ],
-      [ "ELT_Debug", "_logger_8h.html#a053e8d40b91fbe5d53ea128b3eae55cead6cd3c6ff06a04090d8e6696de110c2d", null ],
-      [ "ELT_Success", "_logger_8h.html#a053e8d40b91fbe5d53ea128b3eae55ceac3f4fe1a15f9bf1f6a10c3036d46b7d1", null ]
+    [ "KGE_CONSOLE", "_logger_8h.html#a0fd9e47c921c9c4201a4c2339b1366f9", null ],
+    [ "LogMode", "_logger_8h.html#ad8adb4fe04e28ecf5aaa342a7ed90657", [
+      [ "ELM_Information", "_logger_8h.html#ad8adb4fe04e28ecf5aaa342a7ed90657aa80e319965eefa3790c5ee422adeac7e", null ],
+      [ "ELM_Error", "_logger_8h.html#ad8adb4fe04e28ecf5aaa342a7ed90657a371ce1f4f7374b109a3e910e11b086ad", null ],
+      [ "ELM_Warning", "_logger_8h.html#ad8adb4fe04e28ecf5aaa342a7ed90657a8a6e2042f516b923e401b5f8aeb0a182", null ]
     ] ]
 ];

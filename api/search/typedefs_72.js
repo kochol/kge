@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['reference',['reference',['../classkge_1_1core_1_1_fixed_array.html#a081fdf44ea7ee04c1d10ec56678071de',1,'kge::core::FixedArray::reference()'],['../classkge_1_1core_1_1_dynamic_array.html#a427344bdedda77d089f917084d3c04c3',1,'kge::core::DynamicArray::reference()']]],
+  ['recti',['RectI',['../namespacekge_1_1core.html#a6c6fd57b8819677d9ddd62e623f6a541',1,'kge::core']]],
+  ['rectul',['RectUL',['../namespacekge_1_1core.html#a3ad33da780f220f35f05236aada5192e',1,'kge::core']]],
   ['rendererplugin',['RendererPlugin',['../namespacekge.html#ace7962149125c35ccdbdb17dedb02ec1',1,'kge']]]
 ];

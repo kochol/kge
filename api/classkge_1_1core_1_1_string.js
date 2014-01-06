@@ -1,6 +1,30 @@
 var classkge_1_1core_1_1_string =
 [
-    [ "Convert", "classkge_1_1core_1_1_string.html#a83de40a9784bb3ae8d0179815f3f8594", null ],
-    [ "Convert", "classkge_1_1core_1_1_string.html#aae88a8ed14406f0b70eacb1c6dae1136", null ],
-    [ "StringCopy", "classkge_1_1core_1_1_string.html#a16c919dbdb6b8fd552ea2a87c5677a13", null ]
+    [ "String", "classkge_1_1core_1_1_string.html#a8e6e1187b5000445cc6aef4f30fc3d30", null ],
+    [ "String", "classkge_1_1core_1_1_string.html#aa4d5fd734210b6a92b9bb57ab4f0e88f", null ],
+    [ "~String", "classkge_1_1core_1_1_string.html#a5b6a1d0716d219f57baa7e441d2b1336", null ],
+    [ "Append", "classkge_1_1core_1_1_string.html#ad91fd9010f9453c8f80ee13fdfbb42ea", null ],
+    [ "DelCharPointer", "classkge_1_1core_1_1_string.html#adc66e7bb4b40ceca89e0564d0895b297", null ],
+    [ "Find", "classkge_1_1core_1_1_string.html#a3875e626d474f5c357433f84d2497b07", null ],
+    [ "Find", "classkge_1_1core_1_1_string.html#a1eb756f241c086e6980ef4a47477d70c", null ],
+    [ "FindLast", "classkge_1_1core_1_1_string.html#acf373618dfbf907255e7d54399664884", null ],
+    [ "GetLenght", "classkge_1_1core_1_1_string.html#acf5ed0b7f451bf705311cecabf2e00a9", null ],
+    [ "Insert", "classkge_1_1core_1_1_string.html#ab6ac1332c245d716fa652bba6db56dde", null ],
+    [ "operator+=", "classkge_1_1core_1_1_string.html#ab4eb9b210ede089c97f8bdfe165f5acf", null ],
+    [ "operator+=", "classkge_1_1core_1_1_string.html#a4665614dc3d65a7a9938a5a708c6e246", null ],
+    [ "operator+=", "classkge_1_1core_1_1_string.html#a333978b45ebe2724a8d3508e92b26cfb", null ],
+    [ "operator+=", "classkge_1_1core_1_1_string.html#a03c72ed35b8123128ceb80b19f9d9b18", null ],
+    [ "operator=", "classkge_1_1core_1_1_string.html#ad22817e78e6c3b917f1cab37a643a77c", null ],
+    [ "operator=", "classkge_1_1core_1_1_string.html#a5f9606e6bfedcbcf4e9ffd3d2045383e", null ],
+    [ "operator==", "classkge_1_1core_1_1_string.html#a0a49f50a3193d97f4f6ecfff47373d98", null ],
+    [ "operator==", "classkge_1_1core_1_1_string.html#ad88a5fef946d94af8223c9f9d80f0ddd", null ],
+    [ "operator[]", "classkge_1_1core_1_1_string.html#affd6d501a474c28be4b554550e3a7cd6", null ],
+    [ "Select", "classkge_1_1core_1_1_string.html#a92482020bc58a9e3d54ad2a806c54083", null ],
+    [ "Split", "classkge_1_1core_1_1_string.html#a3e7aeb4b11df211abc796a846f1b8ab8", null ],
+    [ "StringCopy", "classkge_1_1core_1_1_string.html#a16c919dbdb6b8fd552ea2a87c5677a13", null ],
+    [ "ToCharPointer", "classkge_1_1core_1_1_string.html#a17239ec14fb21d1fe335442c95dc34a4", null ],
+    [ "ToLower", "classkge_1_1core_1_1_string.html#a074ef11876815009fa2ac053edf23fe3", null ],
+    [ "m_nullTerminated", "classkge_1_1core_1_1_string.html#a47caffcd1dfe4a927554b4620cc44fb7", null ],
+    [ "m_pChar", "classkge_1_1core_1_1_string.html#ace69693fe042bc1194690a06f3009f93", null ],
+    [ "m_vArray", "classkge_1_1core_1_1_string.html#a214e20ae9fffdc4571d2cdd07f64b743", null ]
 ];

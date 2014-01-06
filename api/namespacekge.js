@@ -1,18 +1,28 @@
 var namespacekge =
 [
+    [ "av", "namespacekge_1_1av.html", "namespacekge_1_1av" ],
     [ "core", "namespacekge_1_1core.html", "namespacekge_1_1core" ],
+    [ "efx", "namespacekge_1_1efx.html", "namespacekge_1_1efx" ],
     [ "en", "namespacekge_1_1en.html", "namespacekge_1_1en" ],
     [ "gfx", "namespacekge_1_1gfx.html", "namespacekge_1_1gfx" ],
+    [ "gui", "namespacekge_1_1gui.html", "namespacekge_1_1gui" ],
     [ "io", "namespacekge_1_1io.html", "namespacekge_1_1io" ],
     [ "math", "namespacekge_1_1math.html", "namespacekge_1_1math" ],
-    [ "os", "namespacekge_1_1os.html", null ],
-    [ "web", "namespacekge_1_1web.html", "namespacekge_1_1web" ],
+    [ "net", "namespacekge_1_1net.html", "namespacekge_1_1net" ],
+    [ "ph", "namespacekge_1_1ph.html", "namespacekge_1_1ph" ],
+    [ "plugin", "namespacekge_1_1plugin.html", "namespacekge_1_1plugin" ],
+    [ "ps", "namespacekge_1_1ps.html", null ],
+    [ "sfx", "namespacekge_1_1sfx.html", "namespacekge_1_1sfx" ],
+    [ "sn", "namespacekge_1_1sn.html", "namespacekge_1_1sn" ],
     [ "Device", "classkge_1_1_device.html", "classkge_1_1_device" ],
+    [ "libRocketKGERenderer", "classkge_1_1lib_rocket_k_g_e_renderer.html", "classkge_1_1lib_rocket_k_g_e_renderer" ],
+    [ "libRocketKGESystem", "classkge_1_1lib_rocket_k_g_e_system.html", "classkge_1_1lib_rocket_k_g_e_system" ],
+    [ "InitParameters", "structkge_1_1_init_parameters.html", "structkge_1_1_init_parameters" ],
     [ "KgeUnknown", "classkge_1_1_kge_unknown.html", "classkge_1_1_kge_unknown" ],
     [ "Loader", "classkge_1_1_loader.html", "classkge_1_1_loader" ],
     [ "Plugin", "classkge_1_1_plugin.html", "classkge_1_1_plugin" ],
     [ "PluginManager", "classkge_1_1_plugin_manager.html", "classkge_1_1_plugin_manager" ],
     [ "Resource", "classkge_1_1_resource.html", "classkge_1_1_resource" ],
     [ "ResourceManager", "classkge_1_1_resource_manager.html", "classkge_1_1_resource_manager" ],
-    [ "InitParameters", "structkge_1_1_init_parameters.html", "structkge_1_1_init_parameters" ]
+    [ "Singleton", "classkge_1_1_singleton.html", "classkge_1_1_singleton" ]
 ];

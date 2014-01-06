@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Kochol Game Engine: C:/Users/Novin Pendar/Documents/kge/engine/include/Matrix.h Source File</title>
+<title>Kochol Game Engine: E:/mycodes/git/kge/Include/math/Matrix.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -90,7 +92,7 @@ $(document).ready(function(){initNavTree('_matrix_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,131 +106,174 @@ $(document).ready(function(){initNavTree('_matrix_8h_source.html','');});
 <div class="title">Matrix.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_matrix_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//###############################################################</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//#     title:  4x4 Matrix</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//#     file:   matrix.h</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//#     date:   june-07-2010</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//#     author: Pooya Shahinfar</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//###############################################################</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef KGE_MATRIX_H</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KGE_MATRIX_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kgedef_8h.html">kgedef.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="math_8h.html">math.h</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vector_8h.html">Vector.h</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>kge</div>
+<a href="_matrix_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// File name: Matrix.h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Des: In class Matrix haye 4x4 hast in matrix ha dar graphic 3D karhaye ziadi ro</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//              anjam midan.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Date: 26/5/1385</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// Programmer: Ali Akbar Mohamadi(Kochol)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef MATRIX_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MATRIX_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../kgedef.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../Include/math/Vector.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>kge</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>gfx</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">namespace </span>math</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html">   19</a></span>&#160;                <span class="keyword">class </span><a class="code" href="gnuc__def_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Az ghabl tarif mikonim.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">struct </span>Vertex3;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">struct </span>Vertex2;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;} <span class="comment">// gfx</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                        <span class="keyword">union</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                        {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">                                #if KGE_USE_SSE2</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span>                                <span class="keyword">struct</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                        __m128 m1;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                        __m128 m2;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                        __m128 m3;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                        __m128 m4;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                };</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">                                #endif</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a22227fe5e6870df493e51b5333f8829e">   37</a></span>&#160;                                <span class="keywordtype">float</span> elements[16];</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                <span class="keyword">struct</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                {</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a18bc41480cb03b3660af90ac7a9489db">   41</a></span>&#160;                                        <span class="keywordtype">float</span> m11, m12, m13, <a class="code" href="classkge_1_1math_1_1_matrix.html#a18bc41480cb03b3660af90ac7a9489db">m14</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#ac3a418f5dc2d52e741a0a50a2c599036">   42</a></span>&#160;                                        <span class="keywordtype">float</span> m21, m22, m23, <a class="code" href="classkge_1_1math_1_1_matrix.html#ac3a418f5dc2d52e741a0a50a2c599036">m24</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a5a55204fe47f7d30537f5b54066492a6">   43</a></span>&#160;                                        <span class="keywordtype">float</span> m31, m32, m33, <a class="code" href="classkge_1_1math_1_1_matrix.html#a5a55204fe47f7d30537f5b54066492a6">m34</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#afea85177e4a7c10c3ffd13b2637885b2">   44</a></span>&#160;                                        <span class="keywordtype">float</span> m41, m42, m43, <a class="code" href="classkge_1_1math_1_1_matrix.html#afea85177e4a7c10c3ffd13b2637885b2">m44</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                };</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                <span class="keyword">struct</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                {</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#aaf1a7877191510765024dcf7ebc6df29">   49</a></span>&#160;                                        <span class="keywordtype">float</span> row1[4];</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a23552f30cdc697e79c563d11ef6cc70e">   50</a></span>&#160;                                        <span class="keywordtype">float</span> row2[4];</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a6c32a35136200c5458b8efcf6887a2b7">   51</a></span>&#160;                                        <span class="keywordtype">float</span> row3[4];</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a90c2cbdad411aa985cdb89e6f503f1bb">   52</a></span>&#160;                                        <span class="keywordtype">float</span> row4[4];</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                };</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        }; <span class="comment">// union</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>math</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// Pre defines.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span>Sphere;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span>AABB;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="kgedef_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">union</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//              float m[4][4];</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#af36dcacd97872d9d293eb5972458fec4">   36</a></span>&#160;                <span class="keywordtype">float</span> m_fMat[16];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keyword">struct</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a5c511c5d6014254a52a57a11368a7478">   39</a></span>&#160;                        <span class="keywordtype">float</span> _11,_12,_13,<a class="code" href="classkge_1_1math_1_1_matrix.html#a5c511c5d6014254a52a57a11368a7478">_14</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a9e02383d9f951fed3ed445511913dced">   40</a></span>&#160;                        <span class="keywordtype">float</span> _21,_22,_23,<a class="code" href="classkge_1_1math_1_1_matrix.html#a9e02383d9f951fed3ed445511913dced">_24</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#afb257bc00ff9235039a47cce9a23f99c">   41</a></span>&#160;                        <span class="keywordtype">float</span> _31,_32,_33,<a class="code" href="classkge_1_1math_1_1_matrix.html#afb257bc00ff9235039a47cce9a23f99c">_34</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a678cbde3594862e72b64479e5f78981d">   42</a></span>&#160;                        <span class="keywordtype">float</span> _41,_42,_43,<a class="code" href="classkge_1_1math_1_1_matrix.html#a678cbde3594862e72b64479e5f78981d">_44</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                };</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a428c09082d9592070eb4168c14a0755e">   47</a></span>&#160;        <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a>() :</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                _11(1.0f), _12(0.0f), _13(0.0f), _14(0.0f),</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                _21(0.0f), _22(1.0f), _23(0.0f), _24(0.0f),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                _31(0.0f), _32(0.0f), _33(1.0f), _34(0.0f),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                _41(0.0f), _42(0.0f), _43(0.0f), _44(1.0f)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                {}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a>(<span class="keywordtype">float</span> *f);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        Matrix();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        Matrix(<span class="keyword">const</span> <span class="keywordtype">float</span>*);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        Matrix( <span class="keywordtype">float</span> _11, <span class="keywordtype">float</span> _12, <span class="keywordtype">float</span> _13, <span class="keywordtype">float</span> _14,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                        <span class="keywordtype">float</span> _21, <span class="keywordtype">float</span> _22, <span class="keywordtype">float</span> _23, <span class="keywordtype">float</span> _24,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                        <span class="keywordtype">float</span> _31, <span class="keywordtype">float</span> _32, <span class="keywordtype">float</span> _33, <span class="keywordtype">float</span> _34,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                        <span class="keywordtype">float</span> _41, <span class="keywordtype">float</span> _42, <span class="keywordtype">float</span> _43, <span class="keywordtype">float</span> _44);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        Matrix (<span class="keyword">const</span> Matrix&amp;);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a> (<span class="keywordtype">float</span> f11, <span class="keywordtype">float</span> f12, <span class="keywordtype">float</span> f13, <span class="keywordtype">float</span> f14,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        <span class="keywordtype">float</span> f21, <span class="keywordtype">float</span> f22, <span class="keywordtype">float</span> f23, <span class="keywordtype">float</span> f24, </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        <span class="keywordtype">float</span> f31, <span class="keywordtype">float</span> <a class="code" href="namespacekge.html#a356fe180b22c1504a5cb5bd6555d1eaa" title="32bit floating point">f32</a>, <span class="keywordtype">float</span> f33, <span class="keywordtype">float</span> f34,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        <span class="keywordtype">float</span> f41, <span class="keywordtype">float</span> f42, <span class="keywordtype">float</span> f43, <span class="keywordtype">float</span> f44);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a0167abeecf5a4ef75c0b20a510e65b67">   64</a></span>&#160;        <span class="keywordtype">void</span> Identity()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                _12 = _13 = _14 = _21 = _23 = _24 = _31 = _32 = _34 = _41 = _42 = _43 = 0.0f;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                _11 = _22 = _33 = _44 = 1.0f;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        ~Matrix();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        <span class="keywordtype">float</span> Determinant(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                        <span class="keywordtype">void</span> LoadIdentity(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        <span class="keywordtype">void</span> LoadZero(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                        <span class="keywordtype">void</span> Inverse(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        <span class="keywordtype">void</span> Transpose(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        <span class="keywordtype">void</span> Set(       <span class="keywordtype">float</span> _11, <span class="keywordtype">float</span> _12, <span class="keywordtype">float</span> _13, <span class="keywordtype">float</span> _14,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                <span class="keywordtype">float</span> _21, <span class="keywordtype">float</span> _22, <span class="keywordtype">float</span> _23, <span class="keywordtype">float</span> _24,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                <span class="keywordtype">float</span> _31, <span class="keywordtype">float</span> _32, <span class="keywordtype">float</span> _33, <span class="keywordtype">float</span> _34,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                <span class="keywordtype">float</span> _41, <span class="keywordtype">float</span> _42, <span class="keywordtype">float</span> _43, <span class="keywordtype">float</span> _44 );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        <span class="keywordtype">void</span> Set( <span class="keyword">const</span> <span class="keywordtype">float</span>*);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">                        #if KGE_USE_SSE2</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor"></span>                                <span class="keywordtype">void</span> Set(<span class="keyword">const</span> __m128&amp; ,<span class="keyword">const</span> __m128&amp;, <span class="keyword">const</span> __m128&amp;,<span class="keyword">const</span> __m128&amp; );</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">                        #endif</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        <span class="comment">// operator ()</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        <span class="keywordtype">float</span> operator()(<span class="keywordtype">int</span> row,<span class="keywordtype">int</span> column) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        Matrix operator*(<span class="keyword">const</span> Matrix&amp;) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        Matrix&amp; operator*= (<span class="keyword">const</span> Matrix&amp;);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                        Matrix operator+(<span class="keyword">const</span> Matrix&amp;) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                        Matrix&amp; operator+=(<span class="keyword">const</span> Matrix&amp;);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                        Matrix operator-(<span class="keyword">const</span> Matrix&amp;) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                        Matrix&amp; operator-=(<span class="keyword">const</span> Matrix&amp;);</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a431048d7e39fc8d1b30b6f81af84c2d8">   70</a></span>&#160;        <span class="keywordtype">float</span> operator[] (<a class="code" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41" title="A 32-bit unsigned int.">u32</a> i)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">return</span> m_fMat[i];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">bool</span> Inverse();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">bool</span> GetInverse(<a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a>&amp; m);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a> operator *(<span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a> &amp;m) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a>&amp; operator *=(<span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a> &amp;m);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a> operator * (<span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a> &amp;v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a162fa7d5279a0a87bcd62b7e9fb8ff62">   90</a></span>&#160;        <span class="keywordtype">float</span>&amp; <a class="code" href="classkge_1_1math_1_1_matrix.html#a162fa7d5279a0a87bcd62b7e9fb8ff62">operator()</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> col) { <span class="keywordflow">return</span> m_fMat[row * 4 + col]; }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> Translate(<span class="keywordtype">float</span> dx, <span class="keywordtype">float</span> dy, <span class="keywordtype">float</span> dz);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">void</span> RotY(<span class="keywordtype">float</span> angle);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">void</span> Set(       <span class="keywordtype">float</span> m11, <span class="keywordtype">float</span> m12, <span class="keywordtype">float</span> m13, <span class="keywordtype">float</span> m14,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                <span class="keywordtype">float</span> m21, <span class="keywordtype">float</span> m22, <span class="keywordtype">float</span> m23, <span class="keywordtype">float</span> m24,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                <span class="keywordtype">float</span> m31, <span class="keywordtype">float</span> m32, <span class="keywordtype">float</span> m33, <span class="keywordtype">float</span> m34,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                <span class="keywordtype">float</span> m41, <span class="keywordtype">float</span> m42, <span class="keywordtype">float</span> m43, <span class="keywordtype">float</span> m44 );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> SetRotation(<span class="keyword">const</span> <a class="code" href="structkge_1_1gfx_1_1_vertex3.html" title="3D Vertex">gfx::Vertex3</a>* v3);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">void</span> SetRotation(<span class="keyword">const</span> <span class="keywordtype">float</span>* f);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">void</span> SetTranslation(<span class="keyword">const</span> <a class="code" href="structkge_1_1gfx_1_1_vertex3.html" title="3D Vertex">gfx::Vertex3</a>* v3);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a> GetTranslation();</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a670aac0467fca0d2d5aae898e8bf62f3">  117</a></span>&#160;                        <span class="keyword">operator</span> <span class="keyword">const</span> <span class="keywordtype">float</span>*() <span class="keyword">const</span> { <span class="keywordflow">return</span> elements; }</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a761308c8d29c19dfe777292b437e28fa">  118</a></span>&#160;                        <span class="keyword">operator</span> <span class="keywordtype">float</span>*() { <span class="keywordflow">return</span> elements; }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                        <span class="keywordtype">void</span> SetOrthoLH(<span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> znear, <span class="keywordtype">float</span> zfar);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                        <span class="keywordtype">void</span> SetOrthoOffscreenLH(<span class="keywordtype">float</span> minx, <span class="keywordtype">float</span> maxx, <span class="keywordtype">float</span> miny, <span class="keywordtype">float</span> maxy, <span class="keywordtype">float</span> znear, <span class="keywordtype">float</span> zfar);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                        <span class="keywordtype">void</span> SetPerspectiveLH(<span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> Fov, <span class="keywordtype">float</span> Near, <span class="keywordtype">float</span> Far);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                        <span class="keywordtype">void</span> SetViewLookatLH(<a class="code" href="classkge_1_1math_1_1_vector.html" title="The 4D vector class.">math::Vector</a> &amp;vPos, <a class="code" href="classkge_1_1math_1_1_vector.html" title="The 4D vector class.">math::Vector</a> &amp;vPoint, </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                <a class="code" href="classkge_1_1math_1_1_vector.html" title="The 4D vector class.">math::Vector</a> &amp;vUp);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                } ; <span class="comment">// Matrix</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        } <span class="comment">// math</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">void</span> SetTranslation(<span class="keyword">const</span> <span class="keywordtype">float</span>* f);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">void</span> SetScale(<span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_vector.html">math::Vector</a>&amp; v);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">void</span> TransformSphere(<span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_sphere.html">Sphere</a>&amp; sphere, <a class="code" href="classkge_1_1math_1_1_sphere.html">Sphere</a>&amp; result) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> TransformBox(<span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_a_a_b_b.html">AABB</a>&amp; box, <a class="code" href="classkge_1_1math_1_1_a_a_b_b.html">AABB</a>&amp; result) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordtype">void</span> TransformBox2(<span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_a_a_b_b.html">AABB</a>&amp; box, <a class="code" href="classkge_1_1math_1_1_a_a_b_b.html">AABB</a>&amp; result) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">void</span> InverseTranslateVec(<a class="code" href="structkge_1_1gfx_1_1_vertex3.html" title="3D Vertex">gfx::Vertex3</a>&amp; v3) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordtype">void</span> InverseRotateVec(<a class="code" href="structkge_1_1gfx_1_1_vertex3.html" title="3D Vertex">gfx::Vertex3</a>&amp; v3) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;} <span class="comment">// kge</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif // KGE_MATRIX_H</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">void</span> InverseTranslateVec(<a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a>&amp; v3) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordtype">void</span> InverseRotateVec(<a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a>&amp; v3) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordtype">void</span> TranslateVec(<a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a>&amp; v3) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">void</span> RotateVec(<a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a>&amp; v3) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="code" href="classkge_1_1math_1_1_matrix.html#a1ee87d8409ded1eba0eef5a5318538ab">  150</a></span>&#160;        <span class="keywordtype">void</span> TransFormVec(<a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a>&amp; v3)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a> tmp = v3;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                v3.<a class="code" href="classkge_1_1math_1_1_vector.html#a40ec556de2c9f1eb947680172b74599c">x</a> = tmp.<a class="code" href="classkge_1_1math_1_1_vector.html#a40ec556de2c9f1eb947680172b74599c">x</a>*m_fMat[0] + tmp.<a class="code" href="classkge_1_1math_1_1_vector.html#ad8b1bec0c0f7701b208bc2a5b814e7fb">y</a>*m_fMat[4] + tmp.<a class="code" href="classkge_1_1math_1_1_vector.html#a1f8d3b697401789a341b30af97a05618">z</a>*m_fMat[8] + m_fMat[12];</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                v3.<a class="code" href="classkge_1_1math_1_1_vector.html#ad8b1bec0c0f7701b208bc2a5b814e7fb">y</a> = tmp.<a class="code" href="classkge_1_1math_1_1_vector.html#a40ec556de2c9f1eb947680172b74599c">x</a>*m_fMat[1] + tmp.<a class="code" href="classkge_1_1math_1_1_vector.html#ad8b1bec0c0f7701b208bc2a5b814e7fb">y</a>*m_fMat[5] + tmp.<a class="code" href="classkge_1_1math_1_1_vector.html#a1f8d3b697401789a341b30af97a05618">z</a>*m_fMat[9] + m_fMat[13];</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                v3.<a class="code" href="classkge_1_1math_1_1_vector.html#a1f8d3b697401789a341b30af97a05618">z</a> = tmp.<a class="code" href="classkge_1_1math_1_1_vector.html#a40ec556de2c9f1eb947680172b74599c">x</a>*m_fMat[2] + tmp.<a class="code" href="classkge_1_1math_1_1_vector.html#ad8b1bec0c0f7701b208bc2a5b814e7fb">y</a>*m_fMat[6] + tmp.<a class="code" href="classkge_1_1math_1_1_vector.html#a1f8d3b697401789a341b30af97a05618">z</a>*m_fMat[10] + m_fMat[14];</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">void</span> TransFormVec2(<a class="code" href="classkge_1_1math_1_1_vector.html">Vector</a>&amp; v3) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">void</span> TransFormVec2(<a class="code" href="structkge_1_1gfx_1_1_vertex3.html" title="3D Vertex">gfx::Vertex3</a>&amp; v3) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">void</span> TransFormVec2(<a class="code" href="structkge_1_1gfx_1_1_vertex3.html" title="3D Vertex">gfx::Vertex3</a>* v3Out, <a class="code" href="structkge_1_1gfx_1_1_vertex3.html" title="3D Vertex">gfx::Vertex3</a>* vIn, <span class="keywordtype">int</span> size) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">//      void TransFormCoordVec(Vector&amp; v3) const;</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">void</span> Transform2DVec(<a class="code" href="structkge_1_1gfx_1_1_vertex2.html">kge::gfx::Vertex2</a>&amp; v2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">void</span> operator =(<span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_matrix.html">Matrix</a>&amp; rMat);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">void</span> SetOrthoLH(<span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> znear, <span class="keywordtype">float</span> zfar);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordtype">void</span> SetOrthoOffscreenLH(<span class="keywordtype">float</span> minx, <span class="keywordtype">float</span> maxx, <span class="keywordtype">float</span> miny, <span class="keywordtype">float</span> maxy, <span class="keywordtype">float</span> znear, <span class="keywordtype">float</span> zfar);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordtype">void</span> SetPerspectiveLH(<span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height, <span class="keywordtype">float</span> Fov, <span class="keywordtype">float</span> Near, <span class="keywordtype">float</span> Far);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordtype">void</span> SetViewLookatLH(<a class="code" href="classkge_1_1math_1_1_vector.html">math::Vector</a> &amp;vPos, <a class="code" href="classkge_1_1math_1_1_vector.html">math::Vector</a> &amp;vPoint, </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <a class="code" href="classkge_1_1math_1_1_vector.html">math::Vector</a> &amp;vUp);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordtype">void</span> Get4x3Matrix(<span class="keywordtype">float</span>* pOut);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}; <span class="comment">// Matrix</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacekge_1_1math.html#a3b0b713e8623a8a8f22ef84f14a0dc2d" title="Transposes this matrix.">Transpose</a>(Matrix&amp; mat);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;} <span class="comment">// math</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;} <span class="comment">// kge</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif // MATRIX_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><a class="el" href="dir_bafa501d493553e442f19f5f8dd7b29c.html">include</a></li><li class="navelem"><a class="el" href="_matrix_8h.html">Matrix.h</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="navelem"><a class="el" href="dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="dir_deea50d16e0677fbfacb413bf983068c.html">mycodes</a></li><li class="navelem"><a class="el" href="dir_8af5a13fc9984a0fa39713d3d8d79f6f.html">git</a></li><li class="navelem"><a class="el" href="dir_f117ff2519cf9fdb3c53910fd4f46e74.html">kge</a></li><li class="navelem"><a class="el" href="dir_be4880de99480d6ac3e802891aa8202a.html">Include</a></li><li class="navelem"><a class="el" href="dir_437d4441b7f6d3197e9cfb96c3f69beb.html">math</a></li><li class="navelem"><a class="el" href="_matrix_8h.html">Matrix.h</a></li>
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:54 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Kochol Game Engine: C:/Users/Novin Pendar/Documents/kge/engine/include/String.h Source File</title>
+<title>Kochol Game Engine: E:/mycodes/git/kge/Include/core/String.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -90,7 +92,7 @@ $(document).ready(function(){initNavTree('_string_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,47 +106,98 @@ $(document).ready(function(){initNavTree('_string_8h_source.html','');});
 <div class="title">String.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_string_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef KGE_STRING_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KGE_STRING_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kgedef_8h.html">kgedef.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>kge</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        {</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">   11</a></span>&#160;                <span class="keyword">typedef</span> std::string <a class="code" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">stringc</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="namespacekge_1_1core.html#afaebbab1f08f9d7cb9fb92a620ca91e0">   12</a></span>&#160;                <span class="keyword">typedef</span> std::wstring <a class="code" href="namespacekge_1_1core.html#afaebbab1f08f9d7cb9fb92a620ca91e0">stringw</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="classkge_1_1core_1_1_string.html">   15</a></span>&#160;                <span class="keyword">class </span><a class="code" href="gnuc__def_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1core_1_1_string.html" title="KGE string class.">String</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                        <span class="keyword">static</span> <span class="keywordtype">char</span>* StringCopy(<span class="keyword">const</span> <span class="keywordtype">char</span>* Src);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">        #if KGE_PLATFORM != KGE_PLATFORM_ANDROID</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                        <span class="keyword">static</span> <a class="code" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">stringc</a> Convert(<span class="keyword">const</span> <a class="code" href="namespacekge_1_1core.html#afaebbab1f08f9d7cb9fb92a620ca91e0">stringw</a>&amp; Src);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                        </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                        <span class="keyword">static</span> <a class="code" href="namespacekge_1_1core.html#afaebbab1f08f9d7cb9fb92a620ca91e0">stringw</a> Convert(<span class="keyword">const</span> <a class="code" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">stringc</a>&amp; Src);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">        #endif </span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor"></span>        </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                }; <span class="comment">// String</span></div>
+<a href="_string_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// File name: String.h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Des: This is a small string class.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Date: 9/5/1385</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Programmer: Ali Akbar Mohamadi(Kochol)</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef KGE_STRING_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KGE_STRING_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../KgeUnknown.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../kgedef.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>kge</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">   17</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classkge_1_1core_1_1_kge_array.html">KgeArray</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">typedef</span> std::string <a class="code" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">stringc</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="namespacekge_1_1core.html#afaebbab1f08f9d7cb9fb92a620ca91e0">   19</a></span>&#160;        <span class="keyword">typedef</span> std::wstring <a class="code" href="namespacekge_1_1core.html#afaebbab1f08f9d7cb9fb92a620ca91e0">stringw</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classkge_1_1core_1_1_string.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="kgedef_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1core_1_1_string.html">String</a>: <span class="keyword">public</span> <a class="code" href="classkge_1_1_kge_unknown.html" title="This class is for refrence counting and lock and unlocking object for multi thread purpose...">KgeUnknown</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classkge_1_1core_1_1_string.html">String</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classkge_1_1core_1_1_string.html">String</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        ~<a class="code" href="classkge_1_1core_1_1_string.html">String</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        } <span class="comment">// core</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;} <span class="comment">// kge</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // KGE_STRING_H</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> operator = (<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> operator = (<span class="keyword">const</span> <a class="code" href="classkge_1_1core_1_1_string.html">String</a>&amp; str);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> operator += (<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> operator += (<span class="keyword">const</span> <a class="code" href="classkge_1_1core_1_1_string.html">String</a>&amp; str);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> operator += (<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> operator += (<span class="keywordtype">float</span> f);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">bool</span> operator == (<a class="code" href="classkge_1_1core_1_1_string.html">String</a>&amp; str);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">char</span> operator [] (<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">int</span> Find(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> StartIndex = 0);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> Append(<span class="keywordtype">char</span> c);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">int</span> Find(<span class="keyword">const</span> <a class="code" href="classkge_1_1core_1_1_string.html">String</a>* str, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> StartIndex = 0);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">int</span> FindLast(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">bool</span> Select(<span class="keywordtype">int</span> StartIndex, <span class="keywordtype">int</span> EndIndex, <a class="code" href="classkge_1_1core_1_1_string.html">String</a>&amp; out);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classkge_1_1core_1_1_string.html">String</a>* Split(<span class="keywordtype">char</span> ch, <span class="keywordtype">int</span>&amp; StringCount);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">bool</span> Insert(<span class="keyword">const</span> <a class="code" href="classkge_1_1core_1_1_string.html">String</a>* str, <a class="code" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41" title="A 32-bit unsigned int.">u32</a> at);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// Convert to char pointer</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* ToCharPointer();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> DelCharPointer();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">inline</span> <a class="code" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41" title="A 32-bit unsigned int.">u32</a> GetLenght() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">char</span>* StringCopy(<span class="keyword">const</span> <span class="keywordtype">char</span>* Src);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">void</span> ToLower();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="classkge_1_1core_1_1_string.html#a214e20ae9fffdc4571d2cdd07f64b743">   98</a></span>&#160;        <a class="code" href="classkge_1_1core_1_1_kge_array.html">KgeArray</a>                *       <a class="code" href="classkge_1_1core_1_1_string.html#a214e20ae9fffdc4571d2cdd07f64b743">m_vArray</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="classkge_1_1core_1_1_string.html#a47caffcd1dfe4a927554b4620cc44fb7">   99</a></span>&#160;        <a class="code" href="classkge_1_1core_1_1_kge_array.html">KgeArray</a>                *       <a class="code" href="classkge_1_1core_1_1_string.html#a47caffcd1dfe4a927554b4620cc44fb7">m_nullTerminated</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="classkge_1_1core_1_1_string.html#ace69693fe042bc1194690a06f3009f93">  100</a></span>&#160;        <span class="keywordtype">char</span>                    *       <a class="code" href="classkge_1_1core_1_1_string.html#ace69693fe042bc1194690a06f3009f93">m_pChar</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}; <span class="comment">// String</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;} <span class="comment">// core</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;} <span class="comment">// kge</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif // STRING_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><a class="el" href="dir_bafa501d493553e442f19f5f8dd7b29c.html">include</a></li><li class="navelem"><a class="el" href="_string_8h.html">String.h</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="navelem"><a class="el" href="dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="dir_deea50d16e0677fbfacb413bf983068c.html">mycodes</a></li><li class="navelem"><a class="el" href="dir_8af5a13fc9984a0fa39713d3d8d79f6f.html">git</a></li><li class="navelem"><a class="el" href="dir_f117ff2519cf9fdb3c53910fd4f46e74.html">kge</a></li><li class="navelem"><a class="el" href="dir_be4880de99480d6ac3e802891aa8202a.html">Include</a></li><li class="navelem"><a class="el" href="dir_c04a4334a17b35c62a2c9f5953779d65.html">core</a></li><li class="navelem"><a class="el" href="_string_8h.html">String.h</a></li>
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:53 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

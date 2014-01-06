@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -67,7 +69,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('classkge_1_1io_1_1_file_system_manager
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,6 +107,7 @@ $(document).ready(function(){initNavTree('classkge_1_1io_1_1_file_system_manager
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classkge_1_1io_1_1_file_system_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">kge::io::FileSystemManager Class Reference</div>  </div>
@@ -121,15 +123,16 @@ $(document).ready(function(){initNavTree('classkge_1_1io_1_1_file_system_manager
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a044a02f57be23ae8435c779aa4f4dc90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a044a02f57be23ae8435c779aa4f4dc90">~FileSystemManager</a> ()</td></tr>
 <tr class="memdesc:a044a02f57be23ae8435c779aa4f4dc90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a044a02f57be23ae8435c779aa4f4dc90"></a><br/></td></tr>
-<tr class="memitem:a18ef52950cf3ee37e36d83cbccd3aa99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a18ef52950cf3ee37e36d83cbccd3aa99">AddSearchPath</a> (const <a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a> &amp;Path)</td></tr>
-<tr class="memdesc:a18ef52950cf3ee37e36d83cbccd3aa99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a search path to the <a class="el" href="classkge_1_1io_1_1_file_system_manager.html" title="FileSystemManager is the main manager for FileSystem.">FileSystemManager</a> to search these paths on resource loading.  <a href="#a18ef52950cf3ee37e36d83cbccd3aa99"></a><br/></td></tr>
-<tr class="memitem:ab1706231c6c912bae0a0bdf38131db88"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classkge_1_1core_1_1_dynamic_array.html">core::DynamicArray</a><br class="typebreak"/>
-&lt; <a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#ab1706231c6c912bae0a0bdf38131db88">GetSearchPath</a> ()</td></tr>
-<tr class="memdesc:ab1706231c6c912bae0a0bdf38131db88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of search paths.  <a href="#ab1706231c6c912bae0a0bdf38131db88"></a><br/></td></tr>
+<tr class="memitem:a4542e7a33d2ef25e02dcb80fa6fd0429"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a4542e7a33d2ef25e02dcb80fa6fd0429">AddSearchPath</a> (std::string &amp;Path)</td></tr>
+<tr class="memdesc:a4542e7a33d2ef25e02dcb80fa6fd0429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a search path to the <a class="el" href="classkge_1_1io_1_1_file_system_manager.html" title="FileSystemManager is the main manager for FileSystem.">FileSystemManager</a> to search these paths on resource loading.  <a href="#a4542e7a33d2ef25e02dcb80fa6fd0429"></a><br/></td></tr>
+<tr class="memitem:aaa62e20f0ac31cab104bc7615dea9112"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#aaa62e20f0ac31cab104bc7615dea9112">GetSearchPath</a> ()</td></tr>
+<tr class="memdesc:aaa62e20f0ac31cab104bc7615dea9112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of search paths.  <a href="#aaa62e20f0ac31cab104bc7615dea9112"></a><br/></td></tr>
 <tr class="memitem:a8a35d1a4ae6816d51b2172d29a79ae4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a8a35d1a4ae6816d51b2172d29a79ae4e">RegisterFileSystem</a> (<a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a> *pFS)</td></tr>
 <tr class="memdesc:a8a35d1a4ae6816d51b2172d29a79ae4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a <a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a> with <a class="el" href="classkge_1_1io_1_1_file_system_manager.html" title="FileSystemManager is the main manager for FileSystem.">FileSystemManager</a>.  <a href="#a8a35d1a4ae6816d51b2172d29a79ae4e"></a><br/></td></tr>
-<tr class="memitem:a09c1dae04c031b6741acbbaeb2bb6357"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1io_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a09c1dae04c031b6741acbbaeb2bb6357">Load</a> (const <a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a> &amp;FileName)</td></tr>
-<tr class="memdesc:a09c1dae04c031b6741acbbaeb2bb6357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a stream from file systems plugins.  <a href="#a09c1dae04c031b6741acbbaeb2bb6357"></a><br/></td></tr>
+<tr class="memitem:a6a6ff3b0a7f14b3e3530eed6f7055706"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1io_1_1_stream.html">Stream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a6a6ff3b0a7f14b3e3530eed6f7055706">Load</a> (std::string &amp;FileName)</td></tr>
+<tr class="memdesc:a6a6ff3b0a7f14b3e3530eed6f7055706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a stream from file systems plugins.  <a href="#a6a6ff3b0a7f14b3e3530eed6f7055706"></a><br/></td></tr>
+<tr class="memitem:a5eb958ebc10e89994ec53d956b03bf06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a5eb958ebc10e89994ec53d956b03bf06">Release</a> ()</td></tr>
+<tr class="memdesc:a5eb958ebc10e89994ec53d956b03bf06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the memory.  <a href="#a5eb958ebc10e89994ec53d956b03bf06"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -138,14 +141,46 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a17e27924a895879bbd53ca5e9af855dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_dynamic_array.html">core::DynamicArray</a>&lt; <a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a17e27924a895879bbd53ca5e9af855dd">m_aSearchPath</a></td></tr>
-<tr class="memdesc:a17e27924a895879bbd53ca5e9af855dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The search paths array.  <a href="#a17e27924a895879bbd53ca5e9af855dd"></a><br/></td></tr>
-<tr class="memitem:afee5209d453e53f5252d2fc63d5c33a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_dynamic_array.html">core::DynamicArray</a>&lt; <a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#afee5209d453e53f5252d2fc63d5c33a8">m_aFileSystems</a></td></tr>
-<tr class="memdesc:afee5209d453e53f5252d2fc63d5c33a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The registered <a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a> plugins array.  <a href="#afee5209d453e53f5252d2fc63d5c33a8"></a><br/></td></tr>
+<tr class="memitem:aa7d3708f9cf444afb3090074ab1c3d78"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#aa7d3708f9cf444afb3090074ab1c3d78">m_aSearchPath</a></td></tr>
+<tr class="memdesc:aa7d3708f9cf444afb3090074ab1c3d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">The search paths array.  <a href="#aa7d3708f9cf444afb3090074ab1c3d78"></a><br/></td></tr>
+<tr class="memitem:a8e28722facf8d3926edb35ba1873cbc1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a8e28722facf8d3926edb35ba1873cbc1">m_aFileSystems</a></td></tr>
+<tr class="memdesc:a8e28722facf8d3926edb35ba1873cbc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The registered <a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a> plugins array.  <a href="#a8e28722facf8d3926edb35ba1873cbc1"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a952fc72109339039f2f676b6050e0228"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html#a952fc72109339039f2f676b6050e0228">FileSystemManager</a> ()</td></tr>
+<tr class="memdesc:a952fc72109339039f2f676b6050e0228"><td class="mdescLeft">&#160;</td><td class="mdescRight">private Constructor  <a href="#a952fc72109339039f2f676b6050e0228"></a><br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classkge_1_1io_1_1_file_system_manager.html" title="FileSystemManager is the main manager for FileSystem.">FileSystemManager</a> is the main manager for <a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a>. </p>
+
+<p>Definition at line <a class="el" href="_file_system_manager_8h_source.html#l00016">16</a> of file <a class="el" href="_file_system_manager_8h_source.html">FileSystemManager.h</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a952fc72109339039f2f676b6050e0228"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kge::io::FileSystemManager::FileSystemManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>private Constructor </p>
+
+</div>
+</div>
 <a class="anchor" id="a044a02f57be23ae8435c779aa4f4dc90"></a>
 <div class="memitem">
 <div class="memproto">
@@ -164,14 +199,14 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2>Member Function Documentation</h2>
-<a class="anchor" id="a18ef52950cf3ee37e36d83cbccd3aa99"></a>
+<a class="anchor" id="a4542e7a33d2ef25e02dcb80fa6fd0429"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void kge::io::FileSystemManager::AddSearchPath </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a> &amp;&#160;</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
           <td class="paramname"><em>Path</em></td><td>)</td>
           <td></td>
         </tr>
@@ -188,12 +223,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab1706231c6c912bae0a0bdf38131db88"></a>
+<a class="anchor" id="aaa62e20f0ac31cab104bc7615dea9112"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classkge_1_1core_1_1_dynamic_array.html">core::DynamicArray</a>&lt;<a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a>&gt;&amp; kge::io::FileSystemManager::GetSearchPath </td>
+          <td class="memname">const std::vector&lt;std::string&gt;&amp; kge::io::FileSystemManager::GetSearchPath </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -228,16 +263,18 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the <a class="el" href="classkge_1_1io_1_1_file_system_manager.html" title="FileSystemManager is the main manager for FileSystem.">FileSystemManager</a> pointer. </p>
 
+<p>Referenced by <a class="el" href="_resource_manager_8h_source.html#l00261">kge::ResourceManager&lt; gfx::Shader &gt;::Load()</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a09c1dae04c031b6741acbbaeb2bb6357"></a>
+<a class="anchor" id="a6a6ff3b0a7f14b3e3530eed6f7055706"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classkge_1_1io_1_1_stream.html">Stream</a>* kge::io::FileSystemManager::Load </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a> &amp;&#160;</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
           <td class="paramname"><em>FileName</em></td><td>)</td>
           <td></td>
         </tr>
@@ -245,6 +282,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Loads a stream from file systems plugins. </p>
+
+<p>Referenced by <a class="el" href="_resource_manager_8h_source.html#l00261">kge::ResourceManager&lt; gfx::Shader &gt;::Load()</a>.</p>
 
 </div>
 </div>
@@ -266,8 +305,25 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5eb958ebc10e89994ec53d956b03bf06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kge::io::FileSystemManager::Release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release the memory. </p>
+
+</div>
+</div>
 <h2>Member Data Documentation</h2>
-<a class="anchor" id="afee5209d453e53f5252d2fc63d5c33a8"></a>
+<a class="anchor" id="a8e28722facf8d3926edb35ba1873cbc1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -275,7 +331,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classkge_1_1core_1_1_dynamic_array.html">core::DynamicArray</a>&lt;<a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a>*&gt; kge::io::FileSystemManager::m_aFileSystems</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a>*&gt; kge::io::FileSystemManager::m_aFileSystems</td>
         </tr>
       </table>
   </td>
@@ -287,9 +343,11 @@ Protected Attributes</h2></td></tr>
 
 <p>The registered <a class="el" href="classkge_1_1io_1_1_file_system.html">FileSystem</a> plugins array. </p>
 
+<p>Definition at line <a class="el" href="_file_system_manager_8h_source.html#l00052">52</a> of file <a class="el" href="_file_system_manager_8h_source.html">FileSystemManager.h</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a17e27924a895879bbd53ca5e9af855dd"></a>
+<a class="anchor" id="aa7d3708f9cf444afb3090074ab1c3d78"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -297,7 +355,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classkge_1_1core_1_1_dynamic_array.html">core::DynamicArray</a>&lt;<a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a>&gt; kge::io::FileSystemManager::m_aSearchPath</td>
+          <td class="memname">std::vector&lt;std::string&gt; kge::io::FileSystemManager::m_aSearchPath</td>
         </tr>
       </table>
   </td>
@@ -309,10 +367,12 @@ Protected Attributes</h2></td></tr>
 
 <p>The search paths array. </p>
 
+<p>Definition at line <a class="el" href="_file_system_manager_8h_source.html#l00051">51</a> of file <a class="el" href="_file_system_manager_8h_source.html">FileSystemManager.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Novin Pendar/Documents/kge/engine/include/<a class="el" href="_file_system_manager_8h_source.html">FileSystemManager.h</a></li>
+<li>E:/mycodes/git/kge/Include/io/<a class="el" href="_file_system_manager_8h_source.html">FileSystemManager.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -320,7 +380,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekge.html">kge</a></li><li class="navelem"><a class="el" href="namespacekge_1_1io.html">io</a></li><li class="navelem"><a class="el" href="classkge_1_1io_1_1_file_system_manager.html">FileSystemManager</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:37 for Kochol Game Engine by
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:57 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

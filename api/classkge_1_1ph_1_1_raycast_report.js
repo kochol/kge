@@ -1,0 +1,27 @@
+var classkge_1_1ph_1_1_raycast_report =
+[
+    [ "RaycastReport", "classkge_1_1ph_1_1_raycast_report.html#a329e2ec35155486bb5a7b24333697a61", null ],
+    [ "~RaycastReport", "classkge_1_1ph_1_1_raycast_report.html#a3a4071b4bd0ee36f42c9fd31b53fc8d8", null ],
+    [ "getActor", "classkge_1_1ph_1_1_raycast_report.html#a761158d9e6b2437f8b99c423acb8f36b", null ],
+    [ "getDistance", "classkge_1_1ph_1_1_raycast_report.html#acdc1d976551281eb5fb64acac64950e5", null ],
+    [ "getFaceID", "classkge_1_1ph_1_1_raycast_report.html#a47a7284b671191215ea9af6ba7cb4190", null ],
+    [ "getFlags", "classkge_1_1ph_1_1_raycast_report.html#a08f604d885f0c5078187073be0a532e3", null ],
+    [ "getInternalFaceID", "classkge_1_1ph_1_1_raycast_report.html#a8084e5d2c2214715c93c2913a0777b1d", null ],
+    [ "getMaterial", "classkge_1_1ph_1_1_raycast_report.html#a3e86c38a9e0004c793d341bf08ae3dd4", null ],
+    [ "getU", "classkge_1_1ph_1_1_raycast_report.html#a54b70e868f122747f5c2ba434b0d0881", null ],
+    [ "getV", "classkge_1_1ph_1_1_raycast_report.html#a1edd07689ae958399a4bfbe5cf1309d1", null ],
+    [ "getWorldImpact", "classkge_1_1ph_1_1_raycast_report.html#af1b9820dea1de4e3f3f336e99bf165ea", null ],
+    [ "getWorldNormal", "classkge_1_1ph_1_1_raycast_report.html#a24cff59c559781bcbdc92728a39d8735", null ],
+    [ "PhysXManager", "classkge_1_1ph_1_1_raycast_report.html#ad2864c5ca6f23d31f3acbeb8a47ecf39", null ],
+    [ "RaycastX", "classkge_1_1ph_1_1_raycast_report.html#ad9c9911f86c698dd0ce96e24cd1825d0", null ],
+    [ "m_pActor", "classkge_1_1ph_1_1_raycast_report.html#a2c06b1152ee043f797554f62638bd870", null ],
+    [ "m_pDistance", "classkge_1_1ph_1_1_raycast_report.html#ac63dcda51dda982720a9d76a9a241468", null ],
+    [ "m_pFaceID", "classkge_1_1ph_1_1_raycast_report.html#ab4545a8ae8d607171e611c7262e34096", null ],
+    [ "m_pFlags", "classkge_1_1ph_1_1_raycast_report.html#ad9c72d18e2355c288fabf9a45b47d8ad", null ],
+    [ "m_pInternalFaceID", "classkge_1_1ph_1_1_raycast_report.html#a79a59900811509ca763b30f92f8c5a52", null ],
+    [ "m_pMaterial", "classkge_1_1ph_1_1_raycast_report.html#a1d67936ce161e7822274bde3d2327849", null ],
+    [ "m_pU", "classkge_1_1ph_1_1_raycast_report.html#a9497e03a5ea8c13b3a62cb95058b9c16", null ],
+    [ "m_pV", "classkge_1_1ph_1_1_raycast_report.html#af457fe363d6c5c4fdf5f3053f240bccf", null ],
+    [ "m_pWorldImpact", "classkge_1_1ph_1_1_raycast_report.html#abbf8fff99acb1f8b2906a1ba95a6090e", null ],
+    [ "m_pWorldNormal", "classkge_1_1ph_1_1_raycast_report.html#ac3201e186da453b6e24d37c9df8d589f", null ]
+];

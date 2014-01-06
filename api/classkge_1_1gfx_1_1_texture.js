@@ -1,4 +1,28 @@
 var classkge_1_1gfx_1_1_texture =
 [
-    [ "~Texture", "classkge_1_1gfx_1_1_texture.html#a21404ca9bfde72c91f9c7ae407ae9b8b", null ]
+    [ "Texture", "classkge_1_1gfx_1_1_texture.html#a7cfdacf062a9d0704b2b02dc075e4f66", null ],
+    [ "Texture", "classkge_1_1gfx_1_1_texture.html#a263940a6e5955b7153d02066431e5775", null ],
+    [ "~Texture", "classkge_1_1gfx_1_1_texture.html#a21404ca9bfde72c91f9c7ae407ae9b8b", null ],
+    [ "CreateTexture", "classkge_1_1gfx_1_1_texture.html#af8d110d895b352ece6928bb9dc60a54d", null ],
+    [ "GetCopyData", "classkge_1_1gfx_1_1_texture.html#a2727f6292ba8b9964134457ad1ea82ae", null ],
+    [ "GetD3DTexture", "classkge_1_1gfx_1_1_texture.html#abcbd4b15a4ba712c0ea9ca1864918b4d", null ],
+    [ "GetFormat", "classkge_1_1gfx_1_1_texture.html#a7804d49067c095161f7d017d73965836", null ],
+    [ "GetHeight", "classkge_1_1gfx_1_1_texture.html#a6c61a4145c658471419ce5cf532659b4", null ],
+    [ "GetNumberOfMipmapLevels", "classkge_1_1gfx_1_1_texture.html#af3b329c0ae1a95ee8e9d446b8100e0f1", null ],
+    [ "GetPowerOf2Size", "classkge_1_1gfx_1_1_texture.html#ad04936f8b420efad79b6fb66a0b10b77", null ],
+    [ "GetWidth", "classkge_1_1gfx_1_1_texture.html#a3c3da621fe1d81091000631e342ccedd", null ],
+    [ "IsAntiAliased", "classkge_1_1gfx_1_1_texture.html#ae1cba057b04b4eaee18f6048013f0a95", null ],
+    [ "Lock", "classkge_1_1gfx_1_1_texture.html#ab040443f24a8aea9963aad9d446cf146", null ],
+    [ "SetData", "classkge_1_1gfx_1_1_texture.html#a77fd8769e8dc473f7ab5ad5f9959311e", null ],
+    [ "SetData", "classkge_1_1gfx_1_1_texture.html#a63a9025dab01043ce180473914d6f7aa", null ],
+    [ "UnLock", "classkge_1_1gfx_1_1_texture.html#a4a1b42dff6d268aabf22b57e4a416df8", null ],
+    [ "m_bAA", "classkge_1_1gfx_1_1_texture.html#ac6175ba927decd86a24c97bc325fcf0b", null ],
+    [ "m_bCompressed", "classkge_1_1gfx_1_1_texture.html#adfa3c7d6dfe4bb4106008b1e2b2cf44b", null ],
+    [ "m_bStoreCopy", "classkge_1_1gfx_1_1_texture.html#a2659789d85f56f9d60b5ff62ed228522", null ],
+    [ "m_iBpp", "classkge_1_1gfx_1_1_texture.html#aab8a47ee4202f2c4c842321840d3ad21", null ],
+    [ "m_ibpp", "classkge_1_1gfx_1_1_texture.html#a86e6736032c44b7dfe42eae235a2035b", null ],
+    [ "m_iHeight", "classkge_1_1gfx_1_1_texture.html#a76a376e908950e23c8b281250f430035", null ],
+    [ "m_iMipmapsCount", "classkge_1_1gfx_1_1_texture.html#a1ac816da72aed4f370209e081a01cca4", null ],
+    [ "m_iWidth", "classkge_1_1gfx_1_1_texture.html#a9df2b2e940535dd30bb70a6a320b13f1", null ],
+    [ "m_Tfmt", "classkge_1_1gfx_1_1_texture.html#a9f962dedc27fc744cc1d6e35e294cef4", null ]
 ];

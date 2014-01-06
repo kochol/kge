@@ -1,0 +1,25 @@
+var classkge_1_1efx_1_1_x_p_s_m =
+[
+    [ "XPSM", "classkge_1_1efx_1_1_x_p_s_m.html#afc783d28e3d6410a58f0bdce2f0233b7", null ],
+    [ "~XPSM", "classkge_1_1efx_1_1_x_p_s_m.html#a4ecfc43f9482bd20733a651493ca87c7", null ],
+    [ "BuildXPSMProjectionMatrix", "classkge_1_1efx_1_1_x_p_s_m.html#a9b6d8df24995888345215a0e32b5db33", null ],
+    [ "Init", "classkge_1_1efx_1_1_x_p_s_m.html#a956f9efef1cea2e545738653e86c496e", null ],
+    [ "IntersectAABB2D", "classkge_1_1efx_1_1_x_p_s_m.html#ac0eb5adce736ad8feb18e3223478e2df", null ],
+    [ "PostRenderEverything", "classkge_1_1efx_1_1_x_p_s_m.html#a0a38116d9338f750100dde35dc9ffa0c", null ],
+    [ "PreRender", "classkge_1_1efx_1_1_x_p_s_m.html#a0adf3a1f5cea73275d5d03e82efbbcda", null ],
+    [ "Render", "classkge_1_1efx_1_1_x_p_s_m.html#a6a70d4ace207ffa14b8dd1708de41aa7", null ],
+    [ "TransformWithWClip", "classkge_1_1efx_1_1_x_p_s_m.html#a3645545abf7be5b6d747d821b0abee8d", null ],
+    [ "m_fAspect", "classkge_1_1efx_1_1_x_p_s_m.html#a4b091298f2eb1408ede7ce3768e7dbc2", null ],
+    [ "m_fCosGamma", "classkge_1_1efx_1_1_x_p_s_m.html#a60cdfcc09fe9ff71a806dc8bd55dafea", null ],
+    [ "m_fLSPSM_Nopt", "classkge_1_1efx_1_1_x_p_s_m.html#a04f02cda728e692f71190832aed0bdbe", null ],
+    [ "m_fSlideBack", "classkge_1_1efx_1_1_x_p_s_m.html#a370840a6b222db416f4cc68ace4c4bda", null ],
+    [ "m_LightViewProj", "classkge_1_1efx_1_1_x_p_s_m.html#a0465b2c1bdb8d494ad4ca1287fce1d33", null ],
+    [ "m_ppFar", "classkge_1_1efx_1_1_x_p_s_m.html#ab6445b265760f78262e5e527bab68433", null ],
+    [ "m_ppNear", "classkge_1_1efx_1_1_x_p_s_m.html#a03b4968684fcdc9ab833e11cb76be5b5", null ],
+    [ "m_XPSM_Bias", "classkge_1_1efx_1_1_x_p_s_m.html#a0b938502314d38eb63676fb75fadf4cd", null ],
+    [ "m_XPSM_Coef", "classkge_1_1efx_1_1_x_p_s_m.html#a6b9321ab0f1baf12a82c3fb2dd413369", null ],
+    [ "m_XPSM_EpsilonW", "classkge_1_1efx_1_1_x_p_s_m.html#ad393980c4d2505ae60b8648f48142a98", null ],
+    [ "m_XPSM_ZBias", "classkge_1_1efx_1_1_x_p_s_m.html#a979d9fa3d7bd02d9e6975bde593406eb", null ],
+    [ "m_zFar", "classkge_1_1efx_1_1_x_p_s_m.html#aba9a97e6547d63023d0144e2cadd221a", null ],
+    [ "m_zNear", "classkge_1_1efx_1_1_x_p_s_m.html#a25693c4f8101928b33a41a5d2247e8e2", null ]
+];

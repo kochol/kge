@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -67,7 +69,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('classkge_1_1_kge_unknown.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,7 +106,7 @@ $(document).ready(function(){initNavTree('classkge_1_1_kge_unknown.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classkge_1_1_kge_unknown-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">kge::KgeUnknown Class Reference</div>  </div>
@@ -122,15 +123,32 @@ Inheritance diagram for kge::KgeUnknown:</div>
  <div class="center">
   <img src="classkge_1_1_kge_unknown.png" usemap="#kge::KgeUnknown_map" alt=""/>
   <map id="kge::KgeUnknown_map" name="kge::KgeUnknown_map">
-<area href="classkge_1_1core_1_1_kge_mutex.html" title="Mutex are used to help threads share their objects." alt="kge::core::KgeMutex" shape="rect" coords="0,56,152,80"/>
-<area href="classkge_1_1en_1_1_entity.html" title="This is the base class for entity system in KGE." alt="kge::en::Entity" shape="rect" coords="162,56,314,80"/>
-<area href="classkge_1_1io_1_1_file.html" alt="kge::io::File" shape="rect" coords="324,56,476,80"/>
-<area href="classkge_1_1io_1_1_kge_window.html" title="The window interface for creating rendering windows on each OS." alt="kge::io::KgeWindow" shape="rect" coords="486,56,638,80"/>
-<area href="classkge_1_1io_1_1_stream.html" title="Stream class is for working with streams." alt="kge::io::Stream" shape="rect" coords="648,56,800,80"/>
-<area href="classkge_1_1_resource.html" title="Abstract class for resources like textures, meshes, sounds, shaders, ..." alt="kge::Resource" shape="rect" coords="810,56,962,80"/>
-<area href="classkge_1_1gfx_1_1_hardware_buffer.html" title="The interface is for working with hardware buffers on GPU." alt="kge::gfx::HardwareBuffer" shape="rect" coords="648,112,800,136"/>
-<area href="classkge_1_1gfx_1_1_image.html" title="The image resource class." alt="kge::gfx::Image" shape="rect" coords="810,112,962,136"/>
-<area href="classkge_1_1gfx_1_1_texture.html" title="The interface for working with textures in engine." alt="kge::gfx::Texture" shape="rect" coords="972,112,1124,136"/>
+<area href="classkge_1_1av_1_1_sound_buffer.html" alt="kge::av::SoundBuffer" shape="rect" coords="194,56,378,80"/>
+<area href="classkge_1_1core_1_1_kge_mutex.html" title="Mutex are used to help threads share their objects." alt="kge::core::KgeMutex" shape="rect" coords="194,112,378,136"/>
+<area href="classkge_1_1core_1_1_string.html" alt="kge::core::String" shape="rect" coords="194,168,378,192"/>
+<area href="classkge_1_1core_1_1_timer.html" title="In class ham ke maloom hast che kari anjam midahad." alt="kge::core::Timer" shape="rect" coords="194,224,378,248"/>
+<area href="classkge_1_1_device.html" title="This is the main class that user must create and Device will create other parts of engine..." alt="kge::Device" shape="rect" coords="194,280,378,304"/>
+<area href="classkge_1_1en_1_1_entity.html" title="This is the base class for entity system in KGE." alt="kge::en::Entity" shape="rect" coords="194,336,378,360"/>
+<area href="classkge_1_1gfx_1_1_custom_material.html" title="Custom material base class." alt="kge::gfx::CustomMaterial" shape="rect" coords="194,392,378,416"/>
+<area href="classkge_1_1gfx_1_1_hardware_buffer.html" alt="kge::gfx::HardwareBuffer" shape="rect" coords="194,448,378,472"/>
+<area href="classkge_1_1gfx_1_1_lighting.html" title="In class interface asli kar ba nor ha hast." alt="kge::gfx::Lighting" shape="rect" coords="194,504,378,528"/>
+<area href="classkge_1_1gfx_1_1_material.html" alt="kge::gfx::Material" shape="rect" coords="194,560,378,584"/>
+<area href="classkge_1_1gfx_1_1_material_params.html" alt="kge::gfx::MaterialParams" shape="rect" coords="194,616,378,640"/>
+<area href="classkge_1_1gfx_1_1_renderer.html" title="The Renderer interface has functions to work with graphics card." alt="kge::gfx::Renderer" shape="rect" coords="194,672,378,696"/>
+<area href="classkge_1_1gfx_1_1_tile.html" title="This class store tiles data for TileTexture class." alt="kge::gfx::Tile" shape="rect" coords="194,728,378,752"/>
+<area href="classkge_1_1gfx_1_1_tile_texture.html" alt="kge::gfx::TileTexture" shape="rect" coords="194,784,378,808"/>
+<area href="classkge_1_1gui_1_1_control.html" title="This class is the base of gui controls." alt="kge::gui::Control" shape="rect" coords="194,840,378,864"/>
+<area href="classkge_1_1gui_1_1_gui_manager.html" alt="kge::gui::GuiManager" shape="rect" coords="194,896,378,920"/>
+<area href="classkge_1_1io_1_1_file.html" alt="kge::io::File" shape="rect" coords="194,952,378,976"/>
+<area href="classkge_1_1io_1_1_i_window.html" title="The window interface for creating rendering windows on each OS." alt="kge::io::IWindow" shape="rect" coords="194,1008,378,1032"/>
+<area href="classkge_1_1io_1_1_joy_stick.html" alt="kge::io::JoyStick" shape="rect" coords="194,1064,378,1088"/>
+<area href="classkge_1_1io_1_1_keyboard.html" alt="kge::io::Keyboard" shape="rect" coords="194,1120,378,1144"/>
+<area href="classkge_1_1io_1_1_mouse.html" alt="kge::io::Mouse" shape="rect" coords="194,1176,378,1200"/>
+<area href="classkge_1_1io_1_1_stream.html" title="Stream class is for working with streams." alt="kge::io::Stream" shape="rect" coords="194,1232,378,1256"/>
+<area href="classkge_1_1ph_1_1_dynamic_triangle_mesh.html" alt="kge::ph::DynamicTriangleMesh" shape="rect" coords="194,1288,378,1312"/>
+<area href="classkge_1_1_resource.html" title="Abstract class for resources like textures, meshes, sounds, shaders, ..." alt="kge::Resource" shape="rect" coords="194,1344,378,1368"/>
+<area href="classkge_1_1_resource_manager.html" title="Resource manager take care of loading and unloading resources." alt="kge::ResourceManager&lt; T &gt;" shape="rect" coords="194,1400,378,1424"/>
+<area href="classkge_1_1sn_1_1_scene_node.html" alt="kge::sn::SceneNode" shape="rect" coords="194,1456,378,1480"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -140,34 +158,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab06b557d5ae153685754ad6509e672af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ab06b557d5ae153685754ad6509e672af"></a><br/></td></tr>
 <tr class="memitem:a3ad4ab62fabc537e722876f99aafa551"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a3ad4ab62fabc537e722876f99aafa551">~KgeUnknown</a> ()</td></tr>
 <tr class="memdesc:a3ad4ab62fabc537e722876f99aafa551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a3ad4ab62fabc537e722876f99aafa551"></a><br/></td></tr>
-<tr class="memitem:ad5144b4fa315250679fafe20077780ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ad5144b4fa315250679fafe20077780ba">AddRef</a> ()</td></tr>
-<tr class="memdesc:ad5144b4fa315250679fafe20077780ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a refrence and return refrenc count.  <a href="#ad5144b4fa315250679fafe20077780ba"></a><br/></td></tr>
-<tr class="memitem:ab90fea932a480b9cfa1c0a1396792ad5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ab90fea932a480b9cfa1c0a1396792ad5">DecRef</a> ()</td></tr>
-<tr class="memdesc:ab90fea932a480b9cfa1c0a1396792ad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrese a refrence count and return refrence count. Deletes object when refrence count becomes 0.  <a href="#ab90fea932a480b9cfa1c0a1396792ad5"></a><br/></td></tr>
-<tr class="memitem:a96e255b363a1b2efc2df105ea9dd3083"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a96e255b363a1b2efc2df105ea9dd3083">Lock</a> ()</td></tr>
-<tr class="memdesc:a96e255b363a1b2efc2df105ea9dd3083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the object returns true if succed.  <a href="#a96e255b363a1b2efc2df105ea9dd3083"></a><br/></td></tr>
-<tr class="memitem:adad5ca98afcfd605e785cf8d5839543d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#adad5ca98afcfd605e785cf8d5839543d">IsLocked</a> ()</td></tr>
-<tr class="memdesc:adad5ca98afcfd605e785cf8d5839543d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if object is locked.  <a href="#adad5ca98afcfd605e785cf8d5839543d"></a><br/></td></tr>
-<tr class="memitem:a03eaee750015d706b19401469aa71a2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a03eaee750015d706b19401469aa71a2c">UnLock</a> ()</td></tr>
-<tr class="memdesc:a03eaee750015d706b19401469aa71a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the object.  <a href="#a03eaee750015d706b19401469aa71a2c"></a><br/></td></tr>
-<tr class="memitem:a6cf44495bebf4e60752b5de5a30a5525"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a6cf44495bebf4e60752b5de5a30a5525">GetDebugText</a> ()</td></tr>
-<tr class="memdesc:a6cf44495bebf4e60752b5de5a30a5525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns instance debug text.  <a href="#a6cf44495bebf4e60752b5de5a30a5525"></a><br/></td></tr>
+<tr class="memitem:a8ea0612fadf677316e29b2368cf22044"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a8ea0612fadf677316e29b2368cf22044">AddRef</a> ()</td></tr>
+<tr class="memdesc:a8ea0612fadf677316e29b2368cf22044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a reference to the object.  <a href="#a8ea0612fadf677316e29b2368cf22044"></a><br/></td></tr>
+<tr class="memitem:a9e55c1a419e6be5b06183dbbfa87d33c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a9e55c1a419e6be5b06183dbbfa87d33c">DecRef</a> ()</td></tr>
+<tr class="memdesc:a9e55c1a419e6be5b06183dbbfa87d33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease a reference from the object. if its reference count get 0 then the object will destroy.  <a href="#a9e55c1a419e6be5b06183dbbfa87d33c"></a><br/></td></tr>
+<tr class="memitem:ada877fb2cc40f56f39a0c5b988c3b843"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ada877fb2cc40f56f39a0c5b988c3b843">GetRefCount</a> ()</td></tr>
+<tr class="memdesc:ada877fb2cc40f56f39a0c5b988c3b843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return resource reference count.  <a href="#ada877fb2cc40f56f39a0c5b988c3b843"></a><br/></td></tr>
+<tr class="memitem:a06dfe92d2bc63de616bafab07e12ee85"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a06dfe92d2bc63de616bafab07e12ee85">GetDebugText</a> ()</td></tr>
+<tr class="memdesc:a06dfe92d2bc63de616bafab07e12ee85"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the instance debug text.  <a href="#a06dfe92d2bc63de616bafab07e12ee85"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:afc1d592695a1bfe1b93b68514906552a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#afc1d592695a1bfe1b93b68514906552a">SetDebugText</a> (char *name)</td></tr>
+<tr class="memitem:a2b67db2dabb9cfda622e759e9e20e243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a2b67db2dabb9cfda622e759e9e20e243">SetDebugText</a> (char *text)</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ada5d910f37dd027304a0ce9ce04dadc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ada5d910f37dd027304a0ce9ce04dadc8">m_uRefCount</a></td></tr>
-<tr class="memdesc:ada5d910f37dd027304a0ce9ce04dadc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refrence count.  <a href="#ada5d910f37dd027304a0ce9ce04dadc8"></a><br/></td></tr>
-<tr class="memitem:acd9cb16a53d41f7a69e68fa12cf8bb80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#acd9cb16a53d41f7a69e68fa12cf8bb80">m_bLocked</a></td></tr>
-<tr class="memdesc:acd9cb16a53d41f7a69e68fa12cf8bb80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for object locking.  <a href="#acd9cb16a53d41f7a69e68fa12cf8bb80"></a><br/></td></tr>
-<tr class="memitem:ab9684dab7103338915c4638239398feb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ab9684dab7103338915c4638239398feb">m_sDebugText</a></td></tr>
-<tr class="memdesc:ab9684dab7103338915c4638239398feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class debug name.  <a href="#ab9684dab7103338915c4638239398feb"></a><br/></td></tr>
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae09c8ca18c1a584eddcbba6249cabd59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ae09c8ca18c1a584eddcbba6249cabd59">m_iRefrenceCount</a></td></tr>
+<tr class="memitem:ab84c36e6a621d78d13ac102a4643d2f5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ab84c36e6a621d78d13ac102a4643d2f5">m_pDebugText</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This class is for refrence counting and lock and unlocking object for multi thread purpose. </p>
+
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00025">25</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab06b557d5ae153685754ad6509e672af"></a>
 <div class="memitem">
@@ -191,6 +203,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
+
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00030">30</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
 
 </div>
 </div>
@@ -217,10 +231,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Destructor. </p>
 
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00036">36</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
+
 </div>
 </div>
 <h2>Member Function Documentation</h2>
-<a class="anchor" id="ad5144b4fa315250679fafe20077780ba"></a>
+<a class="anchor" id="a8ea0612fadf677316e29b2368cf22044"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -228,7 +244,65 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> kge::KgeUnknown::AddRef </td>
+          <td class="memname">virtual void kge::KgeUnknown::AddRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a reference to the object. </p>
+
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00044">44</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_custom_material_8h_source.html#l00061">kge::gfx::CustomMaterial::GetCopy()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e55c1a419e6be5b06183dbbfa87d33c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void kge::KgeUnknown::DecRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decrease a reference from the object. if its reference count get 0 then the object will destroy. </p>
+
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00054">54</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
+
+<p>References <a class="el" href="_kge_memory_8h_source.html#l00030">KGE_DELETETHIS</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06dfe92d2bc63de616bafab07e12ee85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* kge::KgeUnknown::GetDebugText </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -241,11 +315,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Adds a refrence and return refrenc count. </p>
+<p>returns the instance debug text. </p>
+
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00072">72</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab90fea932a480b9cfa1c0a1396792ad5"></a>
+<a class="anchor" id="ada877fb2cc40f56f39a0c5b988c3b843"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -253,7 +329,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> kge::KgeUnknown::DecRef </td>
+          <td class="memname"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> kge::KgeUnknown::GetRefCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -266,86 +342,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Decrese a refrence count and return refrence count. Deletes object when refrence count becomes 0. </p>
+<p>Return resource reference count. </p>
+
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00069">69</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6cf44495bebf4e60752b5de5a30a5525"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string kge::KgeUnknown::GetDebugText </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns instance debug text. </p>
-
-</div>
-</div>
-<a class="anchor" id="adad5ca98afcfd605e785cf8d5839543d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool kge::KgeUnknown::IsLocked </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns true if object is locked. </p>
-
-</div>
-</div>
-<a class="anchor" id="a96e255b363a1b2efc2df105ea9dd3083"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool kge::KgeUnknown::Lock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Locks the object returns true if succed. </p>
-
-</div>
-</div>
-<a class="anchor" id="afc1d592695a1bfe1b93b68514906552a"></a>
+<a class="anchor" id="a2b67db2dabb9cfda622e759e9e20e243"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -356,7 +359,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void kge::KgeUnknown::SetDebugText </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -369,40 +372,17 @@ Protected Attributes</h2></td></tr>
 <p>sets the instance debug text. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">text</td><td>The instace debug text. </td></tr>
+    <tr><td class="paramname">text</td><td>The function don't copy it but store it pointer and delete it on destructor. </td></tr>
   </table>
   </dd>
 </dl>
 
-</div>
-</div>
-<a class="anchor" id="a03eaee750015d706b19401469aa71a2c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kge::KgeUnknown::UnLock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Unlock the object. </p>
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00083">83</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
 
 </div>
 </div>
 <h2>Member Data Documentation</h2>
-<a class="anchor" id="acd9cb16a53d41f7a69e68fa12cf8bb80"></a>
+<a class="anchor" id="ae09c8ca18c1a584eddcbba6249cabd59"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -410,21 +390,21 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool kge::KgeUnknown::m_bLocked</td>
+          <td class="memname"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> kge::KgeUnknown::m_iRefrenceCount</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check for object locking. </p>
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00091">91</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab9684dab7103338915c4638239398feb"></a>
+<a class="anchor" id="ab84c36e6a621d78d13ac102a4643d2f5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -432,44 +412,22 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string kge::KgeUnknown::m_sDebugText</td>
+          <td class="memname">char* kge::KgeUnknown::m_pDebugText</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Class debug name. </p>
-
-</div>
-</div>
-<a class="anchor" id="ada5d910f37dd027304a0ce9ce04dadc8"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> kge::KgeUnknown::m_uRefCount</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Refrence count. </p>
+<p>Definition at line <a class="el" href="_kge_unknown_8h_source.html#l00092">92</a> of file <a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Novin Pendar/Documents/kge/engine/include/<a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a></li>
+<li>E:/mycodes/git/kge/Include/<a class="el" href="_kge_unknown_8h_source.html">KgeUnknown.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -477,7 +435,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekge.html">kge</a></li><li class="navelem"><a class="el" href="classkge_1_1_kge_unknown.html">KgeUnknown</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:55 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

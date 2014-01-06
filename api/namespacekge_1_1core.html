@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -90,7 +92,7 @@ $(document).ready(function(){initNavTree('namespacekge_1_1core.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,7 +104,8 @@ $(document).ready(function(){initNavTree('namespacekge_1_1core.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">kge::core Namespace Reference</div>  </div>
 </div><!--header-->
@@ -113,30 +116,246 @@ $(document).ready(function(){initNavTree('namespacekge_1_1core.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_fixed_array.html">FixedArray</a></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_dynamic_array.html">DynamicArray</a></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_block_data.html">BlockData</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_array.html">Array</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is a dynamic array.  <a href="classkge_1_1core_1_1_array.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_array2_d.html">Array2D</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_array_pri.html">ArrayPri</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is a dynamic array.  <a href="classkge_1_1core_1_1_array_pri.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_c_p_u.html">CPU</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class checks the <a class="el" href="classkge_1_1core_1_1_c_p_u.html" title="This class checks the CPU functionality like CPU cores, SSE support.">CPU</a> functionality like <a class="el" href="classkge_1_1core_1_1_c_p_u.html" title="This class checks the CPU functionality like CPU cores, SSE support.">CPU</a> cores, SSE support.  <a href="classkge_1_1core_1_1_c_p_u.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor0.html">Functor0</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with no argument.  <a href="classkge_1_1core_1_1_functor0.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor1.html">Functor1</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with one argument.  <a href="classkge_1_1core_1_1_functor1.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor2.html">Functor2</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with two argument.  <a href="classkge_1_1core_1_1_functor2.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor3.html">Functor3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with three argument.  <a href="classkge_1_1core_1_1_functor3.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor4.html">Functor4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with four argument.  <a href="classkge_1_1core_1_1_functor4.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor5.html">Functor5</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with five argument.  <a href="classkge_1_1core_1_1_functor5.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor6.html">Functor6</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with six argument.  <a href="classkge_1_1core_1_1_functor6.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor7.html">Functor7</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with seven argument.  <a href="classkge_1_1core_1_1_functor7.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor8.html">Functor8</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with eight argument.  <a href="classkge_1_1core_1_1_functor8.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor9.html">Functor9</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with nine argument.  <a href="classkge_1_1core_1_1_functor9.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_functor10.html">Functor10</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for calling a function with ten argument.  <a href="classkge_1_1core_1_1_functor10.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_kge_array.html">KgeArray</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_kge_cond.html">KgeCond</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_kge_memory.html">KgeMemory</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_kge_mutex.html">KgeMutex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex are used to help threads share their objects.  <a href="classkge_1_1core_1_1_kge_mutex.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_kge_thread.html">KgeThread</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">KGE thread interface.  <a href="classkge_1_1core_1_1_kge_thread.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_profiler.html">Profiler</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The profiler interface for profiling the functions.  <a href="classkge_1_1core_1_1_profiler.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_profiler_block.html">ProfilerBlock</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The block that store block data for each function.  <a href="classkge_1_1core_1_1_profiler_block.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_m_functor0.html">MFunctor0</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with no argument(s).  <a href="classkge_1_1core_1_1_m_functor0.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor1.html">ZFunctor1</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with one argument(s).  <a href="classkge_1_1core_1_1_z_functor1.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor2.html">ZFunctor2</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with two argument(s).  <a href="classkge_1_1core_1_1_z_functor2.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor3.html">ZFunctor3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with three argument(s).  <a href="classkge_1_1core_1_1_z_functor3.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor4.html">ZFunctor4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with four argument(s).  <a href="classkge_1_1core_1_1_z_functor4.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor5.html">ZFunctor5</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with five argument(s).  <a href="classkge_1_1core_1_1_z_functor5.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor6.html">ZFunctor6</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with six argument(s).  <a href="classkge_1_1core_1_1_z_functor6.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor7.html">ZFunctor7</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with seven argument(s).  <a href="classkge_1_1core_1_1_z_functor7.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor8.html">ZFunctor8</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with eight argument(s).  <a href="classkge_1_1core_1_1_z_functor8.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor9.html">ZFunctor9</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with nine argument(s).  <a href="classkge_1_1core_1_1_z_functor9.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_z_functor10.html">ZFunctor10</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to member functions with ten argument(s).  <a href="classkge_1_1core_1_1_z_functor10.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_priority_array.html">PriorityArray</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor0.html">PFunctor0</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with no argument(s).  <a href="classkge_1_1core_1_1_p_functor0.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor1.html">PFunctor1</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with one argument(s).  <a href="classkge_1_1core_1_1_p_functor1.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor2.html">PFunctor2</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with two argument(s).  <a href="classkge_1_1core_1_1_p_functor2.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor3.html">PFunctor3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with three argument(s).  <a href="classkge_1_1core_1_1_p_functor3.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor4.html">PFunctor4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with four argument(s).  <a href="classkge_1_1core_1_1_p_functor4.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor5.html">PFunctor5</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with five argument(s).  <a href="classkge_1_1core_1_1_p_functor5.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor6.html">PFunctor6</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with six argument(s).  <a href="classkge_1_1core_1_1_p_functor6.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor7.html">PFunctor7</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with seven argument(s).  <a href="classkge_1_1core_1_1_p_functor7.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor8.html">PFunctor8</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with eight argument(s).  <a href="classkge_1_1core_1_1_p_functor8.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor9.html">PFunctor9</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with nine argument(s).  <a href="classkge_1_1core_1_1_p_functor9.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_p_functor10.html">PFunctor10</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is for storing pointer to functions with ten argument(s).  <a href="classkge_1_1core_1_1_p_functor10.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_string.html">String</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">KGE string class.  <a href="classkge_1_1core_1_1_string.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1core_1_1_rect.html">Rect</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RECT.  <a href="structkge_1_1core_1_1_rect.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_task.html">Task</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1core_1_1_task_group.html">TaskGroup</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classkge_1_1core_1_1_task.html">Task</a> group for defining different group of tasks and process them individually.  <a href="structkge_1_1core_1_1_task_group.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_task_manager.html">TaskManager</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_task_manager_thread.html">TaskManagerThread</a></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_timer.html">Timer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">In class ham ke maloom hast che kari anjam midahad.  <a href="classkge_1_1core_1_1_timer.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1core_1_1_t_s_queue.html">TSQueue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread safe queue.  <a href="classkge_1_1core_1_1_t_s_queue.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a89616992a36e140e65da797cdcfbfc5a"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">stringc</a></td></tr>
 <tr class="memitem:afaebbab1f08f9d7cb9fb92a620ca91e0"><td class="memItemLeft" align="right" valign="top">typedef std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#afaebbab1f08f9d7cb9fb92a620ca91e0">stringw</a></td></tr>
+<tr class="memitem:a6c6fd57b8819677d9ddd62e623f6a541"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structkge_1_1core_1_1_rect.html">Rect</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a6c6fd57b8819677d9ddd62e623f6a541">RectI</a></td></tr>
+<tr class="memitem:a3ad33da780f220f35f05236aada5192e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structkge_1_1core_1_1_rect.html">Rect</a>&lt; <a class="el" href="namespacekge.html#a2a63da4ecb2f1e3bf268d7c3a764a69b">ul32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a3ad33da780f220f35f05236aada5192e">RectUL</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a726326cf7909d392b7dc4b7d5e3cd128"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn &gt; </td></tr>
+<tr class="memitem:a726326cf7909d392b7dc4b7d5e3cd128"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_m_functor0.html">MFunctor0</a>&lt; Tclass, Treturn &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a726326cf7909d392b7dc4b7d5e3cd128">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)())</td></tr>
+<tr class="memdesc:a726326cf7909d392b7dc4b7d5e3cd128"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions craete a <a class="el" href="classkge_1_1core_1_1_m_functor0.html" title="This class is for storing pointer to member functions with no argument(s).">MFunctor0</a> class.  <a href="#a726326cf7909d392b7dc4b7d5e3cd128"></a><br/></td></tr>
+<tr class="memitem:a808a5689c77ec3385721570dc7f386f0"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 &gt; </td></tr>
+<tr class="memitem:a808a5689c77ec3385721570dc7f386f0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor1.html">ZFunctor1</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a808a5689c77ec3385721570dc7f386f0">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1))</td></tr>
+<tr class="memdesc:a808a5689c77ec3385721570dc7f386f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor1.html" title="This class is for storing pointer to member functions with one argument(s).">ZFunctor1</a> class.  <a href="#a808a5689c77ec3385721570dc7f386f0"></a><br/></td></tr>
+<tr class="memitem:aec061e3a8bfd589ad21f721f50a2acbc"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 &gt; </td></tr>
+<tr class="memitem:aec061e3a8bfd589ad21f721f50a2acbc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor2.html">ZFunctor2</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#aec061e3a8bfd589ad21f721f50a2acbc">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2))</td></tr>
+<tr class="memdesc:aec061e3a8bfd589ad21f721f50a2acbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor2.html" title="This class is for storing pointer to member functions with two argument(s).">ZFunctor2</a> class.  <a href="#aec061e3a8bfd589ad21f721f50a2acbc"></a><br/></td></tr>
+<tr class="memitem:a599adb9aa3efeaed21f59e9074e1aeca"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 &gt; </td></tr>
+<tr class="memitem:a599adb9aa3efeaed21f59e9074e1aeca"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor3.html">ZFunctor3</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2, Targ3 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a599adb9aa3efeaed21f59e9074e1aeca">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3))</td></tr>
+<tr class="memdesc:a599adb9aa3efeaed21f59e9074e1aeca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor3.html" title="This class is for storing pointer to member functions with three argument(s).">ZFunctor3</a> class.  <a href="#a599adb9aa3efeaed21f59e9074e1aeca"></a><br/></td></tr>
+<tr class="memitem:a85ee5ab6d9a31d1d49e0856f025c9e38"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 &gt; </td></tr>
+<tr class="memitem:a85ee5ab6d9a31d1d49e0856f025c9e38"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor4.html">ZFunctor4</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2, Targ3, Targ4 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a85ee5ab6d9a31d1d49e0856f025c9e38">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4))</td></tr>
+<tr class="memdesc:a85ee5ab6d9a31d1d49e0856f025c9e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor4.html" title="This class is for storing pointer to member functions with four argument(s).">ZFunctor4</a> class.  <a href="#a85ee5ab6d9a31d1d49e0856f025c9e38"></a><br/></td></tr>
+<tr class="memitem:a8a5f758e1a32957049dda3ec833a7f90"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 &gt; </td></tr>
+<tr class="memitem:a8a5f758e1a32957049dda3ec833a7f90"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor5.html">ZFunctor5</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2, Targ3, Targ4, <br class="typebreak"/>
+Targ5 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a8a5f758e1a32957049dda3ec833a7f90">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5))</td></tr>
+<tr class="memdesc:a8a5f758e1a32957049dda3ec833a7f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor5.html" title="This class is for storing pointer to member functions with five argument(s).">ZFunctor5</a> class.  <a href="#a8a5f758e1a32957049dda3ec833a7f90"></a><br/></td></tr>
+<tr class="memitem:a911a8573693cd2e5bcf5198f4b99bb2d"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 &gt; </td></tr>
+<tr class="memitem:a911a8573693cd2e5bcf5198f4b99bb2d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor5.html">ZFunctor5</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2, Targ3, Targ4, <br class="typebreak"/>
+Targ5 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a911a8573693cd2e5bcf5198f4b99bb2d">mem_fun5</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5))</td></tr>
+<tr class="memdesc:a911a8573693cd2e5bcf5198f4b99bb2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor5.html" title="This class is for storing pointer to member functions with five argument(s).">ZFunctor5</a> class.  <a href="#a911a8573693cd2e5bcf5198f4b99bb2d"></a><br/></td></tr>
+<tr class="memitem:ae15ff6490233a0cea164f9e73de01be9"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 &gt; </td></tr>
+<tr class="memitem:ae15ff6490233a0cea164f9e73de01be9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor6.html">ZFunctor6</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2, Targ3, Targ4, <br class="typebreak"/>
+Targ5, Targ6 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#ae15ff6490233a0cea164f9e73de01be9">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6))</td></tr>
+<tr class="memdesc:ae15ff6490233a0cea164f9e73de01be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor6.html" title="This class is for storing pointer to member functions with six argument(s).">ZFunctor6</a> class.  <a href="#ae15ff6490233a0cea164f9e73de01be9"></a><br/></td></tr>
+<tr class="memitem:ad1e156d18d960dce89c3b3d73dd6eebc"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 &gt; </td></tr>
+<tr class="memitem:ad1e156d18d960dce89c3b3d73dd6eebc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor7.html">ZFunctor7</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2, Targ3, Targ4, <br class="typebreak"/>
+Targ5, Targ6, Targ7 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#ad1e156d18d960dce89c3b3d73dd6eebc">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7))</td></tr>
+<tr class="memdesc:ad1e156d18d960dce89c3b3d73dd6eebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor7.html" title="This class is for storing pointer to member functions with seven argument(s).">ZFunctor7</a> class.  <a href="#ad1e156d18d960dce89c3b3d73dd6eebc"></a><br/></td></tr>
+<tr class="memitem:a2382fd4a15b74b6df3ac9c195c385e0b"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 &gt; </td></tr>
+<tr class="memitem:a2382fd4a15b74b6df3ac9c195c385e0b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor8.html">ZFunctor8</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2, Targ3, Targ4, <br class="typebreak"/>
+Targ5, Targ6, Targ7, Targ8 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a2382fd4a15b74b6df3ac9c195c385e0b">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8))</td></tr>
+<tr class="memdesc:a2382fd4a15b74b6df3ac9c195c385e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor8.html" title="This class is for storing pointer to member functions with eight argument(s).">ZFunctor8</a> class.  <a href="#a2382fd4a15b74b6df3ac9c195c385e0b"></a><br/></td></tr>
+<tr class="memitem:a8e1441d756484e31fd916ce08044b4bf"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 , class Targ9 &gt; </td></tr>
+<tr class="memitem:a8e1441d756484e31fd916ce08044b4bf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor9.html">ZFunctor9</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2, Targ3, Targ4, <br class="typebreak"/>
+Targ5, Targ6, Targ7, Targ8, <br class="typebreak"/>
+Targ9 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a8e1441d756484e31fd916ce08044b4bf">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8, Targ9 arg9))</td></tr>
+<tr class="memdesc:a8e1441d756484e31fd916ce08044b4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor9.html" title="This class is for storing pointer to member functions with nine argument(s).">ZFunctor9</a> class.  <a href="#a8e1441d756484e31fd916ce08044b4bf"></a><br/></td></tr>
+<tr class="memitem:a5bc89460b8cf298cc3cc9958a188eccb"><td class="memTemplParams" colspan="2">template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 , class Targ9 , class Targ10 &gt; </td></tr>
+<tr class="memitem:a5bc89460b8cf298cc3cc9958a188eccb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_z_functor10.html">ZFunctor10</a>&lt; Tclass, Treturn, <br class="typebreak"/>
+Targ1, Targ2, Targ3, Targ4, <br class="typebreak"/>
+Targ5, Targ6, Targ7, Targ8, <br class="typebreak"/>
+Targ9, Targ10 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a5bc89460b8cf298cc3cc9958a188eccb">mem_fun</a> (Tclass *obj, Treturn(Tclass::*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8, Targ9 arg9, Targ10 arg10))</td></tr>
+<tr class="memdesc:a5bc89460b8cf298cc3cc9958a188eccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor10.html" title="This class is for storing pointer to member functions with ten argument(s).">ZFunctor10</a> class.  <a href="#a5bc89460b8cf298cc3cc9958a188eccb"></a><br/></td></tr>
+<tr class="memitem:a354770c104fb775c01d66df228e9c4de"><td class="memTemplParams" colspan="2">template&lt;class Treturn &gt; </td></tr>
+<tr class="memitem:a354770c104fb775c01d66df228e9c4de"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor0.html">PFunctor0</a>&lt; Treturn &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a354770c104fb775c01d66df228e9c4de">ptr_fun</a> (Treturn(*_fun)())</td></tr>
+<tr class="memdesc:a354770c104fb775c01d66df228e9c4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor0.html" title="This class is for storing pointer to functions with no argument(s).">PFunctor0</a> class.  <a href="#a354770c104fb775c01d66df228e9c4de"></a><br/></td></tr>
+<tr class="memitem:ab968a91ba9dadb8041732f5bce9cf852"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 &gt; </td></tr>
+<tr class="memitem:ab968a91ba9dadb8041732f5bce9cf852"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor1.html">PFunctor1</a>&lt; Treturn, Targ1 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#ab968a91ba9dadb8041732f5bce9cf852">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1))</td></tr>
+<tr class="memdesc:ab968a91ba9dadb8041732f5bce9cf852"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor1.html" title="This class is for storing pointer to functions with one argument(s).">PFunctor1</a> class.  <a href="#ab968a91ba9dadb8041732f5bce9cf852"></a><br/></td></tr>
+<tr class="memitem:a3f826c1360616f3c7315ccbcff293ecb"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 , class Targ2 &gt; </td></tr>
+<tr class="memitem:a3f826c1360616f3c7315ccbcff293ecb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor2.html">PFunctor2</a>&lt; Treturn, Targ1, <br class="typebreak"/>
+Targ2 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a3f826c1360616f3c7315ccbcff293ecb">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1, Targ2 arg2))</td></tr>
+<tr class="memdesc:a3f826c1360616f3c7315ccbcff293ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor2.html" title="This class is for storing pointer to functions with two argument(s).">PFunctor2</a> class.  <a href="#a3f826c1360616f3c7315ccbcff293ecb"></a><br/></td></tr>
+<tr class="memitem:af2c11e8f125e9308e389e6c652e4bb81"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 &gt; </td></tr>
+<tr class="memitem:af2c11e8f125e9308e389e6c652e4bb81"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor3.html">PFunctor3</a>&lt; Treturn, Targ1, <br class="typebreak"/>
+Targ2, Targ3 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#af2c11e8f125e9308e389e6c652e4bb81">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3))</td></tr>
+<tr class="memdesc:af2c11e8f125e9308e389e6c652e4bb81"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor3.html" title="This class is for storing pointer to functions with three argument(s).">PFunctor3</a> class.  <a href="#af2c11e8f125e9308e389e6c652e4bb81"></a><br/></td></tr>
+<tr class="memitem:a0a4044f2d9d037047e6376fb0c06d9d2"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 &gt; </td></tr>
+<tr class="memitem:a0a4044f2d9d037047e6376fb0c06d9d2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor4.html">PFunctor4</a>&lt; Treturn, Targ1, <br class="typebreak"/>
+Targ2, Targ3, Targ4 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a0a4044f2d9d037047e6376fb0c06d9d2">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4))</td></tr>
+<tr class="memdesc:a0a4044f2d9d037047e6376fb0c06d9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor4.html" title="This class is for storing pointer to functions with four argument(s).">PFunctor4</a> class.  <a href="#a0a4044f2d9d037047e6376fb0c06d9d2"></a><br/></td></tr>
+<tr class="memitem:a95e57799372d177d27747138a3e7dc53"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 &gt; </td></tr>
+<tr class="memitem:a95e57799372d177d27747138a3e7dc53"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor5.html">PFunctor5</a>&lt; Treturn, Targ1, <br class="typebreak"/>
+Targ2, Targ3, Targ4, Targ5 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a95e57799372d177d27747138a3e7dc53">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5))</td></tr>
+<tr class="memdesc:a95e57799372d177d27747138a3e7dc53"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor5.html" title="This class is for storing pointer to functions with five argument(s).">PFunctor5</a> class.  <a href="#a95e57799372d177d27747138a3e7dc53"></a><br/></td></tr>
+<tr class="memitem:af30d44b7d4f85eabdc19e922df9e2786"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 &gt; </td></tr>
+<tr class="memitem:af30d44b7d4f85eabdc19e922df9e2786"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor6.html">PFunctor6</a>&lt; Treturn, Targ1, <br class="typebreak"/>
+Targ2, Targ3, Targ4, Targ5, <br class="typebreak"/>
+Targ6 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#af30d44b7d4f85eabdc19e922df9e2786">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6))</td></tr>
+<tr class="memdesc:af30d44b7d4f85eabdc19e922df9e2786"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor6.html" title="This class is for storing pointer to functions with six argument(s).">PFunctor6</a> class.  <a href="#af30d44b7d4f85eabdc19e922df9e2786"></a><br/></td></tr>
+<tr class="memitem:a95d3f51f7b74fb6fdfa16ab174d6be58"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 &gt; </td></tr>
+<tr class="memitem:a95d3f51f7b74fb6fdfa16ab174d6be58"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor7.html">PFunctor7</a>&lt; Treturn, Targ1, <br class="typebreak"/>
+Targ2, Targ3, Targ4, Targ5, <br class="typebreak"/>
+Targ6, Targ7 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a95d3f51f7b74fb6fdfa16ab174d6be58">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7))</td></tr>
+<tr class="memdesc:a95d3f51f7b74fb6fdfa16ab174d6be58"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor7.html" title="This class is for storing pointer to functions with seven argument(s).">PFunctor7</a> class.  <a href="#a95d3f51f7b74fb6fdfa16ab174d6be58"></a><br/></td></tr>
+<tr class="memitem:a40c06d8589398a8b28159ada53ceeab2"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 &gt; </td></tr>
+<tr class="memitem:a40c06d8589398a8b28159ada53ceeab2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor8.html">PFunctor8</a>&lt; Treturn, Targ1, <br class="typebreak"/>
+Targ2, Targ3, Targ4, Targ5, <br class="typebreak"/>
+Targ6, Targ7, Targ8 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a40c06d8589398a8b28159ada53ceeab2">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8))</td></tr>
+<tr class="memdesc:a40c06d8589398a8b28159ada53ceeab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor8.html" title="This class is for storing pointer to functions with eight argument(s).">PFunctor8</a> class.  <a href="#a40c06d8589398a8b28159ada53ceeab2"></a><br/></td></tr>
+<tr class="memitem:a7c2408fdf2e93b8c43850ce31a0ab5e2"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 , class Targ9 &gt; </td></tr>
+<tr class="memitem:a7c2408fdf2e93b8c43850ce31a0ab5e2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor9.html">PFunctor9</a>&lt; Treturn, Targ1, <br class="typebreak"/>
+Targ2, Targ3, Targ4, Targ5, <br class="typebreak"/>
+Targ6, Targ7, Targ8, Targ9 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a7c2408fdf2e93b8c43850ce31a0ab5e2">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8, Targ9 arg9))</td></tr>
+<tr class="memdesc:a7c2408fdf2e93b8c43850ce31a0ab5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor9.html" title="This class is for storing pointer to functions with nine argument(s).">PFunctor9</a> class.  <a href="#a7c2408fdf2e93b8c43850ce31a0ab5e2"></a><br/></td></tr>
+<tr class="memitem:a00b72d86db42dc29fb5ee82dc3f3af12"><td class="memTemplParams" colspan="2">template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 , class Targ9 , class Targ10 &gt; </td></tr>
+<tr class="memitem:a00b72d86db42dc29fb5ee82dc3f3af12"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkge_1_1core_1_1_p_functor10.html">PFunctor10</a>&lt; Treturn, Targ1, <br class="typebreak"/>
+Targ2, Targ3, Targ4, Targ5, <br class="typebreak"/>
+Targ6, Targ7, Targ8, Targ9, <br class="typebreak"/>
+Targ10 &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html#a00b72d86db42dc29fb5ee82dc3f3af12">ptr_fun</a> (Treturn(*_fun)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8, Targ9 arg9, Targ10 arg10))</td></tr>
+<tr class="memdesc:a00b72d86db42dc29fb5ee82dc3f3af12"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor10.html" title="This class is for storing pointer to functions with ten argument(s).">PFunctor10</a> class.  <a href="#a00b72d86db42dc29fb5ee82dc3f3af12"></a><br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>KGE core classes. </p>
+<p>The core of engine. </p>
 </div><h2>Typedef Documentation</h2>
+<a class="anchor" id="a6c6fd57b8819677d9ddd62e623f6a541"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structkge_1_1core_1_1_rect.html">Rect</a>&lt;int&gt; <a class="el" href="namespacekge_1_1core.html#a6c6fd57b8819677d9ddd62e623f6a541">kge::core::RectI</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="core_2_structs_8h_source.html#l00037">37</a> of file <a class="el" href="core_2_structs_8h_source.html">Structs.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ad33da780f220f35f05236aada5192e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structkge_1_1core_1_1_rect.html">Rect</a>&lt;<a class="el" href="namespacekge.html#a2a63da4ecb2f1e3bf268d7c3a764a69b">ul32</a>&gt; <a class="el" href="namespacekge_1_1core.html#a3ad33da780f220f35f05236aada5192e">kge::core::RectUL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="core_2_structs_8h_source.html#l00038">38</a> of file <a class="el" href="core_2_structs_8h_source.html">Structs.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a89616992a36e140e65da797cdcfbfc5a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -146,6 +365,8 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_string_8h_source.html#l00017">17</a> of file <a class="el" href="_string_8h_source.html">String.h</a>.</p>
 
 </div>
 </div>
@@ -159,6 +380,635 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_string_8h_source.html#l00019">19</a> of file <a class="el" href="_string_8h_source.html">String.h</a>.</p>
+
+</div>
+</div>
+<h2>Function Documentation</h2>
+<a class="anchor" id="a726326cf7909d392b7dc4b7d5e3cd128"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_m_functor0.html">MFunctor0</a>&lt;Tclass, Treturn&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)()&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions craete a <a class="el" href="classkge_1_1core_1_1_m_functor0.html" title="This class is for storing pointer to member functions with no argument(s).">MFunctor0</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00045">45</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a808a5689c77ec3385721570dc7f386f0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor1.html">ZFunctor1</a>&lt;Tclass, Treturn , Targ1&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor1.html" title="This class is for storing pointer to member functions with one argument(s).">ZFunctor1</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00082">82</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec061e3a8bfd589ad21f721f50a2acbc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor2.html">ZFunctor2</a>&lt;Tclass, Treturn , Targ1 , Targ2&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor2.html" title="This class is for storing pointer to member functions with two argument(s).">ZFunctor2</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00119">119</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a599adb9aa3efeaed21f59e9074e1aeca"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor3.html">ZFunctor3</a>&lt;Tclass, Treturn , Targ1 , Targ2 , Targ3&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2, Targ3 arg3)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor3.html" title="This class is for storing pointer to member functions with three argument(s).">ZFunctor3</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00156">156</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85ee5ab6d9a31d1d49e0856f025c9e38"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor4.html">ZFunctor4</a>&lt;Tclass, Treturn , Targ1 , Targ2 , Targ3 , Targ4&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor4.html" title="This class is for storing pointer to member functions with four argument(s).">ZFunctor4</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00193">193</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a5f758e1a32957049dda3ec833a7f90"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor5.html">ZFunctor5</a>&lt;Tclass, Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor5.html" title="This class is for storing pointer to member functions with five argument(s).">ZFunctor5</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00230">230</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae15ff6490233a0cea164f9e73de01be9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor6.html">ZFunctor6</a>&lt;Tclass, Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor6.html" title="This class is for storing pointer to member functions with six argument(s).">ZFunctor6</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00278">278</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1e156d18d960dce89c3b3d73dd6eebc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor7.html">ZFunctor7</a>&lt;Tclass, Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6 , Targ7&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor7.html" title="This class is for storing pointer to member functions with seven argument(s).">ZFunctor7</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00315">315</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2382fd4a15b74b6df3ac9c195c385e0b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor8.html">ZFunctor8</a>&lt;Tclass, Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6 , Targ7 , Targ8&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor8.html" title="This class is for storing pointer to member functions with eight argument(s).">ZFunctor8</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00352">352</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e1441d756484e31fd916ce08044b4bf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 , class Targ9 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor9.html">ZFunctor9</a>&lt;Tclass, Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6 , Targ7 , Targ8 , Targ9&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8, Targ9 arg9)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor9.html" title="This class is for storing pointer to member functions with nine argument(s).">ZFunctor9</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00389">389</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5bc89460b8cf298cc3cc9958a188eccb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 , class Targ9 , class Targ10 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor10.html">ZFunctor10</a>&lt;Tclass, Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6 , Targ7 , Targ8 , Targ9 , Targ10&gt;* kge::core::mem_fun </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8, Targ9 arg9, Targ10 arg10)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor10.html" title="This class is for storing pointer to member functions with ten argument(s).">ZFunctor10</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00426">426</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a911a8573693cd2e5bcf5198f4b99bb2d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Tclass , class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_z_functor5.html">ZFunctor5</a>&lt;Tclass, Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5&gt;* kge::core::mem_fun5 </td>
+          <td>(</td>
+          <td class="paramtype">Tclass *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Treturn(Tclass::*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5)&#160;</td>
+          <td class="paramname"><em>_fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_z_functor5.html" title="This class is for storing pointer to member functions with five argument(s).">ZFunctor5</a> class. </p>
+
+<p>Definition at line <a class="el" href="mem__fun_8h_source.html#l00241">241</a> of file <a class="el" href="mem__fun_8h_source.html">mem_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a354770c104fb775c01d66df228e9c4de"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor0.html">PFunctor0</a>&lt;Treturn&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)()&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor0.html" title="This class is for storing pointer to functions with no argument(s).">PFunctor0</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00044">44</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab968a91ba9dadb8041732f5bce9cf852"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor1.html">PFunctor1</a>&lt;Treturn , Targ1&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor1.html" title="This class is for storing pointer to functions with one argument(s).">PFunctor1</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00081">81</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f826c1360616f3c7315ccbcff293ecb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 , class Targ2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor2.html">PFunctor2</a>&lt;Treturn , Targ1 , Targ2&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1, Targ2 arg2)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor2.html" title="This class is for storing pointer to functions with two argument(s).">PFunctor2</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00117">117</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af2c11e8f125e9308e389e6c652e4bb81"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor3.html">PFunctor3</a>&lt;Treturn , Targ1 , Targ2 , Targ3&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1, Targ2 arg2, Targ3 arg3)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor3.html" title="This class is for storing pointer to functions with three argument(s).">PFunctor3</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00153">153</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a4044f2d9d037047e6376fb0c06d9d2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor4.html">PFunctor4</a>&lt;Treturn , Targ1 , Targ2 , Targ3 , Targ4&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor4.html" title="This class is for storing pointer to functions with four argument(s).">PFunctor4</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00189">189</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95e57799372d177d27747138a3e7dc53"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor5.html">PFunctor5</a>&lt;Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor5.html" title="This class is for storing pointer to functions with five argument(s).">PFunctor5</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00225">225</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af30d44b7d4f85eabdc19e922df9e2786"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor6.html">PFunctor6</a>&lt;Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor6.html" title="This class is for storing pointer to functions with six argument(s).">PFunctor6</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00261">261</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95d3f51f7b74fb6fdfa16ab174d6be58"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor7.html">PFunctor7</a>&lt;Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6 , Targ7&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor7.html" title="This class is for storing pointer to functions with seven argument(s).">PFunctor7</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00297">297</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40c06d8589398a8b28159ada53ceeab2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor8.html">PFunctor8</a>&lt;Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6 , Targ7 , Targ8&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor8.html" title="This class is for storing pointer to functions with eight argument(s).">PFunctor8</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00333">333</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c2408fdf2e93b8c43850ce31a0ab5e2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 , class Targ9 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor9.html">PFunctor9</a>&lt;Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6 , Targ7 , Targ8 , Targ9&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8, Targ9 arg9)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor9.html" title="This class is for storing pointer to functions with nine argument(s).">PFunctor9</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00369">369</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00b72d86db42dc29fb5ee82dc3f3af12"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Treturn , class Targ1 , class Targ2 , class Targ3 , class Targ4 , class Targ5 , class Targ6 , class Targ7 , class Targ8 , class Targ9 , class Targ10 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkge_1_1core_1_1_p_functor10.html">PFunctor10</a>&lt;Treturn , Targ1 , Targ2 , Targ3 , Targ4 , Targ5 , Targ6 , Targ7 , Targ8 , Targ9 , Targ10&gt;* kge::core::ptr_fun </td>
+          <td>(</td>
+          <td class="paramtype">Treturn(*)(Targ1 arg1, Targ2 arg2, Targ3 arg3, Targ4 arg4, Targ5 arg5, Targ6 arg6, Targ7 arg7, Targ8 arg8, Targ9 arg9, Targ10 arg10)&#160;</td>
+          <td class="paramname"><em>_fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This functions create a <a class="el" href="classkge_1_1core_1_1_p_functor10.html" title="This class is for storing pointer to functions with ten argument(s).">PFunctor10</a> class. </p>
+
+<p>Definition at line <a class="el" href="ptr__fun_8h_source.html#l00405">405</a> of file <a class="el" href="ptr__fun_8h_source.html">ptr_fun.h</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -167,7 +1017,7 @@ Typedefs</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekge.html">kge</a></li><li class="navelem"><a class="el" href="namespacekge_1_1core.html">core</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:55 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

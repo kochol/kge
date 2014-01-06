@@ -1,4 +1,26 @@
 var searchData=
 [
-  ['stream',['Stream',['../structkge_1_1gfx_1_1_custom_vertex_element.html#a965e95f4e97639805b49ea350de81499',1,'kge::gfx::CustomVertexElement']]]
+  ['sh_5ff2texscale',['sh_f2TexScale',['../classkge_1_1efx_1_1_refraction.html#aeab46717fa1399d4b4faf838b0b94494',1,'kge::efx::Refraction']]],
+  ['sh_5fftime0_5fx',['sh_fTime0_X',['../classkge_1_1efx_1_1_refraction.html#a374b3ba780a47b58361e256c287c2e45',1,'kge::efx::Refraction']]],
+  ['sh_5ffveyeposition',['sh_fvEyePosition',['../classkge_1_1efx_1_1_refraction.html#a86c5185d8e826e9d0f8fbaeb7f0ddec7',1,'kge::efx::Refraction']]],
+  ['sh_5fmatview',['sh_matView',['../classkge_1_1efx_1_1_refraction.html#ac2afcc524a38483a69f9b5521afd6c9b',1,'kge::efx::Refraction']]],
+  ['sh_5fmatviewprojection',['sh_matViewProjection',['../classkge_1_1efx_1_1_refraction.html#a4922abd223db85161d77e0414308fe2c',1,'kge::efx::Refraction']]],
+  ['shader',['shader',['../classkge_1_1gfx_1_1_material.html#ab509409c05a21f12886896b342bd0b8f',1,'kge::gfx::Material']]],
+  ['shadername',['shaderName',['../structkge_1_1sn_1_1_animated_texture_parameters.html#ab66f448e97e4e0bdce8858385ca46717',1,'kge::sn::AnimatedTextureParameters::shaderName()'],['../structkge_1_1sn_1_1_particle_system_parameters.html#af68dce2f5035813eff8ecce36d9bd23e',1,'kge::sn::ParticleSystemParameters::shaderName()']]],
+  ['shininess',['Shininess',['../classkge_1_1gfx_1_1_material.html#a0ff46b16177c3c06757cfb222a9dd575',1,'kge::gfx::Material']]],
+  ['size',['size',['../structkge_1_1sn_1_1_animated_texture_parameters.html#acc1fc8cc4ff49de49ed252ab2d5414af',1,'kge::sn::AnimatedTextureParameters::size()'],['../structkge_1_1sn_1_1_r_buffer.html#adf50499cdfebb61a312699274469fd8b',1,'kge::sn::RBuffer::size()']]],
+  ['skeletalmesh',['SkeletalMesh',['../classkge_1_1gfx_1_1_material_params.html#a89c9e0ddb596440530368237a2f85b17',1,'kge::gfx::MaterialParams']]],
+  ['smquad_5fsize',['SMQUAD_SIZE',['../namespacekge_1_1efx.html#a398c9fbd73ab766b82fee2bd1218be10',1,'kge::efx']]],
+  ['source',['Source',['../classkge_1_1sfx_1_1_sound3_d_1_1_sound_source.html#a521561d56f56c01615927d74563ee8ed',1,'kge::sfx::Sound3D::SoundSource']]],
+  ['space',['Space',['../structkge_1_1sn_1_1_decal_data.html#a64ca9680257e42b0b980753bf6f0f518',1,'kge::sn::DecalData']]],
+  ['specular',['Specular',['../classkge_1_1gfx_1_1_material.html#a25a3dccb6397c281cd77b0fdcf6d8f6c',1,'kge::gfx::Material::Specular()'],['../structkge_1_1gfx_1_1_light_data.html#ab5010569ef79ab425f79eb03067fb1ed',1,'kge::gfx::LightData::Specular()']]],
+  ['specularmap',['SpecularMap',['../classkge_1_1gfx_1_1_material_params.html#a03a7ae066dbc7fc1ca8893acc07595e6',1,'kge::gfx::MaterialParams']]],
+  ['speed',['speed',['../structkge_1_1sn_1_1_particle_system_parameters.html#a98b7d0ff50b0349c9b87a93333dac242',1,'kge::sn::ParticleSystemParameters']]],
+  ['spotlightcount',['SpotLightCount',['../classkge_1_1gfx_1_1_material_params.html#af7827fce442995d42d807f838d39b6a3',1,'kge::gfx::MaterialParams']]],
+  ['start',['start',['../classkge_1_1core_1_1_array.html#af741c80940d189a4642f3b4b7440798e',1,'kge::core::Array::start()'],['../classkge_1_1core_1_1_array_pri.html#ad15e4cdd13f01e4e51795bdb4fdd83f8',1,'kge::core::ArrayPri::start()']]],
+  ['stick',['stick',['../classkge_1_1io_1_1_joy_stick.html#a44ec3d2ffce42e45c34add457c821c70',1,'kge::io::JoyStick']]],
+  ['stream',['Stream',['../structkge_1_1gfx_1_1_custom_vertex_element.html#a965e95f4e97639805b49ea350de81499',1,'kge::gfx::CustomVertexElement']]],
+  ['strmeshname',['strMeshName',['../classkge_1_1en_1_1_cmp_mesh.html#a87e6013532285a21d617388eb6a22ef3',1,'kge::en::CmpMesh']]],
+  ['sx',['sx',['../structkge_1_1sn_1_1_tile_terrain2_1_1_map_i_d_data.html#a5129994fc09d7219ed7efda0c384c949',1,'kge::sn::TileTerrain2::MapIDData']]],
+  ['sy',['sy',['../structkge_1_1sn_1_1_tile_terrain2_1_1_map_i_d_data.html#a21901182068746793d7abacd5c73383c',1,'kge::sn::TileTerrain2::MapIDData']]]
 ];

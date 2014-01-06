@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Kochol Game Engine: C:/Users/Novin Pendar/Documents/kge/engine/include/PluginManager.h Source File</title>
+<title>Kochol Game Engine: E:/mycodes/git/kge/Include/PluginManager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -90,7 +92,7 @@ $(document).ready(function(){initNavTree('_plugin_manager_8h_source.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,105 +106,110 @@ $(document).ready(function(){initNavTree('_plugin_manager_8h_source.html','');})
 <div class="title">PluginManager.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_plugin_manager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef KGE_PLUGINMANAGER_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KGE_PLUGINMANAGER_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<a href="_plugin_manager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// File name: PluginManager.h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Des: This class manages plugins and take care of their loading</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Date: 04/08/1387</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Programmer: Ali Akbar Mohamadi(Kochol)</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kgedef_8h.html">kgedef.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_plugin_8h.html">Plugin.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>kge</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">class </span>Device;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">class </span>Loader;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef KGE_PLUGINMANAGER_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KGE_PLUGINMANAGER_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kgedef_8h.html">kgedef.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_plugin_8h.html">Plugin.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">namespace </span>gfx</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                <span class="keyword">class </span>Renderer;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        } <span class="comment">// gfx</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">namespace </span>io</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keyword">class </span>InputManager;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="keyword">class </span>FileSystem;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>kge</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">class </span>Device;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">class </span>Loader;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">namespace </span>gfx</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keyword">class </span>Renderer;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        } <span class="comment">// gfx</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        } <span class="comment">// io</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="namespacekge.html#ace7962149125c35ccdbdb17dedb02ec1">   27</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">Plugin&lt;gfx::Renderer&gt;</a>           <a class="code" href="namespacekge.html#ace7962149125c35ccdbdb17dedb02ec1">RendererPlugin</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="namespacekge.html#a96d065089af9ba8c1f98be3cf697b209">   28</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">Plugin&lt;io::InputManager&gt;</a>        <a class="code" href="namespacekge.html#a96d065089af9ba8c1f98be3cf697b209">InputMgrPlugin</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="namespacekge.html#a892f3012588db37f366777f5e8fd2330">   29</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">Plugin&lt;io::FileSystem&gt;</a>          <a class="code" href="namespacekge.html#a892f3012588db37f366777f5e8fd2330">FileSystemPlugin</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="namespacekge.html#a9fa9bc5d382828c9906a0bb95eb1e73e">   30</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">Plugin&lt;Loader&gt;</a>                          <a class="code" href="namespacekge.html#a9fa9bc5d382828c9906a0bb95eb1e73e">LoaderPlugin</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">namespace </span>io</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keyword">class </span>InputManager;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keyword">class </span>FileSystem;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        } <span class="comment">// io</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html">   33</a></span>&#160;        <span class="keyword">class </span><a class="code" href="gnuc__def_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1_plugin_manager.html" title="Loads plugins and manage them.">PluginManager</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keyword">virtual</span> ~<a class="code" href="classkge_1_1_plugin_manager.html" title="Loads plugins and manage them.">PluginManager</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordtype">int</span> LoadPlugin(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keyword">static</span> <a class="code" href="classkge_1_1_plugin_manager.html" title="Loads plugins and manage them.">PluginManager</a>*   GetSingletonPtr();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordtype">void</span> Release();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="comment">//  R E N D E R E R    P L U G I N S </span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#ae19ff75a692bed3fa2cd00e4d44d03ff">   59</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classkge_1_1_plugin_manager.html#ae19ff75a692bed3fa2cd00e4d44d03ff" title="Returns the count of Renderer plugins that loaded in engine.">GetRendererPluginsCount</a>() { <span class="keywordflow">return</span> m_vRendererPlugins.size(); }</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="namespacekge.html#ace7962149125c35ccdbdb17dedb02ec1">   32</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">Plugin&lt;gfx::Renderer&gt;</a>           <a class="code" href="namespacekge.html#ace7962149125c35ccdbdb17dedb02ec1">RendererPlugin</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="namespacekge.html#a96d065089af9ba8c1f98be3cf697b209">   33</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">Plugin&lt;io::InputManager&gt;</a>        <a class="code" href="namespacekge.html#a96d065089af9ba8c1f98be3cf697b209">InputMgrPlugin</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="namespacekge.html#a892f3012588db37f366777f5e8fd2330">   34</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">Plugin&lt;io::FileSystem&gt;</a>          <a class="code" href="namespacekge.html#a892f3012588db37f366777f5e8fd2330">FileSystemPlugin</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="namespacekge.html#a9fa9bc5d382828c9906a0bb95eb1e73e">   35</a></span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">Plugin&lt;Loader&gt;</a>                          <a class="code" href="namespacekge.html#a9fa9bc5d382828c9906a0bb95eb1e73e">LoaderPlugin</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html">   38</a></span>&#160;        <span class="keyword">class </span><a class="code" href="kgedef_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1_plugin_manager.html" title="Loads plugins and manage them.">PluginManager</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keyword">virtual</span> ~<a class="code" href="classkge_1_1_plugin_manager.html" title="Loads plugins and manage them.">PluginManager</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordtype">int</span> LoadPlugin(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keyword">static</span> <a class="code" href="classkge_1_1_plugin_manager.html" title="Loads plugins and manage them.">PluginManager</a>*   GetSingletonPtr();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordtype">void</span> Release();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="comment">//  R E N D E R E R    P L U G I N S </span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#ab30e595e93cfc9c1c0a1e540d3e9108a">   67</a></span>&#160;                <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">RendererPlugin</a>* <a class="code" href="classkge_1_1_plugin_manager.html#ab30e595e93cfc9c1c0a1e540d3e9108a" title="Get renderer plugin with its index.">GetRendererPlugin</a>(<span class="keywordtype">int</span> index) { <span class="keywordflow">return</span> m_vRendererPlugins[index]; }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordtype">int</span> RegisterRenderer(<a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">RendererPlugin</a>* pRenPlug);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="comment">//   I N P U T    M A N A G E R     P L U G I N S</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#a12c5db1c36b17783b7ac484c88011ee1">   82</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classkge_1_1_plugin_manager.html#a12c5db1c36b17783b7ac484c88011ee1" title="Returns the count of InputManager plugins that loaded in engine.">GetInputManagerPluginCount</a>() { <span class="keywordflow">return</span> m_vInputMgrPlugins.size(); }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#ae19ff75a692bed3fa2cd00e4d44d03ff">   64</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classkge_1_1_plugin_manager.html#ae19ff75a692bed3fa2cd00e4d44d03ff" title="Returns the count of Renderer plugins that loaded in engine.">GetRendererPluginsCount</a>() { <span class="keywordflow">return</span> m_vRendererPlugins.size(); }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#ab30e595e93cfc9c1c0a1e540d3e9108a">   72</a></span>&#160;                <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">RendererPlugin</a>* <a class="code" href="classkge_1_1_plugin_manager.html#ab30e595e93cfc9c1c0a1e540d3e9108a" title="Get renderer plugin with its index.">GetRendererPlugin</a>(<span class="keywordtype">int</span> index) { <span class="keywordflow">return</span> m_vRendererPlugins[index]; }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordtype">int</span> RegisterRenderer(<a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">RendererPlugin</a>* pRenPlug);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="comment">//   I N P U T    M A N A G E R     P L U G I N S</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#a5cc68ea4276e9c7102c61b9c26d9ac29">   90</a></span>&#160;                <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">InputMgrPlugin</a>* <a class="code" href="classkge_1_1_plugin_manager.html#a5cc68ea4276e9c7102c61b9c26d9ac29" title="Get InputManager plugin with its index.">GetInputManagerPlugin</a>(<span class="keywordtype">int</span> index) { <span class="keywordflow">return</span> m_vInputMgrPlugins[index]; }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordtype">int</span> RegisterInputManager(<a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">InputMgrPlugin</a>* pInputMgrPlug);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="comment">//   L O A D E R S   P L U G I N S</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordtype">int</span> RegisterLoader(<a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">LoaderPlugin</a>* pLoaderPlug);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="comment">//   F I L E   S Y S T E M   P L U G I N S</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span>                <span class="keywordtype">int</span> RegisterFileSystem(<a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">FileSystemPlugin</a>* pFileSysPlug);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <a class="code" href="classkge_1_1_plugin_manager.html" title="Loads plugins and manage them.">PluginManager</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#a12c5db1c36b17783b7ac484c88011ee1">   87</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classkge_1_1_plugin_manager.html#a12c5db1c36b17783b7ac484c88011ee1" title="Returns the count of InputManager plugins that loaded in engine.">GetInputManagerPluginCount</a>() { <span class="keywordflow">return</span> m_vInputMgrPlugins.size(); }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#a5cc68ea4276e9c7102c61b9c26d9ac29">   95</a></span>&#160;                <a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">InputMgrPlugin</a>* <a class="code" href="classkge_1_1_plugin_manager.html#a5cc68ea4276e9c7102c61b9c26d9ac29" title="Get InputManager plugin with its index.">GetInputManagerPlugin</a>(<span class="keywordtype">int</span> index) { <span class="keywordflow">return</span> m_vInputMgrPlugins[index]; }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordtype">int</span> RegisterInputManager(<a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">InputMgrPlugin</a>* pInputMgrPlug);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="comment">//   L O A D E R S   P L U G I N S</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordtype">int</span> RegisterLoader(<a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">LoaderPlugin</a>* pLoaderPlug);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="comment">//   F I L E   S Y S T E M   P L U G I N S</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="comment">//------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"></span>                <span class="keywordtype">int</span> RegisterFileSystem(<a class="code" href="classkge_1_1_plugin.html" title="This class is a base class for plugin which will be used in KGE.">FileSystemPlugin</a>* pFileSysPlug);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#ae8832ef8ac9d6529af8c93aa07ecc8e9">  116</a></span>&#160;                std::vector&lt;RendererPlugin*&gt;    <a class="code" href="classkge_1_1_plugin_manager.html#ae8832ef8ac9d6529af8c93aa07ecc8e9" title="Renderer plugins list.">m_vRendererPlugins</a>;             </div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#a518d36373e37912ae03507ab2a70d8e7">  117</a></span>&#160;                std::vector&lt;InputMgrPlugin*&gt;    <a class="code" href="classkge_1_1_plugin_manager.html#a518d36373e37912ae03507ab2a70d8e7" title="Input manager plugins list.">m_vInputMgrPlugins</a>;             </div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#afbf0b23a5861fdeba431adbc4f30aa41">  118</a></span>&#160;                std::vector&lt;FileSystemPlugin*&gt;  <a class="code" href="classkge_1_1_plugin_manager.html#afbf0b23a5861fdeba431adbc4f30aa41" title="File system plugins list.">m_vFileSystemPlugins</a>;   </div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#a1bd8bc3bad150aa410058589ef8cca9f">  119</a></span>&#160;                std::vector&lt;LoaderPlugin*&gt;              <a class="code" href="classkge_1_1_plugin_manager.html#a1bd8bc3bad150aa410058589ef8cca9f" title="Resource loaders plugins list.">m_vLoaderPlugins</a>;               </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <a class="code" href="classkge_1_1_plugin_manager.html" title="Loads plugins and manage them.">PluginManager</a>();</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }; <span class="comment">// PluginManager</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// kge</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif // KGE_PLUGINMANAGER_H</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#ae8832ef8ac9d6529af8c93aa07ecc8e9">  121</a></span>&#160;                std::vector&lt;RendererPlugin*&gt;    <a class="code" href="classkge_1_1_plugin_manager.html#ae8832ef8ac9d6529af8c93aa07ecc8e9" title="Renderer plugins list.">m_vRendererPlugins</a>;             </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#a518d36373e37912ae03507ab2a70d8e7">  122</a></span>&#160;                std::vector&lt;InputMgrPlugin*&gt;    <a class="code" href="classkge_1_1_plugin_manager.html#a518d36373e37912ae03507ab2a70d8e7" title="Input manager plugins list.">m_vInputMgrPlugins</a>;             </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#afbf0b23a5861fdeba431adbc4f30aa41">  123</a></span>&#160;                std::vector&lt;FileSystemPlugin*&gt;  <a class="code" href="classkge_1_1_plugin_manager.html#afbf0b23a5861fdeba431adbc4f30aa41" title="File system plugins list.">m_vFileSystemPlugins</a>;   </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="classkge_1_1_plugin_manager.html#a1bd8bc3bad150aa410058589ef8cca9f">  124</a></span>&#160;                std::vector&lt;LoaderPlugin*&gt;              <a class="code" href="classkge_1_1_plugin_manager.html#a1bd8bc3bad150aa410058589ef8cca9f" title="Resource loaders plugins list.">m_vLoaderPlugins</a>;               </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }; <span class="comment">// PluginManager</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// kge</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif // KGE_PLUGINMANAGER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><a class="el" href="dir_bafa501d493553e442f19f5f8dd7b29c.html">include</a></li><li class="navelem"><a class="el" href="_plugin_manager_8h.html">PluginManager.h</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="navelem"><a class="el" href="dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="dir_deea50d16e0677fbfacb413bf983068c.html">mycodes</a></li><li class="navelem"><a class="el" href="dir_8af5a13fc9984a0fa39713d3d8d79f6f.html">git</a></li><li class="navelem"><a class="el" href="dir_f117ff2519cf9fdb3c53910fd4f46e74.html">kge</a></li><li class="navelem"><a class="el" href="dir_be4880de99480d6ac3e802891aa8202a.html">Include</a></li><li class="navelem"><a class="el" href="_plugin_manager_8h.html">PluginManager.h</a></li>
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:54 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

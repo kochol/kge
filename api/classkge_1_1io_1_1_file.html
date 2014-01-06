@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -67,7 +69,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('classkge_1_1io_1_1_file.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -103,7 +104,9 @@ $(document).ready(function(){initNavTree('classkge_1_1io_1_1_file.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classkge_1_1io_1_1_file-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">kge::io::File Class Reference</div>  </div>
@@ -121,42 +124,103 @@ Inheritance diagram for kge::io::File:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:adc8e7c4d1b32138a86fa6419afe085de"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#adc8e7c4d1b32138a86fa6419afe085de">Exist</a> (const <a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a> &amp;cstrFileName)</td></tr>
-<tr class="memdesc:adc8e7c4d1b32138a86fa6419afe085de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the file exist.  <a href="#adc8e7c4d1b32138a86fa6419afe085de"></a><br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a3a2d3cd52c3bc25263b38fa3bd555692"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#a3a2d3cd52c3bc25263b38fa3bd555692">File</a> ()</td></tr>
+<tr class="memdesc:a3a2d3cd52c3bc25263b38fa3bd555692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sazande.  <a href="#a3a2d3cd52c3bc25263b38fa3bd555692"></a><br/></td></tr>
+<tr class="memitem:afa4cb02625e8e79ef2349a737b1c5c88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#afa4cb02625e8e79ef2349a737b1c5c88">~File</a> ()</td></tr>
+<tr class="memdesc:afa4cb02625e8e79ef2349a737b1c5c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mokhareb.  <a href="#afa4cb02625e8e79ef2349a737b1c5c88"></a><br/></td></tr>
+<tr class="memitem:a8076f8c4732fe7c52f81f1b5ea836cf1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#a8076f8c4732fe7c52f81f1b5ea836cf1">Open</a> (const char *FileName, bool CreateFile=false)</td></tr>
+<tr class="memitem:a25134f14fa67e7cec59bd5472d434b01"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#a25134f14fa67e7cec59bd5472d434b01">Read</a> (void *Buffer, <a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> ReadSize)</td></tr>
+<tr class="memitem:a7d52a6b54d4fc25455647e7cafba246c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#a7d52a6b54d4fc25455647e7cafba246c">write</a> (void *Buffer, <a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> ReadSize)</td></tr>
+<tr class="memitem:aac7b480f193418e8454a3d85bbb7faae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#aac7b480f193418e8454a3d85bbb7faae">IsOpen</a> ()</td></tr>
+<tr class="memitem:ad548c8ee492068c5997acb06438fcdd9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#ad548c8ee492068c5997acb06438fcdd9">Seek</a> (<a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> pos, bool Current=false)</td></tr>
+<tr class="memitem:a1cb2a308e34ccd87b82b064095d1fa01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#a1cb2a308e34ccd87b82b064095d1fa01">GetSize</a> ()</td></tr>
+<tr class="memitem:a1f1df575995d116f4388cbf211f73470"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#a1f1df575995d116f4388cbf211f73470">Close</a> ()</td></tr>
 <tr class="inherit_header pub_methods_classkge_1_1_kge_unknown"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classkge_1_1_kge_unknown')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classkge_1_1_kge_unknown.html">kge::KgeUnknown</a></td></tr>
 <tr class="memitem:ab06b557d5ae153685754ad6509e672af inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ab06b557d5ae153685754ad6509e672af">KgeUnknown</a> ()</td></tr>
 <tr class="memdesc:ab06b557d5ae153685754ad6509e672af inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ab06b557d5ae153685754ad6509e672af"></a><br/></td></tr>
 <tr class="memitem:a3ad4ab62fabc537e722876f99aafa551 inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a3ad4ab62fabc537e722876f99aafa551">~KgeUnknown</a> ()</td></tr>
 <tr class="memdesc:a3ad4ab62fabc537e722876f99aafa551 inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a3ad4ab62fabc537e722876f99aafa551"></a><br/></td></tr>
-<tr class="memitem:ad5144b4fa315250679fafe20077780ba inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ad5144b4fa315250679fafe20077780ba">AddRef</a> ()</td></tr>
-<tr class="memdesc:ad5144b4fa315250679fafe20077780ba inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a refrence and return refrenc count.  <a href="#ad5144b4fa315250679fafe20077780ba"></a><br/></td></tr>
-<tr class="memitem:ab90fea932a480b9cfa1c0a1396792ad5 inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ab90fea932a480b9cfa1c0a1396792ad5">DecRef</a> ()</td></tr>
-<tr class="memdesc:ab90fea932a480b9cfa1c0a1396792ad5 inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrese a refrence count and return refrence count. Deletes object when refrence count becomes 0.  <a href="#ab90fea932a480b9cfa1c0a1396792ad5"></a><br/></td></tr>
-<tr class="memitem:a96e255b363a1b2efc2df105ea9dd3083 inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a96e255b363a1b2efc2df105ea9dd3083">Lock</a> ()</td></tr>
-<tr class="memdesc:a96e255b363a1b2efc2df105ea9dd3083 inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the object returns true if succed.  <a href="#a96e255b363a1b2efc2df105ea9dd3083"></a><br/></td></tr>
-<tr class="memitem:adad5ca98afcfd605e785cf8d5839543d inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#adad5ca98afcfd605e785cf8d5839543d">IsLocked</a> ()</td></tr>
-<tr class="memdesc:adad5ca98afcfd605e785cf8d5839543d inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if object is locked.  <a href="#adad5ca98afcfd605e785cf8d5839543d"></a><br/></td></tr>
-<tr class="memitem:a03eaee750015d706b19401469aa71a2c inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a03eaee750015d706b19401469aa71a2c">UnLock</a> ()</td></tr>
-<tr class="memdesc:a03eaee750015d706b19401469aa71a2c inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the object.  <a href="#a03eaee750015d706b19401469aa71a2c"></a><br/></td></tr>
-<tr class="memitem:a6cf44495bebf4e60752b5de5a30a5525 inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a6cf44495bebf4e60752b5de5a30a5525">GetDebugText</a> ()</td></tr>
-<tr class="memdesc:a6cf44495bebf4e60752b5de5a30a5525 inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns instance debug text.  <a href="#a6cf44495bebf4e60752b5de5a30a5525"></a><br/></td></tr>
+<tr class="memitem:a8ea0612fadf677316e29b2368cf22044 inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a8ea0612fadf677316e29b2368cf22044">AddRef</a> ()</td></tr>
+<tr class="memdesc:a8ea0612fadf677316e29b2368cf22044 inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a reference to the object.  <a href="#a8ea0612fadf677316e29b2368cf22044"></a><br/></td></tr>
+<tr class="memitem:a9e55c1a419e6be5b06183dbbfa87d33c inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a9e55c1a419e6be5b06183dbbfa87d33c">DecRef</a> ()</td></tr>
+<tr class="memdesc:a9e55c1a419e6be5b06183dbbfa87d33c inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease a reference from the object. if its reference count get 0 then the object will destroy.  <a href="#a9e55c1a419e6be5b06183dbbfa87d33c"></a><br/></td></tr>
+<tr class="memitem:ada877fb2cc40f56f39a0c5b988c3b843 inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ada877fb2cc40f56f39a0c5b988c3b843">GetRefCount</a> ()</td></tr>
+<tr class="memdesc:ada877fb2cc40f56f39a0c5b988c3b843 inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return resource reference count.  <a href="#ada877fb2cc40f56f39a0c5b988c3b843"></a><br/></td></tr>
+<tr class="memitem:a06dfe92d2bc63de616bafab07e12ee85 inherit pub_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a06dfe92d2bc63de616bafab07e12ee85">GetDebugText</a> ()</td></tr>
+<tr class="memdesc:a06dfe92d2bc63de616bafab07e12ee85 inherit pub_methods_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the instance debug text.  <a href="#a06dfe92d2bc63de616bafab07e12ee85"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a80900ec7b7d9656263a29654130e61dd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#a80900ec7b7d9656263a29654130e61dd">Exist</a> (const char *cstrFileName)</td></tr>
+<tr class="memdesc:a80900ec7b7d9656263a29654130e61dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the file exist.  <a href="#a80900ec7b7d9656263a29654130e61dd"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a3aa4d06c6847822e69a4e878a6977253"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#a3aa4d06c6847822e69a4e878a6977253">m_pFile</a></td></tr>
+<tr class="memitem:a61f9ff00244f9ba0717c5aa4c56fcff4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_file.html#a61f9ff00244f9ba0717c5aa4c56fcff4">m_cFileName</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classkge_1_1_kge_unknown"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classkge_1_1_kge_unknown')"><img src="closed.png" alt="-"/>&nbsp;Protected Member Functions inherited from <a class="el" href="classkge_1_1_kge_unknown.html">kge::KgeUnknown</a></td></tr>
-<tr class="memitem:afc1d592695a1bfe1b93b68514906552a inherit pro_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#afc1d592695a1bfe1b93b68514906552a">SetDebugText</a> (char *name)</td></tr>
-<tr class="inherit_header pro_attribs_classkge_1_1_kge_unknown"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classkge_1_1_kge_unknown')"><img src="closed.png" alt="-"/>&nbsp;Protected Attributes inherited from <a class="el" href="classkge_1_1_kge_unknown.html">kge::KgeUnknown</a></td></tr>
-<tr class="memitem:ada5d910f37dd027304a0ce9ce04dadc8 inherit pro_attribs_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ada5d910f37dd027304a0ce9ce04dadc8">m_uRefCount</a></td></tr>
-<tr class="memdesc:ada5d910f37dd027304a0ce9ce04dadc8 inherit pro_attribs_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refrence count.  <a href="#ada5d910f37dd027304a0ce9ce04dadc8"></a><br/></td></tr>
-<tr class="memitem:acd9cb16a53d41f7a69e68fa12cf8bb80 inherit pro_attribs_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#acd9cb16a53d41f7a69e68fa12cf8bb80">m_bLocked</a></td></tr>
-<tr class="memdesc:acd9cb16a53d41f7a69e68fa12cf8bb80 inherit pro_attribs_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for object locking.  <a href="#acd9cb16a53d41f7a69e68fa12cf8bb80"></a><br/></td></tr>
-<tr class="memitem:ab9684dab7103338915c4638239398feb inherit pro_attribs_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#ab9684dab7103338915c4638239398feb">m_sDebugText</a></td></tr>
-<tr class="memdesc:ab9684dab7103338915c4638239398feb inherit pro_attribs_classkge_1_1_kge_unknown"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class debug name.  <a href="#ab9684dab7103338915c4638239398feb"></a><br/></td></tr>
+<tr class="memitem:a2b67db2dabb9cfda622e759e9e20e243 inherit pro_methods_classkge_1_1_kge_unknown"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1_kge_unknown.html#a2b67db2dabb9cfda622e759e9e20e243">SetDebugText</a> (char *text)</td></tr>
 </table>
+<a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock">
+<p>Definition at line <a class="el" href="_file_8h_source.html#l00019">19</a> of file <a class="el" href="_file_8h_source.html">File.h</a>.</p>
+</div><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3a2d3cd52c3bc25263b38fa3bd555692"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kge::io::File::File </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sazande. </p>
+
+</div>
+</div>
+<a class="anchor" id="afa4cb02625e8e79ef2349a737b1c5c88"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kge::io::File::~File </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mokhareb. </p>
+
+</div>
+</div>
 <h2>Member Function Documentation</h2>
-<a class="anchor" id="adc8e7c4d1b32138a86fa6419afe085de"></a>
+<a class="anchor" id="a1f1df575995d116f4388cbf211f73470"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kge::io::File::Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a80900ec7b7d9656263a29654130e61dd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -166,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">static bool kge::io::File::Exist </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">core::stringc</a> &amp;&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>cstrFileName</em></td><td>)</td>
           <td></td>
         </tr>
@@ -182,8 +246,217 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1cb2a308e34ccd87b82b064095d1fa01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> kge::io::File::GetSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bedast avadane size file e ke baz karde ed. </p>
+<dl class="section return"><dt>Returns</dt><dd>Size file ra bar migardand. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac7b480f193418e8454a3d85bbb7faae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kge::io::File::IsOpen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check mikone ta bebine file amade estefade hast. </p>
+<dl class="section return"><dt>Returns</dt><dd>Agar file ghablan baz shode bashad true mide. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8076f8c4732fe7c52f81f1b5ea836cf1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kge::io::File::Open </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>FileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>CreateFile</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ye file ro baz mikone baraye khondan ya neveshtan age oon file vojod nadashte bashe misazash. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FileName</td><td>Esme file ee ke mikhahid baz shavad. </td></tr>
+    <tr><td class="paramname">CreateFile</td><td>agra true bashad vaghti file vojod nadashte bashe misazash. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>agar movafagh shod true bar migardone. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25134f14fa67e7cec59bd5472d434b01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kge::io::File::Read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>Buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td>
+          <td class="paramname"><em>ReadSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Khondane ghesmati az file. pas az harbar khondan baghie file ro az jaee ke ta dafe ghabl khonde edame mide magar anke az seek estefade konid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Buffer</td><td>Meghdari ke khande mishe dar inja zakhire mishe. </td></tr>
+    <tr><td class="paramname">ReadSize</td><td>Tedade byte hayee ke mikhahid az to file khande shavad. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Tedad byte hayee ro ke khonde bar migardonad. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad548c8ee492068c5997acb06438fcdd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kge::io::File::Seek </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>Current</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Hrekat kardan be noghte ye digari az file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Mahali ke bayad jabeja beshe. </td></tr>
+    <tr><td class="paramname">Current</td><td>Agar flase bashe az aval file mire be noghte morde nazar va age ham ke true bashe az onjaee ke bode jabeja mishe. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7d52a6b54d4fc25455647e7cafba246c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kge::io::File::write </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>Buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td>
+          <td class="paramname"><em>ReadSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Member Data Documentation</h2>
+<a class="anchor" id="a61f9ff00244f9ba0717c5aa4c56fcff4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* kge::io::File::m_cFileName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_file_8h_source.html#l00071">71</a> of file <a class="el" href="_file_8h_source.html">File.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3aa4d06c6847822e69a4e878a6977253"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* kge::io::File::m_pFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_file_8h_source.html#l00070">70</a> of file <a class="el" href="_file_8h_source.html">File.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Novin Pendar/Documents/kge/engine/include/<a class="el" href="_file_8h_source.html">File.h</a></li>
+<li>E:/mycodes/git/kge/Include/io/<a class="el" href="_file_8h_source.html">File.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -191,7 +464,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekge.html">kge</a></li><li class="navelem"><a class="el" href="namespacekge_1_1io.html">io</a></li><li class="navelem"><a class="el" href="classkge_1_1io_1_1_file.html">File</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:37 for Kochol Game Engine by
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:57 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

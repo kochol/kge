@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -67,7 +69,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('structkge_1_1_init_parameters.html',''
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,7 +115,7 @@ $(document).ready(function(){initNavTree('structkge_1_1_init_parameters.html',''
 <p>The parameters that is used for initialize the KGE.  
  <a href="structkge_1_1_init_parameters.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="structs_8h_source.html">structs.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,31 +128,35 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a9426250638c75a89f8cbcc75d18b302a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Screen width (default is 800)  <a href="#a9426250638c75a89f8cbcc75d18b302a"></a><br/></td></tr>
 <tr class="memitem:aa2f31fe4629e7a4254eb98a7feaeea6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#aa2f31fe4629e7a4254eb98a7feaeea6f">Height</a></td></tr>
 <tr class="memdesc:aa2f31fe4629e7a4254eb98a7feaeea6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Screen height (default is 600)  <a href="#aa2f31fe4629e7a4254eb98a7feaeea6f"></a><br/></td></tr>
+<tr class="memitem:af64f33299d648e6bac3a55e4759ea788"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#af64f33299d648e6bac3a55e4759ea788">MaxTextureSize</a></td></tr>
+<tr class="memdesc:af64f33299d648e6bac3a55e4759ea788"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum texture size that engine can allow to load. The bigger texture sizes will be scaled down to this size automatically. (default is 4096)  <a href="#af64f33299d648e6bac3a55e4759ea788"></a><br/></td></tr>
 <tr class="memitem:ab2250400f417a5d23ed561942be2703a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#ab2250400f417a5d23ed561942be2703a">FullScreen</a></td></tr>
 <tr class="memdesc:ab2250400f417a5d23ed561942be2703a"><td class="mdescLeft">&#160;</td><td class="mdescRight">FullScreen mode or windowed mode (default is false)  <a href="#ab2250400f417a5d23ed561942be2703a"></a><br/></td></tr>
 <tr class="memitem:a4b3387fcaa9a34f5a23bbdc6d73378fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#a4b3387fcaa9a34f5a23bbdc6d73378fb">VSync</a></td></tr>
 <tr class="memdesc:a4b3387fcaa9a34f5a23bbdc6d73378fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertical sync On or Off (default is Off == false)  <a href="#a4b3387fcaa9a34f5a23bbdc6d73378fb"></a><br/></td></tr>
 <tr class="memitem:ad3c1b00767de4d57f5875b89346dc501"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#ad3c1b00767de4d57f5875b89346dc501">UseStencil</a></td></tr>
 <tr class="memdesc:ad3c1b00767de4d57f5875b89346dc501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and use stencil buffer (default is true)  <a href="#ad3c1b00767de4d57f5875b89346dc501"></a><br/></td></tr>
-<tr class="memitem:a0b4e0b912af36343b27103dce0fcc021"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#a0b4e0b912af36343b27103dce0fcc021">bits</a></td></tr>
-<tr class="memdesc:a0b4e0b912af36343b27103dce0fcc021"><td class="mdescLeft">&#160;</td><td class="mdescRight">color bits 16, 24, 32 (default is 32)  <a href="#a0b4e0b912af36343b27103dce0fcc021"></a><br/></td></tr>
+<tr class="memitem:a7d4492e814f1fc2e9b725904775b927e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#a7d4492e814f1fc2e9b725904775b927e">Bits</a></td></tr>
+<tr class="memdesc:a7d4492e814f1fc2e9b725904775b927e"><td class="mdescLeft">&#160;</td><td class="mdescRight">color bits 16, 24, 32 (default is 32)  <a href="#a7d4492e814f1fc2e9b725904775b927e"></a><br/></td></tr>
 <tr class="memitem:af8f2a8b76675291abb0e7ce97a039ad8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge_1_1gfx.html#a0214c5994b5c74ff662edcec13f799b5">gfx::AntiAliasingMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#af8f2a8b76675291abb0e7ce97a039ad8">AAMode</a></td></tr>
 <tr class="memdesc:af8f2a8b76675291abb0e7ce97a039ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anti aliasing technique (default is EAAM_MSAA)  <a href="#af8f2a8b76675291abb0e7ce97a039ad8"></a><br/></td></tr>
 <tr class="memitem:a7f9a8bf1fb137507c0a94404cf870e56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#a7f9a8bf1fb137507c0a94404cf870e56">AAQuality</a></td></tr>
 <tr class="memdesc:a7f9a8bf1fb137507c0a94404cf870e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anti aliasing technique 2,4,6,8 (default is 2)  <a href="#a7f9a8bf1fb137507c0a94404cf870e56"></a><br/></td></tr>
+<tr class="memitem:ac5eff38e425891769a7eccde24c98751"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge_1_1gfx.html#a8e64135243b790d4e0d65f36c2a98f03">gfx::RendererAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#ac5eff38e425891769a7eccde24c98751">RendererType</a></td></tr>
+<tr class="memdesc:ac5eff38e425891769a7eccde24c98751"><td class="mdescLeft">&#160;</td><td class="mdescRight">RendererType (default is ERA_DirectX9)  <a href="#ac5eff38e425891769a7eccde24c98751"></a><br/></td></tr>
 <tr class="memitem:a159290acd06202323fc79a1d4479d779"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#a159290acd06202323fc79a1d4479d779">RendererName</a></td></tr>
 <tr class="memdesc:a159290acd06202323fc79a1d4479d779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderer plugin name (default is "d3d9")  <a href="#a159290acd06202323fc79a1d4479d779"></a><br/></td></tr>
 <tr class="memitem:ab183806f7746171bd734c10d4183d955"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#ab183806f7746171bd734c10d4183d955">InputMgrName</a></td></tr>
 <tr class="memdesc:ab183806f7746171bd734c10d4183d955"><td class="mdescLeft">&#160;</td><td class="mdescRight">InputManager plugin name (ie. OIS)  <a href="#ab183806f7746171bd734c10d4183d955"></a><br/></td></tr>
 <tr class="memitem:af850ddf9840a3046ebea479253decdbd"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#af850ddf9840a3046ebea479253decdbd">hwnd</a></td></tr>
 <tr class="memdesc:af850ddf9840a3046ebea479253decdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">External window handle pointer (default is NULL)  <a href="#af850ddf9840a3046ebea479253decdbd"></a><br/></td></tr>
-<tr class="memitem:a3b4c31911aaf7c3e7a163f44c4a0e342"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge_1_1io.html#ad8adb4fe04e28ecf5aaa342a7ed90657">io::LogMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#a3b4c31911aaf7c3e7a163f44c4a0e342">Logmode</a></td></tr>
-<tr class="memdesc:a3b4c31911aaf7c3e7a163f44c4a0e342"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogMode (default is ELM_Console)  <a href="#a3b4c31911aaf7c3e7a163f44c4a0e342"></a><br/></td></tr>
 <tr class="memitem:a8e5530748377c78ba1293e328fc4786b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekge_1_1io.html#ab94017025623110886d0a7346d6f4ad9">io::LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1_init_parameters.html#a8e5530748377c78ba1293e328fc4786b">Loglevel</a></td></tr>
 <tr class="memdesc:a8e5530748377c78ba1293e328fc4786b"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogLevel (default is ELL_EveryThing)  <a href="#a8e5530748377c78ba1293e328fc4786b"></a><br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>The parameters that is used for initialize the KGE. </p>
+
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00021">21</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae0cb9b089bf3b63e227365e3f98b3027"></a>
 <div class="memitem">
@@ -176,6 +181,8 @@ Public Attributes</h2></td></tr>
 
 <p>Constructor for setting default values. </p>
 
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00024">24</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
 </div>
 </div>
 <h2>Member Data Documentation</h2>
@@ -191,6 +198,8 @@ Public Attributes</h2></td></tr>
 
 <p>Anti aliasing technique (default is EAAM_MSAA) </p>
 
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00049">49</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7f9a8bf1fb137507c0a94404cf870e56"></a>
@@ -205,19 +214,23 @@ Public Attributes</h2></td></tr>
 
 <p>Anti aliasing technique 2,4,6,8 (default is 2) </p>
 
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00050">50</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a0b4e0b912af36343b27103dce0fcc021"></a>
+<a class="anchor" id="a7d4492e814f1fc2e9b725904775b927e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> kge::InitParameters::bits</td>
+          <td class="memname"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> kge::InitParameters::Bits</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>color bits 16, 24, 32 (default is 32) </p>
+
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00048">48</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
 
 </div>
 </div>
@@ -233,6 +246,8 @@ Public Attributes</h2></td></tr>
 
 <p>FullScreen mode or windowed mode (default is false) </p>
 
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00045">45</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa2f31fe4629e7a4254eb98a7feaeea6f"></a>
@@ -246,6 +261,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Screen height (default is 600) </p>
+
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00042">42</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
 
 </div>
 </div>
@@ -261,6 +278,8 @@ Public Attributes</h2></td></tr>
 
 <p>External window handle pointer (default is NULL) </p>
 
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00054">54</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab183806f7746171bd734c10d4183d955"></a>
@@ -274,6 +293,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>InputManager plugin name (ie. OIS) </p>
+
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00052">52</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
 
 </div>
 </div>
@@ -289,19 +310,23 @@ Public Attributes</h2></td></tr>
 
 <p>LogLevel (default is ELL_EveryThing) </p>
 
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00056">56</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a3b4c31911aaf7c3e7a163f44c4a0e342"></a>
+<a class="anchor" id="af64f33299d648e6bac3a55e4759ea788"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacekge_1_1io.html#ad8adb4fe04e28ecf5aaa342a7ed90657">io::LogMode</a> kge::InitParameters::Logmode</td>
+          <td class="memname"><a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">u32</a> kge::InitParameters::MaxTextureSize</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>LogMode (default is ELM_Console) </p>
+<p>The maximum texture size that engine can allow to load. The bigger texture sizes will be scaled down to this size automatically. (default is 4096) </p>
+
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00042">42</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
 
 </div>
 </div>
@@ -317,6 +342,24 @@ Public Attributes</h2></td></tr>
 
 <p>Renderer plugin name (default is "d3d9") </p>
 
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00052">52</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5eff38e425891769a7eccde24c98751"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacekge_1_1gfx.html#a8e64135243b790d4e0d65f36c2a98f03">gfx::RendererAPI</a> kge::InitParameters::RendererType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RendererType (default is ERA_DirectX9) </p>
+
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00051">51</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad3c1b00767de4d57f5875b89346dc501"></a>
@@ -330,6 +373,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create and use stencil buffer (default is true) </p>
+
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00045">45</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
 
 </div>
 </div>
@@ -345,6 +390,8 @@ Public Attributes</h2></td></tr>
 
 <p>Vertical sync On or Off (default is Off == false) </p>
 
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00045">45</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9426250638c75a89f8cbcc75d18b302a"></a>
@@ -359,10 +406,12 @@ Public Attributes</h2></td></tr>
 
 <p>Screen width (default is 800) </p>
 
+<p>Definition at line <a class="el" href="_init_parameter_8h_source.html#l00042">42</a> of file <a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/Novin Pendar/Documents/kge/engine/include/<a class="el" href="structs_8h_source.html">structs.h</a></li>
+<li>E:/mycodes/git/kge/Include/<a class="el" href="_init_parameter_8h_source.html">InitParameter.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -370,7 +419,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekge.html">kge</a></li><li class="navelem"><a class="el" href="structkge_1_1_init_parameters.html">InitParameters</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:55 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

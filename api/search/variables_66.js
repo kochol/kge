@@ -1,7 +1,20 @@
 var searchData=
 [
+  ['fangularvelocity',['fAngularVelocity',['../structkge_1_1sn_1_1_animated_texture_parameters.html#a06ba54d6af01de577eb849f0ceba2639',1,'kge::sn::AnimatedTextureParameters']]],
+  ['fdegtorad',['fDegToRad',['../namespacekge_1_1math.html#a2e3a00420eccba4546b3c85113d0e2f2',1,'kge::math']]],
+  ['fduration',['fDuration',['../structkge_1_1sn_1_1_animated_texture_parameters.html#a12b91e6edc8dd12baac94ab6344b02fb',1,'kge::sn::AnimatedTextureParameters']]],
   ['fepsilon',['fEpsilon',['../namespacekge_1_1math.html#af1bb25f50a0fc30fb69addc179670cb9',1,'kge::math']]],
-  ['fpi',['fPI',['../namespacekge_1_1math.html#af33c58de949f748558ee715628b7b3b8',1,'kge::math']]],
-  ['freq',['freq',['../classkge_1_1core_1_1_timer.html#a5fc723e6a3beb787a25768b46062237a',1,'kge::core::Timer']]],
+  ['finalcolor',['finalColor',['../structkge_1_1sn_1_1_animated_texture_parameters.html#acd8e85193d372eb4e81b82799e35cb52',1,'kge::sn::AnimatedTextureParameters::finalColor()'],['../structkge_1_1sn_1_1_particle_system_parameters.html#a5e6fe0bf53532504dd56222ad0f79842',1,'kge::sn::ParticleSystemParameters::finalColor()']]],
+  ['finalparticlesize',['finalParticleSize',['../structkge_1_1sn_1_1_particle_system_parameters.html#a593e5a4d4cfb4a11338a9cd09a70f3ca',1,'kge::sn::ParticleSystemParameters']]],
+  ['fixedaxis',['fixedAxis',['../structkge_1_1sn_1_1_animated_texture_parameters.html#ac5b522a24508b5e8aa7878ca8a3eca2a',1,'kge::sn::AnimatedTextureParameters']]],
+  ['flush',['flush',['../structkge_1_1sn_1_1_particle_system_parameters.html#a88be096a229d631c20f95428a7bbfd65',1,'kge::sn::ParticleSystemParameters']]],
+  ['force',['force',['../structkge_1_1sn_1_1_particle_system_parameters.html#aa62144b7ff3907b3ea159c895b2fe3a2',1,'kge::sn::ParticleSystemParameters']]],
+  ['forces',['forces',['../structkge_1_1sn_1_1_particle_system_parameters.html#a677bf0321836e3533bec695c272f61e9',1,'kge::sn::ParticleSystemParameters']]],
+  ['fps',['fps',['../classkge_1_1core_1_1_timer.html#ad0d3520333cb00890a34f797a7da3240',1,'kge::core::Timer']]],
+  ['fradtodeg',['fRadToDeg',['../namespacekge_1_1math.html#abb864cd7bd285ef1759d76655d13f0cc',1,'kge::math']]],
+  ['frensel',['Frensel',['../classkge_1_1gfx_1_1_material.html#a131a7fe04be63162acd6248ec1d83760',1,'kge::gfx::Material::Frensel()'],['../classkge_1_1gfx_1_1_material_params.html#aca56ecdc5f5f69ad7bcea896a23138c8',1,'kge::gfx::MaterialParams::Frensel()']]],
+  ['frenselval',['FrenselVal',['../classkge_1_1gfx_1_1_material.html#a621f257fef949d28228cbae47590a0a6',1,'kge::gfx::Material']]],
+  ['freq',['freq',['../classkge_1_1core_1_1_timer.html#a712422b4711d35c95deaad80cf4a65cd',1,'kge::core::Timer']]],
+  ['ftargetdistance',['fTargetDistance',['../structkge_1_1sn_1_1_particle_system_parameters.html#a73b45f2cd70349348c3ad377485b4a69',1,'kge::sn::ParticleSystemParameters']]],
   ['fullscreen',['FullScreen',['../structkge_1_1_init_parameters.html#ab2250400f417a5d23ed561942be2703a',1,'kge::InitParameters']]]
 ];

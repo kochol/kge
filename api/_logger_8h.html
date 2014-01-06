@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Kochol Game Engine: C:/Users/Novin Pendar/Documents/kge/engine/include/Logger.h File Reference</title>
+<title>Kochol Game Engine: E:/mycodes/git/kge/Include/io/Logger.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -90,7 +92,7 @@ $(document).ready(function(){initNavTree('_logger_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -103,54 +105,60 @@ $(document).ready(function(){initNavTree('_logger_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">Logger.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;queue&gt;</code><br/>
-<code>#include &quot;<a class="el" href="enums_8h_source.html">enums.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="_kge_thread_8h_source.html">KgeThread.h</a>&quot;</code><br/>
-<code>#include &lt;string&gt;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="kgedef_8h_source.html">../kgedef.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_functor_8h_source.html">../core/Functor.h</a>&quot;</code><br/>
 </div>
 <p><a href="_logger_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkge_1_1io_1_1_log_struct.html">kge::io::LogStruct</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structkge_1_1io_1_1_log_struct.html" title="LogStruct is for storing log data.">LogStruct</a> is for storing log data.  <a href="structkge_1_1io_1_1_log_struct.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkge_1_1io_1_1_logger.html">kge::io::Logger</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classkge_1_1io_1_1_logger.html" title="Logger class print logs to console, file or html.">Logger</a> class print logs to console, file or html.  <a href="classkge_1_1io_1_1_logger.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacekge"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge.html">kge</a></td></tr>
-<tr class="memdesc:namespacekge"><td class="mdescLeft">&#160;</td><td class="mdescRight">Everything about KGE is here. <br/></td></tr>
-<tr class="memitem:namespacekge_1_1core"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1core.html">kge::core</a></td></tr>
-<tr class="memdesc:namespacekge_1_1core"><td class="mdescLeft">&#160;</td><td class="mdescRight">KGE core classes. <br/></td></tr>
 <tr class="memitem:namespacekge_1_1io"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1io.html">kge::io</a></td></tr>
 <tr class="memdesc:namespacekge_1_1io"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input/Output classes. <br/></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0fd9e47c921c9c4201a4c2339b1366f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_logger_8h.html#a0fd9e47c921c9c4201a4c2339b1366f9">KGE_CONSOLE</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a053e8d40b91fbe5d53ea128b3eae55ce"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1io.html#a053e8d40b91fbe5d53ea128b3eae55ce">kge::io::LogType</a> { <br/>
-&#160;&#160;<a class="el" href="namespacekge_1_1io.html#a053e8d40b91fbe5d53ea128b3eae55cea0e4d4a40fefaf38ac3560d92b5ab24d8">kge::io::ELT_Info</a>, 
-<a class="el" href="namespacekge_1_1io.html#a053e8d40b91fbe5d53ea128b3eae55cea9c1feca487ef6fd9e8529b4a619d20af">kge::io::ELT_Warning</a>, 
-<a class="el" href="namespacekge_1_1io.html#a053e8d40b91fbe5d53ea128b3eae55ceafeeddff7fcd9d2e5f965abdb95bd7d55">kge::io::ELT_Error</a>, 
-<a class="el" href="namespacekge_1_1io.html#a053e8d40b91fbe5d53ea128b3eae55cead6cd3c6ff06a04090d8e6696de110c2d">kge::io::ELT_Debug</a>, 
-<br/>
-&#160;&#160;<a class="el" href="namespacekge_1_1io.html#a053e8d40b91fbe5d53ea128b3eae55ceac3f4fe1a15f9bf1f6a10c3036d46b7d1">kge::io::ELT_Success</a>
-<br/>
+<tr class="memitem:ad8adb4fe04e28ecf5aaa342a7ed90657"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekge_1_1io.html#ad8adb4fe04e28ecf5aaa342a7ed90657">kge::io::LogMode</a> { <a class="el" href="namespacekge_1_1io.html#ad8adb4fe04e28ecf5aaa342a7ed90657aa80e319965eefa3790c5ee422adeac7e">kge::io::ELM_Information</a>, 
+<a class="el" href="namespacekge_1_1io.html#ad8adb4fe04e28ecf5aaa342a7ed90657a371ce1f4f7374b109a3e910e11b086ad">kge::io::ELM_Error</a>, 
+<a class="el" href="namespacekge_1_1io.html#ad8adb4fe04e28ecf5aaa342a7ed90657a8a6e2042f516b923e401b5f8aeb0a182">kge::io::ELM_Warning</a>
  }</td></tr>
-<tr class="memdesc:a053e8d40b91fbe5d53ea128b3eae55ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log type.  <a href="namespacekge_1_1io.html#a053e8d40b91fbe5d53ea128b3eae55ce">More...</a><br/></td></tr>
 </table>
+<h2>Macro Definition Documentation</h2>
+<a class="anchor" id="a0fd9e47c921c9c4201a4c2339b1366f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KGE_CONSOLE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_logger_8h_source.html#l00013">13</a> of file <a class="el" href="_logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><a class="el" href="dir_bafa501d493553e442f19f5f8dd7b29c.html">include</a></li><li class="navelem"><a class="el" href="_logger_8h.html">Logger.h</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="navelem"><a class="el" href="dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="dir_deea50d16e0677fbfacb413bf983068c.html">mycodes</a></li><li class="navelem"><a class="el" href="dir_8af5a13fc9984a0fa39713d3d8d79f6f.html">git</a></li><li class="navelem"><a class="el" href="dir_f117ff2519cf9fdb3c53910fd4f46e74.html">kge</a></li><li class="navelem"><a class="el" href="dir_be4880de99480d6ac3e802891aa8202a.html">Include</a></li><li class="navelem"><a class="el" href="dir_3498469dbad3ab80d5092e93f1754ca3.html">io</a></li><li class="navelem"><a class="el" href="_logger_8h.html">Logger.h</a></li>
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:55 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Kochol Game Engine: C:/Users/Novin Pendar/Documents/kge/engine/include/Mouse.h Source File</title>
+<title>Kochol Game Engine: E:/mycodes/git/kge/Include/io/Mouse.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -90,7 +92,7 @@ $(document).ready(function(){initNavTree('_mouse_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,111 +106,74 @@ $(document).ready(function(){initNavTree('_mouse_8h_source.html','');});
 <div class="title">Mouse.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_mouse_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef KGE_MOUSE_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KGE_MOUSE_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kgedef_8h.html">kgedef.h</a>&quot;</span></div>
+<a href="_mouse_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// File name: Mouse.h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Des: In class baraye kar ba mouse hast.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Date: 6/10/1386 (jalali)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Programmer: Ali Akbar Mohamadi(Kochol),Pooya Shahinfar(Pswin)</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>kge</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keyword">namespace </span>io</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        {</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548">   11</a></span>&#160;                <span class="keyword">enum</span> <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548" title="Button ID for mouse devices.">MouseButtonID</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548aae7b7996db8bfbc7ab8474f7ffa23a65">   13</a></span>&#160;                        <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548aae7b7996db8bfbc7ab8474f7ffa23a65">MB_Left</a> = 0, </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548acca3cd93370c2a578d2c4454ed6690cb">   14</a></span>&#160;                        <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548acca3cd93370c2a578d2c4454ed6690cb">MB_Right</a>, </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548ac1be0f1791cb5ddf38142ca65d37a7e9">   15</a></span>&#160;                        <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548ac1be0f1791cb5ddf38142ca65d37a7e9">MB_Middle</a>,</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548ae8c8245ee0d5b5b65fd3492e48414dc1">   16</a></span>&#160;                        <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548ae8c8245ee0d5b5b65fd3492e48414dc1">MB_Button3</a>, </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548a1e09e050ea14094fb5236e1d1a9fb1c6">   17</a></span>&#160;                        <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548a1e09e050ea14094fb5236e1d1a9fb1c6">MB_Button4</a>,     </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548a8ff4e77263bcbbb98c71f587bc8f19dd">   18</a></span>&#160;                        <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548a8ff4e77263bcbbb98c71f587bc8f19dd">MB_Button5</a>, </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548a6958100f67db1bf37f60b4b0aaa528dd">   19</a></span>&#160;                        <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548a6958100f67db1bf37f60b4b0aaa528dd">MB_Button6</a>,     </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548a51056c5cc0875d4e981cd74306dec106">   20</a></span>&#160;                        <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548a51056c5cc0875d4e981cd74306dec106">MB_Button7</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                }; <span class="comment">// MouseButtonID</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_axis.html">   25</a></span>&#160;                <span class="keyword">class </span><a class="code" href="gnuc__def_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1io_1_1_axis.html" title="Axis class.">Axis</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_axis.html#ab99069c963a1e9a964f6f6b125290b6a">   30</a></span>&#160;                        <a class="code" href="classkge_1_1io_1_1_axis.html" title="Axis class.">Axis</a>() : abs(0), rel(0), absOnly(false) {};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        <span class="keywordtype">int</span> abs, rel;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_axis.html#a1f572ccf3fc401115501bb10ed518998">   36</a></span>&#160;                        <span class="keywordtype">bool</span> <a class="code" href="classkge_1_1io_1_1_axis.html#a1f572ccf3fc401115501bb10ed518998" title="Indicates if this Axis only supports Absoulte (ie JoyStick)">absOnly</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_axis.html#abaeb8991425bf8c4f982e7dcc46b1839">   39</a></span>&#160;                        <span class="keywordtype">void</span> clear()</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                abs = rel = 0;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                }; <span class="comment">// Axis</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_state.html">   50</a></span>&#160;                <span class="keyword">class </span><a class="code" href="gnuc__def_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1io_1_1_mouse_state.html">MouseState</a></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_state.html#a3b2eb34b9efe6d12c3869d825d2c6ae9">   53</a></span>&#160;                        <a class="code" href="classkge_1_1io_1_1_mouse_state.html">MouseState</a>() : width(50), height(50), buttons(0) {};</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef MOUSE_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MOUSE_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../KgeUnknown.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../math/Vector.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../core/Functor.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../gui/Events.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>kge</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>io</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83c">   19</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83c">MouseButton</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca37f3dbf22e63c2121e4364e76ebb2f3b">   21</a></span>&#160;                <a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca37f3dbf22e63c2121e4364e76ebb2f3b">EMB_Left</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83cab9b30904d7221f12f7e63fb01c3b6b05">   22</a></span>&#160;                <a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83cab9b30904d7221f12f7e63fb01c3b6b05">EMB_Middle</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca062c8672afc3ec295d6427818a56735c">   23</a></span>&#160;                <a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca062c8672afc3ec295d6427818a56735c">EMB_Right</a>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca13569ca339a8720d61555fba0d7c18c4">   24</a></span>&#160;                <a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca13569ca339a8720d61555fba0d7c18c4">EMB_WheelUp</a>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca1a226740636759255acc1b936fe53b10">   25</a></span>&#160;                <a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca1a226740636759255acc1b936fe53b10">EMB_WheelDown</a>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca750ea0ca6846ce5abd76e2e02f090e51">   26</a></span>&#160;                <a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83ca750ea0ca6846ce5abd76e2e02f090e51">EMB_None</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }; <span class="comment">// BUTTONS</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="kgedef_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1io_1_1_mouse.html">Mouse</a>: <span class="keyword">public</span> <a class="code" href="classkge_1_1_kge_unknown.html" title="This class is for refrence counting and lock and unlocking object for multi thread purpose...">KgeUnknown</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse.html#ad12e23b02390c9654920f57c503aadee">   35</a></span>&#160;        <a class="code" href="classkge_1_1io_1_1_mouse.html#ad12e23b02390c9654920f57c503aadee" title="Constructor.">Mouse</a>() {}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ~<a class="code" href="classkge_1_1io_1_1_mouse.html">Mouse</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> GetPosition(<a class="code" href="classkge_1_1math_1_1_vector2.html" title="2D Vector">math::Vector2I</a> &amp;pos);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classkge_1_1math_1_1_vector2.html" title="2D Vector">math::Vector2I</a> GetPosition();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> SetPosition(<span class="keyword">const</span> <a class="code" href="classkge_1_1math_1_1_vector2.html" title="2D Vector">math::Vector2I</a>&amp; pos);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        <span class="keyword">mutable</span> <span class="keywordtype">int</span> width, height;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_state.html#a6aab6ae359e0bc58b9b5e111122b1346">   61</a></span>&#160;                        <a class="code" href="classkge_1_1io_1_1_axis.html" title="Axis class.">Axis</a> <a class="code" href="classkge_1_1io_1_1_mouse_state.html#a6aab6ae359e0bc58b9b5e111122b1346" title="X Axis component.">X</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_state.html#a85ef9b21edda692510e4470df6e2a882">   64</a></span>&#160;                        <a class="code" href="classkge_1_1io_1_1_axis.html" title="Axis class.">Axis</a> <a class="code" href="classkge_1_1io_1_1_mouse_state.html#a85ef9b21edda692510e4470df6e2a882" title="Y Axis Component.">Y</a>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_state.html#accf9deaac20f0f6b59c6014fd818c771">   67</a></span>&#160;                        <a class="code" href="classkge_1_1io_1_1_axis.html" title="Axis class.">Axis</a> <a class="code" href="classkge_1_1io_1_1_mouse_state.html#accf9deaac20f0f6b59c6014fd818c771" title="Z Axis Component.">Z</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_state.html#ae9665aac802d2d4fc470ab4c44307c5f">   70</a></span>&#160;                        <span class="keywordtype">int</span> <a class="code" href="classkge_1_1io_1_1_mouse_state.html#ae9665aac802d2d4fc470ab4c44307c5f" title="represents all buttons - bit position indicates button down">buttons</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> SetPosition(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">bool</span> ButtonDown(<a class="code" href="namespacekge_1_1io.html#a9810546b97ead45dc8da7f616cded83c">MouseButton</a> btn);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> Connect(<a class="code" href="namespacekge_1_1gui.html#aa6e4ce48e4e77fb0b1df674d5fad6071" title="Event types.">gui::EventType</a> eventtype,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <a class="code" href="classkge_1_1core_1_1_functor1.html" title="This class is for calling a function with one argument.">core::Functor1&lt;void, gui::EventArgs*&gt;</a>* Function);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_state.html#a27207be0eb81f5ac6bf081be6f4c2cd5">   73</a></span>&#160;                        <span class="keyword">inline</span> <span class="keywordtype">bool</span> buttonDown( <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548" title="Button ID for mouse devices.">MouseButtonID</a> button )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">                        </span>{</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                <span class="keywordflow">return</span> ((buttons &amp; ( 1L &lt;&lt; button )) == 0) ? <span class="keyword">false</span> : <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}; <span class="comment">// Mouse</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;} <span class="comment">// io</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;} <span class="comment">// kge</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_state.html#adbb8ecafad4bbaa6d8716a447f906b29">   79</a></span>&#160;                        <span class="keywordtype">void</span> clear()</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                X.clear();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                Y.clear();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                Z.clear();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                buttons = 0;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                }; <span class="comment">// MouseState</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_listener.html">   93</a></span>&#160;                <span class="keyword">class </span><a class="code" href="gnuc__def_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1io_1_1_mouse_listener.html">MouseListener</a></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse_listener.html#a23b1a9376653f8a9486d6032b54d8337">   96</a></span>&#160;                        <span class="keyword">virtual</span> <a class="code" href="classkge_1_1io_1_1_mouse_listener.html#a23b1a9376653f8a9486d6032b54d8337">~MouseListener</a>() {}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> MouseMoved( <span class="keyword">const</span> <a class="code" href="classkge_1_1io_1_1_mouse_state.html">MouseState</a> &amp;arg ) = 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> MousePressed( <span class="keyword">const</span> <a class="code" href="classkge_1_1io_1_1_mouse_state.html">MouseState</a> &amp;arg, <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548" title="Button ID for mouse devices.">MouseButtonID</a> <span class="keywordtype">id</span> ) = 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> MouseReleased( <span class="keyword">const</span> <a class="code" href="classkge_1_1io_1_1_mouse_state.html">MouseState</a> &amp;arg, <a class="code" href="namespacekge_1_1io.html#a60567652ec4a02faf3c62362ae1f1548" title="Button ID for mouse devices.">MouseButtonID</a> <span class="keywordtype">id</span> ) = 0;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                }; <span class="comment">// MouseListener</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse.html">  104</a></span>&#160;                <span class="keyword">class </span><a class="code" href="gnuc__def_8h.html#a526832ab2dc74d38864716df052c4843">KGE_API</a> <a class="code" href="classkge_1_1io_1_1_mouse.html" title="The mouse interface.">Mouse</a></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse.html#adb0272d30debe3b3d780c3ccfe110259">  109</a></span>&#160;                        <span class="keyword">virtual</span> <a class="code" href="classkge_1_1io_1_1_mouse.html#adb0272d30debe3b3d780c3ccfe110259" title="Destructor.">~Mouse</a>() {}</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse.html#a4f982187159b455eb600ad37ab505b4c">  112</a></span>&#160;                        <span class="keyword">const</span> <a class="code" href="classkge_1_1io_1_1_mouse_state.html">MouseState</a>&amp; <a class="code" href="classkge_1_1io_1_1_mouse.html#a4f982187159b455eb600ad37ab505b4c">getMouseState</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_State; }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="classkge_1_1io_1_1_mouse.html#ab84134f32ea447c157d9cf3bb63b6335">  117</a></span>&#160;                        <a class="code" href="classkge_1_1io_1_1_mouse_state.html">MouseState</a> <a class="code" href="classkge_1_1io_1_1_mouse.html#ab84134f32ea447c157d9cf3bb63b6335" title="The state of the mouse.">m_State</a>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                }; <span class="comment">// Mouse</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        } <span class="comment">// io</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// kge</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif // KGE_MOUSE_H</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif // MOUSE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><a class="el" href="dir_bafa501d493553e442f19f5f8dd7b29c.html">include</a></li><li class="navelem"><a class="el" href="_mouse_8h.html">Mouse.h</a></li>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:36 for Kochol Game Engine by
+    <li class="navelem"><a class="el" href="dir_885cc87fac2d91e269af0a5a959fa5f6.html">E:</a></li><li class="navelem"><a class="el" href="dir_deea50d16e0677fbfacb413bf983068c.html">mycodes</a></li><li class="navelem"><a class="el" href="dir_8af5a13fc9984a0fa39713d3d8d79f6f.html">git</a></li><li class="navelem"><a class="el" href="dir_f117ff2519cf9fdb3c53910fd4f46e74.html">kge</a></li><li class="navelem"><a class="el" href="dir_be4880de99480d6ac3e802891aa8202a.html">Include</a></li><li class="navelem"><a class="el" href="dir_3498469dbad3ab80d5092e93f1754ca3.html">io</a></li><li class="navelem"><a class="el" href="_mouse_8h.html">Mouse.h</a></li>
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:54 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

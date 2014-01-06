@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="gd_kochol.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Kochol Game Engine
    &#160;<span id="projectnumber">0.1.0</span>
@@ -43,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -100,7 +102,7 @@ $(document).ready(function(){initNavTree('namespacemembers_type.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -126,8 +128,17 @@ $(document).ready(function(){initNavTree('namespacemembers_type.html','');});
 <li>InputMgrPlugin
 : <a class="el" href="namespacekge.html#a96d065089af9ba8c1f98be3cf697b209">kge</a>
 </li>
+<li>kgeRenderCallback
+: <a class="el" href="namespacekge_1_1gfx.html#ac178dcb0c328d3cac7f882a6bb38efd4">kge::gfx</a>
+</li>
 <li>LoaderPlugin
 : <a class="el" href="namespacekge.html#a9fa9bc5d382828c9906a0bb95eb1e73e">kge</a>
+</li>
+<li>RectI
+: <a class="el" href="namespacekge_1_1core.html#a6c6fd57b8819677d9ddd62e623f6a541">kge::core</a>
+</li>
+<li>RectUL
+: <a class="el" href="namespacekge_1_1core.html#a3ad33da780f220f35f05236aada5192e">kge::core</a>
 </li>
 <li>RendererPlugin
 : <a class="el" href="namespacekge.html#ace7962149125c35ccdbdb17dedb02ec1">kge</a>
@@ -136,7 +147,13 @@ $(document).ready(function(){initNavTree('namespacemembers_type.html','');});
 : <a class="el" href="namespacekge.html#ab91bede2c6a5baae0b6ab1a13e8b422f">kge</a>
 </li>
 <li>s32
-: <a class="el" href="namespacekge.html#ae2b96eec4ced26cc3ee2843085bb4a5b">kge</a>
+: <a class="el" href="namespacekge.html#a834e543b3bd62481902ed49db96c5f85">kge</a>
+</li>
+<li>s64
+: <a class="el" href="namespacekge.html#aecd044e6bc4b99d026b08d2a43b34c06">kge</a>
+</li>
+<li>ShaderHandle
+: <a class="el" href="namespacekge_1_1gfx.html#a41c46e90e6a93d984f60d3b039fb759b">kge::gfx</a>
 </li>
 <li>stringc
 : <a class="el" href="namespacekge_1_1core.html#a89616992a36e140e65da797cdcfbfc5a">kge::core</a>
@@ -150,6 +167,9 @@ $(document).ready(function(){initNavTree('namespacemembers_type.html','');});
 <li>u32
 : <a class="el" href="namespacekge.html#af55fabf47240ccdd40402f1484b6ce41">kge</a>
 </li>
+<li>u64
+: <a class="el" href="namespacekge.html#a55a92e1cc3e89c3321f2338f2f0fc25f">kge</a>
+</li>
 <li>u8
 : <a class="el" href="namespacekge.html#a102cf37011449a6800cf3e576a6cf6ec">kge</a>
 </li>
@@ -159,13 +179,19 @@ $(document).ready(function(){initNavTree('namespacemembers_type.html','');});
 <li>ul32
 : <a class="el" href="namespacekge.html#a2a63da4ecb2f1e3bf268d7c3a764a69b">kge</a>
 </li>
+<li>Vector2F
+: <a class="el" href="namespacekge_1_1math.html#ab8f73646ee83535490d614f9270ab991">kge::math</a>
+</li>
+<li>Vector2I
+: <a class="el" href="namespacekge_1_1math.html#af485503484b4cdd688e8efd8eeeb7270">kge::math</a>
+</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Dec 16 2012 09:57:37 for Kochol Game Engine by
+    <li class="footer">Generated on Mon Jan 6 2014 16:02:59 for Kochol Game Engine by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
