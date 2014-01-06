@@ -6,7 +6,6 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#include <SDL_stdinc.h>
 #include "../KgeUnknown.h"
 #include "../kgedef.h"
 
@@ -53,9 +52,9 @@ protected:
 
 	bool isFirstGetTimeCall;
 
-	Uint64 lastTick;
-	Uint64 base;
-	Uint64 freq; // Frequency of your CPU
+	u64 lastTick;
+	u64 base;
+	u64 freq; // Frequency of your CPU
 	int ims; // Millisecond
 
 }; // Timer

@@ -195,6 +195,12 @@ namespace kge
 	//! A 32-bit signed int
 	typedef signed int     s32;
 
+	//! A 64-bit unsigned int
+	typedef unsigned long long   u64;
+
+	//! A 64-bit signed int
+	typedef signed long long     s64;
+
 	//! A 32-bit unsigned integer = DWORD
 	typedef unsigned long  ul32;
 
