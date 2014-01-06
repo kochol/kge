@@ -2,6 +2,7 @@
 
 #include <vector>
 #include "../kgedef.h"
+#include "../core/Task.h"
 #include "Message.h"
 
 namespace kge
@@ -10,7 +11,7 @@ namespace kge
 	{
 		class Entity;
 
-		class KGELIB_API System
+		class KGELIB_API System: public core::Task
 		{
 		public:
 		
@@ -34,6 +35,13 @@ namespace kge
 			virtual bool OnMessage(Message* msg) = 0;
 
 		protected:
+
+			//! TaskManager call this function on a different thread and
+			//! this function calls AsyncUpdate update from this function.
+			core::Task* Do();
+
+			//! Should this system update trough a thread default = false
+			bool							m_bAsyncUpdate;
 		
 			//! Adds an entity to system
 			void AddEntity(Entity* pEn);

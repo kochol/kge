@@ -1,6 +1,7 @@
 #include "../../Include/en/World.h"
 #include "../../Include/en/System.h"
 #include "../../Include/en/Entity.h"
+#include "../../Include/core/TaskManager.h"
 
 namespace kge
 {
@@ -62,6 +63,9 @@ namespace en
 		std::map<int, Entity*>::iterator it;
 		for(it = m_vEntities.begin(); it != m_vEntities.end(); it++)
 			pSys->NotifySystem(it->second);
+
+		// Add system to task manager
+		core::TaskManager::GetSingletonPointer()->AddTask(pSys);
 
 	} // AddSystem
 

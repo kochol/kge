@@ -7,7 +7,7 @@ namespace en
 	//------------------------------------------------------------------------------------
 	// Constructor
 	//------------------------------------------------------------------------------------
-	System::System()
+	System::System(): m_bAsyncUpdate(false)
 	{
 
 	} // Constructor
@@ -28,6 +28,20 @@ namespace en
 		m_vEntities.push_back(pEn);
 
 	} // AddEntity
+
+	//------------------------------------------------------------------------------------
+	// TaskManager call this function on a different thread
+	//------------------------------------------------------------------------------------
+	core::Task* System::Do()
+	{
+		if (m_bAsyncUpdate == false)
+			return NULL;
+
+		AsyncUpdate();
+
+		return this;
+
+	} // Do
 
 } // en
 
