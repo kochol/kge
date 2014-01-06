@@ -140,7 +140,7 @@ The KGE tutorials
 	</tr>
 	<tr>
 		<td class="indexkey">
-			<A class="el" HREF="http://kge3d.org/document/" >Wiki</A>
+			<A class="el" HREF="http://wiki.kge3d.org" >Wiki</A>
 		</td>
 		<td class="indexkey">
 			Find the tutorials and extra information here.
