@@ -1,7 +1,11 @@
 #include "../../Include/core/TaskManagerThread.h"
+#include "../../Include/core/TaskManager.h"
 #include "../../Include/core/Task.h"
 #include "../../Include/core/KgeMemory.h"
 #include "../../Include/core/KgeMutex.h"
+
+
+extern kge::core::TaskManager	*	g_pTaskManager;
 
 namespace kge
 {
@@ -11,10 +15,8 @@ namespace core
 	//------------------------------------------------------------------------------------
 	// Constructor
 	//------------------------------------------------------------------------------------
-	TaskManagerThread::TaskManagerThread(): m_iTaskCount(0),  m_bThreadStop(true)
+	TaskManagerThread::TaskManagerThread()
 	{
-		m_pMutex = KGE_NEW(KgeMutex);
-		m_pMutex->On();
 
 	} // Constructor
 
@@ -23,7 +25,6 @@ namespace core
 	//------------------------------------------------------------------------------------
 	TaskManagerThread::~TaskManagerThread()
 	{
-		KGE_DELETE(m_pMutex, KgeMutex);
 
 	} // Destructor
 
@@ -32,16 +33,11 @@ namespace core
 	//------------------------------------------------------------------------------------
 	int TaskManagerThread::ThreadProc()
 	{
+		Task* pTask = NULL;
 		while (m_bIsRunning)
 		{
-			m_pMutex->On();
-			while (m_iTaskCount)
-			{
-
-			}
-			m_pMutex->Off();
-			
-			// Tell the Main thread to stop this thread
+			m_TaskQueue.wait_and_pop(pTask);
+			g_pTaskManager->AddTask(pTask->Do());
 		}
 
 		return 0;
@@ -53,14 +49,9 @@ namespace core
 	//------------------------------------------------------------------------------------
 	int TaskManagerThread::AddTask( Task* pTask )
 	{
-		m_iTaskCount++;
-		if (m_bThreadStop)
-		{
-			m_bThreadStop = false;
-			m_pMutex->Off();
-		}
+		m_TaskQueue.push(pTask);
 
-		return m_iTaskCount;
+		return m_TaskQueue.Size();
 
 	} // AddTask
 

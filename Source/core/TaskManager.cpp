@@ -58,8 +58,24 @@ namespace core
 	//------------------------------------------------------------------------------------
 	void TaskManager::AddTask( Task* pTask )
 	{
+		if (!pTask)
+			return;
 
-	}
+		// Find a thread that has less task.
+		TaskManagerThread* p = NULL;
+		int mintask = MAXID;
+		for (int i = 0; i < m_iThreadCount; i++)
+		{
+			if (m_pThreads[i].GetTaskCount() < mintask)
+			{
+				mintask = m_pThreads[i].GetTaskCount();
+				p = &m_pThreads[i];
+			}
+		}
+
+		p->AddTask(pTask);
+
+	} // AddTask
 
 } // core
 

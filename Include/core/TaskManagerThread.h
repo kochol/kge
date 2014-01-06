@@ -1,6 +1,7 @@
 #pragma once
 
 #include "KgeThread.h"
+#include "TSQueue.h"
 
 namespace kge
 {
@@ -26,7 +27,7 @@ namespace kge
 			int ThreadProc();
 
 			//! Returns the Task count in queue
-			int GetTaskCount() {return m_iTaskCount;}
+			int GetTaskCount() {return m_TaskQueue.Size();}
 
 			//! Adds a new task to queue
 			//! \return Returns the task count in queue
@@ -34,12 +35,8 @@ namespace kge
 		
 		protected:
 
-			//! The mutex that control the start and stop of the thread
-			KgeMutex		*	m_pMutex;
-			bool				m_bThreadStop;
-
 			//! Task count in queue
-			int					m_iTaskCount;
+			TSQueue<Task*>		m_TaskQueue;
 			
 		}; // TaskManagerThread
 

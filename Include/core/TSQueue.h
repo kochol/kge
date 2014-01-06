@@ -53,12 +53,18 @@ namespace core
 			m_mutex.On();
 			while(m_queue.empty())
 			{
-				m_cond.Wait(m_mutex);
+				m_cond.Wait(&m_mutex);
 			}
 
 			popped_value=m_queue.front();
 			m_queue.pop();
 			m_mutex.Off();
+		}
+
+		//! Returns the queue size
+		int Size()
+		{
+			return (int)m_queue.size();
 		}
 
 	private:

@@ -17,7 +17,7 @@ namespace kge
 			virtual ~Task() {}
 
 			//! Do the task
-			virtual void Do() = 0;
+			virtual Task* Do() = 0;
 		
 		protected:
 		
