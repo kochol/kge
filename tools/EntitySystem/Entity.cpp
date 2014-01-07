@@ -1,5 +1,6 @@
 #include "../../Include/en/Entity.h"
 #include "../../Include/en/Component.h"
+#include "../../Include/en/ComponentType.h"
 #ifdef KGE_EN_TS
 #	include "../../Include/core/KgeLock.h"
 #endif // KGE_EN_TS
@@ -97,9 +98,10 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Serialize the entity and its components to RakNet::BitStream
 		//------------------------------------------------------------------------------------
-		void Entity::Serialize( RakNet::BitStream bs, bool write )
+		void Entity::Serialize( RakNet::BitStream& bs, bool write )
 		{
-			bs.Serialize(write, m_iID);
+			if (write)
+				bs.Serialize(write, m_iID);
 			bs.Serialize(write, Type);
 
 #ifdef KGE_EN_TS
@@ -107,13 +109,26 @@ namespace kge
 #endif // KGE_EN_TS
 
 			// Serialize components
-			for (m_itComponents = m_vComponents.begin(); 
-				 m_itComponents != m_vComponents.end(); 
-				 m_itComponents++)
+			if (write)
 			{
-				for (int i = 0; i < m_itComponents->second.size(); i++)
+				for (m_itComponents = m_vComponents.begin(); 
+					m_itComponents != m_vComponents.end(); 
+					m_itComponents++)
 				{
-					//m_itComponents->second[i]
+					for (int i = 0; i < m_itComponents->second.size(); i++)
+					{
+						m_itComponents->second[i]->Serialize(bs, write);
+					}
+				}
+			}
+			else
+			{
+				int cmpID;
+				while (bs.Read(cmpID))
+				{
+					Component* p = ComponentCreator::CreateComponent(cmpID);
+					p->Serialize(bs, write);
+					AddComponent(p);
 				}
 			}
 

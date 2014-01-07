@@ -3,7 +3,7 @@
 #include "../../Include/core/Task.h"
 #include "../../Include/core/KgeMemory.h"
 #include "../../Include/core/KgeMutex.h"
-
+#include "../../Include/io/Logger.h"
 
 extern kge::core::TaskManager	*	g_pTaskManager;
 
@@ -33,6 +33,7 @@ namespace core
 	//------------------------------------------------------------------------------------
 	int TaskManagerThread::ThreadProc()
 	{
+		io::Logger::Debug("TaskManagerThread Begin");
 		Task* pTask = NULL;
 		while (m_bIsRunning)
 		{

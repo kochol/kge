@@ -24,6 +24,12 @@ namespace kge
 			//! Creates an entity
 			Entity* CreateEntity();
 
+			//! Creates an entity with the given ID if an Entity exist with this ID it will be removed.
+			Entity* CreateEntity(int enid);
+
+			//! Removes an entity and delete it
+			void RemoveEntity(int enid);
+
 			//! Reserve some entity ID to create Entity outside the EntityManager
 			/*! \param count The count of Entity ID to reserve
 				\returns Returns the first Entity ID of reserved IDs

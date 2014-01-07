@@ -21,9 +21,12 @@ namespace kge
 			//! Every component must declare this function for returning their class name
 			virtual std::string GetClassName() = 0;
 
+			//! Clone a component
+			virtual Component* Clone() = 0;
+
 #ifdef KGE_USE_RAKNET
 			//! Serialize the component to RakNet::BitStream
-			virtual void Serialize(RakNet::BitStream bs, bool write) {}
+			virtual void Serialize(RakNet::BitStream& bs, bool write) {}
 
 #endif // KGE_USE_RAKNET
 

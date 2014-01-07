@@ -1,5 +1,6 @@
 #include "../../Include/en/CmpPosition.h"
 #include "../../Include/en/ComponentType.h"
+#include "../../Include/core/KgeMemory.h"
 
 namespace kge
 {
@@ -24,6 +25,17 @@ namespace en
 		return strName;
 
 	} // GetClassName
+
+	//------------------------------------------------------------------------------------
+	// Clone a component
+	//------------------------------------------------------------------------------------
+	Component* CmpPosition::Clone()
+	{
+		CmpPosition* p = KGE_NEW(CmpPosition)(x, y, z);
+
+		return p;
+
+	} // Clone
 
 } // en
 

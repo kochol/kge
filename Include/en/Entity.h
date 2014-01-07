@@ -48,7 +48,7 @@ namespace kge
 
 #ifdef KGE_USE_RAKNET
 			//! Serialize the entity and its components to RakNet::BitStream
-			void Serialize(RakNet::BitStream bs, bool write);
+			void Serialize(RakNet::BitStream& bs, bool write);
 
 #endif // KGE_USE_RAKNET
 

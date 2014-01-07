@@ -47,6 +47,25 @@ namespace kge
 		} // CreateEntity
 
 		//------------------------------------------------------------------------------------
+		// Creates an entity with the given ID if an Entity exist with this ID it will be removed.
+		//------------------------------------------------------------------------------------
+		Entity* EntityManager::CreateEntity( int enid )
+		{
+			// Check if we have an entity with the same ID or not
+			if (m_vEntities[enid])
+			{
+				RemoveEntity(enid);
+			}
+
+			Entity* pEn = KGE_NEW(Entity)(enid);
+
+			m_vEntities[enid] = pEn;
+
+			return pEn;
+
+		}
+
+		//------------------------------------------------------------------------------------
 		// Reserve some entity ID to create Entity outside the EntityManager
 		//------------------------------------------------------------------------------------
 		int EntityManager::ReserveID( int count )
@@ -56,6 +75,20 @@ namespace kge
 			return s;
 
 		} // ReserveID
+
+		//------------------------------------------------------------------------------------
+		// Removes an entity and delete it
+		//------------------------------------------------------------------------------------
+		void EntityManager::RemoveEntity( int enid )
+		{
+			if (m_vEntities[enid])
+			{
+				Entity* p = m_vEntities[enid];
+				KGE_DELETE(p, Entity);
+				m_vEntities[enid] = NULL;
+			}
+
+		} // RemoveEntity
 
 	} // en
 

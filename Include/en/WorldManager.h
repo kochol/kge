@@ -37,6 +37,9 @@ namespace kge
 			//! Returns the world by its index
 			World* GetWorld(int index){return m_vWorlds[index];}
 
+			//! Updates the Worlds
+			void Update(float fElasped);
+
 		protected:
 
 			EntityManager		*	m_pEntityMgr;

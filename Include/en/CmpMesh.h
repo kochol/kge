@@ -15,6 +15,9 @@ namespace kge
 		{
 		public:
 
+			//! Default constructor
+			CmpMesh(): strMeshName(""), m_pStaticMesh(NULL) {}
+
 			//! Constructor
 			CmpMesh(std::string MeshName): strMeshName(MeshName), m_pStaticMesh(NULL) {}
 
@@ -23,6 +26,9 @@ namespace kge
 
 			//! Every component must declare this function for returning their class name
 			std::string GetClassName();
+
+			//! Clone a component
+			virtual Component* Clone();
 
 			std::string			strMeshName;			//!< The Mesh name
 			

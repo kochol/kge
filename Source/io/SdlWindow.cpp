@@ -83,7 +83,7 @@ namespace io
         m_iBits = Bits;
         m_bFullscreen = Fullscreen;
 
-		if ( SDL_Init( SDL_INIT_VIDEO | SDL_INIT_TIMER  ) < 0 )
+		if ( SDL_Init( SDL_INIT_VIDEO | SDL_INIT_TIMER ) < 0 )
 		{
 			io::Logger::Log("Can't Initialize SDL for creating window.", io::ELM_Error);
 			return false;

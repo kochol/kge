@@ -45,6 +45,16 @@ namespace kge
 
 		} // CreateWorld
 
+		//------------------------------------------------------------------------------------
+		// Updates the Worlds
+		//------------------------------------------------------------------------------------
+		void WorldManager::Update( float fElasped )
+		{
+			for (int i = 0; i < m_vWorlds.size(); i++)
+				m_vWorlds[i]->Update(fElasped);
+
+		} // Update
+
 	} // en
 
 } // kge

@@ -1,5 +1,6 @@
 #include "../../Include/en/CmpMesh.h"
 #include "../../Include/en/ComponentType.h"
+#include "../../Include/core/KgeMemory.h"
 
 namespace kge
 {
@@ -24,6 +25,17 @@ namespace en
 		return strName;
 
 	} // GetClassName
+
+	//------------------------------------------------------------------------------------
+	// Clone
+	//------------------------------------------------------------------------------------
+	Component* CmpMesh::Clone()
+	{
+		CmpMesh* p = KGE_NEW(CmpMesh)(strMeshName);
+
+		return p;
+
+	} // Clone
 
 } // en
 
