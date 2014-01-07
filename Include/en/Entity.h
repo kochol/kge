@@ -5,8 +5,17 @@
 #include <map>
 #include <vector>
 
+#ifdef KGE_USE_RAKNET
+#	include <BitStream.h>
+#endif // KGE_USE_RAKNET
+
 namespace kge
 {
+	namespace core
+	{
+		class KgeMutex;
+	}
+
 	namespace en
 	{
 		class Component;
@@ -37,6 +46,12 @@ namespace kge
 			 */
 			std::vector<Component*> GetComponents(int iCmpID);
 
+#ifdef KGE_USE_RAKNET
+			//! Serialize the entity and its components to RakNet::BitStream
+			void Serialize(RakNet::BitStream bs, bool write);
+
+#endif // KGE_USE_RAKNET
+
 			//! Entity type
 			int Type;
 
@@ -45,6 +60,11 @@ namespace kge
 			std::map<int, std::vector<Component*> >				m_vComponents;			//!< The list of components
 			std::map<int, std::vector<Component*> >::iterator	m_itComponents;			//!< The helper iterator
 			int													m_iID;					//!< Entity ID
+
+			//! Define KGE_EN_TS to make Entity System Thread Safe
+#ifdef KGE_EN_TS
+			core::KgeMutex										*	m_pMutex;
+#endif // KGE_EN_TS
 
 		private:
 

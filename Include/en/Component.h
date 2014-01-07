@@ -2,6 +2,10 @@
 #define KGE_COMPONENT_H
 
 #include <string>
+#ifdef KGE_USE_RAKNET
+#	include <BitStream.h>
+#endif // KGE_USE_RAKNET
+
 
 namespace kge
 {
@@ -16,6 +20,12 @@ namespace kge
 			
 			//! Every component must declare this function for returning their class name
 			virtual std::string GetClassName() = 0;
+
+#ifdef KGE_USE_RAKNET
+			//! Serialize the component to RakNet::BitStream
+			virtual void Serialize(RakNet::BitStream bs, bool write) {}
+
+#endif // KGE_USE_RAKNET
 
 		protected:
 

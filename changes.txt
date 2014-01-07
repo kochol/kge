@@ -21,6 +21,7 @@ Changes in 0.1.0
 - Update CPU class
 - Update Timer class to work with SDL
 - Add TSQueue a Tread Safe Queue
+- Add KgeLock to make use of KgeMutex easier
 
 --------------------------
 Changes in 0.0.10

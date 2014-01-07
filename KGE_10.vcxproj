@@ -285,6 +285,7 @@
     <ClInclude Include="Include\core\CPU.h" />
     <ClInclude Include="Include\core\KgeArray.h" />
     <ClInclude Include="Include\core\KgeCond.h" />
+    <ClInclude Include="Include\core\KgeLock.h" />
     <ClInclude Include="Include\core\KgeMutex.h" />
     <ClInclude Include="Include\core\KgeThread.h" />
     <ClInclude Include="Include\core\PriorityArray.h" />
