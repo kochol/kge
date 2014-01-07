@@ -27,7 +27,7 @@ namespace kge
 			int ThreadProc();
 
 			//! Returns the Task count in queue
-			int GetTaskCount() {return m_TaskQueue.Size();}
+			int GetTaskCount() {return m_TaskQueue.size();}
 
 			//! Adds a new task to queue
 			//! \return Returns the task count in queue

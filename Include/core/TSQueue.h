@@ -38,6 +38,7 @@ namespace core
 			m_mutex.On();
 			if(m_queue.empty())
 			{
+				m_mutex.Off();
 				return false;
 			}
 
@@ -62,9 +63,13 @@ namespace core
 		}
 
 		//! Returns the queue size
-		int Size()
+		int size()
 		{
-			return (int)m_queue.size();
+			int s;
+			m_mutex.On();
+			s = (int)m_queue.size();
+			m_mutex.Off();
+			return s;
 		}
 
 	private:

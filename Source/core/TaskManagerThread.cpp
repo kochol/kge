@@ -51,7 +51,7 @@ namespace core
 	{
 		m_TaskQueue.push(pTask);
 
-		return m_TaskQueue.Size();
+		return m_TaskQueue.size();
 
 	} // AddTask
 
