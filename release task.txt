@@ -1,0 +1,8 @@
+- Update kgedef.h with current version
+- Create kge.chm with doxygen
+- Create kge0.x.x.zip file that contain source and binary for windows and upload it to sf.net
+- Add News to
+  - http://kge3d.org
+  - http://www.indiedb.com/engines/kochol-game-engine
+  - http://barnamenevis.org/showthread.php?43945-Kochol-Game-Engine
+  - Devmaster.net
