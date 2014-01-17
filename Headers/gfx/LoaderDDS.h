@@ -18,8 +18,8 @@ namespace kge
 		//! Loads a resource from a FileSystem and return its pointer.
 		Resource* LoadResource(io::Stream* pStream);
 
-	};
+	}; // LoaderDDS
 
-}
+} // kge
 
 #endif // KGE_LOADERDDS_H

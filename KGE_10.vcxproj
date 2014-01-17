@@ -103,6 +103,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Libs\stb_image.c" />
     <ClCompile Include="Source\av\bass\BassSoundBuffer.cpp" />
     <ClCompile Include="Source\av\bass\BassSoundSystem.cpp" />
     <ClCompile Include="Source\av\fmod\FmodSoundBuffer.cpp" />
@@ -126,6 +127,7 @@
     <ClCompile Include="Source\gfx\GeometryBatch.cpp" />
     <ClCompile Include="Source\gfx\ImageData.cpp" />
     <ClCompile Include="Source\gfx\LoaderDDS.cpp" />
+    <ClCompile Include="Source\gfx\LoaderStbImage.cpp" />
     <ClCompile Include="Source\gfx\Texture.cpp" />
     <ClCompile Include="Source\gui\Control.cpp" />
     <ClCompile Include="Source\gui\GuiManager.cpp" />
@@ -246,6 +248,7 @@
     <ClInclude Include="Headers\core\KgeNedmalloc.h" />
     <ClInclude Include="Headers\gfx\LightGL.h" />
     <ClInclude Include="Headers\gfx\LoaderDDS.h" />
+    <ClInclude Include="Headers\gfx\LoaderStbImage.h" />
     <ClInclude Include="Headers\gfx\MeshBuffer.h" />
     <ClInclude Include="Headers\gfx\MS3DLoader.h" />
     <ClInclude Include="Headers\io\Linux.h" />

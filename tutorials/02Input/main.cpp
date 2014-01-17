@@ -52,6 +52,7 @@ void keys(float elaspedtime)
 int main()
 {
 	kge::InitParameters	params;
+	params.RendererType = kge::gfx::ERA_OpenGL;
 	dev.Init(params);
 
 	pRen	= dev.GetRenderer();
@@ -64,9 +65,9 @@ int main()
 		kge::math::Vector(0, 1, 0)	
 		);
 
-	for (int j =0; j < 25; j++)
+	for (int j =0; j < 2; j++)
 	{
-		for (int i = 0; i < 25; i++)
+		for (int i = 0; i < 2; i++)
 		{
 			pMesh = pSnMgr->AddStaticMeshNode("../../media/models/hex.ms3d", true);
 			if (i % 2 == 0)
@@ -78,6 +79,8 @@ int main()
 			pMesh->GetMaterial(0)->shader->m_bMatParamsChanged = true;
 		}
 	}
+
+	pRen->SetClearColor(kge::gfx::Colorf(111,111,111));
 
 	kge::core::Timer t;	
 

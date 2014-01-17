@@ -66,6 +66,7 @@ int main()
 		);
 
 	// Load an Animated mesh is simple.
+	pRen->SetTextureParams(kge::gfx::ETP_Linear);
 	pMesh = pSnMgr->AddAnimatedMeshNode("../../media/models/dwarf/dwarf1.ms3d");
 	for (int i = 0; i < pMesh->GetMaterialCount(); i++)
 	{

@@ -68,23 +68,28 @@ namespace gfx
 
 		// Finding texture format
 		GLenum format = 0;
+		GLenum internalformat = 0;
 		bool Compressed = false;
 		switch (m_Tfmt)
 		{
 		case ETF_A8R8G8B8:
 			format = GL_RGBA;
+			internalformat = GL_RGBA8;
 			break;
 
 		case ETF_A8B8G8R8:
 			format = GL_BGRA;
+			internalformat = GL_RGBA8;
 			break;
 
 		case ETF_X8R8G8B8:
 			format = GL_RGBA;	// TODO: I'm not sure about this
+			internalformat = GL_RGBA8;
 			break;
 
 		case ETF_X8B8G8R8:
 			format = GL_BGRA;	// TODO: I'm not sure about this
+			internalformat = GL_RGBA8;
 			break;
 
 		case ETF_DXT1:
@@ -122,7 +127,7 @@ namespace gfx
 
 		for (unsigned int i = 0; i < m_iMipmapsCount; ++i)
 		{
-			if (m_iBpp)
+			if (Compressed)
 			{
 				rowSize = std::max<unsigned int>(1, width / 4) * m_iBpp;
 				numRows = std::max<unsigned int>(1, height / 4);
@@ -140,8 +145,22 @@ namespace gfx
 				glCompressedTexImage2D(GL_TEXTURE_2D, i, format, width, height, 0, size, 
 				(GLvoid*)pSrc);
 			else
-				glTexImage2D(GL_TEXTURE_2D, i, format, width, height, 0, GL_BGR_EXT, 
-				GL_UNSIGNED_BYTE, (GLvoid*)pSrc);
+			{
+				glTexImage2D(GL_TEXTURE_2D, i, internalformat, width, height, 0, format, 
+					GL_UNSIGNED_BYTE, (GLvoid*)pSrc);
+				if (m_iMipmapsCount == 1)
+				{
+ 					if (glewIsSupported("glGenerateMipmap"))
+ 					{
+ 						glGenerateMipmap(GL_TEXTURE_2D);
+ 					}
+ 					else
+					{
+						glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0);
+						glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 0);
+					}
+				}
+			}
 
 			pSrc += size;
 
@@ -169,6 +188,7 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	void TextureGL::CheckDevilErrors( const char* TextureName )
 	{
+
 		
 	} // CheckDevilErrors
 

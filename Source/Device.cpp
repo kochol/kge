@@ -14,6 +14,7 @@
 #include "../Include/core/mem_fun.h"
 #include "../Include/efx/EffectManager.h"
 #include "../Headers/gfx/LoaderDDS.h"
+#include "../Headers/gfx/LoaderStbImage.h"
 #include "../Include/io/FileSystemManager.h"
 #include "../Include/io/FileSystem.h"
 #include "../Include/gui/GuiManager.h"
@@ -231,6 +232,8 @@ namespace kge
 			void* >*)core::mem_fun5(gfx::Renderer::GetSingletonPtr(), &gfx::Renderer::AddTexture));
 		LoaderDDS* pDDSLoader = KGE_NEW(LoaderDDS);
 		m_pTextureManager->RegisterLoader(pDDSLoader);
+		LoaderStbImage* pLoaderStbImage = KGE_NEW(LoaderStbImage);
+		m_pTextureManager->RegisterLoader(pLoaderStbImage);
 
 		//m_pShaderManager = new ResourceManager<gfx::Shader>(NULL);
 

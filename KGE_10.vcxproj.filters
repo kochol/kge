@@ -486,6 +486,12 @@
     <ClCompile Include="Source\core\KgeCond.cpp">
       <Filter>Source Files\core</Filter>
     </ClCompile>
+    <ClCompile Include="Libs\stb_image.c">
+      <Filter>Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\gfx\LoaderStbImage.cpp">
+      <Filter>Source Files\gfx</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\gfx\LightGL.h">
@@ -1018,6 +1024,9 @@
     </ClInclude>
     <ClInclude Include="Include\core\KgeLock.h">
       <Filter>Include Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\gfx\LoaderStbImage.h">
+      <Filter>Header Files\gfx</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
