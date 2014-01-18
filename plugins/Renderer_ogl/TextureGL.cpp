@@ -119,6 +119,11 @@ namespace gfx
 		glGenTextures(1, &m_uTexID);
 		glBindTexture(GL_TEXTURE_2D, m_uTexID);
 
+		if (!GLEW_VERSION_3_0)
+		{
+			glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE);
+		}
+
 		unsigned int rowSize = 0;
 		unsigned int numRows = 0;
 		unsigned int size = 0;
@@ -148,17 +153,12 @@ namespace gfx
 			{
 				glTexImage2D(GL_TEXTURE_2D, i, internalformat, width, height, 0, format, 
 					GL_UNSIGNED_BYTE, (GLvoid*)pSrc);
-				if (m_iMipmapsCount == 1)
+			}
+			if (m_iMipmapsCount == 1)
+			{
+				if (GLEW_VERSION_3_0)
 				{
- 					if (glewIsSupported("glGenerateMipmap"))
- 					{
- 						glGenerateMipmap(GL_TEXTURE_2D);
- 					}
- 					else
-					{
-						glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0);
-						glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 0);
-					}
+					glGenerateMipmap(GL_TEXTURE_2D);
 				}
 			}
 
