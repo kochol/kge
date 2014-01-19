@@ -44,6 +44,8 @@ Rocket::Core::String EventManager::m_DirStr = "";
 typedef std::map< Rocket::Core::String, EventHandler* > EventHandlerMap;
 EventHandlerMap event_handlers;
 
+Rocket::Core::ElementDocument	*	g_pLastDoc = NULL;
+
 EventManager::EventManager()
 {
 }
@@ -212,5 +214,16 @@ bool EventManager::LoadWindow(const Rocket::Core::String& window_name)
 	// Remove the caller's reference.
 	document->RemoveReference();
 
+	g_pLastDoc = document;
+
 	return true;
 }
+
+//------------------------------------------------------------------------------------
+// Returns the last loaded document
+//------------------------------------------------------------------------------------
+Rocket::Core::ElementDocument* EventManager::GetLastLoadedDocument()
+{
+	return g_pLastDoc;
+
+} // GetLastLoadedDocument

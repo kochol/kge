@@ -32,6 +32,13 @@
 #include "../kgedef.h"
 
 class EventHandler;
+namespace Rocket
+{
+	namespace Core
+	{
+		class ElementDocument;
+	}
+}
 
 /**
 	@author Peter Curry
@@ -56,9 +63,13 @@ public:
 	/// @param[in] window_name The name of the window to load.
 	static bool LoadWindow(const Rocket::Core::String& window_name);
 
+	//! Returns the last loaded document
+	static Rocket::Core::ElementDocument* GetLastLoadedDocument();
+
 	static Rocket::Core::String m_DirStr;
 
 private:
+	
 	EventManager();
 	~EventManager();
 };
