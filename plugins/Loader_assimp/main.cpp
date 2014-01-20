@@ -5,6 +5,7 @@
 
 #if KGE_COMPILER == KGE_COMPILER_MSVC
 #pragma comment(lib, "../../bin/Debug/kge.lib")
+#pragma comment(lib, "assimp.lib")
 #endif
 
 namespace kge
@@ -36,10 +37,10 @@ namespace kge
 
 extern "C"
 {
-	void KGE_API RegisterPlugin(kge::PluginManager& PluginMgr)
+	void KGELIB_API RegisterPlugin(kge::PluginManager& PluginMgr)
 	{
 		kge::LoaderAssimpPlugin *pPR = KGE_NEW(kge::LoaderAssimpPlugin)();		
-		kge::io::Logger::Info("D3D9 renderer plugin registered. version: %d.%d.%d , Index: %d", 
+		kge::io::Logger::Info("ASSIMP loader plugin registered. version: %d.%d.%d , Index: %d", 
 			pPR->GetEngineMajorVersion(), 
 			pPR->GetEngineMinorVersion(),
 			pPR->GetEnginePatchVersion(),
