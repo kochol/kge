@@ -193,6 +193,25 @@ You have to read
 \ref tut01 "Hello Kochol Game Engine" 
 tutorial before this tutorial
 
+\section workkey2 Work with keyboard.
+The Keyboard class is in kge::io namespace.
+There are two ways for working with keyboard in KGE but first of all we need to create an object from kge::io::Keyboard class.
+\code{.cpp}
+kge::io::Keyboard			key;
+\endcode
+
+\subsection keydown2 KeyDown function
+You can use the KeyDown function to check if any key is pressed or not.
+
+If you want to pass a char to KeyDown function always pass an upper case character. 
+\code{.cpp}
+bool isWkeyDown = key.KeyDown('W');
+bool isEcsKeyDown = key.KeyDown(kge::io::EK_ESCAPE);
+\endcode
+
+\subsection keydown22 Key events
+You can listen to keyboard callbacks with Connect function.
+
 \section code2 The code for moving the camera
 \code{.cpp}
 // This tutorial shows how to use keyboard inputs in Kochol Game Engine 
@@ -226,24 +245,24 @@ void keys(float elaspedtime)
 	// We can find the pressed key with KeyDown function in Keyboard class
 	// If you want to know about a letter key is pressed you have to pass it as uppercase
 	if (key.KeyDown('W'))
-	// Move the camera forward
-	pCam->MoveBF(fCamSpeed * elaspedtime);
+		// Move the camera forward
+		pCam->MoveBF(fCamSpeed * elaspedtime);
 	if (key.KeyDown('S'))
-	// Move the camera backward by passing a negative number to MoveBF function
-	pCam->MoveBF(-fCamSpeed * elaspedtime);
+		// Move the camera backward by passing a negative number to MoveBF function
+		pCam->MoveBF(-fCamSpeed * elaspedtime);
 	if (key.KeyDown('D'))
-	// Move the camera Right
-	pCam->MoveRL(fCamSpeed * elaspedtime);
+		// Move the camera Right
+		pCam->MoveRL(fCamSpeed * elaspedtime);
 	if (key.KeyDown('A'))
-	// Move the camera left by passing a negative number to MoveRL function
-	pCam->MoveRL(-fCamSpeed * elaspedtime);
+		// Move the camera left by passing a negative number to MoveRL function
+		pCam->MoveRL(-fCamSpeed * elaspedtime);
 
 	// Now we want to enable FPS camera by F1 key and disable it with escape key
 	if (key.KeyDown(kge::io::EK_F1))
-	// It is simple
-	pCam->AutoRotateByMouse(true);
+		// It is simple
+		pCam->AutoRotateByMouse(true);
 	if (key.KeyDown(kge::io::EK_ESCAPE))
-	pCam->AutoRotateByMouse(false);
+		pCam->AutoRotateByMouse(false);
 }
 
 int main()

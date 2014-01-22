@@ -2,6 +2,7 @@
 Changes in 0.1.2
 
 - Add GetLastLoadedDocument to EventManager
+- Fix auto generating of mipmaps for OpenGL
 
 --------------------------
 Changes in 0.1.1
