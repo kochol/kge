@@ -249,7 +249,6 @@
     <ClInclude Include="Headers\gfx\LightGL.h" />
     <ClInclude Include="Headers\gfx\LoaderDDS.h" />
     <ClInclude Include="Headers\gfx\LoaderStbImage.h" />
-    <ClInclude Include="Headers\gfx\MeshBuffer.h" />
     <ClInclude Include="Headers\gfx\MS3DLoader.h" />
     <ClInclude Include="Headers\io\Linux.h" />
     <ClInclude Include="Headers\io\SdlWindow.h" />
@@ -303,6 +302,7 @@
     <ClInclude Include="Include\gfx\CMatPhongLighting.h" />
     <ClInclude Include="Include\gfx\CmTree.h" />
     <ClInclude Include="Include\gfx\ImageData.h" />
+    <ClInclude Include="Include\gfx\MeshBuffer.h" />
     <ClInclude Include="Include\gfx\VertexElement.h" />
     <ClInclude Include="Include\gui\Control.h" />
     <ClInclude Include="Include\gui\GuiManager.h" />

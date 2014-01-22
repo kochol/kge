@@ -1055,7 +1055,9 @@ namespace sn
 			} // Ms3d loader need.
 			else
 			{
-				io::Logger::Log(io::ELM_Error, "This type of mesh not supported: %s", FileName);
+				mb = Device::GetSingletonPtr()->GetMeshManager()->Load(FileName, NULL, FileName);
+				if (!mb)
+					io::Logger::Log(io::ELM_Error, "This type of mesh not supported: %s", FileName);
 			}
 		}
 
@@ -1131,7 +1133,9 @@ namespace sn
 			} // Ms3d loader need.
 			else
 			{
-				io::Logger::Log(io::ELM_Error, "This type of mesh not supported: %s", FileName);
+				mb = Device::GetSingletonPtr()->GetMeshManager()->Load(FileName, NULL, FileName);
+				if (!mb)
+					io::Logger::Log(io::ELM_Error, "This type of mesh not supported: %s", FileName);
 			}
 		}
 

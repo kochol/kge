@@ -497,9 +497,6 @@
     <ClInclude Include="Headers\gfx\LightGL.h">
       <Filter>Header Files\gfx</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\gfx\MeshBuffer.h">
-      <Filter>Header Files\gfx</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\gfx\MS3DLoader.h">
       <Filter>Header Files\gfx</Filter>
     </ClInclude>
@@ -1027,6 +1024,9 @@
     </ClInclude>
     <ClInclude Include="Headers\gfx\LoaderStbImage.h">
       <Filter>Header Files\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\gfx\MeshBuffer.h">
+      <Filter>Include Files\gfx</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
