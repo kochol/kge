@@ -20,8 +20,46 @@ namespace kge
 		m_aFileExtension.push_back("3d");
 		m_aFileExtension.push_back("xml");
 		m_aFileExtension.push_back("3ds");
-		m_aFileExtension.push_back("tga");
-		m_aFileExtension.push_back("pic");
+		m_aFileExtension.push_back("dae");
+		m_aFileExtension.push_back("blend");
+		m_aFileExtension.push_back("bvh");
+		m_aFileExtension.push_back("ase");
+		m_aFileExtension.push_back("obj");
+		m_aFileExtension.push_back("ply");
+		m_aFileExtension.push_back("dxf");
+		m_aFileExtension.push_back("ifc");
+		m_aFileExtension.push_back("nff");
+		m_aFileExtension.push_back("smd");
+		m_aFileExtension.push_back("vta");
+		m_aFileExtension.push_back("mdl");
+		m_aFileExtension.push_back("md2");
+		m_aFileExtension.push_back("md3");
+		m_aFileExtension.push_back("pk3");
+		m_aFileExtension.push_back("mdc");
+		m_aFileExtension.push_back("md5mesh");
+		m_aFileExtension.push_back("md5anim");
+		m_aFileExtension.push_back("md5camera");
+		m_aFileExtension.push_back("x");
+		m_aFileExtension.push_back("q3o");
+		m_aFileExtension.push_back("q3s");
+		m_aFileExtension.push_back("raw");
+		m_aFileExtension.push_back("ac");
+		m_aFileExtension.push_back("stl");
+		m_aFileExtension.push_back("irrmesh");
+		m_aFileExtension.push_back("irr");
+		m_aFileExtension.push_back("off");
+		m_aFileExtension.push_back("ter");
+		m_aFileExtension.push_back("mdl");
+		m_aFileExtension.push_back("hmp");
+		m_aFileExtension.push_back("material");
+		m_aFileExtension.push_back("lwo");
+		m_aFileExtension.push_back("lws");
+		m_aFileExtension.push_back("lxo");
+		m_aFileExtension.push_back("csm");
+		m_aFileExtension.push_back("cob");
+		m_aFileExtension.push_back("scn");
+		m_aFileExtension.push_back("xgl");
+		m_aFileExtension.push_back("zgl");
 
 	} // Constructor
 
@@ -72,11 +110,17 @@ namespace kge
 			aiMesh* mesh = scene->mMeshes[i];
 			// Create vertices
 			gfx::Vertex3* pVerts = KGE_NEW_ARRAY(gfx::Vertex3, mesh->mNumVertices);
+			gfx::Vertex3T* pNT	 = KGE_NEW_ARRAY(gfx::Vertex3T, mesh->mNumVertices); 
 			for (int k = 0; k < mesh->mNumVertices; k++)
 			{
 				pVerts[k].X = mesh->mVertices[k].x;
 				pVerts[k].Y = mesh->mVertices[k].y;
 				pVerts[k].Z = mesh->mVertices[k].z;
+				pNT[k].pos.X = mesh->mNormals[k].x;
+				pNT[k].pos.Y = mesh->mNormals[k].y;
+				pNT[k].pos.Z = mesh->mNormals[k].z;
+				pNT[k].tex.X = mesh->mTextureCoords[0][k].x;
+				pNT[k].tex.Y = mesh->mTextureCoords[0][k].y;
 			}
 
 			// Create indices
@@ -90,6 +134,7 @@ namespace kge
 			pMeshes[i].m_pIndices	= indices;
 			pMeshes[i].m_NumIndices	= mesh->mNumFaces * 3;
 			pMeshes[i].m_pPos		= pVerts;
+			pMeshes[i].m_pNorTex	= pNT;
 			pMeshes[i].m_NumVerts	= mesh->mNumVertices;
 			
 			pMeshes[i].PrepareBuffers();

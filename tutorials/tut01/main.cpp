@@ -53,7 +53,7 @@ int main()
 	// to the scene
 	pCam = pSnMgr->AddCameraNode
 		(
-		kge::math::Vector(50, 50, 50),	// The position of camera
+		kge::math::Vector(150, 250, 150),	// The position of camera
 		kge::math::Vector(),		// The target of camera. The point that camera look at
 		kge::math::Vector(0, 1, 0)	// The up vector, shows the up view direction
 		);
@@ -61,13 +61,14 @@ int main()
 	dev.GetPluginManager()->LoadPlugin("Loader_assimp");
 
 	// Now we load a 3D model as static mesh
-	pMesh = pSnMgr->AddStaticMeshNode("E:/sdks/Assimp/test/models/3Ds/cube_with_diffuse_texture.3ds", true);
+	pMesh = pSnMgr->AddStaticMeshNode("E:/sdks/Assimp/test/models/collada/duck.dae", true);
 
 	if (pMesh)
 	{
 		// Disable lighting this part will be changed or explained later
 		pMesh->GetMaterial(0)->shader->m_MaterialParams.eLightingType = kge::gfx::ELIT_UnLit;
 		pMesh->GetMaterial(0)->shader->m_bMatParamsChanged = true;
+		pMesh->GetMaterial(0)->ppTexture[0] = pSnMgr->AddTexture("../../media/models/box.dds");
 	}
 
 	// We add a timer to get elapsed time
