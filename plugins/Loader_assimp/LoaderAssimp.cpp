@@ -138,6 +138,19 @@ namespace kge
 			pMeshes[i].m_NumVerts	= mesh->mNumVertices;
 			
 			pMeshes[i].PrepareBuffers();
+
+			// Finding materials
+			aiMaterial* pMat = scene->mMaterials[mesh->mMaterialIndex];
+			aiString strt;
+			pMat->Get(AI_MATKEY_TEXTURE(aiTextureType_DIFFUSE, 0), strt);
+			core::String str, str2;
+			str = pStream->GetName().c_str();
+			if (!str.Select(0 , str.FindLast("/"), str2))
+				str.Select(0 , str.FindLast("\\"), str2);
+			str = strt.C_Str();
+			str2 += str;
+			pMeshes->m_Mat.ppTexture[0] = Device::GetSingletonPtr()->GetSceneManager()->AddTexture(str2.ToCharPointer());
+			pMeshes->m_bHasMat = true;
 		}
 
 		// Save the mesh to a mesh buffer.
