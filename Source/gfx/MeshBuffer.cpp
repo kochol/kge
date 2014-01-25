@@ -3,7 +3,7 @@
 // Date: 3/10/1386
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Headers/gfx/MeshBuffer.h"
+#include "../../Include/gfx/MeshBuffer.h"
 #include "../../Headers/gfx/GeometryBatch.h"
 
 
@@ -22,12 +22,25 @@ namespace gfx
 	//--------------------------------------------------------------------
 	// Constructor.
 	//--------------------------------------------------------------------
-	MeshBuffer::MeshBuffer():
+	MeshBuffer::MeshBuffer(): Resource(0, 0, 0, 0),
 		m_pMeshes(NULL), m_pBones(NULL), m_pAnimation(NULL),
 		m_iMeshCount(0), m_iBoneCount(0), m_pVertexShader(NULL),
 		m_pPixelShader(NULL), m_bShaderSet(false), m_pBatch(NULL),
 		m_bInstanced(false)
 	{
+	} // Constructor
+
+	//------------------------------------------------------------------------------------
+	// Constructor
+	//------------------------------------------------------------------------------------
+	MeshBuffer::MeshBuffer( const u32 Handle, const char* FileName, const char* Name, 
+		void* ExtraParam ): Resource(Handle, FileName, Name, ExtraParam),
+		m_pMeshes(NULL), m_pBones(NULL), m_pAnimation(NULL),
+		m_iMeshCount(0), m_iBoneCount(0), m_pVertexShader(NULL),
+		m_pPixelShader(NULL), m_bShaderSet(false), m_pBatch(NULL),
+		m_bInstanced(false)
+	{
+
 	} // Constructor
 
 	//--------------------------------------------------------------------

@@ -1,18 +1,18 @@
 // File name: MeshBuffer.h
 // Des: This class is for buffering the meshes.
 // Date: 3/10/1386
-// Programmer: Ali Akbar Mohamadi(Kochol)
+// Programmer: Ali Akbar Mohammadi(Kochol)
 
 #ifndef MESHBUFFER_H
 #define MESHBUFFER_H
 
-#include "../../Include/gfx/Structs.h"
-#include "../../Include/gfx/Animation.h"
-#include "../../Include/gfx/Material.h"
-#include "../../Include/kgedef.h"
-#include "../../Include/core/String.h"
-#include "../../Include/sn/Mesh.h"
-#include "../../Include/sn/Bone.h"
+#include "Structs.h"
+#include "Animation.h"
+#include "Material.h"
+#include "../kgedef.h"
+#include "../core/String.h"
+#include "../sn/Mesh.h"
+#include "../sn/Bone.h"
 
 namespace kge
 {
@@ -23,12 +23,15 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	class GeometryBatch;
 
-class MeshBuffer : public KgeUnknown
+class KGE_API MeshBuffer : public Resource
 {
 public:
 
 	// Constructor.
 	MeshBuffer();
+
+	// Constructor
+	MeshBuffer(const u32 Handle, const char* FileName, const char* Name, void* ExtraParam);
 
 	// Destructor.
 	~MeshBuffer();

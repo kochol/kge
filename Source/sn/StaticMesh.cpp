@@ -1,14 +1,14 @@
 // File name: AnimatedMesh.cpp
 // Des: This is a node class for static meshes which is more faster.
 // Date: 19/4/1386
-// Programmer: Ali Akbar Mohamadi(Kochol)
+// Programmer: Ali Akbar Mohammadi(Kochol)
 
 #include "../../Include/sn/StaticMesh.h"
 #include "../../Include/sn/Light.h"
 #include "../../Include/io/Logger.h"
 #include "../../Include/math/Quat.h"
 #include "../../Include/math/Plane.h"
-#include "../../Headers/gfx/MeshBuffer.h"
+#include "../../Include/gfx/MeshBuffer.h"
 #include "../../Headers/gfx/GeometryBatch.h"
 
 namespace kge

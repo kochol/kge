@@ -28,6 +28,7 @@ namespace gfx
 	// P R E   D E F I N E   C L A S S E S
 	class Renderer;
 	class Shader;
+	class MeshBuffer;
 
 } // gfx
 
@@ -106,6 +107,9 @@ namespace efx
 		//! Returns the pixel shader manager.
 		ResourceManager<gfx::Shader>* GetPixelShaderManager() { return m_pPixelShaderManager; }
 
+		//! Returns the mesh manager
+		ResourceManager<gfx::MeshBuffer>* GetMeshManager() { return m_pMeshManager; }
+
 		//! Returns the requested physics engine manager. Only one physics engine can be used at the same time.
 		ph::PhysManager* GetPhysManager(ph::PhysicsEngineType enumPhysType = ph::EPET_PhysX);
 
@@ -147,6 +151,8 @@ namespace efx
 			<gfx::Shader>		*	m_pPixelShaderManager;	/**< Pixel Shader Manager pointer*/
 		ResourceManager
 			<gui::Font>			*	m_pFontManager;			//!< Font manager
+		ResourceManager
+			<gfx::MeshBuffer>	*	m_pMeshManager;			//!< Mesh manager
 
 	}; // Device
 

@@ -2,7 +2,7 @@
 #include "../../Include/gfx/DynamicHardwareBuffer.h"
 #include "../../Include/gfx/Renderer.h"
 #include "../../Include/gfx/Structs.h"
-#include "../../Headers/gfx/MeshBuffer.h"
+#include "../../Include/gfx/MeshBuffer.h"
 #include "../../Include/sn/StaticMesh.h"
 #include "../../Include/sn/AnimatedMesh.h"
 #include "../../Include/math/Matrix.h"

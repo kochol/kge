@@ -10,7 +10,7 @@
 #include "../../Include/sn/StaticMesh.h"
 #include "../../Include/kgedef.h"
 #include "../../Include/gfx/Structs.h"
-#include "MeshBuffer.h"
+#include "../../Include/gfx/MeshBuffer.h"
 
   ////////////////////////////////////////////////////////////////////////////////////
  // In struct ha makhsose file MS3D hastand.                                       //

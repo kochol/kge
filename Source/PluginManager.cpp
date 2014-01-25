@@ -1,10 +1,11 @@
 // File name: PluginManager.cpp
 // Des: This class manages plugins and take care of their loading
 // Date: 04/08/1387
-// Programmer: Ali Akbar Mohamadi(Kochol)
+// Programmer: Ali Akbar Mohammadi(Kochol)
 
 #include <string>
 #include "../Include/kgedef.h"
+#include "../Include/Device.h"
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 
@@ -24,6 +25,7 @@
 #include "../Include/ResourceManager.h"
 #include "../Include/gfx/Texture.h"
 #include "../Include/gfx/Image.h"
+#include "../Include/gfx/MeshBuffer.h"
 
 #ifndef NULL
 #define NULL 0
@@ -199,7 +201,11 @@ namespace kge
 		switch (pLoaderPlug->GetPluginType())
 		{
 		case EPT_TextureLoader:
-			//g_pTextureManager->RegisterLoader(pLoaderPlug->Create());
+			Device::GetSingletonPtr()->GetTextureManager()->RegisterLoader(pLoaderPlug->Create());
+			break;
+
+		case EPT_MeshLoader:
+			Device::GetSingletonPtr()->GetMeshManager()->RegisterLoader(pLoaderPlug->Create());
 			break;
 		}
 

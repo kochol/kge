@@ -9,8 +9,8 @@
 #include "../Include/Device.h"
 #include "../Include/PluginManager.h"
 #include "../Include/gfx/Renderer.h"
+#include "../Include/gfx/MeshBuffer.h"
 #include "../Include/gfx/MaterialManager.h"
-//#include "../Include/gui/GuiManager.h"
 #include "../Include/core/mem_fun.h"
 #include "../Include/efx/EffectManager.h"
 #include "../Headers/gfx/LoaderDDS.h"
@@ -54,7 +54,7 @@ namespace kge
 	// Constructor
 	//------------------------------------------------------------------------------------
 	Device::Device(): m_pPhysManager(NULL), m_pFontManager(NULL),
-		m_pEffectManager(NULL), m_pSoundSystem(0),
+		m_pEffectManager(NULL), m_pSoundSystem(0), m_pMeshManager(NULL),
 		m_pSnMan(0), m_pRenderer(0), m_pWindow(0), m_pTextureManager(0),
 		m_pVertexShaderManager(0), m_pPixelShaderManager(0), m_pImageMan(0),
 		m_pGuimgr(0)
@@ -247,11 +247,14 @@ namespace kge
 			((core::Functor5<bool , Resource** , const u32 , const char* , const char* , 
 			void* >*)core::mem_fun5(m_pGuimgr, &gui::GuiManager::AddFont));
 
+		// Create mesh manager
+		m_pMeshManager = new ResourceManager<gfx::MeshBuffer>(NULL);
+
 		// Create effect manager
 		m_pEffectManager = KGE_NEW(efx::EffectManager)();
 
 		// Create Material Manager
-		gfx::MaterialManager* mmgr = KGE_NEW(gfx::MaterialManager)();
+		gfx::MaterialManager* mmgr = KGE_NEW(gfx::MaterialManager);
 
 		m_pSnMan = KGE_NEW(sn::SceneManager)(m_pRenderer);
 

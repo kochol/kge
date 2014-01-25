@@ -15,6 +15,7 @@ namespace kge
 		EPT_Renderer = 0,		/**< Render system plugin */
 		EPT_InputManager,		//!< InputManager plugin
 		EPT_TextureLoader,		//!< Texture loader plugin
+		EPT_MeshLoader,			//!< Mesh loader plugin
 
 		EPT_Unknown				//!< Unknown plugin type
 

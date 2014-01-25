@@ -14,7 +14,7 @@
 #include "PixelShaderDX.h"
 #include "VertexBufferDX.h"
 #include "IndexBufferDX.h"
-#include "../../headers/gfx/meshbuffer.h"
+#include "../../include/gfx/meshbuffer.h"
 #include "../../include/io/logger.h"
 #include "../../include/efx/EffectManager.h"
 #include "../../include/gui/Image.h"

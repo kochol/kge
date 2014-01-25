@@ -18,7 +18,7 @@ namespace kge
 {
 namespace sn
 {
-class Mesh : public SceneNode
+class KGE_API Mesh : public SceneNode
 {
 	friend class MeshMS3D;
 public:

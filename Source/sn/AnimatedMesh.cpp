@@ -5,7 +5,7 @@
 
 #include "../../Include/sn/AnimatedMesh.h"
 #include "../../Include/sn/Light.h"
-#include "../../Headers/gfx/MeshBuffer.h"
+#include "../../Include/gfx/MeshBuffer.h"
 #include "../../Include/io/Logger.h"
 #include "../../Include/math/Quat.h"
 #include "../../Include/math/Plane.h"
