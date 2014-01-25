@@ -103,11 +103,15 @@ namespace kge
 
 		// Create the meshes
 		sn::Mesh *pMeshes = NULL;
+		math::Sphere* bb;
+		math::AABB*	aabb;
 		if (scene->HasMeshes())
 			pMeshes = KGE_NEW_CLASS_ARRAY(sn::Mesh, scene->mNumMeshes);
 		for (int i = 0; i < scene->mNumMeshes; i++)
 		{
 			aiMesh* mesh = scene->mMeshes[i];
+			bb = pMeshes[i].GetBoundingBox();
+			aabb = pMeshes[i].GetAxisAlignedBoundingBox();
 			// Create vertices
 			gfx::Vertex3* pVerts = KGE_NEW_ARRAY(gfx::Vertex3, mesh->mNumVertices);
 			gfx::Vertex3T* pNT	 = KGE_NEW_ARRAY(gfx::Vertex3T, mesh->mNumVertices); 
@@ -116,11 +120,16 @@ namespace kge
 				pVerts[k].X = mesh->mVertices[k].x;
 				pVerts[k].Y = mesh->mVertices[k].y;
 				pVerts[k].Z = mesh->mVertices[k].z;
+				bb->AddPoint(&pVerts[k]);
+				aabb->AddInternalPoint(&pVerts[k]);
 				pNT[k].pos.X = mesh->mNormals[k].x;
 				pNT[k].pos.Y = mesh->mNormals[k].y;
 				pNT[k].pos.Z = mesh->mNormals[k].z;
-				pNT[k].tex.X = mesh->mTextureCoords[0][k].x;
-				pNT[k].tex.Y = mesh->mTextureCoords[0][k].y;
+				if (mesh->HasTextureCoords(0))
+				{
+					pNT[k].tex.X = mesh->mTextureCoords[0][k].x;
+					pNT[k].tex.Y = mesh->mTextureCoords[0][k].y;
+				}
 			}
 
 			// Create indices

@@ -40,7 +40,7 @@ int main()
 	// The InitParameters structure contains the parameters that we want to pass
 	// them to KGE. We can accept default parameters for now
 	kge::InitParameters	params;
-	params.RendererType = kge::gfx::ERA_OpenGL;
+	//params.RendererType = kge::gfx::ERA_OpenGL;
 	dev.Init(params);
 
 	kge::core::TaskManager::GetSingletonPointer();
@@ -53,7 +53,7 @@ int main()
 	// to the scene
 	pCam = pSnMgr->AddCameraNode
 		(
-		kge::math::Vector(150, 250, 150),	// The position of camera
+		kge::math::Vector(550, 550, 550),	// The position of camera
 		kge::math::Vector(0, 100, 0),		// The target of camera. The point that camera look at
 		kge::math::Vector(0, 1, 0)	// The up vector, shows the up view direction
 		);
@@ -61,10 +61,12 @@ int main()
 	dev.GetPluginManager()->LoadPlugin("Loader_assimp");
 
 	// Now we load a 3D model as static mesh
-	pMesh = pSnMgr->AddStaticMeshNode("E:/sdks/Assimp/test/models/collada/duck.dae", true);
+	//pMesh = pSnMgr->AddStaticMeshNode("E:/sdks/Assimp/test/models/collada/duck.dae", true);
+	pMesh = pSnMgr->AddStaticMeshNode("../../media/models/tent/tent.3ds", true);
 
 	if (pMesh)
 	{
+		pMesh->SetScale(kge::math::Vector(0.1, 0.1, 0.1));
 		// Disable lighting this part will be changed or explained later
 		pMesh->GetMaterial(0)->shader->m_MaterialParams.eLightingType = kge::gfx::ELIT_UnLit;
 		pMesh->GetMaterial(0)->shader->m_bMatParamsChanged = true;
