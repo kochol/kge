@@ -51,3 +51,9 @@ Kochol Game Engine(KGE) is an open source 3D Game engine. Easy to use and flexib
 
 * Client/Server
 * Basic networking system for now
+
+# Games
+This is a list of games that created with KGE
+
+## Legends of Persia
+http://legendsofpersia.com/
