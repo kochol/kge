@@ -11,6 +11,7 @@ Kochol Game Engine(KGE) is an open source 3D Game engine. Easy to use and flexib
 * Plugin architecture
 * Component base entity system
 * Cross platform
+* Multi threaded Task manager
 
 ## Graphics
 
