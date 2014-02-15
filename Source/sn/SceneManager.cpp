@@ -1713,6 +1713,8 @@ namespace sn
 		return NULL;
 	}
 
+#endif // KGE_USE_SOUND_SYSTEM
+
 	std::vector<Light*> SceneManager::GetLightsInFrustum(int& DirCount, int& PointCount, int& SpotCount)
 	{
 		DirCount = PointCount = SpotCount = 0;
@@ -1759,8 +1761,6 @@ namespace sn
 		return true;
 
 	} // IsLightVisible
-
-#endif // KGE_USE_SOUND_SYSTEM
 
 } // sn
 

@@ -59,7 +59,7 @@
 #include "io/Iwindow.h"
 #include "io/Logger.h"
 #include "io/File.h"
-#include "io/JoyStick.h"
+//#include "io/JoyStick.h"
 
 // *********
 // kge::math

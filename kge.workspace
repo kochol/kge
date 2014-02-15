@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="kge">
+		<Project filename="kge.cbp" active="1">
+		</Project>
+		<Project filename="01HelloWorld.cbp">
+			<Depends filename="kge.cbp" />
+		</Project>
+	</Workspace>
+</CodeBlocks_workspace_file>
