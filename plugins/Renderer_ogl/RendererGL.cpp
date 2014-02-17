@@ -232,15 +232,15 @@ namespace gfx
 	bool RendererGL::AfterInit()
 	{
 		// Mohasebeye dorbine 2 bodi.
-		m_m2D._11 = (float)2/(m_Params.Width);
-		m_m2D._22 = (float)2/(-m_Params.Height);
-		m_m2D._12 = m_m2D._13 = m_m2D._14 = m_m2D._21 = m_m2D._23 = m_m2D._24 =
-		m_m2D._31 = m_m2D._32 = m_m2D._34 = m_m2D._43 = 0.0f;
-		m_m2D._41 = -1.0f;
-		m_m2D._44 = m_m2D._33 = m_m2D._42 = 1.0f;
+// 		m_m2D._11 = (float)2/(m_Params.Width);
+// 		m_m2D._22 = (float)2/(-m_Params.Height);
+// 		m_m2D._12 = m_m2D._13 = m_m2D._14 = m_m2D._21 = m_m2D._23 = m_m2D._24 =
+// 		m_m2D._31 = m_m2D._32 = m_m2D._34 = m_m2D._43 = 0.0f;
+// 		m_m2D._41 = m_m2D._33 = -1.0f;
+// 		m_m2D._44 = m_m2D._42 = 1.0f;
+		// Calculate the 2D camera matrix.
+		m_m2D.SetOrthoOffscreenLH(0.0f, m_Params.Width, m_Params.Height, 0.0f, 0.0f, 1.0f);
 
-		// felan render hamon ba shader ha nist.
-		m_bUseShaders = false;
 		glViewport(0 ,0 ,m_Params.Width ,m_Params.Height);		// Make our viewport the whole window
 
 		// Enables Depth Testing
@@ -762,12 +762,13 @@ namespace gfx
 		}
 		m_iDrawCount++;
 
-	}
+	} // DrawTriangleList
 
 	void RendererGL::DrawTriangleList( HardwareBuffer* VB, HardwareBuffer* IB, u32 VCount, u32 ICount, VertexType eVType /*= EVT_V3TN */ )
 	{
 
-	}
+	} // DrawTriangleList
+
 	//------------------------------------
 	// Enable kardane khsiyat haye render.
 	//------------------------------------
@@ -926,9 +927,9 @@ namespace gfx
 //			glUseProgram(0);
 
 		// Setting the Ambinet color.
-		glMaterialfv(GL_FRONT, GL_AMBIENT, &mat->Ambient.r);
-		glMaterialfv(GL_FRONT, GL_DIFFUSE, &mat->Diffuse.r);
-		glMaterialfv(GL_FRONT, GL_SPECULAR, &mat->Specular.r);
+// 		glMaterialfv(GL_FRONT, GL_AMBIENT, &mat->Ambient.r);
+// 		glMaterialfv(GL_FRONT, GL_DIFFUSE, &mat->Diffuse.r);
+// 		glMaterialfv(GL_FRONT, GL_SPECULAR, &mat->Specular.r);
 
 		// Setting the Texture.
 		SetTexture(mat->ppTexture[0]);

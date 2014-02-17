@@ -6,8 +6,6 @@
 // will be increased in this way.
 #include "../../Include/kge.h"
 
-#include "../../Include/core/TaskManager.h"
-
 // Tell the compiler to link with kge.lib
 #pragma comment(lib, "../../bin/debug/kge.lib")
 
@@ -40,10 +38,8 @@ int main()
 	// The InitParameters structure contains the parameters that we want to pass
 	// them to KGE. We can accept default parameters for now
 	kge::InitParameters	params;
-	//params.RendererType = kge::gfx::ERA_OpenGL;
+	params.RendererType = kge::gfx::ERA_OpenGL;
 	dev.Init(params);
-
-	kge::core::TaskManager::GetSingletonPointer();
 
 	// After initializing of engine we can get the pointer of Renderer and the SceneManager
 	pRen	= dev.GetRenderer();
@@ -53,25 +49,17 @@ int main()
 	// to the scene
 	pCam = pSnMgr->AddCameraNode
 		(
-		kge::math::Vector(550, 550, 550),	// The position of camera
-		kge::math::Vector(0, 100, 0),		// The target of camera. The point that camera look at
+		kge::math::Vector(5, 5, 5),	// The position of camera
+		kge::math::Vector(),		// The target of camera. The point that camera look at
 		kge::math::Vector(0, 1, 0)	// The up vector, shows the up view direction
 		);
 
-	dev.GetPluginManager()->LoadPlugin("Loader_assimp");
-
 	// Now we load a 3D model as static mesh
-	//pMesh = pSnMgr->AddStaticMeshNode("E:/sdks/Assimp/test/models/collada/duck.dae", true);
-	pMesh = pSnMgr->AddStaticMeshNode("../../media/models/tent/tent.3ds", true);
+	pMesh = pSnMgr->AddStaticMeshNode("../../media/models/box.ms3d", true);
 
-	if (pMesh)
-	{
-		pMesh->SetScale(kge::math::Vector(0.1, 0.1, 0.1));
-		// Disable lighting this part will be changed or explained later
-		pMesh->GetMaterial(0)->shader->m_MaterialParams.eLightingType = kge::gfx::ELIT_UnLit;
-		pMesh->GetMaterial(0)->shader->m_bMatParamsChanged = true;
-//		pMesh->GetMaterial(0)->ppTexture[0] = pSnMgr->AddTexture("../../media/textures/duckcm.tga");
-	}
+	// Disable lighting this part will be changed or explained later
+	pMesh->GetMaterial(0)->shader->m_MaterialParams.eLightingType = kge::gfx::ELIT_UnLit;
+	pMesh->GetMaterial(0)->shader->m_bMatParamsChanged = true;
 
 	// We add a timer to get elapsed time
 	kge::core::Timer t;	
