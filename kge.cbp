@@ -18,12 +18,12 @@
 					<Add option="-fPIC" />
 					<Add option="-DDEBUG" />
 					<Add option="-fpermissive" />
-					<Add directory="Libs/sdl" />
+					<Add directory="Libs/SDL/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-shared" />
 					<Add directory="." />
-					<Add library="SDL2-2" />
+					<Add library="SDL2" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -38,13 +38,13 @@
 					<Add option="-fPIC" />
 					<Add option="-DNDEBUG" />
 					<Add option="-fpermissive" />
-					<Add directory="Libs/sdl" />
+					<Add directory="Libs/SDL/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 					<Add option="-shared" />
 					<Add directory="." />
-					<Add library="SDL2-2" />
+					<Add library="SDL2" />
 				</Linker>
 			</Target>
 		</Build>

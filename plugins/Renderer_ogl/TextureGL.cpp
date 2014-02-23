@@ -6,7 +6,7 @@
 #include "TextureGL.h"
 #include "../../Include/gfx/ImageData.h"
 
-#include "../../Libs/Glew/glew.h"
+#include "../../Libs/glew/glew.h"
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 	#pragma comment(lib,"opengl32.lib")
@@ -147,11 +147,11 @@ namespace gfx
 
 			// Send the texture data
 			if (Compressed)
-				glCompressedTexImage2D(GL_TEXTURE_2D, i, format, width, height, 0, size, 
+				glCompressedTexImage2D(GL_TEXTURE_2D, i, format, width, height, 0, size,
 				(GLvoid*)pSrc);
 			else
 			{
-				glTexImage2D(GL_TEXTURE_2D, i, internalformat, width, height, 0, format, 
+				glTexImage2D(GL_TEXTURE_2D, i, internalformat, width, height, 0, format,
 					GL_UNSIGNED_BYTE, (GLvoid*)pSrc);
 			}
 			if (m_iMipmapsCount == 1)
@@ -189,7 +189,7 @@ namespace gfx
 	void TextureGL::CheckDevilErrors( const char* TextureName )
 	{
 
-		
+
 	} // CheckDevilErrors
 
 	//------------------------------------------------------------------------------------
@@ -275,7 +275,7 @@ namespace gfx
 
 		glTexSubImage2D(GL_TEXTURE_2D, mipmapLevel, 0, 0, m_iWidth, m_iHeight
 			, texDestFormat, texDataFormat, (GLvoid*)Data);
-		
+
 		return true;
 	}
 

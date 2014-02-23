@@ -16,9 +16,19 @@ solution "kge"
       language "C++"
       files { "Source/**.cpp" }
       excludes {"Source/sn/fmod/*.cpp", "Source/sn/bass/*.cpp", "Source/av/**.cpp"}
-      includedirs { "Libs/sdl" }
+      includedirs { "Libs/SDL/include" }
       buildoptions { "-fpermissive" }
-        links { "SDL2-2.0" }
+        links { "SDL2" }
+        libdirs { "." }
+  
+   -- OpenGL
+   project "Renderer_ogl"
+      kind "SharedLib"
+      language "C++"
+      files { "plugins/Renderer_ogl/*.cpp" }
+      includedirs { "Libs/SDL/include" }
+      buildoptions { "-fpermissive" }
+        links { "kge" }
         libdirs { "." }
 
    -- 01HelloWorld

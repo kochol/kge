@@ -1,5 +1,5 @@
 #include "IndexBufferGL.h"
-#include "../../Libs/Glew/glew.h"
+#include "../../Libs/glew/glew.h"
 #include "../../Include/gfx/Renderer.h"
 
 KGE_IMPORT extern kge::gfx::Renderer	*	g_pRenderer;

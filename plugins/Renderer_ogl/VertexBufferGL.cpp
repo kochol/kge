@@ -1,4 +1,4 @@
-#include "../../Libs/Glew/glew.h"
+#include "../../Libs/glew/glew.h"
 #include "VertexBufferGL.h"
 #include "../../Include/gfx/Renderer.h"
 
@@ -12,7 +12,7 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	// Constructor
 	//------------------------------------------------------------------------------------
-	VertexBufferGL::VertexBufferGL( u32 vCount,u32 stride, bool isDynamic ): 
+	VertexBufferGL::VertexBufferGL( u32 vCount,u32 stride, bool isDynamic ):
 		HardwareBuffer(vCount, stride, HardwareBufferID++)
 	{
 		m_bDynamic = isDynamic;

@@ -23,7 +23,7 @@
 #define KGE_VERSION    ((KGE_VERSION_MAJOR << 16) | (KGE_VERSION_MINOR << 8) | KGE_VERSION_RELEASE)
 
 //**************************************
-// compiler and platform 
+// compiler and platform
 //**************************************
 
 #define KGE_PLATFORM_UNKNOWN 0	// Unknown platform
@@ -52,7 +52,7 @@
 	#define KGE_COMP_VER (((__GNUC__)*100) + \
 			(__GNUC_MINOR__*10) + \
 			__GNUC_PATCHLEVEL__)
-	
+
 #elif defined( __BORLANDC__ )
 	#define KGE_COMPILER KGE_COMPILER_BORL
 	#define KGE_COMP_VER __BCPLUSPLUS__
@@ -100,7 +100,7 @@
 //**************************************
 #if defined(_UNICODE) && (KGE_USE_UNICODE == 1)
 	#define KGE_SUPPORT_UNICODE 1
-#else 
+#else
 	#define KGE_SUPPORT_UNICODE 0
 #endif
 
@@ -161,6 +161,7 @@
 
 #else
 	#define KGE_API
+	#define KGELIB_API
 	#define KGE_IMPORT
 	#define NAKED_FUNC void
 #endif
@@ -170,7 +171,7 @@
 //**************************************
 
 //**************************************
-// constants 
+// constants
 //**************************************
 
 #define MAXID 65535		// MAXID = NULL for u32 IDs
