@@ -1,0 +1,20 @@
+KGE is designed to work on several systems.
+
+# Requirements
+SDL2-2.0 http://libsdl.org/download-2.0.php 
+
+
+# Installation
+## Linux
+these are the steps that I took to install KGE on a 64 bit Ubuntu 13.10 installation
+	cd ~/git
+	git clone https://github.com/kochol/kge.git
+	cd kge
+# I installed SDL2 with help from here
+#	http://askubuntu.com/a/344528/66689
+	sudo apt-get install libncurses5-dev libncursesw5-dev
+	sudo apt-get install libsdl2-dev
+# commented the SDL lines in wscript
+#	./waf configure build  --> this did not seem to work!
+So I configured the code blokcs project to build with sdl and 
+used a tool to export a makefile for project.
