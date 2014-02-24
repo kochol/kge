@@ -1,0 +1,16 @@
+def build(bld):
+	# Add source files
+	files = []
+	files.extend(bld.path.ant_glob("*.cpp"))
+
+	# Bulid OpenGL renderer Plugin
+	bld.shlib(
+		source = files,
+		target = "Renderer_ogl",
+		name = "Renderer_ogl",
+		includes     = ['../../Libs/SDL/include'],
+		cxxflags     = ['-fpermissive'],
+		use = ['kge', 'GLEW'],
+		lib = ['Cg', 'CgGL']
+	)
+
