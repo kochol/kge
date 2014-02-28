@@ -256,6 +256,9 @@
 		</Unit>
 		<Unit filename="Source/gfx/MS3DLoader.cpp">
 		</Unit>
+		<Unit filename="Libs/stb_image.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 		</Extensions>
 	</Project>

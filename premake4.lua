@@ -14,7 +14,7 @@ solution "kge"
    project "kge"
       kind "SharedLib"
       language "C++"
-      files { "Source/**.cpp" }
+      files { "Source/**.cpp", "Libs/stb_image.c" }
       excludes {"Source/sn/fmod/*.cpp", "Source/sn/bass/*.cpp", "Source/av/**.cpp"}
       includedirs { "Libs/SDL/include" }
       buildoptions { "-fpermissive" }
@@ -28,7 +28,7 @@ solution "kge"
       files { "plugins/Renderer_ogl/*.cpp" }
       includedirs { "Libs/SDL/include" }
       buildoptions { "-fpermissive" }
-        links { "kge" }
+        links { "kge", "Cg", "CgGL", "GLEW" }
         libdirs { "." }
 
    -- 01HelloWorld

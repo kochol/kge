@@ -25,7 +25,7 @@ using namespace kge::gfx;
 #	pragma pack(1)
 #	define PACK_STRUCT
 #elif defined(__GNUC__)
-#	define PACK_STRUCT	__attribute__((packed))
+#pragma pack(1)
 #else
 #	error compiler not supported
 #endif
@@ -37,7 +37,7 @@ struct ms3dVertex
 	Vertex3 m_vVert;  //X,Y,Z coordinates
 	char	m_cBone; //Bone ID (-1 = no bone)
 	u8		m_ucUnused;
-} PACK_STRUCT; // ms3dVertex
+} ; // ms3dVertex
 
 // MS3D Triangle data structure
 struct ms3dTriangle
@@ -48,7 +48,7 @@ struct ms3dTriangle
 	float	m_fTexCoords[2][3];	//Texture coordinates
 	u8		m_ucSmoothing;		//Smoothing group
 	u8		m_ucGroup;			//Group index
-} PACK_STRUCT;
+} ;
 
 // Group of triangles in the ms3d file
 struct ms3dGroup
@@ -58,7 +58,7 @@ struct ms3dGroup
 	u16  m_usNumTris;	//Number of triangles in the group
 	u16* m_uspIndices;	//Triangle Indices
 	char m_cMaterial;	//Material index, -1 = no material
-	
+
 	//Let it clean up after itself like usual
 	ms3dGroup()
 	{
@@ -73,7 +73,7 @@ struct ms3dGroup
 	{
 		KGE_DELETE_ARRAY(m_uspIndices);
 	}
-} PACK_STRUCT;
+} ;
 
 // Material information for the mesh
 struct ms3dMaterial
@@ -88,7 +88,7 @@ struct ms3dMaterial
 	char  m_cMode;			//unused
 	char  m_cTexture[128];  //Texture map file
 	char  m_cAlpha[128];	//Alpha map file
-} PACK_STRUCT;
+} ;
 
 // Bone Joints for animation
 struct ms3dJoint
@@ -105,14 +105,14 @@ struct ms3dJoint
 	KeyFrame * m_TransKeyFrames; //Translation keyframes
 	// Data not loaded from file
 	short m_sParent; //Parent joint index
-} PACK_STRUCT;
+} ;
 
 // Default alignment
 #ifdef _MSC_VER
 #	pragma pack(pop, packing)
+#elif defined(__GNUC__)
+#   pragma pack()
 #endif
-
-#undef PACK_STRUCT
 
 namespace kge
 {
@@ -162,7 +162,7 @@ protected:
 	ms3dMaterial*	m_pMaterials;		// The Materials.
 
 	ms3dJoint*		m_pJoints;			// The Bones.
-	
+
 	Renderer*		m_pRenderer;		// The Renderer.
 
 	sn::SceneManager* m_pSnMan;			// The Scene Manager.

@@ -25,7 +25,7 @@ namespace gfx
 	// Constructor.
 	//--------------
 	MS3DLoader::MS3DLoader(Renderer* renderer, sn::SceneManager* smgr):
-		m_pVertices(NULL), m_pTriangles(NULL), m_pMeshes(NULL), 
+		m_pVertices(NULL), m_pTriangles(NULL), m_pMeshes(NULL),
 		m_pMaterials(NULL), m_pJoints(NULL), m_fFPS(0.0f), m_fTotalTime(0.0f),
 		m_iFramesCount(0), m_pRenderer(renderer), m_pSnMan(smgr)
 	{
@@ -56,7 +56,7 @@ namespace gfx
 		//if ( !LoadFromArchive(FileName) )
 		//    return NULL;
 
-		// Global 
+		// Global
 
 		//-----------------
 		// Creating Meshes.
@@ -183,7 +183,7 @@ namespace gfx
 			pMeshes[i].m_pPos		= VerticesPos;
 			pMeshes[i].m_pNorTex	= VerticesNorT;
 			RecalculateNormals_Smooth(VerticesPos, VerticesNorT, pMeshes[i].m_NumVerts, pMeshes[i].m_pIndices, pMeshes[i].m_NumIndices);
-			
+
 		} // for Meshes.
 
 		//-----------------------------
@@ -322,7 +322,7 @@ namespace gfx
 				Indices[j * 3    ] = j * 3    ;
 				Indices[j * 3 + 1] = j * 3 + 1;
 				Indices[j * 3 + 2] = j * 3 + 2;
- 
+
 			} // for j
 
 			// Assign indices to the mesh.
@@ -378,7 +378,7 @@ namespace gfx
 			for (u32 y = 0; y < m_pMeshes[i].m_usNumTris; y++)
 			{
 				ms3dTriangle * pCurTri	= &m_pTriangles[m_pMeshes[i].m_uspIndices[y]];
-				
+
 				for (int f = 0; f < 3; f++)
 				{
 					int VertexIndex = pCurTri->m_usVertIndices[f];
@@ -393,12 +393,12 @@ namespace gfx
 					bb->AddPoint( &Vertices[c].pos );
 					aabb->AddInternalPoint( &Vertices[c].pos );
 				}
-			} 
+			}
 
 			pMeshes[i].m_pVerts = Vertices;
 
 			pMeshes[i].PrepareBuffers();
-			//pMeshes[i].m_pIndexBuffer  = m_pRenderer->CreateIndexBuffer(Indices, 
+			//pMeshes[i].m_pIndexBuffer  = m_pRenderer->CreateIndexBuffer(Indices,
 			//							 m_pMeshes[i].m_usNumTris * 3);
 
 			// TODO
@@ -505,6 +505,7 @@ namespace gfx
 			return false;
 		}
 		// Copy triangles
+		printf("sizeof(ms3dTriangle) = %d\n", sizeof(ms3dTriangle));
 		memcpy(m_pTriangles, ptr, m_iNumTriangles * sizeof(ms3dTriangle));
 		ptr += m_iNumTriangles * sizeof(ms3dTriangle);
 
@@ -638,7 +639,7 @@ namespace gfx
 	{
 		//std::string name(filename);
 		//std::transform(name.begin(), name.end(), name.begin(), ::tolower);
-		//std::string path("../../media/"); // 
+		//std::string path("../../media/"); //
 		//std::string::size_type pos = name.find(path);
 		//if (pos != std::string::npos)
 		//{
@@ -826,7 +827,7 @@ namespace gfx
 		//}
 
 		//delete[] buffer;
-		
+
 		return true;
 
 	} // LoadFromArchive

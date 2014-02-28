@@ -2,14 +2,11 @@ import urllib2
 import os.path
 
 APPNAME = 'kge'
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 
 top = '.'
 out = 'bin'
 outsdl = out + 'sdlcmake'
-
-url = ''
-saveto = ''
 
 def download(url, saveto):
 	file_name = saveto + '/' + url.split('/')[-1]
@@ -37,6 +34,12 @@ def download(url, saveto):
 
 	f.close()
 
+def FindOS(ctx):
+	arch = "32"
+	if ctx.env.DEST_CPU == "x86_64" or ctx.env.DEST_CPU == "amd64":
+		arch = "64"
+	print arch
+
 def options(opt):
         opt.load('compiler_c compiler_cxx')
 
@@ -44,12 +47,14 @@ def configure(conf):
 	download("https://github.com/kochol/kge/releases/download/0.1.0/kge010.zip", "Libs")
         conf.load('compiler_c compiler_cxx')
 	conf.setenv('debug')
+	print conf.env['DEST_CPU']
 
 def build(bld):
 	print 'C Flags:', bld.env['CFLAGS']
 	print 'CXX Flags:', bld.env['CXXFLAGS']
 	print 'Linker Flags:', bld.env['LINKFLAGS']
 	print 'Defines:', bld.env['DEFINES']
+	FindOS(bld)
 
 	print 'Building SDL2 please wait ...'
 	bld(rule='touch sdlcmake;cd sdlcmake;cmake ../../Libs/SDL;make;cd ..')
