@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../../Include/kgedef.h"
-#include "../../Include/gfx/HardWareBuffer.h"
+#include "../../Include/gfx/HardwareBuffer.h"
 
 namespace kge
 {

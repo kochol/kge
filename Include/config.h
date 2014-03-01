@@ -46,7 +46,7 @@
 #define KGE_USE_FMOD 0
 
 // BASS
-#define KGE_USE_BASS 1
+#define KGE_USE_BASS 0
 
 #if (KGE_USE_FMOD == 1) || (KGE_USE_BASS == 1) || (KGE_USE_OPENAL == 1)
 	#define KGE_USE_SOUND_SYSTEM 1

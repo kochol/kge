@@ -261,7 +261,7 @@ protected:
 						m_iIndexBufferSize;
 
 	// Vertex elements array
-	std::vector<std::vector<CustomVertexElement>>
+	std::vector<std::vector<CustomVertexElement> >
 						m_vVertexInfoArray;
 
 	VertexDec		*	m_pCurrentVD;

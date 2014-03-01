@@ -47,7 +47,7 @@ public:
 	void AddY(float y);
 
 	//! Returns true if the ray and box collide.
-	inline bool IntersectRay(Ray* pRay);
+	bool IntersectRay(Ray* pRay);
 
 	//! Returns true if point is inside the box
 	bool Inside(const math::Vector &point) const;
@@ -55,7 +55,7 @@ public:
 	//! Returns true if two boxes are intersecting
 	bool Intersect(const AABB& box) const;
 
-	//! Checks for swap min and max 
+	//! Checks for swap min and max
 	void Repair();
 
 	void DebugRender();

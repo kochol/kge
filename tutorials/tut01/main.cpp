@@ -1,10 +1,12 @@
-// This tutorial shows how to use Kochol Game Engine 
+// This tutorial shows how to use Kochol Game Engine
 // We recommend if you want test KGE change the codes in this tutorial
 
 // Include the kge.h and it will include the other header files automatically
-// But its not the best way to use KGE when your project is big. The compile time 
+// But its not the best way to use KGE when your project is big. The compile time
 // will be increased in this way.
 #include "../../Include/kge.h"
+
+#include "../../Include/core/TaskManager.h"
 
 // Tell the compiler to link with kge.lib
 #pragma comment(lib, "../../bin/debug/kge.lib")
@@ -41,28 +43,36 @@ int main()
 	params.RendererType = kge::gfx::ERA_OpenGL;
 	dev.Init(params);
 
+	kge::core::TaskManager::GetSingletonPointer();
+
 	// After initializing of engine we can get the pointer of Renderer and the SceneManager
 	pRen	= dev.GetRenderer();
 	pSnMgr	= dev.GetSceneManager();
 
-	// Now we need a camera to view our world. We ask from SceneManger to add a camera node 
+	// Now we need a camera to view our world. We ask from SceneManger to add a camera node
 	// to the scene
 	pCam = pSnMgr->AddCameraNode
 		(
 		kge::math::Vector(5, 5, 5),	// The position of camera
-		kge::math::Vector(),		// The target of camera. The point that camera look at
+		kge::math::Vector(0, 0, 0),		// The target of camera. The point that camera look at
 		kge::math::Vector(0, 1, 0)	// The up vector, shows the up view direction
 		);
+
+	dev.GetPluginManager()->LoadPlugin("Loader_assimp");
 
 	// Now we load a 3D model as static mesh
 	pMesh = pSnMgr->AddStaticMeshNode("../../media/models/box.ms3d", true);
 
-	// Disable lighting this part will be changed or explained later
-	pMesh->GetMaterial(0)->shader->m_MaterialParams.eLightingType = kge::gfx::ELIT_UnLit;
-	pMesh->GetMaterial(0)->shader->m_bMatParamsChanged = true;
+	if (pMesh)
+	{
+		// Disable lighting this part will be changed or explained later
+		pMesh->GetMaterial(0)->shader->m_MaterialParams.eLightingType = kge::gfx::ELIT_UnLit;
+		pMesh->GetMaterial(0)->shader->m_bMatParamsChanged = true;
+//		pMesh->GetMaterial(0)->ppTexture[0] = pSnMgr->AddTexture("../../media/textures/duckcm.tga");
+	}
 
 	// We add a timer to get elapsed time
-	kge::core::Timer t;	
+	kge::core::Timer t;
 
 	pRen->SetClearColor(kge::gfx::Colorf(111,111,111));
 
