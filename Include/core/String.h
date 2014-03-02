@@ -86,7 +86,7 @@ public:
 	void DelCharPointer();
 
 	//! Get string lenght
-	inline u32 GetLenght() const;
+	u32 GetLenght() const;
 
 	//! A static function that copy from another char*
 	static char* StringCopy(const char* Src);

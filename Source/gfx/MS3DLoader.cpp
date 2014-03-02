@@ -505,7 +505,6 @@ namespace gfx
 			return false;
 		}
 		// Copy triangles
-		printf("sizeof(ms3dTriangle) = %d\n", sizeof(ms3dTriangle));
 		memcpy(m_pTriangles, ptr, m_iNumTriangles * sizeof(ms3dTriangle));
 		ptr += m_iNumTriangles * sizeof(ms3dTriangle);
 

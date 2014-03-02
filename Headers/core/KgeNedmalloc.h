@@ -13,13 +13,13 @@ namespace kge
 		public:
 
 			//! Allocate bytes
-			static void* AllocateBytes(u32 BytesCount,  char* file = 0, int line = 0, char* function = 0);
+			static void* AllocateBytes(u32 BytesCount, const char* file = 0, int line = 0, const char* function = 0);
 
 			//! Deallocate bytes
 			static void DeallocateBytes(void* ptr);
 
 			//! Reallocate bytes
-			static void* ReallocateBytes(void* ptr, u32 BytesCount,  char* file = 0, int line = 0, char* function = 0);
+			static void* ReallocateBytes(void* ptr, u32 BytesCount, const char* file = 0, int line = 0, const char* function = 0);
 
 		}; // KgeNedmalloc
 

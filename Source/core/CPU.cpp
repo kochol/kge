@@ -6,7 +6,7 @@
 #include "../../Include/core/CPU.h"
 #include <string.h>
 #include <exception>
-#include <SDL_cpuinfo.h>
+#include <SDL2/SDL_cpuinfo.h>
 
 // *** G O L O B A L S ***
 bool g_bSSE;

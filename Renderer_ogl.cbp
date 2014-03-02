@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="libRenderer_ogl.so" prefix_auto="0" extension_auto="0" />
+				<Option output="bin/debug/libRenderer_ogl.so" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/Debug/Renderer_ogl" />
 				<Option type="3" />
 				<Option compiler="gcc" />
@@ -23,11 +23,16 @@
 				<Linker>
 					<Add option="-shared" />
 					<Add directory="." />
+					<Add directory="Libs" />
+					<Add directory="bin/debug" />
 					<Add library="kge" />
+					<Add library="Cg" />
+					<Add library="CgGL" />
+					<Add library="GLEW" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="libRenderer_ogl.so" prefix_auto="0" extension_auto="0" />
+				<Option output="bin/release/libRenderer_ogl.so" prefix_auto="0" extension_auto="0" />
 				<Option object_output="obj/Release/Renderer_ogl" />
 				<Option type="3" />
 				<Option compiler="gcc" />
@@ -44,7 +49,12 @@
 					<Add option="-s" />
 					<Add option="-shared" />
 					<Add directory="." />
+					<Add directory="Libs" />
+					<Add directory="bin/release" />
 					<Add library="kge" />
+					<Add library="Cg" />
+					<Add library="CgGL" />
+					<Add library="GLEW" />
 				</Linker>
 			</Target>
 		</Build>

@@ -6,7 +6,7 @@
 #include "../../Include/io/Keyboard.h"
 
 #ifdef KGE_USE_SDL
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <ctype.h>
 #endif // KGE_USE_SDL
 
