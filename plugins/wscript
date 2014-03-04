@@ -1,2 +1,6 @@
+def configure(conf):
+    pass
+
+
 def build(bld):
     bld.recurse("Renderer_ogl")

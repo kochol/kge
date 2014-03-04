@@ -18,3 +18,4 @@ these are the steps that I took to install KGE on a 64 bit Ubuntu 13.10 installa
 #	./waf configure build  --> this did not seem to work!
 So I configured the code blokcs project to build with sdl and 
 used a tool to export a makefile for project.
+# install Cg toolkit from here: https://developer.nvidia.com/cg-toolkit

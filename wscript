@@ -41,8 +41,8 @@ def configure(conf):
     
     conf.write_config_header('kgeconfig.h')
     
-    # if Options.options.build_plugins:
-        # conf.recurse('plugins')
+    if Options.options.build_plugins:
+        conf.recurse('plugins')
     
     # if Options.options.build_tests:
         # conf.recurse('tests')
@@ -57,7 +57,7 @@ def build(bld):
     files.extend(bld.path.ant_glob("Libs/stb_image.c"))
     
     lib = bld(
-        features        = ['c'],
+        features        = ['cxx'],
         target          = name_version,
         cxxflags        = ['-fpermissive', '-Wall', '-g', '-fPIC', '-DDEBUG'],
         # ccflags         = ['-Wall'], # '-std=c99', 
@@ -69,7 +69,7 @@ def build(bld):
     )
     
     from waflib import Options
-    # lib.features.append('cshlib' if Options.options.shared else 'cstaticlib')
+    lib.features.append('cxxshlib' if Options.options.shared else 'cxxstaticlib')
     
     # if Options.options.debug:
     #     lib.ccflags.extend(['-g', '-O0'])
