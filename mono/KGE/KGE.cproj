@@ -11,6 +11,12 @@
     </Compiler>
     <Language>CPP</Language>
     <Target>Bin</Target>
+    <Packages>
+      <Packages>
+        <Package file="/usr/local/lib/pkgconfig/sdl2.pc" name="sdl2" IsProject="False" />
+        <Package file="/usr/local/lib/pkgconfig/IL.pc" name="IL" IsProject="False" />
+      </Packages>
+    </Packages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -537,6 +543,9 @@
     <None Include="..\..\Include\sn\TileTerrain2.h">
       <Link>Include\sn\TileTerrain2.h</Link>
     </None>
+    <None Include="..\..\Libs\stb_image.h">
+      <Link>stb_image.h</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\Source\Device.cpp">
@@ -850,6 +859,9 @@
     </Compile>
     <Compile Include="..\..\Source\gfx\Lightgfx.cpp">
       <Link>Source\gfx\Lightgfx.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Libs\stb_image.c">
+      <Link>stb_image.c</Link>
     </Compile>
   </ItemGroup>
 </Project>
