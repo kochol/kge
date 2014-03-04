@@ -6,7 +6,7 @@
 
 #include "../../Include/core/Timer.h"
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 namespace kge
 {

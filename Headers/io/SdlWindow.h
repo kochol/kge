@@ -11,7 +11,7 @@
 #ifdef KGE_USE_SDL
 
 #include "../../Include/io/Iwindow.h"
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #ifdef WIN32
 #include <SDL_syswm.h>

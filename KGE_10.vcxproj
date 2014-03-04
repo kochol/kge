@@ -420,7 +420,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="changes.txt" />
-    <None Include="ReadMe.txt" />
+    <None Include="README.md" />
     <None Include="todo.txt" />
     <None Include="work.txt" />
   </ItemGroup>

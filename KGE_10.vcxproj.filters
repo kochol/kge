@@ -1030,9 +1030,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
     <None Include="work.txt" />
     <None Include="changes.txt" />
     <None Include="todo.txt" />
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

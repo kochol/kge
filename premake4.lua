@@ -5,21 +5,23 @@ solution "kge"
    configuration "Debug"
       defines { "DEBUG" }
       flags { "Symbols"}
+      targetdir "bin/debug"
  
     configuration "Release"
       defines { "NDEBUG" }
       flags { "Optimize" }    
+      targetdir "bin/release"
 
    -- KGE
    project "kge"
       kind "SharedLib"
       language "C++"
-      files { "Source/**.cpp" }
+      files { "Source/**.cpp", "Libs/stb_image.c" }
       excludes {"Source/sn/fmod/*.cpp", "Source/sn/bass/*.cpp", "Source/av/**.cpp"}
       includedirs { "Libs/SDL/include" }
       buildoptions { "-fpermissive" }
-        links { "SDL2" }
-        libdirs { "." }
+        links { "SDL2",  "IL", "ILU"}
+        libdirs { ".", "LIBDIR" }
   
    -- OpenGL
    project "Renderer_ogl"
@@ -28,8 +30,8 @@ solution "kge"
       files { "plugins/Renderer_ogl/*.cpp" }
       includedirs { "Libs/SDL/include" }
       buildoptions { "-fpermissive" }
-        links { "kge" }
-        libdirs { "." }
+        links { "kge", "Cg", "CgGL", "GLEW" }
+        libdirs { ".", "./Libs" }
 
    -- 01HelloWorld
    project "01HelloWorld"

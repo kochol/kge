@@ -9,7 +9,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Allocate bytes
 		//------------------------------------------------------------------------------------
-		void* KgeNedmalloc::AllocateBytes(u32 BytesCount,  char* file, int line, char* function)
+		void* KgeNedmalloc::AllocateBytes(u32 BytesCount, const char* file, int line, const char* function)
 		{
 			// Allocate bytes
 			void* ret = nedalloc::nedmalloc(BytesCount);
@@ -37,7 +37,7 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Reallocate bytes
 		//------------------------------------------------------------------------------------
-		void* KgeNedmalloc::ReallocateBytes( void* ptr, u32 BytesCount, char* file /*= 0*/, int line /*= 0*/, char* function /*= 0*/ )
+		void* KgeNedmalloc::ReallocateBytes( void* ptr, u32 BytesCount, const char* file /*= 0*/, int line /*= 0*/, const char* function /*= 0*/ )
 		{
 			// Allocate bytes
 			void* ret = nedalloc::nedrealloc(ptr, BytesCount);

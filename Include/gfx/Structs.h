@@ -295,7 +295,7 @@ enum FogType
 #	pragma pack(1)
 #	define PACK_STRUCT
 #elif defined(__GNUC__)
-#	define PACK_STRUCT	__attribute__((packed))
+#	pragma pack(1)
 #else
 #	error compiler not supported
 #endif
@@ -305,7 +305,7 @@ struct KeyFrame
 {
 	float m_fTime;
 	float m_fParam[3];
-} PACK_STRUCT; // KeyFrame
+}; // KeyFrame
 
 // Bone Joints for animation
 struct Joint
@@ -323,14 +323,14 @@ struct Joint
 	math::Matrix m_matFinal;
 	u16 m_usCurRotFrame;
 	u16 m_usCurTransFrame;
-} PACK_STRUCT; // Joint
+}; // Joint
 
 // Default alignment
 #ifdef _MSC_VER
 #	pragma pack(pop, packing)
+#elif defined(__GNUC__)
+#	pragma pack()
 #endif
-
-#undef PACK_STRUCT
 
 } // gfx
 

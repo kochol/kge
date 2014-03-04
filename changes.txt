@@ -3,6 +3,7 @@ Changes in 0.1.2
 
 - Add GetLastLoadedDocument to EventManager
 - Fix auto generating of mipmaps for OpenGL
+- Add Assimp mesh loader plugin to load many formats but it does not support animated meshes yet.
 
 --------------------------
 Changes in 0.1.1

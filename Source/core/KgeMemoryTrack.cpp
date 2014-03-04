@@ -1,3 +1,4 @@
+#include <cstdio>
 #include <map>
 #include "../../Headers/core/KgeMemoryTrack.h"
 #include "../../Include/core/KgeMemory.h"
@@ -9,12 +10,12 @@ namespace kge
 	namespace core
 	{
 
-		static std::map<unsigned int, MemoryInfo*>		g_sMemory;
+		static std::map<size_t, MemoryInfo*>		g_sMemory;
 
 		//------------------------------------------------------------------------------------
 		// Add memory
 		//------------------------------------------------------------------------------------
-		void KgeMemoryTrack::AddMemory(void* ptr, u32 BytesCount,  char* file, int line, char* function)
+		void KgeMemoryTrack::AddMemory(void* ptr, u32 BytesCount, const char* file, int line, const char* function)
 		{
 #		ifdef KGE_TRACK_MEMORY
 			static u32 AllocNo = 0;
@@ -26,7 +27,7 @@ namespace kge
 			mi->Line		= line;
 			mi->Function	= function;
 			mi->AllocNo     = AllocNo;
-			g_sMemory[(unsigned int)ptr]  = mi;
+			g_sMemory[(size_t)ptr]  = mi;
 
 #		endif // KGE_TRACK_MEMORY
 
@@ -38,10 +39,10 @@ namespace kge
 		bool KgeMemoryTrack::RemoveMemory(void* ptr)
 		{
 #		ifdef KGE_TRACK_MEMORY
-			std::map<unsigned int, MemoryInfo*>::iterator it = g_sMemory.find((unsigned int)ptr);
+			std::map<size_t, MemoryInfo*>::iterator it = g_sMemory.find((size_t)ptr);
 			if (it == g_sMemory.end())
 			{
-				io::Logger::Log(io::ELM_Error, "The %d pointer is not allocated with KGE_NEW or it was deallocated already.", (int)ptr);
+				io::Logger::Log(io::ELM_Error, "The %d pointer is not allocated with KGE_NEW or it was deallocated already.", (size_t)ptr);
 				return false;
 			}
 
@@ -65,7 +66,7 @@ namespace kge
 				io::Logger::SuccessKGE("Congratulation no memory leaks found :)");
 				return;
 			}
-			std::map<unsigned int, MemoryInfo*>::iterator it;
+			std::map<size_t, MemoryInfo*>::iterator it;
 			MemoryInfo* mi;
 			int bytes = 0;
 			io::Logger::Log(io::ELM_Information, "No   \tAddress\t\tsize\tfunction            \tline\tfile");

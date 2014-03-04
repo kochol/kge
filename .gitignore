@@ -33,3 +33,5 @@ media
 /Debug/Renderer_d3d9.lib
 /bin/debug/Renderer_d3d9.exp
 /bin/debug/Renderer_d3d9.lib
+
+*.pc

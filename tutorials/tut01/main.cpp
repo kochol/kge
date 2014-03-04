@@ -1,8 +1,8 @@
-// This tutorial shows how to use Kochol Game Engine 
+// This tutorial shows how to use Kochol Game Engine
 // We recommend if you want test KGE change the codes in this tutorial
 
 // Include the kge.h and it will include the other header files automatically
-// But its not the best way to use KGE when your project is big. The compile time 
+// But its not the best way to use KGE when your project is big. The compile time
 // will be increased in this way.
 #include "../../Include/kge.h"
 
@@ -49,19 +49,19 @@ int main()
 	pRen	= dev.GetRenderer();
 	pSnMgr	= dev.GetSceneManager();
 
-	// Now we need a camera to view our world. We ask from SceneManger to add a camera node 
+	// Now we need a camera to view our world. We ask from SceneManger to add a camera node
 	// to the scene
 	pCam = pSnMgr->AddCameraNode
 		(
-		kge::math::Vector(150, 250, 150),	// The position of camera
-		kge::math::Vector(0, 100, 0),		// The target of camera. The point that camera look at
+		kge::math::Vector(5, 5, 5),	// The position of camera
+		kge::math::Vector(0, 0, 0),		// The target of camera. The point that camera look at
 		kge::math::Vector(0, 1, 0)	// The up vector, shows the up view direction
 		);
 
 	dev.GetPluginManager()->LoadPlugin("Loader_assimp");
 
 	// Now we load a 3D model as static mesh
-	pMesh = pSnMgr->AddStaticMeshNode("E:/sdks/Assimp/test/models/collada/duck.dae", true);
+	pMesh = pSnMgr->AddStaticMeshNode("../../media/models/box.ms3d", true);
 
 	if (pMesh)
 	{
@@ -72,7 +72,7 @@ int main()
 	}
 
 	// We add a timer to get elapsed time
-	kge::core::Timer t;	
+	kge::core::Timer t;
 
 	pRen->SetClearColor(kge::gfx::Colorf(111,111,111));
 

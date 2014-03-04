@@ -163,7 +163,7 @@ namespace gfx
 
 		std::vector<char> strBuffer;
 
-		sn::Mesh* pMeshes = KGE_NEW_ARRAY(sn::Mesh, numMeshes);
+		sn::Mesh* pMeshes = KGE_NEW_CLASS_ARRAY(sn::Mesh, numMeshes);
 
 		for (u32 i = 0; i < numMeshes; ++i)
 		{

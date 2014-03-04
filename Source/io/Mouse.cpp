@@ -7,7 +7,7 @@
 #include "../../Include/io/Logger.h"
 
 #ifdef KGE_USE_SDL
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #endif // KGE_USE_SDL
 
 #ifdef WIN32

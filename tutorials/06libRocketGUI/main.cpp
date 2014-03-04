@@ -122,7 +122,7 @@ int main()
 	EventManager::m_DirStr = "../../media/gui/";
 	EventManager::LoadWindow("demo");
 
-	pRen->SetClearColor(kge::gfx::Colorf(250, 100, 100));
+	pRen->SetClearColor(kge::gfx::Colorf(100, 100, 100));
 
 
 	while (dev.Run())

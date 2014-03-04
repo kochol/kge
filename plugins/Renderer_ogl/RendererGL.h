@@ -13,7 +13,7 @@
 #include <Cg/cg.h>    /* Can't include this?  Is Cg Toolkit installed! */
 #include <Cg/cgGL.h>
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 namespace kge
 {

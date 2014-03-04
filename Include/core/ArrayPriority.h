@@ -94,7 +94,7 @@ namespace kge
 			{
 				// Create a doming.
 				ArraypItem* temp = KGE_NEW(ArraypItem);
-				temp->Item	 	 = NULL;
+				temp->Item	 	 = 0;
 				temp->next		 = NULL;
 				temp->prev		 = NULL;
 				temp->Pri		 = -100;
