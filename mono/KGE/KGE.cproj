@@ -11,12 +11,6 @@
     </Compiler>
     <Language>CPP</Language>
     <Target>Bin</Target>
-    <Packages>
-      <Packages>
-        <Package file="/usr/local/lib/pkgconfig/sdl2.pc" name="sdl2" IsProject="False" />
-        <Package file="/usr/local/lib/pkgconfig/IL.pc" name="IL" IsProject="False" />
-      </Packages>
-    </Packages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,6 +20,11 @@
     <DefineSymbols>DEBUG MONODEVELOP</DefineSymbols>
     <SourceDirectory>.</SourceDirectory>
     <ExtraCompilerArguments>-fpermissive</ExtraCompilerArguments>
+    <Libs>
+      <Libs>
+        <Lib>SDL2</Lib>
+      </Libs>
+    </Libs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release</OutputPath>

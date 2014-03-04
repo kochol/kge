@@ -35,3 +35,5 @@ media
 /bin/debug/Renderer_d3d9.lib
 
 *.pc
+
+*.userprefs
