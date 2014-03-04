@@ -8,9 +8,9 @@ def build(bld):
 		source = files,
 		target = "Renderer_ogl",
 		name = "Renderer_ogl",
-		includes     = ['../../Libs/SDL/include'],
+		# includes     = ['../../Libs/SDL/include'],
 		cxxflags     = ['-fpermissive'],
 		use = ['kge', 'GLEW'],
-		lib = ['Cg', 'CgGL']
+		lib = ['Cg', 'CgGL', 'sdl']
 	)
 
