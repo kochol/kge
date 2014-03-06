@@ -1,7 +1,7 @@
-KGE is designed to work on several systems.
+KGE is designed to work on several platfroms
 
 # Requirements
-SDL2-2.0 http://libsdl.org/download-2.0.php (this may be helpful: http://askubuntu.com/a/344528/66689)
+SDL2 http://libsdl.org/download-2.0.php (this may be helpful: http://askubuntu.com/a/344528/66689)
 Cg toolkit from here: https://developer.nvidia.com/cg-toolkit
 DevIL from here: http://openil.sourceforge.net
 
