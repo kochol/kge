@@ -32,7 +32,11 @@ namespace kge
 #define KGE_NEW_ARRAY(T, count) (T*) kge::core::KgeMemory::AllocateBytes(sizeof(T) * count, __FILE__, __LINE__, __FUNCTION__)
 #define KGE_NEW_CLASS_ARRAY(T, count) (new (kge::core::KgeMemory::AllocateBytes(sizeof(T) * count + 4, __FILE__, __LINE__, __FUNCTION__)) T[count])
 #define KGE_DELETE_ARRAY(ptr) if (ptr) { kge::core::KgeMemory::DeallocateBytes(ptr); ptr = NULL; }
+#ifdef _MSC_VER
+#define KGE_DELETE_CLASS_ARRAY(ptr, T, count) if (ptr) { 	for (int i = 0; i < count; i++) ptr[i].~T(); kge::core::KgeMemory::DeallocateBytes((void*)((unsigned long long)ptr - sizeof(void*))); ptr = NULL; }
+#else
 #define KGE_DELETE_CLASS_ARRAY(ptr, T, count) if (ptr) { 	for (int i = 0; i < count; i++) ptr[i].~T(); kge::core::KgeMemory::DeallocateBytes(ptr); ptr = NULL; }
+#endif
 
 #define KGE_REALLOC_ARRAY(ptr, T, count)(T*)kge::core::KgeMemory::ReallocateBytes(ptr, sizeof(T) * count, __FILE__, __LINE__, __FUNCTION__)
 
