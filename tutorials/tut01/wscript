@@ -1,8 +1,12 @@
+def configure(conf):
+    pass
+
+
 def build(bld):
-	# Bulid
-	bld.program(
-		source = 'main.cpp',
-		target = "01helloworld",
-		cxxflags     = ['-fpermissive'],
-		use = 'kge'
-	)
+    # Bulid
+    bld.program(
+        source='main.cpp',
+        target="../../Debug/01helloworld",
+        cxxflags=['-fpermissive'],
+        use=['Debug/kge-0.1'],
+    )

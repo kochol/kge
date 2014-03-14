@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FE3BCFE-6753-4F95-9F8B-95DA760B3738}</ProjectGuid>
+    <Compiler>
+      <Compiler ctype="GppCompiler" />
+    </Compiler>
+    <Language>CPP</Language>
+    <Target>Bin</Target>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+    <OutputName>KGE</OutputName>
+    <CompileTarget>SharedLibrary</CompileTarget>
+    <DefineSymbols>DEBUG MONODEVELOP</DefineSymbols>
+    <SourceDirectory>.</SourceDirectory>
+    <ExtraCompilerArguments>-fpermissive</ExtraCompilerArguments>
+    <Libs>
+      <Libs>
+        <Lib>SDL2</Lib>
+      </Libs>
+    </Libs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <OutputName>KGE</OutputName>
+    <CompileTarget>SharedLibrary</CompileTarget>
+    <OptimizationLevel>3</OptimizationLevel>
+    <DefineSymbols>MONODEVELOP</DefineSymbols>
+    <SourceDirectory>.</SourceDirectory>
+    <ExtraCompilerArguments>-fpermissive</ExtraCompilerArguments>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Headers\" />
+    <Folder Include="Include\" />
+    <Folder Include="Source\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Headers\core\KgeMemoryTrack.h">
+      <Link>Headers\core\KgeMemoryTrack.h</Link>
+    </None>
+    <None Include="..\..\Headers\core\KgeNedmalloc.h">
+      <Link>Headers\core\KgeNedmalloc.h</Link>
+    </None>
+    <None Include="..\..\Headers\gfx\GeometryBatch.h">
+      <Link>Headers\gfx\GeometryBatch.h</Link>
+    </None>
+    <None Include="..\..\Headers\gfx\LoaderDDS.h">
+      <Link>Headers\gfx\LoaderDDS.h</Link>
+    </None>
+    <None Include="..\..\Headers\gfx\LoaderStbImage.h">
+      <Link>Headers\gfx\LoaderStbImage.h</Link>
+    </None>
+    <None Include="..\..\Headers\gfx\MS3DLoader.h">
+      <Link>Headers\gfx\MS3DLoader.h</Link>
+    </None>
+    <None Include="..\..\Headers\gui\Char.h">
+      <Link>Headers\gui\Char.h</Link>
+    </None>
+    <None Include="..\..\Headers\io\Linux.h">
+      <Link>Headers\io\Linux.h</Link>
+    </None>
+    <None Include="..\..\Headers\io\SdlWindow.h">
+      <Link>Headers\io\SdlWindow.h</Link>
+    </None>
+    <None Include="..\..\Headers\io\Win32.h">
+      <Link>Headers\io\Win32.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\CylindricalJointX.h">
+      <Link>Headers\ph\CylindricalJointX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\DistanceJointX.h">
+      <Link>Headers\ph\DistanceJointX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\ErrorStreamX.h">
+      <Link>Headers\ph\ErrorStreamX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\MaterialX.h">
+      <Link>Headers\ph\MaterialX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\PhysXManager.h">
+      <Link>Headers\ph\PhysXManager.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\PrismaticJointX.h">
+      <Link>Headers\ph\PrismaticJointX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\RaycastX.h">
+      <Link>Headers\ph\RaycastX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\RevoluteJointX.h">
+      <Link>Headers\ph\RevoluteJointX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\SphericalJointX.h">
+      <Link>Headers\ph\SphericalJointX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\StreamX.h">
+      <Link>Headers\ph\StreamX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\TileTerrainShapeX.h">
+      <Link>Headers\ph\TileTerrainShapeX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\TriggerReportX.h">
+      <Link>Headers\ph\TriggerReportX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\UserAllocatorX.h">
+      <Link>Headers\ph\UserAllocatorX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\UserNotifyX.h">
+      <Link>Headers\ph\UserNotifyX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\actorDynamicX.h">
+      <Link>Headers\ph\actorDynamicX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\actorStaticX.h">
+      <Link>Headers\ph\actorStaticX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\cookingX.h">
+      <Link>Headers\ph\cookingX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\fixedJointX.h">
+      <Link>Headers\ph\fixedJointX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ph\planeX.h">
+      <Link>Headers\ph\planeX.h</Link>
+    </None>
+    <None Include="..\..\Headers\ps\Particle.h">
+      <Link>Headers\ps\Particle.h</Link>
+    </None>
+    <None Include="..\..\Headers\ps\ParticleBehavior.h">
+      <Link>Headers\ps\ParticleBehavior.h</Link>
+    </None>
+    <None Include="..\..\Headers\ps\ParticleEmitter.h">
+      <Link>Headers\ps\ParticleEmitter.h</Link>
+    </None>
+    <None Include="..\..\Headers\ps\ParticleRenderer.h">
+      <Link>Headers\ps\ParticleRenderer.h</Link>
+    </None>
+    <None Include="..\..\Include\Device.h">
+      <Link>Include\Device.h</Link>
+    </None>
+    <None Include="..\..\Include\InitParameter.h">
+      <Link>Include\InitParameter.h</Link>
+    </None>
+    <None Include="..\..\Include\KgeUnknown.h">
+      <Link>Include\KgeUnknown.h</Link>
+    </None>
+    <None Include="..\..\Include\Loader.h">
+      <Link>Include\Loader.h</Link>
+    </None>
+    <None Include="..\..\Include\Plugin.h">
+      <Link>Include\Plugin.h</Link>
+    </None>
+    <None Include="..\..\Include\PluginManager.h">
+      <Link>Include\PluginManager.h</Link>
+    </None>
+    <None Include="..\..\Include\Resource.h">
+      <Link>Include\Resource.h</Link>
+    </None>
+    <None Include="..\..\Include\ResourceManager.h">
+      <Link>Include\ResourceManager.h</Link>
+    </None>
+    <None Include="..\..\Include\Singleton.h">
+      <Link>Include\Singleton.h</Link>
+    </None>
+    <None Include="..\..\Include\config.h">
+      <Link>Include\config.h</Link>
+    </None>
+    <None Include="..\..\Include\enums.h">
+      <Link>Include\enums.h</Link>
+    </None>
+    <None Include="..\..\Include\kge.h">
+      <Link>Include\kge.h</Link>
+    </None>
+    <None Include="..\..\Include\kgedef.h">
+      <Link>Include\kgedef.h</Link>
+    </None>
+    <None Include="..\..\Include\tutorial01.h">
+      <Link>Include\tutorial01.h</Link>
+    </None>
+    <None Include="..\..\Include\core\Array.h">
+      <Link>Include\core\Array.h</Link>
+    </None>
+    <None Include="..\..\Include\core\Array2D.h">
+      <Link>Include\core\Array2D.h</Link>
+    </None>
+    <None Include="..\..\Include\core\ArrayPriority.h">
+      <Link>Include\core\ArrayPriority.h</Link>
+    </None>
+    <None Include="..\..\Include\core\CPU.h">
+      <Link>Include\core\CPU.h</Link>
+    </None>
+    <None Include="..\..\Include\core\Functor.h">
+      <Link>Include\core\Functor.h</Link>
+    </None>
+    <None Include="..\..\Include\core\KgeArray.h">
+      <Link>Include\core\KgeArray.h</Link>
+    </None>
+    <None Include="..\..\Include\core\KgeCond.h">
+      <Link>Include\core\KgeCond.h</Link>
+    </None>
+    <None Include="..\..\Include\core\KgeLock.h">
+      <Link>Include\core\KgeLock.h</Link>
+    </None>
+    <None Include="..\..\Include\core\KgeMemory.h">
+      <Link>Include\core\KgeMemory.h</Link>
+    </None>
+    <None Include="..\..\Include\core\KgeMutex.h">
+      <Link>Include\core\KgeMutex.h</Link>
+    </None>
+    <None Include="..\..\Include\core\KgeThread.h">
+      <Link>Include\core\KgeThread.h</Link>
+    </None>
+    <None Include="..\..\Include\core\PriorityArray.h">
+      <Link>Include\core\PriorityArray.h</Link>
+    </None>
+    <None Include="..\..\Include\core\String.h">
+      <Link>Include\core\String.h</Link>
+    </None>
+    <None Include="..\..\Include\core\Structs.h">
+      <Link>Include\core\Structs.h</Link>
+    </None>
+    <None Include="..\..\Include\core\TSQueue.h">
+      <Link>Include\core\TSQueue.h</Link>
+    </None>
+    <None Include="..\..\Include\core\Task.h">
+      <Link>Include\core\Task.h</Link>
+    </None>
+    <None Include="..\..\Include\core\TaskGroup.h">
+      <Link>Include\core\TaskGroup.h</Link>
+    </None>
+    <None Include="..\..\Include\core\TaskManager.h">
+      <Link>Include\core\TaskManager.h</Link>
+    </None>
+    <None Include="..\..\Include\core\TaskManagerThread.h">
+      <Link>Include\core\TaskManagerThread.h</Link>
+    </None>
+    <None Include="..\..\Include\core\Timer.h">
+      <Link>Include\core\Timer.h</Link>
+    </None>
+    <None Include="..\..\Include\core\mem_fun.h">
+      <Link>Include\core\mem_fun.h</Link>
+    </None>
+    <None Include="..\..\Include\core\ptr_fun.h">
+      <Link>Include\core\ptr_fun.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\Bloom.h">
+      <Link>Include\efx\Bloom.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\BumpMap.h">
+      <Link>Include\efx\BumpMap.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\Cartoon.h">
+      <Link>Include\efx\Cartoon.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\Effect.h">
+      <Link>Include\efx\Effect.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\EffectManager.h">
+      <Link>Include\efx\EffectManager.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\MirrorPlane.h">
+      <Link>Include\efx\MirrorPlane.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\Refraction.h">
+      <Link>Include\efx\Refraction.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\ShadowMapProjection.h">
+      <Link>Include\efx\ShadowMapProjection.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\ShadowPlane.h">
+      <Link>Include\efx\ShadowPlane.h</Link>
+    </None>
+    <None Include="..\..\Include\efx\xpsm.h">
+      <Link>Include\efx\xpsm.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Animation.h">
+      <Link>Include\gfx\Animation.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\CMatPhongLighting.h">
+      <Link>Include\gfx\CMatPhongLighting.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\CmTree.h">
+      <Link>Include\gfx\CmTree.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Color.h">
+      <Link>Include\gfx\Color.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\CustomMaterial.h">
+      <Link>Include\gfx\CustomMaterial.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\DynamicHardwareBuffer.h">
+      <Link>Include\gfx\DynamicHardwareBuffer.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\HardwareBuffer.h">
+      <Link>Include\gfx\HardwareBuffer.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Image.h">
+      <Link>Include\gfx\Image.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\ImageData.h">
+      <Link>Include\gfx\ImageData.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Lighting.h">
+      <Link>Include\gfx\Lighting.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Material.h">
+      <Link>Include\gfx\Material.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\MaterialManager.h">
+      <Link>Include\gfx\MaterialManager.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\MaterialParams.h">
+      <Link>Include\gfx\MaterialParams.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\MeshBuffer.h">
+      <Link>Include\gfx\MeshBuffer.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\MeshManager.h">
+      <Link>Include\gfx\MeshManager.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Renderer.h">
+      <Link>Include\gfx\Renderer.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Shader.h">
+      <Link>Include\gfx\Shader.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Structs.h">
+      <Link>Include\gfx\Structs.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Texture.h">
+      <Link>Include\gfx\Texture.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\Tile.h">
+      <Link>Include\gfx\Tile.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\TileTexture.h">
+      <Link>Include\gfx\TileTexture.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\VertexDec.h">
+      <Link>Include\gfx\VertexDec.h</Link>
+    </None>
+    <None Include="..\..\Include\gfx\VertexElement.h">
+      <Link>Include\gfx\VertexElement.h</Link>
+    </None>
+    <None Include="..\..\Include\gui\Control.h">
+      <Link>Include\gui\Control.h</Link>
+    </None>
+    <None Include="..\..\Include\gui\Event.h">
+      <Link>Include\gui\Event.h</Link>
+    </None>
+    <None Include="..\..\Include\gui\Font.h">
+      <Link>Include\gui\Font.h</Link>
+    </None>
+    <None Include="..\..\Include\gui\GuiManager.h">
+      <Link>Include\gui\GuiManager.h</Link>
+    </None>
+    <None Include="..\..\Include\gui\Image.h">
+      <Link>Include\gui\Image.h</Link>
+    </None>
+    <None Include="..\..\Include\gui\Text.h">
+      <Link>Include\gui\Text.h</Link>
+    </None>
+    <None Include="..\..\Include\io\File.h">
+      <Link>Include\io\File.h</Link>
+    </None>
+    <None Include="..\..\Include\io\FileSystem.h">
+      <Link>Include\io\FileSystem.h</Link>
+    </None>
+    <None Include="..\..\Include\io\FileSystemManager.h">
+      <Link>Include\io\FileSystemManager.h</Link>
+    </None>
+    <None Include="..\..\Include\io\Iwindow.h">
+      <Link>Include\io\Iwindow.h</Link>
+    </None>
+    <None Include="..\..\Include\io\JoyStick.h">
+      <Link>Include\io\JoyStick.h</Link>
+    </None>
+    <None Include="..\..\Include\io\Keyboard.h">
+      <Link>Include\io\Keyboard.h</Link>
+    </None>
+    <None Include="..\..\Include\io\Logger.h">
+      <Link>Include\io\Logger.h</Link>
+    </None>
+    <None Include="..\..\Include\io\Mouse.h">
+      <Link>Include\io\Mouse.h</Link>
+    </None>
+    <None Include="..\..\Include\io\Stream.h">
+      <Link>Include\io\Stream.h</Link>
+    </None>
+    <None Include="..\..\Include\math\AABB.h">
+      <Link>Include\math\AABB.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Frustum.h">
+      <Link>Include\math\Frustum.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Matrix.h">
+      <Link>Include\math\Matrix.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Plane.h">
+      <Link>Include\math\Plane.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Quat.h">
+      <Link>Include\math\Quat.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Ray.h">
+      <Link>Include\math\Ray.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Shape.h">
+      <Link>Include\math\Shape.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Sphere.h">
+      <Link>Include\math\Sphere.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Triangle.h">
+      <Link>Include\math\Triangle.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Utility.h">
+      <Link>Include\math\Utility.h</Link>
+    </None>
+    <None Include="..\..\Include\math\Vector.h">
+      <Link>Include\math\Vector.h</Link>
+    </None>
+    <None Include="..\..\Include\math\math.h">
+      <Link>Include\math\math.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\Actor.h">
+      <Link>Include\ph\Actor.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\CylindricalJoint.h">
+      <Link>Include\ph\CylindricalJoint.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\DistanceJoint.h">
+      <Link>Include\ph\DistanceJoint.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\DynamicTriangleMesh.h">
+      <Link>Include\ph\DynamicTriangleMesh.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\FixedJoint.h">
+      <Link>Include\ph\FixedJoint.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\Joint.h">
+      <Link>Include\ph\Joint.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\Material.h">
+      <Link>Include\ph\Material.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\PhysManager.h">
+      <Link>Include\ph\PhysManager.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\PrismaticJoint.h">
+      <Link>Include\ph\PrismaticJoint.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\RaycastReport.h">
+      <Link>Include\ph\RaycastReport.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\RevoluteJoint.h">
+      <Link>Include\ph\RevoluteJoint.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\SphericalJoint.h">
+      <Link>Include\ph\SphericalJoint.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\TileTerrainShape.h">
+      <Link>Include\ph\TileTerrainShape.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\TriggerReport.h">
+      <Link>Include\ph\TriggerReport.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\UserNotify.h">
+      <Link>Include\ph\UserNotify.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\actorDynamic.h">
+      <Link>Include\ph\actorDynamic.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\actorStatic.h">
+      <Link>Include\ph\actorStatic.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\physicType.h">
+      <Link>Include\ph\physicType.h</Link>
+    </None>
+    <None Include="..\..\Include\ph\plane.h">
+      <Link>Include\ph\plane.h</Link>
+    </None>
+    <None Include="..\..\Include\sfx\3DSound.h">
+      <Link>Include\sfx\3DSound.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\AnimatedMesh.h">
+      <Link>Include\sn\AnimatedMesh.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\AnimatedTexture.h">
+      <Link>Include\sn\AnimatedTexture.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\Bone.h">
+      <Link>Include\sn\Bone.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\Camera.h">
+      <Link>Include\sn\Camera.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\Decal.h">
+      <Link>Include\sn\Decal.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\Light.h">
+      <Link>Include\sn\Light.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\Listener.h">
+      <Link>Include\sn\Listener.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\Mesh.h">
+      <Link>Include\sn\Mesh.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\ParticleSystem.h">
+      <Link>Include\sn\ParticleSystem.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\RibbonTrail.h">
+      <Link>Include\sn\RibbonTrail.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\SceneManager.h">
+      <Link>Include\sn\SceneManager.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\SceneNode.h">
+      <Link>Include\sn\SceneNode.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\Sound2D.h">
+      <Link>Include\sn\Sound2D.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\Sound3D.h">
+      <Link>Include\sn\Sound3D.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\StaticMesh.h">
+      <Link>Include\sn\StaticMesh.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\TPCamera.h">
+      <Link>Include\sn\TPCamera.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\TileTerrain.h">
+      <Link>Include\sn\TileTerrain.h</Link>
+    </None>
+    <None Include="..\..\Include\sn\TileTerrain2.h">
+      <Link>Include\sn\TileTerrain2.h</Link>
+    </None>
+    <None Include="..\..\Libs\stb_image.h">
+      <Link>stb_image.h</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Source\Device.cpp">
+      <Link>Source\Device.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Loader.cpp">
+      <Link>Source\Loader.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\PluginManager.cpp">
+      <Link>Source\PluginManager.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Resource.cpp">
+      <Link>Source\Resource.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\CPU.cpp">
+      <Link>Source\core\CPU.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\KgeArray.cpp">
+      <Link>Source\core\KgeArray.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\KgeCond.cpp">
+      <Link>Source\core\KgeCond.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\KgeMemory.cpp">
+      <Link>Source\core\KgeMemory.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\KgeMemoryTrack.cpp">
+      <Link>Source\core\KgeMemoryTrack.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\KgeMutex.cpp">
+      <Link>Source\core\KgeMutex.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\KgeNedmalloc.cpp">
+      <Link>Source\core\KgeNedmalloc.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\KgeThread.cpp">
+      <Link>Source\core\KgeThread.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\String.cpp">
+      <Link>Source\core\String.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\TaskManager.cpp">
+      <Link>Source\core\TaskManager.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\TaskManagerThread.cpp">
+      <Link>Source\core\TaskManagerThread.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\core\Timer.cpp">
+      <Link>Source\core\Timer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\efx\Bloom.cpp">
+      <Link>Source\efx\Bloom.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\efx\BumpMap.cpp">
+      <Link>Source\efx\BumpMap.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\efx\Cartoon.cpp">
+      <Link>Source\efx\Cartoon.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\efx\EffectManager.cpp">
+      <Link>Source\efx\EffectManager.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\efx\MirrorPlane.cpp">
+      <Link>Source\efx\MirrorPlane.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\efx\Refraction.cpp">
+      <Link>Source\efx\Refraction.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\efx\ShadowMapProjection.cpp">
+      <Link>Source\efx\ShadowMapProjection.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\efx\ShadowPlane.cpp">
+      <Link>Source\efx\ShadowPlane.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\efx\xpsm.cpp">
+      <Link>Source\efx\xpsm.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\Animation.cpp">
+      <Link>Source\gfx\Animation.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\CMatPhongLighting.cpp">
+      <Link>Source\gfx\CMatPhongLighting.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\CmTree.cpp">
+      <Link>Source\gfx\CmTree.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\CustomMaterial.cpp">
+      <Link>Source\gfx\CustomMaterial.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\DynamicHardwareBuffer.cpp">
+      <Link>Source\gfx\DynamicHardwareBuffer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\GeometryBatch.cpp">
+      <Link>Source\gfx\GeometryBatch.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\ImageData.cpp">
+      <Link>Source\gfx\ImageData.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\LoaderDDS.cpp">
+      <Link>Source\gfx\LoaderDDS.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\LoaderStbImage.cpp">
+      <Link>Source\gfx\LoaderStbImage.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\MS3DLoader.cpp">
+      <Link>Source\gfx\MS3DLoader.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\MaterialManager.cpp">
+      <Link>Source\gfx\MaterialManager.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\MaterialParams.cpp">
+      <Link>Source\gfx\MaterialParams.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\MeshBuffer.cpp">
+      <Link>Source\gfx\MeshBuffer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\MeshManager.cpp">
+      <Link>Source\gfx\MeshManager.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\Renderer.cpp">
+      <Link>Source\gfx\Renderer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\Texture.cpp">
+      <Link>Source\gfx\Texture.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\Tile.cpp">
+      <Link>Source\gfx\Tile.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\TileTexture.cpp">
+      <Link>Source\gfx\TileTexture.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\VertexDec.cpp">
+      <Link>Source\gfx\VertexDec.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gui\Control.cpp">
+      <Link>Source\gui\Control.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gui\Font.cpp">
+      <Link>Source\gui\Font.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gui\GuiManager.cpp">
+      <Link>Source\gui\GuiManager.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gui\Image.cpp">
+      <Link>Source\gui\Image.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gui\Text.cpp">
+      <Link>Source\gui\Text.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\File.cpp">
+      <Link>Source\io\File.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\FileSystem.cpp">
+      <Link>Source\io\FileSystem.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\FileSystemManager.cpp">
+      <Link>Source\io\FileSystemManager.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\JoyStick.cpp">
+      <Link>Source\io\JoyStick.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\Keyboard.cpp">
+      <Link>Source\io\Keyboard.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\Linux.cpp">
+      <Link>Source\io\Linux.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\Logger.cpp">
+      <Link>Source\io\Logger.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\Mouse.cpp">
+      <Link>Source\io\Mouse.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\SdlWindow.cpp">
+      <Link>Source\io\SdlWindow.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\Stream.cpp">
+      <Link>Source\io\Stream.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\io\Win32.cpp">
+      <Link>Source\io\Win32.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\math\AABB.cpp">
+      <Link>Source\math\AABB.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\math\Frustum.cpp">
+      <Link>Source\math\Frustum.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\math\Matrix.cpp">
+      <Link>Source\math\Matrix.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\math\Plane.cpp">
+      <Link>Source\math\Plane.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\math\Quat.cpp">
+      <Link>Source\math\Quat.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\math\Sphere.cpp">
+      <Link>Source\math\Sphere.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\math\Utility.cpp">
+      <Link>Source\math\Utility.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\math\Vector.cpp">
+      <Link>Source\math\Vector.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\math\math.cpp">
+      <Link>Source\math\math.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\CylindricalJointX.cpp">
+      <Link>Source\ph\CylindricalJointX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\DistanceJointX.cpp">
+      <Link>Source\ph\DistanceJointX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\DynamicTriangleMesh.cpp">
+      <Link>Source\ph\DynamicTriangleMesh.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\FixedJointX.cpp">
+      <Link>Source\ph\FixedJointX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\MaterialX.cpp">
+      <Link>Source\ph\MaterialX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\PhysXManager.cpp">
+      <Link>Source\ph\PhysXManager.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\PrismaticJointX.cpp">
+      <Link>Source\ph\PrismaticJointX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\RevoluteJointX.cpp">
+      <Link>Source\ph\RevoluteJointX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\SphericalJointX.cpp">
+      <Link>Source\ph\SphericalJointX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\StreamX.cpp">
+      <Link>Source\ph\StreamX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\TileTerrainShapeX.cpp">
+      <Link>Source\ph\TileTerrainShapeX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\UserAllocatorX.cpp">
+      <Link>Source\ph\UserAllocatorX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\actorDynamicX.cpp">
+      <Link>Source\ph\actorDynamicX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\actorStaticX.cpp">
+      <Link>Source\ph\actorStaticX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\cookingX.cpp">
+      <Link>Source\ph\cookingX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ph\planeX.cpp">
+      <Link>Source\ph\planeX.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ps\ParticleBehavior.cpp">
+      <Link>Source\ps\ParticleBehavior.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ps\ParticleEmitter.cpp">
+      <Link>Source\ps\ParticleEmitter.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\ps\ParticleRenderer.cpp">
+      <Link>Source\ps\ParticleRenderer.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\AnimatedMesh.cpp">
+      <Link>Source\sn\AnimatedMesh.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\AnimatedTexture.cpp">
+      <Link>Source\sn\AnimatedTexture.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\Camera.cpp">
+      <Link>Source\sn\Camera.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\Decal.cpp">
+      <Link>Source\sn\Decal.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\Light.cpp">
+      <Link>Source\sn\Light.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\Mesh.cpp">
+      <Link>Source\sn\Mesh.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\ParticleSystem.cpp">
+      <Link>Source\sn\ParticleSystem.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\RibbonTrail.cpp">
+      <Link>Source\sn\RibbonTrail.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\SceneManager.cpp">
+      <Link>Source\sn\SceneManager.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\SceneNode.cpp">
+      <Link>Source\sn\SceneNode.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\StaticMesh.cpp">
+      <Link>Source\sn\StaticMesh.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\TPCamera.cpp">
+      <Link>Source\sn\TPCamera.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\TileTerrain.cpp">
+      <Link>Source\sn\TileTerrain.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\sn\TileTerrain2.cpp">
+      <Link>Source\sn\TileTerrain2.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\Imagegfx.cpp">
+      <Link>Source\gfx\Imagegfx.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Source\gfx\Lightgfx.cpp">
+      <Link>Source\gfx\Lightgfx.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\Libs\stb_image.c">
+      <Link>stb_image.c</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

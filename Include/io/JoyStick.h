@@ -10,7 +10,7 @@
 #include "../kgedef.h"
 
 #ifdef KGE_USE_SDL
-#include <SDL_joystick.h>
+#include <SDL2/SDL_joystick.h>
 #endif
 
 namespace kge

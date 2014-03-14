@@ -5,10 +5,12 @@ solution "kge"
    configuration "Debug"
       defines { "DEBUG" }
       flags { "Symbols"}
+      targetdir "bin/debug"
  
     configuration "Release"
       defines { "NDEBUG" }
       flags { "Optimize" }    
+      targetdir "bin/release"
 
    -- KGE
    project "kge"
@@ -18,8 +20,8 @@ solution "kge"
       excludes {"Source/sn/fmod/*.cpp", "Source/sn/bass/*.cpp", "Source/av/**.cpp"}
       includedirs { "Libs/SDL/include" }
       buildoptions { "-fpermissive" }
-        links { "SDL2" }
-        libdirs { "." }
+        links { "SDL2",  "IL", "ILU"}
+        libdirs { ".", "LIBDIR" }
   
    -- OpenGL
    project "Renderer_ogl"
@@ -29,7 +31,7 @@ solution "kge"
       includedirs { "Libs/SDL/include" }
       buildoptions { "-fpermissive" }
         links { "kge", "Cg", "CgGL", "GLEW" }
-        libdirs { "." }
+        libdirs { ".", "./Libs" }
 
    -- 01HelloWorld
    project "01HelloWorld"

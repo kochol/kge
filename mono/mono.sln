@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "KGE", "KGE\KGE.cproj", "{6FE3BCFE-6753-4F95-9F8B-95DA760B3738}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{4B00EBF2-2808-4109-95F9-EB3E762801BD}"
+EndProject
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "Renderer_ogl", "Renderer_ogl\Renderer_ogl.cproj", "{3E3ED2D7-53D8-4BCC-954F-6B104EF1DFC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tutorials", "Tutorials", "{FDBD7226-33E5-44BE-9E8B-D4A10E7C17E0}"
+EndProject
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "01HelloWorld", "01HelloWorld\01HelloWorld.cproj", "{3B580F59-C208-4288-9D5A-8FB3668A2C29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B580F59-C208-4288-9D5A-8FB3668A2C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B580F59-C208-4288-9D5A-8FB3668A2C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B580F59-C208-4288-9D5A-8FB3668A2C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B580F59-C208-4288-9D5A-8FB3668A2C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3ED2D7-53D8-4BCC-954F-6B104EF1DFC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3ED2D7-53D8-4BCC-954F-6B104EF1DFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3ED2D7-53D8-4BCC-954F-6B104EF1DFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3ED2D7-53D8-4BCC-954F-6B104EF1DFC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE3BCFE-6753-4F95-9F8B-95DA760B3738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE3BCFE-6753-4F95-9F8B-95DA760B3738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE3BCFE-6753-4F95-9F8B-95DA760B3738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE3BCFE-6753-4F95-9F8B-95DA760B3738}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E3ED2D7-53D8-4BCC-954F-6B104EF1DFC4} = {4B00EBF2-2808-4109-95F9-EB3E762801BD}
+		{3B580F59-C208-4288-9D5A-8FB3668A2C29} = {FDBD7226-33E5-44BE-9E8B-D4A10E7C17E0}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = KGE\KGE.cproj
+	EndGlobalSection
+EndGlobal

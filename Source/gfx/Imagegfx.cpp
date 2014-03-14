@@ -151,7 +151,7 @@ namespace gfx
 			io::Logger::Log(io::ELM_Error, "Incorrect mipmap level for image=%", m_pName);
 			return 0;
 		}
-		ILuint i = ilCopyPixels(XOff, YOff, ZOff, Width, Height, Depth, fmt, IL_UNSIGNED_BYTE, OutData);
+		ILuint i = 0;//ilCopyPixels(XOff, YOff, ZOff, Width, Height, Depth, fmt, IL_UNSIGNED_BYTE, OutData);
 		CheckDevilErrors(m_pFileName);
 
 		return i;
@@ -219,11 +219,11 @@ namespace gfx
 			return 0;
 		}
 
-		iluImageParameter(ILU_FILTER, ILU_SCALE_BOX);
+		//iluImageParameter(ILU_FILTER, ILU_SCALE_BOX);
 
 		ILimage		*ret = ilGetCurImage();
 
-		ILimage		*Temp  = iluScale_(ret, Width, Height, Depth);
+		ILimage		*Temp  = NULL;//iluScale_(ret, Width, Height, Depth);
 		if (!ret)
 			return false;
 
@@ -248,7 +248,7 @@ namespace gfx
 	u8 Image::BuildMipMaps()
 	{
 		ilBindImage(m_iImgID);
-		return iluBuildMipmaps();
+		return 0;//iluBuildMipmaps();
 
 	} // BuildMipMaps
 
@@ -360,7 +360,7 @@ namespace gfx
 	u8* Image::GetCompressData( CompressType ct, u32& Size )
 	{
 		ilBindImage(m_iImgID);
-		iluFlipImage();
+		//iluFlipImage();
 
 		u8*	outdata = NULL;
 		switch (ct)
@@ -396,7 +396,7 @@ namespace gfx
 			if ( Error == IL_COULD_NOT_OPEN_FILE )
 				kge::io::Logger::Log(io::ELM_Error , "Could not load image: %s" , TextureName );
 			else if (Error != IL_INVALID_EXTENSION)
-				kge::io::Logger::Log( kge::io::ELM_Error , "Error from DevIL on %s: %s", TextureName , iluErrorString(Error));
+				kge::io::Logger::Log( kge::io::ELM_Error , "Error from DevIL on %s: ", TextureName);// , iluErrorString(Error));
 		}
 
 	} // CheckDevilErrors

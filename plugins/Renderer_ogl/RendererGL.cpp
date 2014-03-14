@@ -32,7 +32,7 @@
 //#include "../../Libs/DevIL/ilut.h"
 
 #ifdef KGE_USE_SDL
-	#include <SDL.h>
+	#include <SDL2/SDL.h>
 #endif
 
 extern KGE_API SDL_Window* g_pSDLwindow;
@@ -1530,7 +1530,9 @@ namespace gfx
 
 		VertexDec* pOut	  = KGE_NEW(VertexDec)(sName);
 		c = m_vVertexInfoArray.size() - 1;
-		pOut->m_VertexDec = (void*)c;
+		int* index = KGE_NEW(int);
+		*index = c;
+		pOut->m_VertexDec = (void*)index;
 
 		AddVertexDec(pOut);
 
@@ -1557,7 +1559,7 @@ namespace gfx
 		glBindBuffer(GL_ARRAY_BUFFER, ((VertexBufferGL*)pBuffer)->m_uID);
 
 		// Set the vertex buffer
-		std::vector<CustomVertexElement>* p = &m_vVertexInfoArray[(int)m_pCurrentVD->m_VertexDec];
+		std::vector<CustomVertexElement>* p = &m_vVertexInfoArray[*(int*)m_pCurrentVD->m_VertexDec];
 
 		for (uint i = 0; i < p->size(); i++)
 		{

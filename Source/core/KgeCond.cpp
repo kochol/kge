@@ -1,4 +1,4 @@
-#include <SDL_mutex.h>
+#include <SDL2/SDL_mutex.h>
 #include "../../Include/core/KgeCond.h"
 #include "../../Include/core/KgeMutex.h"
 

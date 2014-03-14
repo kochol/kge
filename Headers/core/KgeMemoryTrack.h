@@ -11,8 +11,8 @@ namespace kge
 		{
 			void*			Data;
 			u32				BytesCount;
-			char*			FileName;
-			char*			Function;
+			const char*		FileName;
+			const char*		Function;
 			int				Line;
 			u32				AllocNo;
 
@@ -24,7 +24,7 @@ namespace kge
 		public:
 
 			//! Add memory
-			static void AddMemory(void* ptr, u32 BytesCount,  char* file = 0, int line = 0, char* function = 0);
+			static void AddMemory(void* ptr, u32 BytesCount, const char* file = 0, int line = 0, const char* function = 0);
 		
 			//! Removes memory
 			static bool RemoveMemory(void* ptr);
