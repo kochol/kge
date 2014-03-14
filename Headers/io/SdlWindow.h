@@ -14,7 +14,7 @@
 #include <SDL2/SDL.h>
 
 #ifdef WIN32
-#include <SDL_syswm.h>
+#include <SDL2/SDL_syswm.h>
 #endif // WIN32
 
 namespace kge

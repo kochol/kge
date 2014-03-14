@@ -144,12 +144,6 @@
     <ClCompile Include="Source\gfx\CustomMaterial.cpp">
       <Filter>Source Files\gfx</Filter>
     </ClCompile>
-    <ClCompile Include="Source\gfx\Image.cpp">
-      <Filter>Source Files\gfx</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\gfx\Light.cpp">
-      <Filter>Source Files\gfx</Filter>
-    </ClCompile>
     <ClCompile Include="Source\gfx\MaterialManager.cpp">
       <Filter>Source Files\gfx</Filter>
     </ClCompile>
@@ -490,6 +484,12 @@
       <Filter>Libs</Filter>
     </ClCompile>
     <ClCompile Include="Source\gfx\LoaderStbImage.cpp">
+      <Filter>Source Files\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\gfx\Imagegfx.cpp">
+      <Filter>Source Files\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\gfx\Lightgfx.cpp">
       <Filter>Source Files\gfx</Filter>
     </ClCompile>
   </ItemGroup>

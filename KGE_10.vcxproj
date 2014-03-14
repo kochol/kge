@@ -126,6 +126,8 @@
     <ClCompile Include="Source\gfx\DynamicHardwareBuffer.cpp" />
     <ClCompile Include="Source\gfx\GeometryBatch.cpp" />
     <ClCompile Include="Source\gfx\ImageData.cpp" />
+    <ClCompile Include="Source\gfx\Imagegfx.cpp" />
+    <ClCompile Include="Source\gfx\Lightgfx.cpp" />
     <ClCompile Include="Source\gfx\LoaderDDS.cpp" />
     <ClCompile Include="Source\gfx\LoaderStbImage.cpp" />
     <ClCompile Include="Source\gfx\Texture.cpp" />
@@ -142,13 +144,6 @@
     <ClCompile Include="Source\Resource.cpp" />
     <ClCompile Include="Source\gfx\Animation.cpp" />
     <ClCompile Include="Source\gfx\CustomMaterial.cpp" />
-    <ClCompile Include="Source\gfx\Image.cpp">
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
-      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
-      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
-    </ClCompile>
-    <ClCompile Include="Source\gfx\Light.cpp" />
     <ClCompile Include="Source\gfx\MaterialManager.cpp" />
     <ClCompile Include="Source\gfx\MaterialParams.cpp" />
     <ClCompile Include="Source\gfx\MeshBuffer.cpp" />
