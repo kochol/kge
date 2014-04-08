@@ -51,7 +51,7 @@ namespace gfx
 	//------------------------------------------------------------------------------------
 	void VertexBufferGL::Bind(int stage)
 	{
-		g_pRenderer->SetVertexBufferID(m_iID, stage);
+		g_pRenderer->SetVertexBufferID(0, stage);
 		glBindBuffer(GL_ARRAY_BUFFER, m_uID);
 
 	} // Bind

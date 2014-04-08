@@ -12,13 +12,15 @@ namespace gui
 	//------------------------------------------------------------------------------------
 	// Constructor
 	//------------------------------------------------------------------------------------
-	Image::Image(u16* pIndices, core::RectI rect, gfx::Renderer* pRenderer)
-	{
-		m_pIndices		  = pIndices;
+	Image::Image(gfx::HardwareBuffer* pIndexBuffer, core::RectI rect, gfx::Renderer* pRenderer)
+	{		
+		m_pIndexBuffer	  = pIndexBuffer;
 		m_Rect			  = rect;
 		m_pRenderer		  = pRenderer;
 		m_pVerts		  = new gfx::Vertex3T[4];
 		m_bMouseOver	  = false;
+		// Create vertex buffer
+		m_pVertexBuffer = pRenderer->CreateVertexBuffer(m_pVerts, 4, gfx::EVT_V3T, true);
 		m_pVerts[0].tex.X = 0;
 		m_pVerts[0].tex.Y = 0;
 		m_pVerts[1].tex.X = 1;
@@ -53,6 +55,7 @@ namespace gui
 			m_pRenderer->SetTexture(m_BackImage);
 		// TODO:
 //		m_pRenderer->DrawTriangleList(m_pVerts, 4, m_pIndices, 6);
+		m_pRenderer->DrawTriangleList(m_pVertexBuffer, m_pIndexBuffer, 4, 6, gfx::EVT_V3T);
 
 	} // Render
 
@@ -69,6 +72,7 @@ namespace gui
 		m_pVerts[2].pos.Y = (float)m_Rect.Y + m_Rect.Height;
 		m_pVerts[3].pos.X = (float)m_Rect.X + m_Rect.Width;
 		m_pVerts[3].pos.Y = (float)m_Rect.Y + m_Rect.Height;
+		m_pVertexBuffer->SetData(m_pVerts, 0, 4);
 
 	} // Update
 

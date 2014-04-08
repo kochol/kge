@@ -126,6 +126,8 @@ namespace gfx
  		checkForCgError("selecting fragment profile");
  		cgGLEnableProfile(m_CgFragmentProfile);
 
+		m_bUseShaders = true;
+
 		// Init the Light class
 		Lights = KGE_NEW(LightGL)(this);
 
@@ -604,21 +606,21 @@ namespace gfx
 		{
 		case ETM_World:
 			m_mWorld = mWorld;
-// 			glMatrixMode(GL_MODELVIEW);
-// 			glLoadMatrixf((GLfloat*)&mWorld);
+//  			glMatrixMode(GL_MODELVIEW);
+//  			glLoadMatrixf((GLfloat*)&mWorld);
 			break; // ETM_World
 
 		case ETM_View:
 			m_mView = mWorld;
 			m_mViewProj = m_mProj * m_mView;
-			// 			mWorld = mWorld * m_mWorld;
-			// 			glMatrixMode(GL_MODELVIEW);
-			// 			glLoadMatrixf((GLfloat*)&mWorld);
+// 			mWorld = mWorld * m_mWorld;
+// 			glMatrixMode(GL_MODELVIEW);
+// 			glLoadMatrixf((GLfloat*)&mWorld);
 			break; // ETM_View
 
 		case ETM_Projection:
-//			glMatrixMode(GL_PROJECTION);
-	//		glLoadMatrixf((GLfloat*)mat);
+// 			glMatrixMode(GL_PROJECTION);
+// 			glLoadMatrixf((GLfloat*)mat);
 			m_mProj = mWorld;
 			m_mViewProj = m_mProj * m_mView;
 			break; // ETM_Projection
@@ -651,8 +653,7 @@ namespace gfx
 			return m_mViewProj;
 			break;
 		}
-
-		// Faghat baraye jologiri az warningi ke to in ghesmat mide.
+		
 		return m_mWorld;
 
 	} // GetTransForm
@@ -766,6 +767,24 @@ namespace gfx
 
 	void RendererGL::DrawTriangleList( HardwareBuffer* VB, HardwareBuffer* IB, u32 VCount, u32 ICount, VertexType eVType /*= EVT_V3TN */ )
 	{
+		SetVertexDec( m_ppVertexDecs[eVType] ); 	
+
+		SetVertexBuffer(VB, 0);
+
+
+		if (ICount > 0)
+		{
+			SetIndexBuffer(IB);
+
+			glDrawElements(GL_TRIANGLES, ICount, m_iIndexBufferType, 0);
+			m_iTriCount += ICount / 3 * m_iBatchCount;			
+		}
+		else
+		{
+			glDrawArrays(GL_TRIANGLES, 0, VCount);
+			m_iTriCount += VCount / 3 * m_iBatchCount;
+		}
+		m_iDrawCount++;
 
 	} // DrawTriangleList
 
@@ -820,6 +839,13 @@ namespace gfx
 		case ERF_DepthBuffer:
 			glEnable(GL_DEPTH_TEST);
 			m_bRF[ERF_DepthBuffer] = true;
+			break;
+
+		case ERF_Culling:
+			if (m_bRF[ERF_Culling])
+				return;
+			glEnable(GL_CULL_FACE);
+			m_bRF[ERF_Culling] = true;
 			break;
 
 		///////////
@@ -906,6 +932,13 @@ namespace gfx
 		#endif
 			break;
 
+		case ERF_Culling:
+			if (!m_bRF[ERF_Culling])
+				return;
+			glDisable(GL_CULL_FACE);
+			m_bRF[ERF_Culling] = false;
+			break;
+
 			  ///////////////////////
 			 //   S C I S S O R   //
 			///////////////////////
@@ -934,6 +967,10 @@ namespace gfx
 		// Setting the Texture.
 		SetTexture(mat->ppTexture[0]);
 
+		if (mat->Culling)
+			Enable(ERF_Culling);
+		else
+			Disable(ERF_Culling);
 
 		// Setting the shader.
 //		if( CanDo(EGCC_OpenGL2))
@@ -1599,18 +1636,18 @@ namespace gfx
 			switch (p->at(i).Usage)
 			{
 			case EVEU_Position:
-				glVertexPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
 				glEnableClientState(GL_VERTEX_ARRAY);
+				glVertexPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
 				break;
 
 			case EVEU_TexCoord:
-				glTexCoordPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
 				glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+				glTexCoordPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
 				break;
 
 			case EVEU_Color:
-				glColorPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
 				glEnableClientState(GL_COLOR_ARRAY);
+				glColorPointer(datasize, datatype, pBuffer->GetStride(), BUFFER_OFFSET(p->at(i).Offset));
 				break;
 			}
 		}

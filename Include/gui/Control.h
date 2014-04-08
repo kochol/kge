@@ -70,7 +70,7 @@ public:
 protected:
 
 
-	kge::u16	 *  m_pIndices;
+	gfx::HardwareBuffer	*  m_pIndexBuffer;
 	
 	core::RectI		m_Rect;
 

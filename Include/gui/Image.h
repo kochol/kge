@@ -19,7 +19,7 @@ namespace gui
 	public:
 
 		//! Constructor
-		Image(u16* pIndices,
+		Image(gfx::HardwareBuffer* pIndexBuffer,
 			  core::RectI rect,
 			  gfx::Renderer* pRenderer);
 
@@ -37,7 +37,9 @@ namespace gui
 	protected:
 
 		// Updates the control properties.
-		virtual void Update();
+		virtual void Update();                                       
+
+		gfx::HardwareBuffer	*	m_pVertexBuffer;
 
 	};// Image
 

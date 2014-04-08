@@ -51,6 +51,8 @@ namespace gui
 							m_bMouseUp,		// Check for mouse up.
 							m_bKeyDown;		// Check for Key Down.
 		u16				*	m_pIndices;		// Global Indices.
+		gfx::HardwareBuffer	*	m_pIndexBuffer;
+		gfx::ShaderHandle	m_VsmatViewProj;
 		io::Mouse		*	m_pMouse;		// Mouse
 		sn::SceneManager*	m_pSmgr;		// Scene Manager pointer.
 		gfx::Renderer	*	m_pRenderer;	// Renderer.

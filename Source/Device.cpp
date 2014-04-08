@@ -202,8 +202,6 @@ namespace kge
 
 		m_pRenderer->SetPerspectiveLH();
 
-		m_pGuimgr = KGE_NEW(gui::GuiManager)(m_pRenderer, m_pSnMan);
-
 		//m_pPluginmgr = new PluginManager(this);
 
 		// initializing sound system
@@ -259,6 +257,8 @@ namespace kge
 		m_pSnMan = KGE_NEW(sn::SceneManager)(m_pRenderer);
 
 		m_pRenderer->SetMainSceneManager(m_pSnMan);
+
+		m_pGuimgr = KGE_NEW(gui::GuiManager)(m_pRenderer, m_pSnMan);
 
 		return true;
 

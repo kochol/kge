@@ -26,6 +26,33 @@ namespace gui
 		m_pRenderer	   = pRenderer;
 		m_pMouse	   = KGE_NEW(io::Mouse)();
 		m_pMat		   = KGE_NEW(gfx::Material)();
+		// Create shaders
+		// Create deferred shading shaders
+		const char strVs[] =
+			"float4x4 matViewProjection;\n"\
+			"\n"\
+			"void main(in float4 inPos: POSITION0, in float2 inTex: TEXCOORD0, out float4 outPos: POSITION, out float2 outTex: TEXCOORD0)\n"\
+			"{\n"\
+			"	outPos = mul(inPos, matViewProjection);\n"\
+			"	outTex = inTex;\n"\
+			"}\n";
+
+		m_pMat->shader->m_pVertexShader	= m_pRenderer->CreateVertexShaderFromString(strVs, "main", gfx::ESV_VS3);
+		if (m_pMat->shader->m_pVertexShader)
+		{
+			m_VsmatViewProj	= m_pMat->shader->m_pVertexShader->GetConstatnt("matViewProjection");
+		}
+
+		const char strPs[] =
+			"sampler2D DifMap: register(s0);\n"\
+			"float4 main(in float2 inTex: TEXCOORD0) : COLOR0\n"\
+			"{\n"\
+			"	return tex2D(DifMap, inTex);\n"\
+			"}\n";
+
+		m_pMat->shader->m_pPixelShader = m_pRenderer->CreatePixelShaderFromString(strPs, "main", gfx::ESV_PS3);
+
+		// Create index buffer		
 		m_pIndices	   = KGE_NEW_ARRAY(u16, 6);
 		m_pIndices[0]  = 0;
 		m_pIndices[1]  = 1;
@@ -33,6 +60,7 @@ namespace gui
 		m_pIndices[3]  = 1;
 		m_pIndices[4]  = 3;
 		m_pIndices[5]  = 2;
+		m_pIndexBuffer = m_pRenderer->CreateIndexBuffer(m_pIndices, 6);
 		m_pFontManager		    = new ResourceManager<Font>(NULL);
 		m_meaClick.m_EventType  = EET_Click;
 		m_meaClick.Mousebutton  = io::EMB_Left;
@@ -67,7 +95,7 @@ namespace gui
 	//------------------------------------------------------------------------------------
 	Image* GuiManager::AddImage(const char* ImageFile, core::RectI rect)
 	{
-		Image* img		 = new Image(m_pIndices, rect, m_pRenderer);
+		Image* img		 = new Image(m_pIndexBuffer, rect, m_pRenderer);
 		if (ImageFile)
 			img->m_BackImage = m_pSmgr->AddTexture(ImageFile);
 		else
@@ -101,6 +129,9 @@ namespace gui
 		m_pRenderer->Enable(gfx::ERF_2D);
 		m_pRenderer->Disable(gfx::ERF_DepthBuffer);
 		m_pRenderer->SetMaterial(m_pMat);
+		// set matrix
+		math::Matrix mat = m_pRenderer->GetTransForm(gfx::ETM_Projection);
+		m_pMat->shader->m_pVertexShader->SetConstant(m_VsmatViewProj, mat.m_fMat, 16);
 		bool bLighting = m_pRenderer->GetRenderFlag(gfx::ERF_Lighting);
 		if (bLighting)
 			m_pRenderer->Disable(gfx::ERF_Lighting);
