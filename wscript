@@ -94,4 +94,4 @@ def build(bld):
         bld.recurse('plugins')
 
     if Options.options.build_tutorials:
-        bld.recurse('tutorials/tut01')
+        bld.recurse('tutorials')
