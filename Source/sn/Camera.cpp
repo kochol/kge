@@ -8,6 +8,7 @@
 #include "../../Include/io/Logger.h"
 #include "../../Include/math/Utility.h"
 #include "../../Include/gfx/Renderer.h"
+#include <SDL2/SDL.h>
 
 #ifdef WIN32
 #define WIN32_LEAN_AND_MEAN
@@ -53,10 +54,10 @@ namespace sn
 								 m_fNear,
 								 m_fFar);
 
-#ifdef WIN32
-		m_iMiddleX = GetSystemMetrics(SM_CXSCREEN);
-		m_iMiddleY = GetSystemMetrics(SM_CYSCREEN);
-#endif
+		SDL_DisplayMode current;
+		SDL_GetCurrentDisplayMode(0, &current);
+		m_iMiddleX = current.w;
+		m_iMiddleY = current.h;
 
 		m_iMiddleX = m_iMiddleX >> 1; // Taghsim bar 2 fast
 		m_iMiddleY = m_iMiddleY >> 1; // Taghsim bar 2 fast
@@ -277,6 +278,11 @@ namespace sn
 			m_fSpeed = 1001.0f - speed;
 			if (m_fSpeed < 1.0f)
 				m_fSpeed = 1.0f;
+			SDL_SetRelativeMouseMode(SDL_TRUE);
+		}
+		else
+		{
+			SDL_SetRelativeMouseMode(SDL_FALSE);
 		}
 		m_bARBM = Enable;
 	} // AutoRotateByMouse
@@ -290,26 +296,17 @@ namespace sn
 		float angleY = 0.0f; // In baraye nega kardan be rast va chap hast.
 		float angleZ = 0.0f; // In baraye nega kardan be bala va paeen hast.
 
-#ifdef WIN32
-		POINT mousepos;
-		GetCursorPos(&mousepos);
-		MoX = (int)mousepos.x;
-		MoY = (int)mousepos.y;
-#endif // WIN32
+		SDL_GetRelativeMouseState(&MoX, &MoY);
+		printf("w = %d\nh = %d\n", MoX, MoY);
 
 		// Agar mouse tekan nakhorde bod az tabe kharej mishim.
-		if ((MoX == m_iMiddleX) && (MoY == m_iMiddleY)) 
+		if ((MoX == 0) && (MoY == 0)) 
 			return;
-
-		// Set the Mouse Position to center of screen
-#ifdef WIN32
-		SetCursorPos(m_iMiddleX, m_iMiddleY);
-#endif // WIN32
 
 		// Bedast avadane jahati ke mouse harekat karde.
 		// Taghsim bar 1000 mikonim ta ziyad dorbin nacharkhad.
-		angleY = (float)( (m_iMiddleX - MoX) ) / m_fSpeed;		
-		angleZ = (float)( (m_iMiddleY - MoY) ) / m_fSpeed;
+		angleY = (float)( (MoX) ) / m_fSpeed;		
+		angleZ = (float)( (MoY) ) / m_fSpeed;
 
 		m_fLastRotX = m_fCurRotX;
 
