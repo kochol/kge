@@ -5,3 +5,5 @@ def configure(conf):
 def build(bld):
 	bld.recurse('tut01')
 	bld.recurse('02Input')
+	bld.recurse('03AnimatedMesh')
+	bld.recurse('05Terrain')

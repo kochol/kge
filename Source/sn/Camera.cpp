@@ -297,7 +297,8 @@ namespace sn
 		float angleZ = 0.0f; // In baraye nega kardan be bala va paeen hast.
 
 		SDL_GetRelativeMouseState(&MoX, &MoY);
-		printf("w = %d\nh = %d\n", MoX, MoY);
+		MoY *= -1;
+		MoX *= -1;
 
 		// Agar mouse tekan nakhorde bod az tabe kharej mishim.
 		if ((MoX == 0) && (MoY == 0)) 
