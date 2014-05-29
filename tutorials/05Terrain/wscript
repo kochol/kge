@@ -1,0 +1,12 @@
+def configure(conf):
+    pass
+
+
+def build(bld):
+    # Bulid
+    bld.program(
+        source='main.cpp',
+        target="../../Debug/05Terrain",
+        cxxflags=['-fpermissive'],
+        use=['Debug/kge-0.1'],
+    )

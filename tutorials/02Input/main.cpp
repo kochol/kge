@@ -44,7 +44,7 @@ void keys(float elaspedtime)
 	// Now we want to enable FPS camera by F1 key and disable it with escape key
 	if (key.KeyDown(kge::io::EK_F1))
 		// It is simple
-		pCam->AutoRotateByMouse(true);
+		pCam->AutoRotateByMouse(true, 0.1);
 	if (key.KeyDown(kge::io::EK_ESCAPE))
 		pCam->AutoRotateByMouse(false);
 }
