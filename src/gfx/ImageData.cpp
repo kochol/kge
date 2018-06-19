@@ -1,4 +1,4 @@
-#include "../../Include/gfx/ImageData.h"
+#include "../../include/kge/gfx/ImageData.h"
 #include <string.h>
 
 namespace kge

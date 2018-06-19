@@ -1,5 +1,5 @@
 /*
-#include "../../Include/core/KgeMemory.h"
+#include "../../include/kge/core/KgeMemory.h"
 #include <list>
 
 struct ALLOC_INFO 

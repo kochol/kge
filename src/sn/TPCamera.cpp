@@ -3,10 +3,10 @@
 // Date: February 24, 2011 (05/12/1389)
 // Programmer: Nader Golbaz
 
-#include "../../Include/sn/TPCamera.h"
-#include "../../Include/sn/SceneManager.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/math/Utility.h"
+#include "../../include/kge/sn/TPCamera.h"
+#include "../../include/kge/sn/SceneManager.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/math/Utility.h"
 #include <cmath>
 
 namespace kge

@@ -1,8 +1,8 @@
-#include "../../Include/io/FileSystemManager.h"
-#include "../../Include/io/FileSystem.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/io/File.h"
-#include "../../Include/io/Stream.h"
+#include "../../include/kge/io/FileSystemManager.h"
+#include "../../include/kge/io/FileSystem.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/io/File.h"
+#include "../../include/kge/io/Stream.h"
 #include <stdio.h>
 #include <string.h>
 

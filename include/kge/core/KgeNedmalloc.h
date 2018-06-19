@@ -1,7 +1,7 @@
 #ifndef KGE_KGENEDMALLOC_H
 #define KGE_KGENEDMALLOC_H
 
-#include "../../Include/kgedef.h"
+#include "../kgedef.h"
 
 namespace kge
 {

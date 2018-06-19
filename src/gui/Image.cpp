@@ -3,7 +3,7 @@
 // Date: 8/1/1387
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/gui/Image.h"
+#include "../../include/kge/gui/Image.h"
 
 namespace kge
 {

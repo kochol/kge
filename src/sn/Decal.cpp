@@ -3,9 +3,9 @@
 // Date: 3/8/1388
 // Programmers: Ali Akbar Mohammadi (Kochol)
 
-#include "../../Include/sn/Decal.h"
-#include "../../Include/sn/TileTerrain.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/sn/Decal.h"
+#include "../../include/kge/sn/TileTerrain.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 
 

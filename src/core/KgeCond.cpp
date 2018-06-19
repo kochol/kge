@@ -1,6 +1,6 @@
 #include <SDL2/SDL_mutex.h>
-#include "../../Include/core/KgeCond.h"
-#include "../../Include/core/KgeMutex.h"
+#include "../../include/kge/core/KgeCond.h"
+#include "../../include/kge/core/KgeMutex.h"
 
 namespace kge
 {

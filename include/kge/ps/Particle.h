@@ -6,8 +6,8 @@
 #ifndef PARTICLE_H
 #define PARTICLE_H
 
-#include "../../Include/math/Vector.h"
-#include "../../Include/gfx/Color.h"
+#include "../math/Vector.h"
+#include "../gfx/Color.h"
 
 namespace kge
 {

@@ -1,10 +1,10 @@
 #include "../../Headers/gfx/LoaderDDS.h"
-#include "../../Include/io/Stream.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/gfx/Texture.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/enums.h"
-#include "../../Include/gfx/ImageData.h"
+#include "../../include/kge/io/Stream.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/gfx/Texture.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/enums.h"
+#include "../../include/kge/gfx/ImageData.h"
 
 //! Renderer public pointer
 KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;

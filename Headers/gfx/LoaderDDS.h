@@ -1,7 +1,7 @@
 #ifndef KGE_LOADERDDS_H
 #define KGE_LOADERDDS_H
 
-#include "../../Include/Loader.h"
+#include "../../include/kge/Loader.h"
 
 namespace kge
 {

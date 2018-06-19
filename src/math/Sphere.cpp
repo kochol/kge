@@ -3,10 +3,10 @@
 // Date: 25/11/1386
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/math/Sphere.h"
-#include "../../Include/math/AABB.h"
-#include "../../Include/math/Plane.h"
-#include "../../Include/math/math.h"
+#include "../../include/kge/math/Sphere.h"
+#include "../../include/kge/math/AABB.h"
+#include "../../include/kge/math/Plane.h"
+#include "../../include/kge/math/math.h"
 #include <math.h>
 
 

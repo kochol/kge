@@ -5,13 +5,13 @@
 
 #include <stdio.h>
 
-#include "../../Include/gfx/MaterialParams.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/core/mem_fun.h"
-#include "../../Include/sn/Light.h"
-#include "../../Include/sn/AnimatedMesh.h"
-#include "../../Include/gfx/CMatPhongLighting.h"
-#include "../../Include/efx/EffectManager.h"
+#include "../../include/kge/gfx/MaterialParams.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/core/mem_fun.h"
+#include "../../include/kge/sn/Light.h"
+#include "../../include/kge/sn/AnimatedMesh.h"
+#include "../../include/kge/gfx/CMatPhongLighting.h"
+#include "../../include/kge/efx/EffectManager.h"
 
 
 

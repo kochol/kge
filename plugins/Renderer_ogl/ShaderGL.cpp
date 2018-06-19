@@ -4,7 +4,7 @@
 // Programmer: Ali Akbar Moahammadi(kochol) Pooya Shahinfar (Psiwn)
 
 #include "ShaderGL.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/io/Logger.h"
 
 namespace kge
 {

@@ -1,5 +1,5 @@
 #include <string.h>
-#include "../../Include/io/Stream.h"
+#include "../../include/kge/io/Stream.h"
 
 namespace kge
 {

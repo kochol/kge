@@ -3,8 +3,8 @@
 
 #include "../config.h"
 #include "../kgedef.h"
-#include "../../Headers/core/KgeNedmalloc.h"
-#include "../../Headers/core/KgeMemoryTrack.h"
+#include "KgeNedmalloc.h"
+#include "KgeMemoryTrack.h"
 #include <new>
 
 namespace kge

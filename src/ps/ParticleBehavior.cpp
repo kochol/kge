@@ -5,7 +5,7 @@
 
 #include "../../Headers/ps/Particle.h"
 #include "../../Headers/ps/ParticleBehavior.h"
-#include "../../Include/math/Utility.h"
+#include "../../include/kge/math/Utility.h"
 #include <stdio.h>
 
 namespace kge

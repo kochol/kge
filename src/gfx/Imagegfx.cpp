@@ -3,10 +3,10 @@
 // Date: 28/05/1388
 // Programmers: Ali Akbar Mohammadi (Kochol)
 
-#include "../../Include/gfx/Image.h"
-#include "../../Include/ResourceManager.h"
-#include "../../Include/Device.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/gfx/Image.h"
+#include "../../include/kge/ResourceManager.h"
+#include "../../include/kge/Device.h"
+#include "../../include/kge/io/Logger.h"
 // Include DevIL.
 #include "../../Libs/DevIL/il.h"
 #include "../../Libs/DevIL/ilu.h"

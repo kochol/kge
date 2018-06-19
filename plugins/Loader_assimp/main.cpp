@@ -1,6 +1,6 @@
-#include "../../Include/core/KgeMemory.h"
-#include "../../Include/PluginManager.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/core/KgeMemory.h"
+#include "../../include/kge/PluginManager.h"
+#include "../../include/kge/io/Logger.h"
 #include "LoaderAssimp.h"
 
 #if KGE_COMPILER == KGE_COMPILER_MSVC

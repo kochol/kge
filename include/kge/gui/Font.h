@@ -11,7 +11,7 @@
 #include "../Resource.h"
 #include "../sn/SceneManager.h"
 #include "../core/Structs.h"
-#include "../../Headers/gui/Char.h"
+#include "Char.h"
 
 namespace kge
 {

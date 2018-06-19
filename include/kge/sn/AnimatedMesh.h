@@ -10,7 +10,7 @@
 #include "Bone.h"
 #include "../gfx/Animation.h"
 #include "../core/Timer.h"
-#include "../../Include/sn/Mesh.h"
+#include "../sn/Mesh.h"
 
 namespace kge
 {

@@ -3,8 +3,8 @@
 // Date: 6/10/1386
 // Programmer: Pooya Shahinfar(Pswin)
 
-#include "../../Include/io/Mouse.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/io/Mouse.h"
+#include "../../include/kge/io/Logger.h"
 
 #ifdef KGE_USE_SDL
 #include <SDL2/SDL.h>

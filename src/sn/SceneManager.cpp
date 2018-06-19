@@ -4,21 +4,21 @@
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
 #include <stdio.h>
-#include "../../Include/sn/SceneManager.h"
-#include "../../Include/sn/Light.h"
-#include "../../Include/sn/Camera.h"
-#include "../../Include/sn/RibbonTrail.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/gfx/MaterialManager.h"
-#include "../../Include/efx/EffectManager.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/core/String.h"
-#include "../../Include/core/mem_fun.h"
-#include "../../Include/math/Vector.h"
-#include "../../Include/math/Sphere.h"
+#include "../../include/kge/sn/SceneManager.h"
+#include "../../include/kge/sn/Light.h"
+#include "../../include/kge/sn/Camera.h"
+#include "../../include/kge/sn/RibbonTrail.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/gfx/MaterialManager.h"
+#include "../../include/kge/efx/EffectManager.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/core/String.h"
+#include "../../include/kge/core/mem_fun.h"
+#include "../../include/kge/math/Vector.h"
+#include "../../include/kge/math/Sphere.h"
 #include "../../Headers/gfx/MS3DLoader.h"
 #include "../../Headers/gfx/GeometryBatch.h"
-#include "../../Include/math/Utility.h"
+#include "../../include/kge/math/Utility.h"
 
 #include <iostream>
 #include <string.h>

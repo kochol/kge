@@ -1,7 +1,7 @@
-#include "../../Include/en/World.h"
-#include "../../Include/en/System.h"
-#include "../../Include/en/Entity.h"
-#include "../../Include/core/TaskManager.h"
+#include "../../include/kge/en/World.h"
+#include "../../include/kge/en/System.h"
+#include "../../include/kge/en/Entity.h"
+#include "../../include/kge/core/TaskManager.h"
 
 namespace kge
 {

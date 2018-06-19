@@ -1,4 +1,4 @@
-#include "../../Include/gfx/Animation.h"
+#include "../../include/kge/gfx/Animation.h"
 
 
 kge::gfx::Animation::~Animation()

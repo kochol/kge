@@ -1,4 +1,4 @@
-#include "../../Include/en/EntityCreator.h"
+#include "../../include/kge/en/EntityCreator.h"
 
 namespace kge
 {

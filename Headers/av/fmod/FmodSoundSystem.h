@@ -6,8 +6,8 @@
 #ifndef FMOD_SOUND_SYSTEM_H
 #define FMOD_SOUND_SYSTEM_H
 
-#include "../../../Include/kgedef.h"
-#include "../../../Include/av/soundsystem.h"
+#include "../../../include/kge/kgedef.h"
+#include "../../../include/kge/av/soundsystem.h"
 #include <vector>
 #include <map>
 #include <string>

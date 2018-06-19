@@ -3,14 +3,14 @@
 // Date: 31/1/1386
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/sn/AnimatedMesh.h"
-#include "../../Include/sn/Light.h"
-#include "../../Include/gfx/MeshBuffer.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/math/Quat.h"
-#include "../../Include/math/Plane.h"
-#include "../../Include/core/mem_fun.h"
-#include "../../Include/gfx/Shader.h"
+#include "../../include/kge/sn/AnimatedMesh.h"
+#include "../../include/kge/sn/Light.h"
+#include "../../include/kge/gfx/MeshBuffer.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/math/Quat.h"
+#include "../../include/kge/math/Plane.h"
+#include "../../include/kge/core/mem_fun.h"
+#include "../../include/kge/gfx/Shader.h"
 #include "../../Headers/gfx/GeometryBatch.h"
 
 

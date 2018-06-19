@@ -3,11 +3,11 @@
 // Date: 16/12/1388
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/efx/ShadowMapProjection.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/sn/Light.h"
-#include "../../Include/sn/StaticMesh.h"
-#include "../../Include/sn/Camera.h"
+#include "../../include/kge/efx/ShadowMapProjection.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/sn/Light.h"
+#include "../../include/kge/sn/StaticMesh.h"
+#include "../../include/kge/sn/Camera.h"
 #include "../../Headers/gfx/GeometryBatch.h"
 
 namespace kge

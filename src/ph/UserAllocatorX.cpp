@@ -1,4 +1,4 @@
-#include "../../Include/kgedef.h"
+#include "../../include/kge/kgedef.h"
 #ifdef KGE_USE_PHYSX
 
 #ifdef WIN32 

@@ -4,10 +4,10 @@
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
 #include <math.h>
-#include "../../Include/sn/Camera.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/math/Utility.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/sn/Camera.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/math/Utility.h"
+#include "../../include/kge/gfx/Renderer.h"
 #include <SDL2/SDL.h>
 
 #ifdef WIN32

@@ -3,7 +3,7 @@
 // Date: 3/10/1386
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/gfx/MeshBuffer.h"
+#include "../../include/kge/gfx/MeshBuffer.h"
 #include "../../Headers/gfx/GeometryBatch.h"
 
 

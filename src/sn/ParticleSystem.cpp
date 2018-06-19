@@ -7,10 +7,10 @@
 #include "../../Headers/ps/ParticleEmitter.h"
 #include "../../Headers/ps/ParticleBehavior.h"
 #include "../../Headers/ps/ParticleRenderer.h"
-#include "../../Include/sn/SceneManager.h"
-#include "../../Include/sn/ParticleSystem.h"
-#include "../../Include/sn/StaticMesh.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/sn/SceneManager.h"
+#include "../../include/kge/sn/ParticleSystem.h"
+#include "../../include/kge/sn/StaticMesh.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 namespace kge
 {

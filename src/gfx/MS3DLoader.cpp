@@ -4,13 +4,13 @@
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
 #include "../../Headers/gfx/MS3DLoader.h"
-#include "../../Include/sn/Mesh.h"
-#include "../../Include/io/File.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/sn/Bone.h"
-#include "../../Include/gfx/Animation.h"
-#include "../../Include/gfx/MeshManager.h"
-#include "../../Include/core/ArrayPriority.h"
+#include "../../include/kge/sn/Mesh.h"
+#include "../../include/kge/io/File.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/sn/Bone.h"
+#include "../../include/kge/gfx/Animation.h"
+#include "../../include/kge/gfx/MeshManager.h"
+#include "../../include/kge/core/ArrayPriority.h"
 
 
 

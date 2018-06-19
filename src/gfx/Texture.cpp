@@ -1,5 +1,5 @@
-#include "../../Include/gfx/Texture.h"
-#include "../../Include/gfx/ImageData.h"
+#include "../../include/kge/gfx/Texture.h"
+#include "../../include/kge/gfx/ImageData.h"
 
 namespace kge
 {

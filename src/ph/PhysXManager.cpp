@@ -7,8 +7,8 @@
 
 #ifdef KGE_USE_PHYSX
 
-#include "../../Include/io/Logger.h"
-#include "../../Include/sn/TileTerrain.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/sn/TileTerrain.h"
 #include "../../Headers/ph/TileTerrainShapeX.h"
 #include "../../Headers/ph/actorDynamicX.h"
 #include "../../Headers/ph/actorStaticX.h"

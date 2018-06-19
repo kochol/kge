@@ -3,9 +3,9 @@
 // Date: 30/05/1388
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/gui/GuiManager.h"
-#include "../../Include/sn/Camera.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/gui/GuiManager.h"
+#include "../../include/kge/sn/Camera.h"
 
 extern kge::gfx::Renderer	*	g_pRenderer;
 

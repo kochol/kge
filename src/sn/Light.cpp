@@ -3,9 +3,9 @@
 // Date: 30/4/1386
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/sn/Light.h"
-#include "../../Include/sn/SceneManager.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/sn/Light.h"
+#include "../../include/kge/sn/SceneManager.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 
 

@@ -4,7 +4,7 @@
 // Date: 14/5/1385
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/io/Logger.h"
 
 #ifdef KGE_CONSOLE
 #include <iostream>

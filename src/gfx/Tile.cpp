@@ -3,8 +3,8 @@
 // Date: 08/06/1388
 // Programmers: Ali Akbar Mohammadi (Kochol)
 
-#include "../../Include/gfx/Tile.h"
-#include "../../Include/Device.h"
+#include "../../include/kge/gfx/Tile.h"
+#include "../../include/kge/Device.h"
 
 
 

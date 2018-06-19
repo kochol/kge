@@ -2,7 +2,7 @@
 #ifndef BASS_SOUND_BUFFER_H
 #define BASS_SOUND_BUFFER_H
 
-#include "../../../Include/config.h"
+#include "../../../include/kge/config.h"
 
 #if KGE_USE_BASS == 1
 

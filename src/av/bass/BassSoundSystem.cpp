@@ -3,7 +3,7 @@
 #include "../../../Headers/av/bass/BassSoundBuffer.h"
 #include "../../../Headers/sn/bass/BassSound3D.h"
 #include "../../../Headers/sn/bass/BassSound2D.h"
-#include "../../../Include/io/Logger.h"
+#include "../../../include/kge/io/Logger.h"
 
 #if KGE_USE_BASS == 1
 

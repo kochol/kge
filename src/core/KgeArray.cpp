@@ -1,5 +1,5 @@
-#include "../../Include/core/KgeArray.h"
-#include "../../Include/core/KgeMemory.h"
+#include "../../include/kge/core/KgeArray.h"
+#include "../../include/kge/core/KgeMemory.h"
 #include <string.h>
 
 #ifndef NULL

@@ -3,10 +3,10 @@
 // Date: 28/05/1388
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../Include/Resource.h"
-#include "../Include/core/String.h"  
-#include "../Include/core/KgeMemory.h"
-#include "../Include/io/Logger.h"
+#include "../include/kge/Resource.h"
+#include "../include/kge/core/String.h"  
+#include "../include/kge/core/KgeMemory.h"
+#include "../include/kge/io/Logger.h"
 
 namespace kge
 {

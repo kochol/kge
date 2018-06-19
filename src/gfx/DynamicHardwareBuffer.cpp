@@ -1,5 +1,5 @@
-#include "../../Include/gfx/DynamicHardwareBuffer.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/gfx/DynamicHardwareBuffer.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 namespace kge
 {

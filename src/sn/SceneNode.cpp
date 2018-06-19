@@ -4,9 +4,9 @@
 // Date: 17/10/1385
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/sn/SceneNode.h"
-#include "../../Include/sn/SceneManager.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/sn/SceneNode.h"
+#include "../../include/kge/sn/SceneManager.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 namespace kge
 {

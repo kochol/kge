@@ -6,7 +6,7 @@
 #ifndef FMOD_SOUND_BUFFER_H
 #define FMOD_SOUND_BUFFER_H
 
-#include "../../../Include/config.h"
+#include "../../../include/kge/config.h"
 #if KGE_USE_FMOD == 1
 #include <fmod.hpp>
 

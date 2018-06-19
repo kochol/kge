@@ -5,8 +5,8 @@
 // Date: 25/5/1385
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/math/Vector.h"
-#include "../../Include/gfx/Structs.h"
+#include "../../include/kge/math/Vector.h"
+#include "../../include/kge/gfx/Structs.h"
 
 
 

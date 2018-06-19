@@ -1,12 +1,12 @@
 #include "../../Headers/gfx/GeometryBatch.h"
-#include "../../Include/gfx/DynamicHardwareBuffer.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/gfx/Structs.h"
-#include "../../Include/gfx/MeshBuffer.h"
-#include "../../Include/sn/StaticMesh.h"
-#include "../../Include/sn/AnimatedMesh.h"
-#include "../../Include/math/Matrix.h"
-#include "../../Include/gfx/MaterialManager.h"
+#include "../../include/kge/gfx/DynamicHardwareBuffer.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/gfx/Structs.h"
+#include "../../include/kge/gfx/MeshBuffer.h"
+#include "../../include/kge/sn/StaticMesh.h"
+#include "../../include/kge/sn/AnimatedMesh.h"
+#include "../../include/kge/math/Matrix.h"
+#include "../../include/kge/gfx/MaterialManager.h"
 
 namespace kge
 {

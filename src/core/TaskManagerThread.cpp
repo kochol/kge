@@ -1,9 +1,9 @@
-#include "../../Include/core/TaskManagerThread.h"
-#include "../../Include/core/TaskManager.h"
-#include "../../Include/core/Task.h"
-#include "../../Include/core/KgeMemory.h"
-#include "../../Include/core/KgeMutex.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/core/TaskManagerThread.h"
+#include "../../include/kge/core/TaskManager.h"
+#include "../../include/kge/core/Task.h"
+#include "../../include/kge/core/KgeMemory.h"
+#include "../../include/kge/core/KgeMutex.h"
+#include "../../include/kge/io/Logger.h"
 
 extern kge::core::TaskManager	*	g_pTaskManager;
 

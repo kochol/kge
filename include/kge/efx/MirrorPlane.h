@@ -7,7 +7,7 @@
 #define MIRRORPLANE_H
 
 #include "Effect.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../gfx/Renderer.h"
 #include "../math/Matrix.h"
 #include "../math/Vector.h"
 

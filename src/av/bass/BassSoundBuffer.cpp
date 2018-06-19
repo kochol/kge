@@ -4,7 +4,7 @@
 #if KGE_USE_BASS == 1
 
 #include "../../../Libs/physfs/physfs.h"
-#include "../../../Include/io/Logger.h"
+#include "../../../include/kge/io/Logger.h"
 #include "../../../Libs/bass/bass.h"
 #include <vector>
 #include <algorithm>

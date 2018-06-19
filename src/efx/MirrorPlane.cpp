@@ -3,8 +3,8 @@
 // Date: 18/10/1385
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/efx/MirrorPlane.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/efx/MirrorPlane.h"
+#include "../../include/kge/io/Logger.h"
 
 #ifndef NULL
 #define NULL 0

@@ -3,9 +3,9 @@
 // Date: 11/08/1386
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/math/AABB.h"
-#include "../../Include/math/Ray.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/math/AABB.h"
+#include "../../include/kge/math/Ray.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 namespace kge
 {

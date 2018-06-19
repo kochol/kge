@@ -3,8 +3,8 @@
 // Date: 28/07/1387
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/gui/Font.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/gui/Font.h"
+#include "../../include/kge/io/Logger.h"
 
 #include <fstream>
 #include <sstream>

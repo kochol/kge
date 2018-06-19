@@ -2,7 +2,7 @@
 // This tutorial shows the basic usage of tile terrain scene node
 // You have to read tut01 and 02input before this tutorial we will delete old comments in this tutorial
 
-#include "../../Include/kge.h"
+#include "../../include/kge/kge.h"
 
 #pragma comment(lib, "../../bin/debug/kge.lib")
 

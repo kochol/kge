@@ -3,12 +3,12 @@
 // Date: 22/11/1387
 // Programmers: Ali Akbar Mohammadi (Kochol)
 
-#include "../../Include/Device.h"
-#include "../../Include/gfx/TileTexture.h"
-#include "../../Include/gfx/Image.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/Device.h"
+#include "../../include/kge/gfx/TileTexture.h"
+#include "../../include/kge/gfx/Image.h"
+#include "../../include/kge/io/Logger.h"
 #include <time.h>
-#include "../../Include/math/math.h"
+#include "../../include/kge/math/math.h"
 
 
 

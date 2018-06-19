@@ -6,8 +6,8 @@
 #ifndef KGE_TEXTUREGL_H
 #define KGE_TEXTUREGL_H
 
-#include "../../Include/gfx/Texture.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/gfx/Texture.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 namespace kge
 {

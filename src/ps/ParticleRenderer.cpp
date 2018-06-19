@@ -5,10 +5,10 @@
 
 #include "../../Headers/ps/Particle.h"
 #include "../../Headers/ps/ParticleRenderer.h"
-#include "../../Include/sn/StaticMesh.h"
-#include "../../Include/gfx/Texture.h"
-#include "../../Include/gfx/HardwareBuffer.h"
-#include "../../Include/gfx/Material.h"
+#include "../../include/kge/sn/StaticMesh.h"
+#include "../../include/kge/gfx/Texture.h"
+#include "../../include/kge/gfx/HardwareBuffer.h"
+#include "../../include/kge/gfx/Material.h"
 
 namespace kge
 {

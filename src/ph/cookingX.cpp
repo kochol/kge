@@ -1,4 +1,4 @@
-#include "../../Include/config.h"
+#include "../../include/kge/config.h"
 #ifdef KGE_USE_PHYSX
 
 #include <stdio.h>

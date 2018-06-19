@@ -7,7 +7,7 @@
 #define PARTICLESYSTEM_H
 
 #include "SceneNode.h"
-#include "../../Headers/ps/Particle.h"
+#include "../ps/Particle.h"
 
 namespace kge
 {

@@ -4,15 +4,15 @@
 // Programmer: Ali Akbar Mohamadi(Kochol), Hadi Robati( hadirobati )
 
 #include "../../Headers/io/SdlWindow.h"
-#include "../../Include/io/Keyboard.h"
+#include "../../include/kge/io/Keyboard.h"
 #include "stdio.h"
 
 #ifdef KGE_USE_SDL
 #include <SDL2/SDL.h>
 
 
-#include "../../Include/io/Logger.h"
-#include "../../Include/enums.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/enums.h"
 
 #ifdef WIN32
 #pragma comment(lib, "SDL2.lib")

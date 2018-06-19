@@ -1,4 +1,4 @@
-#include "../Include/Loader.h"
+#include "../include/kge/Loader.h"
 
 namespace kge
 {

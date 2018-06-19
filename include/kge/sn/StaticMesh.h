@@ -7,7 +7,7 @@
 #define STATICMESH_H
 
 #include "SceneNode.h"
-#include "../../Include/sn/Mesh.h"
+#include "Mesh.h"
 
 namespace kge
 {

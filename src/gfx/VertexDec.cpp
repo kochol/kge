@@ -3,7 +3,7 @@
 // Date: 13/10/1388
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/gfx/VertexDec.h"
+#include "../../include/kge/gfx/VertexDec.h"
 
 
 

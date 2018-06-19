@@ -1,7 +1,7 @@
-#include "../../Include/efx/xpsm.h"
-#include "../../Include/sn/Light.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/math/math.h"
+#include "../../include/kge/efx/xpsm.h"
+#include "../../include/kge/sn/Light.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/math/math.h"
 #include <math.h>
 
 namespace kge

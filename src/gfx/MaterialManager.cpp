@@ -3,8 +3,8 @@
 // Date: 28/4/1389
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/gfx/MaterialManager.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/gfx/MaterialManager.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 
 

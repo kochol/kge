@@ -4,10 +4,10 @@
 // Date: 26/5/1385
 // Programmer: Ali Akbar Mohamadi(Kochol) , Pooya Shahinfar (Pswin)
 
-#include "../../Include/math/Matrix.h"
-#include "../../Include/math/Sphere.h"
-#include "../../Include/math/AABB.h"
-#include "../../Include/gfx/Structs.h"
+#include "../../include/kge/math/Matrix.h"
+#include "../../include/kge/math/Sphere.h"
+#include "../../include/kge/math/AABB.h"
+#include "../../include/kge/gfx/Structs.h"
 #include <math.h>
 #include <memory.h>
 #include <cfloat>

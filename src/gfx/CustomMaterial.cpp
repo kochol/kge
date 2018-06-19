@@ -3,9 +3,9 @@
 // Date: 4/5/1389
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/gfx/CustomMaterial.h"
-#include "../../Include/gfx/MaterialParams.h"
-#include "../../Include/gfx/Shader.h"
+#include "../../include/kge/gfx/CustomMaterial.h"
+#include "../../include/kge/gfx/MaterialParams.h"
+#include "../../include/kge/gfx/Shader.h"
 
 
 

@@ -4,7 +4,7 @@
 // Programmer: Hadi Robati (hadirobati)
 
 #include "PhysXManager.h"
-#include "../../Include/ph/physicType.h"
+#include "../../include/kge/ph/physicType.h"
 
 #ifdef KGE_USE_PHYSX
 

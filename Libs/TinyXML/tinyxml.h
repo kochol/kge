@@ -37,7 +37,7 @@ distribution.
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-#include "../../Include/kgedef.h"
+#include "../../include/kge/kgedef.h"
 #define TIXML_USE_STL
 
 // Help out windows:

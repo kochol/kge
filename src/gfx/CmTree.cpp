@@ -3,8 +3,8 @@
 // Date: 24/6/1390
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/gfx/CmTree.h"
-#include "../../Include/gfx/MaterialParams.h"
+#include "../../include/kge/gfx/CmTree.h"
+#include "../../include/kge/gfx/MaterialParams.h"
 
 extern float g_fElaspedTime;
 extern int   g_iFrameNumber;

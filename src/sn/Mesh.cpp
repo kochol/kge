@@ -3,9 +3,9 @@
 // Date: 13/7/1385
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/sn/Mesh.h"
-#include "../../Include/gfx/MeshManager.h"
-#include "../../Include/math/Plane.h"
+#include "../../include/kge/sn/Mesh.h"
+#include "../../include/kge/gfx/MeshManager.h"
+#include "../../include/kge/math/Plane.h"
 
 
 

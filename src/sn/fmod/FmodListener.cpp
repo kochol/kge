@@ -3,7 +3,7 @@
 // Date: 7/12/1389 (jalali), Feb-27-2011
 // Programmers: Pooya Shahinfar (Pswin)
 
-#include "../../../Include/kgedef.h"
+#include "../../../include/kge/kgedef.h"
 #include "../../../Headers/sn/fmod/FmodListener.h"
 
 #if KGE_USE_FMOD == 1

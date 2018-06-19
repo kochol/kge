@@ -3,12 +3,12 @@
 // Date: February 08, 2011 (19/11/1389)
 // Programmer: Nader Golbaz
 
-#include "../../Include/sn/AnimatedTexture.h"
-#include "../../Include/gfx/Texture.h"
-#include "../../Include/gfx/HardwareBuffer.h"
-#include "../../Include/gfx/Material.h"
-#include "../../Include/sn/SceneManager.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/sn/AnimatedTexture.h"
+#include "../../include/kge/gfx/Texture.h"
+#include "../../include/kge/gfx/HardwareBuffer.h"
+#include "../../include/kge/gfx/Material.h"
+#include "../../include/kge/sn/SceneManager.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 namespace kge
 {

@@ -16,6 +16,7 @@
 *.pdb
 *.sdf
 *.user
+*.o
 Debug
 bin
 Docs/html
@@ -37,3 +38,4 @@ media
 *.pc
 
 *.userprefs
+.sconsign.dblite

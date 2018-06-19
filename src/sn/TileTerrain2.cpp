@@ -3,10 +3,10 @@
 // Date: 26/10/1390
 // Programmers: Ali Akbar Mohammadi (Kochol)
 
-#include "../../Include/sn/TileTerrain2.h"
-#include "../../Include/gui/GuiManager.h"
-#include "../../Include/io/File.h"
-#include "../../Include/sn/Light.h"
+#include "../../include/kge/sn/TileTerrain2.h"
+#include "../../include/kge/gui/GuiManager.h"
+#include "../../include/kge/io/File.h"
+#include "../../include/kge/sn/Light.h"
 
 namespace kge
 {

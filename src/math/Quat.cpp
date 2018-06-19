@@ -4,7 +4,7 @@
 // Date: 24/7/1385
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/math/Quat.h"
+#include "../../include/kge/math/Quat.h"
 #include <math.h>
 #include <memory.h>
 

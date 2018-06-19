@@ -7,7 +7,7 @@
 #ifdef LINUX
 
 #include "../../Headers/io/Linux.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/io/Logger.h"
 
 
 

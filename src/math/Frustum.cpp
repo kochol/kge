@@ -3,10 +3,10 @@
 // Date: 16/11/1386
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/math/Frustum.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/math/Frustum.h"
+#include "../../include/kge/io/Logger.h"
 
-#include "../../Include/math/Triangle.h"
+#include "../../include/kge/math/Triangle.h"
 
 
 

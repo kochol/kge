@@ -3,12 +3,12 @@
 // Date: 7/2/1388
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/efx/Refraction.h"
-#include "../../Include/core/mem_fun.h"
-#include "../../Include/sn/SceneNode.h"
-#include "../../Include/sn/StaticMesh.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/math/Matrix.h"
+#include "../../include/kge/efx/Refraction.h"
+#include "../../include/kge/core/mem_fun.h"
+#include "../../include/kge/sn/SceneNode.h"
+#include "../../include/kge/sn/StaticMesh.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/math/Matrix.h"
 
 namespace kge
 {

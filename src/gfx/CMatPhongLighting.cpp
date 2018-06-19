@@ -3,9 +3,9 @@
 // Date: 5/9/1390
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/gfx/CMatPhongLighting.h"
-#include "../../Include/gfx/MaterialParams.h"
-#include "../../Include/gfx/Shader.h"
+#include "../../include/kge/gfx/CMatPhongLighting.h"
+#include "../../include/kge/gfx/MaterialParams.h"
+#include "../../include/kge/gfx/Shader.h"
 
 namespace kge
 {

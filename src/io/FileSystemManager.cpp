@@ -1,5 +1,5 @@
-#include "../../Include/io/FileSystemManager.h"
-#include "../../Include/io/FileSystem.h"
+#include "../../include/kge/io/FileSystemManager.h"
+#include "../../include/kge/io/FileSystem.h"
 
 namespace kge
 {

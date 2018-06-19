@@ -2,9 +2,9 @@
 // Date: 9/5/1385
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/core/String.h"
-#include "../../Include/core/KgeMemory.h"
-#include "../../Include/core/KgeArray.h"
+#include "../../include/kge/core/String.h"
+#include "../../include/kge/core/KgeMemory.h"
+#include "../../include/kge/core/KgeArray.h"
 #include <string.h>
 #include <stdio.h>
 #include <algorithm>

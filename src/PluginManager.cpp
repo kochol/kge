@@ -4,8 +4,8 @@
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
 #include <string>
-#include "../Include/kgedef.h"
-#include "../Include/Device.h"
+#include "../include/kge/kgedef.h"
+#include "../include/kge/Device.h"
 
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 
@@ -19,13 +19,13 @@
 
 #endif
 
-#include "../Include/PluginManager.h"
-#include "../Include/io/Logger.h"
-#include "../Include/core/KgeMemory.h"
-#include "../Include/ResourceManager.h"
-#include "../Include/gfx/Texture.h"
-#include "../Include/gfx/Image.h"
-#include "../Include/gfx/MeshBuffer.h"
+#include "../include/kge/PluginManager.h"
+#include "../include/kge/io/Logger.h"
+#include "../include/kge/core/KgeMemory.h"
+#include "../include/kge/ResourceManager.h"
+#include "../include/kge/gfx/Texture.h"
+#include "../include/kge/gfx/Image.h"
+#include "../include/kge/gfx/MeshBuffer.h"
 
 #ifndef NULL
 #define NULL 0

@@ -13,7 +13,7 @@
 */
 
 #include "../../Libs/glew/glew.h"
-#include "../../Include/config.h"
+#include "../../include/kge/config.h"
 
 #include "RendererGL.h"
 #include "LightGL.h"
@@ -21,9 +21,9 @@
 #include "TextureGL.h"
 #include "VertexBufferGL.h"
 #include "IndexBufferGL.h"
-#include "../../Include/io/File.h"
-#include "../../Include/gfx/ImageData.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/io/File.h"
+#include "../../include/kge/gfx/ImageData.h"
+#include "../../include/kge/io/Logger.h"
 
 // external libs
 #include <math.h>

@@ -6,11 +6,11 @@
 #ifndef SDLWINDOW
 #define SDLWINDOW
 
-#include "../../Include/kgedef.h"
+#include "../../include/kge/kgedef.h"
 
 #ifdef KGE_USE_SDL
 
-#include "../../Include/io/Iwindow.h"
+#include "../../include/kge/io/Iwindow.h"
 #include <SDL2/SDL.h>
 
 #ifdef WIN32

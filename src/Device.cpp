@@ -4,20 +4,20 @@
 
 #include <iostream>
 #include <time.h>
-#include "../Include/kgedef.h"
+#include "../include/kge/kgedef.h"
 
-#include "../Include/Device.h"
-#include "../Include/PluginManager.h"
-#include "../Include/gfx/Renderer.h"
-#include "../Include/gfx/MeshBuffer.h"
-#include "../Include/gfx/MaterialManager.h"
-#include "../Include/core/mem_fun.h"
-#include "../Include/efx/EffectManager.h"
+#include "../include/kge/Device.h"
+#include "../include/kge/PluginManager.h"
+#include "../include/kge/gfx/Renderer.h"
+#include "../include/kge/gfx/MeshBuffer.h"
+#include "../include/kge/gfx/MaterialManager.h"
+#include "../include/kge/core/mem_fun.h"
+#include "../include/kge/efx/EffectManager.h"
 #include "../Headers/gfx/LoaderDDS.h"
 #include "../Headers/gfx/LoaderStbImage.h"
-#include "../Include/io/FileSystemManager.h"
-#include "../Include/io/FileSystem.h"
-#include "../Include/gui/GuiManager.h"
+#include "../include/kge/io/FileSystemManager.h"
+#include "../include/kge/io/FileSystem.h"
+#include "../include/kge/gui/GuiManager.h"
 
 // sound system
 #include "../Headers/av/fmod/FmodSoundSystem.h"
@@ -29,7 +29,7 @@
 
 #include "../Headers/io/Linux.h"
 #include "../Headers/io/SdlWindow.h"
-#include "../Include/io/Logger.h"
+#include "../include/kge/io/Logger.h"
 
 #include "../Headers/ph/PhysXManager.h"
 

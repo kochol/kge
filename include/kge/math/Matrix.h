@@ -8,7 +8,7 @@
 #define MATRIX_H
 
 #include "../kgedef.h"
-#include "../../Include/math/Vector.h"
+#include "Vector.h"
 
 namespace kge
 {

@@ -1,13 +1,13 @@
-#include "../../Include/gui/libRocketKGERenderer.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/gfx/HardwareBuffer.h"
-#include "../../Include/gfx/Texture.h"
-#include "../../Include/gfx/VertexDec.h"
-#include "../../Include/gfx/Material.h"
-#include "../../Include/math/Matrix.h"
-#include "../../Include/gfx/ImageData.h"
-#include "../../Include/core/Timer.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/gui/libRocketKGERenderer.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/gfx/HardwareBuffer.h"
+#include "../../include/kge/gfx/Texture.h"
+#include "../../include/kge/gfx/VertexDec.h"
+#include "../../include/kge/gfx/Material.h"
+#include "../../include/kge/math/Matrix.h"
+#include "../../include/kge/gfx/ImageData.h"
+#include "../../include/kge/core/Timer.h"
+#include "../../include/kge/io/Logger.h"
 
 //! Renderer public pointer
 KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;

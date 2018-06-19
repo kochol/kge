@@ -1,5 +1,5 @@
-#include "../../Include/en/EntityManager.h"
-#include "../../Include/en/Entity.h"
+#include "../../include/kge/en/EntityManager.h"
+#include "../../include/kge/en/Entity.h"
 
 namespace kge
 {

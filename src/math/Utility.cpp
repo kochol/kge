@@ -6,8 +6,8 @@
 //#include <cassert>
 #include <cstdlib>
 #include <cmath>
-#include "../../Include/math/Utility.h"
-#include "../../Include/math/Vector.h"
+#include "../../include/kge/math/Utility.h"
+#include "../../include/kge/math/Vector.h"
 
 namespace kge
 {
@@ -77,7 +77,7 @@ namespace math
 	}
 
 	//-----------------------------------------------------------
-	// Bézier Curves
+	// Bï¿½zier Curves
 	//-----------------------------------------------------------
 	void BezierCurve(Vector& result, const Vector* points, int num, float t)
 	{

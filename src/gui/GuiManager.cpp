@@ -3,8 +3,8 @@
 // Date: 8/1/1387
 // Programmer: Ali Akbar Mohamadi(Kochol) & Hadi Robati( hadirobati )
 
-#include "../../Include/gui/GuiManager.h"
-#include "../../Include/core/mem_fun.h"
+#include "../../include/kge/gui/GuiManager.h"
+#include "../../include/kge/core/mem_fun.h"
 
 
 

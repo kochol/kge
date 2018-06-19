@@ -3,11 +3,11 @@
 // Date: 29/5/1390
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/efx/Bloom.h"
-#include "../../Include/efx/EffectManager.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/gui/Image.h"
-#include "../../Include/gui/GuiManager.h"
+#include "../../include/kge/efx/Bloom.h"
+#include "../../include/kge/efx/EffectManager.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/gui/Image.h"
+#include "../../include/kge/gui/GuiManager.h"
 
 namespace kge
 {

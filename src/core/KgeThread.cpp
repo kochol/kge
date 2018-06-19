@@ -1,5 +1,5 @@
-#include "../../Include/core/KgeThread.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/core/KgeThread.h"
+#include "../../include/kge/io/Logger.h"
 #include <stdio.h>
 
 int thread_function( void *pThis )

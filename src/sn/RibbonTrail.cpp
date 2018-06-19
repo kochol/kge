@@ -3,11 +3,11 @@
 // Date: March 26, 2011
 // Programmer: Nader Golbaz
 
-#include "../../Include/sn/RibbonTrail.h"
-#include "../../Include/sn/SceneManager.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/gfx/HardwareBuffer.h"
-#include "../../Include/math/Utility.h"
+#include "../../include/kge/sn/RibbonTrail.h"
+#include "../../include/kge/sn/SceneManager.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/gfx/HardwareBuffer.h"
+#include "../../include/kge/math/Utility.h"
 
 namespace kge
 {

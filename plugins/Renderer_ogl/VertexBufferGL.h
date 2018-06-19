@@ -6,9 +6,9 @@
 #ifndef _VERTEXBUFFERGL_H
 #define _VERTEXBUFFERGL_H
 
-#include "../../Include/kgedef.h"
+#include "../../include/kge/kgedef.h"
 
-#include "../../Include/gfx/HardwareBuffer.h"
+#include "../../include/kge/gfx/HardwareBuffer.h"
 
 namespace kge
 {

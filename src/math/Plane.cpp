@@ -1,8 +1,8 @@
-#include "../../Include/math/Plane.h"
-#include "../../Include/math/Sphere.h"
-#include "../../Include/math/Ray.h"
-#include "../../Include/math/AABB.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/math/Plane.h"
+#include "../../include/kge/math/Sphere.h"
+#include "../../include/kge/math/Ray.h"
+#include "../../include/kge/math/AABB.h"
+#include "../../include/kge/io/Logger.h"
 #include <math.h>
 
 

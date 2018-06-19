@@ -4,12 +4,12 @@
 // Programmers: Ali Akbar Mohammadi (Kochol)
 
 #include <stdio.h>
-#include "../../Include/sn/TileTerrain.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/gfx/MeshManager.h"
-#include "../../Include/core/mem_fun.h"
-#include "../../Include/sn/Light.h"
-//#include "../../Include/io/File.h"
+#include "../../include/kge/sn/TileTerrain.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/gfx/MeshManager.h"
+#include "../../include/kge/core/mem_fun.h"
+#include "../../include/kge/sn/Light.h"
+//#include "../../include/kge/io/File.h"
 #include <queue>
 
 

@@ -3,7 +3,7 @@
 // Date: 25/5/1385
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/core/CPU.h"
+#include "../../include/kge/core/CPU.h"
 #include <string.h>
 #include <exception>
 #include <SDL2/SDL_cpuinfo.h>

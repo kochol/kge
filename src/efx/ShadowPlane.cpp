@@ -2,7 +2,7 @@
 // Des: This class create planar shodow to the flat mesh.
 // Date: 07-Apr-2007
 
-#include "../../Include/efx/ShadowPlane.h"
+#include "../../include/kge/efx/ShadowPlane.h"
 
 #ifndef NULL
 #define NULL 0

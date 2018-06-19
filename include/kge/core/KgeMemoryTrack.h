@@ -1,7 +1,7 @@
 #ifndef KGE_KGEMEMORYTRACK_H
 #define KGE_KGEMEMORYTRACK_H
 
-#include "../../Include/kgedef.h"
+#include "../kgedef.h"
 
 namespace kge
 {

@@ -4,8 +4,8 @@
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
 #include <stdio.h>
-#include "../../Include/ph/DynamicTriangleMesh.h"
-#include "../../Include/sn/TileTerrain.h"
+#include "../../include/kge/ph/DynamicTriangleMesh.h"
+#include "../../include/kge/sn/TileTerrain.h"
 
 namespace kge
 {

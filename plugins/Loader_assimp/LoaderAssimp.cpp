@@ -1,9 +1,9 @@
 #include "LoaderAssimp.h"
-#include "../../Include/core/KgeMemory.h"
-#include "../../Include/io/Stream.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/sn/Mesh.h"
-#include "../../Include/gfx/MeshBuffer.h"
+#include "../../include/kge/core/KgeMemory.h"
+#include "../../include/kge/io/Stream.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/sn/Mesh.h"
+#include "../../include/kge/gfx/MeshBuffer.h"
 #include <assimp/Importer.hpp>      // C++ importer interface
 #include <assimp/scene.h>           // Output data structure
 #include <assimp/postprocess.h>     // Post processing flags

@@ -3,7 +3,7 @@
 // Date: 16/01/1387
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/gui/Text.h"
+#include "../../include/kge/gui/Text.h"
 #include <map>
 
 namespace kge

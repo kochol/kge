@@ -3,7 +3,7 @@
 // Date: 4/1/1387
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/gui/Control.h"
+#include "../../include/kge/gui/Control.h"
 
 namespace kge
 {

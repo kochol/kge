@@ -3,7 +3,7 @@
 // Date: 30/6/1386
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/efx/BumpMap.h"
+#include "../../include/kge/efx/BumpMap.h"
 
 namespace kge
 {

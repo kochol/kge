@@ -57,21 +57,21 @@ In Library directories add KGE SDK "bin/debug" and "libs" folders path.
 
 \subsubsection vs2005 Microsoft Visual Studio 2005-2008
 Select Tools menu and select Options.
-Select the projects entry and then select . Select ‘show directories for include files’ in the combo box , and add “Include” Directories of KGE engine.
-Compiler also need to find the library files of engine,so stay in that dialog , select ‘show directories for Library files’ and add the libs directory of engine and also add the “Debug” directory.
+Select the projects entry and then select . Select ï¿½show directories for include filesï¿½ in the combo box , and add ï¿½Includeï¿½ Directories of KGE engine.
+Compiler also need to find the library files of engine,so stay in that dialog , select ï¿½show directories for Library filesï¿½ and add the libs directory of engine and also add the ï¿½Debugï¿½ directory.
 
 Click Button.
 
 \subsubsection vs6 Microsoft Visual Studio 6.0
 if you use Microsoft Visual Studio 6.0,Select Menu and select ,
-In the Option Window Select Tab and select the ‘Include’ Item in the combo box.
+In the Option Window Select Tab and select the ï¿½Includeï¿½ Item in the combo box.
 Now Add the "Include" and "Libs" Directory path of the KGE engine folder to the list of directories.
-Now the compiler will find the “kge.h” header file.
+Now the compiler will find the ï¿½kge.hï¿½ header file.
 Compiler also need to find the library files of engine, 
-So select the ‘Library’ item in the combo box and add the “Libs” directory of the engine 
-and also add the “Debug” directory of engine to find “kge.lib”
+So select the ï¿½Libraryï¿½ item in the combo box and add the ï¿½Libsï¿½ directory of the engine 
+and also add the ï¿½Debugï¿½ directory of engine to find ï¿½kge.libï¿½
 
-That’s it. With your IDE set up like this, you will now be able to develop applications with the Kochol Game Engine.
+Thatï¿½s it. With your IDE set up like this, you will now be able to develop applications with the Kochol Game Engine.
 
 \subsection step3 Step 3: Lets start!
 
@@ -101,7 +101,7 @@ We recommend if you want test KGE change the codes in this tutorial
 // Include the kge.h and it will include the other header files automatically
 // But its not the best way to use KGE when your project is big. The compile time 
 // will be increased in this way.
-#include "../../Include/kge.h"
+#include "../../include/kge/kge.h"
 
 // Tell the compiler to link with kge.lib
 #pragma comment(lib, "../../bin/debug/kge.lib")
@@ -218,7 +218,7 @@ You can listen to keyboard callbacks with Connect function.
 // We recommend if you want test KGE change the codes in this tutorial
 // You have to read tut01 before this tutorial we will delete old comments in this tutorial
 
-#include "../../Include/kge.h"
+#include "../../include/kge/kge.h"
 
 #pragma comment(lib, "../../bin/debug/kge.lib")
 
@@ -340,7 +340,7 @@ We will delete old comments in this tutorial.
 
 \code{.cpp}
 
-#include "../../Include/kge.h"
+#include "../../include/kge/kge.h"
 
 #pragma comment(lib, "../../bin/debug/kge.lib")
 

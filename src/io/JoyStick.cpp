@@ -3,7 +3,7 @@
 // Date: feb-15-2008 , 26/11/1386 (jalali)
 // Programmer: Pooya Shainfar
 
-#include "../../Include/io/JoyStick.h"
+#include "../../include/kge/io/JoyStick.h"
 
 #include <SDL2/SDL.h>
 #include <ctype.h>

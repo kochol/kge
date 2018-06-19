@@ -3,12 +3,12 @@
 // Date: 19/4/1386
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/sn/StaticMesh.h"
-#include "../../Include/sn/Light.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/math/Quat.h"
-#include "../../Include/math/Plane.h"
-#include "../../Include/gfx/MeshBuffer.h"
+#include "../../include/kge/sn/StaticMesh.h"
+#include "../../include/kge/sn/Light.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/math/Quat.h"
+#include "../../include/kge/math/Plane.h"
+#include "../../include/kge/gfx/MeshBuffer.h"
 #include "../../Headers/gfx/GeometryBatch.h"
 
 namespace kge

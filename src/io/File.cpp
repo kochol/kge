@@ -4,10 +4,10 @@
 // Date: 26/6/1385
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/io/File.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/io/File.h"
+#include "../../include/kge/io/Logger.h"
 #include <memory.h>
-#include "../../Include/core/KgeMemory.h"
+#include "../../include/kge/core/KgeMemory.h"
 #if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
 #	include <io.h>
 #else

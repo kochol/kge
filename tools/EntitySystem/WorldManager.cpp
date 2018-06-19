@@ -1,8 +1,8 @@
-#include "../../Include/en/WorldManager.h"
-#include "../../Include/en/World.h"
-#include "../../Include/en/Server.h"
-#include "../../Include/en/EntityManager.h"
-#include "../../Include/core/KgeMemory.h"
+#include "../../include/kge/en/WorldManager.h"
+#include "../../include/kge/en/World.h"
+#include "../../include/kge/en/Server.h"
+#include "../../include/kge/en/EntityManager.h"
+#include "../../include/kge/core/KgeMemory.h"
 
 namespace kge
 {

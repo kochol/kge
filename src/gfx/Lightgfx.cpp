@@ -3,7 +3,7 @@
 // Date: 25/2/1386
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/gfx/Lighting.h"
+#include "../../include/kge/gfx/Lighting.h"
 
 
 

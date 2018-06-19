@@ -1,9 +1,9 @@
 #include <cstdio>
 #include <map>
 #include "../../Headers/core/KgeMemoryTrack.h"
-#include "../../Include/core/KgeMemory.h"
-#include "../../Include/config.h"
-#include "../../Include/io/Logger.h"
+#include "../../include/kge/core/KgeMemory.h"
+#include "../../include/kge/config.h"
+#include "../../include/kge/io/Logger.h"
 
 namespace kge
 {

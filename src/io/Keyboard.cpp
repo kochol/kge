@@ -3,7 +3,7 @@
 // Date: 5/10/1386
 // Programmer: Pooya Shahinfar (Pswin), Hadi Robati( hadirobati )
 
-#include "../../Include/io/Keyboard.h"
+#include "../../include/kge/io/Keyboard.h"
 
 #ifdef KGE_USE_SDL
 #include <SDL2/SDL.h>

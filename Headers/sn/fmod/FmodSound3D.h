@@ -6,7 +6,7 @@
 #ifndef FMOD_SOUDN3D_H
 #define FMOD_SOUND3D_H
 
-#include "../../../Include/sn/Sound3D.h"
+#include "../../../include/kge/sn/Sound3D.h"
 
 #if KGE_USE_FMOD == 1
 #include <fmod.hpp>

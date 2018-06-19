@@ -4,7 +4,7 @@
 // Date: 2/6/1385
 // Programmer: Ali Akbar Mohamadi(Kochol)
 
-#include "../../Include/core/Timer.h"
+#include "../../include/kge/core/Timer.h"
 
 #include <SDL2/SDL.h>
 

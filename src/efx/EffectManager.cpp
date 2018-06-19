@@ -3,10 +3,10 @@
 // Date: 16/12/1388
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/efx/EffectManager.h"
-#include "../../Include/efx/Bloom.h"
-#include "../../Include/Device.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/efx/EffectManager.h"
+#include "../../include/kge/efx/Bloom.h"
+#include "../../include/kge/Device.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 extern kge::efx::EffectManager	*	g_pEffectManager;
 

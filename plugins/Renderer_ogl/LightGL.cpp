@@ -5,7 +5,7 @@
 
 #include "RendererGL.h"
 #include "LightGL.h"
-#include "../../Include/math/math.h"
+#include "../../include/kge/math/math.h"
 
 
 
