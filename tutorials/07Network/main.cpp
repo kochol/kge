@@ -1,6 +1,6 @@
-#include "../../Include/net/Network.h"
-#include "../../Include/net/NetworkEvents.h"
-#include "../../Include/net/NetworkMessages.h"
+#include "../../include/kge/net/Network.h"
+#include "../../include/kge/net/NetworkEvents.h"
+#include "../../include/kge/net/NetworkMessages.h"
 #include <iostream>
 #include <RakNetTypes.h>
 #include <RakString.h>

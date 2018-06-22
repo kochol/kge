@@ -1,9 +1,9 @@
 #ifndef KGE_USER_TRIGGER_X_H
 #define KGE_USER_TRIGGER_X_H
 
-#include "../../Include/ph/TriggerReport.h"
-#include "../../Include/ph/ActorDynamic.h"
-#include "../../Include/core/Functor.h"
+#include "../../include/kge/ph/TriggerReport.h"
+#include "../../include/kge/ph/ActorDynamic.h"
+#include "../../include/kge/core/Functor.h"
 
 namespace kge
 {

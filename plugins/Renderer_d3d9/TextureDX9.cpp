@@ -5,8 +5,8 @@
 
 #include "RendererDX.h"
 #include "texturedx9.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/gfx/ImageData.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/gfx/ImageData.h"
 // Include DevIL.
 #include "../../libs/devil/il.h"
 #include "../../libs/devil/ilu.h"

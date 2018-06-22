@@ -9,7 +9,7 @@
 #ifndef LINUX_H
 #define LINUX_H
 
-#include "../../Include/io/Iwindow.h"
+#include "../../include/kge/io/Iwindow.h"
 #include <GL/glx.h>
 
 struct LinuxHandler

@@ -6,7 +6,7 @@
 #ifndef FMOD_SOUND_2D_H
 #define FMOD_SOUND_2D_H
 
-#include "../../../Include/sn/Sound2D.h"
+#include "../../../include/kge/sn/Sound2D.h"
 #include "../../av/fmod/FmodSoundBuffer.h"
 
 #if KGE_USE_FMOD == 1

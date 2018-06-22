@@ -25,11 +25,11 @@
  *
  */
 
-#include "../../Include/gui/EventManager.h"
+#include "../../include/kge/gui/EventManager.h"
 #include <Rocket/Core/Context.h>
 #include <Rocket/Core/ElementDocument.h>
 #include <Rocket/Core/ElementUtilities.h>
-#include "../../Include/gui/EventHandler.h"
+#include "../../include/kge/gui/EventHandler.h"
 #include <map>
 
 // The game's element context (declared in main.cpp).

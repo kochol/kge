@@ -1,8 +1,8 @@
-#include "../../Include/en/Entity.h"
-#include "../../Include/en/Component.h"
-#include "../../Include/en/ComponentType.h"
+#include "../../include/kge/en/Entity.h"
+#include "../../include/kge/en/Component.h"
+#include "../../include/kge/en/ComponentType.h"
 #ifdef KGE_EN_TS
-#	include "../../Include/core/KgeLock.h"
+#	include "../../include/kge/core/KgeLock.h"
 #endif // KGE_EN_TS
 
 #ifdef KGE_USE_RAKNET

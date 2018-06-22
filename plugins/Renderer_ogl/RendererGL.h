@@ -6,9 +6,9 @@
 #ifndef KGE_RENDERERGL_H
 #define KGE_RENDERERGL_H
 
-#include "../../Include/kgedef.h"
+#include "../../include/kge/kgedef.h"
 
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 #include <Cg/cg.h>    /* Can't include this?  Is Cg Toolkit installed! */
 #include <Cg/cgGL.h>

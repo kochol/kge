@@ -2,8 +2,8 @@
 #define KGE_GEOMETRYBATCH_H
 
 #include <vector>
-#include "../../Include/gfx/VertexDec.h"
-#include "../../Include/math/Matrix.h"
+#include "../../include/kge/gfx/VertexDec.h"
+#include "../../include/kge/math/Matrix.h"
 
 namespace kge
 {

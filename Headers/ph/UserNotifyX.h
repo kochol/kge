@@ -13,9 +13,9 @@
 // To use physx you need add physx SDK search paths.
 //#include <NxPhysics.h>
 
-#include "../../Include/ph/UserNotify.h" 
-#include "../../Include/ph/ActorDynamic.h"
-#include "../../Include/core/Functor.h"
+#include "../../include/kge/ph/UserNotify.h" 
+#include "../../include/kge/ph/ActorDynamic.h"
+#include "../../include/kge/core/Functor.h"
 #include <stdio.h>
 
 namespace kge

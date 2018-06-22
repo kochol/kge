@@ -25,8 +25,8 @@
  *
  */
 
-#include "../../Include/gui/EventInstancer.h"
-#include "../../Include/gui/Event.h"
+#include "../../include/kge/gui/EventInstancer.h"
+#include "../../include/kge/gui/Event.h"
 
 EventInstancer::EventInstancer()
 {

@@ -1,5 +1,5 @@
-#include "../../Include/en/ComponentType.h"
-#include "../../Include/en/Component.h"
+#include "../../include/kge/en/ComponentType.h"
+#include "../../include/kge/en/Component.h"
 
 std::map<int, kge::en::Component*>	m_mComs;
 

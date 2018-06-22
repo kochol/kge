@@ -1,5 +1,5 @@
-#include "../../Include/en/EntityType.h"
-#include "../../Include/en/Component.h"
+#include "../../include/kge/en/EntityType.h"
+#include "../../include/kge/en/Component.h"
 
 namespace kge
 {

@@ -25,7 +25,7 @@
  *
  */
 
-#include "../../Include/gui/EventHandler.h"
+#include "../../include/kge/gui/EventHandler.h"
 
 EventHandler::~EventHandler()
 {

@@ -2,16 +2,16 @@
 // We recommend if you want test KGE change the codes in this tutorial
 // You have to read tut01 before this tutorial we will delete old comments in this tutorial
 
-#include "../../Include/kge.h"
+#include "../../include/kge/kge.h"
 
 // Entity System
-#include "../../Include/en/Entity.h"
-#include "../../Include/en/CmpPosition.h"
-#include "../../Include/en/WorldManager.h"
-#include "../../Include/en/World.h"
-#include "../../Include/en/EntityManager.h"
-#include "../../Include/en/CmpMesh.h"
-#include "../../Include/en/SystemMesh.h"
+#include "../../include/kge/en/Entity.h"
+#include "../../include/kge/en/CmpPosition.h"
+#include "../../include/kge/en/WorldManager.h"
+#include "../../include/kge/en/World.h"
+#include "../../include/kge/en/EntityManager.h"
+#include "../../include/kge/en/CmpMesh.h"
+#include "../../include/kge/en/SystemMesh.h"
 
 #pragma comment(lib, "../../bin/debug/EntitySystem.lib")
 #pragma comment(lib, "../../bin/debug/kge.lib")

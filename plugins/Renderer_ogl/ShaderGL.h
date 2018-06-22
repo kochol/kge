@@ -6,7 +6,7 @@
 #ifndef SHADERGL_H
 #define SHADERGL_H
 
-#include "../../Include/gfx/Shader.h"
+#include "../../include/kge/gfx/Shader.h"
 #include "../../Libs/glew/glew.h"
 #include <Cg/cg.h>
 #include <Cg/cgGL.h>

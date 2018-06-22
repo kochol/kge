@@ -4,7 +4,7 @@
 // Programmer: Pooya Shahinfar (Pswin)
 
 #include "TextureGL.h"
-#include "../../Include/gfx/ImageData.h"
+#include "../../include/kge/gfx/ImageData.h"
 
 #include "../../Libs/glew/glew.h"
 

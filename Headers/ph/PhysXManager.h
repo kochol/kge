@@ -3,15 +3,15 @@
 // Date: 31/6/1388
 // Programmer: Hadi Robati (hadirobati), Ali Akbar Mohammadi(Kochol)
 
-#include "../../Include/kgedef.h"
-#include "../../Include/kge.h"
+#include "../../include/kge/kgedef.h"
+#include "../../include/kge/kge.h"
 
 #ifdef KGE_USE_PHYSX
 
 #ifndef KGE_PHYSXMANAGER_H
 #define KGE_PHYSXMANAGER_H
 
-#include "../../Include/ph/PhysManager.h"
+#include "../../include/kge/ph/PhysManager.h"
 
 // To use physx you need add physx SDK search paths.
 #include <NxPhysics.h>

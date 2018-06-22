@@ -2,7 +2,7 @@
 #ifndef BASS_SOUND_2D_H
 #define BASS_SOUND_2D_H
 
-#include "../../../Include/sn/Sound2D.h"
+#include "../../../include/kge/sn/Sound2D.h"
 
 #if KGE_USE_BASS == 1
 

@@ -6,7 +6,7 @@
 #ifndef DYNAMICINDEXBUFFERDX_H
 #define DYNAMICINDEXBUFFERDX_H
 
-#include "../../Include/gfx/HardwareBuffer.h"
+#include "../../include/kge/gfx/HardwareBuffer.h"
 #include <d3d9.h>
 
 namespace kge

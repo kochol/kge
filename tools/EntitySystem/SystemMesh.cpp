@@ -1,10 +1,10 @@
-#include "../../Include/en/SystemMesh.h"
-#include "../../Include/en/CmpMesh.h"
-#include "../../Include/en/CmpPosition.h"
-#include "../../Include/en/Entity.h"
-#include "../../Include/en/ComponentType.h"
-#include "../../Include/Device.h"
-#include "../../Include/sn/StaticMesh.h"
+#include "../../include/kge/en/SystemMesh.h"
+#include "../../include/kge/en/CmpMesh.h"
+#include "../../include/kge/en/CmpPosition.h"
+#include "../../include/kge/en/Entity.h"
+#include "../../include/kge/en/ComponentType.h"
+#include "../../include/kge/Device.h"
+#include "../../include/kge/sn/StaticMesh.h"
 
 namespace kge
 {

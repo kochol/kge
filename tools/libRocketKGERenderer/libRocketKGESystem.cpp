@@ -1,10 +1,10 @@
-#include "../../Include/gui/libRocketKGESystem.h"
-#include "../../Include/io/Logger.h"
-#include "../../Include/core/Timer.h"
-#include "../../Include/gfx/Renderer.h"
-#include "../../Include/io/Mouse.h"
-#include "../../Include/io/Keyboard.h"
-#include "../../Include/core/ptr_fun.h"
+#include "../../include/kge/gui/libRocketKGESystem.h"
+#include "../../include/kge/io/Logger.h"
+#include "../../include/kge/core/Timer.h"
+#include "../../include/kge/gfx/Renderer.h"
+#include "../../include/kge/io/Mouse.h"
+#include "../../include/kge/io/Keyboard.h"
+#include "../../include/kge/core/ptr_fun.h"
 
 KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;
 Rocket::Core::Context				*	g_pCurrentContex = NULL;

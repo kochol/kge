@@ -6,11 +6,11 @@
 #ifndef MS3DLOADER_H
 #define MS3DLOADER_H
 
-#include "../../Include/sn/AnimatedMesh.h"
-#include "../../Include/sn/StaticMesh.h"
-#include "../../Include/kgedef.h"
-#include "../../Include/gfx/Structs.h"
-#include "../../Include/gfx/MeshBuffer.h"
+#include "../../include/kge/sn/AnimatedMesh.h"
+#include "../../include/kge/sn/StaticMesh.h"
+#include "../../include/kge/kgedef.h"
+#include "../../include/kge/gfx/Structs.h"
+#include "../../include/kge/gfx/MeshBuffer.h"
 
   ////////////////////////////////////////////////////////////////////////////////////
  // In struct ha makhsose file MS3D hastand.                                       //

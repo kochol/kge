@@ -25,8 +25,8 @@
  *
  */
 
-#include "../../Include/gui/Event.h"
-#include "../../Include/gui/EventManager.h"
+#include "../../include/kge/gui/Event.h"
+#include "../../include/kge/gui/EventManager.h"
 
 Event::Event(const Rocket::Core::String& value) : value(value)
 {

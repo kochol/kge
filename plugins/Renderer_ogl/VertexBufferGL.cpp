@@ -1,6 +1,6 @@
 #include "../../Libs/glew/glew.h"
 #include "VertexBufferGL.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 KGE_IMPORT extern kge::gfx::Renderer	*	g_pRenderer;
 KGE_IMPORT extern kge::u32 HardwareBufferID;

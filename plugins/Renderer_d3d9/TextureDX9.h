@@ -9,8 +9,8 @@
 #ifdef WIN32
 
 #include <d3d9.h>
-#include "../../Include/gfx/Texture.h"
-#include "../../Include/gfx/Renderer.h"
+#include "../../include/kge/gfx/Texture.h"
+#include "../../include/kge/gfx/Renderer.h"
 
 namespace kge
 {

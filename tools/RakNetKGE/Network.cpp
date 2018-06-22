@@ -1,5 +1,5 @@
-#include "../../Include/net/Network.h"
-#include "../../Include/net/NetworkEvents.h"
+#include "../../include/kge/net/Network.h"
+#include "../../include/kge/net/NetworkEvents.h"
 #include <RakPeerInterface.h>
 #include <MessageIdentifiers.h>
 #include <iostream>

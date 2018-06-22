@@ -1,6 +1,6 @@
-#include "../../Include/en/CmpPosition.h"
-#include "../../Include/en/ComponentType.h"
-#include "../../Include/core/KgeMemory.h"
+#include "../../include/kge/en/CmpPosition.h"
+#include "../../include/kge/en/ComponentType.h"
+#include "../../include/kge/core/KgeMemory.h"
 
 namespace kge
 {

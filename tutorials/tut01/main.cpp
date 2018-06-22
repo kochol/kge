@@ -4,9 +4,9 @@
 // Include the kge.h and it will include the other header files automatically
 // But its not the best way to use KGE when your project is big. The compile time
 // will be increased in this way.
-#include "../../Include/kge.h"
+#include "../../include/kge/kge.h"
 
-#include "../../Include/core/TaskManager.h"
+#include "../../include/kge/core/TaskManager.h"
 
 // Tell the compiler to link with kge.lib
 #pragma comment(lib, "../../bin/debug/kge.lib")
