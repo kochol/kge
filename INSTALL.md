@@ -8,7 +8,7 @@ GLEW from here: http://glew.sourceforge.net/
 
 ## Under Linux operating system:
 These packages were also required:
-	build-essential libncurses5-dev libncursesw5-dev
+	sdl2-dev build-essential libncurses5-dev libncursesw5-dev
 
 
 # Installation

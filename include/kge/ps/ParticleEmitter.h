@@ -6,8 +6,8 @@
 #ifndef PARTICLEEMITTER_H
 #define PARTICLEEMITTER_H
 
-#include "../../include/kge/math/Vector.h"
-#include "../../include/kge/math/AABB.h"
+#include "../math/Vector.h"
+#include "../math/AABB.h"
 
 namespace kge
 {

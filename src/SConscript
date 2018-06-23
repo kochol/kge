@@ -1,2 +1,10 @@
+libs = ['SDL2', 'IL']
 src = Glob('*.cpp')
-Library('kge', src)
+Export('src')
+SConscript([  'core/SConscript'
+            , 'gfx/SConscript'
+            , 'io/SConscript'
+            , 'math/SConscript'
+            , 'sn/SConscript'])
+SharedLibrary('kge', src, LIBS=libs, CPPPATH='../include/kge',
+    LIBPATH = '#Libs')
