@@ -12,14 +12,14 @@ namespace kge
 		class Component;
 
 		//! Assign an ID
-		class KGELIB_API assign
+		class KGE_API assign
 		{
 		public:
 			static int AssignComponentID();
 		};
 
 
-		class KGELIB_API ComponentCreator
+		class KGE_API ComponentCreator
 		{
 			//! Constructor
 			ComponentCreator();

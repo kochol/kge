@@ -20,7 +20,7 @@ namespace kge
 		class Component;
 
 		//! This is the base class for entity system in KGE
-		class KGELIB_API Entity: public Node
+		class KGE_API Entity: public Node
 		{
 		public:
 

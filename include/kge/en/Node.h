@@ -45,6 +45,9 @@ namespace kge
             //! Sets the node parent.
             virtual void SetParent(Node* parent);
 
+            //! Returns the node type.
+            Node::Type GetType() { return m_eNodeType; }
+
             protected:
 
             Node            *   m_pParent;
