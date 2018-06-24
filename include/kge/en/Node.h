@@ -1,4 +1,5 @@
-#pragma once
+#ifndef KGE_EN_NODE_H
+#define KGE_EN_NODE_H
 
 #include <vector>
 #include "../KgeUnknown.h"
@@ -11,7 +12,7 @@ namespace kge
         {
             public:
 
-            enum Type
+            enum class Type
             {
                 Entity = 0,
                 Component,
@@ -55,3 +56,5 @@ namespace kge
     } // en
 
 } // kge
+
+#endif // !KGE_EN_NODE_H

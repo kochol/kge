@@ -7,7 +7,7 @@ namespace kge
         //--------------------------------------------------------------------------------------------
         // Constructor
         //--------------------------------------------------------------------------------------------
-        Node::Node(): m_pParent(NULL), m_eNodeType(Node::Unknown)
+        Node::Node(): m_pParent(NULL), m_eNodeType(Node::Type::Unknown)
         {
 
         } // Constructor
@@ -74,15 +74,16 @@ namespace kge
             if (m_pParent)
             {
                 m_pParent->RemoveChild(this);
+                m_pParent->DecRef();
             }
 
             if (parent)
             {
                 parent->AddChild(this);
+                parent->AddRef();
             }
 
             m_pParent = parent;
-            m_pParent->AddRef();
 
         } // SetParent
 

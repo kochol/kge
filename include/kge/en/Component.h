@@ -2,6 +2,7 @@
 #define KGE_COMPONENT_H
 
 #include <string>
+#include "Node.h"
 #ifdef KGE_USE_RAKNET
 #	include <BitStream.h>
 #endif // KGE_USE_RAKNET
@@ -11,9 +12,15 @@ namespace kge
 {
 	namespace en
 	{
-		class Component
+		class KGE_API Component: public Node
 		{
 		public:
+
+			//! Constructor
+			Component();
+
+			//! Destructor
+			virtual ~Component() {}
 
 			//! Every component must declare this function for returning their class ID
 			virtual int GetClassID() = 0;
