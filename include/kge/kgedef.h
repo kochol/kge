@@ -13,12 +13,12 @@
 //************************************
 // Version Information
 //************************************
-#define KGE_VERSION_NUM 0.1.1
+#define KGE_VERSION_NUM 0.2.0
 #define KGE_VERSION_MAJOR 0
-#define KGE_VERSION_MINOR 1
-#define KGE_VERSION_RELEASE 1
+#define KGE_VERSION_MINOR 2
+#define KGE_VERSION_RELEASE 0
 #define KGE_VERSION_SUFFIX ""
-#define KGE_VERSION_NAME "Kochol Game Engine 0.1.1"
+#define KGE_VERSION_NAME "Kochol Game Engine 0.2.0"
 
 #define KGE_VERSION    ((KGE_VERSION_MAJOR << 16) | (KGE_VERSION_MINOR << 8) | KGE_VERSION_RELEASE)
 

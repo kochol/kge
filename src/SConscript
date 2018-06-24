@@ -2,6 +2,7 @@ libs = ['SDL2', 'IL']
 src = Glob('*.cpp')
 Export('src')
 SConscript([  'core/SConscript'
+            , 'en/SConscript'
             , 'gfx/SConscript'
             , 'io/SConscript'
             , 'math/SConscript'
