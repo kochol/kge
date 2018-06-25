@@ -189,11 +189,6 @@ namespace kge
 	//! Unsigned integer
 	typedef unsigned int 	uint;
 
-	// 64-bit architecture
-#if defined(__x86_x64__) || defined(_M_X64) || defined(__powerpc64__) || defined(__alpha__) || defined(__ia64__) || defined(__s390__) || defined(__s390x__)
-#	error "kge dosen't support 64-bit compilition yet"
-#else // 32-bit CPU architecture
-
 	//! A 32-bit unsigned int
 	typedef unsigned int   u32;
 
@@ -225,8 +220,6 @@ namespace kge
 
 	//! 64bit floating point
 	typedef double			f64;
-
-#endif
 
 } // kge
 
