@@ -7,7 +7,7 @@
 #define PARTICLERENDERER_H
 
 #include <vector>
-#include "../../include/kge/gfx/Renderer.h"
+#include "../gfx/Renderer.h"
 
 namespace kge
 {

@@ -12,7 +12,7 @@ namespace kge
 		class Server;
 		class EntityManager;
 
-		class KGELIB_API WorldManager
+		class KGE_API WorldManager
 		{
 		public:
 

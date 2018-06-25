@@ -1,0 +1,1 @@
+#Program('tut01', 'main.cpp', LIBS='kge', LIBPATH=['../../Libs'])

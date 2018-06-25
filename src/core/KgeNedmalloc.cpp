@@ -1,6 +1,6 @@
-#include "../../Headers/core/KgeNedmalloc.h"
+#include "../../include/kge/core/KgeNedmalloc.h"
 #include "../../Libs/nedmalloc/nedmalloc.c"
-#include "../../Headers/core/KgeMemoryTrack.h"
+#include "../../include/kge/core/KgeMemoryTrack.h"
 
 namespace kge
 {

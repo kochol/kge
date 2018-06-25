@@ -39,3 +39,5 @@ media
 
 *.userprefs
 .sconsign.dblite
+*.so
+*.os

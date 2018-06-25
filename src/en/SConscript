@@ -1,0 +1,3 @@
+Import('src')
+src.extend(Glob('*.cpp'))
+Export('src')

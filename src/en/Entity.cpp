@@ -19,8 +19,9 @@ namespace kge
 		//------------------------------------------------------------------------------------
 		// Constructor
 		//------------------------------------------------------------------------------------
-		Entity::Entity(int ID): m_iID(ID), Type(0)
+		Entity::Entity(int ID): m_iID(ID), EntityType(0)
 		{
+			m_eNodeType = Node::Type::Entity;
 #ifdef KGE_EN_TS
 			m_pMutex = KGE_NEW(core::KgeMutex);
 #endif // KGE_EN_TS

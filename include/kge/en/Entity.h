@@ -1,9 +1,8 @@
 #ifndef KGE_ENTITY_H
 #define KGE_ENTITY_H
 
-#include "../KgeUnknown.h"
 #include <map>
-#include <vector>
+#include "Node.h"
 
 #ifdef KGE_USE_RAKNET
 #	include <BitStream.h>
@@ -21,7 +20,7 @@ namespace kge
 		class Component;
 
 		//! This is the base class for entity system in KGE
-		class KGELIB_API Entity: public KgeUnknown
+		class KGE_API Entity: public Node
 		{
 		public:
 
@@ -53,7 +52,7 @@ namespace kge
 #endif // KGE_USE_RAKNET
 
 			//! Entity type
-			int Type;
+			int EntityType;
 
 		protected:
 

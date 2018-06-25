@@ -1,4 +1,4 @@
-// File name: Resource.h
+// File name: KgeUnknown.h
 // Des: This class is a base class for all of the KGE classes. We use this class for refrence counting and storing debug informations.
 // Date: 12/4/1387
 // Programmer: Ali Akbar Mohamadi(Kochol)

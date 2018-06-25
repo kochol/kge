@@ -5,6 +5,7 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/*.o": true
+        "**/*.o": true,
+        "**/*.os": true
     }
 }
