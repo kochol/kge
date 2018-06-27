@@ -13,6 +13,9 @@ namespace kge
 
 			//! Constructor
 			Node3D(): Scale(1.0f, 1.0f, 1.0f) { }
+
+			//! Destructor
+			virtual ~Node3D() { }
 		
 			//! Every component must declare this function for returning their class ID
 			virtual int GetClassID();

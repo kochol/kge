@@ -27,8 +27,8 @@
 
 // external libs
 #include <math.h>
-#include "../../Libs/DevIL/il.h"
-#include "../../Libs/DevIL/ilu.h"
+#include <IL/il.h>
+#include <IL/ilu.h>
 //#include "../../Libs/DevIL/ilut.h"
 
 #ifdef KGE_USE_SDL
@@ -38,8 +38,8 @@
 extern KGE_API SDL_Window* g_pSDLwindow;
 
 #if KGE_COMPILER == KGE_COMPILER_MSVC
-#	pragma comment(lib, "../../Libs/DevIL.lib")
-#	pragma comment(lib, "../../Libs/ilu.lib")
+#	pragma comment(lib, "DevIL.lib")
+#	pragma comment(lib, "ilu.lib")
 #	pragma comment(lib, "sdl2.lib")
 #	pragma comment(lib, "cg.lib")
 #	pragma comment(lib, "cggl.lib")

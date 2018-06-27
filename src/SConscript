@@ -1,11 +1,34 @@
-libs = ['SDL2', 'IL']
+env = Environment()
+libs = ['SDL2']
+libpath = ['#Libs']
+cpppath = ['../include/kge']
+cppflags = []
+if env['PLATFORM'] == 'win32':
+    cppflags.append('-DKGE_EXPORT')
+    cppflags.append('-DWIN32')
+    cpppath.append('../deps/SDL2')
+    cpppath.append('../deps/devil/include')
+    libs.append(['DevIL', 'ILU'])
+    if env['TARGET_ARCH'] == 'x86' or env['TARGET_ARCH'] == 'i386':
+        libpath.append('../deps/SDL2/lib/x86')
+        libpath.append('../deps/devil/lib/x86/Release')
+    else:
+        libpath.append('../deps/SDL2/lib/x64')
+        libpath.append('../deps/devil/lib/x64/Release')        
+else:
+    libs.append('IL')
+    
 src = Glob('*.cpp')
 Export('src')
 SConscript([  'core/SConscript'
             , 'en/SConscript'
+            , 'efx/SConscript'
             , 'gfx/SConscript'
+            , 'gui/SConscript'
+            , 'ph/SConscript'
+            , 'ps/SConscript'
             , 'io/SConscript'
             , 'math/SConscript'
             , 'sn/SConscript'])
-SharedLibrary('kge', src, LIBS=libs, CPPPATH='../include/kge',
-    LIBPATH = '#Libs')
+env.SharedLibrary('kge', src, LIBS=libs, CPPPATH=cpppath,
+    LIBPATH = libpath, CCFLAGS=cppflags)

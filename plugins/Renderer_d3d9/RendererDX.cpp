@@ -23,16 +23,16 @@
 #include <math.h>
 
 // Include DevIL.
-#include "../../libs/devil/il.h"
-#include "../../libs/devil/ilu.h"
+#include <IL/il.h>
+#include <IL/ilu.h>
 //#include "../../libs/devil/ilut.h"
-#include "../../libs/devil/devil_internal_exports.h"
+#include <IL/devil_internal_exports.h>
 
 
 
-#pragma comment(lib, "../../Libs/DevIL.lib")
-#pragma comment(lib, "../../Libs/ilu.lib")
-//#pragma comment(lib, "Libs/ilut.lib")
+#pragma comment(lib, "DevIL.lib")
+#pragma comment(lib, "ilu.lib")
+//#pragma comment(lib, "ilut.lib")
 #pragma comment(lib, "d3d9.lib")
 
 #if defined(DEBUG) || defined(_DEBUG)

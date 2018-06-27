@@ -11,7 +11,7 @@ namespace kge
 	{
 		class Entity;
 
-		class KGELIB_API System: public core::Task
+		class KGE_API System: public core::Task
 		{
 		public:
 		

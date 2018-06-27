@@ -9,8 +9,6 @@
 #	pragma comment(lib, "RakNetDLLDebug.lib")
 #endif // KGE_USE_RAKNET
 
-#pragma comment(lib, "../../bin/Debug/kge.lib")
-
 namespace kge
 {
 	namespace en

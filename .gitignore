@@ -41,3 +41,6 @@ media
 .sconsign.dblite
 *.so
 *.os
+src/kge.dll
+src/kge.exp
+src/kge.lib

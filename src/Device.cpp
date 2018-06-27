@@ -23,11 +23,6 @@
 #include "../Headers/av/fmod/FmodSoundSystem.h"
 #include "../Headers/av/bass/BassSoundSystem.h"
 
-#ifdef WIN32
-#include "../Headers/io/win32.h"
-#endif // WIN32
-
-#include "../Headers/io/Linux.h"
 #include "../Headers/io/SdlWindow.h"
 #include "../include/kge/io/Logger.h"
 
@@ -319,10 +314,6 @@ namespace kge
 	io::IWindow* Device::CreateNewWindow()
 	{
 		// TODO check that can we use SDL to create this function
-#ifdef WIN32
-		io::IWindow* w = KGE_NEW(io::Win32)();
-		return w;
-#endif // WIN32
 
 		return NULL;
 	}

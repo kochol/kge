@@ -3,8 +3,8 @@
 // Date: January 11, 2011 (21/10/1389)
 // Programmer: Nader Golbaz
 
-#include "../../Headers/ps/Particle.h"
-#include "../../Headers/ps/ParticleBehavior.h"
+#include "../../include/kge/ps/Particle.h"
+#include "../../include/kge/ps/ParticleBehavior.h"
 #include "../../include/kge/math/Utility.h"
 #include <stdio.h>
 

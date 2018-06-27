@@ -1,5 +1,5 @@
 #include "../../Headers/gfx/LoaderStbImage.h"
-#include "../../Libs/stb_image.h"
+#include "stb_image.h"
 #include "../../include/kge/io/Stream.h"
 #include "../../include/kge/io/Logger.h"
 #include "../../include/kge/gfx/Texture.h"

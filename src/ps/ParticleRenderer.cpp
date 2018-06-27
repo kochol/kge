@@ -3,8 +3,8 @@
 // Date: January 11, 2011
 // Programmer: Nader Golbaz
 
-#include "../../Headers/ps/Particle.h"
-#include "../../Headers/ps/ParticleRenderer.h"
+#include "../../include/kge/ps/Particle.h"
+#include "../../include/kge/ps/ParticleRenderer.h"
 #include "../../include/kge/sn/StaticMesh.h"
 #include "../../include/kge/gfx/Texture.h"
 #include "../../include/kge/gfx/HardwareBuffer.h"

@@ -8,10 +8,10 @@
 #include "../../include/kge/io/Logger.h"
 #include "../../include/kge/gfx/ImageData.h"
 // Include DevIL.
-#include "../../libs/devil/il.h"
-#include "../../libs/devil/ilu.h"
+#include <IL/il.h>
+#include <IL/ilu.h>
 //#include "../../libs/devil/ilut.h"
-#include "../../libs/devil/devil_internal_exports.h"
+#include <IL/devil_internal_exports.h>
 
 
 

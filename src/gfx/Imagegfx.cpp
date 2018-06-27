@@ -8,13 +8,13 @@
 #include "../../include/kge/Device.h"
 #include "../../include/kge/io/Logger.h"
 // Include DevIL.
-#include "../../Libs/DevIL/il.h"
-#include "../../Libs/DevIL/ilu.h"
-#include "../../Libs/DevIL/ilut.h"
-#include "../../Libs/DevIL/devil_internal_exports.h"
+#include <IL/il.h>
+#include <IL/ilu.h>
+#include <IL/ilut.h>
+#include <IL/devil_internal_exports.h>
 
-#pragma comment(lib, "Libs/DevIL.lib")
-#pragma comment(lib, "Libs/ilu.lib")
+#pragma comment(lib, "DevIL.lib")
+#pragma comment(lib, "ilu.lib")
 
 namespace kge
 {

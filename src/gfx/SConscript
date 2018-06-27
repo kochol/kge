@@ -1,3 +1,4 @@
 Import('src')
 src.extend(Glob('*.cpp'))
+src.append('#src/gfx/stb_image.c')
 Export('src')
