@@ -1,4 +1,3 @@
 Import('src')
-src.extend(Glob('**/*.cpp'))
+src.extend(Glob('*.cpp'))
 Export('src')
-SConscript('components/SConscript')
