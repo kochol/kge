@@ -240,7 +240,7 @@ public:
 	Texture* CreateTexture(ImageData* pImg);
 
 protected:
-	LPDIRECT3DDEVICE9						m_pd3dDevice;
+	LPDIRECT3DDEVICE9EX						m_pd3dDevice;
 	IDirect3DSwapChain9*					m_pSwapChain;
 	D3DPRESENT_PARAMETERS					m_d3dpp;
 	D3DFORMAT								m_DSFMT;		// depth and Stencil Buffer

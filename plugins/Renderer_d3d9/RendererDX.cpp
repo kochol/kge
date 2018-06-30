@@ -27,7 +27,7 @@
 #define FOURCC_INTZ ((D3DFORMAT)(MAKEFOURCC('I','N','T','Z')))
 
 // *** Global variables ***
-LPDIRECT3D9				m_pD3D;
+LPDIRECT3D9EX				m_pD3D;
 
 // some good multisample modes, list best ones last
 const UINT g_nMS = 8;
@@ -205,10 +205,9 @@ namespace kge
 		{
 			m_pD3D->Release();
 			m_pD3D = NULL;
-		}
-		m_pD3D = Direct3DCreate9( D3D_SDK_VERSION );
+		}	
 
-		if (!m_pD3D)
+		if (FAILED(Direct3DCreate9Ex( D3D_SDK_VERSION, &m_pD3D )))
 		{
 			io::Logger::Log("Can't Create Direct3D9.", io::ELM_Error);
 			return false;
@@ -276,7 +275,7 @@ namespace kge
 		// Create the device
 		hr = m_pD3D->CreateDeviceEx(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, 
 			m_d3dpp.hDeviceWindow,
-			m_Behavior, &m_d3dpp, &m_pd3dDevice);
+			m_Behavior, &m_d3dpp, NULL, &m_pd3dDevice);
 
 		if (FAILED(hr))
 		{
@@ -368,14 +367,14 @@ namespace kge
 		if ((d3dcaps.DevCaps & D3DDEVCAPS_HWTRANSFORMANDLIGHT) != 0)
 		{
 			// 1.case: pure device
-			if ( ((d3dcaps.DevCaps & D3DDEVCAPS_PUREDEVICE)!=0) 
-					&& (CheckDevice(&d3dcaps, D3DCREATE_PUREDEVICE)==true) ) 
-			{
-				m_Behavior = D3DCREATE_HARDWARE_VERTEXPROCESSING 
-							 | D3DCREATE_PUREDEVICE;
-			}
+			//if ( ((d3dcaps.DevCaps & D3DDEVCAPS_PUREDEVICE)!=0) 
+			//		&& (CheckDevice(&d3dcaps, D3DCREATE_PUREDEVICE)==true) ) 
+			//{
+			//	m_Behavior = D3DCREATE_HARDWARE_VERTEXPROCESSING 
+			//				 | D3DCREATE_PUREDEVICE;
+			//}
 			// 2.case: hardware device
-			else 
+			//else 
 			if (CheckDevice(&d3dcaps, D3DCREATE_HARDWARE_VERTEXPROCESSING)==true)
 			{
 				m_Behavior = D3DCREATE_HARDWARE_VERTEXPROCESSING;
