@@ -9,11 +9,6 @@
 #include "kgedef.h"
 #include "core/KgeMemory.h"
 
-#ifdef WIN32
-#define NOMINMAX
-#define WIN32_LEAN_AND_MEAN
-#include <Windows.h>
-#endif
 
 #ifndef NULL
 #define NULL 0
@@ -41,29 +36,10 @@ public:
 	} // Destructor
 
 	//! Add a reference to the object.
-	virtual void AddRef()
-	{
-#if ((KGE_PLATFORM == KGE_PLATFORM_WINDOWS) && (KGE_COMPILER == KGE_COMPILER_MSVC))
-		InterlockedIncrement((LONG*)&m_iRefrenceCount);
-#else
-		++m_iRefrenceCount;
-#endif
-	} // AddRef
+	virtual void AddRef();
 
 	//! Decrease a reference from the object. if its reference count get 0 then the object will destroy.
-	virtual void DecRef()
-	{
-#if ((KGE_PLATFORM == KGE_PLATFORM_WINDOWS) && (KGE_COMPILER == KGE_COMPILER_MSVC))
-		InterlockedDecrement((LONG*)&m_iRefrenceCount);
-#else
-		--m_iRefrenceCount;
-#endif
-		if (m_iRefrenceCount == 0)
-		{
-			KGE_DELETETHIS(this, KgeUnknown);
-		}
-
-	} // DecRef
+	virtual void DecRef();
 
 	//! Return resource reference count
 	u32 GetRefCount() { return m_iRefrenceCount; }

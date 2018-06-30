@@ -17,6 +17,7 @@
 *.sdf
 *.user
 *.o
+*.exe
 Debug
 bin
 Docs/html
@@ -41,6 +42,7 @@ media
 .sconsign.dblite
 *.so
 *.os
-src/kge.dll
-src/kge.exp
-src/kge.lib
+*.dll
+*.exp
+*.lib
+.vscode/c_cpp_properties.json

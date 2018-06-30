@@ -7,7 +7,7 @@
 #ifndef VERTEXSHADERDX_H
 #define VERTEXSHADERDX_H
 
-#include "../../include/gfx/shader.h"
+#include "../../include/kge/gfx/shader.h"
 #include <d3d9.h>
 #include <d3dx9.h>
 

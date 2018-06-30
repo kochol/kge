@@ -9,6 +9,13 @@
 //! Renderer public pointer
 KGE_IMPORT extern kge::gfx::Renderer*	g_pRenderer;
 
+
+#ifdef WIN32
+#define NOMINMAX
+#define WIN32_LEAN_AND_MEAN
+#include <Windows.h>
+#endif
+
 // byte-align structures
 #ifdef _MSC_VER
 #	pragma pack(push, packing)

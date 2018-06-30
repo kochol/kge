@@ -4,10 +4,6 @@
 #include "../../include/kge/gfx/Renderer.h"
 #include "RendererDX.h"
 
-#if KGE_COMPILER == KGE_COMPILER_MSVC
-	#pragma comment(lib, "../../bin/Debug/kge.lib")
-#endif
-
 namespace kge
 {
 	class RendererD3D9Plugin : public Plugin<gfx::Renderer>

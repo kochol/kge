@@ -4,8 +4,6 @@
 // Date: 14/5/1385
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#ifdef WIN32
-
 #include <iostream>
 
 #include "rendererdx.h"
@@ -14,32 +12,17 @@
 #include "PixelShaderDX.h"
 #include "VertexBufferDX.h"
 #include "IndexBufferDX.h"
-#include "../../include/gfx/meshbuffer.h"
-#include "../../include/io/logger.h"
-#include "../../include/efx/EffectManager.h"
-#include "../../include/gui/Image.h"
-#include "../../include/gfx/ImageData.h"
-#include "../../include/math/matrix.h"
+#include "../../include/kge/gfx/meshbuffer.h"
+#include "../../include/kge/io/logger.h"
+#include "../../include/kge/efx/EffectManager.h"
+#include "../../include/kge/gui/Image.h"
+#include "../../include/kge/gfx/ImageData.h"
+#include "../../include/kge/math/matrix.h"
 #include <math.h>
 
-// Include DevIL.
-#include <IL/il.h>
-#include <IL/ilu.h>
-//#include "../../libs/devil/ilut.h"
-#include <IL/devil_internal_exports.h>
-
-
-
-#pragma comment(lib, "DevIL.lib")
-#pragma comment(lib, "ilu.lib")
-//#pragma comment(lib, "ilut.lib")
 #pragma comment(lib, "d3d9.lib")
 
-#if defined(DEBUG) || defined(_DEBUG)
-#pragma comment(lib, "d3dx9d.lib")
-#else
 #pragma comment(lib, "d3dx9.lib")
-#endif
 
 #define FOURCC_INTZ ((D3DFORMAT)(MAKEFOURCC('I','N','T','Z')))
 
@@ -217,14 +200,6 @@ namespace kge
 		// Init the Light class
 		Lights = KGE_NEW(LightDX)(this);
 
-		// Init the DevIL
-		ilInit();
-		iluInit();
-		//ilutInit();
-		ilEnable(IL_ORIGIN_SET);
-		ilOriginFunc(IL_ORIGIN_UPPER_LEFT);
-		CheckDevilErrors( NULL );
-
 		// Create LPDIRECT3D9
 		if(m_pD3D)
 		{
@@ -299,7 +274,7 @@ namespace kge
 
 		HRESULT hr;
 		// Create the device
-		hr = m_pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, 
+		hr = m_pD3D->CreateDeviceEx(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, 
 			m_d3dpp.hDeviceWindow,
 			m_Behavior, &m_d3dpp, &m_pd3dDevice);
 
@@ -393,14 +368,14 @@ namespace kge
 		if ((d3dcaps.DevCaps & D3DDEVCAPS_HWTRANSFORMANDLIGHT) != 0)
 		{
 			// 1.case: pure device
-			//if ( ((d3dcaps.DevCaps & D3DDEVCAPS_PUREDEVICE)!=0) 
-			//		&& (CheckDevice(&d3dcaps, D3DCREATE_PUREDEVICE)==true) ) 
-			//{
-			//	m_Behavior = D3DCREATE_HARDWARE_VERTEXPROCESSING 
-			//				 | D3DCREATE_PUREDEVICE;
-			//}
-			//// 2.case: hardware device
-			//else 
+			if ( ((d3dcaps.DevCaps & D3DDEVCAPS_PUREDEVICE)!=0) 
+					&& (CheckDevice(&d3dcaps, D3DCREATE_PUREDEVICE)==true) ) 
+			{
+				m_Behavior = D3DCREATE_HARDWARE_VERTEXPROCESSING 
+							 | D3DCREATE_PUREDEVICE;
+			}
+			// 2.case: hardware device
+			else 
 			if (CheckDevice(&d3dcaps, D3DCREATE_HARDWARE_VERTEXPROCESSING)==true)
 			{
 				m_Behavior = D3DCREATE_HARDWARE_VERTEXPROCESSING;
@@ -1176,27 +1151,13 @@ namespace kge
 
 		if (FileName)
 		{
-			return static_cast<TextureDX9*>(*ppOutTexture)->LoadTexture();
+//			return static_cast<TextureDX9*>(*ppOutTexture)->LoadTexture();
+			return false;
 		}
 
 		return true;
 
 	} // AddTexture
-
-	// ***** *** ***** *******
-	// Check for devil errors.
-	// ***** *** ***** *******
-	void RendererDX::CheckDevilErrors( const char* TextureName )
-	{
-		ILenum Error;
-		while ((Error = ilGetError())) 
-		{
-			if ( Error == IL_COULD_NOT_OPEN_FILE )
-				kge::io::Logger::Log(io::ELM_Error , "Could not load texture: %s" , TextureName );
-			else if (Error != IL_INVALID_EXTENSION)
-				kge::io::Logger::Log( kge::io::ELM_Error , "Error from DevIL on %s: %s", TextureName , iluErrorString(Error));
-		}
-	} // CheckDevilErrors
 
 	//-------------------------------------------------------------------
 	// Set a texture
@@ -3347,5 +3308,3 @@ namespace kge
 	} // gfx
 
 } // kge
-
-#endif // WIN32

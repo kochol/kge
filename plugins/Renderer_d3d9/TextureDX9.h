@@ -6,8 +6,6 @@
 #ifndef KGE_TEXTUREDX9_H
 #define KGE_TEXTUREDX9_H
 
-#ifdef WIN32
-
 #include <d3d9.h>
 #include "../../include/kge/gfx/Texture.h"
 #include "../../include/kge/gfx/Renderer.h"
@@ -33,9 +31,6 @@ public:
 
 	// Destructor
 	~TextureDX9();
-
-	// Load the texture from file.
-	bool LoadTexture();
 
 	// Create a render able texture.
 	bool CreateRenderableTexture(int width, int height, TextureFormat tf, 
@@ -83,9 +78,6 @@ protected:
 
 	u8**				m_ppCopyData;
 
-	// Check for devil errors.
-	void CheckDevilErrors( const char* TextureName );
-
 private:
 	D3DFORMAT           m_tFormat;
 	D3DFORMAT           m_dFormat;
@@ -102,7 +94,5 @@ private:
 } // gfx
 
 } // kge
-
-#endif // WIN32
 
 #endif // KGE_TEXTUREDX9_H

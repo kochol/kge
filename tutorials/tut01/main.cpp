@@ -9,7 +9,7 @@
 #include "../../include/kge/core/TaskManager.h"
 
 // Tell the compiler to link with kge.lib
-#pragma comment(lib, "../../bin/debug/kge.lib")
+//#pragma comment(lib, "../../bin/debug/kge.lib")
 
 // Everything for KGE is in kge namespace
 // The Device class is the main class that initialize the KGE and its submodules
@@ -40,7 +40,6 @@ int main()
 	// The InitParameters structure contains the parameters that we want to pass
 	// them to KGE. We can accept default parameters for now
 	kge::InitParameters	params;
-	params.RendererType = kge::gfx::ERA_OpenGL;
 	dev.Init(params);
 
 	kge::core::TaskManager::GetSingletonPointer();

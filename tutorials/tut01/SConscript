@@ -1,1 +1,2 @@
-#Program('tut01', 'main.cpp', LIBS='kge', LIBPATH=['../../Libs'])
+Import('baseEnv')
+baseEnv.Program('tut01', 'main.cpp', LIBS='kge', LIBPATH=['../../Libs', '../../src'])

@@ -3,11 +3,10 @@
 // Date: 4/5/1386
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#ifdef  WIN32
 #ifndef PIXELSHADERDX_H
 #define PIXELSHADERDX_H
 
-#include "../../include/gfx/shader.h"
+#include "../../include/kge/gfx/shader.h"
 #include <d3d9.h>
 #include <d3dx9.h>
 
@@ -57,5 +56,3 @@ protected:
 } // kge
 
 #endif // PIXELSHADERDX_H
-
-#endif // WIN32

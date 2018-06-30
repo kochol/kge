@@ -3,11 +3,9 @@
 // Date: 4/5/1386
 // Programmer: Ali Akbar Mohammadi(Kochol)
 
-#ifdef  WIN32
-
 #include "PixelShaderDX.h"
-#include "../../include/io/logger.h"
-#include "../../include/Device.h"
+#include "../../include/kge/io/logger.h"
+#include "../../include/kge/Device.h"
 
 KGE_IMPORT extern kge::u32  PixelShaderSet;
 
@@ -145,5 +143,3 @@ namespace gfx
 } // gfx
 
 } // kge
-
-#endif // WIN32

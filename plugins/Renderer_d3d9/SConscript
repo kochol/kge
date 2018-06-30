@@ -1,0 +1,12 @@
+Import('baseEnv')
+
+env = baseEnv.Clone()
+env['CCFLAGS'].append('-DKGE_EXPORT')
+dxsdkpath = ''
+if env['TARGET_ARCH'] == 'x86' or env['TARGET_ARCH'] == 'i386':
+    dxsdkpath = 'c:/codes/dxsdk/Lib/x86'
+else:
+    dxsdkpath = 'c:/codes/dxsdk/Lib/x64'
+
+env.SharedLibrary('Renderer_d3d9', Glob('*.cpp'), CPPPATH=['c:/codes/dxsdk/include'],
+	LIBPATH=[dxsdkpath, '../../src'], LIBS=['kge', 'User32'])

@@ -13,9 +13,9 @@
 #define D3D_DEBUG_INFO
 #endif
 
-#include "../../include/gfx/renderer.h"
-#include "../../include/kgedef.h"
-#include "../../include/enums.h"
+#include "../../include/kge/gfx/renderer.h"
+#include "../../include/kge/kgedef.h"
+#include "../../include/kge/enums.h"
 #include "LightDX.h"
 #include <d3d9.h>
 #include <vector>
@@ -289,9 +289,6 @@ protected:
 
 	// bad az Init ba seda zadan in tabe maghadir avalie engine set mishan.
 	bool AfterInit();
-
-	// Check for devil errors.
-	void CheckDevilErrors( const char* TextureName );
 
 	// Precalculate the graphics card capacities.
 	virtual void InitGCC();
