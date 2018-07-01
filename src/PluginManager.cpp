@@ -110,7 +110,7 @@ namespace kge
 		}
 		else
 		{
-			io::Logger::Error("can't load the %s plugin. (file not found)", strPluginName.c_str());
+			io::Logger::Error("can't load the %s plugin. (file not found) %d", strPluginName.c_str(), GetLastError());
 			return 0;
 		}
 

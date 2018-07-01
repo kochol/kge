@@ -336,7 +336,8 @@ namespace sn
 
 		// Load sphere
 		m_pSphere = AddStaticMeshNode("../../media/models/sphere.ms3d", false);
-		m_pSphere->SetVisible(false);
+		if (m_pSphere)
+			m_pSphere->SetVisible(false);
 
 	} // SceneManager()
 

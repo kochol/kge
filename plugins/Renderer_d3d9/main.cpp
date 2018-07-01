@@ -33,7 +33,7 @@ namespace kge
 
 extern "C"
 {
-	void KGE_API RegisterPlugin(kge::PluginManager& PluginMgr)
+	void KGELIB_API RegisterPlugin(kge::PluginManager& PluginMgr)
 	{
 		kge::RendererD3D9Plugin *pPR = KGE_NEW(kge::RendererD3D9Plugin)();		
 		kge::io::Logger::Info("D3D9 renderer plugin registered. version: %d.%d.%d , Index: %d", 

@@ -28,12 +28,6 @@
 
 #include "../Headers/ph/PhysXManager.h"
 
-#if defined(DEBUG) || defined(_DEBUG)
-#pragma comment(lib, "physfs_d.lib")
-#else
-#pragma comment(lib, "physfs.lib")
-#endif
-
 KGE_API kge::u32 HardwareBufferID	= 0;
 KGE_API kge::u32 VertexDecID		= 0;
 KGE_API kge::u32 VertexShaderSet	= MAXID;

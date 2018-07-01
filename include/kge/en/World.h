@@ -1,7 +1,7 @@
 #ifndef KGE_WORLD_H
 #define KGE_WORLD_H
 
-#include "kgedef.h"
+#include "../kgedef.h"
 #include <map>
 #include <vector>
 #include "Message.h"

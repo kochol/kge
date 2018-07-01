@@ -18,6 +18,8 @@
 *.user
 *.o
 *.exe
+*.sln
+*.vcxproj*
 Debug
 bin
 Docs/html

@@ -27,9 +27,6 @@
 
 // external libs
 #include <math.h>
-#include <IL/il.h>
-#include <IL/ilu.h>
-//#include "../../Libs/DevIL/ilut.h"
 
 #ifdef KGE_USE_SDL
 	#include <SDL2/SDL.h>
@@ -38,12 +35,9 @@
 extern KGE_API SDL_Window* g_pSDLwindow;
 
 #if KGE_COMPILER == KGE_COMPILER_MSVC
-#	pragma comment(lib, "DevIL.lib")
-#	pragma comment(lib, "ilu.lib")
 #	pragma comment(lib, "sdl2.lib")
 #	pragma comment(lib, "cg.lib")
 #	pragma comment(lib, "cggl.lib")
-#	pragma comment(lib, "../../Libs/glew32.lib")
 #endif 
 
 #define BUFFER_OFFSET(i) ((char*)NULL + (i))
@@ -101,12 +95,6 @@ namespace gfx
  			SetVideoMode(params.Width, params.Height, params.Bits,params.UseStencil,params.FullScreen ,4, params.VSync);
  		else
  			SetVideoMode(params.Width, params.Height, params.Bits,params.UseStencil,params.FullScreen ,0, params.VSync);
-
-		// Needed to initialize DevIL.
-		ilInit ();
-
-		// GL cannot use palettes anyway, so convert early.
-		ilEnable (IL_CONV_PAL);
 
 		m_pContext = SDL_GL_CreateContext(m_pWindow);
 
@@ -710,20 +698,6 @@ namespace gfx
 
 	} // AddTexture
 
-	// ***** *** ***** *******
-	// Check for devil errors.
-	// ***** *** ***** *******
-	void RendererGL::CheckDevilErrors( const char* TextureName )
-	{
-		ILenum Error;
-		while ((Error = ilGetError()))
-		{
-			if ( Error == IL_COULD_NOT_OPEN_FILE )
-				kge::io::Logger::Log(io::ELM_Error , "Could not load texture: %s" , TextureName );
-			else
-				kge::io::Logger::Log( kge::io::ELM_Error , "Error from DevIL on %s: %s", TextureName , iluErrorString(Error));
-		}
-	} // CheckDevilErrors
 
 	// *** ******* ******* ***** ** *******
 	// Set kardane texture ghabl az render.
@@ -1463,8 +1437,8 @@ namespace gfx
  		m_bGCC[ gfx::EGCC_ShaderModel2 ] = (bool)glewGetExtension("GL_EXT_gpu_shader2");
  
  		// support for compresed textures
- 		m_bGCC[gfx::EGCC_DXT1] = m_bGCC[gfx::EGCC_DXT3] 
- 					= m_bGCC[gfx::EGCC_DXT5] = (bool)glewGetExtension("");
+		m_bGCC[gfx::EGCC_DXT1] = m_bGCC[gfx::EGCC_DXT3]
+			= m_bGCC[gfx::EGCC_DXT5] = true;
 
 	}
 

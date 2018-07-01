@@ -40,6 +40,7 @@ int main()
 	// The InitParameters structure contains the parameters that we want to pass
 	// them to KGE. We can accept default parameters for now
 	kge::InitParameters	params;
+	params.RendererType = kge::gfx::ERA_OpenGL;
 	dev.Init(params);
 
 	kge::core::TaskManager::GetSingletonPointer();

@@ -240,12 +240,6 @@ public:
 
 protected:
 
-#if KGE_PLATFORM == KGE_PLATFORM_WINDOWS
-	HDC					m_hdc;
-	HGLRC				m_hrc;
-
-#endif // KGE_PLATFORM == KGE_PLATFORM_WINDOWS
-
 	SDL_Window		*	m_pWindow;
 	SDL_GLContext		m_pContext;
 
@@ -273,9 +267,6 @@ protected:
 
 	// bad az Init ba seda zadan in tabe maghadir avalie engine set mishan.
 	virtual bool AfterInit();
-
-	// Check for devil errors.
-	void CheckDevilErrors( const char* TextureName );
 
 	// Check for CG errors
 	void checkForCgError( const char* situtaion, const char* ShaderName = NULL );
