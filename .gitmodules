@@ -1,9 +1,9 @@
 [submodule "deps/bgfx"]
 	path = deps/bgfx
-	url = git@github.com:kochol/bgfx.git
+	url = https://github.com/kochol/bgfx.git
 [submodule "deps/bimg"]
 	path = deps/bimg
-	url = git@github.com:kochol/bimg.git
+	url = https://github.com/kochol/bimg.git
 [submodule "deps/bx"]
 	path = deps/bx
-	url = git@github.com:kochol/bx.git
+	url = https://github.com/kochol/bx.git
