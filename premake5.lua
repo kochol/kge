@@ -2,6 +2,11 @@
 workspace "kge"
   configurations { "Debug", "Release" }
   platforms { "Win32", "Win64" }
+  includedirs { "deps/bx/include", "deps/bx/3rdparty", "deps/bgfx/include", "deps/bimg/include" }
+
+  if _ACTION:find("vs") then
+    includedirs { "deps/bx/include/compat/msvc" }
+  end
 
   filter { "platforms:Win32" }
       system "Windows"
@@ -36,7 +41,7 @@ workspace "kge"
     includedirs { "deps/SDL2", "deps/devil/include" }
     defines { "KGE_EXPORT" }    
     buildoptions { "-fpermissive" }
-    links { "SDL2",  "ILU"}
+    links { "SDL2",  "ILU" }
     if os.host() == "windows" then
       links { "DevIL" }
     else
@@ -49,41 +54,38 @@ workspace "kge"
     if os.is64bit == false and os.host() == "windows" then
       libdirs ({ "deps/devil/lib/x86/Release", "deps/SDL2/lib/x86" })
     end
-  
-  -- OpenGL
-  project "Renderer_ogl"
-    kind "SharedLib"
-    language "C++"
-    files { "plugins/Renderer_ogl/*.cpp" }
-    defines { "KGELIB_EXPORTS" }    
-    buildoptions { "-fpermissive" }
-    links { "kge", "Cg", "CgGL" }
-    includedirs { os.getenv("CG_INC_PATH"), "deps/SDL2" }
-    if os.is64bit() and os.host() == "windows" then
-      libdirs ({ os.getenv("CG_LIB64_PATH"), "deps/SDL2/lib/x64", "Libs/glew/x64" })
-      links { "glew32" }
-    end
-    if os.is64bit == false and os.host() == "windows" then
-      libdirs ({ os.getenv("CG_LIB_PATH"), "deps/SDL2/lib/x86", "Libs/glew/Win32" })
-      links { "glew32" }
-    end
 
-  -- Drict3D9
-  project "Renderer_d3d9"
+  -- bx
+  project "bx"
+    kind "StaticLib"
+    language "C++"    
+    files { "deps/bx/src/*.cpp"}
+    defines {
+      "__STDC_LIMIT_MACROS",
+      "__STDC_FORMAT_MACROS",
+      "__STDC_CONSTANT_MACROS",
+    }
+  
+  -- bimg
+  project "bimg"
+    kind "StaticLib"
+    language "C++"
+    files { "deps/bimg/src/*.cpp"}
+    includedirs { "deps/bimg/3rdparty", "deps/bimg/3rdparty/iqa/include" }
+
+  -- bgfx
+  project "bgfx"
+    kind "StaticLib"
+    language "C++"
+    files { "deps/bgfx/src/*.cpp" }
+    includedirs { "deps/bgfx/3rdparty", "deps/bgfx/3rdparty/khronos", "deps/bgfx/3rdparty/dxsdk/include" }
+
+  -- RendererBgfx
+  project "Renderer_Bgfx"
     kind "SharedLib"
     language "C++"
-    files { "plugins/Renderer_d3d9/*.cpp" }
-    defines { "KGELIB_EXPORTS" }    
-    buildoptions { "-fpermissive" }
-    links { "kge", "legacy_stdio_definitions" }
-    characterset("MBCS")   
-    includedirs { os.getenv("DXSDK_DIR") .. "include", "deps/SDL2" }
-    if os.is64bit() then
-      libdirs ({ os.getenv("DXSDK_DIR") .. "Lib/x64"})
-    end
-    if os.is64bit == false then
-      libdirs ({ os.getenv("DXSDK_DIR") .. "Lib/x86"})
-    end
+    files { "plugins/Renderer_bgfx/*.cpp" }
+    links { "bgfx", "bx" }
 
   -- 01HelloWorld
   project "01HelloWorld"

@@ -158,7 +158,7 @@ public:
 	virtual bool Init(Device* device, InitParameters &params) = 0;
 
 	//! Pak kardane pixel ha va buffer ha.
-	virtual bool Clear(bool Pixel, bool Zbuffer, bool Stencil)=0;
+	virtual bool SetViewClear(bool Pixel, bool Zbuffer, bool Stencil, Color clearColor= Color(0,0,0), float depth = 1.0f)=0;
 
 	//! Shroe be render gereftan.
 	virtual bool BeginRendering(bool ClearPixel, bool ClearZbuffer, bool 
