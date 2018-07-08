@@ -58,14 +58,20 @@ workspace "kge"
     defines { "KGELIB_EXPORTS" }    
     buildoptions { "-fpermissive" }
     links { "kge", "Cg", "CgGL" }
-    includedirs { os.getenv("CG_INC_PATH"), "deps/SDL2" }
-    if os.is64bit() and os.host() == "windows" then
-      libdirs ({ os.getenv("CG_LIB64_PATH"), "deps/SDL2/lib/x64", "Libs/glew/x64" })
-      links { "glew32" }
-    end
-    if os.is64bit == false and os.host() == "windows" then
-      libdirs ({ os.getenv("CG_LIB_PATH"), "deps/SDL2/lib/x86", "Libs/glew/Win32" })
-      links { "glew32" }
+    includedirs { "deps/SDL2" }
+    libdirs {}
+    if os.host() == "windows" and os.getenv("CG_INC_PATH") ~= nil then
+      includedirs { os.getenv("CG_INC_PATH") }
+      if os.is64bit() and os.host() == "windows" then
+        libdirs ({ os.getenv("CG_LIB64_PATH"), "deps/SDL2/lib/x64", "Libs/glew/x64" })
+        links { "glew32" }
+      end
+      if os.is64bit == false and os.host() == "windows" then
+        libdirs ({ os.getenv("CG_LIB_PATH"), "deps/SDL2/lib/x86", "Libs/glew/Win32" })
+        links { "glew32" }
+      end
+    elseif os.getenv("CG_INC_PATH") == nil then
+      print "CG_INC_PATH not found install CG"
     end
 
   -- Drict3D9
@@ -77,12 +83,17 @@ workspace "kge"
     buildoptions { "-fpermissive" }
     links { "kge", "legacy_stdio_definitions" }
     characterset("MBCS")   
-    includedirs { os.getenv("DXSDK_DIR") .. "include", "deps/SDL2" }
-    if os.is64bit() then
-      libdirs ({ os.getenv("DXSDK_DIR") .. "Lib/x64"})
-    end
-    if os.is64bit == false then
-      libdirs ({ os.getenv("DXSDK_DIR") .. "Lib/x86"})
+    includedirs { "deps/SDL2" }
+    if os.getenv("DXSDK_DIR") ~= nil then
+      includedirs { os.getenv("DXSDK_DIR") .. "include" }
+      if os.is64bit() then
+        libdirs ({ os.getenv("DXSDK_DIR") .. "Lib/x64"})
+      end
+      if os.is64bit == false then
+        libdirs ({ os.getenv("DXSDK_DIR") .. "Lib/x86"})
+      end
+    else
+        print "DXSDK_DIR not found"
     end
 
   -- 01HelloWorld
